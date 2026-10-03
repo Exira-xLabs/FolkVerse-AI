@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>FolkVerse China — Project Mind Map</title>
+<style>
+:root {
+  --bg:#050b13; --bg2:#091421; --panel:rgba(10,22,35,.94); --panel2:rgba(16,31,47,.92);
+  --ink:#fff4df; --muted:#bdc9d0; --dim:#84939c; --gold:#f0d193; --gold2:#bd8e47;
+  --line:rgba(232,196,126,.48); --line-soft:rgba(149,179,195,.26); --teal:#93d8cb;
+  --sage:#b6cf9b; --radius:18px; --serif:ui-serif,Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;color:var(--ink);font:15px/1.55 var(--sans);background:
+  radial-gradient(ellipse at 50% -12%,rgba(160,112,49,.18),transparent 45%),
+  radial-gradient(ellipse at 8% 35%,rgba(48,115,128,.10),transparent 35%),
+  linear-gradient(180deg,#07111d 0%,#040a12 100%);min-height:100vh}
+button,a{font:inherit}
+.page{width:min(1600px,100%);margin:0 auto;padding:38px clamp(18px,3vw,48px) 64px}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+.eyebrow,.mono,.phase-no,.target,.meta-label,.pill,.legend,.small-label{font-family:var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.eyebrow{font-size:11px;color:var(--gold);display:flex;align-items:center;gap:9px}
+.eyebrow:before{content:"";width:24px;height:1px;background:var(--gold2)}
+.print{border:1px solid rgba(240,209,147,.45);background:rgba(16,31,47,.72);color:var(--ink);border-radius:999px;padding:9px 14px;cursor:pointer;font-size:12px}
+.print:hover,.print:focus-visible{border-color:var(--gold);outline:2px solid transparent;box-shadow:0 0 0 3px rgba(240,209,147,.16)}
+h1{font:500 clamp(36px,5.5vw,68px)/1.02 var(--serif);letter-spacing:-.035em;margin:0;color:var(--ink)}
+.lede{max-width:820px;color:var(--muted);font-size:16px;margin:16px 0 0}
+.header-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.pill{font-size:10px;color:#d6e0e4;border:1px solid var(--line-soft);border-radius:999px;padding:7px 10px;background:rgba(10,22,35,.6)}
+.pill.gold{color:var(--gold);border-color:rgba(240,209,147,.4)}
+.notice{margin:24px 0 0;padding:13px 16px;border:1px solid rgba(240,209,147,.32);border-left:3px solid var(--gold2);border-radius:10px;background:rgba(175,129,62,.08);color:#e1d3b7;font-size:13px}
+.notice strong{color:var(--gold)}
+.mindmap{position:relative;margin-top:34px}
+.connections{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.connections path{fill:none;stroke:var(--line);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.connections circle{fill:var(--gold);stroke:#08111b;stroke-width:3;vector-effect:non-scaling-stroke}
+.root-wrap{position:relative;z-index:1;display:flex;justify-content:center}
+.root{width:min(610px,100%);text-align:center;padding:23px 28px 22px;border-radius:22px;border:1px solid rgba(240,209,147,.52);background:linear-gradient(140deg,rgba(32,42,49,.96),rgba(8,19,31,.97) 60%,rgba(69,48,25,.74));box-shadow:0 18px 55px rgba(0,0,0,.27),inset 0 1px rgba(255,255,255,.08)}
+.root .small-label{font-size:10px;color:var(--gold);margin-bottom:7px}
+.root h2{font:500 clamp(24px,3vw,34px)/1.15 var(--serif);margin:0}
+.root p{margin:8px auto 0;color:var(--muted);font-size:13px;max-width:490px}
+.scope-row{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-top:15px}
+.scope-row span{font-size:10px;padding:5px 8px;border-radius:7px;background:rgba(0,0,0,.24);border:1px solid rgba(240,209,147,.2);color:#efe2c6}
+.branches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;position:relative;z-index:1;margin-top:92px;align-items:start}
+.lane{min-width:0;position:relative;padding:0 13px 18px 18px;border:1px solid rgba(137,165,180,.18);border-radius:20px;background:linear-gradient(180deg,rgba(9,20,32,.66),rgba(8,17,27,.40));}
+.lane-head{position:relative;margin:-1px -1px 18px -1px;padding:17px 17px 16px 20px;border-radius:19px 19px 12px 12px;background:linear-gradient(125deg,rgba(240,209,147,.11),rgba(9,23,36,.95) 65%);border-bottom:1px solid var(--line-soft)}
+.lane-head:before{content:"";position:absolute;width:3px;top:15px;bottom:15px;left:0;border-radius:4px;background:var(--lane-accent,var(--gold))}
+.lane-kicker{font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--lane-accent,var(--gold))}
+.lane-head h3{font:500 22px/1.18 var(--serif);margin:6px 0 3px}
+.lane-head p{color:var(--muted);font-size:12px;margin:0}
+.lane.foundation{--lane-accent:var(--gold)}
+.lane.experience{--lane-accent:var(--teal)}
+.lane.release{--lane-accent:var(--sage)}
+.phase-list{position:relative;padding:0 0 5px 24px}
+.phase-list:before{content:"";position:absolute;left:8px;top:2px;bottom:13px;width:1px;background:linear-gradient(var(--lane-accent),rgba(133,164,178,.18))}
+.phase{position:relative;margin:0 0 13px;padding:15px 15px 14px;border:1px solid rgba(137,165,180,.23);border-radius:14px;background:linear-gradient(145deg,rgba(16,32,47,.96),rgba(9,19,30,.97));box-shadow:0 7px 18px rgba(0,0,0,.14);break-inside:avoid}
+.phase:last-child{margin-bottom:0}
+.phase:before{content:"";position:absolute;left:-17px;top:24px;width:16px;height:1px;background:var(--lane-accent)}
+.phase:after{content:"";position:absolute;left:-21px;top:20px;width:8px;height:8px;border:2px solid var(--lane-accent);border-radius:50%;background:#08121c;box-shadow:0 0 12px rgba(240,209,147,.16)}
+.phase-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.phase-no{font-size:10px;color:var(--lane-accent);white-space:nowrap}
+.target{font-size:9px;letter-spacing:.035em;color:#b4c1c7;background:rgba(0,0,0,.26);padding:4px 6px;border-radius:6px;text-align:right}
+.phase h4{font:500 19px/1.2 var(--serif);margin:8px 0 7px;color:var(--ink)}
+.outcome{font-size:12px;color:#d8dfe1;margin:0 0 11px}
+.details{display:grid;gap:8px;border-top:1px solid rgba(137,165,180,.18);padding-top:10px}
+.detail{font-size:11.5px;line-height:1.45;color:#aebdc4}
+.detail b{font:9px var(--mono);letter-spacing:.075em;text-transform:uppercase;color:var(--lane-accent);display:block;margin-bottom:2px}
+.dep{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px}
+.dep span{font:9px var(--mono);color:#d5dedf;padding:4px 7px;border-radius:999px;border:1px solid rgba(137,165,180,.2);background:rgba(2,9,15,.26)}
+.phase.warn{border-color:rgba(240,209,147,.38)}
+.phase .caution{color:#e9c989}
+.flow-note{margin:19px 0 0;padding:14px 17px;border-radius:13px;border:1px solid rgba(147,216,203,.22);background:rgba(37,103,99,.08);font-size:12px;color:#cfdddc;line-height:1.6}
+.flow-note strong{color:var(--teal)}
+.footer-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:22px}
+.footer-card{padding:18px 19px;border:1px solid rgba(137,165,180,.2);border-radius:15px;background:rgba(9,20,32,.78)}
+.footer-card h3{font:500 19px var(--serif);margin:0 0 9px}
+.footer-card p,.footer-card li{font-size:12px;color:var(--muted);line-height:1.55}
+.footer-card ul{padding-left:18px;margin:7px 0 0}
+.footer-card li+li{margin-top:5px}
+.footer-card strong{color:var(--gold)}
+.legend{display:flex;flex-wrap:wrap;gap:11px;margin:20px 0 0;color:var(--dim);font-size:9px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block}
+.legend .teal{background:var(--teal)}.legend .sage{background:var(--sage)}
+.bottom{margin-top:35px;padding-top:14px;border-top:1px solid rgba(137,165,180,.16);display:flex;justify-content:space-between;gap:10px;color:#82919a;font:10px var(--mono);letter-spacing:.04em}
+@media(max-width:1050px){.branches{grid-template-columns:1fr;gap:14px;margin-top:38px}.connections{display:none}.lane{padding-left:18px}.lane-head{margin-bottom:13px}.phase-list:before{left:8px}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.page{padding:22px 14px 40px}.topline{align-items:flex-start}.print{padding:8px 10px;font-size:10px}.root{padding:19px 16px}.root p{font-size:12px}.scope-row span{font-size:9px}.lane{padding:0 9px 13px 14px}.phase-list{padding-left:21px}.phase{padding:13px 12px}.target{font-size:8px;max-width:112px}.phase h4{font-size:18px}.bottom{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@media print{
+  :root{--bg:#fff;--bg2:#fff;--ink:#111;--muted:#3d4548;--dim:#555;--panel:#fff;--line:#777;--line-soft:#aaa;--gold:#805e20;--teal:#176c66;--sage:#456829}
+  body{background:#fff!important;color:#111!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:100%;padding:8mm}.print{display:none}.notice,.root,.lane,.phase,.footer-card{box-shadow:none;background:#fff!important;color:#111!important}
+  .root p,.lane-head p,.phase .outcome,.detail,.footer-card p,.footer-card li{color:#333!important}
+  .phase{break-inside:avoid}.branches{gap:8px}.lane{padding:8px}.phase{padding:9px;margin-bottom:7px}
+  .bottom{color:#555}.connections path{stroke:#725c31}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="topline">
+      <div class="eyebrow">FolkVerse China · Build map</div>
+      <button class="print" type="button" onclick="window.print()" aria-label="Print or save this mind map as PDF">Print / Save PDF</button>
+    </div>
+    <h1>The full project,<br>one connected map.</h1>
+    <p class="lede">A phase-by-phase mind map for turning the FolkVerse China proposal into a credible bilingual museum prototype—from local foundation to a tested competition demo.</p>
+    <div class="header-meta">
+      <span class="pill gold">09 implementation phases · 00–08</span>
+      <span class="pill">Three connected workstreams</span>
+      <span class="pill">Original plan targets, not completion claims</span>
+    </div>
+    <div class="notice"><strong>Read this first:</strong> the GitHub repository is the build kit/specification, not the running application. Every phase card describes the intended work and its gate; it does not mean that phase has passed.</div>
+  </header>
+
+  <main class="mindmap" id="mindmap">
+    <svg class="connections" id="rootConnections" aria-hidden="true" focusable="false"></svg>
+    <div class="root-wrap">
+      <section class="root" id="rootNode" aria-label="FolkVerse project goal">
+        <div class="small-label">Central project · 2026 competition prototype</div>
+        <h2>FolkVerse China — 华韵 AI</h2>
+        <p>A bilingual interactive cultural museum: visitors discover a region, explore reviewed exhibits, ask source-backed questions, and continue into a journey, story, or object discovery.</p>
+        <div class="scope-row" aria-label="First prototype target scope">
+          <span>1 region</span><span>10 reviewed exhibits</span><span>30 rights-cleared objects</span><span>1 branching story</span><span>English + Chinese</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="branches" id="branches">
+      <section class="lane foundation" aria-labelledby="foundationTitle">
+        <header class="lane-head" id="foundationTitle">
+          <div class="lane-kicker">Branch 01 · Ground truth</div>
+          <h3>Build the foundation</h3>
+          <p>Get the app shell, visual target, and reviewed museum data in place.</p>
+        </header>
+        <div class="phase-list">
+          <article class="phase" id="phase-00">
+            <div class="phase-top"><span class="phase-no">PHASE 00</span><span class="target">Plan · Sep 29–30</span></div>
+            <h4>Repository &amp; working foundation</h4>
+            <p class="outcome">Make the web app, API, and database start locally with a stable contract and design base.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Inspect the real app repo; connect Next.js to FastAPI and PostgreSQL; add health checks, OpenAPI/client generation, bilingual keys, and anonymous sessions.</div>
+              <div class="detail"><b>Pass gate</b>Fresh setup works; web reaches API and database; assets are intact; no secrets are exposed.</div>
+            </div>
+            <div class="dep"><span>Needs · chosen implementation repo</span><span>Leads to · Phase 01</span></div>
+          </article>
+
+          <article class="phase" id="phase-01">
+            <div class="phase-top"><span class="phase-no">PHASE 01</span><span class="target">Plan · Sep 29–30</span></div>
+            <h4>Exact museum UI &amp; map experience</h4>
+            <p class="outcome">Create eight responsive screens with real controls and clearly labelled demo fixtures.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Home, Explore, Journey, Stories, Lens, Guide, My DNA, and Sources; preserve the cinematic museum look, map artwork, gold/glass UI, and guide character.</div>
+              <div class="detail"><b>Pass gate</b>Routes and controls work; keyboard/mobile behavior is checked; map art stays visual while real region interactions use reviewed data.</div>
+            </div>
+            <div class="dep"><span>Needs · Phase 00 health &amp; assets</span><span>Leads to · Phase 02</span></div>
+          </article>
+
+          <article class="phase" id="phase-02">
+            <div class="phase-top"><span class="phase-no">PHASE 02</span><span class="target">Plan · Oct 1–2</span></div>
+            <h4>Reviewed content, catalog &amp; discovery</h4>
+            <p class="outcome">Connect real cultural exhibits and artifact records to sources, rights checks, and a review workflow.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Regions, exhibits, sources, passages, artifacts, and reviews; an idempotent Met importer; publication states; functional region/search/theme discovery.</div>
+              <div class="detail"><b>Pass gate</b>At least one genuinely approved exhibit flows discovery → detail → source. Report actual approved/draft counts; never manufacture the 10/30 targets.</div>
+            </div>
+            <div class="dep"><span>Needs · Phase 01 + human reviewer</span><span>Feeds · Phases 03 &amp; 05</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lane experience" aria-labelledby="experienceTitle">
+        <header class="lane-head" id="experienceTitle">
+          <div class="lane-kicker">Branch 02 · Visitor loop</div>
+          <h3>Make discovery trustworthy</h3>
+          <p>Turn reviewed content into guided, personal, and uncertainty-aware experiences.</p>
+        </header>
+        <div class="phase-list">
+          <article class="phase" id="phase-03">
+            <div class="phase-top"><span class="phase-no">PHASE 03</span><span class="target">Plan · Oct 3</span></div>
+            <h4>DeepSeek gateway &amp; sourced guide</h4>
+            <p class="outcome">Answer English/Chinese questions using reviewed evidence, citations, and honest uncertainty.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Server-side provider adapter, retrieval, citation/schema validation, source drawer, bounded retries, rate/budget limits, and explicit unavailable states.</div>
+              <div class="detail"><b>Pass gate</b>Supported and unsupported questions behave differently; fake citation IDs and source-injected instructions are rejected. Live calls are unverified without credentials.</div>
+            </div>
+            <div class="dep"><span>Needs · Phase 02 approved passages</span><span>Feeds · Phases 04–06</span></div>
+          </article>
+
+          <article class="phase" id="phase-04">
+            <div class="phase-top"><span class="phase-no">PHASE 04</span><span class="target">Plan · Oct 4</span></div>
+            <h4>Personalized digital journeys</h4>
+            <p class="outcome">Build editable learning routes from published exhibits that fit the visitor’s chosen time.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Deterministic eligible-stop selection; theme, language, region, and duration filters; reorder/remove/regenerate; session-owned persistence.</div>
+              <div class="detail"><b>Pass gate</b>Every stop is published and valid; totals obey the time limit; a small corpus returns fewer honest stops instead of invented ones.</div>
+            </div>
+            <div class="dep"><span>Needs · Phases 02–03</span><span>Flow · Explore → journey → guide</span></div>
+          </article>
+
+          <article class="phase" id="phase-05">
+            <div class="phase-top"><span class="phase-no">PHASE 05</span><span class="target">Plan · Oct 5–6</span></div>
+            <h4>Object Lens &amp; artifact retrieval</h4>
+            <p class="outcome">Accept a photo and return catalog candidates, a related class, or an honest unknown.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Camera/upload, private sanitized media, ownership, retrieval candidates, asynchronous scan status, and deletion cleanup.</div>
+              <div class="detail"><b>Pass gate</b>Real eligible candidate IDs only; test poor/unrelated/known images separately. Keep likely-match disabled until calibrated; provider errors are not fake unknowns.</div>
+            </div>
+            <div class="dep"><span>Needs · Phases 02 + 03</span><span>Data safety · Private uploads</span></div>
+          </article>
+
+          <article class="phase" id="phase-06">
+            <div class="phase-top"><span class="phase-no">PHASE 06</span><span class="target">Plan · Oct 7</span></div>
+            <h4>Branching folklore &amp; optional voice</h4>
+            <p class="outcome">Deliver one complete story graph while keeping creative adaptation distinct from sourced facts.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>One small reviewed setting, suggested 5–7 nodes and two choices; restart/resume; optional Chinese/English speech states.</div>
+              <div class="detail"><b>Pass gate</b>All branches reach endings; microphone/provider failure preserves text usability; prerecorded audio is never presented as live.</div>
+            </div>
+            <div class="dep"><span>Needs · Phase 03 + reviewed story setting</span><span>Voice · Optional, never faked</span></div>
+          </article>
+
+          <article class="phase" id="phase-07">
+            <div class="phase-top"><span class="phase-no">PHASE 07</span><span class="target">Plan · Oct 8</span></div>
+            <h4>Folklore DNA &amp; recommendations</h4>
+            <p class="outcome">Make cultural-interest recommendations transparent, editable, and under user control.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Explicit interests, opt-in behavior, deterministic scoring, “why this?” explanations, edit/pause/reset/delete controls.</div>
+              <div class="detail"><b>Pass gate</b>No tracking after opt-out; reset/delete clears intended data; chart and recommendations reflect real eligible records, never sample scores or ancestry inference.</div>
+            </div>
+            <div class="dep"><span>Needs · Published exhibits + owned session state</span><span>Uses · Main visitor flows</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lane release" aria-labelledby="releaseTitle">
+        <header class="lane-head" id="releaseTitle">
+          <div class="lane-kicker">Branch 03 · Evidence</div>
+          <h3>Prove the demo</h3>
+          <p>Integrate only what works; label every limitation and rehearse the real path.</p>
+        </header>
+        <div class="phase-list">
+          <article class="phase warn" id="phase-08">
+            <div class="phase-top"><span class="phase-no">PHASE 08</span><span class="target">Plan · Oct 9–10</span></div>
+            <h4>Integration, evidence &amp; rehearsal</h4>
+            <p class="outcome">Produce a reproducible local demo and a truthful competition evidence package.</p>
+            <div class="details">
+              <div class="detail"><b>Build</b>Run clean setup; verify the visitor loop, source/unknown/error paths, security, accessibility, responsive UI, and visual fidelity.</div>
+              <div class="detail"><b>Pass gate</b>Record actual commands, screenshots, sample counts, failures, and versions. Prepare a 60–90 second walkthrough inside the 5-minute pitch and an honest backup.</div>
+            </div>
+            <div class="dep"><span>Needs · Earlier phases done or explicitly deferred</span><span>Never · Invent metrics or live features</span></div>
+          </article>
+          <div class="flow-note"><strong>Competition delivery:</strong> short product walkthrough inside the five-minute pitch; prepare for three minutes of Q&amp;A. The pitch/demo is not a separate five-minute app tour.</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <section class="footer-grid" aria-label="Project scope and critical dependencies">
+    <article class="footer-card">
+      <h3>Prototype target · not current status</h3>
+      <p>First demo scope: <strong>one region, ten reviewed exhibits, thirty rights-cleared artifact records, one branching story, English/Chinese, and one connected visitor loop.</strong> Counts are objectives; show actual counts if the team lands short.</p>
+      <p style="margin-top:9px">Later pilot target: three regions, thirty exhibits, three hundred artifact records. Expansion follows only after the narrow prototype is verified.</p>
+    </article>
+    <article class="footer-card">
+      <h3>Critical handoffs</h3>
+      <ul>
+        <li>Phase 02’s approved passages unlock the grounded guide; imported records remain drafts until reviewed.</li>
+        <li>Object Lens needs both an eligible catalog and the guide/provider path; no calibrated likely match means no live identity claim.</li>
+        <li>Generated map art is scenery. Selectable regions must use a separate reviewed, data-driven geography layer.</li>
+        <li>At every handoff, mark features as implemented, fixture-driven, untested, or unavailable.</li>
+      </ul>
+    </article>
+  </section>
+
+  <div class="legend" aria-label="Color legend">
+    <span><i></i> Foundation &amp; evidence</span><span><i class="teal"></i> Visitor experience</span><span><i class="sage"></i> Integration &amp; release</span>
+  </div>
+  <footer class="bottom"><span>FOLKVERSE CHINA · PROJECT MIND MAP</span><span>Self-contained HTML · opens offline · print-ready</span></footer>
+</div>
+<script>
+(() => {
+  const svg = document.getElementById('rootConnections');
+  const shell = document.getElementById('mindmap');
+  const root = document.getElementById('rootNode');
+  const lanes = [...document.querySelectorAll('.lane-head')];
+  const ns = 'http://www.w3.org/2000/svg';
+  function render(){
+    if(!svg || !shell || !root || matchMedia('(max-width: 1050px)').matches){ svg.replaceChildren(); return; }
+    const s = shell.getBoundingClientRect(), r = root.getBoundingClientRect();
+    const width = Math.max(1, shell.clientWidth), height = Math.max(1, shell.clientHeight);
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('width', width); svg.setAttribute('height', height); svg.replaceChildren();
+    const rx = r.left - s.left + r.width/2, ry = r.bottom - s.top;
+    const targets = lanes.map(el => { const b=el.getBoundingClientRect(); return {x:b.left-s.left+b.width/2,y:b.top-s.top}; });
+    if(!targets.length) return;
+    const busY = Math.min(...targets.map(t=>t.y)) - 30;
+    const trunk = document.createElementNS(ns,'path');
+    trunk.setAttribute('d',`M ${rx} ${ry} V ${busY}`); svg.appendChild(trunk);
+    const bus = document.createElementNS(ns,'path');
+    bus.setAttribute('d',`M ${Math.min(...targets.map(t=>t.x))} ${busY} H ${Math.max(...targets.map(t=>t.x))}`); svg.appendChild(bus);
+    targets.forEach(t=>{
+      const p=document.createElementNS(ns,'path'); p.setAttribute('d',`M ${t.x} ${busY} V ${t.y}`); svg.appendChild(p);
+      const c=document.createElementNS(ns,'circle'); c.setAttribute('cx',t.x); c.setAttribute('cy',t.y); c.setAttribute('r','4'); svg.appendChild(c);
+    });
+    const c=document.createElementNS(ns,'circle'); c.setAttribute('cx',rx); c.setAttribute('cy',ry); c.setAttribute('r','4'); svg.appendChild(c);
+  }
+  const observer = new ResizeObserver(() => requestAnimationFrame(render));
+  observer.observe(shell); observer.observe(root); lanes.forEach(n=>observer.observe(n));
+  window.addEventListener('resize',render,{passive:true});
+  window.addEventListener('beforeprint',render);
+  requestAnimationFrame(render);
+})();
+</script>
+</body>
+</html>
