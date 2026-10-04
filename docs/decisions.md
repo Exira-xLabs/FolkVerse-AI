@@ -1,5 +1,14 @@
 # Implementation decisions
 
+## 4 October 2026 — Phase 01 interactive museum
+
+1. **User-directed visual freedom.** During this phase, the user clarified that the presentation is inspiration and requested imagination rather than exact reproduction. Preserve the cinematic scenes, transparent guide, navy/gold glass and broad composition, while adapting panels to useful controls. Do not claim the original proposed 8px fidelity tolerance was achieved. No OpenDesign exports exist. No new raster generation was necessary; the constellation, interaction layers and transitions are code-native.
+2. **Explicit fixture boundary.** Phase 01 is a client-side interactive demo, not reviewed cultural content or AI integration. Source drawers disclose draft fixture provenance; no fictional citation is shown as reviewed evidence. Scenery is decorative; region exploration uses an accessible list. No camera or microphone is requested and no user media is uploaded.
+3. **Fail closed in live mode.** The server reads only `APP_MODE` from explicit process configuration or the same root `.env` used by FastAPI. Missing/unknown configuration defaults to live, where future-feature routes show unavailable and no fixture controls. Only the mode is passed to the browser. Production should configure `APP_MODE` explicitly; separate test server 3002 exercises live behavior without altering the local `.env`.
+4. **Page-local sample interests.** Initial chart values are labelled sample interests, not a real profile. Editing, reset and opt-in preview affect only current page state; no event collection or persistence is implemented. Phase 07 owns real consent, preferences and recommendation storage.
+5. **Actual local audio.** The original fictional story has a shipped eSpeak-generated English recording and EN/ZH on-screen captions. Playback, pause, seek and elapsed time use the audio element. No narration autoplays; leaving the initial node removes its player. See the audio README for original transcript and regeneration. Voice input remains explicitly unavailable.
+6. **Preserve Phase 00 evidence.** New screenshots/results go under `report/evidence/phase01`, including foundation regression captures. The new suite tests mode isolation, fixture transitions, source-modal focus, real audio and enlarged-content reflow. CSS zoom plus narrowed viewport is exercised; native browser-toolbar zoom, Safari and physical devices remain untested.
+
 ## 4 October 2026 — Phase 00 repository foundation
 
 1. **Reuse this checkout.** Git contained only the original competition build kit, mind map and reporting instructions at `f95fa20`. No application or applicable `AGENTS.md` was present. The older sibling checkout mentioned in prior notes was absent. Application work starts in `apps/` within the selected checkout.

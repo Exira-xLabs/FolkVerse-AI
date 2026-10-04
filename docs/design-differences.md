@@ -1,17 +1,37 @@
-# Visual status — Phase 00
+# Visual status — Phase 01
 
-The eight source frames in `references/ui/` were inspected, along with the supplied business-plan PDF and competition deck. Their museum scenes, original fictional guide, navy/ivory/gold palette, glass tokens, serif display type and app navigation remain the direction.
+The user clarified during implementation that the PDF/presentation is inspiration and asked for imagination and an impressive product. This replaces the phase prompt's literal reconstruction requirement. The eight original frames were inspected, and their composition remains the starting point; the original museum backgrounds, transparent guide, serif typography, navy/ivory/gold palette and glass layers are preserved. No exact 8px fidelity score is claimed.
 
-Phase 00 provides the shared museum shell, home discovery links, route backgrounds, bilingual copy and explicit empty/unavailable states. It does not claim Phase 01 visual fidelity or its complete interactive fixtures.
+## Screen comparisons
 
-Intentional differences:
+| Screen | Preserved direction | Intentional changes |
+|---|---|---|
+| Home | Spacious museum scene, four bottom cards and wider guide card | Functional discovery links, clear demo footer, optional hover lift. |
+| Explore | Left filter glass, unobscured map focal point, lower-right region preview | Actual search/theme filters and an accessible exhibit list. Imaginary map markers are not clickable geography. Search-empty state is real. |
+| Journey | Top preference pills, broad bottom route glass and numbered stops | Duration, ordering/removal controls and time totals. Extra panel space supports actual editing; labels identify digital learning and fixtures. |
+| Story | Left player/choices over a luminous shadow screen | Original fictional two-ending tale, bilingual captions, real recorded English playback/seek, restart and context drawer. No copied fictional time. |
+| Lens | Left result glass and unobscured object scene | Scenario selector and explicit simulation. Invented confidence bars replaced by descriptive related/unknown/insufficient/denied/unavailable outcomes. No camera request or upload. |
+| Guide | Wide left chat, original girl at right | Bounded multiline composer, loading/scripted response, source requirements and unavailable voice feedback. Portrait is contained, never stretched; source claims are not invented. |
+| DNA | Left interests glass and lower-right suggestion | Real SVG radar chart plus editable bars/text, reset and preview-only opt-in. Sample values remain labelled; recommendations respond to explicit edits. |
+| Sources | Wide lower evidence chain | Four inspectable stages. Invented region/exhibit totals replaced by zero published sources and human-review requirements. |
 
-- A small foundation-preview label and Sources/Service status footer disclose readiness and support verification. Slide numbers and business-deck tabs are absent.
-- Home links describe the future experiences; they do not imply that camera capture, story playback or live chat already work.
-- The supplied background images remain byte-identical. Additional contrast overlays protect live text; their tuning against every reference is Phase 01 work.
-- Later routes display a truthful unavailable panel instead of copying illustrative data, sample percentages, story progress or interest scores from the references.
-- The guide remains the original transparent character. It is decorative while the actual guide service is unavailable.
-- Mobile/tablet navigation can scroll within its tab row; the page itself must not overflow. Home cards stack for small screens.
-- The initial Stories URL is registered, but the story has no reviewed text, graph or audio yet.
+Desktop screenshot names in `report/evidence/phase01/` are `01-home-1600.png` through `08-sources-1600.png`. The same prefixes ending in `-390.png` and `-768.png` cover phone and tablet. All eight desktop and phone frames were visually inspected. Eight Chinese desktop captures demonstrate local CJK fonts and translated UI; both languages were tested at every size.
 
-Phase 00 screenshots and browser results are in `report/evidence/phase00/`. They show a running production build; they are foundation evidence, not a claim that all eight reference layouts match within the proposed 8px tolerance. Phase 01 must add its component inventory, controls/fixtures and full visual comparisons.
+The story/lens panels are taller than their slide counterparts because they contain real controls and disclosures. The guide chat similarly accommodates a multiline input and service state. Mobile preserves the scene and glass, stacks panels, scrolls content vertically and moves the guide below the conversation. Navigation scrolls inside its row with a partially visible next tab; the document does not scroll horizontally.
+
+## Accessibility, graphics and interaction evidence
+
+- Native source dialog plus explicit Tab/Shift+Tab wrap, initial close-button focus, Escape close and return to opener were tested.
+- Original keyboard skip/link behavior and locale persistence continue to pass.
+- All scene images and fonts load before screenshots; the guide transparency remains byte-identical to the original asset.
+- `guide-reduced-graphics-1600.png` shows the opaque, blur-free, animation-free performance mode. Reduced motion is enabled in the browser suite.
+- `journey-zoom-200.png` captures enlarged content using 200% CSS zoom at a narrowed layout viewport. This checks reflow, not native toolbar zoom or an operating-system magnifier.
+- `source-drawer-1600.png` and `dna-edited-1600.png` show actual interaction states.
+
+There is no new AI-generated raster artwork. The supplied scenes already provide the visual identity; the chart, control layers and transitions are implemented in code. No face regeneration, traced map boundaries or screenshot-only controls were used.
+
+## Remaining limitations
+
+No reviewed region geometry/content corpus exists yet. This phase cannot demonstrate real cultural accuracy, retrieval, recognition, provider latency or saved profiles. English synthetic story narration is recorded locally; Chinese audio and live speech are unavailable. Literal reference-edge equality, Safari, physical devices, native toolbar zoom and a complete screen-reader/contrast audit have not been measured. Text and modal readability were visually inspected, not represented as a full accessibility certification.
+
+Phase 00 screenshots remain unchanged in `report/evidence/phase00/`. Its original unavailable shells were replaced only in demo mode; live mode still fails closed.

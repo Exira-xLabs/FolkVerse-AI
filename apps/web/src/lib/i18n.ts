@@ -21,7 +21,7 @@ type Copy = {
 export const dictionaries: Record<Locale, Copy> = {
   en: {
     nav: { home: "Home", explore: "Explore", journey: "Journey", stories: "Stories", lens: "Lens", guide: "Guide", dna: "My DNA", sources: "Sources", status: "Service status" },
-    titles: { home: "FolkVerse China", explore: "A country of stories", journey: "Your cultural journey", stories: "A story waiting to unfold", lens: "A discovery in every detail", guide: "Your AI cultural guide", dna: "Your Folklore DNA", sources: "Every story has a source", status: "The museum, connected" },
+    titles: { home: "FolkVerse China", explore: "A country of stories", journey: "Your cultural journey", stories: "The lantern path", lens: "A discovery in every detail", guide: "Your AI cultural guide", dna: "Your Folklore DNA", sources: "Every story has a source", status: "The museum, connected" },
     subtitles: { home: "Explore China. Hear its stories.", explore: "Choose a region. Follow your curiosity.", journey: "A route shaped by your interests.", stories: "Listen. Choose. Become part of the tale.", lens: "Meet the story behind what you see.", guide: "Ask a question. Follow the source.", dna: "Your cultural interests, in your hands.", sources: "Cultural discovery begins with evidence.", status: "Check the connection behind your visit." },
     kicker: "AN INTERACTIVE AI CULTURAL MUSEUM", skip: "Skip to content", language: "Switch to Chinese",
     preview: "Foundation preview", unavailable: "This experience is not available yet.", returnExplore: "Return to the museum",
@@ -40,7 +40,7 @@ export const dictionaries: Record<Locale, Copy> = {
   },
   "zh-CN": {
     nav: { home: "首页", explore: "探索", journey: "旅程", stories: "故事", lens: "识物", guide: "向导", dna: "我的兴趣", sources: "资料来源", status: "服务状态" },
-    titles: { home: "华韵 AI · FolkVerse China", explore: "每一方土地，都有故事", journey: "您的文化探索之旅", stories: "等待展开的故事", lens: "在细节中发现文化", guide: "您的 AI 文化向导", dna: "您的文化兴趣图谱", sources: "每个故事，都有出处", status: "连接文化之旅" },
+    titles: { home: "华韵 AI · FolkVerse China", explore: "每一方土地，都有故事", journey: "您的文化探索之旅", stories: "灯笼之路", lens: "在细节中发现文化", guide: "您的 AI 文化向导", dna: "您的文化兴趣图谱", sources: "每个故事，都有出处", status: "连接文化之旅" },
     subtitles: { home: "探索中国，聆听文化故事。", explore: "选择地区，跟随好奇心出发。", journey: "让兴趣引领您的学习路线。", stories: "聆听、选择，走进故事。", lens: "了解眼前物件背后的故事。", guide: "提出问题，追溯来源。", dna: "您的文化兴趣，由您掌握。", sources: "文化探索，从可靠资料开始。", status: "查看支撑此次访问的服务连接。" },
     kicker: "交互式 AI 文化博物馆", skip: "跳转到内容", language: "Switch to English",
     preview: "基础预览", unavailable: "此功能尚未开放。", returnExplore: "返回博物馆",

@@ -1,0 +1,97 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState, type ReactNode, type ButtonHTMLAttributes } from "react";
+import { useLocale } from "./locale-provider";
+import { navigation, routes, type PageKey } from "@/lib/routes";
+
+export function GlassPanel({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return <section className={`glass-panel ${className}`}>{children}</section>;
+}
+export function GoldButton(props: ButtonHTMLAttributes<HTMLButtonElement>) {
+  return <button {...props} className={`gold-button ${props.className ?? ""}`} />;
+}
+export function ThemeChip({ children, active, onClick }: { children: ReactNode; active: boolean; onClick: () => void }) {
+  return <button className={`theme-chip ${active ? "selected" : ""}`} aria-pressed={active} onClick={onClick}>{children}</button>;
+}
+export function GlassTabs({ page }: { page: PageKey }) {
+  const { t, locale } = useLocale();
+  return <nav aria-label={locale === "en" ? "Main navigation" : "主导航"} className="nav-tabs">
+    {navigation.map(key => <Link key={key} href={routes[key].href} prefetch={false}
+      className={`nav-tab ${page === key ? "selected" : ""}`} aria-current={page === key ? "page" : undefined}>{t.nav[key]}</Link>)}
+  </nav>;
+}
+export function GuidePortrait() {
+  const { locale } = useLocale();
+  return <div className="glass-panel portrait-card"><div className="portrait-frame">
+    <Image src="/folkverse/09_ai_guide_character.png" alt="" fill sizes="(max-width: 700px) 85vw, 30vw" className="portrait-art" />
+    </div><p>{locale === "en" ? "Your museum companion" : "您的博物馆伙伴"}<small>{locale === "en" ? "A fictional character" : "虚构角色"}</small></p></div>;
+}
+
+export type DemoExhibit = { id: string; title: [string, string]; region: [string, string]; theme: string; minutes: number; asset: string };
+export const demoExhibits: DemoExhibit[] = [
+  { id: "screen", title: ["Behind the illuminated screen", "光影幕后的世界"], region: ["Shaanxi", "陕西"], theme: "Craft", minutes: 6, asset: "04_shadow_puppetry.png" },
+  { id: "table", title: ["A place at the tea table", "茶桌旁的一席"], region: ["Fujian", "福建"], theme: "Food", minutes: 5, asset: "03_cultural_journey.png" },
+  { id: "song", title: ["An evening of melodies", "旋律中的夜晚"], region: ["Guangdong", "广东"], theme: "Music", minutes: 7, asset: "07_folklore_dna.png" },
+];
+export function ExhibitCard({ exhibit, onOpen }: { exhibit: DemoExhibit; onOpen: () => void }) {
+  const { locale } = useLocale(); const n = locale === "en" ? 0 : 1;
+  return <button className="exhibit-card" onClick={onOpen}><span className="exhibit-thumb">
+    <Image src={`/folkverse/${exhibit.asset}`} alt="" fill sizes="180px" />
+    </span><span><small>{exhibit.region[n]} · {exhibit.minutes} {n === 0 ? "min" : "分钟"}</small><strong>{exhibit.title[n]}</strong><span className="card-caption">{n === 0 ? "Illustrative exhibit · view notes ↗︎" : "示例展览 · 查看说明 ↗︎"}</span></span></button>;
+}
+
+export function SourceDrawer({ open, onClose, title }: { open: boolean; onClose: () => void; title?: string }) {
+  const dialog = useRef<HTMLDialogElement>(null);
+  const { locale } = useLocale(); const zh = locale !== "en";
+  useEffect(() => {
+    const node = dialog.current;
+    if (!node || !open) return;
+    const trigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    node.showModal();
+    return () => { node.close(); trigger?.focus(); };
+  }, [open]);
+  return <dialog ref={dialog} className="source-drawer glass-panel" aria-labelledby="source-title"
+    onCancel={event => { event.preventDefault(); onClose(); }} onClick={event => { if (event.target === event.currentTarget) onClose(); }}
+    onKeyDown={event => {
+      if (event.key !== "Tab") return;
+      const items = event.currentTarget.querySelectorAll<HTMLElement>("button:not(:disabled), a[href], input, select, textarea");
+      const first = items[0]; const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    }}>
+    <div className="drawer-top"><span className="eyebrow">{zh ? "来源与使用说明" : "SOURCES & CONTEXT"}</span><button className="icon-button" autoFocus onClick={onClose} aria-label={zh ? "关闭来源" : "Close sources"}>×</button></div>
+    <h2 id="source-title">{title || (zh ? "了解您所看到的内容" : "Know what you are seeing")}</h2>
+    <span className="demo-tag">{zh ? "演示内容 · 尚未审核" : "Demo material · not reviewed"}</span>
+    <p>{zh ? "这些展览、故事和回答是用于测试界面的编辑示例，不是已发布的文化资料。尚无审核人或审核日期。" : "These exhibits, stories and responses are editorial UI fixtures, not published cultural evidence. No reviewer or review date is claimed."}</p>
+    <dl><div><dt>{zh ? "图像用途" : "Artwork role"}</dt><dd>{zh ? "原始生成场景，仅作装饰" : "Supplied generated scenery; decorative only"}</dd></div><div><dt>{zh ? "识别参考" : "Recognition references"}</dt><dd>{zh ? "未导入" : "None imported"}</dd></div><div><dt>{zh ? "内容权利" : "Content rights"}</dt><dd>{zh ? "示例文本为项目原创；外部资料未导入" : "Original project fixture text; no external passages imported"}</dd></div></dl>
+    <p>{zh ? "真实展览发布前，需要出处、使用权限和人工审核。" : "Real exhibits require source records, rights decisions and human review before publication."}</p>
+    <Link className="outline-button" href="/sources" onClick={onClose}>{zh ? "浏览知识链" : "Explore the evidence chain"} ↗︎</Link>
+  </dialog>;
+}
+
+export function AudioControls() {
+  const audio = useRef<HTMLAudioElement>(null);
+  const [playing, setPlaying] = useState(false); const [time, setTime] = useState(0); const [duration, setDuration] = useState(0); const [error, setError] = useState(false);
+  const { locale } = useLocale(); const zh = locale !== "en";
+  const clock = (value: number) => `${Math.floor(value / 60)}:${String(Math.floor(value % 60)).padStart(2, "0")}`;
+  return <div className="audio-controls">
+    <audio ref={audio} src="/folkverse/audio/lantern-demo.mp3" preload="metadata" onTimeUpdate={() => setTime(audio.current?.currentTime ?? 0)}
+      onLoadedMetadata={() => setDuration(audio.current?.duration ?? 0)} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)} onError={() => setError(true)} />
+    <button className="icon-button" disabled={error} aria-label={playing ? (zh ? "暂停旁白" : "Pause narration") : (zh ? "播放旁白" : "Play narration")}
+      onClick={() => { if (playing) audio.current?.pause(); else void audio.current?.play().catch(() => setError(true)); }}>{playing ? "Ⅱ" : "▶︎"}</button>
+    <label className="audio-timeline"><span className="sr-only">{zh ? "旁白位置" : "Narration position"}</span><input type="range" min="0" max={duration || 1} step="0.1" value={time} onChange={e => { const value = Number(e.target.value); if (audio.current) audio.current.currentTime = value; setTime(value); }} /></label>
+    <span>{clock(time)} / {clock(duration)}</span><small>{error ? (zh ? "音频不可用" : "Audio unavailable") : (zh ? "预录合成英语旁白" : "Recorded synthetic EN narration")}</small>
+  </div>;
+}
+
+export function InterestChart({ weights }: { weights: number[] }) {
+  const { locale } = useLocale(); const names = locale === "en" ? ["Craft", "Legends", "Music", "Food culture"] : ["工艺", "传说", "音乐", "饮食文化"];
+  const points = weights.map((v, i) => { const angle = -Math.PI / 2 + i * Math.PI / 2; return `${100 + Math.cos(angle) * v * .7},${100 + Math.sin(angle) * v * .7}`; }).join(" ");
+  return <div className="interest-chart"><svg viewBox="0 0 200 200" aria-hidden="true">
+    {[25, 50, 75].map(r => <circle key={r} cx="100" cy="100" r={r} className="chart-ring" />)}
+    <path d="M100 20V180M20 100H180" className="chart-ring" /><polygon points={points} className="chart-area" />
+    {weights.map((v, i) => { const angle = -Math.PI / 2 + i * Math.PI / 2; return <circle key={i} cx={100 + Math.cos(angle) * v * .7} cy={100 + Math.sin(angle) * v * .7} r="4" fill="var(--accent-gold)" />; })}
+    </svg><dl>{names.map((name, i) => <div key={name}><dt>{name}</dt><dd>{weights[i]} / 100</dd><span className="interest-bar"><span style={{ width: `${weights[i]}%` }} /></span></div>)}</dl></div>;
+}

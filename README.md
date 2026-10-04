@@ -40,4 +40,4 @@ pnpm test:e2e
 pnpm check:foundation
 ```
 
-Later feature routes currently display explicit unavailable states. They do not simulate live guide answers, artifact recognition or reviewed cultural content.
+Phase 01 provides labelled interactive fixtures for Explore, Journey, Stories, Lens, Guide, My DNA and Sources. Demo filters, route edits, story branches, recorded narration and interest-chart edits work locally. These are not reviewed content or live AI. Set `APP_MODE=live` in server configuration to disable fixtures and display unavailable feature states; see [current status](docs/build-status.md).

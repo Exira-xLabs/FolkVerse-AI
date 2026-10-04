@@ -12,7 +12,7 @@ async function waitForArtwork(page: Page) {
 
 async function capture(page: Page, filename: string) {
   await waitForArtwork(page);
-  await page.screenshot({ path: `report/evidence/phase00/${filename}.png`, fullPage: true, animations: "disabled" });
+  await page.screenshot({ path: `report/evidence/phase01/regression-${filename}.png`, fullPage: true, animations: "disabled" });
 }
 
 test("museum routes work at desktop, mobile and tablet without page overflow", async ({ page }) => {
@@ -25,7 +25,7 @@ test("museum routes work at desktop, mobile and tablet without page overflow", a
       await page.goto(route);
       await expect(page.locator("h1")).toBeVisible();
       await waitForArtwork(page);
-      await expect(page.getByText("Foundation preview", { exact: true }).last()).toBeVisible();
+      await expect(page.getByText("Interactive demo", { exact: true }).last()).toBeVisible();
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
       expect(overflow, `${route} at ${viewport.width}px`).toBe(false);
     }

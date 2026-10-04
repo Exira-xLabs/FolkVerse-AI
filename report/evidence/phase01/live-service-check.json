@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-04T14:03:02.336Z",
+  "status": 200,
+  "body": {
+    "status": "ok",
+    "mode": "demo",
+    "database": "available",
+    "pgvector": "available",
+    "schema_status": "current",
+    "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+    "pgvector_version": "0.8.5"
+  }
+}

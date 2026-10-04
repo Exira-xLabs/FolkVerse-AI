@@ -1,0 +1,125 @@
+import { expect, test, type Page } from "@playwright/test";
+
+async function ready(page: Page) {
+  await page.locator("img").evaluateAll(images => images.forEach(image => image.setAttribute("loading", "eager")));
+  await expect.poll(() => page.locator("img").evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
+  await page.evaluate(() => document.fonts.ready);
+}
+
+test("eight museum screens retain artwork and stay usable at three sizes in both languages", async ({ page }) => {
+  test.setTimeout(120000);
+  const routes = ["/", "/explore", "/journey", "/stories/lantern-path", "/lens", "/guide", "/dna", "/sources"];
+  const errors: string[] = []; page.on("pageerror", e => errors.push(e.message));
+  for (const size of [{ width: 1600, height: 900 }, { width: 390, height: 844 }, { width: 768, height: 1024 }]) {
+    await page.setViewportSize(size);
+    for (const [index, route] of routes.entries()) {
+      await page.goto(route); await ready(page);
+      await expect(page.locator("h1")).toBeVisible();
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} at ${size.width}`).toBe(true);
+      await page.screenshot({ path: `report/evidence/phase01/${String(index + 1).padStart(2, "0")}-${route === "/" ? "home" : route.split("/")[1]}-${size.width}.png`, fullPage: true, animations: "disabled" });
+      await page.getByRole("button", { name: "Switch to Chinese" }).click();
+      await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN"); await ready(page);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} Chinese at ${size.width}`).toBe(true);
+      if (size.width === 1600) await page.screenshot({ path: `report/evidence/phase01/zh-${index + 1}-1600.png`, fullPage: true, animations: "disabled" });
+      await page.getByRole("button", { name: "Switch to English" }).click();
+    }
+  }
+  expect(errors).toEqual([]);
+});
+
+test("explore filters, empty state and source drawer keyboard focus", async ({ page }) => {
+  await page.goto("/explore");
+  await page.getByRole("button", { name: "Music", exact: true }).click();
+  await expect(page.getByRole("button", { name: /An evening of melodies/ })).toBeVisible();
+  await expect(page.getByRole("button", { name: /Behind the illuminated screen/ })).toHaveCount(0);
+  const opener = page.getByRole("button", { name: /An evening of melodies/ });
+  await opener.click();
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Close sources" })).toBeFocused();
+  await page.keyboard.press("Shift+Tab");
+  await expect(page.getByRole("link", { name: "Explore the evidence chain" })).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(page.getByRole("button", { name: "Close sources" })).toBeFocused();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).not.toBeVisible(); await expect(opener).toBeFocused();
+  await page.getByRole("searchbox").fill("unmatched"); await expect(page.getByText(/No demo exhibits match/)).toBeVisible();
+});
+
+test("journey reorder, remove and duration-constrained empty state", async ({ page }) => {
+  await page.goto("/journey");
+  await page.getByRole("button", { name: "Move down screen" }).click();
+  await expect(page.locator(".journey-stops li").first()).toContainText("Fujian");
+  await page.getByRole("button", { name: "Remove table" }).click();
+  await expect(page.locator(".panel-heading")).toContainText("13 / 20");
+  await page.getByLabel("Time", { exact: true }).selectOption("5");
+  await page.getByLabel("Interests", { exact: true }).selectOption("Craft");
+  await page.getByRole("button", { name: /Shape my route/ }).click();
+  await expect(page.getByText(/Not enough time/)).toBeVisible();
+});
+
+test("both story branches, restart and actual recorded audio", async ({ page }) => {
+  await page.goto("/stories/lantern-path");
+  await page.getByRole("button", { name: "Play narration" }).click();
+  await expect(page.getByRole("button", { name: "Pause narration" })).toBeVisible();
+  await expect.poll(() => page.locator("audio").evaluate(el => (el as HTMLAudioElement).currentTime)).toBeGreaterThan(0);
+  await page.getByRole("button", { name: /Follow the mountain/ }).click(); await expect(page.getByRole("heading", { name: "The mountain light" })).toBeVisible();
+  await expect(page.locator("audio")).toHaveCount(0);
+  await page.getByRole("button", { name: /Begin again/ }).click();
+  await page.getByRole("button", { name: /Cross the river/ }).click(); await expect(page.getByRole("heading", { name: "The river bridge" })).toBeVisible();
+});
+
+test("lens exposes unknown, poor image, denial, outage and loading without claiming recognition", async ({ page }) => {
+  await page.goto("/lens");
+  for (const [value, heading] of [["unknown", "No eligible catalog match"], ["poor", "More detail is needed"], ["denied", "Camera permission denied"], ["unavailable", "Recognition service unavailable"]]) {
+    await page.getByLabel("Choose a demo scenario").selectOption(value); await expect(page.getByRole("heading", { name: heading })).toBeVisible();
+  }
+  await page.getByRole("button", { name: /Replay simulation/ }).click();
+  await expect(page.getByText("Comparing demo…")).toBeVisible();
+  await expect(page.getByRole("button", { name: /Replay simulation/ })).toBeEnabled();
+  await expect(page.getByText("SIMULATED RESULT · NO RECOGNITION")).toBeVisible();
+});
+
+test("guide submits bounded text, clearly scripted response and voice unavailable", async ({ page }) => {
+  await page.goto("/guide"); await expect(page.getByRole("button", { name: /Send/ })).toBeDisabled();
+  const input = page.getByLabel("Ask the guide"); await expect(input).toHaveAttribute("maxlength", "2000");
+  await input.fill("How does this tradition work?"); await page.getByRole("button", { name: /Send/ }).click();
+  await expect(page.getByText("Loading the scripted response…")).toBeVisible();
+  await expect(page.getByText(/I cannot answer your question from evidence yet/)).toBeVisible();
+  await page.getByRole("button", { name: /Voice/ }).click(); await expect(page.getByText(/Live microphone transcription is unavailable/)).toBeVisible();
+});
+
+test("interest edits redraw chart and reset clears suggestions", async ({ page }) => {
+  await page.goto("/dna"); const polygon = page.locator("polygon"); const before = await polygon.getAttribute("points");
+  await page.getByRole("button", { name: "Edit interests" }).click();
+  await page.getByRole("slider", { name: "Craft", exact: true }).fill("12");
+  expect(await polygon.getAttribute("points")).not.toBe(before);
+  await expect(page.locator(".recommendation-panel h2")).toHaveText("Legends");
+  await page.getByRole("button", { name: "Reset", exact: true }).click();
+  await expect(page.locator(".recommendation-panel h2")).toHaveText("Begin with curiosity");
+  await expect(page.locator(".interest-chart dd")).toHaveText(["0 / 100", "0 / 100", "0 / 100", "0 / 100"]);
+});
+
+test("live mode fails closed with no demo controls", async ({ page }) => {
+  for (const route of ["explore", "journey", "guide", "lens", "dna", "sources", "stories/lantern-path"]) {
+    await page.goto(`http://127.0.0.1:3002/${route}`);
+    await expect(page.getByRole("heading", { name: "This experience is not available yet." })).toBeVisible();
+    await expect(page.locator(".fixture-content")).toHaveCount(0);
+  }
+});
+
+test("reduced graphics, keyboard path and 200 percent page zoom", async ({ page }) => {
+  // CSS zoom plus a narrowed layout viewport stresses enlarged content and reflow.
+  // This does not claim use of the browser toolbar's zoom setting.
+  await page.goto("/dna");
+  await page.getByRole("button", { name: "Simplify graphics" }).click();
+  await expect(page.locator(".museum-scene")).toHaveClass(/reduced-graphics/);
+  expect(await page.locator(".dna-panel").evaluate(el => getComputedStyle(el).backdropFilter)).toBe("none");
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send("Emulation.setDeviceMetricsOverride", { width: 800, height: 450, deviceScaleFactor: 1, mobile: false, scale: 1 });
+  for (const route of ["/explore", "/journey", "/guide", "/dna", "/sources"]) {
+    await page.goto(route); await ready(page);
+    await page.evaluate(() => { document.documentElement.style.zoom = "2"; });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `zoom ${route}`).toBe(true);
+    await expect(page.locator("h1")).toBeVisible();
+  }
+});
