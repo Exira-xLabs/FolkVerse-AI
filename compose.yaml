@@ -1,0 +1,19 @@
+name: folkverse
+services:
+  db:
+    image: pgvector/pgvector:pg17@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Run pnpm setup:local}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run pnpm setup:local}
+      POSTGRES_DB: ${POSTGRES_DB:?Run pnpm setup:local}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5440}:5432"
+    volumes:
+      - folkverse-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+volumes:
+  folkverse-db:

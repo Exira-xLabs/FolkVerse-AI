@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-04T13:12:24.655Z",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:3000/api/v1/health",
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "mode": "demo",
+        "database": "available",
+        "pgvector": "available",
+        "schema_status": "current",
+        "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+        "pgvector_version": "0.8.5"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3001/api/v1/health",
+      "configuration": "API_BASE_URL points to unused local port 9",
+      "status": 503,
+      "body": {
+        "error": {
+          "code": "api_unavailable",
+          "message": "The museum service is temporarily unavailable.",
+          "retryable": true
+        },
+        "request_id": "req_ab7fa2fb-ae73-4c52-85f9-27f53cb5e0c6"
+      }
+    }
+  ]
+}

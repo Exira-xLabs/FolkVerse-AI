@@ -1,0 +1,22 @@
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { cookies } from "next/headers";
+import "@fontsource/noto-sans-sc/400.css";
+import "@fontsource/noto-serif-sc/400.css";
+import "./globals.css";
+import { LocaleProvider } from "@/components/locale-provider";
+
+const serif = localFont({ src: "./fonts/DejaVuSerif.ttf", variable: "--font-serif", display: "swap" });
+const sans = localFont({ src: "./fonts/DejaVuSans.ttf", variable: "--font-sans", display: "swap" });
+
+export const metadata: Metadata = {
+  title: { default: "FolkVerse China — 华韵 AI", template: "%s | FolkVerse China" },
+  description: "Explore China. Hear its stories. A bilingual cultural museum foundation preview.",
+};
+
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const locale = (await cookies()).get("folkverse_locale")?.value === "zh-CN" ? "zh-CN" : "en";
+  return <html lang={locale}><body className={`${serif.variable} ${sans.variable}`}>
+    <LocaleProvider initialLocale={locale}>{children}</LocaleProvider>
+  </body></html>;
+}

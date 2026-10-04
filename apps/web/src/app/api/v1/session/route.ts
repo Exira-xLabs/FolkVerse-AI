@@ -1,0 +1,6 @@
+import { proxyFoundation } from "@/lib/api-proxy";
+
+export const dynamic = "force-dynamic";
+export const GET = (request: Request) => proxyFoundation(request, "session");
+export const POST = (request: Request) => proxyFoundation(request, "session");
+export const DELETE = (request: Request) => proxyFoundation(request, "session");

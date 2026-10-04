@@ -1,3 +1,21 @@
 # Keep the two competition report PDFs local; do not publish them.
 /references/FolkVerse_China_Business_Plan_Report.pdf
 /references/FolkVerse_China_Competition_Business_Plan.pdf
+
+# Local configuration, dependencies and generated runtime state.
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.tsbuildinfo
+playwright-report/
+test-results/
+.local/
+media/private/

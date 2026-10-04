@@ -1,0 +1,96 @@
+{
+  "created": "2026-09-29",
+  "provenance": "Original project generated artwork reused byte-for-byte. Concept illustration, not cultural evidence.",
+  "assets": [
+    {
+      "file": "01_museum_entrance.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "a1b866c5b50cdedabf5fce6e81bd3000548093e5c1fe354f35115a44d1228f8f",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "02_interactive_map.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "65920754ce5065c756f5b2bbf23fd8065524f4db65c5de72f230149c6aab4022",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "03_cultural_journey.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "9bad3fe56057e5a7866e76b1f424986b5a4949c5a95924552a8e077c3d9038b4",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "04_shadow_puppetry.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "eeead5c758fd00abb54a6959ac024704c89d016ea39dd0fab9fb5d98bb63e538",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "05_object_lens.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "36e293b72d804e392245c9c044d99d962fc2ac1edc79badc109c2c9b3b644803",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "06_ai_guide.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "6ac351de8b6a120b9cb08b626fbb3e415412cfb3d4c7bdaaa35d60819a3cbb7e",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "07_folklore_dna.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "f6251fc4e9ab1f2cefbaa8cd0c667365628d714893ccf55f6be501be542d9963",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "08_museum_everywhere.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "479cea2e20c7202448b7c5dc296d7fcf69ab8a5da437529eeead6f9f930c7eb9",
+      "role": "decorative_generated_background",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    },
+    {
+      "file": "09_ai_guide_character.png",
+      "width": 1311,
+      "height": 1200,
+      "mode": "RGBA",
+      "sha256": "b9ed8f99c4caf4826b8b2c2b3e836fc7870eaae69ede4fea76489f93984f46af",
+      "role": "fictional_ai_guide",
+      "use_for_recognition_dataset": false,
+      "use_as_geographic_geometry": false
+    }
+  ]
+}
