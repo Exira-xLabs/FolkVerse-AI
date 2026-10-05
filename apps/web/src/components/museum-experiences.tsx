@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useLocale } from "./locale-provider";
-import { AudioControls, demoExhibits, ExhibitCard, GlassPanel, GoldButton, GuidePortrait, InterestChart, NarrationTranscript, SourceDrawer, ThemeChip } from "./museum-ui";
+import { AudioControls, demoExhibits, ExhibitCard, GlassPanel, GoldButton, GuidePortrait, NarrationTranscript, SourceDrawer, ThemeChip } from "./museum-ui";
+import { InterestChart } from "./interest-chart";
 import { CatalogExperience } from "./catalog-explorer";
 import { useGuideKeyboard } from "@/lib/use-guide-keyboard";
 import { useVisit } from "./visit-provider";
@@ -135,7 +136,7 @@ function Guide({ open }: { open: OpenSource }) {
 function Dna({ open }: { open: OpenSource }) {
   const c = useCopy(); const [weights, setWeights] = useState([0, 0, 0, 0]); const [editing, setEditing] = useState(false); const [example, setExample] = useState(false);
   const names = [["Craft", "工艺"], ["Legends", "传说"], ["Music", "音乐"], ["Food culture", "饮食文化"]]; const strongest = weights.indexOf(Math.max(...weights));
-  return <div className="dna-layout"><GlassPanel className="dna-panel"><h2>{c("Your cultural constellation", "您的文化星图")}</h2>
+  return <div className="dna-layout"><GlassPanel className="dna-panel"><p className="eyebrow">{c("A LITTLE ABOUT YOU", "从您的好奇心开始")}</p><h2>{c("Your cultural constellation", "您的文化星图")}</h2>
     {example && <p className="demo-tag">{c("Example interests · not your profile", "示例兴趣 · 非您的档案")}</p>}
     {weights.every(v => v === 0) && <p className="interest-intro">{c("Nothing selected yet. Choose a little, a lot, or leave any theme open.", "尚未选择兴趣。您可以选择不同程度，也可以保留任何主题为空。")}</p>}
     <InterestChart weights={weights} onChange={(index, value) => { setExample(false); setWeights(previous => previous.map((v, i) => i === index ? value : v)); }} /><p className="fine-print">{c("Only the preferences you choose here. Changes stay on this page; no tracking or profile is saved. Choosing interests here is optional; a saved profile and consent flow are not connected.", "仅使用您在此选择的偏好。修改保留在此页面，不会追踪或保存个人档案。此处选择兴趣完全自愿；保存档案与同意流程尚未连接。")}</p>

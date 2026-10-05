@@ -116,14 +116,3 @@ export function AudioControls() {
     <span role={error ? "alert" : duration <= 0 ? "status" : undefined}>{error ? (zh ? "音频不可用，请阅读文字稿。" : "Audio unavailable. Read the transcript.") : duration <= 0 ? (zh ? "正在加载旁白…" : "Loading narration…") : `${clock(time)} / ${clock(duration)}`}</span><small>{error ? (zh ? "音频不可用" : "Audio unavailable") : (zh ? "预录合成英语旁白" : "Recorded synthetic EN narration")}</small>
   </div></div>;
 }
-
-export function InterestChart({ weights, onChange }: { weights: number[]; onChange?: (index: number, value: number) => void }) {
-  const { locale } = useLocale(); const names = locale === "en" ? ["Craft", "Legends", "Music", "Food culture"] : ["工艺", "传说", "音乐", "饮食文化"];
-  const points = weights.map((v, i) => { const angle = -Math.PI / 2 + i * Math.PI / 2; return `${100 + Math.cos(angle) * v * .7},${100 + Math.sin(angle) * v * .7}`; }).join(" ");
-  return <div className="interest-chart"><svg viewBox="0 0 200 200" role={onChange ? "group" : undefined} aria-label={onChange ? (locale === "en" ? "Editable interest constellation" : "可编辑兴趣星图") : undefined} aria-hidden={onChange ? undefined : true}>
-    {[25, 50, 75].map(r => <circle key={r} cx="100" cy="100" r={r} className="chart-ring" />)}
-    {weights.map((v, i) => { const [x, y] = [[65, 45], [155, 70], [135, 155], [45, 140]][i]; const increase = () => onChange?.(i, v >= 100 ? 0 : Math.min(100, v + 25)); return <g key={i} className="constellation-star" transform={`translate(${x},${y})`} role={onChange ? "button" : undefined} tabIndex={onChange ? 0 : undefined} aria-label={onChange ? `${names[i]} ${v} / 100 · ${locale === "en" ? "Change interest" : "修改兴趣"}` : undefined} onClick={increase} onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); increase(); } }}><title>{`${names[i]} ${v}/100`}</title><circle r="25" fill="transparent"/><circle r={5 + v / 15} fill="#f6d697" opacity={.65 + v * .0035}/><path d="M-15 0H15M0-15V15" stroke="#f6d697" opacity={v ? 1 : .65}/><text y="33" textAnchor="middle" fontSize="12" fill="#fff4df">{names[i]}</text></g>; })}
-    <path d="M100 20V180M20 100H180" className="chart-ring" /><polygon points={points} className="chart-area" />
-    {weights.map((v, i) => { const angle = -Math.PI / 2 + i * Math.PI / 2; return <circle key={i} cx={100 + Math.cos(angle) * v * .7} cy={100 + Math.sin(angle) * v * .7} r="4" fill="var(--accent-gold)" />; })}
-    </svg><dl>{names.map((name, i) => <div key={name}><dt>{name}</dt><dd>{weights[i]} / 100<span className="interest-bar" aria-hidden="true"><span style={{ width: `${weights[i]}%` }} /></span></dd></div>)}</dl></div>;
-}

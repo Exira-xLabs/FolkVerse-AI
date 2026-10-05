@@ -6,6 +6,14 @@
   --text-primary: #fff4df;
   --text-secondary: #cfd9dd;
   --accent-gold: #f6d697;
+  --interest-craft: var(--accent-gold);
+  --interest-legends: #bfb4eb;
+  --interest-music: #8ecfc6;
+  --interest-food: #e9ad96;
+  --surface-elevated: color-mix(in srgb, var(--museum-panel) 94%, var(--text-secondary));
+  --surface-hover: color-mix(in srgb, var(--museum-panel) 88%, var(--text-secondary));
+  --border-subtle: color-mix(in srgb, var(--text-secondary) 15%, transparent);
+  --border-faint: color-mix(in srgb, var(--text-secondary) 8%, transparent);
   --glass-border: rgb(237 219 177 / 48%);
   --glass-highlight: rgb(255 247 222 / 42%);
   --glass-radius: 27.5px;
@@ -31,9 +39,9 @@ h1, h2 { font-family: var(--font-display); font-weight: 400; }
 .scene-shade { inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(3 9 17 / 55%), transparent 65%), linear-gradient(0deg, rgb(3 9 17 / 45%), transparent 35%); }
 .glass-panel { background: linear-gradient(125deg, rgb(176 196 211 / 22%) 0%, rgb(27 39 50 / 76%) 24%, rgb(7 17 27 / 72%) 79%, rgb(139 104 55 / 43%) 100%); border: 1px solid var(--glass-border); border-radius: var(--glass-radius); box-shadow: 0 20px 50px rgb(0 0 0 / 30%), inset 0 1px 0 var(--glass-highlight); backdrop-filter: blur(16px); }
 .museum-nav { margin: 0 -15px; min-height: 79px; display: flex; align-items: center; padding: 12px 34px; gap: 24px; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 54px; flex: 1; white-space: nowrap; min-height: 44px; }
+.brand { display: flex; align-items: center; gap: 12px; flex: 1; white-space: nowrap; min-height: 44px; }
+.brand-mark { width: 44px; height: 44px; flex-shrink: 0; }
 .brand span { font-family: var(--font-display); font-size: 32px; }
-.brand small { color: var(--accent-gold); font-weight: 700; font-size: 14px; letter-spacing: .05em; }
 .nav-tabs { display: flex; gap: 9px; }
 .nav-tab, .outline-button, .gold-button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 44px; border-radius: var(--pill-radius); border: 1px solid rgb(207 217 221 / 35%); background: rgb(3 9 17 / 46%); color: var(--text-primary); padding: 10px 24px; transition: background 200ms, border-color 200ms; }
 .nav-tab { min-width: 120px; font-size: 16px; padding: 10px 16px; }
@@ -84,10 +92,9 @@ h1 { font-size: clamp(36px, 3.28vw, 56px); line-height: 1.2; margin: 30px 0 20px
 @media (min-width: 1600px) { .museum-scene { min-height: max(900px, 100svh); } }
 @media (max-width: 1350px) {
   .museum-nav { padding: 14px 20px; gap: 16px; }
-  .brand { gap: 20px; }
+  .brand { gap: 10px; }
   .brand span { font-size: 27px; }
   .nav-tab { min-width: 90px; font-size: 14px; padding-inline: 14px; }
-  .brand small { font-size: 12px; }
   .discovery-card h2 { font-size: 21px; }
   .discovery-card a { font-size: 13px; }
   .guide-panel { max-width: 62%; }
@@ -108,9 +115,9 @@ h1 { font-size: clamp(36px, 3.28vw, 56px); line-height: 1.2; margin: 30px 0 20px
   .scene-art { object-position: 57% center; }
   .scene-shade { background: linear-gradient(180deg, rgb(3 9 17 / 56%), rgb(3 9 17 / 15%) 35%, rgb(3 9 17 / 65%)); }
   .museum-nav { padding: 12px 14px 6px; border-radius: 22px; gap: 10px; }
-  .brand { gap: 0; }
+  .brand { gap: 9px; }
+  .brand-mark { width: 36px; height: 36px; }
   .brand span { font-size: 24px; }
-  .brand small { display: none; }
   .language-switch { min-width: 95px; font-size: 13px; }
   .nav-tabs { gap: 8px; }
   .hero-copy { padding: 32px 4px 24px; }
@@ -237,16 +244,6 @@ button:disabled { cursor: default; }
 .portrait-card > p { text-align: center; font-family: var(--font-display); padding: 14px; margin-top: auto; border-top: 1px solid #f6d69755; }
 .portrait-card small { display: block; font-family: var(--font-ui); margin-top: 7px; font-size: 11px; color: var(--text-secondary); }
 .dna-layout { display: flex; justify-content: space-between; align-items: flex-end; flex: 1; gap: 30px; padding-bottom: 26px; }
-.dna-panel { width: 525px; padding: 27px; margin-top: 18px; }
-.interest-chart { display: flex; gap: 24px; align-items: center; margin: 22px 0; }
-.interest-chart svg { width: 42%; flex-shrink: 0; overflow: visible; filter: drop-shadow(0 0 12px #f6d69733); }
-.chart-ring { stroke: #f6d69755; stroke-width: 1; fill: none; }
-.chart-area { stroke: #f6d697; stroke-width: 2; fill: #f6d69722; transition: all 220ms; }
-.interest-chart dl { flex: 1; margin: 0; }
-.interest-chart dl > div { display: flex; flex-wrap: wrap; justify-content: space-between; font-size: 13px; margin: 15px 0; }
-.interest-chart dd { margin: 0; color: var(--accent-gold); font-size: 11px; }
-.interest-bar { width: 100%; height: 5px; margin-top: 8px; border-radius: 10px; background: #030911; }
-.interest-bar span { display: block; height: 100%; background: linear-gradient(90deg, #b98d47, #f6d697); border-radius: inherit; transition: width 200ms; }
 .compact-actions { display: flex; gap: 10px; margin-top: 18px; }
 .dna-panel > .text-button { margin-right: 12px; }
 .interest-edit { border: 1px solid #f6d69755; border-radius: 16px; margin: 20px 0; padding: 14px; }
@@ -284,7 +281,6 @@ button:disabled { cursor: default; }
   .exhibit-thumb img { transition: transform 220ms; }
 }
 .reduced-graphics .glass-panel { backdrop-filter: none; background: #07111bed; box-shadow: none; }
-.reduced-graphics .interest-chart svg { filter: none; }
 .reduced-graphics *, .reduced-graphics *::before, .reduced-graphics *::after { transition: none !important; animation: none !important; }
 @media (min-width: 1051px) {
   .museum-scene:not(.scene-status) { min-height: 900px; }
@@ -320,9 +316,6 @@ button:disabled { cursor: default; }
   .guide-composer { flex-wrap: wrap; }
   .guide-composer button { width: 100%; }
   .source-pill { width: 100%; }
-  .interest-chart { gap: 12px; }
-  .interest-chart svg { width: 37%; }
-  .interest-chart dl > div { font-size: 11px; }
   .compact-actions { flex-wrap: wrap; }
   .evidence-chain { grid-template-columns: 1fr; }
   .evidence-chain button { min-height: 125px; }
@@ -509,10 +502,6 @@ button:disabled { cursor: default; }
 .recommendation-panel .gold-button { margin-top: 22px; }
 .recommendation-panel > .text-button { display: block; margin-top: 12px; }
 .interest-intro { margin-top: 16px; font-size: 14px; color: var(--text-secondary); }
-.interest-chart dl > div { display: block; position: relative; }
-.interest-chart dt { padding-right: 64px; }
-.interest-chart dd { text-align: right; margin-top: -18px; line-height: 18px; }
-.interest-bar { display: block; }
 .story-panel, .lens-panel, .evidence-panel { margin-top: 0; }
 .story-panel { width: min(100%, 620px); }
 .status-panels { margin-top: 0; }
@@ -640,9 +629,13 @@ button:disabled { cursor: default; }
 @keyframes museum-arrive { from { opacity: .55; } to { opacity: 1; } }
 @media (prefers-reduced-motion: no-preference) { .museum-main { animation: museum-arrive 180ms ease-out; } }
 .visit-reading { margin: 0 0 24px; padding: 20px 28px; }
-.visit-reading summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.visit-reading summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px; list-style: none; }
+.visit-reading summary::-webkit-details-marker { display: none; }
+.bookmark-chevron { flex-shrink: 0; color: var(--accent-gold); transition: transform 180ms ease; }
+.visit-reading details[open] .bookmark-chevron { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .bookmark-chevron { transition: none; } }
 .visit-consent { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 0; }
-.visit-consent input { width: 44px; height: 44px; flex: 0 0 44px; }
+.visit-consent input { width: 18px; height: 18px; flex: 0 0 18px; margin: 0; }
 .saved-records { list-style: none; padding: 0; display: grid; gap: 16px; }
 .saved-records li { display: flex; flex-wrap: wrap; gap: 12px; }
 .reading-toolbar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 16px 0; border-bottom: 1px solid var(--glass-border); margin-bottom: 20px; }
@@ -661,8 +654,7 @@ button:disabled { cursor: default; }
 .story-ending-art { margin: 20px 0; }.story-ending-art svg { display: block; width: 100%; max-height: 260px; border-radius: 18px; }
 .story-ending-art figcaption { font-size: 12px; color: var(--text-secondary); margin-top: 10px; }
 .chapter-progress { display: grid; gap: 8px; margin: 18px 0; max-width: 260px; }
-.story-soundscape { margin: 20px 0; }.constellation-star { cursor: pointer; }
-.constellation-star:focus-visible { outline: none; }.constellation-star:focus-visible circle:first-of-type { stroke: #fff4df; stroke-width: 3px; }
+.story-soundscape { margin: 20px 0; }
 .atlas-layer-controls { display: flex; flex-wrap: wrap; gap: 12px; padding: 18px 24px; }
 .topographic-legend, .city-preview { margin: 12px 24px; padding: 18px; background: #0b1722; border-radius: 18px; border: 1px solid #7a858877; }
 .topographic-legend p, .city-preview p { color: var(--text-secondary); }
@@ -677,5 +669,48 @@ button:disabled { cursor: default; }
 .reading-progress progress::-webkit-progress-bar, .chapter-progress progress::-webkit-progress-bar { background: #64727a; }
 .reading-progress progress::-webkit-progress-value, .chapter-progress progress::-webkit-progress-value { background: var(--accent-gold); }
 .reading-progress progress::-moz-progress-bar, .chapter-progress progress::-moz-progress-bar { background: var(--accent-gold); }
-.interest-chart svg { min-width: 200px; }
-@media (max-width: 700px) { .interest-chart { flex-direction: column; align-items: stretch; }.interest-chart svg { width: min(100%, 260px); align-self: center; }.interest-chart dl { width: 100%; } }
+.dna-panel { width: min(100%, 580px); padding: 30px; }
+.dna-panel h2 { margin-top: 10px; font-size: clamp(25px, 2.2vw, 32px); line-height: 1.3; }
+.interest-chart { display: block; margin: 24px 0; }
+.constellation-canvas { position: relative; padding: 20px 16px 18px; border: 1px solid var(--border-subtle); border-radius: 24px; background: radial-gradient(ellipse at 50% 48%, var(--surface-hover), transparent 66%), linear-gradient(150deg, var(--surface-elevated), var(--museum-panel)); text-align: center; }
+.constellation-caption { font-size: 10px; letter-spacing: .16em; color: var(--text-secondary); }
+.interest-chart .constellation-map { display: block; width: min(100%, 320px); height: auto; margin: 8px auto 0; overflow: visible; filter: none; }
+.constellation-orbit { fill: none; stroke: var(--border-subtle); stroke-width: 1; }
+.outer-orbit { stroke-dasharray: 2 8; }
+.inner-orbit { stroke: var(--border-faint); }
+.constellation-ray { stroke: var(--border-subtle); stroke-width: 1; }
+.constellation-shape { fill: color-mix(in srgb, var(--accent-gold) 7%, transparent); stroke: color-mix(in srgb, var(--accent-gold) 60%, transparent); stroke-width: 1.5; stroke-linejoin: round; }
+.interest-chart [data-theme="craft"] { --theme-color: var(--interest-craft); }
+.interest-chart [data-theme="legends"] { --theme-color: var(--interest-legends); }
+.interest-chart [data-theme="music"] { --theme-color: var(--interest-music); }
+.interest-chart [data-theme="food"] { --theme-color: var(--interest-food); }
+.constellation-accent { color: var(--theme-color); }
+.constellation-node { fill: var(--surface-elevated); stroke: currentColor; stroke-opacity: .25; }
+.constellation-node-progress { fill: none; stroke: currentColor; stroke-width: 2; }
+.constellation-center { fill: var(--surface-elevated); stroke: var(--accent-gold); stroke-opacity: .35; }
+.constellation-spark { fill: var(--accent-gold); }
+.constellation-dot { fill: currentColor; }
+.constellation-index { font-size: 10px; fill: var(--text-secondary); font-family: var(--font-ui); }
+.constellation-hint { color: var(--text-secondary); font-size: 12px; line-height: 1.6; }
+.interest-chart .constellation-themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.interest-chart dl > .constellation-theme { margin: 0; border: 1px solid var(--border-subtle); border-radius: 16px; background: color-mix(in srgb, var(--museum-panel) 53%, transparent); padding: 8px 14px 14px; transition: border-color 180ms, background 180ms; }
+.constellation-theme:has(button:hover), .constellation-theme:focus-within { border-color: var(--theme-color); background: var(--surface-hover); }
+.interest-chart .constellation-theme dt { padding: 0; }
+.constellation-theme button { width: 100%; display: flex; align-items: center; gap: 9px; padding: 4px 0; border: 0; background: transparent; color: var(--text-primary); min-height: 44px; text-align: left; font-size: 13px; }
+.interest-chart .constellation-theme svg { width: 22px; height: 22px; flex: none; filter: none; color: var(--theme-color); }
+.theme-add { margin-left: auto; color: var(--theme-color); font-size: 20px; font-weight: 400; }
+.interest-chart .constellation-theme dd { text-align: left; margin: 2px 0 0; line-height: 1.5; color: var(--text-secondary); font-size: 11px; font-variant-numeric: tabular-nums; }
+.constellation-theme .interest-bar { display: block; width: 100%; height: 4px; margin-top: 9px; border-radius: 10px; background: var(--border-subtle); }
+.constellation-theme .interest-bar span { display: block; height: 100%; border-radius: inherit; background: var(--theme-color); transition: width 200ms; }
+.theme-interaction-hint { font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-top: 12px; }
+.dna-panel > .fine-print { padding-top: 16px; border-top: 1px solid var(--border-subtle); }
+@media (max-width: 700px) {
+  .dna-panel { padding: 22px; }
+  .constellation-canvas { padding: 18px 8px 16px; }
+  .interest-chart .constellation-themes { gap: 8px; }
+  .interest-chart dl > .constellation-theme { padding: 6px 10px 12px; }
+  .constellation-theme button { font-size: 12px; gap: 6px; }
+  .theme-add { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .constellation-theme, .constellation-theme .interest-bar span { transition: none; } }

@@ -1,0 +1,7 @@
+# Current FolkVerse shrine logo
+
+Created with the built-in image generation tool. `folkverse-shrine-original.png` preserves the original transparent image; `folkverse-shrine.png` is the 256px header asset. The same image supplies `src/app/favicon.ico` (16px, 32px, 48px) and `src/app/icon.png` (192px). Resizing preserves alpha.
+
+## Final generation prompt
+
+Use case: logo-brand. Asset type: production FolkVerse website symbol, positioned left of serif wordmark, and browser favicon. Create ONE finished minimal Chinese shrine / ancestral hall emblem on genuinely transparent background. Architecture must read unmistakably Chinese: one broad gently curved traditional roof with clearly upturned eaves, a short central ridge, two simple symmetrical pillars, and a solid horizontal plinth. Integrate a subtle open-book silhouette into the plinth to suggest cultural stories. Warm pale gold #f6d697 flat solid silhouette only. Elegant restrained museum identity, confident thick geometry, strong negative space. Square centered composition, emblem occupies 85 percent of canvas. Optimized for recognizability at 32px and 44px. No pointed gothic arch, no domes, no pagoda tower, no Japanese torii, no lettering, no tiny ornamentation, no thin lines, no gradients, no shadow, no glow, no texture, no background, no mockup, no multiple options, no watermarks. Clean alpha edges, no stray pixels. Output is the symbol alone.

@@ -33,7 +33,7 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
   return <MuseumScene page={page} simple={simple} lowData={lowData}>
     <a className="skip-link" href="#main">{t.skip}</a>
     <header className="museum-nav glass-panel">
-      <Link className="brand" href="/" aria-label="FolkVerse China"><span>FolkVerse</span><small>CHINA / AI</small></Link>
+      <Link className="brand" href="/" aria-label="FolkVerse home"><Image className="brand-mark" src="/folkverse/brand/folkverse-shrine.png" alt="" width={44} height={44} unoptimized /><span>FolkVerse</span></Link>
       <GlassTabs page={page} />
       <button className="language-switch nav-tab" aria-label={t.language}
         onClick={() => setLocale(locale === "en" ? "zh-CN" : "en")}>{locale === "en" ? "EN / 中文" : "中文 / EN"}</button>
