@@ -1,0 +1,105 @@
+{"id": "met-50824", "title": "Vase with Daoist Immortals", "source_hash": "3ca62e87487bc5991bd40f280fd34e806aee29d4ecf8875dd7b344e4e33c2c3c", "status": "draft", "cc0_candidate": true, "image_downloaded": true, "image_error": null, "origin": {"country": "", "region": "", "subregion": "", "city": "", "culture": "China"}, "current_location": "Metropolitan Museum of Art, New York, NY"}
+{"id": "met-449479", "title": "Fragment of an Imported Chinese Bowl", "source_hash": "bd1bd7a55e52a71935ee66ed65e4f6872374e3d7fa074e79341eacb36cce347b", "status": "draft", "cc0_candidate": true, "image_downloaded": true, "image_error": null, "origin": {"country": "China", "region": "", "subregion": "", "city": "", "culture": ""}, "current_location": "Metropolitan Museum of Art, New York, NY"}
+{"id": "met-460669", "title": "Small wine pot or teapot", "source_hash": "f8f10f46acb04969bbd20ecd0140181111aa7da16d8a3b21f60a8ee294278d90", "status": "draft", "cc0_candidate": true, "image_downloaded": true, "image_error": null, "origin": {"country": "", "region": "", "subregion": "", "city": "", "culture": "Chinese"}, "current_location": "Metropolitan Museum of Art, New York, NY"}
+{
+  "objects": [
+    {
+      "id": "met-50824",
+      "title": "Vase with Daoist Immortals",
+      "source_hash": "3ca62e87487bc5991bd40f280fd34e806aee29d4ecf8875dd7b344e4e33c2c3c",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-449479",
+      "title": "Fragment of an Imported Chinese Bowl",
+      "source_hash": "bd1bd7a55e52a71935ee66ed65e4f6872374e3d7fa074e79341eacb36cce347b",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "China",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": ""
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-460669",
+      "title": "Small wine pot or teapot",
+      "source_hash": "f8f10f46acb04969bbd20ecd0140181111aa7da16d8a3b21f60a8ee294278d90",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "Chinese"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    }
+  ],
+  "counts": {
+    "region": {
+      "draft": 13,
+      "approved": 2,
+      "rejected": 0,
+      "withdrawn": 1
+    },
+    "source": {
+      "draft": 38,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 2
+    },
+    "passage": {
+      "draft": 26,
+      "approved": 2,
+      "rejected": 0,
+      "withdrawn": 20
+    },
+    "exhibit": {
+      "draft": 13,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "claim": {
+      "draft": 13,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "artifact": {
+      "draft": 37,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "media": {
+      "draft": 32,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "published_exhibits": 1,
+    "published_artifacts": 0,
+    "downloaded_cc0_candidates": 32
+  }
+}

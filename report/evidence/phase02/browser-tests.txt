@@ -1,0 +1,40 @@
+$ playwright test
+[WebServer] INFO:     Started server process [342099]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:342138) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:342163) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:342192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:342205) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 19 tests using 1 worker
+
+(node:342254) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/content.spec.ts:3:5 › Liaoning published region → exhibit → attributed source works in both languages (2.6s)
+  ✓   2 tests/e2e/content.spec.ts:41:5 › published source index hides draft sources and exposes only permitted passages (620ms)
+  ✓   3 tests/e2e/content.spec.ts:52:5 › collection error recovers and withdrawn drawer clears on revalidation (960ms)
+  ✓   4 tests/e2e/foundation.spec.ts:19:5 › museum routes work at desktop, mobile and tablet without page overflow (5.2s)
+  ✓   5 tests/e2e/foundation.spec.ts:39:5 › navigation, language persistence and keyboard skip path work (1.9s)
+  ✓   6 tests/e2e/foundation.spec.ts:58:5 › real web to API health and signed session round trip (1.8s)
+  ✓   7 tests/e2e/foundation.spec.ts:75:5 › health service errors are visible and retry recovers (1.4s)
+  ✓   8 tests/e2e/foundation.spec.ts:89:5 › guide portrait retains transparency and narrow zoom layout stays usable (1.5s)
+  ✓   9 tests/e2e/foundation.spec.ts:100:5 › unknown routes stay missing and cross-origin session mutation is rejected (272ms)
+  ✓  10 tests/e2e/museum-ui.spec.ts:10:5 › eight museum screens retain artwork and stay usable at three sizes in both languages (22.9s)
+  ✓  11 tests/e2e/museum-ui.spec.ts:31:5 › explore filters, empty state and source drawer keyboard focus (784ms)
+  ✓  12 tests/e2e/museum-ui.spec.ts:50:5 › journey reorder, remove and duration-constrained empty state (852ms)
+  ✓  13 tests/e2e/museum-ui.spec.ts:62:5 › both story branches, restart and actual recorded audio (796ms)
+  ✓  14 tests/e2e/museum-ui.spec.ts:73:5 › lens exposes unknown, poor image, denial, outage and loading without claiming recognition (1.4s)
+  ✓  15 tests/e2e/museum-ui.spec.ts:84:5 › guide submits bounded text, clearly scripted response and voice unavailable (1.3s)
+  ✓  16 tests/e2e/museum-ui.spec.ts:93:5 › interest edits redraw chart and reset clears suggestions (472ms)
+  ✓  17 tests/e2e/museum-ui.spec.ts:104:5 › live mode fails closed with no demo controls (995ms)
+  ✓  18 tests/e2e/museum-ui.spec.ts:112:5 › published collection works in live mode with no fixture toggle (658ms)
+  ✓  19 tests/e2e/museum-ui.spec.ts:121:5 › reduced graphics, keyboard path and 200 percent page zoom (1.9s)
+
+  19 passed (51.9s)

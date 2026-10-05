@@ -1,0 +1,81 @@
+[WebServer] (node:912235) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:912268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:912299) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:912317) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 31 tests using 1 worker
+
+(node:912397) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/content.spec.ts:4:5 › Liaoning published region → exhibit → attributed source works in both languages (2.2s)
+  ✓   2 tests/e2e/content.spec.ts:45:5 › published source index hides draft sources and exposes only permitted passages (669ms)
+  ✓   3 tests/e2e/content.spec.ts:56:5 › collection error recovers and withdrawn drawer clears on revalidation (981ms)
+  ✓   4 tests/e2e/dropdowns.spec.ts:5:5 › collection dropdown supports keyboard selection, cancellation, typeahead and outside dismissal (1.4s)
+  ✓   5 tests/e2e/dropdowns.spec.ts:48:5 › compact and Chinese touch dropdowns fit the viewport and preserve their choices (1.3s)
+  ✓   6 tests/e2e/foundation.spec.ts:22:5 › museum routes work at desktop, mobile and tablet without page overflow (8.1s)
+  ✓   7 tests/e2e/foundation.spec.ts:42:5 › navigation, language persistence and keyboard skip path work (1.9s)
+  ✓   8 tests/e2e/foundation.spec.ts:61:5 › real web to API health and signed session round trip (1.3s)
+  ✓   9 tests/e2e/foundation.spec.ts:78:5 › health service errors are visible and retry recovers (937ms)
+  ✓  10 tests/e2e/foundation.spec.ts:92:5 › guide portrait retains transparency and narrow zoom layout stays usable (856ms)
+  ✓  11 tests/e2e/foundation.spec.ts:103:5 › unknown routes stay missing and cross-origin session mutation is rejected (302ms)
+  ✓  12 tests/e2e/liaoning-map.spec.ts:4:5 › real Liaoning silhouette, 14 city markers and geographical city selection (2.4s)
+  ✘  13 tests/e2e/liaoning-map.spec.ts:36:5 › map pan, wheel zoom, keyboard camera, minimap and expanded map (5.9s)
+(node:913428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 tests/e2e/liaoning-map.spec.ts:65:5 › selected city circle stays centered through time and zoom for all fourteen cities (3.8s)
+  ✓  15 tests/e2e/liaoning-map.spec.ts:100:5 › sourced city territory highlights from map clicks and clears when returning to the province (1.3s)
+  ✓  16 tests/e2e/liaoning-map.spec.ts:134:5 › all cities remain selectable and searchable in Chinese at phone size (1.7s)
+  ✓  17 tests/e2e/liaoning-map.spec.ts:156:5 › touch pinch changes the map camera without scrolling the page (842ms)
+  ✓  18 tests/e2e/museum-ui.spec.ts:13:5 › nine museum screens retain artwork and stay usable at three sizes in both languages (17.9s)
+  ✓  19 tests/e2e/museum-ui.spec.ts:34:5 › explore filters, empty state and source drawer keyboard focus (791ms)
+  ✓  20 tests/e2e/museum-ui.spec.ts:53:5 › journey reorder, remove and duration-constrained empty state (907ms)
+  ✓  21 tests/e2e/museum-ui.spec.ts:68:5 › both story branches, restart and actual recorded audio (712ms)
+  ✓  22 tests/e2e/museum-ui.spec.ts:79:5 › lens exposes unknown, poor image, denial, outage and loading without claiming recognition (1.8s)
+  ✓  23 tests/e2e/museum-ui.spec.ts:92:5 › guide submits bounded text, clearly scripted response and voice unavailable (1.3s)
+  ✓  24 tests/e2e/museum-ui.spec.ts:102:5 › interest edits redraw chart and reset clears suggestions (485ms)
+  ✓  25 tests/e2e/museum-ui.spec.ts:117:5 › live mode fails closed with no demo controls (1.1s)
+  ✓  26 tests/e2e/museum-ui.spec.ts:125:5 › published collection works in live mode with no fixture toggle (852ms)
+  ✓  27 tests/e2e/museum-ui.spec.ts:134:5 › reduced graphics, keyboard path and 200 percent page zoom (2.1s)
+  ✓  28 tests/e2e/ui-refinement.spec.ts:3:5 › home leads to reviewed exhibits and collection view preserves map filters (1.1s)
+  ✓  29 tests/e2e/ui-refinement.spec.ts:16:5 › prototype controls are opt-in and keyboard can open every preview (958ms)
+  ✓  30 tests/e2e/ui-refinement.spec.ts:28:5 › interests begin empty and contain only voluntary choices (706ms)
+  ✓  31 tests/e2e/ui-refinement.spec.ts:43:5 › phone artwork stays sharp at DPR 2 and the companion stays compact (2.7s)
+
+
+  1) tests/e2e/liaoning-map.spec.ts:36:5 › map pan, wheel zoom, keyboard camera, minimap and expanded map
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 1.3
+    Received:   1.3
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      46 |   await page.mouse.move(bounds!.x + bounds!.width / 2, bounds!.y + bounds!.height / 2);
+      47 |   await page.mouse.wheel(0, -220);
+    > 48 |   await expect.poll(async () => Number(await world.getAttribute("data-zoom"))).toBeGreaterThan(1.3);
+         |                                                                                ^
+      49 |   const zoomed = await world.getAttribute("viewBox");
+      50 |   await page.mouse.move(bounds!.x + 80, bounds!.y + 80); await page.mouse.down();
+      51 |   await page.mouse.move(bounds!.x + 140, bounds!.y + 135, { steps: 8 }); await page.mouse.up();
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/liaoning-map.spec.ts:48:80
+
+    Error Context: test-results/liaoning-map-map-pan-wheel-ce21e-ra-minimap-and-expanded-map/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/liaoning-map-map-pan-wheel-ce21e-ra-minimap-and-expanded-map/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/liaoning-map-map-pan-wheel-ce21e-ra-minimap-and-expanded-map/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/liaoning-map.spec.ts:36:5 › map pan, wheel zoom, keyboard camera, minimap and expanded map
+  30 passed (1.2m)

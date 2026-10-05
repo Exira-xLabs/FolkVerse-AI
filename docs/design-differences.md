@@ -35,3 +35,13 @@ There is no new AI-generated raster artwork. The supplied scenes already provide
 No reviewed region geometry/content corpus exists yet. This phase cannot demonstrate real cultural accuracy, retrieval, recognition, provider latency or saved profiles. English synthetic story narration is recorded locally; Chinese audio and live speech are unavailable. Literal reference-edge equality, Safari, physical devices, native toolbar zoom and a complete screen-reader/contrast audit have not been measured. Text and modal readability were visually inspected, not represented as a full accessibility certification.
 
 Phase 00 screenshots remain unchanged in `report/evidence/phase00/`. Its original unavailable shells were replaced only in demo mode; live mode still fails closed.
+
+## Owner-requested refinement — 5 October 2026
+
+The owner requested image quality improvements first, followed by seven specific design changes before Phase 03. This supersedes the historical full-page backgrounds, default prototype controls, sample interest scores and separate mobile portrait described above.
+
+Eight versioned scene refinements now live in `apps/web/public/folkverse/enhanced/`; original scene masters remain byte-identical. The generator returned native 1672×941 scenes (Lens 1671×941), rather than the requested larger target, so no resolution increase is claimed. Bounded hero rendering and quality-90 responsive delivery remove the scrolling-page enlargement. Phones show full scene compositions; Explore prioritizes collection content and exposes its sourced map on request. Guide and terrain have lossless WebP delivery with identical visible pixels and alpha, and the original guide identity is preserved.
+
+Home prominently opens the Liaoning collection. Explore defaults to exhibits with an optional map view. Journey, Lens and Guide put their scripted controls inside optional preview disclosures. Guide uses a compact 72-pixel identity badge. English DNA wording is replaced by cultural interests, initially empty, with a labelled example action and local editing. Task panels are opaque navy; artwork and restrained navigation glass carry the atmosphere.
+
+Current verification and limitations belong to `report/UI_REFINEMENT_CHECKLIST.md` and `report/UI_REFINEMENT_RESULTS.md`. This UI work does not complete Phase 03 or connect live guide, journey or recognition providers. The `/dna` URL remains compatible with existing links.

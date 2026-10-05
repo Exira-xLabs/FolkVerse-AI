@@ -1,0 +1,2 @@
+$ node scripts/assets.mjs
+Verified 9 original assets, PNG dimensions/color modes, and all reference copies.

@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-05T06:21:50.014Z",
+  "checks": {
+    "/explore": {
+      "status": 200,
+      "styled_comboboxes": 2
+    },
+    "/journey": {
+      "status": 200,
+      "styled_comboboxes": 2
+    },
+    "/lens": {
+      "status": 200,
+      "styled_comboboxes": 1
+    },
+    "/api/v1/health": {
+      "status": 200,
+      "health": {
+        "status": "ok",
+        "mode": "demo",
+        "database": "available",
+        "pgvector": "available",
+        "schema_status": "current",
+        "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+        "pgvector_version": "0.8.5"
+      }
+    }
+  }
+}

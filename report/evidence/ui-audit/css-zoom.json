@@ -1,0 +1,50 @@
+{
+  "method": "200% CSS body zoom at an 800px viewport; not native browser toolbar zoom",
+  "results": [
+    {
+      "route": "/",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/explore",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/journey",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/stories/lantern-path",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/lens",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/guide",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/dna",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/sources",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    },
+    {
+      "route": "/status",
+      "scrollWidth": 800,
+      "viewportWidth": 800
+    }
+  ]
+}

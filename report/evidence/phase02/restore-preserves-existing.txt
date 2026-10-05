@@ -1,0 +1,4 @@
+usage: curation.py [-h]
+                   {counts,ledger,seed,inspect,review,import-met,export,restore-manifest}
+                   ...
+curation.py: error: Restore requires empty content tables; existing work is preserved

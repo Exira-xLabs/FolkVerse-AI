@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-05T06:32:51.746Z",
+  "checks": [
+    {
+      "id": "graphics-setting-navigation",
+      "simpleAfterLinkNavigation": "museum-scene scene-journey "
+    },
+    {
+      "id": "guide-draft-navigation",
+      "draftAfterReturning": ""
+    },
+    {
+      "id": "sources-city-copy",
+      "copy": "FOLLOW THE EVIDENCE\n\nSources, in the open\n\nOur collection scope spans all 14 cities of Liaoning. Select any city to see its reviewed exhibits.\n\nThe atlas uses Liaoning’s sourced outline and city coordinates; painted terrain creates the atmosphere.\n\nRefresh collection ↻"
+    },
+    {
+      "id": "status-error-copy",
+      "text": "Service status\n\nThe museum service cannot be reached. Start the local API and try again.\n\nDatabase\nUnavailable\nVector extension\nUnavailable\nDatabase schema\nUnavailable\nApplication mode\n—\nCheck again\nYour anonymous visit\n\nNo account required. Behavioral tracking is off. Ending this visit revokes its session.\n\nStart a visit"
+    }
+  ]
+}

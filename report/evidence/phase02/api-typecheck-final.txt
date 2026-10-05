@@ -1,0 +1,6 @@
+apps/api/src/folkverse/content_snapshot.py:48: error: "Base" has no attribute "status"  [attr-defined]
+apps/api/src/folkverse/content_snapshot.py:48: error: Argument 2 to "approved" has incompatible type "Base"; expected "Reviewed | None"  [arg-type]
+apps/api/src/folkverse/curation.py:61: error: Incompatible import of "restore" (imported name has type "Callable[[Session, Path], None]", local name has type "ArgumentParser")  [assignment]
+apps/api/src/folkverse/curation.py:64: error: "ArgumentParser" not callable  [operator]
+apps/api/src/folkverse/curation.py:135: error: Need type annotation for "row"  [var-annotated]
+Found 5 errors in 2 files (checked 14 source files)

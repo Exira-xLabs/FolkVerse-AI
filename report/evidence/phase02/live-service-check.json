@@ -1,0 +1,199 @@
+{
+  "/": {
+    "status": 200,
+    "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "bytes": 16084
+  },
+  "/api/v1/health": {
+    "status": 200,
+    "cache_control": "no-store",
+    "body": {
+      "status": "ok",
+      "mode": "demo",
+      "database": "available",
+      "pgvector": "available",
+      "schema_status": "current",
+      "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+      "pgvector_version": "0.8.5"
+    }
+  },
+  "/api/v1/regions": {
+    "status": 200,
+    "cache_control": "no-store",
+    "body": {
+      "items": [
+        {
+          "id": "liaoning",
+          "name": "Liaoning",
+          "approved_geometry_ref": null
+        },
+        {
+          "id": "liaoning-dalian",
+          "name": "Dalian",
+          "approved_geometry_ref": null
+        }
+      ]
+    }
+  },
+  "/api/v1/exhibits?region_id=liaoning": {
+    "status": 200,
+    "cache_control": "no-store",
+    "body": {
+      "items": [
+        {
+          "id": "liaoning-dalian-01",
+          "title": "Fuzhou shadow puppetry",
+          "summary": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "locale": "en",
+          "themes": [
+            "performance"
+          ],
+          "estimated_minutes": 3,
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "next_cursor": null,
+      "total": 1
+    }
+  },
+  "/api/v1/exhibits/liaoning-dalian-01": {
+    "status": 200,
+    "cache_control": "no-store",
+    "body": {
+      "id": "liaoning-dalian-01",
+      "title": "Fuzhou shadow puppetry",
+      "summary": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+      "locale": "en",
+      "themes": [
+        "performance"
+      ],
+      "estimated_minutes": 3,
+      "region_ids": [
+        "liaoning",
+        "liaoning-dalian"
+      ],
+      "review": {
+        "reviewer": "Project owner (user)",
+        "reviewed_at": "2026-10-05T01:31:27.085070Z",
+        "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+        "kind": "editorial"
+      },
+      "claims": [
+        {
+          "id": "claim-liaoning-dalian-01",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "passage_ids": [
+            "passage-liaoning-dalian-01-en",
+            "passage-liaoning-dalian-01-zh-CN"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ln-first",
+          "institution": "Liaoning Provincial Government",
+          "title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+          "rights_basis": "Original attributed summaries only; no source images or full text licensed",
+          "review": {
+            "reviewer": "Project owner (user)",
+            "reviewed_at": "2026-10-05T01:31:27.069441Z",
+            "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+            "kind": "editorial"
+          },
+          "passages": [
+            {
+              "id": "passage-liaoning-dalian-01-en",
+              "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+              "language": "en",
+              "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+              "rights_basis": "Original short attributed summary; no source images or full text reused",
+              "review": {
+                "reviewer": "Project owner (user)",
+                "reviewed_at": "2026-10-05T01:31:27.071728Z",
+                "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+                "kind": "editorial"
+              }
+            },
+            {
+              "id": "passage-liaoning-dalian-01-zh-CN",
+              "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+              "language": "zh-CN",
+              "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+              "rights_basis": "Original short attributed summary; no source images or full text reused",
+              "review": {
+                "reviewer": "Project owner (user)",
+                "reviewed_at": "2026-10-05T01:31:27.073642Z",
+                "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+                "kind": "editorial"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "/api/v1/sources": {
+    "status": 200,
+    "cache_control": "no-store",
+    "body": {
+      "items": [
+        {
+          "id": "ln-first",
+          "institution": "Liaoning Provincial Government",
+          "title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+          "rights_basis": "Original attributed summaries only; no source images or full text licensed",
+          "review": {
+            "reviewer": "Project owner (user)",
+            "reviewed_at": "2026-10-05T01:31:27.069441Z",
+            "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+            "kind": "editorial"
+          },
+          "passages": [
+            {
+              "id": "passage-liaoning-dalian-01-en",
+              "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+              "language": "en",
+              "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+              "rights_basis": "Original short attributed summary; no source images or full text reused",
+              "review": {
+                "reviewer": "Project owner (user)",
+                "reviewed_at": "2026-10-05T01:31:27.071728Z",
+                "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+                "kind": "editorial"
+              }
+            },
+            {
+              "id": "passage-liaoning-dalian-01-zh-CN",
+              "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+              "language": "zh-CN",
+              "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+              "rights_basis": "Original short attributed summary; no source images or full text reused",
+              "review": {
+                "reviewer": "Project owner (user)",
+                "reviewed_at": "2026-10-05T01:31:27.073642Z",
+                "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+                "kind": "editorial"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "/api/v1/artifacts": {
+    "status": 200,
+    "cache_control": "no-store",
+    "body": {
+      "items": []
+    }
+  }
+}

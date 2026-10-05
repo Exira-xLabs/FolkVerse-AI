@@ -1,6 +1,84 @@
 # FolkVerse build status
 
-**Updated:** 4 October 2026, Asia/Shanghai. **Phase 01: complete on the available Linux/Chromium environment, with the user-approved presentation-as-inspiration visual scope.** Next: [Phase 02 — content and map/list](../phases/02_CONTENT_MAP.md). Phase 02 has not started.
+**Updated:** 5 October 2026, Asia/Shanghai. **Phase 02: complete locally; all five acceptance gates pass.** Scope: the whole Liaoning province, as explicitly requested by the user. Phase 01 remains delivered at `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`; Phase 02 and the UI refinement are included in the four-commit delivery on `main` requested on 5 October 2026. Consult Git history for delivery hashes. Next: [Phase 03 — grounded guide](../phases/03_GROUNDED_GUIDE.md).
+
+## UI refinement — 5 October 2026
+
+The owner-selected seven changes and image-delivery pass are complete locally. Home leads to Liaoning; Explore defaults to the collection with an optional atlas; Journey/Lens/Guide previews are collapsed; Guide uses a 72px identity badge; cultural interests begin empty with a labelled example; bounded artwork and calmer task panels replace full-page scenery. Narrow navigation reveals the current tab.
+
+Fresh lint, typecheck, production build and original-art/content/geography preservation checks pass. Final browser run: **31 passed, 0 failed, 0 skipped**, including 54 EN/ZH layout states, keyboard/touch interactions, map regressions and DPR-2 images. The healthy local production preview is restored at <http://localhost:3000>. [Results and evidence](../report/UI_REFINEMENT_RESULTS.md), [completed checklist](../report/UI_REFINEMENT_CHECKLIST.md).
+
+New screenshots remain local per the owner's delivery instruction; text logs and structured evidence are committed. Screenshot links refer to local files.
+
+This closes the selected refinement scope, not the entire earlier UI audit. Remaining shared UI defects and accessibility checks are listed in the results report. Live AI capabilities remain separate phase work; the implementation and evidence are included in the four-commit delivery on `main`.
+
+## Phase 02 — reviewed content and regional discovery
+
+The supplied artwork and earlier evidence are preserved. Shaanxi records are withdrawn after the user corrected the scope. Liaoning has **14 initial candidate exhibits, one per city: 1 approved/published and 13 drafts**. The project owner explicitly approved Fuzhou shadow puppetry, its exact EN/ZH summaries, attribution/rights and Liaoning/Dalian labels. Its **2 passages** are approved for later grounded retrieval. This is editorial review, not an external specialist endorsement.
+
+**Met catalog:** 37 draft records, 32 locally downloaded/hash-verified CC0 image candidates, **0 published artifacts**, and no invented Liaoning exhibit links. Ten reviewed exhibits and thirty approved eligible artifacts remain targets. [Exact counts and integrity](../report/evidence/phase02/corpus-integrity.json), [review packet](content-review.md), [rights report](data-rights.md).
+
+### Implemented and verified
+
+- Migration `0002_content`: reviewed regions, sources, passages, claims, exhibits, artifacts, media and append-only operator review history, with evidence/geography associations. Practice/declaring region and museum repository are separate.
+- Bounded, cached Met CLI using the officially documented paginated `/v1.1/search`; actual samples 50824/449479/460669 re-fetched. Per-image rights, original response/hash/date, JPEG bytes/hash and denial/error outcomes are retained. All 37 records re-imported without duplicates or changed hashes/reviews.
+- Human review/publish/unpublish CLI, content/relationship fingerprints and current dependency eligibility. Imported/generated candidates stay draft. Withdrawn/uncleared/changed records disappear from published APIs immediately; sources clear dependent embedding markers.
+- Database-backed `/regions`, `/exhibits`, `/exhibits/{id}`, `/sources`, `/sources/{id}` and `/artifacts`, generated OpenAPI types and an allowlisted same-origin web proxy. Filters, cursor paging, localized list/detail/source flow, empty/error/retry states and modal focus are verified.
+- Explore/Sources show the real collection in demo and live modes. Explore now includes a game-style atlas of Liaoning's sourced provincial outline with all 14 cities, geographic positioning, pan/zoom, pinch, minimap and expanded view. City selection filters the actual published collection; draft cultural records stay hidden. Phase 01 examples require an explicit fixture toggle in demo mode. Later live AI experiences remain unavailable. [Atlas sources and controls](liaoning-map.md).
+- Versioned corpus/ledger snapshot, empty-database restore preserving original editorial reviews, refusal to overwrite existing work and a successful fresh-migration/restore check in a disposable database. Images remain local and missing bytes stay ineligible.
+
+### Phase 02 acceptance gates
+
+| Gate as written in `phases/02_CONTENT_MAP.md` | Result | Evidence |
+|---|---|---|
+| Re-import causes no duplicate objects or media; source payload/hash retained. | PASS | All 37 real Met objects re-imported: unchanged counts/source hashes/review ledger; all 41 payload hashes and 32 image hashes verified. [Integrity](../report/evidence/phase02/corpus-integrity.json), [import](../report/evidence/phase02/met-full-reimport.json). |
+| Draft/withdrawn/unlicensed entries are absent from published search. | PASS | Actual draft Liaoning and withdrawn Shaanxi IDs return 404; artifact API returns zero. Dependency/hash/rights tests against PostgreSQL. [API tests](../report/evidence/phase02/api-tests.txt), [browser tests](../report/evidence/phase02/browser-tests.txt). |
+| One real approved exhibit traverses map/list → detail → source. | PASS | User-approved Fuzhou shadow puppetry: Liaoning list filter → bilingual exhibit → official first-list source, reviewer/date/hash. [Approval](../report/evidence/phase02/liaoning-editorial-approval.json), [drawer](../report/evidence/phase02/liaoning-source-drawer.png), [browser results](../report/evidence/phase02/browser-results.json). |
+| Source withdrawal removes affected search content and caches. | PASS | Transaction-isolated real DB withdrawal removes list/detail/source on the next request and clears embedding markers. No published-content cache; all reads no-store. Browser intercepted 404 verifies drawer clearing/recovery on revalidation. Browser tabs poll every 15 seconds/focus; no instant push is claimed. [Tests](../apps/api/tests/test_content.py), [browser evidence](../report/evidence/phase02/browser-tests.txt). |
+| Report exact approved/draft counts; target 10/30 is never manufactured. | PASS | [Corpus](../data/manifests/corpus.json), [ledger](../data/manifests/review-ledger.json), [rights](data-rights.md), [counts](../report/evidence/phase02/corpus-integrity.json). Active/archived records and downloaded/approved images are separated. |
+
+### Verification
+
+**Dropdown UI refinement, 5 October 2026:** Region, Theme, Interests, Time and the Lens demo scenario now share styled museum menus with gold selection checkmarks, consistent option spacing and viewport-aware positioning. Keyboard arrows, Home/End, typeahead, Enter, Escape, Tab and outside dismissal are covered; phone tests use actual touch input in Chinese and English. **27/27 browser tests passed**, along with lint, TypeScript/strict mypy, browser-test types, production build and original-asset verification. [Commands, limits and screenshots](../report/evidence/dropdown-ui/README.md). The production preview was restarted with the updated UI.
+
+**Interrupted-session completion, 5 October 2026:** rechecked the finished atlas against the existing production build (built after the final map/CSS edits). The full browser regression suite passed again: **25/25**, without retries. Lint, TypeScript/strict mypy, geography/hash verification, foundation contracts/assets/secret checks and whitespace checks passed. The running Explore preview, web-proxied API/database health and served boundary/terrain hashes were checked successfully. [Recovery commands and evidence](../report/evidence/phase02-map/atlas-v2/recovery-completion.md). The preview remains available at <http://localhost:3000/explore>; the changes were local and uncommitted at that verification; the later four-commit delivery includes them.
+
+**Current atlas v2:** all fourteen city territories now use valid OpenStreetMap prefecture-level MultiPolygons, with every sourced marker inside its own city. Clicking a city/territory highlights its border and fits its land extent. House icons were replaced by modern glass locator discs. Realistic terrain v2 was generated using a numerical Mapzen elevation reference over the same geographic extent; fine surface details remain approximate. Province geometry, original artwork, cultural approvals/counts and earlier evidence are preserved. [Sources and design](liaoning-map.md), [boundary verification](../report/evidence/phase02-map/atlas-v2/city-boundary-verification.json), [terrain prompt/reference](../report/evidence/phase02-map/atlas-v2/terrain-generation.json).
+
+The final v2 browser suite passed **25 tests**, including six map tests and all content/foundation/museum regressions. All eight routes were checked at desktop, phone and tablet sizes in both languages. Build, lint, browser TypeScript, data-script lint, geographic/hash checks and foundation contracts/assets/secret checks passed. [Browser results](../report/evidence/phase02-map/atlas-v2/browser-results.json), [browser log](../report/evidence/phase02-map/atlas-v2/browser-tests.txt), [build](../report/evidence/phase02-map/atlas-v2/build.txt), [lint](../report/evidence/phase02-map/atlas-v2/lint.txt), [browser types](../report/evidence/phase02-map/atlas-v2/browser-typecheck.txt), [geography](../report/evidence/phase02-map/atlas-v2/geography-check.txt), [foundation](../report/evidence/phase02-map/atlas-v2/foundation-check.txt). Current visuals: [province](../report/evidence/phase02-map/atlas-v2/liaoning-atlas-desktop.png), [Shenyang selected](../report/evidence/phase02-map/atlas-v2/selected-shenyang-desktop.png), [Dalian selected](../report/evidence/phase02-map/atlas-v2/selected-dalian-desktop.png), [Dalian phone](../report/evidence/phase02-map/atlas-v2/selected-dalian-phone.png). The restarted preview and local-asset hashes were checked: [service evidence](../report/evidence/phase02-map/atlas-v2/live-service-check.json). Earlier verification snapshots follow.
+
+The Liaoning atlas extension passed **23 browser tests**, covering the existing collection/foundation/museum regressions and four new map tests. All 14 official city names match the seed and every sourced city point lies inside the sourced `CN-LN` MultiPolygon. The province shape is data-derived; generated terrain is decorative. Cultural corpus counts and review hashes are unchanged. [Browser log](../report/evidence/phase02-map/browser-tests.txt), [results](../report/evidence/phase02-map/browser-results.json), [geography check](../report/evidence/phase02-map/geography-check.txt), [source/hash evidence](../report/evidence/phase02-map/geography-verification.json).
+
+Lint, TypeScript/strict mypy, production build, browser/config TypeScript and foundation asset/contracts/secret checks passed for the map extension. [Lint](../report/evidence/phase02-map/lint.txt), [types](../report/evidence/phase02-map/typecheck.txt), [build](../report/evidence/phase02-map/build.txt), [browser types](../report/evidence/phase02-map/browser-typecheck.txt), [foundation](../report/evidence/phase02-map/foundation-check.txt). Desktop and Chinese phone atlas captures were visually inspected: [desktop](../report/evidence/phase02-map/liaoning-atlas-desktop.png), [phone](../report/evidence/phase02-map/liaoning-atlas-phone-zh.png). Earlier Phase 02 evidence below is preserved as the content foundation snapshot.
+
+The restarted production preview returns HTTP 200 for Explore with fourteen city markers, sourced geometry and generated terrain matching their checked hashes, and healthy API/PostgreSQL/pgvector/current schema. Actual collection reads return one Liaoning exhibit and zero Shenyang drafts. [Live preview evidence](../report/evidence/phase02-map/live-service-check.json). The focused four-map-test rerun also passed after adding explicit pinch/no-page-scroll and screenshot-loading checks: [log](../report/evidence/phase02-map/map-tests.txt).
+
+Follow-up circle fix: removed the selected-city ring's viewport-centered orbit after reproducing a 787-pixel drift. The highlight now stays stationary at its geographic anchor. **Five focused map tests passed**, including a new normal-motion regression checking all fourteen cities through animation time and zoom. Production build, lint and browser-test typechecking passed. [Cause and evidence](liaoning-map.md#selected-city-circle-correction), [test results](../report/evidence/phase02-map/circle-fix/browser-results.json).
+
+| Check | Final result |
+|---|---|
+| `pnpm lint` | PASS — [log](../report/evidence/phase02/lint.txt) |
+| `pnpm typecheck` | PASS — TypeScript + strict mypy; [log](../report/evidence/phase02/typecheck.txt) |
+| `pnpm build` | PASS, inherited TLS override unset; [log](../report/evidence/phase02/build.txt) |
+| `pnpm test:api` | **26 passed**, test approvals roll back; existing Starlette/httpx deprecation warning remains. [Log](../report/evidence/phase02/api-tests.txt) |
+| `pnpm test:e2e` | **19 passed**: real collection/source flow, simulated upstream failure and drawer revalidation, six foundation regressions, museum/mode/accessibility regressions. [Log](../report/evidence/phase02/browser-tests.txt), [JSON](../report/evidence/phase02/browser-results.json) |
+| `alembic check` | PASS: schema and models agree; [log](../report/evidence/phase02/migration-check.txt) |
+| `python scripts/verify-content-snapshot.py` via project uv | PASS: fresh migrations/restore, original review hashes, exact counts, overwrite refusal; [log](../report/evidence/phase02/fresh-restore.txt) |
+| Browser/config TypeScript | PASS — [log](../report/evidence/phase02/browser-typecheck.txt) |
+| `pnpm check:foundation` | PASS: deterministic contracts, original artwork/reference hashes, ignored secrets and configured-secret scan. [Log](../report/evidence/phase02/foundation-check.txt) |
+
+All eight routes were checked at 1600×900, 390×844 and 768×1024 in EN/ZH, with reduced motion, keyboard navigation and enlarged CSS layout. Collection captures wait for loaded artwork and API results. Desktop Explore, phone Explore and the real source drawer were visually inspected. [Desktop](../report/evidence/phase02/02-explore-1600.png), [phone](../report/evidence/phase02/02-explore-390.png), [source drawer](../report/evidence/phase02/liaoning-source-drawer.png). Native toolbar zoom, Safari, physical devices and a full screen-reader/contrast audit remain untested.
+
+The first browser attempts exposed a refresh/focus issue and stale prototype heading assertions; both were fixed. Screenshot readiness was tightened to wait for real collection data. Final tests pass without retries.
+
+Freshly restarted preview checks: HTTP 200 for web, API/PostgreSQL/pgvector, reviewed region list, Liaoning exhibit/detail/source and the correctly empty artifact publication list. [Live service check](../report/evidence/phase02/live-service-check.json).
+
+### Handoff / next phase
+
+[Content operations](curation.md) documents snapshot restoration, seeding, import, actual review, withdrawal and verification. [Review packet](content-review.md) identifies the remaining 13 candidates and 26 passages; [rights report](data-rights.md) records the pending artifact reviews. No paid providers, recognition or embeddings were introduced. Phase 03 can begin with the two approved Fuzhou passages, then implement a server-side provider gateway, evidence retrieval, citation/claim validation and actual vector/cache invalidation. Two passages support only a narrow guide; further content approvals are still needed to broaden coverage.
+
+Local preview: <http://localhost:3000/explore>; source index: <http://localhost:3000/sources>; foundation health: <http://localhost:3000/status>. The later sections below preserve historical Phase 01/00 snapshots and are superseded by the current Phase 02 capability/counts above.
+
 
 ## Phase 01 — interactive museum
 

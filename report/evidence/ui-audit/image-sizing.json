@@ -1,0 +1,137 @@
+[
+  {
+    "page": "home",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F01_museum_entrance.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      1814.4375
+    ],
+    "cover_upscale": 5.04,
+    "visible_width_fraction": 0.1209,
+    "bytes": 143376
+  },
+  {
+    "page": "explore",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F02_interactive_map.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      2748.28125
+    ],
+    "cover_upscale": 7.63,
+    "visible_width_fraction": 0.0798,
+    "bytes": 125743
+  },
+  {
+    "page": "journey",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F03_cultural_journey.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      1632.125
+    ],
+    "cover_upscale": 4.53,
+    "visible_width_fraction": 0.1344,
+    "bytes": 106066
+  },
+  {
+    "page": "stories",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F04_shadow_puppetry.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      995.84375
+    ],
+    "cover_upscale": 2.77,
+    "visible_width_fraction": 0.2203,
+    "bytes": 88461
+  },
+  {
+    "page": "lens",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F05_object_lens.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      1051.21875
+    ],
+    "cover_upscale": 2.92,
+    "visible_width_fraction": 0.2087,
+    "bytes": 74423
+  },
+  {
+    "page": "guide",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F06_ai_guide.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      1639.8125
+    ],
+    "cover_upscale": 4.56,
+    "visible_width_fraction": 0.1338,
+    "bytes": 81905
+  },
+  {
+    "page": "dna",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F07_folklore_dna.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      1218.8125
+    ],
+    "cover_upscale": 3.39,
+    "visible_width_fraction": 0.18,
+    "bytes": 142910
+  },
+  {
+    "page": "sources",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F08_museum_everywhere.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      1308.125
+    ],
+    "cover_upscale": 3.63,
+    "visible_width_fraction": 0.1677,
+    "bytes": 121625
+  },
+  {
+    "page": "status",
+    "served_image": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2F08_museum_everywhere.png&w=640&q=75",
+    "served_pixels": [
+      640,
+      360
+    ],
+    "render_box": [
+      390,
+      1304.625
+    ],
+    "cover_upscale": 3.62,
+    "visible_width_fraction": 0.1682,
+    "bytes": 121625
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "recorded_at": "2026-10-05T01:17:17.376643+00:00",
+  "approval_date_local": "2026-10-05 Asia/Shanghai",
+  "human_reply": "Approve this exhibit and its stated source/rights context",
+  "scope": [
+    [
+      "region",
+      "shaanxi"
+    ],
+    [
+      "source",
+      "unesco-shadow"
+    ],
+    [
+      "passage",
+      "passage-shadow-02-en"
+    ],
+    [
+      "passage",
+      "passage-shadow-02-zh-CN"
+    ],
+    [
+      "claim",
+      "claim-shadow-02"
+    ],
+    [
+      "exhibit",
+      "shadow-02"
+    ]
+  ],
+  "review_ids": [
+    "rev_6b7203aea03f4027b3b9275627cf7d73",
+    "rev_6e8e07770604493d9f9ef95a4a1c45bd",
+    "rev_3779482df7d648af8eae2b16c9dd6a6e",
+    "rev_468dbe739d9d47f2b8cae1d3a47bdfce",
+    "rev_7cc9af38d98644ba85ac376a3b67575e",
+    "rev_1530baf5c1e44c2cb0778c6f2b6da6a8"
+  ],
+  "notes": "Explicit project-owner approval in chat, 2026-10-05 Asia/Shanghai: approved the English and Chinese wording of Light behind the screen, UNESCO attribution, original-summary rights context, and Shaanxi contextual label. Editorial approval only; no specialist review. Institutional description consulted through indexed official search content; direct page fetch presented a browser challenge. No source image or full text copied.",
+  "counts": {
+    "region": {
+      "draft": 0,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "source": {
+      "draft": 38,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "passage": {
+      "draft": 18,
+      "approved": 2,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "exhibit": {
+      "draft": 9,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "claim": {
+      "draft": 9,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "artifact": {
+      "draft": 37,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "media": {
+      "draft": 32,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "published_exhibits": 1,
+    "published_artifacts": 0,
+    "downloaded_cc0_candidates": 32
+  }
+}

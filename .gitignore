@@ -19,3 +19,9 @@ playwright-report/
 test-results/
 .local/
 media/private/
+
+# Owner request: keep new visual evidence local; existing tracked evidence is preserved.
+/report/evidence/**/*.png
+/report/evidence/**/*.jpg
+/report/evidence/**/*.jpeg
+/report/evidence/**/*.webp

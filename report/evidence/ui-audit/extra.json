@@ -1,0 +1,83 @@
+{
+  "checked_at": "2026-10-05T06:32:57.388Z",
+  "checks": [
+    {
+      "id": "phone-map-sizes",
+      "fontCSS": 23,
+      "screenFontHeight": 7.228571428571429,
+      "devicePixelRatio": 2
+    },
+    {
+      "id": "audio-metadata",
+      "duration": 11.361497,
+      "readyState": 4,
+      "networkState": 1,
+      "display": "▶︎\nNarration position\n0:00 / 0:11\nRecorded synthetic EN narration"
+    },
+    {
+      "id": "chinese-audio",
+      "src": "http://127.0.0.1:3000/folkverse/audio/lantern-demo.mp3",
+      "duration": 11.361497,
+      "display": "▶︎\n旁白位置\n0:00 / 0:11\n预录合成英语旁白"
+    },
+    {
+      "id": "320-reflow",
+      "route": "/",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/explore",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/journey",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/stories/lantern-path",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/lens",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/guide",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/dna",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/sources",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "320-reflow",
+      "route": "/status",
+      "scrollWidth": 320,
+      "viewportWidth": 320
+    },
+    {
+      "id": "modal-background-scroll",
+      "before": 1818,
+      "after": 1368
+    }
+  ]
+}

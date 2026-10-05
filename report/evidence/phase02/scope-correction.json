@@ -1,0 +1,310 @@
+{
+  "instruction": "not shaanxi. we will focus on the whole Liaoning. complete phase 2",
+  "withdrawals": [
+    {
+      "entity_type": "region",
+      "entity_id": "shaanxi",
+      "review_id": "rev_4dd4c640524649c7974ff63e085239e8",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "source",
+      "entity_id": "ihchina-shadow",
+      "review_id": "rev_c93ddeb01eb24d16a5cee78974544a77",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "source",
+      "entity_id": "unesco-shadow",
+      "review_id": "rev_39aa0f2120e7406ea2ccf9608eddc56d",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-01-en",
+      "review_id": "rev_a1b6a46ebb4f4998a72881d327683532",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-01-zh-CN",
+      "review_id": "rev_e9f92de83b7a4cb4bb400b8ce391348d",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-03-en",
+      "review_id": "rev_0074d3de653f4e8899cfdae0c2e2ffdd",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-03-zh-CN",
+      "review_id": "rev_4ad45d785e04475cae7476ba5e98d9a9",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-04-en",
+      "review_id": "rev_9e476074b2db400494b91f4167bd6a15",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-04-zh-CN",
+      "review_id": "rev_f2276fca9d134d3f9d7429dc1138555c",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-05-en",
+      "review_id": "rev_4d23ea1d9a7e414b998e27480d616cf5",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-05-zh-CN",
+      "review_id": "rev_49582bb86fb04acea3ed26066a23fa58",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-06-en",
+      "review_id": "rev_afa9cfa53cf440d399fd60f8ab18da6d",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-06-zh-CN",
+      "review_id": "rev_378f49a367a14e40a94c4af58a0d99e2",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-07-en",
+      "review_id": "rev_0d5d61cb25d241b79e81048bf57f994f",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-07-zh-CN",
+      "review_id": "rev_2555dcdfa5fa401fa393557fa50b349d",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-08-en",
+      "review_id": "rev_cf0cc2c940954317adf9d0bab1302568",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-08-zh-CN",
+      "review_id": "rev_816c6d4db6a34880995b51055e7c638f",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-09-en",
+      "review_id": "rev_1b221b0a841d48318fdd91dfa20bd137",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-09-zh-CN",
+      "review_id": "rev_18ff91a3536a4ae99a8930c754f1fe4f",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-10-en",
+      "review_id": "rev_81be0e89d4e84d318df0f34a83fe0f5d",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-10-zh-CN",
+      "review_id": "rev_968464490ce44aaabe6a7b94099efbe3",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-02-en",
+      "review_id": "rev_37468327157f45e5a0561e35b3e82ad6",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-shadow-02-zh-CN",
+      "review_id": "rev_3e3d2a8d5b4340a2be21da330653b249",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-01",
+      "review_id": "rev_d4c7a68c471f4ce39f7d7b8cc05ce06b",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-03",
+      "review_id": "rev_d7b341a2098c498a80eb753b6cd92b50",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-04",
+      "review_id": "rev_aa4322f5e2184a9d87d8d777029dc654",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-05",
+      "review_id": "rev_8cc9418ab9d0487a8b50408840d0ee12",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-06",
+      "review_id": "rev_94881f41cc8a4fefab0032663a7b9e0c",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-07",
+      "review_id": "rev_ddf377927df54c7ea627125f0c1f154b",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-08",
+      "review_id": "rev_981357a7466b49ed8a0a5f818ce66c34",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-09",
+      "review_id": "rev_7f4c2c26877c40cbb1b9f9dd5b1d1fa4",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-10",
+      "review_id": "rev_53ca4c104ae148a0b07e24ab8f4a3060",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "shadow-02",
+      "review_id": "rev_8cd75c2005924145ab4fa027bab14d6e",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-01",
+      "review_id": "rev_df1eb54231d34187b6885a4a4ea6b95f",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-03",
+      "review_id": "rev_5dcfedcc32e04fe7b85396583f429354",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-04",
+      "review_id": "rev_d5789b5e2de748c68f4f80730a2d45a5",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-05",
+      "review_id": "rev_756bc43cd2c74779a863ef135469c04d",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-06",
+      "review_id": "rev_69c79ba30cb24a49a57d65e6614ac177",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-07",
+      "review_id": "rev_b7af8494fe4d4460b3e4046d8b1c8fe2",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-08",
+      "review_id": "rev_131930b2a9fc43c5b78f2ac0ab7d24d6",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-09",
+      "review_id": "rev_dcd16836c6e042409790c172787cd0bb",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-10",
+      "review_id": "rev_068c84451d8441d38651ee49bf724e7d",
+      "decision": "withdrawn"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-shadow-02",
+      "review_id": "rev_ff031ba7fc324f3d990a566f75015309",
+      "decision": "withdrawn"
+    }
+  ],
+  "counts": {
+    "region": {
+      "draft": 15,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 1
+    },
+    "source": {
+      "draft": 39,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 2
+    },
+    "passage": {
+      "draft": 28,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 20
+    },
+    "exhibit": {
+      "draft": 14,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "claim": {
+      "draft": 14,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "artifact": {
+      "draft": 37,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "media": {
+      "draft": 32,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "published_exhibits": 0,
+    "published_artifacts": 0,
+    "downloaded_cc0_candidates": 32
+  }
+}

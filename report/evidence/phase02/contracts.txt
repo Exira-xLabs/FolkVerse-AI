@@ -1,0 +1,5 @@
+$ uv run --project apps/api python scripts/export-openapi.py && pnpm --filter @folkverse/contracts generate
+Exported packages/contracts/openapi.json
+$ openapi-typescript openapi.json -o src/schema.d.ts
+✨ openapi-typescript 7.13.0
+🚀 openapi.json → src/schema.d.ts [50.5ms]

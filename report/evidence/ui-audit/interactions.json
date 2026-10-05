@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-10-05T06:32:05.929Z",
+  "checks": [
+    {
+      "id": "region-camera",
+      "before": "0 0 1120 880",
+      "afterDropdown": "0 0 1120 880",
+      "highlight": "liaoning-dalian",
+      "afterDirectory": "341.5807979426404 543.8506068147149 374.6590600436829 294.374975748608"
+    },
+    {
+      "id": "source-summary-keyboard",
+      "cycle": [
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "A",
+          "text": "Visit institutional source ↗︎"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "A",
+          "text": "Visit institutional source ↗︎"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        },
+        {
+          "tag": "A",
+          "text": "Visit institutional source ↗︎"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×"
+        }
+      ],
+      "hasSummary": 1
+    },
+    {
+      "id": "drawer-padding-dismissal",
+      "clicked": {
+        "x": 1072,
+        "y": 450
+      },
+      "dialogStillOpen": false
+    },
+    {
+      "id": "guide-history",
+      "questionOneVisible": 0,
+      "questionTwoVisible": 1
+    },
+    {
+      "id": "journey-time-consistency",
+      "beforeGenerate": "Your next discoveries3 stops · 18 / 5 min",
+      "overflowNotice": [
+        "This route exceeds your selected time. Regenerate or remove a stop."
+      ]
+    },
+    {
+      "id": "journey-navigation-reset",
+      "time": "20 minutes",
+      "firstStop": "01ShaanxiBehind the illuminated screen ↗︎6 min↑↓Remove"
+    },
+    {
+      "id": "map-expanded-semantics",
+      "role": null,
+      "ariaModal": null,
+      "focus": "Exit expanded map"
+    },
+    {
+      "id": "not-found",
+      "text": "404\nThis page could not be found."
+    }
+  ]
+}

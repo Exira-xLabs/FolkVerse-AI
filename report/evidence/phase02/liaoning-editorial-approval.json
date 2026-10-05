@@ -1,0 +1,102 @@
+{
+  "approval_statement": "Approve this Liaoning exhibit and its stated source/rights context",
+  "notes": "Project owner explicitly approved in chat on 5 October 2026 (Asia/Shanghai): Approve this Liaoning exhibit and its stated source/rights context. Approval covers the exact bilingual Fuzhou shadow puppetry summary, first provincial heritage list entry 29, original-summary rights basis, and Liaoning/Dalian practice labels (Wafangdian jurisdiction verified against the provincial administrative table). Team editorial review, not external specialist review.",
+  "entities": [
+    {
+      "entity_type": "region",
+      "entity_id": "liaoning",
+      "review_id": "rev_9bc5e06a0229413faa11bd012894c00b",
+      "content_hash": "8ac4f871ca60231822512d1853cd7f8a0b6f3d9fe6bf10482e6c8872f49c0584",
+      "reviewed_at": "2026-10-05T01:31:27.064638+00:00"
+    },
+    {
+      "entity_type": "region",
+      "entity_id": "liaoning-dalian",
+      "review_id": "rev_400070cb8e0b45969a19bb84275d84f5",
+      "content_hash": "725a8a4447a4d1269a0bdba7e11ae4357c691003eeced11750fa9f062663b635",
+      "reviewed_at": "2026-10-05T01:31:27.067548+00:00"
+    },
+    {
+      "entity_type": "source",
+      "entity_id": "ln-first",
+      "review_id": "rev_05dc53aa53e54fe9a69648fbadcb482e",
+      "content_hash": "23124a52cc8b9b09d7ee9752d1f4635d591c5a51c05313bcb293f90f1ae979ab",
+      "reviewed_at": "2026-10-05T01:31:27.069441+00:00"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-liaoning-dalian-01-en",
+      "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+      "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+      "reviewed_at": "2026-10-05T01:31:27.071728+00:00"
+    },
+    {
+      "entity_type": "passage",
+      "entity_id": "passage-liaoning-dalian-01-zh-CN",
+      "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+      "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+      "reviewed_at": "2026-10-05T01:31:27.073642+00:00"
+    },
+    {
+      "entity_type": "claim",
+      "entity_id": "claim-liaoning-dalian-01",
+      "review_id": "rev_2c49fdc4030d4884a0d32d7c168c2677",
+      "content_hash": "613fe9f3af0fa8c34457c1744ce532e28c79e64be1022bfe8bf0adb8d901a9d1",
+      "reviewed_at": "2026-10-05T01:31:27.075424+00:00"
+    },
+    {
+      "entity_type": "exhibit",
+      "entity_id": "liaoning-dalian-01",
+      "review_id": "rev_96e84786d2354614b4e3f1b563898069",
+      "content_hash": "47f529c604f49f14558d480277fdaf627039a05cedb8c6aec34871ae15b43d3b",
+      "reviewed_at": "2026-10-05T01:31:27.085070+00:00"
+    }
+  ],
+  "counts": {
+    "region": {
+      "draft": 13,
+      "approved": 2,
+      "rejected": 0,
+      "withdrawn": 1
+    },
+    "source": {
+      "draft": 38,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 2
+    },
+    "passage": {
+      "draft": 26,
+      "approved": 2,
+      "rejected": 0,
+      "withdrawn": 20
+    },
+    "exhibit": {
+      "draft": 13,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "claim": {
+      "draft": 13,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "artifact": {
+      "draft": 37,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "media": {
+      "draft": 32,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "published_exhibits": 1,
+    "published_artifacts": 0,
+    "downloaded_cc0_candidates": 32
+  }
+}

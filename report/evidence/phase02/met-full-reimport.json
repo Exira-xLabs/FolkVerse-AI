@@ -1,0 +1,680 @@
+{
+  "objects": [
+    {
+      "id": "met-50824",
+      "title": "Vase with Daoist Immortals",
+      "source_hash": "3ca62e87487bc5991bd40f280fd34e806aee29d4ecf8875dd7b344e4e33c2c3c",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-449479",
+      "title": "Fragment of an Imported Chinese Bowl",
+      "source_hash": "bd1bd7a55e52a71935ee66ed65e4f6872374e3d7fa074e79341eacb36cce347b",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "China",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": ""
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-460669",
+      "title": "Small wine pot or teapot",
+      "source_hash": "f8f10f46acb04969bbd20ecd0140181111aa7da16d8a3b21f60a8ee294278d90",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "Chinese"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-77805",
+      "title": "Dream of China",
+      "source_hash": "26eeb961d069a9f5afc6e5abc24f7307bbba97e02792091384869030fe7c6fd1",
+      "status": "draft",
+      "cc0_candidate": false,
+      "image_downloaded": false,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-51550",
+      "title": "Map of China",
+      "source_hash": "29c97bf15d19a175d8abf7620266c00136fbc1e5ff93de1143396ce270e82013",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-36105",
+      "title": "Cranes, peach tree, and China rose",
+      "source_hash": "c0236b72fb6927cae228e3c9c53de7c26aaaba632a0a3c522d51d2a80f299cad",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-737759",
+      "title": "Socialist Realist Landscape/ New China",
+      "source_hash": "0785dea2e35af1178ba3ef4721a668a26c133fcf1d31fd9ea6ce1aaf0b35ead4",
+      "status": "draft",
+      "cc0_candidate": false,
+      "image_downloaded": false,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-36106",
+      "title": "Crabapple, China rose, and Indian flycatcher",
+      "source_hash": "7b675cccf046013c4498c3ad84859d7809cc2bd67053aed6e1bf09bc6e56ccff",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-54028",
+      "title": "Pole base in the form of a tiger",
+      "source_hash": "c14ec22eddd3d85ba4a208c1f7d28cfe1079eb5d07df502e13954a5263965840",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-52031",
+      "title": "Bowl with Peonies",
+      "source_hash": "50e05e69a619610925669232543b8a3dca850aed2f8dd145f6c585e3bad74055",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-42372",
+      "title": "Incense burner with lions",
+      "source_hash": "8ae164587405026b02dc1806bb31f9136a05ee7bf8d08fe5314beabaec83811f",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-839234",
+      "title": "Carved fan, calligraphy",
+      "source_hash": "5edd1124de7771e901b83bccb2ac77f15183430ab1dbd97cf085bae890b72563",
+      "status": "draft",
+      "cc0_candidate": false,
+      "image_downloaded": false,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-42482",
+      "title": "Pillow in Shape of Reclining Woman",
+      "source_hash": "428f0aafe307a78d735f96c1c9cff3b7f4680a6e10ea20704eb5c9c133cab122",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-52098",
+      "title": "Textile with floral medallions",
+      "source_hash": "8c586ec6c094b959af5c9f9f845b79e2d2a34e543ee5bb9167f52f2828cb13da",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-36299",
+      "title": "Inspired by My \"Western Mountain Poem\"",
+      "source_hash": "5e0b0d7f2d11930c798629d44fde9e3fbeb9012b7baad421cf7416c2eda09ab1",
+      "status": "draft",
+      "cc0_candidate": false,
+      "image_downloaded": false,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-49156",
+      "title": "The Kangxi Emperor's Southern Inspection Tour, Scroll Three: Ji'nan to Mount Tai",
+      "source_hash": "8aa0bc3c01cd5b93e2c8a1a8b7c64964956483eeb728cd1491fed672e3bfc711",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-45981",
+      "title": "Dish with scene of Duke Ling of Jin",
+      "source_hash": "301aabef88c0444d1d006880a7f5322fd17e755e7b35e5d3a385a7831f333e57",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-781809",
+      "title": "Dragon climbing a rock",
+      "source_hash": "15281f5c2bf873c4ee6247aec9824c6836c402eaa7b2915389b8d89f0849be43",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-69860",
+      "title": "Chinese Palampore",
+      "source_hash": "6ff89fec2c4514adda12e6a70f4a7bbf32d688db25d09ca55ec0bdcb83939cfd",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China (Guangzhou), for the European or American market"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-44422",
+      "title": "Jar with Spiral Decoration",
+      "source_hash": "a95422e35a92235bc2a667f8556873ab684ecae5ce0f84be5150130bec5f9b3c",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-41240",
+      "title": "Snuff bottle with Buddhist emblems",
+      "source_hash": "981c93174fe2740be8426d3f327fbd07bef9edf8b40d0f38db04625635ce19be",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-36066",
+      "title": "Portraits of Emperors of Successive Dynasties",
+      "source_hash": "0514d74d7e860ef60193f895f2a5de32287826f66ff6ced896c5253a175833f5",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-49252",
+      "title": "Portraits of Emperors of Successive Dynasties",
+      "source_hash": "f3a95b22b22d7d96091866356d5a0d3cc106554dabba7db8879d6eb035935250",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-39617",
+      "title": "Vase",
+      "source_hash": "292f86f6e3c28e7f9a72ffa67274bd30088159b62d6577d95c84f4c1b82c54ce",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-39731",
+      "title": "Scroll Cover with Animals, Birds, and Flowers",
+      "source_hash": "53c6ead5aa8f679a3ea4c0f3a2efdc21037cde9e9c2ba620e916bf3d9bb4ddfb",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-52562",
+      "title": "Flask with mythical birds",
+      "source_hash": "6b7c6bd6e9dc76461aa27f201e70525cc580ce6457ef98ed509d0666ff7fa4a9",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-52563",
+      "title": "Flask with mythical birds",
+      "source_hash": "4fc88adf30ebd9c575ab288c59634be88a09e174aac93c0f0a8b7ad7a4762ff9",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-41888",
+      "title": "Cup in the shape of a magnolia blossom",
+      "source_hash": "c95b107b41fdd3236e0a030cd6101091825dfa3bb35eca310c0014a4764f14bb",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-73805",
+      "title": "Bowl with plum blossom and crescent moon",
+      "source_hash": "9137d247d361f468f31650b95208db2ebf875db442728b4ac9a2cc3201b70998",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-42331",
+      "title": "Jar (Guan)",
+      "source_hash": "0f9d345ef91db0df47a9ef1bc3058d713cf79d232084a19e81b9e64ed7ae5c1a",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-64921",
+      "title": "Jar with floral decorations and musicians",
+      "source_hash": "0921d3792e6b9bed736fd66f774552c439437ccebe0aa86a9413942dc373b2b2",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-50823",
+      "title": "Plate with scene of offering antique",
+      "source_hash": "61a707a0081298a03a25890297ba218e0ff23be1f5fec2a8eb7b4fa469c39b51",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-653046",
+      "title": "Pair of vases with crickets",
+      "source_hash": "1749d09d13ba3dcf81f757ac77b161c88abe0a793d980cb399076e87f4dfeba7",
+      "status": "draft",
+      "cc0_candidate": false,
+      "image_downloaded": false,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-49216",
+      "title": "Bottle with Peony Scroll",
+      "source_hash": "3a88e5f69f41f81614258c4769e37866da04b00a3d4f24c3ca5384b0db67655b",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-52978",
+      "title": "Bottle with Coiling Dragon",
+      "source_hash": "29aa88075d3286fa4a8bc3537b6262ec8506d2fa0140460ae91f3af1a02ae598",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-50700",
+      "title": "Jar with Abstract Decoration",
+      "source_hash": "f57546746093d440ba3a47afdd9d0c6d609397657e86a3748716095cb8a1ebb7",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-76733",
+      "title": "Bottle",
+      "source_hash": "bd48b111bf396d7f0d3f51d2769a999fa0a358a8354a9528e53c39ff2effe9fa",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    }
+  ],
+  "counts": {
+    "region": {
+      "draft": 13,
+      "approved": 2,
+      "rejected": 0,
+      "withdrawn": 1
+    },
+    "source": {
+      "draft": 38,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 2
+    },
+    "passage": {
+      "draft": 26,
+      "approved": 2,
+      "rejected": 0,
+      "withdrawn": 20
+    },
+    "exhibit": {
+      "draft": 13,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "claim": {
+      "draft": 13,
+      "approved": 1,
+      "rejected": 0,
+      "withdrawn": 10
+    },
+    "artifact": {
+      "draft": 37,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "media": {
+      "draft": 32,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "published_exhibits": 1,
+    "published_artifacts": 0,
+    "downloaded_cc0_candidates": 32
+  }
+}

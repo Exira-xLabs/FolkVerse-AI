@@ -1,0 +1,123 @@
+{
+  "objects": [
+    {
+      "id": 856012,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "met-49216",
+      "title": "Bottle with Peony Scroll",
+      "source_hash": "3a88e5f69f41f81614258c4769e37866da04b00a3d4f24c3ca5384b0db67655b",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-52978",
+      "title": "Bottle with Coiling Dragon",
+      "source_hash": "29aa88075d3286fa4a8bc3537b6262ec8506d2fa0140460ae91f3af1a02ae598",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-50700",
+      "title": "Jar with Abstract Decoration",
+      "source_hash": "f57546746093d440ba3a47afdd9d0c6d609397657e86a3748716095cb8a1ebb7",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    },
+    {
+      "id": "met-76733",
+      "title": "Bottle",
+      "source_hash": "bd48b111bf396d7f0d3f51d2769a999fa0a358a8354a9528e53c39ff2effe9fa",
+      "status": "draft",
+      "cc0_candidate": true,
+      "image_downloaded": true,
+      "image_error": null,
+      "origin": {
+        "country": "",
+        "region": "",
+        "subregion": "",
+        "city": "",
+        "culture": "China"
+      },
+      "current_location": "Metropolitan Museum of Art, New York, NY"
+    }
+  ],
+  "counts": {
+    "region": {
+      "draft": 1,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "source": {
+      "draft": 39,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "passage": {
+      "draft": 20,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "exhibit": {
+      "draft": 10,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "claim": {
+      "draft": 10,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "artifact": {
+      "draft": 37,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "media": {
+      "draft": 32,
+      "approved": 0,
+      "rejected": 0,
+      "withdrawn": 0
+    },
+    "published_exhibits": 0,
+    "published_artifacts": 0,
+    "downloaded_cc0_candidates": 32
+  }
+}

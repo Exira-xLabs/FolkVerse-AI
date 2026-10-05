@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-05T07:39:22.701Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3000",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3000/api/v1/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8000/health",
+      "status": 200
+    }
+  ]
+}

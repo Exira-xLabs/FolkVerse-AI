@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-05T06:33:35.321Z",
+  "checks": [
+    {
+      "route": "/explore",
+      "footer": "Live mode · features unavailable",
+      "hasPublishedExhibit": 1,
+      "experienceText": null
+    },
+    {
+      "route": "/guide",
+      "footer": "Live mode · features unavailable",
+      "hasPublishedExhibit": 0,
+      "experienceText": "LIVE MODE\n\nThis experience is not available yet.\n\nLive content and providers are not connected. Demo fixtures are disabled in live mode.\n\nCheck services"
+    }
+  ]
+}

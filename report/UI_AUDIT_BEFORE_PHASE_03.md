@@ -1,0 +1,194 @@
+# FolkVerse UI audit before Phase 03
+
+**Audited:** 5 October 2026, Asia/Shanghai. **Objective:** the best visitor experience across every page, with sharp, coherent artwork and understandable interactions.
+
+**Verdict:** the museum identity is worth keeping, but the UI is not ready to freeze for the Phase 03 handoff. Fix mobile image composition, navigation, source-drawer behavior and the visitor flow first. More decorative images alone will not resolve the main problems. The new dropdowns can remain the shared control foundation.
+
+**Follow-up:** the seven owner-selected refinements and image-delivery pass are now implemented and locally verified. See [UI refinement results](UI_REFINEMENT_RESULTS.md) for the exact delivered scope and remaining findings. The observations below describe the pre-refinement baseline; the full audit is not marked closed.
+
+This is an audit and proposed backlog, not a completed redesign. Application code, original artwork and editorial approvals were preserved. Live guide, recognition, journey generation, profiles and later integrations remain separate phase work. Their missing backends are not counted as UI bugs.
+
+## What was scanned
+
+- All nine current screens: Home, Explore, Journey, Story, Lens, Guide, interests/DNA, Sources and Service status; also the unknown-route screen.
+- **54 rendered page checks:** nine routes × English/Chinese × 1600×900, 390×844 and 768×1024. Full-page captures and six overview sheets were generated and inspected.
+- Additional checks: all nine routes at 320px; 200% CSS body zoom at an 800px viewport; a phone capture at device pixel ratio 2; keyboard source inspection, drawer dismissal/background scrolling, map selection, navigation state, error copy, story audio and live-mode availability.
+- axe-core **4.13.0** scans across the 54 default page states. This identified an actual definition-list defect on DNA in all six size/language combinations. Contrast over the imagery/gradients remained incomplete and needs manual testing; a clean automated result is not an accessibility certification.
+- Original nine scene/character assets, actual optimized image responses, terrain v2, source composition and generated-image provenance. The imagegen skill and its prompting guidance were read to prepare the artwork plan. No new raster images were generated during this audit.
+- Current component code, visual/QA instructions, Phase 03 guide contracts and existing test/evidence records. The earlier 27-test passing suite is useful regression evidence; it does not establish perfect visual quality or complete accessibility.
+
+**Measured baseline:** all 54 screens returned HTTP 200, with no page JavaScript exceptions and no document horizontal overflow. The 320px and CSS zoom checks also had no document overflow. Some aborted Next.js prefetch requests were logged during navigation/page closure; these are not counted as broken visitor requests. All nine original artwork/reference asset checks passed.
+
+Working tree: `/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit`, branch `main`, base commit `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`, with existing uncommitted Phase 02/map/dropdown work. [Audited file hashes](evidence/ui-audit/audited-file-hashes.json) identify the scanned implementation.
+
+**Priorities:** P1 = fix before UI handoff; P2 = complete the design/state treatment before handoff or during its assigned phase; P3 = optional polish. These are UI priorities, not security severity ratings.
+
+## 1. Bad ideas that should change
+
+These are design judgments supported by the rendered pages, rather than claims that code is crashing.
+
+| ID / priority | Pages | Current idea and why it hurts | Better direction |
+|---|---|---|---|
+| A01 / P1 | Home | The four discovery cards promote Journey, Story, Lens and Guide. The actual reviewed Liaoning collection has no home discovery card or primary start button. A visitor is steered toward demos before the working core experience. | Lead with **Explore Liaoning** and a featured reviewed exhibit. Give each secondary experience a visible availability label. |
+| A02 / P1 | All pages | One landscape scene acts as wallpaper for the entire scrolling document. Mobile keeps a tiny, magnified slice of the original scene, with bright details competing with text. | Use a bounded hero scene, deliberate phone composition and a calm reading surface below. See B01. |
+| A03 / P1 | Explore | The map, attribution and fourteen-city directory precede the actual collection. The phone page is about **2,748px** tall. The first reviewed exhibit is buried below a large geography interface. | Offer **Map / Collection** views, a featured exhibit near the top and a compact city sheet. Keep the beautiful atlas as an optional discovery surface. |
+| A04 / P2 | Guide | The large portrait occupies a separate panel below the mobile conversation, adding substantial scrolling without helping someone ask a question. | Keep the existing character identity, with a compact companion/avatar beside the guide title. Use the large portrait only in an optional introduction. |
+| A05 / P1 | Lens, Journey, Sources fixtures, DNA | Demo scenario selectors, tracking-preview controls and prototype stages are presented like visitor tasks. Honest labels help, but the default experience still feels like an internal test console. | Make the intended task primary; put demo-state exploration in a clearly separate preview area. |
+| A06 / P2 | DNA | “My DNA” and “Your Folklore DNA” imply a discovered personal property while the chart starts with arbitrary sample weights. The ancestry disclaimer is correct but must overcome the headline. Chinese already uses an interests framing. | Use **My interests / Cultural constellation** in English too. Start with an explicit example or a short voluntary interest selection. |
+| A07 / P2 | All pages, especially DNA and Story | Nearly everything uses translucent glass over detailed art. Scenery, container edges, gold ornaments, text and controls compete for attention. | Keep glass for navigation and selected overlays; use more opaque reading/task panels. Give one visual and one main action the strongest emphasis. |
+| A08 / P2 | Home cards, Journey, DNA | Reusing large scene images as tiny card covers leaves the subject small or cropped. The same cultural collage has to act as wallpaper, narrative context and thumbnail. | Define separate hero, card and detail-image compositions. Generate new covers only where responsive framing cannot solve the problem. |
+| A09 / P2 | Status and error states | Visitors encounter database/vector/schema terminology and instructions to start a local API. These details explain implementation rather than the visitor's next step. | Show a friendly availability summary and retry first; place technical detail in an optional diagnostics disclosure. |
+
+## 2. Confirmed UI bugs and accessibility defects
+
+| ID / priority | Pages | Reproduction / evidence | Required correction |
+|---|---|---|---|
+| B01 / P1 | All phone scenes | Actual optimized responses are **640×360**, while the Home image fills a **390×1,814** box and Explore fills **390×2,748**. `object-fit: cover` enlarges the served image roughly **5.04×** and **7.63×** respectively. Only about 12% and 8% of its width remain visible. Explore also applies intentional blur/low opacity; that is distinct from the unintended scaling. [Sizing measurements](evidence/ui-audit/image-sizing.json). | Bound the background independently of document height, art-direct the mobile frame and size the served image for the real cover operation. Merely raising image quality/compression does not fix this. |
+| B02 / P1 | Phone Lens, Guide, DNA | The current navigation item is outside the visible horizontal navigation area on initial load in both languages. `aria-current` is correct, but the visitor cannot see the selected destination. [54-state measurements](evidence/ui-audit/scan.json). | Keep the current destination visible on navigation, or replace the row with a compact mobile navigation model. Preserve direct access to every page. |
+| B03 / P1 | Published exhibit/source drawer | Starting at Close and pressing Tab cycles between Close and the external source link. **Record integrity** is a focusable `<summary>` but is excluded from the custom focus-trap selector, so keyboard users cannot reach it. [Recorded focus cycle](evidence/ui-audit/interactions.json). | Include every tabbable element, including summaries, or use a reliable dialog focus implementation. Verify forward and backward traversal. |
+| B04 / P1 | Every source drawer | Clicking **8px inside the drawer's left edge**, on its internal padding, closes the dialog. The handler treats any click targeting the dialog element as a backdrop click. [Reproduction](evidence/ui-audit/interactions.json). | Distinguish actual backdrop clicks from clicks inside the dialog rectangle. Internal whitespace must not dismiss the content. |
+| B05 / P1 | Source drawer on phone | With the modal open, wheeling over the backdrop moves the underlying page from `scrollY=1818` to `1368`. [Measurement](evidence/ui-audit/extra.json). | Lock background scrolling while the drawer is open and restore the previous page position when it closes. |
+| B06 / P1 | Explore | Choosing Dalian from Region changes the highlight but leaves `viewBox` at `0 0 1120 880`. Choosing the same city from the directory fits Dalian to a different viewBox. [Comparison](evidence/ui-audit/interactions.json). | Use one selected-city/camera behavior for dropdowns, territories, markers and directory buttons. |
+| B07 / P1 | All pages | Enable Simplify graphics on Guide, then follow the Journey navigation link. The reduced-graphics class is gone. [Navigation measurement](evidence/ui-audit/navigation-and-errors.json). | Persist the visitor's graphics preference across routes. Test actual internal-link navigation, not just a single page toggle. |
+| B08 / P1 | DNA | The chart's `<dl>` groups contain a `<span>` alongside `<dt>` and `<dd>`. axe reports a serious `definition-list` violation in all six size/language states. [Scan](evidence/ui-audit/scan.json), [component](../apps/web/src/components/museum-ui.tsx). | Place the visual bar inside the appropriate description, or use a different valid semantic structure with a text equivalent. |
+| B09 / P1 | Phone atlas | City names are declared at 23 SVG units but render at about **7.23 CSS pixels** in the overview, including on a DPR-2 phone. [Measurement](evidence/ui-audit/extra.json). | Maintain readable screen-space labels, show only useful labels at each zoom level and provide a prominent accessible city list. Device pixel density does not make tiny text readable. |
+| B10 / P2 | Atlas controls | City search is **37px high**; city-panel action buttons are **36px high** in CSS. Some map targets and attribution links are smaller. This misses the project's 44px interaction target, although map/inline/equivalent-control exceptions mean small dimensions alone do not prove a WCAG failure. [QA requirement](../QA_AND_DEMO.md), [styles](../apps/web/src/app/globals.css). | Make standalone controls at least 44px in their usable dimension. Keep directory equivalents for dense geographic targets and retain required attribution. |
+| B11 / P1 | Expanded atlas | The expanded view locks scrolling and wraps keyboard focus, but remains a section without dialog semantics or `aria-modal`; the background is not made inert. [Markup observation](evidence/ui-audit/interactions.json). | Provide an explicitly labelled modal/fullscreen interaction with background isolation and a clear exit. Screen-reader behavior needs a subsequent manual check; it was not tested here. |
+| B12 / P2 | All routes | The recorded browser document title remains the same museum title across the nine different screens. The root metadata supplies a title template, but individual pages supply no distinct title. [Recorded titles](evidence/ui-audit/scan.json). | Give each screen a meaningful EN/ZH title so browser tabs, history and assistive navigation identify the current task. This observation is not a complete screen-reader test. |
+
+## 3. UI logical errors and confusing behavior
+
+These include confirmed copy/state mismatches and interaction contracts that need to be settled before live features are connected.
+
+| ID / priority | Pages | Finding | Change |
+|---|---|---|---|
+| C01 / P1 | Sources | The sidebar tells visitors to select a city and explains the atlas even though Sources has no city selector or atlas. [Actual text](evidence/ui-audit/navigation-and-errors.json). | Write source-specific instructions: browse published records, inspect their excerpts and understand review/rights. |
+| C02 / P1 | Live mode | Explore successfully displays the published exhibit, but the footer still says **“Live mode · features unavailable.”** [Live-mode check](evidence/ui-audit/live-mode.json). | Describe availability per capability, rather than declaring the entire experience unavailable. |
+| C03 / P1 | Journey | The default interest option says **“Performance + craft”**, but its value is `all`. Route generation includes the Food and Music fixtures too; there is no performance fixture in that set. | Use a truthful “All interests” label or implement the exact category selection being offered. |
+| C04 / P2 | Explore | “All Liaoning” and “Liaoning province” are presented as separate Region choices with practically equivalent outcomes in the current corpus. The former sends no region filter, which could later include other provinces while retaining its Liaoning label. | Establish one clear province-wide choice and make the query match its label. |
+| C05 / P1 | Atlas loading/error states | Geography can appear before region availability arrives. An empty `availableIds` then makes cities look as if their exhibits are pending review, even though collection availability may simply be loading or unavailable. | Distinguish **checking collection**, **reviewed content available**, **no published content**, and **service unavailable**. Geography loading and cultural publication are separate facts. |
+| C06 / P1 | Guide | Sending a second question replaces the first question/answer instead of forming a conversation. An unsent draft also disappears after leaving via navigation and returning. [Checks](evidence/ui-audit/interactions.json), [draft check](evidence/ui-audit/navigation-and-errors.json). | Settle conversation history, draft retention, clear/reset and context behavior before Phase 03 connects streaming answers. Retention must have a defined lifetime and privacy policy. |
+| C07 / P2 | Journey | Changing Time to 5 minutes leaves the existing route at **18 / 5 min** until regeneration. A warning correctly appears, so this is not a silent validation failure; the selected criteria and committed route nevertheless look contradictory. | Either update immediately or clearly mark the controls as draft changes with an Apply action and the existing route as out of date. |
+| C08 / P2 | Journey | Reordered stops and chosen duration revert when navigating away and returning. This is current fixture state, not evidence of a broken persistent journey backend. | Preserve the temporary planning session or explicitly explain its reset behavior. Plan a separate durable-save contract for Phase 04. |
+| C09 / P2 | Journey / app scope | The working collection is Liaoning, while default journey stops are Shaanxi, Fujian and Guangdong. Fixture labels are honest, but the visitor's regional context changes without a decision. | Keep prototype examples in the chosen regional context where supported, or visibly call them a separate example tour. Never invent reviewed Liaoning stops to make a fuller route. |
+| C10 / P2 | Story | Chinese text plays the same **11.36-second English recording**. The English-audio disclosure is accurate, so this is an experience limitation rather than a false translation claim. | Provide an explicit narration-language choice and transcript; offer Chinese audio only when it actually exists. |
+| C11 / P2 | Guide | Voice looks like a normal action and only reveals its unavailable state after the visitor presses it. | Explain voice availability before the action. Keep typing easy and give the unavailable control a useful, accessible explanation. |
+| C12 / P1 | Exhibit → Guide / Journey / Story / interests | The reviewed exhibit opens with source information, but there is no purposeful continuation carrying the selected exhibit into a question or learning flow. | Define context-preserving next actions and capability states now. Connect the actual guide in Phase 03 and the other APIs in their later phases. |
+
+## 4. UI things that must be added
+
+“Before handoff” means finish the design and shared UI behavior. It does not require implementing later-phase AI services early or manufacturing content for empty screens.
+
+| ID / priority | Scope / timing | Required addition |
+|---|---|---|
+| M01 / P1 | Shared, before handoff | A responsive art system: bounded hero, phone-specific composition, correct responsive image candidates, calm lower-page surface and preserved source masters. |
+| M02 / P1 | Shared, before handoff | Mobile navigation with a visible current page, easy access to every destination and a compact persistent route back to Explore. Include Sources in an obvious place. |
+| M03 / P1 | Home, before handoff | A primary Explore Liaoning action, one real reviewed featured exhibit and honest per-card availability badges. No invented collection counts. |
+| M04 / P1 | Explore, before handoff | A Collection view alongside the atlas, discoverable search, clear active filters, Clear filters, useful empty-state recovery and an obvious way to return to the province. |
+| M05 / P1 | Exhibit detail, before handoff | A distinct reading experience with title, city/theme, reviewed summary, source citations, back navigation and an “Ask about this exhibit” action carrying its ID. A shareable detail URL is strongly recommended. |
+| M06 / P1 | Guide, design before handoff; wire in Phase 03 | Context header, conversation history, useful prompts drawn from approved coverage, generating/cancelled/error/insufficient states, Stop, Retry and inspectable citations. Progress must be visually distinct from validated answer content. On phones, keep the composer reachable above the software keyboard. |
+| M07 / P1 | Sources/drawers, before handoff | Clear separation of exhibit reading and evidence inspection; source excerpt, institution, review/rights status, original link and expandable technical integrity. Every part must be keyboard reachable. |
+| M08 / P1 | Shared, before handoff | Consistent loading, empty, offline/unavailable, withdrawn-content and friendly 404 designs with concrete recovery actions. Initial audio metadata should show a loading state instead of temporarily presenting `0:00 / 0:00`. |
+| M09 / P1 | Shared, before handoff | A manual contrast/focus/readability pass over actual imagery in both languages, corrected semantic issues, complete focus traversal, scroll-safe dialogs and touch-size review. Preserve the working dropdown keyboard and touch behavior. |
+| M10 / P1 | Shared, before handoff | Persistence for language and graphics preferences; a defined temporary-state policy for guide drafts, map/filter context and journey editing. Keep demo data separate from real saved content. |
+| M11 / P2 | Journey, UI before handoff; real validation in Phase 04 | A clear criteria/apply model, matching interest labels, visible route duration, empty-route recovery, stop reasons and links to actual exhibit detail. Saving/reordering live journeys belongs to Phase 04. |
+| M12 / P2 | Story, UI before handoff; real story integration in Phase 06 | Reading and listening modes, full transcript, explicit audio language, contextual source links, clear choice/ending states and a useful continuation after an ending. Generated branch artwork remains labelled creative. |
+| M13 / P2 | Lens, UI before handoff; real capture/recognition in Phase 05 | A visitor-first capture/upload design with image guidance, privacy explanation, permission-denied recovery, cancel/retry and actual unavailable states. Scenario controls should be preview tools. Do not request/upload a photo until the real lifecycle exists. |
+| M14 / P2 | Interests, UI before handoff; real profile work in Phase 07 | Explicit example/onboarding state, direct interest editing, reset behavior, consent wording and recommendations linking to eligible reviewed content. Empty/reset values must not imply a personality measurement. |
+| M15 / P2 | Status, before handoff | Visitor-friendly connection summary, last-check/retry feedback and optional technical detail. Anonymous-visit controls should explain their benefit and remain consistent with actual privacy behavior. |
+| M16 / P1 | Handoff, before UI is called complete | A reviewed design/state inventory and image QA checklist with screenshots. Exercise a real phone/software keyboard, Safari, a screen reader and a realistic slow connection before claiming those environments passed. Those checks remain unavailable in this audit. |
+
+## 5. Nice to have
+
+| ID | Pages | Optional improvement |
+|---|---|---|
+| N01 | All | A restrained transition that helps maintain place when changing pages; no motion required for understanding or use. |
+| N02 | Home | A “Continue exploring” shortcut based on explicitly retained session state, with a clear reset. |
+| N03 | Explore | City hover/focus previews and a list of related reviewed exhibits. No fabricated facts or review badges. |
+| N04 | Explore | Optional topographic/detail view at higher zoom with sharper tiled artwork and a legend. Keep actual borders sourced. |
+| N05 | Exhibits/Sources | A reading mode, adjustable text size and a small reading-progress indicator. |
+| N06 | Guide | Compact identity-preserving character reactions or a small contextual illustration, after readability and streaming UX are settled. |
+| N07 | Story | Distinct artwork for each fictional ending, chapter progress and an optional subtle soundscape. No autoplay. |
+| N08 | Interests | A playful editable constellation instead of an unexplained score chart, with an equivalent text interface. |
+| N09 | Collection | Bookmarks, a small saved collection and link sharing, after the actual session/storage/consent contracts are implemented. |
+| N10 | Shared | A visitor-controlled light reading surface or low-data mode, supported by measured readability/performance. |
+
+## Page-by-page direction
+
+| Page | Preserve | Change first | Intended visitor experience |
+|---|---|---|---|
+| Home | Museum entrance, navy/ivory/gold, original character identity | Primary starting action, live/preview availability, phone hero crop | Enter → understand the scope → open a real Liaoning exhibit. |
+| Explore | Actual province/city boundaries, all fourteen city names, attribution, stationary highlights, new markers | Map/list balance, 7px labels, camera consistency, loading/empty semantics | Choose a city or topic → find a reviewed exhibit → understand what is pending. |
+| Journey | Time control, stop editing and honest digital-learning framing | Interest taxonomy, pending criteria, regional continuity and navigation retention | Set interests/time → understand the route → open a stop. Live route/save APIs come later. |
+| Story | Warm shadow-stage art, original fictional framing, working recorded audio | Phone crop, reading/transcript/language choice, ending continuation | Read or listen → make a choice → reach a clear ending and another useful action. |
+| Lens | Honest related/unknown/poor-image/denied/unavailable states | Default test selector, capture expectations and decorative fake-phone prominence | Understand availability → capture only when supported → inspect an honest result. |
+| Guide | Original fictional portrait, bilingual copy, bounded composer, truthful demo badge | Conversation/context/source UX, mobile composer reachability, oversized portrait, unavailable Voice affordance | Ask about a reviewed exhibit → receive validated content → inspect evidence or understand insufficiency. |
+| Interests/DNA | Editable chart/text, tracking off by default, ancestry disclaimer | English naming, unexplained sample weights, invalid semantics, recommendation destination | Choose interests voluntarily → see understandable changes → discover eligible content. |
+| Sources | Real published record, attribution, review/rights information and original URLs | Atlas-specific sidebar copy, raw metadata hierarchy, drawer interaction defects | Understand where an exhibit/claim came from and what the evidence actually supports. |
+| Service status | Real readiness/session checks and retry | Developer terminology, visitor benefit and unnecessary decorative density | Understand whether the visit works → retry or manage the anonymous visit. |
+| Unknown route | Actual 404 status | Default unbranded page with no recovery link | Read a friendly explanation → return Home or Explore. |
+
+## Image quality and imagegen plan
+
+The originals have a coherent warm museum style and are useful masters. The strongest defect is their deployment/composition on long pages, not proof that every source painting is bad. Higher resolution cannot recover an excluded subject or fix a misplaced panel.
+
+All eight scene masters are **1672×941**. The character is **1311×1200 RGBA**. Terrain v2 is **1309×1201**, approximately **3.15MB** as the currently served PNG; this is a measured asset size, not a measured load time or Core Web Vitals score. Source scene PNGs are roughly 1.8–2.5MB, while Next serves smaller optimized candidates. The original masters should remain preserved.
+
+| Asset / use | Current quality problem or risk | Proposed treatment |
+|---|---|---|
+| `01_museum_entrance.png` — Home | Strong landscape composition becomes an enlarged slice on phones; national map can imply broader coverage than exists. | Bound the desktop hero. Prepare a portrait museum composition for phones and explicitly label the current Liaoning collection scope. Keep authoritative geography in code. |
+| `02_interactive_map.png` — Explore backdrop | Repeats map imagery behind the actual atlas; already deliberately blurred and subdued. | Prefer a quiet navy atmospheric surface around the real map. A new full scene is unnecessary unless it improves composition. |
+| `03_cultural_journey.png` — Journey / cards | Subject sits on the right of a landscape scene; full-document mobile cover loses context. | Separate the decorative hero from route cards. Use a phone composition and a dedicated cover if a card needs a stronger focal point. |
+| `04_shadow_puppetry.png` — Story / fixture cover | Beautiful stage conflicts with phone headline/text and the selected crop. | Preserve the stage reference; place UI over a calmer region and prepare portrait art. Optional distinct ending images should depict the original fictional story only. |
+| `05_object_lens.png` — Lens | The decorative phone and puppet can appear to be the capture/result interface, while the real UI is a scenario tester. | Keep decorative imagery secondary. Prepare a clearer object-study composition or a neutral capture illustration, without fabricated result text. |
+| `06_ai_guide.png` — Guide | Background details blur at phone scale and add visual noise to reading. | Use a restrained hero/calm chat surface. Improve layout before considering replacement art. |
+| `07_folklore_dna.png` — interests | Dense glowing cultural collage overwhelms the editable graph and can suggest identity analysis. | Reduce its prominence; consider a quieter abstract constellation as decorative art. Build every real weight/label in code. |
+| `08_museum_everywhere.png` — Sources / Status | Same detailed scene is stretched behind long evidence/technical content. | Bound a quiet museum/archive hero for Sources. Status can use a simple surface without a new raster asset. |
+| `09_ai_guide_character.png` — Guide / Home | Existing alpha and identity are intact; size/placement creates more friction than facial quality. | Reuse the original at useful sizes. If new poses are later needed, use identity-preserving edits and inspect face, hands, costume, hair edges and transparency. |
+| `liaoning-terrain-v2.png` — atlas | Approximate generated relief becomes less sharp at high zoom; a full PNG is served even on phones. | Retain the sourced borders. Evaluate responsive WebP/AVIF/lossless options visually; consider map tiles only if zoom requires them. Preserve elevation-guided generation provenance and visible approximate-art disclosure. |
+| Future exhibit/object images | Current published collection does not supply an approved photo catalog that can be treated as recognition evidence. | Use eligible attributed real images only after the relevant rights/review gates. A generated cover must be clearly decorative and cannot stand in for an artifact photograph or recognition reference. |
+
+### Ready-to-use generation/edit briefs
+
+These are proposals for the next UI/art pass, not generated deliverables or approved cultural evidence. Use the built-in imagegen tool, save sibling versioned files and inspect each selected output before integrating it.
+
+1. **Home phone hero — style reference: original entrance.** “Create a portrait-format atmospheric museum entrance in the existing deep navy, warm ivory and restrained gold style. Preserve the original architectural mood, coherent reflections and lighting. Frame a clear central museum focal point with generous quiet space for live UI. No labels, interface, fabricated museum signage, readable text or authoritative map. Decorative concept artwork. Compose for a short mobile hero rather than a scrolling wallpaper.”
+2. **Journey phone hero — style reference: original journey scene.** “Create a portrait museum-gallery composition in the supplied visual style, with one strong display-case focal point, realistic coherent materials and calm space for the page title. Preserve the established warm stage light and navy room. No route line, waypoints, labels, UI or invented exhibit attribution. Decorative artwork only.”
+3. **Story phone scene — style reference: original shadow-stage scene.** “Recompose the fictional lantern/shadow-stage atmosphere for a phone hero. Preserve the warm screen lighting and the visual identity of the stage; reduce busy detail behind the planned live title/controls. No prose, captions, buttons or claim that this scene documents a particular tradition. Inspect silhouettes and anatomy before acceptance.”
+4. **Lens introduction — style reference: original Lens scene.** “Create a carefully framed decorative museum object-study scene with warm side light, a calm dark backdrop and a legible object silhouette. No fake recognition output, probability, phone-screen text, UI or claim of real catalog identity. Leave actual capture and feedback controls to the application.”
+5. **Interests atmosphere — style reference: original palette.** “Create a restrained cultural-discovery constellation with subtle warm points of light against deep navy and broad quiet regions. Suggest curiosity and connections without genes, ancestry, ethnic classification, score scales, labels, flags or factual museum objects. The interactive chart will be drawn in code.”
+6. **Optional companion variants — edit target: original transparent character.** “Preserve this fictional character's exact identity, face proportions, costume, hair ornaments, palette and transparent background. Change only the requested expression/pose needed by the UI. Do not add text or an expert title. Inspect hands, hair edges and alpha; save a new sibling asset.” The current portrait does not need to be replaced to fix the UI.
+
+If a specific approved exhibit needs a cover, first decide whether a reviewed real image is available. A decorative generated cover should describe an atmosphere rather than fabricate the appearance, provenance or details of that exhibit.
+
+### Image acceptance checklist
+
+- Subject, hands/faces, shadows, perspective and materials pass inspection at native size; no accidental pseudo-text, malformed props, repetitive detail or alpha halos.
+- Desktop and phone framing both preserve the intended focal point after **actual application cropping**. Do not approve the uncropped image alone.
+- Source resolution covers the intended rendered size and device pixel ratio; verify actual tool output dimensions. Enlarging an image is not proof of new detail.
+- UI text, icons, charts, labels, factual map borders and controls remain code/native data, never baked into generated artwork.
+- Images do not obscure titles, citations, control states or focus indicators. Measure text contrast over representative bright and dark parts of the actual backdrop.
+- Optimize delivery after comparing visible quality at the real display size; retain masters, hashes, prompts, input roles and image provenance. Set payload targets as targets and verify them on a controlled connection.
+- Generated scenery remains explicitly decorative. Cultural evidence, rights decisions, recognition references and official geography cannot be supplied by image generation.
+
+## Recommended completion order
+
+1. **Shared foundation:** B01–B05, B07–B11 and M01/M02/M08/M09/M10. Fix framing, navigation, dialogs and preference persistence once for every screen.
+2. **Real discovery flow:** A01/A03, B06, C01–C05 and M03–M05/M07. Make the approved Liaoning exhibit easy to find and its evidence easy to inspect.
+3. **Phase 03 handoff:** C06/C12 and M06. Agree the complete Guide conversation/context/citation/loading/error contract with the friend before backend work. Do not present raw generated text as validated facts.
+4. **Remaining page designs:** Journey, Story, Lens, interests and Status changes above, with truthful fixtures and approved states. Their actual services stay in Phases 04–07.
+5. **Art production and polish:** generate only the necessary compositions/covers, validate the image checklist, then consider N01–N10.
+
+The desired experience is: **Enter → discover a real exhibit → understand it → ask with context → inspect the evidence → choose another meaningful activity.** Atmosphere should support that journey throughout.
+
+## Evidence and references
+
+- [Complete 54-state measurements / axe output](evidence/ui-audit/scan.json), [scan log](evidence/ui-audit-scan-log.txt), [interaction findings](evidence/ui-audit/interactions.json), [navigation/error findings](evidence/ui-audit/navigation-and-errors.json), [extra phone/audio/reflow/modal checks](evidence/ui-audit/extra.json), [CSS zoom checks](evidence/ui-audit/css-zoom.json), [live-mode check](evidence/ui-audit/live-mode.json), [image sizing](evidence/ui-audit/image-sizing.json), [original-asset verification](evidence/ui-audit/assets-check.txt).
+- Overview sheets: [desktop EN](evidence/ui-audit/desktop-en-contact.png), [phone EN](evidence/ui-audit/phone-en-contact.png), [tablet EN](evidence/ui-audit/tablet-en-contact.png), [desktop ZH](evidence/ui-audit/desktop-zh-CN-contact.png), [phone ZH](evidence/ui-audit/phone-zh-CN-contact.png), [tablet ZH](evidence/ui-audit/tablet-zh-CN-contact.png). Full captures are under `evidence/ui-audit/screens/`; supplemental captures are under `states/`.
+- [Original-art overview](evidence/ui-audit/original-art-contact.png), [current map provenance](../docs/liaoning-map.md), [project QA](../QA_AND_DEMO.md), [Phase 03 requirements](../phases/03_GROUNDED_GUIDE.md), [API interaction contracts](../specs/DATA_AND_API_CONTRACTS.md).
+- [W3C contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) informed the manual readability gate. [W3C reflow guidance](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) informed the narrow-layout checks. Native browser zoom and screen-reader behavior remain untested.
+- [W3C target-size guidance](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) distinguishes its 24px minimum with exceptions from this project's stronger 44px interaction target. [W3C modal-dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) informed dialog focus and background-isolation recommendations.
+- [web.dev responsive-image guidance](https://web.dev/learn/design/responsive-images) supports matching assets to actual rendering and art direction. [Deque axe documentation](https://www.deque.com/axe/core-documentation/) supports the automated scan workflow and its limitations.
+- Inspiration inspected: [The Met Collection](https://www.metmuseum.org/art/collection) puts collection search and browsable art near the beginning; [Google Arts & Culture](https://artsandculture.google.com/) offers task/topic-led discovery and visual exhibits. The recommendation to bring reviewed content forward is this audit's design judgment, not evidence that either site's design guarantees better usability.
+
+No physical-device, Safari, screen-reader or participant usability study was run. No live AI/provider calls, content approvals, new artifact licenses, commits, pushes or deployments were performed. Those limits should travel with the handoff.
