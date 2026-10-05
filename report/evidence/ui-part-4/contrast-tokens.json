@@ -1,0 +1,45 @@
+{
+  "scope": "Declared opaque surfaces and control gradient minimum; imagery reviewed visually in EN/ZH, not a pixel-complete contrast certification.",
+  "pairs": [
+    {
+      "label": "primary reading text",
+      "foreground": "#fff4df",
+      "background": "#0b1722",
+      "ratio": 16.6,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "label": "secondary reading text",
+      "foreground": "#cfd9dd",
+      "background": "#0b1722",
+      "ratio": 12.61,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "label": "accent text",
+      "foreground": "#f6d697",
+      "background": "#0b1722",
+      "ratio": 12.92,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "label": "gold button darkest gradient",
+      "foreground": "#171713",
+      "background": "#b98d47",
+      "ratio": 5.96,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "label": "focus outline on panel",
+      "foreground": "#f6d697",
+      "background": "#0b1722",
+      "ratio": 12.92,
+      "threshold": 3,
+      "pass": true
+    }
+  ]
+}

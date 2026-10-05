@@ -597,3 +597,41 @@ button:disabled { cursor: default; }
 .narration-transcript { margin-block: 16px; }
 .narration-transcript summary { min-height: 44px; padding-block: 12px; cursor: pointer; }
 .narration-transcript p { line-height: 1.7; }
+
+/* Part 4: shared recovery, reading and temporary visit controls. */
+.quick-navigation { display: none; }
+.active-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 18px; border: 1px solid #c1c9ca55; border-radius: 18px; margin-block: 18px; background: #0b1722; }
+.active-filters > span { overflow-wrap: anywhere; }
+.active-filters .fine-print { flex-basis: 100%; margin: 0; }
+.exhibit-reading { padding: 20px; border: 1px solid #c1c9ca55; border-radius: 18px; background: #0b1722; line-height: 1.8; }
+.exhibit-reading p { font-size: 17px; }
+.exhibit-reading nav { display: flex; flex-wrap: wrap; gap: 10px; }
+.exhibit-evidence { border-top: 1px solid #c1c9ca55; margin-top: 24px; padding-top: 24px; }
+.reviewed-discovery { margin-block: 24px; border-block: 1px solid #c1c9ca55; padding-block: 20px; }
+.reviewed-discovery ul { list-style: none; padding: 0; }
+.reviewed-discovery li { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 12px; }
+.chat-progress { padding: 16px; border: 1px dashed #c1c9ca88; color: var(--text-secondary); font-style: italic; }
+.lens-capture { margin-block: 20px; padding: 20px; background: #0b1722; border-radius: 14px; }
+.lens-capture li, .lens-capture p { line-height: 1.7; }
+.missing-room { max-width: 760px; margin: 10vh auto; padding: 32px; }
+.missing-room p { line-height: 1.8; margin-block: 24px; }
+.missing-room nav { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 700px) {
+  .museum-scene { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  .quick-navigation { position: fixed; inset: auto 12px max(8px, env(safe-area-inset-bottom)); z-index: 20; display: flex; gap: 12px; padding: 8px; background: #0b1722; border: 1px solid #c1c9ca88; border-radius: 18px; }
+  .quick-navigation a { flex: 1; min-height: 44px; padding: 12px; text-align: center; font-size: 14px; }
+  .guide-composer { position: sticky; bottom: calc(var(--guide-keyboard-inset, 0px) + 80px + env(safe-area-inset-bottom)); z-index: 2; padding: 10px; background: #0b1722; border: 1px solid #c1c9ca88; border-radius: 16px; scroll-margin-bottom: 100px; }
+  .guide-composer:focus-within { bottom: calc(var(--guide-keyboard-inset, 0px) + max(8px, env(safe-area-inset-bottom))); }
+
+  body:has(.guide-composer:focus-within) .quick-navigation { visibility: hidden; }
+  .missing-room { margin: 24px 12px; }
+}
+
+.journey-stops .text-button { min-height: 44px; }
+.museum-footer a { display: inline-flex; min-height: 44px; align-items: center; }
+
+@media (max-width: 700px) { .guide-composer textarea { font-size: 16px; } }
+
+.reviewed-discovery > .text-button { display: inline-flex; align-items: center; min-height: 44px; }
+.journey-stops .stop-actions .text-button { min-width: 44px; padding: 4px 8px; text-align: center; }
+.museum-footer a { min-width: 44px; justify-content: center; }

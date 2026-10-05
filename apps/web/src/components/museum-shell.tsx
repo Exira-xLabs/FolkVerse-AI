@@ -52,7 +52,7 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
       {page === "home" ? <><FeaturedExhibit /><div className="discovery-cards">
         {cards.map((key, index) => <article className={`glass-panel discovery-card card-${key}`} key={key}>
           <h2>{t.homeCards[index]}</h2>
-          <p className="card-availability">{locale === "en" ? (index === 0 ? "Published collection" : key === "stories" ? "Original fiction · preview" : "Experience preview") : (index === 0 ? "已发布馆藏" : key === "stories" ? "原创虚构故事 · 预览" : "体验预览")}</p>
+          <p className="card-availability">{locale === "en" ? (index === 0 ? "Published collection" : mode === "live" ? "Not available yet" : key === "stories" ? "Original fiction · preview" : "Experience preview") : (index === 0 ? "已发布馆藏" : mode === "live" ? "尚未开放" : key === "stories" ? "原创虚构故事 · 预览" : "体验预览")}</p>
           <div className="card-art">
             <Image src={museumArt(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset)}
               alt="" fill quality={90} sizes="(max-width: 700px) 100vw, (max-width: 1050px) 50vw, 25vw" className={key === "guide" ? "portrait-art" : ""}
@@ -64,6 +64,7 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
         </article>)}
       </div></> : page === "status" ? <ServiceStatus /> : <MuseumExperiences page={page} mode={mode} initialExhibitId={initialExhibitId} />}
     </main>
+    <nav className="quick-navigation" aria-label={locale === "en" ? "Quick navigation" : "快捷导航"}><Link href="/explore">{locale === "en" ? "Explore Liaoning" : "探索辽宁"}</Link><Link href="/sources">{locale === "en" ? "Sources" : "来源"}</Link></nav>
     <footer className="museum-footer">
       <span className="preview-label"><span aria-hidden="true" className="preview-dot" />{demoLabel}</span>
       <div><button className="graphics-toggle" aria-pressed={simple} onClick={() => setSimple(!simple)}>{locale === "en" ? (simple ? "Full atmosphere" : "Simplify graphics") : (simple ? "完整氛围" : "简化图形")}</button><Link href="/sources">{t.nav.sources}</Link><Link href="/status">{t.nav.status}</Link></div>
