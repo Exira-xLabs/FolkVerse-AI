@@ -5,6 +5,8 @@ import { createPortal } from "react-dom";
 import { lockDocumentScroll, trapDialogTab } from "@/lib/dialog";
 import geography from "@/lib/maps/liaoning-geography.json";
 import cityBoundaries from "@/lib/maps/liaoning-city-boundaries.json";
+import { useGraphics } from "./graphics-provider";
+import { ReviewedDiscovery } from "./reviewed-discovery";
 import { useLocale } from "./locale-provider";
 
 export const atlasCities = geography.cities;
@@ -48,7 +50,7 @@ function fittedCamera(id: string): Camera {
 }
 
 export function LiaoningAtlas({ selectedId, onSelect, availableIds, availability }: { selectedId: string; onSelect: (id: string) => void; availableIds: string[]; availability: "loading" | "ready" | "error" }) {
-  const { locale } = useLocale(); const zh = locale !== "en";
+  const { lowData } = useGraphics(); const { locale } = useLocale(); const zh = locale !== "en";
   const [cameraState, setCameraState] = useState(() => ({ selection: selectedId, camera: fittedCamera(selectedId) }));
   if (cameraState.selection !== selectedId) {
     setCameraState({ selection: selectedId, camera: fittedCamera(selectedId) });
@@ -62,6 +64,13 @@ export function LiaoningAtlas({ selectedId, onSelect, availableIds, availability
   }, [selectedId]);
   const [stageSize, setStageSize] = useState({ width: WIDTH, height: HEIGHT });
   const [full, setFull] = useState(false);
+  const [previewCity, setPreviewCity] = useState<string | null>(null);
+  const [detail, setDetail] = useState(false);
+  const [contours, setContours] = useState<{ x: number; y: number; size: number; src: string }[] | null>(null);
+  const [loadedTiles, setLoadedTiles] = useState<Record<string, boolean>>({});
+  const [contourError, setContourError] = useState(false); const [contourRetry, setContourRetry] = useState(0);
+  const topographic = detail || lowData;
+  useEffect(() => { if (!topographic) return; let cancelled = false; void import("@/lib/maps/liaoning-contours.json").then(data => { if (!cancelled) { setContours(data.tiles); setContourError(false); } }).catch(() => { if (!cancelled) setContourError(true); }); return () => { cancelled = true; }; }, [topographic, contourRetry]);
   const [terrainReady, setTerrainReady] = useState(false);
   const [cityQuery, setCityQuery] = useState("");
   const root = useRef<HTMLElement>(null); const svg = useRef<SVGSVGElement>(null);
@@ -76,6 +85,8 @@ export function LiaoningAtlas({ selectedId, onSelect, availableIds, availability
   const selectedDistrict = districts.find(city => city.id === selectedId);
   const zoom = useCallback((factor: number) => setCamera(c => bound({ ...c, zoom: c.zoom * factor })), [setCamera]);
   const view = { x: camera.x - WIDTH / camera.zoom / 2, y: camera.y - HEIGHT / camera.zoom / 2, width: WIDTH / camera.zoom, height: HEIGHT / camera.zoom };
+  const contourWidth = (east-west)*cosine*unit, contourHeight = (north-south)*unit;
+  const visibleTiles = contours?.filter(tile => { const x = left + tile.x/1000*contourWidth, y = 75 + tile.y/1000*contourHeight; return x < view.x+view.width && x+tile.size/1000*contourWidth > view.x && y < view.y+view.height && y+tile.size/1000*contourHeight > view.y; }) ?? [];
   const labelScale = 1 / Math.max(.001, Math.min(stageSize.width / WIDTH, stageSize.height / HEIGHT) * camera.zoom);
   const choose = (id: string) => {
     if (suppressClick.current) return;
@@ -93,11 +104,12 @@ export function LiaoningAtlas({ selectedId, onSelect, availableIds, availability
     return () => observer.disconnect();
   }, [full]);
   useEffect(() => {
+    if (lowData) return;
     const artwork = new Image(); let cancelled = false;
     artwork.src = terrainPath;
     void artwork.decode().then(() => { if (!cancelled) setTerrainReady(true); }).catch(() => {});
     return () => { cancelled = true; };
-  }, []);
+  }, [lowData]);
   useEffect(() => {
     const node = svg.current;
     if (!node) return;
@@ -125,8 +137,10 @@ export function LiaoningAtlas({ selectedId, onSelect, availableIds, availability
       });
     };
   }, [full]);
-  const atlas = <section ref={root} className={`liaoning-atlas ${full ? "atlas-expanded" : ""}`} aria-label={zh ? "辽宁交互地图" : "Interactive map of Liaoning"} data-terrain-ready={terrainReady}>
+  const atlas = <section ref={root} className={`liaoning-atlas ${full ? "atlas-expanded" : ""}`} aria-label={zh ? "辽宁交互地图" : "Interactive map of Liaoning"} data-terrain-ready={topographic ? !!contours && visibleTiles.every(tile => loadedTiles[tile.src]) : terrainReady}>
     <div className="atlas-topbar"><div><span className="eyebrow">{zh ? "探索图鉴 / 辽宁" : "EXPLORER’S ATLAS / LIAONING"}</span><h2>{zh ? "十四座城，无数种相遇。" : "Fourteen cities. A world to discover."}</h2></div><span className="atlas-edition">{zh ? "辽宁省 · 01" : "LIAONING · 01"}</span></div>
+    <div className="atlas-layer-controls" role="group" aria-label={zh ? "地图图层" : "Map layers"}><button className="outline-button" disabled={lowData} aria-pressed={!topographic} onClick={() => setDetail(false)}>{zh ? "装饰地形" : "Decorative terrain"}</button><button className="outline-button" aria-pressed={topographic} onClick={() => setDetail(true)}>{zh ? "地形细节" : "Topographic detail"}</button></div>
+    {topographic && <div className="topographic-legend"><p>{zh ? "来源高程等高线：50、200、500、1000米。矢量线缩放保持清晰；近似参考，非测量或导航资料。" : "Sourced elevation contours: 50, 200, 500, 1000 metres. Vector tiles remain sharp when zoomed; approximate reference, not survey or navigation data."}</p><ul className="contour-key">{[50, 200, 500, 1000].map((metres, i) => <li key={metres}><span aria-hidden="true" style={{ backgroundColor: ["#d5dcbb", "#ead49b", "#f6b877", "#fff4df"][i] }} />{metres} m</li>)}</ul>{contourError ? <button className="outline-button" onClick={() => { setLoadedTiles({}); setContourError(false); setContourRetry(n => n + 1); }}>{zh ? "重试地形细节" : "Retry topographic detail"}</button> : !contours && <p role="status">{zh ? "正在加载等高线…" : "Loading contours…"}</p>}</div>}
     <div className="atlas-stage">
       <svg ref={svg} className="atlas-world" viewBox={`${view.x} ${view.y} ${view.width} ${view.height}`} tabIndex={0} role="group" aria-label={zh ? "拖动地图，缩放并选择城市" : "Drag map, zoom and choose a city"} data-zoom={camera.zoom.toFixed(2)}
         onKeyDown={event => {
@@ -168,17 +182,17 @@ export function LiaoningAtlas({ selectedId, onSelect, availableIds, availability
         <g className="atlas-landscape" filter={`url(#${key}-shadow)`}>
           <path d={outline} transform="translate(0 15)" fill={`url(#${key}-edge)`} stroke="#6f743f" strokeWidth="3" fillRule="evenodd"/>
           <path d={outline} fill="#5b7047"/>
-          <g clipPath={`url(#${key}-land)`}><image onLoad={() => setTerrainReady(true)} href={terrainPath} x={left} y="75" width={(east-west)*cosine*unit} height={(north-south)*unit} preserveAspectRatio="none"/><rect x="0" y="0" width={WIDTH} height={HEIGHT} fill={`url(#${key}-light)`}/></g>
+          <g clipPath={`url(#${key}-land)`}>{!topographic && <image onLoad={() => setTerrainReady(true)} href={terrainPath} x={left} y="75" width={(east-west)*cosine*unit} height={(north-south)*unit} preserveAspectRatio="none"/>}{topographic && visibleTiles.map(tile => <image key={`${tile.src}-${contourRetry}`} data-contour-tile="true" href={tile.src} x={left+tile.x/1000*contourWidth} y={75+tile.y/1000*contourHeight} width={tile.size/1000*contourWidth} height={tile.size/1000*contourHeight} preserveAspectRatio="none" onLoad={() => setLoadedTiles(previous => ({ ...previous, [tile.src]: true }))} onError={() => setContourError(true)} />)}<rect x="0" y="0" width={WIDTH} height={HEIGHT} fill={`url(#${key}-light)`}/></g>
           <path className="atlas-coast" d={outline} fill="none" stroke="#edd898" strokeWidth="1.8" vectorEffect="non-scaling-stroke" strokeOpacity=".8"/>
         </g>
         <g clipPath={`url(#${key}-land)`} className="atlas-districts">
-          {districts.map(city => <path key={city.id} className="atlas-district atlas-map-target" d={city.path} data-city-id={city.id} fillRule="evenodd" onClick={() => choose(city.id)}><title>{city.names[locale]}</title></path>)}
+          {districts.map(city => <path key={city.id} className="atlas-district atlas-map-target" d={city.path} data-city-id={city.id} fillRule="evenodd" onMouseEnter={() => setPreviewCity(city.id)} onClick={() => choose(city.id)}><title>{city.names[locale]}</title></path>)}
           {selectedDistrict && <path className="atlas-district-selected" data-city-id={selectedDistrict.id} d={selectedDistrict.path} fillRule="evenodd" aria-hidden="true"/>}
         </g>
         <text className={`atlas-province-name ${selected ? "is-muted" : ""}`} x="350" y="170">{zh ? "辽 宁" : "L I A O N I N G"}</text>
         {positions.map(city => {
           const id = city.id.replace("liaoning-", ""); const [dx,dy,width] = offsets[id]; const picked = city.id === selectedId; const available = availability === "ready" && availableIds.includes(city.id); const label = city.names[locale];
-          return <g key={city.id} className={`atlas-city atlas-map-target ${picked ? "is-selected" : ""} ${["dalian", "shenyang"].includes(id) ? "is-major" : ""} ${available ? "has-exhibits" : ""}`} data-city-id={city.id} transform={`translate(${city.x} ${city.y})`} tabIndex={0} role="button" aria-label={zh ? `探索${label}` : `Explore ${label}`} aria-pressed={picked}
+          return <g key={city.id} className={`atlas-city atlas-map-target ${picked ? "is-selected" : ""} ${["dalian", "shenyang"].includes(id) ? "is-major" : ""} ${available ? "has-exhibits" : ""}`} data-city-id={city.id} onMouseEnter={() => setPreviewCity(city.id)} onFocus={() => setPreviewCity(city.id)} transform={`translate(${city.x} ${city.y})`} tabIndex={0} role="button" aria-label={zh ? `探索${label}` : `Explore ${label}`} aria-pressed={picked}
             onClick={() => choose(city.id)} onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); suppressClick.current = false; choose(city.id); } }}>
             <title>{label}</title><g transform={`scale(${1/Math.sqrt(camera.zoom)})`}><circle className="atlas-hit" r="32" fill="transparent"/>
             {picked && <><circle r="30" fill="#ffdf93" opacity=".5" filter={`url(#${key}-glow)`}/><circle className="atlas-selection-ring" r="26" fill="none" stroke="#ffe0a1" strokeWidth="2"/></>}
@@ -194,13 +208,15 @@ export function LiaoningAtlas({ selectedId, onSelect, availableIds, availability
         })}
       </svg>
       <div className="atlas-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 40 54"><path d="M20 4 8 42 20 32Z" fill="#eddaa6"/><path d="M20 4 32 42 20 32Z" fill="#6b8c86"/></svg></div>
-      <div className="atlas-camera-controls" aria-label={zh ? "地图控制" : "Map controls"}><button aria-label={zh ? "放大地图" : "Zoom in map"} onClick={() => zoom(1.3)} disabled={camera.zoom >= 4.5}>+</button><button aria-label={zh ? "缩小地图" : "Zoom out map"} onClick={() => zoom(1/1.3)} disabled={camera.zoom <= 1}>−</button><button aria-label={zh ? "显示全省" : "Fit Liaoning province"} onClick={() => setCamera(home)}>⌖</button><button className="atlas-expand-button" autoFocus={full} aria-label={zh ? (full ? "退出全屏地图" : "展开地图") : (full ? "Exit expanded map" : "Expand map")} aria-pressed={full} onClick={event => { if (!full) expandTrigger.current = event.currentTarget; setFull(!full); }}>⛶</button></div>
+      <div className="atlas-camera-controls" role="group" aria-label={zh ? "地图控制" : "Map controls"}><button aria-label={zh ? "放大地图" : "Zoom in map"} onClick={() => zoom(1.3)} disabled={camera.zoom >= 4.5}>+</button><button aria-label={zh ? "缩小地图" : "Zoom out map"} onClick={() => zoom(1/1.3)} disabled={camera.zoom <= 1}>−</button><button aria-label={zh ? "显示全省" : "Fit Liaoning province"} onClick={() => setCamera(home)}>⌖</button><button className="atlas-expand-button" autoFocus={full} aria-label={zh ? (full ? "退出全屏地图" : "展开地图") : (full ? "Exit expanded map" : "Expand map")} aria-pressed={full} onClick={event => { if (!full) expandTrigger.current = event.currentTarget; setFull(!full); }}>⛶</button></div>
       <button className="atlas-minimap" aria-label={zh ? "通过小地图重新定位" : "Recenter using minimap"} onClick={event => { const rect=event.currentTarget.getBoundingClientRect(); const x=(event.clientX-rect.left)/rect.width*WIDTH, y=(event.clientY-rect.top)/rect.height*HEIGHT; setCamera(c => bound({ ...c, x, y })); }} onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setCamera(home); } }}><svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} aria-hidden="true"><path d={outline} fill="#76896a" stroke="#d4c48d" strokeWidth="10"/><rect x={view.x} y={view.y} width={view.width} height={view.height} fill="#e8d19833" stroke="#ffde95" strokeWidth="12"/></svg></button>
       <div className="atlas-map-hint">{zh ? "拖动探索 · 滚动或双指缩放" : "Drag to wander · scroll or pinch to zoom"}</div>
       {selected && <div className="atlas-location" aria-live="polite"><span className="eyebrow">{zh ? "您正在探索" : "YOU ARE EXPLORING"}</span><strong>{selected.names[locale]}</strong><span>{selected.coordinates[1].toFixed(2)}° N · {selected.coordinates[0].toFixed(2)}° E</span><p className="atlas-location-status">{availability === "loading" ? (zh ? "正在检查馆藏…" : "Checking collection…") : availability === "error" ? (zh ? "馆藏服务暂时不可用，请刷新重试。" : "Collection service unavailable. Refresh to try again.") : availableIds.includes(selected.id) ? (zh ? "已有审核展览，可循着来源探索。" : "Reviewed exhibits ready to explore.") : (zh ? "目前没有已发布展览。" : "No published exhibits currently available.")}</p><button onClick={() => { setFull(false); requestAnimationFrame(() => document.getElementById("liaoning-city-collection")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" })); }}>{zh ? "查看城市馆藏" : "See city collection"} ↓</button><button onClick={() => { onSelect(""); setCameraState({ selection: "", camera: home }); }}>{zh ? "返回辽宁全省" : "Back to all Liaoning"} ↗</button></div>}
     </div>
+
     <div className="atlas-bottom"><span><i className="atlas-legend-dot"/>{availability === "loading" ? (zh ? "正在检查馆藏…" : "Checking collection…") : availability === "error" ? (zh ? "馆藏服务暂时不可用" : "Collection service unavailable") : availableIds.some(id => atlasCities.some(city => city.id === id)) ? (zh ? "已有审核展览" : "Reviewed exhibits available") : (zh ? "目前没有已发布展览" : "No published exhibits currently available")}</span><span>{zh ? "真实省市边界 · 地形依高程资料生成，为近似表现。" : "Sourced city borders · AI terrain guided by elevation, approximate."}</span><span className="atlas-attribution"><a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> · <a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank" rel="noopener noreferrer">Mapzen / USGS / NOAA</a></span></div>
-    <div className="atlas-city-directory"><div className="atlas-directory-heading"><span className="eyebrow">{zh ? "选择一座城市 / 14" : "CHOOSE A CITY / 14"}</span><label><span className="sr-only">{zh ? "搜索辽宁城市" : "Find a Liaoning city"}</span><input value={cityQuery} onChange={e => setCityQuery(e.target.value)} placeholder={zh ? "寻找城市…" : "Find a city…"}/></label></div><div className="atlas-city-grid">{positions.filter(city => `${city.names.en} ${city.names['zh-CN']}`.toLowerCase().includes(cityQuery.toLowerCase())).map(city => <button className={selectedId === city.id ? "selected" : ""} key={city.id} onClick={() => { suppressClick.current=false; choose(city.id); }} aria-label={zh ? `选择${city.names[locale]}` : `Select ${city.names[locale]}`} aria-pressed={selectedId === city.id}><span>{city.names[locale]}</span>{availability === "ready" && availableIds.includes(city.id) ? <i className="atlas-legend-dot"/> : <span className="atlas-city-arrow" aria-hidden="true">↗</span>}</button>)}</div>{!positions.some(city => `${city.names.en} ${city.names['zh-CN']}`.toLowerCase().includes(cityQuery.toLowerCase())) && <p className="fine-print" role="status">{zh ? "没有匹配的城市。" : "No cities match your search."}</p>}</div>
+    <div className="atlas-city-directory"><div className="atlas-directory-heading"><span className="eyebrow">{zh ? "选择一座城市 / 14" : "CHOOSE A CITY / 14"}</span><label><span className="sr-only">{zh ? "搜索辽宁城市" : "Find a Liaoning city"}</span><input value={cityQuery} onChange={e => setCityQuery(e.target.value)} placeholder={zh ? "寻找城市…" : "Find a city…"}/></label></div><div className="atlas-city-grid">{positions.filter(city => `${city.names.en} ${city.names['zh-CN']}`.toLowerCase().includes(cityQuery.toLowerCase())).map(city => <button className={selectedId === city.id ? "selected" : ""} key={city.id} onMouseEnter={() => setPreviewCity(city.id)} onFocus={() => setPreviewCity(city.id)} onClick={() => { suppressClick.current=false; choose(city.id); }} aria-label={zh ? `选择${city.names[locale]}` : `Select ${city.names[locale]}`} aria-pressed={selectedId === city.id}><span>{city.names[locale]}</span>{availability === "ready" && availableIds.includes(city.id) ? <i className="atlas-legend-dot"/> : <span className="atlas-city-arrow" aria-hidden="true">↗</span>}</button>)}</div>{!positions.some(city => `${city.names.en} ${city.names['zh-CN']}`.toLowerCase().includes(cityQuery.toLowerCase())) && <p className="fine-print" role="status">{zh ? "没有匹配的城市。" : "No cities match your search."}</p>}</div>
+    {previewCity && <section className="city-preview" aria-label={zh ? "城市预览" : "City preview"}><h3>{atlasCities.find(city => city.id === previewCity)?.names[locale]}</h3><p>{zh ? "预览不改变所选城市。选择城市后即可筛选馆藏。" : "Preview keeps your current selection. Select the city to filter the collection."}</p><ReviewedDiscovery region={previewCity} /></section>}
   </section>;
   return full ? createPortal(<dialog ref={modal} className="atlas-dialog" aria-label={zh ? "辽宁全屏交互地图" : "Expanded interactive map of Liaoning"} aria-modal="true"
     onCancel={event => { event.preventDefault(); setFull(false); }} onKeyDown={trapDialogTab}>{atlas}</dialog>, document.body) : atlas;

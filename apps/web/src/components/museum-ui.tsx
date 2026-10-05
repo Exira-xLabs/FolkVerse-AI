@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useGraphics } from "./graphics-provider";
+import { ReadingSurface } from "./reading-tools";
 import { useEffect, useId, useRef, useState, type ReactNode, type ButtonHTMLAttributes } from "react";
 import { useLocale } from "./locale-provider";
 import { navigation, routes, type PageKey } from "@/lib/routes";
@@ -35,11 +37,12 @@ export function GlassTabs({ page }: { page: PageKey }) {
       className={`nav-tab ${page === key ? "selected" : ""}`} aria-current={page === key ? "page" : undefined}>{t.nav[key]}</Link>)}
   </nav>;
 }
-export function GuidePortrait() {
+export function GuidePortrait({ status, activity = "ready" }: { status?: string; activity?: "ready" | "working" | "unavailable" } = {}) {
+  const { lowData } = useGraphics();
   const { locale } = useLocale();
   return <div className="guide-identity portrait-card"><div className="portrait-frame">
-    <Image src={museumArt("09_ai_guide_character.png")} alt="" fill quality={90} sizes="72px" className="portrait-art" />
-    </div><p>{locale === "en" ? "Your museum companion" : "您的博物馆伙伴"}<small>{locale === "en" ? "A fictional character" : "虚构角色"}</small></p></div>;
+    {!lowData && <Image src={museumArt("09_ai_guide_character.png")} alt="" fill quality={90} sizes="72px" className="portrait-art" />}
+    </div><p>{locale === "en" ? "Your museum companion" : "您的博物馆伙伴"}<small>{locale === "en" ? "A fictional character" : "虚构角色"}</small>{status && <span className="companion-reaction" data-activity={activity} role="status"><svg className="companion-context" viewBox="0 0 32 24" aria-hidden="true"><path d="M2 3Q9 0 16 4Q23 0 30 3V21Q23 18 16 22Q9 18 2 21Z M16 4V22" fill="none" stroke="currentColor" strokeWidth="2"/>{activity === "working" ? <><circle cx="8" cy="12" r="1.5"/><circle cx="16" cy="12" r="1.5"/><circle cx="24" cy="12" r="1.5"/></> : <path d={activity === "unavailable" ? "M11 9L21 17M21 9L11 17" : "M9 12L14 17L23 8"} fill="none" stroke="currentColor" strokeWidth="2"/>}</svg>{status}</span>}</p></div>;
 }
 
 export type DemoExhibit = { id: string; title: [string, string]; region: [string, string]; theme: string; minutes: number; asset: string };
@@ -49,9 +52,9 @@ export const demoExhibits: DemoExhibit[] = [
   { id: "song", title: ["An evening of melodies", "旋律中的夜晚"], region: ["Guangdong", "广东"], theme: "Music", minutes: 7, asset: "07_folklore_dna.png" },
 ];
 export function ExhibitCard({ exhibit, onOpen }: { exhibit: DemoExhibit; onOpen: () => void }) {
-  const { locale } = useLocale(); const n = locale === "en" ? 0 : 1;
+  const { lowData } = useGraphics(); const { locale } = useLocale(); const n = locale === "en" ? 0 : 1;
   return <button className="exhibit-card" onClick={onOpen}><span className="exhibit-thumb">
-    <Image src={museumArt(exhibit.asset)} alt="" fill quality={90} sizes="64px" style={{ objectPosition: museumArtFocus(exhibit.asset, "thumbnail") }} />
+    {!lowData && <Image src={museumArt(exhibit.asset)} alt="" fill quality={90} sizes="64px" style={{ objectPosition: museumArtFocus(exhibit.asset, "thumbnail") }} />}
     </span><span><small>{exhibit.region[n]} · {exhibit.minutes} {n === 0 ? "min" : "分钟"}</small><strong>{exhibit.title[n]}</strong><span className="card-caption">{n === 0 ? "Illustrative exhibit · view notes ↗︎" : "示例展览 · 查看说明 ↗︎"}</span></span></button>;
 }
 
@@ -75,7 +78,7 @@ export function SourceDrawer({ open, onClose, title, children }: { open: boolean
     }} onKeyDown={trapDialogTab}>
     <div className="drawer-top"><span className="eyebrow">{zh ? "来源与使用说明" : "SOURCES & CONTEXT"}</span><button className="icon-button" autoFocus onClick={onClose} aria-label={zh ? "关闭来源" : "Close sources"}>×</button></div>
     <h2 id={titleId}>{title || (zh ? "了解您所看到的内容" : "Know what you are seeing")}</h2>
-    {children ?? <><span className="demo-tag">{zh ? "演示内容 · 尚未审核" : "Demo material · not reviewed"}</span>
+    {children ? <ReadingSurface>{children}</ReadingSurface> : <><span className="demo-tag">{zh ? "演示内容 · 尚未审核" : "Demo material · not reviewed"}</span>
     <p>{zh ? "这些展览、故事和回答是用于测试界面的编辑示例，不是已发布的文化资料。尚无审核人或审核日期。" : "These exhibits, stories and responses are editorial UI fixtures, not published cultural evidence. No reviewer or review date is claimed."}</p>
     <dl><div><dt>{zh ? "图像用途" : "Artwork role"}</dt><dd>{zh ? "原始生成场景，仅作装饰" : "Supplied generated scenery; decorative only"}</dd></div><div><dt>{zh ? "识别参考" : "Recognition references"}</dt><dd>{zh ? "未导入" : "None imported"}</dd></div><div><dt>{zh ? "内容权利" : "Content rights"}</dt><dd>{zh ? "示例文本为项目原创；外部资料未导入" : "Original project fixture text; no external passages imported"}</dd></div></dl>
     <p>{zh ? "真实展览发布前，需要出处、使用权限和人工审核。" : "Real exhibits require source records, rights decisions and human review before publication."}</p>
@@ -114,11 +117,12 @@ export function AudioControls() {
   </div></div>;
 }
 
-export function InterestChart({ weights }: { weights: number[] }) {
+export function InterestChart({ weights, onChange }: { weights: number[]; onChange?: (index: number, value: number) => void }) {
   const { locale } = useLocale(); const names = locale === "en" ? ["Craft", "Legends", "Music", "Food culture"] : ["工艺", "传说", "音乐", "饮食文化"];
   const points = weights.map((v, i) => { const angle = -Math.PI / 2 + i * Math.PI / 2; return `${100 + Math.cos(angle) * v * .7},${100 + Math.sin(angle) * v * .7}`; }).join(" ");
-  return <div className="interest-chart"><svg viewBox="0 0 200 200" aria-hidden="true">
+  return <div className="interest-chart"><svg viewBox="0 0 200 200" role={onChange ? "group" : undefined} aria-label={onChange ? (locale === "en" ? "Editable interest constellation" : "可编辑兴趣星图") : undefined} aria-hidden={onChange ? undefined : true}>
     {[25, 50, 75].map(r => <circle key={r} cx="100" cy="100" r={r} className="chart-ring" />)}
+    {weights.map((v, i) => { const [x, y] = [[65, 45], [155, 70], [135, 155], [45, 140]][i]; const increase = () => onChange?.(i, v >= 100 ? 0 : Math.min(100, v + 25)); return <g key={i} className="constellation-star" transform={`translate(${x},${y})`} role={onChange ? "button" : undefined} tabIndex={onChange ? 0 : undefined} aria-label={onChange ? `${names[i]} ${v} / 100 · ${locale === "en" ? "Change interest" : "修改兴趣"}` : undefined} onClick={increase} onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); increase(); } }}><title>{`${names[i]} ${v}/100`}</title><circle r="25" fill="transparent"/><circle r={5 + v / 15} fill="#f6d697" opacity={.65 + v * .0035}/><path d="M-15 0H15M0-15V15" stroke="#f6d697" opacity={v ? 1 : .65}/><text y="33" textAnchor="middle" fontSize="12" fill="#fff4df">{names[i]}</text></g>; })}
     <path d="M100 20V180M20 100H180" className="chart-ring" /><polygon points={points} className="chart-area" />
     {weights.map((v, i) => { const angle = -Math.PI / 2 + i * Math.PI / 2; return <circle key={i} cx={100 + Math.cos(angle) * v * .7} cy={100 + Math.sin(angle) * v * .7} r="4" fill="var(--accent-gold)" />; })}
     </svg><dl>{names.map((name, i) => <div key={name}><dt>{name}</dt><dd>{weights[i]} / 100<span className="interest-bar" aria-hidden="true"><span style={{ width: `${weights[i]}%` }} /></span></dd></div>)}</dl></div>;

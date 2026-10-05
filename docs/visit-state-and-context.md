@@ -16,3 +16,13 @@ The story offers the actual English recording or text only, with its exact Engli
 
 
 Part 4 extends the same visit lifetime to catalog query, city, theme and collection/map view. Reload/close clears these; map pan/zoom refits the selected city on reentry. Source browsing keeps its own scope/heading and does not inherit a city filter. Guide state tools are explicitly scripted previews; Stop and Retry use run identifiers so an old/cancelled completion cannot overwrite a newer attempt. Progress/error/refusal are separate from validated answer content; actual approved links are related coverage, not fabricated answer citations. Lens comparison cancellation also invalidates the prior run, with no media/camera permission request. Story player cleanup pauses the native recording on mode/branch exit. External environment checks remain listed in the Part 4 inventory.
+
+## Optional reading and visit bookmarks
+
+`lastRead` holds only the exhibit ID explicitly opened from a publication link or card. Home can reopen that ID through the normal uncached, withdrawal-aware detail loader; Reset continuation clears it. It does not imply the record remains published.
+
+Visit bookmarks are off by default and require explicit opt-in. The root provider holds at most 50 IDs in memory; there is no localStorage, sessionStorage, tracking event or new server write. Turning consent off clears all IDs immediately; individual remove and Clear all are available. Reload/close clears consent, bookmarks and continuation. Saved cards revalidate the current language and publication on mount, focus and every 15 seconds; unavailable/withdrawn results do not retain a stale title or active record link. Durable account/session saves remain later contract work.
+
+Reading size/light surface are temporary dialog preferences. The low-data preference uses the existing preference-cookie pattern (`folkverse_data`, full/low, SameSite=Lax, one year). Its purpose is to skip decorative raster image requests; it is not a tracking or profile cookie. The source-text APIs and authoritative boundaries remain available. Optional numerical contour tiles load only when requested or in low-data map mode; SVG sharpness does not imply finer DEM resolution.
+
+The soundscape is synthesized only after an explicit Play action. No sound autoplays; Stop and leaving the Story close its AudioContext. No recording is made, microphone opened or external audio provider called.

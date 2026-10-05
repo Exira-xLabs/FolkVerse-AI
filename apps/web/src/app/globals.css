@@ -635,3 +635,47 @@ button:disabled { cursor: default; }
 .reviewed-discovery > .text-button { display: inline-flex; align-items: center; min-height: 44px; }
 .journey-stops .stop-actions .text-button { min-width: 44px; padding: 4px 8px; text-align: center; }
 .museum-footer a { min-width: 44px; justify-content: center; }
+
+/* Final audit refinements: motion is decorative; visit data stays explicitly temporary. */
+@keyframes museum-arrive { from { opacity: .55; } to { opacity: 1; } }
+@media (prefers-reduced-motion: no-preference) { .museum-main { animation: museum-arrive 180ms ease-out; } }
+.visit-reading { margin: 0 0 24px; padding: 20px 28px; }
+.visit-reading summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.visit-consent { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 0; }
+.visit-consent input { width: 44px; height: 44px; flex: 0 0 44px; }
+.saved-records { list-style: none; padding: 0; display: grid; gap: 16px; }
+.saved-records li { display: flex; flex-wrap: wrap; gap: 12px; }
+.reading-toolbar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 16px 0; border-bottom: 1px solid var(--glass-border); margin-bottom: 20px; }
+.reading-toolbar label { display: grid; gap: 8px; }
+.reading-toolbar select { min-height: 44px; padding: 8px 12px; border: 1px solid var(--glass-border); border-radius: 12px; background: var(--bg-deep); color: var(--text-primary); }
+.reading-progress progress, .chapter-progress progress { display: block; width: 100%; height: 12px; accent-color: var(--accent-gold); }
+.reading-large { font-size: 20px; }.reading-larger { font-size: 24px; }
+.reading-surface p, .reading-surface blockquote { font-size: inherit; }
+.reading-light { --text-primary: #182c38; --text-secondary: #344853; --accent-gold: #725019; --glass-border: #596974; --bg-deep: #fff4df; background: #fff4df; color: #182c38; border-radius: 20px; padding: 18px; }
+.reading-light .outline-button, .reading-light .source-pill, .reading-light .demo-tag { background: #fff4df; color: #182c38; border-color: #596974; }
+.reading-light .exhibit-reading, .reading-light .source-record { background: #fff4df; color: #182c38; }
+.reading-light dt, .reading-light .eyebrow, .reading-light .fine-print { color: #344853; }
+.reading-light :focus-visible { outline-color: #725019; }
+.reading-light code { overflow-wrap: anywhere; }
+.companion-reaction { display: block; margin-top: 8px; color: var(--accent-gold); font-size: 12px; }
+.story-ending-art { margin: 20px 0; }.story-ending-art svg { display: block; width: 100%; max-height: 260px; border-radius: 18px; }
+.story-ending-art figcaption { font-size: 12px; color: var(--text-secondary); margin-top: 10px; }
+.chapter-progress { display: grid; gap: 8px; margin: 18px 0; max-width: 260px; }
+.story-soundscape { margin: 20px 0; }.constellation-star { cursor: pointer; }
+.constellation-star:focus-visible { outline: none; }.constellation-star:focus-visible circle:first-of-type { stroke: #fff4df; stroke-width: 3px; }
+.atlas-layer-controls { display: flex; flex-wrap: wrap; gap: 12px; padding: 18px 24px; }
+.topographic-legend, .city-preview { margin: 12px 24px; padding: 18px; background: #0b1722; border-radius: 18px; border: 1px solid #7a858877; }
+.topographic-legend p, .city-preview p { color: var(--text-secondary); }
+.low-data .scene-picture, .low-data .card-art, .low-data .exhibit-thumb, .low-data .portrait-frame { display: none; }
+.low-data .scene-hero { min-height: 0; }.low-data .hero-copy { max-width: 760px; }.low-data .scene-hero::after { display: none; }
+@media (max-width: 700px) { .visit-reading { padding: 16px; }.reading-light { padding: 12px; }.reading-toolbar { align-items: stretch; }.reading-toolbar > * { max-width: 100%; }.atlas-layer-controls { padding: 14px; }.topographic-legend, .city-preview { margin: 12px; } }
+.contour-key { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; padding: 0; }
+.contour-key li { display: inline-flex; align-items: center; gap: 8px; }.contour-key span { width: 24px; height: 3px; }
+.companion-context { width: 28px; height: 24px; margin-right: 8px; vertical-align: middle; fill: currentColor; }
+@media (prefers-reduced-motion: no-preference) { .companion-reaction[data-activity="working"] .companion-context { animation: museum-arrive 800ms ease-in-out infinite alternate; } }
+.reading-progress progress, .chapter-progress progress { appearance: none; border: 0; border-radius: 8px; overflow: hidden; background: #64727a; color: var(--accent-gold); }
+.reading-progress progress::-webkit-progress-bar, .chapter-progress progress::-webkit-progress-bar { background: #64727a; }
+.reading-progress progress::-webkit-progress-value, .chapter-progress progress::-webkit-progress-value { background: var(--accent-gold); }
+.reading-progress progress::-moz-progress-bar, .chapter-progress progress::-moz-progress-bar { background: var(--accent-gold); }
+.interest-chart svg { min-width: 200px; }
+@media (max-width: 700px) { .interest-chart { flex-direction: column; align-items: stretch; }.interest-chart svg { width: min(100%, 260px); align-self: center; }.interest-chart dl { width: 100%; } }

@@ -1,0 +1,36 @@
+$ playwright test tests/e2e/ui-remaining.spec.ts tests/e2e/ui-part-4.spec.ts
+[WebServer] INFO:     Started server process [1275286]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:1275353) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:1275386) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1275432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1275456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 1 worker
+
+(node:1275520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/ui-part-4.spec.ts:4:5 › phone quick navigation and filters retain place, clear and recover empty results (2.0s)
+  ✓   2 tests/e2e/ui-part-4.spec.ts:26:5 › reading, citations, shareable URL and evidence remain distinct and keyboard reachable (1.1s)
+  ✓   3 tests/e2e/ui-part-4.spec.ts:42:5 › Guide approved prompts, stop/retry/error/insufficient states stay clearly scripted (2.6s)
+  ✓   4 tests/e2e/ui-part-4.spec.ts:60:5 › composer adapts to narrowed viewport without hiding the active question (1.4s)
+  ✓   5 tests/e2e/ui-part-4.spec.ts:72:5 › Lens capture stays unavailable and cancelled preview cannot resume itself (1.2s)
+  ✓   6 tests/e2e/ui-part-4.spec.ts:85:5 › Story reading mode and endings offer actual continuations; interests link only approved records (1.4s)
+  ✓   7 tests/e2e/ui-part-4.spec.ts:100:5 › friendly 404 and audio metadata delay have concrete recoveries (1.6s)
+  ✓   8 tests/e2e/ui-part-4.spec.ts:111:5 › constrained network, offline collection and reconnect recovery (17.2s)
+  ✓   9 tests/e2e/ui-remaining.spec.ts:3:5 › named control groups remain exposed to assistive navigation (772ms)
+  ✓  10 tests/e2e/ui-remaining.spec.ts:12:5 › visit bookmarks require opt-in, revalidate records, reset and never write browser storage (1.6s)
+  ✓  11 tests/e2e/ui-remaining.spec.ts:33:5 › reading sizes, light surface and actual dialog scroll progress stay usable on a phone (717ms)
+  ✓  12 tests/e2e/ui-remaining.spec.ts:44:5 › city focus preview does not select a city and topographic tiles load at higher zoom (1.0s)
+  ✓  13 tests/e2e/ui-remaining.spec.ts:59:5 › fictional ending art and chapter progress differ; soundscape never autoplays and stops on exit (1.1s)
+  ✓  14 tests/e2e/ui-remaining.spec.ts:70:5 › constellation can be edited by keyboard with equivalent sliders and reset (769ms)
+  ✓  15 tests/e2e/ui-remaining.spec.ts:77:5 › low-data preference skips decorative image requests on reload and survives navigation (1.6s)
+
+  15 passed (39.6s)

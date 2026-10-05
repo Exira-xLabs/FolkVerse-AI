@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useReadingVisit } from "./visit-provider";
 import { useEffect, useState } from "react";
 import { api, type ExhibitPage } from "@folkverse/contracts";
 import { useLocale } from "./locale-provider";
@@ -9,6 +10,7 @@ type Feature = { locale: string; state: "ready" | "loading" | "error"; exhibit: 
 
 /** Published text only: decorative museum scenery is not an exhibit photograph. */
 export function FeaturedExhibit() {
+  const { setReading } = useReadingVisit();
   const { locale } = useLocale();
   const zh = locale !== "en";
   const [feature, setFeature] = useState<Feature | null>(null);
@@ -47,7 +49,7 @@ export function FeaturedExhibit() {
         <button className="outline-button" onClick={() => setReload(n => n + 1)}>{zh ? "重试" : "Try again"}</button></div>
         : exhibit ? <article className="featured-record"><span className="demo-tag">{zh ? "人工编辑审核 · 辽宁" : "Human editorial review · Liaoning"}</span>
           <h3>{exhibit.title}</h3><p>{exhibit.summary}</p>
-          <Link className="gold-button" href={`/explore?exhibit=${encodeURIComponent(exhibit.id)}`}>{zh ? "阅读展览与来源" : "Read exhibit & sources"} ↗︎</Link></article>
+          <Link className="gold-button" onClick={() => setReading(previous => ({ ...previous, lastRead: exhibit.id }))} href={`/explore?exhibit=${encodeURIComponent(exhibit.id)}`}>{zh ? "阅读展览与来源" : "Read exhibit & sources"} ↗︎</Link></article>
           : <p role="status">{zh ? "目前没有可推荐的已发布展览，资料完成审核后会在这里出现。" : "No published exhibit is available to feature yet. Records appear here after review."}</p>}
     {!exhibit && <Link className="text-button" href="/explore">{zh ? "浏览馆藏" : "Browse the collection"} ↗︎</Link>}
   </section>;

@@ -1,0 +1,1 @@
+PASS: 9 independently hashed local SVG tiles, four numerical contour levels, original bounds and 36 source DEM tile hashes; 486844 total vector bytes. Native vector rendering introduces no invented elevation detail.

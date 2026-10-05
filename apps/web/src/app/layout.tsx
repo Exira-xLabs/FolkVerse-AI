@@ -21,6 +21,6 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const locale = preferences.get("folkverse_locale")?.value === "zh-CN" ? "zh-CN" : "en";
   const initialSimple = preferences.get("folkverse_graphics")?.value === "simple";
   return <html lang={locale}><body className={`${serif.variable} ${sans.variable}`}>
-    <LocaleProvider initialLocale={locale}><GraphicsProvider initialSimple={initialSimple}><VisitProvider>{children}</VisitProvider></GraphicsProvider></LocaleProvider>
+    <LocaleProvider initialLocale={locale}><GraphicsProvider initialSimple={initialSimple} initialLowData={preferences.get("folkverse_data")?.value === "low"}><VisitProvider>{children}</VisitProvider></GraphicsProvider></LocaleProvider>
   </body></html>;
 }

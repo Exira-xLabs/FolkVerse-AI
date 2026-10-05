@@ -9,6 +9,7 @@ import { useLocale } from "./locale-provider";
 import { ServiceStatus } from "./service-status";
 import { GlassTabs } from "./museum-ui";
 import { MuseumExperiences } from "./museum-experiences";
+import { VisitReading } from "./reading-tools";
 import { FeaturedExhibit } from "./featured-exhibit";
 import { useGraphics } from "./graphics-provider";
 
@@ -18,18 +19,18 @@ function DiscoveryArrow() {
   </svg>;
 }
 
-export function MuseumScene({ page, simple, children }: { page: PageKey; simple: boolean; children: ReactNode }) {
-  return <div className={`museum-scene scene-${page} ${simple ? "reduced-graphics" : ""}`}>{children}</div>;
+export function MuseumScene({ page, simple, lowData = false, children }: { page: PageKey; simple: boolean; lowData?: boolean; children: ReactNode }) {
+  return <div className={`museum-scene scene-${page} ${simple ? "reduced-graphics" : ""} ${lowData ? "low-data" : ""}`}>{children}</div>;
 }
 
 export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; mode: "demo" | "live"; initialExhibitId?: string }) {
   const { locale, setLocale, t } = useLocale();
-  const { simple, setSimple } = useGraphics();
+  const { simple, setSimple, lowData, setLowData } = useGraphics();
   useEffect(() => { document.title = `${t.nav[page]} | FolkVerse China`; }, [page, t.nav]);
   const demoLabel = locale === "en" ? (mode === "demo" ? "Reviewed collection · optional previews" : "Published collection available · AI experiences not connected") : (mode === "demo" ? "审核馆藏 · 可选体验预览" : "已发布馆藏可用 · AI 体验尚未连接");
   const route = routes[page];
   const cards = ["explore", "stories", "journey", "guide"] as const;
-  return <MuseumScene page={page} simple={simple}>
+  return <MuseumScene page={page} simple={simple} lowData={lowData}>
     <a className="skip-link" href="#main">{t.skip}</a>
     <header className="museum-nav glass-panel">
       <Link className="brand" href="/" aria-label="FolkVerse China"><span>FolkVerse</span><small>CHINA / AI</small></Link>
@@ -37,10 +38,10 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
       <button className="language-switch nav-tab" aria-label={t.language}
         onClick={() => setLocale(locale === "en" ? "zh-CN" : "en")}>{locale === "en" ? "EN / 中文" : "中文 / EN"}</button>
     </header>
-    <main id="main" tabIndex={-1} className="museum-main">
+    <main key={page} id="main" tabIndex={-1} className="museum-main">
       <section className="scene-hero" aria-labelledby="page-title">
       <div className="scene-picture">
-        <Image className="scene-art" src={museumArt(route.asset)} alt="" fill priority quality={90} sizes="(max-width: 700px) 100vw, 70vw" />
+        {!lowData && <Image className="scene-art" src={museumArt(route.asset)} alt="" fill priority quality={90} sizes="(max-width: 700px) 100vw, 70vw" />}
         <div className="scene-shade" />
       </div>
       <div className="hero-copy">
@@ -49,14 +50,14 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
         <p className="subtitle">{t.subtitles[page]}</p>
         {page === "home" && <div className="hero-actions"><Link className="gold-button" href="/explore">{locale === "en" ? "Explore Liaoning" : "探索辽宁"}<DiscoveryArrow /></Link><Link className="text-button" href="/sources">{locale === "en" ? "Meet the sources" : "了解资料来源"} ↗︎</Link></div>}
       </div></section>
-      {page === "home" ? <><FeaturedExhibit /><div className="discovery-cards">
+      {page === "home" ? <><VisitReading home /><FeaturedExhibit /><div className="discovery-cards">
         {cards.map((key, index) => <article className={`glass-panel discovery-card card-${key}`} key={key}>
           <h2>{t.homeCards[index]}</h2>
           <p className="card-availability">{locale === "en" ? (index === 0 ? "Published collection" : mode === "live" ? "Not available yet" : key === "stories" ? "Original fiction · preview" : "Experience preview") : (index === 0 ? "已发布馆藏" : mode === "live" ? "尚未开放" : key === "stories" ? "原创虚构故事 · 预览" : "体验预览")}</p>
           <div className="card-art">
-            <Image src={museumArt(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset)}
+            {!lowData && <Image src={museumArt(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset)}
               alt="" fill quality={90} sizes="(max-width: 700px) 100vw, (max-width: 1050px) 50vw, 25vw" className={key === "guide" ? "portrait-art" : ""}
-              style={{ objectPosition: museumArtFocus(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset, "card") }} />
+              style={{ objectPosition: museumArtFocus(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset, "card") }} />}
           </div>
           <p className="art-caption">{locale === "en" ? (key === "guide" ? "Fictional companion" : "Decorative museum illustration") : (key === "guide" ? "虚构伙伴" : "装饰性博物馆插画")}</p>
           <Link className={index === 0 ? "gold-button" : "outline-button"}
@@ -67,7 +68,7 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
     <nav className="quick-navigation" aria-label={locale === "en" ? "Quick navigation" : "快捷导航"}><Link href="/explore">{locale === "en" ? "Explore Liaoning" : "探索辽宁"}</Link><Link href="/sources">{locale === "en" ? "Sources" : "来源"}</Link></nav>
     <footer className="museum-footer">
       <span className="preview-label"><span aria-hidden="true" className="preview-dot" />{demoLabel}</span>
-      <div><button className="graphics-toggle" aria-pressed={simple} onClick={() => setSimple(!simple)}>{locale === "en" ? (simple ? "Full atmosphere" : "Simplify graphics") : (simple ? "完整氛围" : "简化图形")}</button><Link href="/sources">{t.nav.sources}</Link><Link href="/status">{t.nav.status}</Link></div>
+      <div><button className="graphics-toggle" aria-pressed={lowData} onClick={() => setLowData(!lowData)}>{locale === "en" ? (lowData ? "Restore images" : "Use less data") : (lowData ? "恢复图像" : "减少流量")}</button><button className="graphics-toggle" aria-pressed={simple} onClick={() => setSimple(!simple)}>{locale === "en" ? (simple ? "Full atmosphere" : "Simplify graphics") : (simple ? "完整氛围" : "简化图形")}</button><Link href="/sources">{t.nav.sources}</Link><Link href="/status">{t.nav.status}</Link></div>
     </footer>
   </MuseumScene>;
 }

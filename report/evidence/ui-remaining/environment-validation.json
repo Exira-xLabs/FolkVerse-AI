@@ -1,0 +1,10 @@
+{
+  "host": "Linux",
+  "adb_available": false,
+  "orca_available": false,
+  "safaridriver_available": false,
+  "physical_phone_test": "unverified",
+  "Safari_test": "unavailable on this Linux host",
+  "screen_reader_test": "unverified",
+  "owner_confirmation": "Owner confirmed that the real phone, Safari and screen-reader environments are unavailable in this session."
+}

@@ -1,0 +1,37 @@
+{
+  "method": "sRGB relative luminance of opaque light surface and minimum-alpha star composited on the actual navy panel; not arbitrary image pixel certification.",
+  "pairs": [
+    {
+      "scope": "Light reading primary",
+      "foreground": "#182c38",
+      "background": "#fff4df",
+      "minimum": 4.5,
+      "ratio": 13.22,
+      "pass": true
+    },
+    {
+      "scope": "Light reading secondary",
+      "foreground": "#344853",
+      "background": "#fff4df",
+      "minimum": 4.5,
+      "ratio": 8.76,
+      "pass": true
+    },
+    {
+      "scope": "Light surface focus",
+      "foreground": "#725019",
+      "background": "#fff4df",
+      "minimum": 3,
+      "ratio": 6.69,
+      "pass": true
+    },
+    {
+      "scope": "Empty interactive star",
+      "foreground": "#a4936e",
+      "background": "#0b1722",
+      "minimum": 3,
+      "ratio": 6.02,
+      "pass": true
+    }
+  ]
+}

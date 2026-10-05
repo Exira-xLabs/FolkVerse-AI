@@ -1,0 +1,405 @@
+$ playwright test
+[WebServer] INFO:     Started server process [1247016]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:1247107) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:1247121) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1247162) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1247176) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 61 tests using 1 worker
+
+(node:1247225) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/content.spec.ts:4:5 › Liaoning published region → exhibit → attributed source works in both languages (2.6s)
+  ✓   2 tests/e2e/content.spec.ts:45:5 › published source index hides draft sources and exposes only permitted passages (703ms)
+  ✓   3 tests/e2e/content.spec.ts:56:5 › collection error recovers and withdrawn drawer clears on revalidation (1.1s)
+  ✓   4 tests/e2e/dropdowns.spec.ts:5:5 › collection dropdown supports keyboard selection, cancellation, typeahead and outside dismissal (1.5s)
+  ✓   5 tests/e2e/dropdowns.spec.ts:48:5 › compact and Chinese touch dropdowns fit the viewport and preserve their choices (1.6s)
+  ✘   6 tests/e2e/foundation.spec.ts:23:5 › museum routes work at desktop, mobile and tablet without page overflow (7.3s)
+(node:1247800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 tests/e2e/foundation.spec.ts:43:5 › navigation, language persistence and keyboard skip path work (2.2s)
+  ✓   8 tests/e2e/foundation.spec.ts:62:5 › real web to API health and signed session round trip (1.4s)
+  ✓   9 tests/e2e/foundation.spec.ts:79:5 › health service errors are visible and retry recovers (994ms)
+  ✓  10 tests/e2e/foundation.spec.ts:93:5 › guide portrait retains transparency and narrow zoom layout stays usable (1.1s)
+  ✓  11 tests/e2e/foundation.spec.ts:104:5 › unknown routes stay missing and cross-origin session mutation is rejected (385ms)
+  ✓  12 tests/e2e/liaoning-map.spec.ts:4:5 › real Liaoning silhouette, 14 city markers and geographical city selection (2.8s)
+  ✓  13 tests/e2e/liaoning-map.spec.ts:36:5 › map pan, wheel zoom, keyboard camera, minimap and expanded map (2.1s)
+  ✘  14 tests/e2e/liaoning-map.spec.ts:66:5 › selected city circle stays centered through time and zoom for all fourteen cities (6.2s)
+(node:1248510) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 tests/e2e/liaoning-map.spec.ts:101:5 › sourced city territory highlights from map clicks and clears when returning to the province (979ms)
+  ✘  16 tests/e2e/liaoning-map.spec.ts:135:5 › all cities remain selectable and searchable in Chinese at phone size (6.1s)
+(node:1248841) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  17 tests/e2e/liaoning-map.spec.ts:157:5 › touch pinch changes the map camera without scrolling the page (727ms)
+  ✘  18 tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages (21.7s)
+(node:1249662) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  19 tests/e2e/museum-ui.spec.ts:41:5 › explore filters, empty state and source drawer keyboard focus (1.1s)
+  ✓  20 tests/e2e/museum-ui.spec.ts:60:5 › journey reorder, remove and duration-constrained empty state (950ms)
+  ✓  21 tests/e2e/museum-ui.spec.ts:75:5 › both story branches, restart and actual recorded audio (806ms)
+  ✓  22 tests/e2e/museum-ui.spec.ts:86:5 › lens exposes unknown, poor image, denial, outage and loading without claiming recognition (2.0s)
+  ✓  23 tests/e2e/museum-ui.spec.ts:99:5 › guide submits bounded text, clearly scripted response and voice unavailable (1.5s)
+  ✓  24 tests/e2e/museum-ui.spec.ts:109:5 › interest edits redraw chart and reset clears suggestions (721ms)
+  ✓  25 tests/e2e/museum-ui.spec.ts:124:5 › live mode fails closed with no demo controls (1.2s)
+  ✓  26 tests/e2e/museum-ui.spec.ts:132:5 › published collection works in live mode with no fixture toggle (899ms)
+  ✓  27 tests/e2e/museum-ui.spec.ts:141:5 › reduced graphics, keyboard path and 200 percent page zoom (2.4s)
+  ✘  28 tests/e2e/ui-part-4.spec.ts:4:5 › phone quick navigation and filters retain place, clear and recover empty results (7.1s)
+(node:1250435) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  29 tests/e2e/ui-part-4.spec.ts:26:5 › reading, citations, shareable URL and evidence remain distinct and keyboard reachable (1.2s)
+  ✓  30 tests/e2e/ui-part-4.spec.ts:42:5 › Guide approved prompts, stop/retry/error/insufficient states stay clearly scripted (2.6s)
+  ✓  31 tests/e2e/ui-part-4.spec.ts:60:5 › composer adapts to narrowed viewport without hiding the active question (1.5s)
+  ✓  32 tests/e2e/ui-part-4.spec.ts:72:5 › Lens capture stays unavailable and cancelled preview cannot resume itself (1.2s)
+  ✓  33 tests/e2e/ui-part-4.spec.ts:85:5 › Story reading mode and endings offer actual continuations; interests link only approved records (1.2s)
+  ✓  34 tests/e2e/ui-part-4.spec.ts:100:5 › friendly 404 and audio metadata delay have concrete recoveries (1.3s)
+  ✓  35 tests/e2e/ui-part-4.spec.ts:111:5 › constrained network, offline collection and reconnect recovery (17.2s)
+  ✓  36 tests/e2e/ui-part-a.spec.ts:3:5 › Home features published EN/ZH text and opens that exhibit with its sources in both modes (3.4s)
+  ✓  37 tests/e2e/ui-part-a.spec.ts:23:5 › featured publication fails closed for errors, empty results and withdrawn records (1.2s)
+  ✓  38 tests/e2e/ui-part-a.spec.ts:39:5 › status keeps diagnostics optional and recovers from an outage in both languages (1.4s)
+  ✓  39 tests/e2e/ui-part-a.spec.ts:59:5 › decorative card purposes stay distinct and crops retain their aspect ratio (1.4s)
+  ✓  40 tests/e2e/ui-part-b.spec.ts:3:5 › source dialog includes integrity disclosure in keyboard order and distinguishes padding from backdrop (1.3s)
+  ✘  41 tests/e2e/ui-part-b.spec.ts:27:5 › region dropdown and directory fit the same city camera (30.2s)
+(node:1252687) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  42 tests/e2e/ui-part-b.spec.ts:40:5 › graphics preference survives navigation and reload (997ms)
+  ✓  43 tests/e2e/ui-part-b.spec.ts:49:5 › phone map labels and controls remain readable and expanded map is a native modal (947ms)
+  ✓  44 tests/e2e/ui-part-b.spec.ts:77:5 › each screen has a distinct localized title including server reloads (2.9s)
+  ✓  45 tests/e2e/ui-part-c.spec.ts:4:5 › Sources instructions, live capability copy and province query match actual scope (958ms)
+  ✘  46 tests/e2e/ui-part-c.spec.ts:19:5 › atlas distinguishes loading, outage, published city and empty city (5.9s)
+(node:1253170) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  47 tests/e2e/ui-part-c.spec.ts:37:5 › Guide keeps multiple turns and draft through navigation, clears safely and resets on reload (3.6s)
+  ✓  48 tests/e2e/ui-part-c.spec.ts:57:5 › Journey draft criteria never relabel committed route and plan survives navigation (858ms)
+  ✓  49 tests/e2e/ui-part-c.spec.ts:78:5 › Chinese story offers explicit English audio, text-only mode and complete transcript (592ms)
+  ✓  50 tests/e2e/ui-part-c.spec.ts:88:5 › reviewed exhibit context carries to all four next screens in demo/live and fails closed (9.6s)
+  ✘  51 tests/e2e/ui-refinement.spec.ts:3:5 › home leads to reviewed exhibits and collection view preserves map filters (6.3s)
+(node:1253933) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  52 tests/e2e/ui-refinement.spec.ts:16:5 › prototype controls are opt-in and keyboard can open every preview (850ms)
+  ✓  53 tests/e2e/ui-refinement.spec.ts:28:5 › interests begin empty and contain only voluntary choices (556ms)
+  ✓  54 tests/e2e/ui-refinement.spec.ts:43:5 › phone artwork stays sharp at DPR 2 and the companion stays compact (2.1s)
+  ✓  55 tests/e2e/ui-remaining.spec.ts:3:5 › named control groups remain exposed to assistive navigation (1.1s)
+  ✓  56 tests/e2e/ui-remaining.spec.ts:12:5 › visit bookmarks require opt-in, revalidate records, reset and never write browser storage (2.5s)
+  ✘  57 tests/e2e/ui-remaining.spec.ts:33:5 › reading sizes, light surface and actual dialog scroll progress stay usable on a phone (30.2s)
+(node:1255139) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  58 tests/e2e/ui-remaining.spec.ts:44:5 › city focus preview does not select a city and topographic tiles load at higher zoom (1.1s)
+  ✓  59 tests/e2e/ui-remaining.spec.ts:59:5 › fictional ending art and chapter progress differ; soundscape never autoplays and stops on exit (772ms)
+  ✓  60 tests/e2e/ui-remaining.spec.ts:70:5 › constellation can be edited by keyboard with equivalent sliders and reset (529ms)
+  ✓  61 tests/e2e/ui-remaining.spec.ts:77:5 › low-data preference skips decorative image requests on reload and survives navigation (921ms)
+
+
+  1) tests/e2e/foundation.spec.ts:23:5 › museum routes work at desktop, mobile and tablet without page overflow
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+    +   "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+    +   "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+    + ]
+
+      38 |     await capture(page, `home-${viewport.width}`);
+      39 |   }
+    > 40 |   expect(errors).toEqual([]);
+         |                  ^
+      41 | });
+      42 |
+      43 | test("navigation, language persistence and keyboard skip path work", async ({ page }) => {
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/foundation.spec.ts:40:18
+
+    Error Context: test-results/foundation-museum-routes-w-8bb60-ablet-without-page-overflow/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/foundation-museum-routes-w-8bb60-ablet-without-page-overflow/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/foundation-museum-routes-w-8bb60-ablet-without-page-overflow/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/e2e/liaoning-map.spec.ts:66:5 › selected city circle stays centered through time and zoom for all fourteen cities
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('region', { name: 'Interactive map of Liaoning' }).locator('.atlas-city[aria-pressed=true]')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('region', { name: 'Interactive map of Liaoning' }).locator('.atlas-city[aria-pressed=true]') with timeout 5000ms
+      - waiting for getByRole('region', { name: 'Interactive map of Liaoning' }).locator('.atlas-city[aria-pressed=true]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      73 |   for (let i = 0; i < 14; i++) {
+      74 |     await cities.nth(i).click();
+    > 75 |     await expect(atlas.locator(".atlas-city[aria-pressed=true]")).toHaveCount(1);
+         |                                                                   ^
+      76 |     const selectedCityId = await atlas.locator(".atlas-city[aria-pressed=true]").getAttribute("data-city-id");
+      77 |     await expect(atlas.locator(".atlas-district-selected")).toHaveCount(1);
+      78 |     await expect(atlas.locator(".atlas-district-selected")).toHaveAttribute("data-city-id", selectedCityId!);
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/liaoning-map.spec.ts:75:67
+
+    Error Context: test-results/liaoning-map-selected-city-4abad-oom-for-all-fourteen-cities/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/liaoning-map-selected-city-4abad-oom-for-all-fourteen-cities/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/liaoning-map-selected-city-4abad-oom-for-all-fourteen-cities/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/e2e/liaoning-map.spec.ts:135:5 › all cities remain selectable and searchable in Chinese at phone size
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('region', { name: '辽宁交互地图' }).locator('.atlas-location strong')
+    Expected: "丹东"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('region', { name: '辽宁交互地图' }).locator('.atlas-location strong') with timeout 5000ms
+      - waiting for getByRole('region', { name: '辽宁交互地图' }).locator('.atlas-location strong')
+
+
+      143 |   await expect(atlas.locator(".atlas-city-grid button")).toHaveCount(1);
+      144 |   await atlas.getByRole("button", { name: "选择丹东", exact: true }).click();
+    > 145 |   await expect(atlas.locator(".atlas-location strong")).toHaveText("丹东");
+          |                                                         ^
+      146 |   await expect(page.getByLabel("地区", { exact: true })).toHaveText("丹东");
+      147 |   await atlas.getByLabel("搜索辽宁城市").fill("");
+      148 |   await atlas.getByRole("button", { name: "选择大连", exact: true }).click();
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/liaoning-map.spec.ts:145:57
+
+    Error Context: test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+    +   "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+    +   "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+    + ]
+
+      36 |     }
+      37 |   }
+    > 38 |   expect(errors).toEqual([]);
+         |                  ^
+      39 | });
+      40 |
+      41 | test("explore filters, empty state and source drawer keyboard focus", async ({ page }) => {
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/museum-ui.spec.ts:38:18
+
+    Error Context: test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests/e2e/ui-part-4.spec.ts:4:5 › phone quick navigation and filters retain place, clear and recover empty results
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByLabel('Region', { exact: true })
+    Expected: "Dalian"
+    Received: "All Liaoning"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByLabel('Region', { exact: true }) with timeout 5000ms
+      - waiting for getByLabel('Region', { exact: true })
+        14 × locator resolved to <button type="button" role="combobox" aria-expanded="false" class="select-trigger" aria-haspopup="listbox" aria-labelledby="_r_a_-label">…</button>
+           - unexpected value "All Liaoning"
+
+
+      18 |   await quick.getByRole("link", { name: "Sources", exact: true }).click();
+      19 |   await quick.getByRole("link", { name: "Explore Liaoning" }).click();
+    > 20 |   await expect(page.getByLabel("Region", { exact: true })).toHaveText("Dalian");
+         |                                                            ^
+      21 |   await expect(page.getByRole("button", { name: "Explore map", exact: true })).toHaveAttribute("aria-pressed", "true");
+      22 |   await page.getByRole("button", { name: "Return to all Liaoning", exact: true }).click();
+      23 |   await expect(page.getByLabel("Region", { exact: true })).toHaveText("All Liaoning");
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/ui-part-4.spec.ts:20:60
+
+    Error Context: test-results/ui-part-4-phone-quick-navi-5475e-r-and-recover-empty-results/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-part-4-phone-quick-navi-5475e-r-and-recover-empty-results/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-part-4-phone-quick-navi-5475e-r-and-recover-empty-results/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) tests/e2e/ui-part-b.spec.ts:27:5 › region dropdown and directory fit the same city camera ─────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Back to all Liaoning' })
+
+
+      31 |     await page.locator(".atlas-city-grid").getByRole("button", { name: `Select ${city}`, exact: true }).click();
+      32 |     const expected = await world.getAttribute("viewBox");
+    > 33 |     await page.getByRole("button", { name: "Back to all Liaoning" }).click();
+         |                                                                      ^
+      34 |     await page.getByLabel("Region", { exact: true }).click();
+      35 |     await page.getByRole("option", { name: city, exact: true }).click();
+      36 |     await expect(world).toHaveAttribute("viewBox", expected!);
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/ui-part-b.spec.ts:33:70
+
+    Error Context: test-results/ui-part-b-region-dropdown--971f7-ry-fit-the-same-city-camera/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-part-b-region-dropdown--971f7-ry-fit-the-same-city-camera/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-part-b-region-dropdown--971f7-ry-fit-the-same-city-camera/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) tests/e2e/ui-part-c.spec.ts:19:5 › atlas distinguishes loading, outage, published city and empty city
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.atlas-location')
+    Expected substring: "Checking collection…"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.atlas-location') with timeout 5000ms
+      - waiting for locator('.atlas-location')
+
+
+      22 |   await page.goto("/explore"); await page.getByRole("button", { name: "Explore map", exact: true }).click();
+      23 |   await page.locator(".atlas-city-grid").getByRole("button", { name: "Select Dalian", exact: true }).click();
+    > 24 |   await expect(page.locator(".atlas-location")).toContainText("Checking collection…");
+         |                                                 ^
+      25 |   release(); await page.unrouteAll({ behavior: "wait" });
+      26 |   await expect(page.locator(".atlas-location")).toContainText("Reviewed exhibits ready to explore.");
+      27 |   await page.locator(".atlas-city-grid").getByRole("button", { name: "Select Shenyang", exact: true }).click();
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/ui-part-c.spec.ts:24:49
+
+    Error Context: test-results/ui-part-c-atlas-distinguis-42e38-blished-city-and-empty-city/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-part-c-atlas-distinguis-42e38-blished-city-and-empty-city/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-part-c-atlas-distinguis-42e38-blished-city-and-empty-city/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) tests/e2e/ui-refinement.spec.ts:3:5 › home leads to reviewed exhibits and collection view preserves map filters
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('combobox', { name: 'Region', exact: true })
+    Expected: "Shenyang"
+    Received: "All Liaoning"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByRole('combobox', { name: 'Region', exact: true }) with timeout 5000ms
+      - waiting for getByRole('combobox', { name: 'Region', exact: true })
+        14 × locator resolved to <button type="button" role="combobox" aria-expanded="false" class="select-trigger" aria-haspopup="listbox" aria-labelledby="_r_1_-label">…</button>
+           - unexpected value "All Liaoning"
+
+
+      10 |   await page.getByRole("button", { name: "Select Shenyang", exact: true }).click();
+      11 |   await page.getByRole("button", { name: "Browse collection", exact: true }).click();
+    > 12 |   await expect(page.getByRole("combobox", { name: "Region", exact: true })).toHaveText("Shenyang");
+         |                                                                             ^
+      13 |   await expect(page.getByText("No published exhibits match these filters.")).toBeVisible();
+      14 | });
+      15 |
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/ui-refinement.spec.ts:12:77
+
+    Error Context: test-results/ui-refinement-home-leads-t-4268d--view-preserves-map-filters/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-refinement-home-leads-t-4268d--view-preserves-map-filters/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-refinement-home-leads-t-4268d--view-preserves-map-filters/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) tests/e2e/ui-remaining.spec.ts:33:5 › reading sizes, light surface and actual dialog scroll progress stay usable on a phone
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('dialog').getByLabel('Text size', { exact: true })
+
+
+      34 |   await page.setViewportSize({ width: 390, height: 844 }); await page.goto("/"); await page.getByRole("link", { name: "Read exhibit & sources" }).click();
+      35 |   const drawer = page.getByRole("dialog"); await drawer.getByRole("button", { name: "Light reading surface" }).click();
+    > 36 |   await drawer.getByLabel("Text size", { exact: true }).selectOption("larger");
+         |                                                         ^
+      37 |   expect(await drawer.locator(".exhibit-reading > p").evaluate(node => getComputedStyle(node).fontSize)).toBe("24px");
+      38 |   await drawer.evaluate(node => { node.scrollTop = node.scrollHeight; });
+      39 |   await expect(drawer.getByRole("progressbar", { name: "Reading progress", exact: false })).toHaveAttribute("value", "100");
+        at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/ui-remaining.spec.ts:36:57
+
+    Error Context: test-results/ui-remaining-reading-sizes-cd5f9-ress-stay-usable-on-a-phone/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-remaining-reading-sizes-cd5f9-ress-stay-usable-on-a-phone/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-remaining-reading-sizes-cd5f9-ress-stay-usable-on-a-phone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9 failed
+    tests/e2e/foundation.spec.ts:23:5 › museum routes work at desktop, mobile and tablet without page overflow
+    tests/e2e/liaoning-map.spec.ts:66:5 › selected city circle stays centered through time and zoom for all fourteen cities
+    tests/e2e/liaoning-map.spec.ts:135:5 › all cities remain selectable and searchable in Chinese at phone size
+    tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages
+    tests/e2e/ui-part-4.spec.ts:4:5 › phone quick navigation and filters retain place, clear and recover empty results
+    tests/e2e/ui-part-b.spec.ts:27:5 › region dropdown and directory fit the same city camera ──────
+    tests/e2e/ui-part-c.spec.ts:19:5 › atlas distinguishes loading, outage, published city and empty city
+    tests/e2e/ui-refinement.spec.ts:3:5 › home leads to reviewed exhibits and collection view preserves map filters
+    tests/e2e/ui-remaining.spec.ts:33:5 › reading sizes, light surface and actual dialog scroll progress stay usable on a phone
+  52 passed (3.8m)
+[ELIFECYCLE] Command failed with exit code 1.

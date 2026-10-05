@@ -1,0 +1,46 @@
+{
+  "scope": "Fresh Chromium contexts; same phone viewport; decoded eager Home images only. Not a Core Web Vitals or whole-network claim.",
+  "results": [
+    {
+      "lowData": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "imageResponses": 5,
+      "imageBytes": 357326,
+      "payloads": [
+        {
+          "url": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2Fenhanced%2F01_museum_entrance-v2.png&w=640&q=90",
+          "bytes": 77536
+        },
+        {
+          "url": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2Fenhanced%2F02_interactive_map-v2.png&w=640&q=90",
+          "bytes": 65256
+        },
+        {
+          "url": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2Fenhanced%2F04_shadow_puppetry-v2.png&w=640&q=90",
+          "bytes": 55404
+        },
+        {
+          "url": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2Fenhanced%2F03_cultural_journey-v2.png&w=640&q=90",
+          "bytes": 61594
+        },
+        {
+          "url": "http://127.0.0.1:3000/_next/image?url=%2Ffolkverse%2Fenhanced%2F09_ai_guide_character-lossless.webp&w=640&q=90",
+          "bytes": 97536
+        }
+      ]
+    },
+    {
+      "lowData": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "imageResponses": 0,
+      "imageBytes": 0,
+      "payloads": []
+    }
+  ]
+}

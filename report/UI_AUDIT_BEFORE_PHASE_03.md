@@ -2,9 +2,9 @@
 
 **Audited:** 5 October 2026, Asia/Shanghai. **Objective:** the best visitor experience across every page, with sharp, coherent artwork and understandable interactions.
 
-**Verdict:** the museum identity is worth keeping, but the UI is not ready to freeze for the Phase 03 handoff. Fix mobile image composition, navigation, source-drawer behavior and the visitor flow first. More decorative images alone will not resolve the main problems. The new dropdowns can remain the shared control foundation.
+**Original audit verdict:** the museum identity is worth keeping, but the UI is not ready to freeze for the Phase 03 handoff. Fix mobile image composition, navigation, source-drawer behavior and the visitor flow first. More decorative images alone will not resolve the main problems. The new dropdowns can remain the shared control foundation.
 
-**Follow-up:** the seven owner-selected refinements and image-delivery pass are now implemented and locally verified. See [UI refinement results](UI_REFINEMENT_RESULTS.md) for the exact delivered scope and remaining findings. Part 1 now includes explicit completion status and next actions; its original findings describe the pre-refinement baseline. Parts 1, 2 and 3 are complete locally; Part 4 implementation and local QA are delivered; M16 external validation remains open. Part 5 contains optional improvements. The full audit is not marked closed.
+**Follow-up:** the seven owner-selected refinements and image-delivery pass are now implemented and locally verified. See [UI refinement results](UI_REFINEMENT_RESULTS.md) for the exact delivered scope and remaining findings. Part 1 now includes explicit completion status and next actions; its original findings describe the pre-refinement baseline. Parts 1, 2 and 3 are complete locally; Part 4 implementation and local QA are delivered; M09 semantic group labelling and N01–N10 are now implemented in the remaining-work pass; M16 external validation remains unavailable, as confirmed by the owner. [Remaining-work delivery](UI_REMAINING_COMPLETION.md). The full audit is not marked closed.
 
 This is an audit and proposed backlog, not a completed redesign. Application code, original artwork and editorial approvals were preserved. Live guide, recognition, journey generation, profiles and later integrations remain separate phase work. Their missing backends are not counted as UI bugs.
 
@@ -45,7 +45,7 @@ Verification: [refinement results](UI_REFINEMENT_RESULTS.md), [31/31 final brows
 
 ### Part 1 complete — what comes next
 
-All A01–A09 corrections are complete within the reviewed local scope. The next urgent shared-behavior work is **B03–B05: source-drawer keyboard traversal, internal-padding dismissal and background scrolling**. Continue through the remaining Part 2 defects and Part 3/4 interaction requirements afterward.
+All A01–A09 corrections are complete within the reviewed local scope. The formerly urgent B03–B05 defects and subsequent Parts 2–4 implementation are now fixed. M16 external verification remains unavailable; consult the current remaining-work delivery instead of the historical baseline recommendations.
 
 Part 1 completion does not certify full accessibility or connect the later live AI services. Physical devices, Safari and a full contrast/screen-reader audit remain unverified. New screenshots stay local and are ignored by Git. Part A implementation, tests and reports are included in the owner-requested delivery commit on `main`. Screenshot files remain excluded.
 
@@ -93,7 +93,7 @@ These include confirmed copy/state mismatches and interaction contracts that nee
 
 “Before handoff” means finish the design and shared UI behavior. It does not require implementing later-phase AI services early or manufacturing content for empty screens.
 
-**Progress updated:** 5 October 2026. **15 complete; M16 inventory/QA artifacts delivered, with three external-environment checks still unverified.** Implementation does not claim later-phase service completion. [Delivery and verification](UI_PART_4_COMPLETION.md).
+**Progress updated:** 5 October 2026. **Rechecked and corrected: 15 complete, M16 partial. M09 grouping semantics are fixed; M16 inventory/QA artifacts are delivered, with three external-environment checks still unavailable.** Implementation does not claim later-phase service completion. [Delivery and verification](UI_PART_4_COMPLETION.md).
 
 | ID / priority | Scope / timing | Required addition | Status | Delivery |
 |---|---|---|---|---|
@@ -105,7 +105,7 @@ These include confirmed copy/state mismatches and interaction contracts that nee
 | M06 / P1 | Guide, design before handoff; wire in Phase 03 | Context header, conversation history, useful prompts drawn from approved coverage, generating/cancelled/error/insufficient states, Stop, Retry and inspectable citations. Progress must be visually distinct from validated answer content. On phones, keep the composer reachable above the software keyboard. | DONE | Approved prompts, distinct preview states, stop/retry and viewport-aware composer. [Evidence](UI_PART_4_COMPLETION.md). |
 | M07 / P1 | Sources/drawers, before handoff | Clear separation of exhibit reading and evidence inspection; source excerpt, institution, review/rights status, original link and expandable technical integrity. Every part must be keyboard reachable. | DONE | Separate reading/evidence and keyboard disclosures. [Evidence](UI_PART_4_COMPLETION.md). |
 | M08 / P1 | Shared, before handoff | Consistent loading, empty, offline/unavailable, withdrawn-content and friendly 404 designs with concrete recovery actions. Initial audio metadata should show a loading state instead of temporarily presenting `0:00 / 0:00`. | DONE | Friendly 404, record retry and accurate audio loading. [Evidence](UI_PART_4_COMPLETION.md). |
-| M09 / P1 | Shared, before handoff | A manual contrast/focus/readability pass over actual imagery in both languages, corrected semantic issues, complete focus traversal, scroll-safe dialogs and touch-size review. Preserve the working dropdown keyboard and touch behavior. | DONE | Local image/focus/contrast/44px pass; remaining environments in M16. [Evidence](UI_PART_4_COMPLETION.md). |
+| M09 / P1 | Shared, before handoff | A manual contrast/focus/readability pass over actual imagery in both languages, corrected semantic issues, complete focus traversal, scroll-safe dialogs and touch-size review. Preserve the working dropdown keyboard and touch behavior. | DONE | The five labelled control groups now have valid grouping semantics. Local image/focus/contrast/44px checks are rerun; real-device environments remain in M16. [Evidence](UI_REMAINING_COMPLETION.md). |
 | M10 / P1 | Shared, before handoff | Persistence for language and graphics preferences; a defined temporary-state policy for guide drafts, map/filter context and journey editing. Keep demo data separate from real saved content. | DONE | Language/graphics persistence plus defined Guide/Journey/catalog lifetime. [Evidence](UI_PART_4_COMPLETION.md). |
 | M11 / P2 | Journey, UI before handoff; real validation in Phase 04 | A clear criteria/apply model, matching interest labels, visible route duration, empty-route recovery, stop reasons and links to actual exhibit detail. Saving/reordering live journeys belongs to Phase 04. | DONE | Draft/apply, recovery, stop reasons and actual approved links. [Evidence](UI_PART_4_COMPLETION.md). |
 | M12 / P2 | Story, UI before handoff; real story integration in Phase 06 | Reading and listening modes, full transcript, explicit audio language, contextual source links, clear choice/ending states and a useful continuation after an ending. Generated branch artwork remains labelled creative. | DONE | Reading/listening/transcript, stopped playback and ending continuations. [Evidence](UI_PART_4_COMPLETION.md). |
@@ -116,18 +116,20 @@ These include confirmed copy/state mismatches and interaction contracts that nee
 
 ## 5. Nice to have
 
-| ID | Pages | Optional improvement |
-|---|---|---|
-| N01 | All | A restrained transition that helps maintain place when changing pages; no motion required for understanding or use. |
-| N02 | Home | A “Continue exploring” shortcut based on explicitly retained session state, with a clear reset. |
-| N03 | Explore | City hover/focus previews and a list of related reviewed exhibits. No fabricated facts or review badges. |
-| N04 | Explore | Optional topographic/detail view at higher zoom with sharper tiled artwork and a legend. Keep actual borders sourced. |
-| N05 | Exhibits/Sources | A reading mode, adjustable text size and a small reading-progress indicator. |
-| N06 | Guide | Compact identity-preserving character reactions or a small contextual illustration, after readability and streaming UX are settled. |
-| N07 | Story | Distinct artwork for each fictional ending, chapter progress and an optional subtle soundscape. No autoplay. |
-| N08 | Interests | A playful editable constellation instead of an unexplained score chart, with an equivalent text interface. |
-| N09 | Collection | Bookmarks, a small saved collection and link sharing, after the actual session/storage/consent contracts are implemented. |
-| N10 | Shared | A visitor-controlled light reading surface or low-data mode, supported by measured readability/performance. |
+**Delivery:** N01–N10 implemented in the owner-requested remaining-work pass. These are local UI/visit features, not later-phase API completion. [Per-item delivery and verification](UI_REMAINING_COMPLETION.md).
+
+| ID | Pages | Optional improvement | Status |
+|---|---|---|---|
+| N01 | All | A restrained transition that helps maintain place when changing pages; no motion required for understanding or use. | DONE (local scope) |
+| N02 | Home | A “Continue exploring” shortcut based on explicitly retained session state, with a clear reset. | DONE (local scope) |
+| N03 | Explore | City hover/focus previews and a list of related reviewed exhibits. No fabricated facts or review badges. | DONE (local scope) |
+| N04 | Explore | Optional topographic/detail view at higher zoom with sharper tiled artwork and a legend. Keep actual borders sourced. | DONE (local scope) |
+| N05 | Exhibits/Sources | A reading mode, adjustable text size and a small reading-progress indicator. | DONE (local scope) |
+| N06 | Guide | Compact identity-preserving character reactions or a small contextual illustration, after readability and streaming UX are settled. | DONE (local scope) |
+| N07 | Story | Distinct artwork for each fictional ending, chapter progress and an optional subtle soundscape. No autoplay. | DONE (local scope) |
+| N08 | Interests | A playful editable constellation instead of an unexplained score chart, with an equivalent text interface. | DONE (local scope) |
+| N09 | Collection | Bookmarks, a small saved collection and link sharing, after the actual session/storage/consent contracts are implemented. | DONE (local scope) |
+| N10 | Shared | A visitor-controlled light reading surface or low-data mode, supported by measured readability/performance. | DONE (local scope) |
 
 ## Page-by-page direction
 
@@ -207,4 +209,4 @@ The desired experience is: **Enter → discover a real exhibit → understand it
 - [web.dev responsive-image guidance](https://web.dev/learn/design/responsive-images) supports matching assets to actual rendering and art direction. [Deque axe documentation](https://www.deque.com/axe/core-documentation/) supports the automated scan workflow and its limitations.
 - Inspiration inspected: [The Met Collection](https://www.metmuseum.org/art/collection) puts collection search and browsable art near the beginning; [Google Arts & Culture](https://artsandculture.google.com/) offers task/topic-led discovery and visual exhibits. The recommendation to bring reviewed content forward is this audit's design judgment, not evidence that either site's design guarantees better usability.
 
-No physical-device, Safari, screen-reader or participant usability study was run. No live AI/provider calls, content approvals, new artifact licenses, commits, pushes or deployments were performed. Those limits should travel with the handoff.
+The original audit itself performed no physical-device, Safari, screen-reader or participant usability study, live AI/provider calls, content approvals, artifact licensing, commits, pushes or deployments. Subsequent implementation commits and pushes are recorded in the completion reports and Git history. Physical-device/Safari/screen-reader verification remains unavailable; later-phase AI services and deployment claims remain separate.
