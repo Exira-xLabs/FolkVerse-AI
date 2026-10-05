@@ -6,6 +6,7 @@ import { useEffect, useId, useRef, useState, type ReactNode, type ButtonHTMLAttr
 import { useLocale } from "./locale-provider";
 import { navigation, routes, type PageKey } from "@/lib/routes";
 import { museumArt, museumArtFocus } from "@/lib/museum-art";
+import { lockDocumentScroll, trapDialogTab } from "@/lib/dialog";
 
 export function GlassPanel({ children, className = "", id }: { children: ReactNode; className?: string; id?: string }) {
   return <section id={id} className={`glass-panel reading-panel ${className}`}>{children}</section>;
@@ -63,17 +64,15 @@ export function SourceDrawer({ open, onClose, title, children }: { open: boolean
     if (!node || !open) return;
     const trigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     node.showModal();
-    return () => { node.close(); trigger?.focus(); };
+    const unlock = lockDocumentScroll();
+    return () => { node.close(); unlock(); trigger?.focus({ preventScroll: true }); };
   }, [open]);
-  return <dialog ref={dialog} className="source-drawer glass-panel" aria-labelledby={titleId}
-    onCancel={event => { event.preventDefault(); onClose(); }} onClick={event => { if (event.target === event.currentTarget) onClose(); }}
-    onKeyDown={event => {
-      if (event.key !== "Tab") return;
-      const items = event.currentTarget.querySelectorAll<HTMLElement>("button:not(:disabled), a[href], input, select, textarea");
-      const first = items[0]; const last = items[items.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
-      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
-    }}>
+  return <dialog ref={dialog} className="source-drawer glass-panel" aria-labelledby={titleId} aria-modal="true"
+    onCancel={event => { event.preventDefault(); onClose(); }} onClick={event => {
+      if (event.target !== event.currentTarget) return;
+      const bounds = event.currentTarget.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) onClose();
+    }} onKeyDown={trapDialogTab}>
     <div className="drawer-top"><span className="eyebrow">{zh ? "来源与使用说明" : "SOURCES & CONTEXT"}</span><button className="icon-button" autoFocus onClick={onClose} aria-label={zh ? "关闭来源" : "Close sources"}>×</button></div>
     <h2 id={titleId}>{title || (zh ? "了解您所看到的内容" : "Know what you are seeing")}</h2>
     {children ?? <><span className="demo-tag">{zh ? "演示内容 · 尚未审核" : "Demo material · not reviewed"}</span>

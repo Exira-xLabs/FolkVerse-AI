@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { routes, type PageKey } from "@/lib/routes";
 import { museumArt, museumArtFocus } from "@/lib/museum-art";
 import { useLocale } from "./locale-provider";
@@ -10,6 +10,7 @@ import { ServiceStatus } from "./service-status";
 import { GlassTabs } from "./museum-ui";
 import { MuseumExperiences } from "./museum-experiences";
 import { FeaturedExhibit } from "./featured-exhibit";
+import { useGraphics } from "./graphics-provider";
 
 function DiscoveryArrow() {
   return <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -23,7 +24,8 @@ export function MuseumScene({ page, simple, children }: { page: PageKey; simple:
 
 export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; mode: "demo" | "live"; initialExhibitId?: string }) {
   const { locale, setLocale, t } = useLocale();
-  const [simple, setSimple] = useState(false);
+  const { simple, setSimple } = useGraphics();
+  useEffect(() => { document.title = `${t.nav[page]} | FolkVerse China`; }, [page, t.nav]);
   const demoLabel = locale === "en" ? "Reviewed collection · optional previews" : "审核馆藏 · 可选体验预览";
   const route = routes[page];
   const cards = ["explore", "stories", "journey", "guide"] as const;

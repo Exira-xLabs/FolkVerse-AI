@@ -1,0 +1,135 @@
+[
+  {
+    route: '/',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/explore',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/journey',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/stories/lantern-path',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/lens',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/guide',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/dna',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/sources',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/status',
+    locale: 'en',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  { locale: 'en', original: 781, restored: 781, openerFocused: true },
+  {
+    route: '/',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/explore',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/journey',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/stories/lantern-path',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/lens',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/guide',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/dna',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/sources',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    route: '/status',
+    locale: 'zh-CN',
+    currentVisible: true,
+    overflow: false,
+    art: [ [Object] ]
+  },
+  {
+    locale: 'zh-CN',
+    original: 619,
+    restored: 619,
+    openerFocused: true
+  }
+]

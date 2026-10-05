@@ -556,3 +556,30 @@ button:disabled { cursor: default; }
 @media (max-width: 700px) {
   .featured-exhibit { grid-template-columns: 1fr; padding: 24px; gap: 20px; }
 }
+
+/* Part B: readable map labels, usable controls and native fullscreen modality. */
+.atlas-city-name { font-size: 14px; }
+.atlas-label { pointer-events: auto; }
+.atlas-directory-heading input { min-height: 44px; font-size: 14px; }
+.atlas-location button { min-height: 44px; padding-block: 10px; font-size: 13px; }
+.atlas-attribution { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.atlas-attribution a { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 4px; }
+.atlas-dialog { position: fixed; inset: 12px; margin: 0; width: calc(100% - 24px); height: calc(100% - 24px); max-width: none; max-height: none; padding: 0; border: 0; background: transparent; color: var(--text-primary); overflow: hidden; }
+.atlas-dialog::backdrop { background: #030c11ee; }
+.atlas-dialog .atlas-expanded { position: static; height: 100%; box-shadow: none; }
+@media (max-width: 700px) {
+  .atlas-city .atlas-label { display: none; }
+  .atlas-city.is-major .atlas-label, .atlas-city.is-selected .atlas-label, .atlas-city:focus-visible .atlas-label { display: initial; }
+  .atlas-city-grid button, .atlas-expanded .atlas-city-grid button { font-size: 14px; min-height: 44px; }
+  .atlas-stage { height: auto; }
+  .atlas-world { height: 460px; }
+  .atlas-location { position: relative; left: auto; top: auto; width: auto; margin: 12px; }
+  .atlas-map-hint { top: 420px; bottom: auto; max-width: 200px; }
+  .atlas-minimap { top: 370px; bottom: auto; }
+  .atlas-dialog { inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); }
+  .atlas-dialog .atlas-expanded { display: block; overflow-y: auto; }
+  .atlas-dialog .atlas-stage { overflow: hidden; }
+  .atlas-dialog .atlas-world { height: 460px; flex-shrink: 0; }
+  .atlas-dialog .atlas-directory-heading { display: flex; }
+  .atlas-dialog .atlas-city-directory { max-height: 210px; }
+}

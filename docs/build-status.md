@@ -2,11 +2,15 @@
 
 **Updated:** 5 October 2026, Asia/Shanghai. **Phase 02: complete locally; all five acceptance gates pass.** Scope: the whole Liaoning province, as explicitly requested by the user. Phase 01 remains delivered at `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`; Phase 02 and the UI refinement are included in the four-commit delivery on `main` requested on 5 October 2026. Consult Git history for delivery hashes. Next: [Phase 03 — grounded guide](../phases/03_GROUNDED_GUIDE.md).
 
+## Part B completion — 5 October 2026
+
+B01–B12 are complete locally: drawer keyboard/backdrop/scroll behavior, unified city camera, persistent graphics preference, readable map labels and 44px controls, native modal atlas and localized page titles. Earlier artwork/navigation/chart fixes are reverified. Final browser suite: **40 passed, 0 failed**; automated accessibility scan: 24 EN/ZH states with no detected violations. [Completion report and evidence](../report/UI_PART_B_COMPLETION.md). Screenshots remain local. Next: Part C of the UI audit.
+
 ## Part A completion — 5 October 2026
 
 All nine Part 1 design corrections are complete locally. The remaining A01/A08/A09 work adds a real API-backed featured exhibit on Home with exact exhibit/source navigation; distinct collection/Story covers and documented hero/card/thumbnail/detail compositions; visitor-first EN/ZH status, retry, last-check feedback and expandable diagnostics. The optional anonymous visit is explained without implying tracking or saved interests.
 
-Full browser regression: **35 passed**. Fresh lint, typecheck, production build and original-art/content/geography preservation checks pass; final focused checks and evidence are recorded in [Part A completion](../report/UI_PART_A_COMPLETION.md). New screenshots remain local and ignored. This pass is included in the owner-requested Part A delivery commit on `main`; consult Git history for the delivery hash. The wider audit remains open; next are **B03–B05 source-drawer behavior**. Later live AI integrations remain assigned phase work.
+Full browser regression: **35 passed**. Fresh lint, typecheck, production build and original-art/content/geography preservation checks pass; final focused checks and evidence are recorded in [Part A completion](../report/UI_PART_A_COMPLETION.md). New screenshots remain local and ignored. This pass is included in the owner-requested Part A delivery commit on `main`; consult Git history for the delivery hash. The wider audit remains open; next is **Part C: UI logical errors and confusing behavior**. Later live AI integrations remain assigned phase work.
 
 ## UI refinement — 5 October 2026
 
