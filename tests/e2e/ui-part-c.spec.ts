@@ -34,22 +34,23 @@ test("atlas distinguishes loading, outage, published city and empty city", async
   await expect(page.locator(".atlas-bottom")).toContainText("Reviewed exhibits available");
 });
 
-test("Guide keeps multiple turns and draft through navigation, clears safely and resets on reload", async ({ page }) => {
+test("Guide keeps conversation through navigation without a clear control and resets on reload", async ({ page }) => {
   await page.goto("/guide"); await page.locator("summary").filter({ hasText: "Preview a conversation" }).click();
   const input = page.getByLabel("Ask the guide");
   for (const question of ["First question", "Second question"]) { await input.fill(question); await page.getByRole("button", { name: "Send", exact: false }).click(); await expect(page.getByRole("button", { name: "Send", exact: false })).toBeDisabled(); await expect(page.locator(".chat-history")).toHaveAttribute("aria-busy", "false"); }
   await expect(page.locator(".chat-question")).toHaveText(["First question", "Second question"]);
   await input.fill("Unsent draft");
   await page.locator("nav.nav-tabs").getByRole("link", { name: "Journey", exact: true }).click();
+  await expect(page).toHaveURL(/\/journey$/);
   await page.locator("nav.nav-tabs").getByRole("link", { name: "Guide", exact: true }).click();
-  await page.locator("summary").filter({ hasText: "Preview a conversation" }).click();
+  await expect(page).toHaveURL(/\/guide$/);
+  const preview = page.locator("details").filter({ has: page.locator("summary").filter({ hasText: "Preview a conversation" }) });
+  if (!await preview.evaluate(node => (node as HTMLDetailsElement).open)) await preview.locator("summary").click();
   await expect(input).toHaveValue("Unsent draft"); await expect(page.locator(".chat-turn")).toHaveCount(2);
   await expect(page.getByRole("button", { name: "Voice — unavailable" })).toBeDisabled();
   await expect(page.getByText("Live microphone transcription is unavailable. Type your question instead.")).toBeVisible();
-  await page.getByRole("button", { name: "Clear conversation" }).click();
-  await expect(input).toHaveValue(""); await expect(page.locator(".chat-turn")).toHaveCount(0);
-  await input.fill("Clear during response"); await page.getByRole("button", { name: "Send", exact: false }).click(); await page.getByRole("button", { name: "Clear conversation" }).click();
-  await page.waitForTimeout(650); await expect(page.locator(".chat-turn")).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Clear conversation" })).toHaveCount(0);
+  await expect(page.locator(".chat-turn")).toHaveCount(2);
   await input.fill("Reload clears this draft"); await page.reload();
   await page.locator("summary").filter({ hasText: "Preview a conversation" }).click(); await expect(input).toHaveValue("");
 });

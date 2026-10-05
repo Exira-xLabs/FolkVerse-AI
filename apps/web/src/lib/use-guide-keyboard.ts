@@ -6,7 +6,7 @@ export function useGuideKeyboard() {
     const viewport = window.visualViewport;
     const previous = document.documentElement.style.getPropertyValue("--guide-keyboard-inset");
     const update = () => {
-      const focused = document.activeElement?.id === "guide-question";
+      const focused = document.activeElement?.id === "guide-question" || document.activeElement?.id === "jinyao-question";
       const inset = focused && viewport ? Math.max(0, innerHeight - viewport.height - viewport.offsetTop) : 0;
       document.documentElement.style.setProperty("--guide-keyboard-inset", `${inset}px`);
       if (focused && inset > 0) document.activeElement?.scrollIntoView({ block: "center", behavior: "instant" });

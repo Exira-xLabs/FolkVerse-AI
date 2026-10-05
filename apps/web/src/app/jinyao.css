@@ -1,0 +1,121 @@
+.jinyao-experience { padding-bottom: 64px; }
+.jinyao-cinematic { height: 165svh; min-height: 1080px; margin: 22px calc(-1 * var(--page-gutter)) 0; }
+.jinyao-cinematic-stage { position: sticky; top: 0; isolation: isolate; height: 100svh; min-height: 620px; max-height: 920px; overflow: hidden; display: flex; align-items: center; padding: 60px var(--page-gutter) 100px; }
+.jinyao-cinematic-image { position: absolute; inset: 0 0 -8%; z-index: -2; transform-origin: 72% 40%; }
+.jinyao-cinematic-image img { object-fit: cover; object-position: 72% 38%; }
+.jinyao-cinematic-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--hero-scrim-strong), var(--hero-scrim-soft) 38%, transparent 72%), linear-gradient(0deg, var(--museum-base), transparent 26%); }
+.jinyao-hero-copy { max-width: 580px; width: 49%; padding-left: 12px; }
+.jinyao-hero-copy h1 { font-size: clamp(64px, 7.2vw, 116px); line-height: 1; margin: 24px 0; }
+.jinyao-hero-copy h1 span { display: block; color: var(--accent-gold); margin-top: 12px; }
+.jinyao-hero-subtitle { font-family: var(--font-display); font-size: clamp(24px, 2.5vw, 34px); line-height: 1.4; }
+.jinyao-hero-description { max-width: 450px; color: var(--text-secondary); font-size: 17px; line-height: 1.8; margin-top: 18px; }
+.jinyao-preview-note { color: var(--text-secondary); font-size: 11px; line-height: 1.7; margin-top: 18px; }
+.jinyao-scroll-cue { position: absolute; bottom: 38px; left: calc(var(--page-gutter) + 12px); display: flex; align-items: center; gap: 20px; min-height: 44px; font-size: 12px; color: var(--text-secondary); }
+.jinyao-scroll-cue svg { color: var(--accent-gold); }
+.jinyao-scroll-progress { position: absolute; inset: auto 0 0; height: 2px; background: var(--accent-gold); transform-origin: left; }
+.jinyao-story { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: 10%; align-items: start; padding: 96px 4%; scroll-margin-top: 32px; }
+.jinyao-story-portrait { position: sticky; top: 36px; margin: 0; border-radius: 28px; overflow: hidden; background: var(--museum-panel); border: 1px solid var(--border-subtle); }
+.jinyao-story-portrait img { display: block; width: 100%; height: auto; max-height: 74svh; object-fit: cover; object-position: center top; }
+.jinyao-story-portrait figcaption { position: absolute; bottom: 0; inset-inline: 0; padding: 64px 28px 24px; background: linear-gradient(0deg, var(--museum-base), transparent); font-size: 12px; color: var(--text-secondary); }
+.jinyao-story-portrait figcaption span { display: block; font-family: var(--font-display); font-size: 27px; color: var(--text-primary); margin-bottom: 6px; }
+.jinyao-chapter { min-height: 44svh; padding-block: 52px; }
+.jinyao-chapter h2 { font-size: clamp(30px, 3.3vw, 48px); line-height: 1.25; margin: 20px 0; max-width: 550px; text-wrap: balance; }
+.jinyao-chapter > p:not(.eyebrow) { font-size: 17px; line-height: 1.8; color: var(--text-secondary); max-width: 480px; }
+.jinyao-chapter-line { display: block; width: 64px; height: 1px; background: var(--accent-gold); margin-top: 32px; }
+.jinyao-conversation { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: 8%; align-items: center; padding: 80px 4%; border-top: 1px solid var(--border-subtle); }
+.jinyao-example-intro h2 { font-size: clamp(30px, 3.5vw, 52px); line-height: 1.25; margin: 20px 0; text-wrap: balance; }
+.jinyao-example-intro > p:not(.eyebrow) { color: var(--text-secondary); line-height: 1.8; margin-bottom: 28px; }
+.jinyao-example-window { border: 1px solid var(--border-subtle); border-radius: 24px; background: var(--museum-panel); box-shadow: 0 24px 72px var(--chat-backdrop); overflow: hidden; }
+.jinyao-example-window > header { display: flex; align-items: center; gap: 14px; padding: 20px 24px; border-bottom: 1px solid var(--border-subtle); background: var(--surface-elevated); }
+.jinyao-example-window h3 { margin: 0 0 5px; font-family: var(--font-display); font-size: 22px; font-weight: 400; }
+.jinyao-example-window header p { color: var(--text-secondary); font-size: 11px; }
+.jinyao-example-label { margin-left: auto; font-size: 10px; color: var(--accent-gold); letter-spacing: .06em; }
+.jinyao-example-window ol { list-style: none; margin: 0; padding: 24px; display: grid; gap: 20px; }
+.jinyao-example-footnote { padding: 0 24px 20px; color: var(--text-secondary); font-size: 11px; }
+.jinyao-avatar { position: relative; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 50%; background: var(--surface-elevated); color: var(--accent-gold); font-family: var(--font-display); flex: none; border: 1px solid var(--border-subtle); }
+.jinyao-avatar img { object-fit: cover; object-position: center 42%; transform: scale(1.3); }
+.jinyao-message { display: flex; align-items: flex-end; gap: 10px; font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.jinyao-message > div:not(.jinyao-avatar) { min-width: 0; }
+.jinyao-message p { padding: 13px 16px; border-radius: 18px 18px 18px 4px; background: var(--surface-elevated); color: var(--text-primary); }
+.jinyao-message.from-visitor { margin-left: auto; justify-content: flex-end; max-width: 84%; }
+.jinyao-message.from-visitor p { background: var(--chat-visitor-surface); border-radius: 18px 18px 4px 18px; }
+.jinyao-message a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent-gold); font-size: 12px; text-decoration: underline; text-underline-offset: 4px; padding-inline: 8px; }
+.jinyao-advanced-preview { margin: 24px 4% 0; }
+.jinyao-chat-launcher { position: fixed; bottom: 24px; right: 24px; z-index: 25; border: 1px solid var(--glass-border); border-radius: 999px; background: var(--museum-panel); color: var(--text-primary); display: flex; align-items: center; gap: 12px; padding: 8px 18px 8px 8px; min-height: 60px; box-shadow: 0 12px 36px var(--chat-backdrop); }
+.jinyao-chat-launcher > svg { color: var(--accent-gold); }
+.jinyao-messenger { position: fixed; inset: auto 24px calc(24px + var(--guide-keyboard-inset, 0px)) auto; margin: 0; width: min(420px, calc(100vw - 32px)); height: min(690px, calc(100dvh - var(--guide-keyboard-inset, 0px) - 48px)); max-height: none; max-width: none; padding: 0; border: 1px solid var(--glass-border); border-radius: 24px; background: var(--museum-panel); color: var(--text-primary); box-shadow: 0 24px 80px var(--chat-backdrop); overflow: hidden; }
+.jinyao-messenger[open] { display: flex; flex-direction: column; }
+.jinyao-messenger::backdrop { background: var(--chat-backdrop); }
+.jinyao-chat-header { display: flex; align-items: center; gap: 12px; padding: 16px 18px; background: var(--surface-elevated); border-bottom: 1px solid var(--border-subtle); flex: none; }
+.jinyao-chat-header h2 { font-size: 23px; }
+.jinyao-chat-header p { color: var(--text-secondary); font-size: 10px; margin-top: 4px; }
+.jinyao-close { margin-left: auto; background: transparent; border: 0; color: var(--text-primary); width: 44px; height: 44px; flex: none; font-size: 28px; border-radius: 50%; }
+.jinyao-close:hover { background: var(--surface-hover); }
+.jinyao-chat-notice { font-size: 10px; line-height: 1.6; padding: 10px 18px; color: var(--accent-gold); border-bottom: 1px solid var(--border-subtle); flex: none; }
+.jinyao-chat-history { flex: 1; min-height: 0; overflow-y: auto; padding: 18px 16px; overscroll-behavior: contain; }
+.jinyao-chat-turn { display: grid; gap: 16px; margin-top: 20px; }
+.jinyao-chat-prompts { display: flex; gap: 7px; padding: 10px 16px; flex: none; overflow-x: auto; }
+.jinyao-chat-prompts button { min-height: 44px; flex: none; padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 999px; background: transparent; color: var(--text-secondary); font-size: 11px; }
+.jinyao-chat-prompts button:hover { border-color: var(--accent-gold); }
+.jinyao-chat-composer { display: flex; align-items: flex-end; gap: 10px; padding: 10px 16px 6px; flex: none; border-top: 1px solid var(--border-subtle); }
+.jinyao-chat-composer textarea { width: 100%; min-width: 0; min-height: 52px; max-height: 100px; resize: none; padding: 12px; border-radius: 16px; border: 1px solid var(--border-subtle); background: var(--surface-elevated); font-size: 14px; }
+.jinyao-chat-composer .gold-button { width: 48px; min-height: 48px; padding: 8px; border-radius: 12px; flex: none; font-size: 22px; }
+.jinyao-chat-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px 10px; font-size: 10px; color: var(--text-secondary); flex: none; }
+.jinyao-chat-footer button { border: 0; background: none; color: var(--accent-gold); padding: 8px 0; min-height: 44px; font-size: 11px; }
+.jinyao-chat-limit { padding: 0 16px 12px; font-size: 11px; color: var(--text-secondary); }
+.low-data .jinyao-cinematic { height: auto; min-height: 0; }
+.low-data .jinyao-cinematic-stage { position: relative; height: auto; min-height: 580px; }
+.low-data .jinyao-story-portrait { min-height: 280px; }
+.reduced-graphics .jinyao-cinematic { height: auto; min-height: 0; }
+.reduced-graphics .jinyao-cinematic-stage { position: relative; }
+
+@keyframes jinyao-chapter-arrive { from { opacity: .4; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .jinyao-chapter { animation: jinyao-chapter-arrive linear both; animation-timeline: view(); animation-range: entry 0% entry 85%; }
+    .reduced-graphics .jinyao-chapter { animation: none; }
+  }
+}
+@media (max-width: 1050px) {
+  .jinyao-hero-copy { width: 55%; }
+  .jinyao-hero-copy h1 { font-size: 76px; }
+  .jinyao-story, .jinyao-conversation { gap: 6%; padding-inline: 0; }
+}
+@media (max-width: 700px) {
+  .jinyao-cinematic { margin-top: 0; height: auto; min-height: 0; }
+  .jinyao-cinematic-stage { position: relative; height: auto; min-height: 0; max-height: none; flex-direction: column; align-items: stretch; padding: 0 var(--page-gutter) 88px; }
+  .jinyao-cinematic-image { position: relative; inset: auto; margin-inline: calc(-1 * var(--page-gutter)); aspect-ratio: 3 / 2; flex: none; transform-origin: 72% 40%; }
+  .jinyao-cinematic-image img { object-fit: cover; object-position: 72% center; }
+  .jinyao-cinematic-shade { display: none; }
+  .jinyao-hero-copy { width: 100%; padding: 24px 4px 0; }
+  .jinyao-headline { position: absolute; top: 0; left: var(--page-gutter); width: 46%; height: calc(100vw * 2 / 3); display: flex; flex-direction: column; justify-content: center; padding-block: 12px; }
+  .jinyao-hero-copy h1 { font-size: clamp(28px, 8.5vw, 42px); margin: 12px 0; }
+  .jinyao-hero-copy h1 span { margin-top: 6px; }
+  .jinyao-hero-copy .eyebrow { font-size: 9px; max-width: 150px; line-height: 1.6; }
+  .jinyao-hero-subtitle { font-size: 13px; max-width: 160px; }
+  .jinyao-hero-description { font-size: 14px; line-height: 1.7; max-width: 330px; }
+  .jinyao-hero-copy .hero-actions { gap: 10px; margin-top: 18px; }
+  .jinyao-hero-copy .gold-button { font-size: 13px; padding: 10px 16px; }
+  .jinyao-preview-note { font-size: 10px; }
+  .jinyao-scroll-cue { bottom: 30px; }
+  .jinyao-story { grid-template-columns: 1fr; padding-block: 54px; }
+  .jinyao-story-portrait { position: relative; top: auto; width: min(100%, 420px); margin-inline: auto; }
+  .jinyao-story-portrait img { max-height: 540px; }
+  .jinyao-chapter { min-height: 0; padding-block: 38px; }
+  .jinyao-chapter > p:not(.eyebrow) { font-size: 15px; }
+  .jinyao-conversation { grid-template-columns: 1fr; gap: 30px; padding-block: 42px; }
+  .jinyao-example-window ol { padding: 18px 14px; }
+  .jinyao-example-window > header { padding: 16px; }
+  .jinyao-example-window .jinyao-message { font-size: 13px; }
+  .jinyao-advanced-preview { margin-inline: 0; }
+  .jinyao-chat-launcher { bottom: calc(88px + env(safe-area-inset-bottom)); right: 18px; min-height: 56px; padding-right: 12px; }
+  .jinyao-chat-launcher > span:not(.jinyao-avatar) { display: none; }
+  .jinyao-messenger { inset: auto 8px calc(8px + var(--guide-keyboard-inset, 0px)) auto; width: calc(100vw - 16px); height: min(690px, calc(100dvh - var(--guide-keyboard-inset, 0px) - 16px)); border-radius: 20px; }
+  .jinyao-chat-composer textarea { font-size: 16px; }
+  .low-data .jinyao-headline { position: static; width: 100%; height: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jinyao-cinematic { height: auto; min-height: 0; }
+  .jinyao-cinematic-stage { position: relative; }
+  .jinyao-chapter { animation: none; }
+}
