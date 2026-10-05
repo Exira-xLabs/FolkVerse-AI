@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useLocale } from "./locale-provider";
 import { AudioControls, demoExhibits, ExhibitCard, GlassPanel, GoldButton, GuidePortrait, InterestChart, SourceDrawer, ThemeChip } from "./museum-ui";
 import { CatalogExperience } from "./catalog-explorer";
+import { useVisit } from "./visit-provider";
+import { ExhibitContext } from "./exhibit-context";
 import { MuseumSelect } from "./museum-select";
 import type { PageKey } from "@/lib/routes";
 
@@ -17,7 +19,7 @@ type OpenSource = (title?: string) => void;
 function ExperiencePreview({ page, children }: { page: "journey" | "lens" | "guide"; children: React.ReactNode }) {
   const c = useCopy();
   const copy = {
-    journey: ["A little time, a new discovery", "用一点时间，发现新的文化", "Personal routes are being prepared. Start with the reviewed Liaoning collection, or try a sample digital learning route.", "个性化路线正在准备中。您可以先浏览审核后的辽宁馆藏，或尝试示例数字学习路线。", "Preview a learning route", "预览学习路线"],
+    journey: ["A little time, a new discovery", "用一点时间，发现新的文化", "Personal routes are being prepared. Start with the reviewed Liaoning collection, or try a separate example tour of Shaanxi, Fujian and Guangdong.", "个性化路线正在准备中。您可以先浏览审核后的辽宁馆藏，或尝试陕西、福建和广东的独立示例游览。", "Preview a learning route", "预览学习路线"],
     lens: ["Curious about an object?", "想了解眼前的物件？", "Photo recognition is being prepared. Explore reviewed exhibits and their sources while you wait. The optional example below shows how results could look.", "照片识别正在准备中。您可以先探索审核展览及其来源。下方的可选示例展示未来结果的呈现方式。", "Preview Object Lens", "预览识物体验"],
     guide: ["Welcome to the museum", "欢迎来到博物馆", "Source-backed conversation is being prepared. Discover a reviewed exhibit today, or try a clearly labelled conversation example.", "有来源依据的对话正在准备中。您可以先探索审核展览，或尝试明确标注的对话示例。", "Preview a conversation", "预览对话体验"],
   }[page];
@@ -45,18 +47,27 @@ function Explore({ open }: { open: OpenSource }) {
 }
 
 function Journey({ open }: { open: OpenSource }) {
-  const c = useCopy(); const [stops, setStops] = useState(demoExhibits); const [duration, setDuration] = useState(20); const [theme, setTheme] = useState("all");
-  const regenerate = () => { let total = 0; setStops(demoExhibits.filter(e => { if (theme !== "all" && e.theme !== theme) return false; if (total + e.minutes > duration) return false; total += e.minutes; return true; })); };
-  const move = (index: number, direction: number) => setStops(previous => { const next = [...previous]; [next[index], next[index + direction]] = [next[index + direction], next[index]]; return next; });
+  const c = useCopy(); const { journey, setJourney } = useVisit();
+  const { duration, theme, appliedDuration, appliedTheme } = journey;
+  const stops = journey.ids.map(id => demoExhibits.find(e => e.id === id)!).filter(Boolean);
+  const setStops = (next: typeof stops) => setJourney(previous => ({ ...previous, ids: next.map(e => e.id) }));
+  const setDuration = (duration: number) => setJourney(previous => ({ ...previous, duration }));
+  const setTheme = (theme: string) => setJourney(previous => ({ ...previous, theme }));
+  const dirty = duration !== appliedDuration || theme !== appliedTheme;
+  const regenerate = () => { let total = 0; const next = demoExhibits.filter(e => { if (theme !== "all" && e.theme !== theme) return false; if (total + e.minutes > duration) return false; total += e.minutes; return true; }); setJourney(previous => ({ ...previous, ids: next.map(e => e.id), appliedDuration: duration, appliedTheme: theme })); };
+  const move = (index: number, direction: number) => { const next = [...stops]; [next[index], next[index + direction]] = [next[index + direction], next[index]]; setStops(next); };
   const total = stops.reduce((sum, e) => sum + e.minutes, 0);
   return <div className="journey-layout"><div className="journey-controls">
     <MuseumSelect compact label={c("Interests", "兴趣")} value={theme} onChange={setTheme} options={[{ value: "all", label: c("All interests", "所有兴趣") }, ...[["Craft", "工艺"], ["Music", "音乐"], ["Food", "饮食"]].map(([value, zh]) => ({ value, label: c(value, zh) }))]} />
     <MuseumSelect compact label={c("Time", "时长")} value={String(duration)} onChange={value => setDuration(Number(value))} options={[5, 10, 20, 30].map(value => ({ value: String(value), label: `${value} ${c("minutes", "分钟")}` }))} />
-    <GoldButton onClick={regenerate}>{c("Shape my route", "生成我的路线")} ↗︎</GoldButton>
-  </div><GlassPanel className="journey-route"><div className="panel-heading"><h2>{c("Your next discoveries", "您的下一站发现")}</h2><span className="demo-tag" aria-live="polite">{stops.length} {c("stops", "站")} · {total} / {duration} {c("min", "分钟")}</span></div>
+    <GoldButton onClick={regenerate}>{c("Apply — Shape my route", "应用 — 生成我的路线")} ↗︎</GoldButton>
+  </div><GlassPanel className="journey-route"><div className="panel-heading"><h2>{c("Your next discoveries", "您的下一站发现")}</h2><span className="demo-tag" aria-live="polite">{stops.length} {c("stops", "站")} · {total} / {appliedDuration} {c("min", "分钟")}</span></div>
+    {dirty && <p role="status" className="journey-draft">{c("Draft criteria changed. This route still uses the last applied time and interests; apply to update it.", "草稿条件已修改。当前路线仍使用上次应用的时长与兴趣，请应用以更新。")}</p>}
+    <p className="fine-print">{c("Separate example tour: Shaanxi, Fujian and Guangdong. This is not a Liaoning route. The plan stays in memory during this visit; reload or close clears it. Durable saving is not connected.", "独立示例游览：陕西、福建和广东。这不是辽宁路线。计划仅在本次访问的内存中保留，刷新或关闭后清除。持久保存尚未连接。")}</p>
+    <button className="text-button" onClick={() => setJourney({ ids: demoExhibits.map(e => e.id), duration: 20, theme: "all", appliedDuration: 20, appliedTheme: "all" })}>{c("Reset example plan", "重置示例计划")}</button>
     <p className="fine-print">{c("A digital learning route · illustrative stops, not physical travel directions.", "数字学习路线 · 示例站点，不是实际旅行导航。")}</p>
     {!stops.length ? <p className="empty-state">{c("Not enough time for an eligible demo stop. Increase the duration or change your interests.", "没有符合时长的演示站点，请增加时长或更换兴趣。")}</p> : <ol className="journey-stops">{stops.map((e, i) => <li key={e.id}><span className="stop-number">{String(i + 1).padStart(2, "0")}</span><h3>{c(e.region[0], e.region[1])}</h3><button className="text-button" onClick={() => open(c(e.title[0], e.title[1]))}>{c(e.title[0], e.title[1])} ↗︎</button><span className="fine-print">{e.minutes} {c("min", "分钟")}</span><div className="stop-actions"><button className="icon-button" aria-label={`${c("Move up", "上移")} ${e.id}`} disabled={i === 0} onClick={() => move(i, -1)}>↑</button><button className="icon-button" aria-label={`${c("Move down", "下移")} ${e.id}`} disabled={i === stops.length - 1} onClick={() => move(i, 1)}>↓</button><button className="text-button" aria-label={`${c("Remove", "移除")} ${e.id}`} onClick={() => setStops(stops.filter(s => s.id !== e.id))}>{c("Remove", "移除")}</button></div></li>)}</ol>}
-    {total > duration && <p role="status">{c("This route exceeds your selected time. Regenerate or remove a stop.", "路线超出所选时长，请重新生成或删除站点。")}</p>}
+    {total > appliedDuration && <p role="status">{c("This route exceeds your selected time. Regenerate or remove a stop.", "路线超出所选时长，请重新生成或删除站点。")}</p>}
   </GlassPanel></div>;
 }
 
@@ -83,11 +94,22 @@ function Lens({ open }: { open: OpenSource }) {
 }
 
 function Guide({ open }: { open: OpenSource }) {
-  const c = useCopy(); const [question, setQuestion] = useState(""); const [asked, setAsked] = useState(""); const [state, setState] = useState("ready"); const [notice, setNotice] = useState("");
-  const send = async () => { if (!question.trim() || state === "loading") return; setAsked(question.trim()); setQuestion(""); setState("loading"); await new Promise(resolve => setTimeout(resolve, 500)); setState("answered"); };
-  return <div className="guide-layout"><GlassPanel className="chat-panel"><span className="demo-tag">{c("SCRIPTED DEMO · NO MODEL CALL", "脚本演示 · 无模型调用")}</span><div className="chat-history" aria-live="polite" aria-busy={state === "loading"}><p className="eyebrow">{c("YOU", "您")}</p><div className="chat-question">{asked || c("What can I discover here?", "我能在这里发现什么？")}</div><p className="eyebrow">{c("GUIDE", "向导")}</p><p className="chat-answer">{state === "loading" ? c("Loading the scripted response…", "正在加载脚本回答…") : asked ? c("This is a recorded UI demonstration, so I cannot answer your question from evidence yet. Explore a demo exhibit, or inspect the source requirements below.", "这是预设界面演示，目前无法根据证据回答您的问题。您可以探索示例展览，或查看下方来源要求。") : c("Follow a lantern, shape a learning route, or explore your cultural interests. These interactive previews use demo material; reviewed cultural answers are coming in a later phase.", "追随灯笼、规划学习路线，或探索文化兴趣。这些交互预览使用演示资料，经过审核的文化问答将在后续阶段上线。")}</p><button className="source-pill" onClick={() => open()}>{c("Demo provenance & source requirements", "演示出处与来源要求")} ↗︎</button></div>
-    <form className="guide-composer" onSubmit={e => { e.preventDefault(); void send(); }}><label className="sr-only" htmlFor="guide-question">{c("Ask the guide", "向向导提问")}</label><textarea id="guide-question" maxLength={2000} rows={2} value={question} onChange={e => setQuestion(e.target.value)} placeholder={c("Ask about a tradition…", "询问文化传统…")} /><GoldButton type="submit" disabled={!question.trim() || state === "loading"}>{c("Send", "发送")} ↑</GoldButton></form>
-    <div className="composer-bottom"><small>{question.length} / 2000</small><button className="text-button" onClick={() => setNotice(c("Live microphone transcription is unavailable. Type your question instead.", "实时麦克风转写尚未开放，请输入您的问题。"))}>{c("Voice", "语音")} ◉</button></div>{notice && <p role="status" className="fine-print">{notice}</p>}
+  const c = useCopy(); const { guide, setGuide } = useVisit(); const question = guide.draft;
+  const busy = guide.turns.some(turn => turn.pending);
+  const send = async () => {
+    if (!question.trim() || busy || guide.turns.length >= 20) return;
+    const id = crypto.randomUUID();
+    setGuide(previous => ({ draft: "", turns: [...previous.turns, { id, question: question.trim(), pending: true }] }));
+    await new Promise(resolve => setTimeout(resolve, 500));
+    setGuide(previous => ({ ...previous, turns: previous.turns.map(turn => turn.id === id ? { ...turn, pending: false } : turn) }));
+  };
+  return <div className="guide-layout"><GlassPanel className="chat-panel"><span className="demo-tag">{c("SCRIPTED DEMO · NO MODEL CALL", "脚本演示 · 无模型调用")}</span>
+    <p className="fine-print">{c("Draft and up to 20 turns stay in memory while you navigate this visit. Reload, close or Clear conversation removes them. Nothing is sent to a model or saved on a server; scripted replies do not use conversation history as AI context.", "草稿与最多20轮对话仅在本次访问的内存中保留。刷新、关闭或清除对话后移除。内容不会发送给模型或保存到服务器；脚本回答不会将历史作为 AI 上下文。")}</p>
+    <button className="text-button" onClick={() => setGuide({ draft: "", turns: [] })}>{c("Clear conversation", "清除对话")}</button>
+    <div className="chat-history" aria-live="polite" aria-busy={busy}>{!guide.turns.length && <p className="chat-answer">{c("Explore a reviewed exhibit, or try this conversation preview. Answers here are scripted examples.", "探索审核展览，或尝试此对话预览。此处回答均为预设示例。")}</p>}{guide.turns.map(turn => <article className="chat-turn" key={turn.id}><p className="eyebrow">{c("YOU", "您")}</p><div className="chat-question">{turn.question}</div><p className="eyebrow">{c("GUIDE", "向导")}</p><p className="chat-answer">{turn.pending ? c("Loading the scripted response…", "正在加载脚本回答…") : c("This is a recorded UI demonstration, so I cannot answer your question from evidence yet. Browse the reviewed collection, or inspect the source requirements below.", "这是预设界面演示，目前无法根据证据回答您的问题。您可以浏览审核馆藏，或查看下方来源要求。")}</p></article>)}<button className="source-pill" onClick={() => open()}>{c("Demo provenance & source requirements", "演示出处与来源要求")} ↗︎</button></div>
+    {guide.turns.length >= 20 && <p role="status">{c("This preview has reached 20 turns. Clear the conversation to start again.", "此预览已达到20轮。请清除对话以重新开始。")}</p>}
+    <form className="guide-composer" onSubmit={e => { e.preventDefault(); void send(); }}><label className="sr-only" htmlFor="guide-question">{c("Ask the guide", "向向导提问")}</label><textarea id="guide-question" maxLength={2000} rows={2} value={question} onChange={e => setGuide(previous => ({ ...previous, draft: e.target.value }))} placeholder={c("Ask about a tradition…", "询问文化传统…")} /><GoldButton type="submit" disabled={!question.trim() || busy || guide.turns.length >= 20}>{c("Send", "发送")} ↑</GoldButton></form>
+    <div className="composer-bottom"><small>{question.length} / 2000</small><button className="text-button" disabled aria-describedby="voice-availability">{c("Voice — unavailable", "语音 — 尚未开放")} ◉</button></div><p id="voice-availability" className="fine-print">{c("Live microphone transcription is unavailable. Type your question instead.", "实时麦克风转写尚未开放，请输入您的问题。")}</p>
   </GlassPanel></div>;
 }
 
@@ -112,7 +134,7 @@ function Sources({ open }: { open: OpenSource }) {
 export function MuseumExperiences({ page, mode, initialExhibitId }: { page: PageKey; mode: "demo" | "live"; initialExhibitId?: string }) {
   const c = useCopy(); const [source, setSource] = useState<string | null>(null); const open: OpenSource = title => setSource(title || "");
   if (page === "explore" || page === "sources") return <><CatalogExperience page={page} mode={mode} initialExhibitId={initialExhibitId} fixture={<div className="fixture-content">{page === "explore" ? <Explore open={open} /> : <Sources open={open} />}</div>} /><SourceDrawer open={source !== null} title={source || undefined} onClose={() => setSource(null)} /></>;
-  if (mode !== "demo") return <GlassPanel className="experience-panel"><p className="eyebrow">{c("LIVE MODE", "实时模式")}</p><h2>{c("This experience is not available yet.", "此功能尚未开放。")}</h2><p>{c("Live content and providers are not connected. Demo fixtures are disabled in live mode.", "尚未连接真实内容及服务，实时模式不提供演示资料。")}</p><Link href="/status" className="outline-button">{c("Check services", "检查服务")}</Link></GlassPanel>;
+  if (mode !== "demo") return <><ExhibitContext page={page} identifier={initialExhibitId} /><GlassPanel className="experience-panel"><p className="eyebrow">{c("LIVE MODE", "实时模式")}</p><h2>{c("This experience is not available yet.", "此功能尚未开放。")}</h2><p>{c("This capability’s live API is not connected. Published exhibits and sources are available in Explore. Demo fixtures are disabled in live mode.", "此功能的真实 API 尚未连接。探索页面提供已发布展览与来源。实时模式不提供演示资料。")}</p><Link href="/status" className="outline-button">{c("Check services", "检查服务")}</Link></GlassPanel></>;
   const screens: Partial<Record<PageKey, React.ReactNode>> = { explore: <Explore open={open} />, journey: <Journey open={open} />, stories: <Stories open={open} />, lens: <Lens open={open} />, guide: <Guide open={open} />, dna: <Dna open={open} />, sources: <Sources open={open} /> };
-  return <><div className="fixture-content">{page === "journey" || page === "lens" || page === "guide" ? <ExperiencePreview page={page}>{screens[page]}</ExperiencePreview> : screens[page]}</div><SourceDrawer open={source !== null} title={source || undefined} onClose={() => setSource(null)} /></>;
+  return <><ExhibitContext page={page} identifier={initialExhibitId} canDraft /><div className="fixture-content">{page === "journey" || page === "lens" || page === "guide" ? <ExperiencePreview page={page}>{screens[page]}</ExperiencePreview> : screens[page]}</div><SourceDrawer open={source !== null} title={source || undefined} onClose={() => setSource(null)} /></>;
 }

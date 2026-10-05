@@ -9,7 +9,7 @@ test("collection dropdown supports keyboard selection, cancellation, typeahead a
   await region.focus();
   await page.keyboard.press("Enter");
   await expect(page.getByRole("listbox", { name: "Region" })).toBeVisible();
-  await expect(page.getByRole("option")).toHaveCount(16);
+  await expect(page.getByRole("option")).toHaveCount(15);
   await expect(page.getByRole("option", { name: "All Liaoning", exact: true })).toHaveAttribute("aria-selected", "true");
   await page.keyboard.press("End");
   await expect(page.getByRole("option", { name: "Huludao", exact: true })).toBeInViewport();

@@ -35,3 +35,7 @@
 - Explore and Sources use database-backed publication in both modes. Demo fixtures require an explicit preview toggle; later live AI capabilities remain unavailable.
 - A versioned operator snapshot restores original reviews into empty content tables and rejects overwrite or hash mismatch. It is a trusted local artifact, not a signed proof of editor identity. Missing image bytes stay ineligible and absent from downloaded counts.
 - Phase 02 screenshots/results are isolated under `report/evidence/phase02`; the map extension uses `report/evidence/phase02-map`. Earlier evidence and original artwork are preserved.
+
+## 5 October 2026 — Part C visit and context contracts
+
+Guide history/drafts and temporary Journey plans now survive internal navigation in root-provider memory, with explicit clear/reset and reload/close lifetimes. Journey criteria are drafts until Apply; the visible committed route retains its applied time. Published exhibit IDs travel into later experience screens with current-record revalidation and honest capability limits. Audio remains the actual English recording with transcript/Chinese translation and text-only choice. These changes do not implement later AI APIs or durable storage. [Exact UI contract](visit-state-and-context.md).

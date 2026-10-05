@@ -8,7 +8,7 @@ test("Liaoning published region → exhibit → attributed source works in both 
   expect((await collection.json()).items.map((e: { id: string }) => e.id)).toEqual(["liaoning-dalian-01"]);
   await page.goto("/explore");
   await page.getByRole("combobox", { name: "Region", exact: true }).click();
-  await page.getByRole("option", { name: "Liaoning province", exact: true }).click();
+  await page.getByRole("option", { name: "All Liaoning", exact: true }).click();
   const opener = page.getByRole("button", { name: /Fuzhou shadow puppetry/ });
   await expect(opener).toBeVisible();
   await expect(page.getByText("1 published exhibit", { exact: true })).toBeVisible();

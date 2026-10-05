@@ -583,3 +583,17 @@ button:disabled { cursor: default; }
   .atlas-dialog .atlas-directory-heading { display: flex; }
   .atlas-dialog .atlas-city-directory { max-height: 210px; }
 }
+
+/* Part C: retained visit state, explicit drafts and exhibit continuation. */
+.exhibit-context { padding: 24px; margin-bottom: 24px; }
+.exhibit-context p { line-height: 1.7; margin-block: 14px; }
+.exhibit-context a, .exhibit-context button { margin: 8px 12px 8px 0; }
+.exhibit-next { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 24px; }
+.chat-turn { border-bottom: 1px solid #d6c19638; padding-bottom: 16px; margin-bottom: 16px; }
+.chat-question { overflow-wrap: anywhere; }
+.journey-draft { border-left: 3px solid var(--accent-gold); padding: 12px; }
+.narration-panel { margin-block: 20px; }
+.narration-panel select { min-height: 44px; padding: 10px; color: var(--text-primary); background: #0b1722; border: 1px solid #c1c9ca66; border-radius: 10px; }
+.narration-transcript { margin-block: 16px; }
+.narration-transcript summary { min-height: 44px; padding-block: 12px; cursor: pointer; }
+.narration-transcript p { line-height: 1.7; }

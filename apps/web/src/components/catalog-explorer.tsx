@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { api, type ExhibitDetail, type ExhibitPage, type RegionList, type SourceCard, type SourceList } from "@folkverse/contracts";
 import { useLocale } from "./locale-provider";
@@ -34,7 +35,7 @@ export function CatalogExperience({ page, mode, fixture, initialExhibitId }: { p
         if (page === "explore") {
           const [r, e] = await Promise.all([
             api.GET("/api/v1/regions", { params: { query: { locale } }, signal: controller.signal, cache: "no-store" }),
-            api.GET("/api/v1/exhibits", { params: { query: { locale, q: query, region_id: region || undefined, themes: theme || undefined, cursor, limit: 12 } }, signal: controller.signal, cache: "no-store" }),
+            api.GET("/api/v1/exhibits", { params: { query: { locale, q: query, region_id: region || "liaoning", themes: theme || undefined, cursor, limit: 12 } }, signal: controller.signal, cache: "no-store" }),
           ]);
           if (!r.data || !e.data) throw new Error();
           setRegions(r.data.items); setExhibits(e.data);
@@ -75,7 +76,7 @@ export function CatalogExperience({ page, mode, fixture, initialExhibitId }: { p
     {page === "explore" && <><div className="collection-view-switch" aria-label={zh ? "探索方式" : "Explore view"}>
       <button className={`theme-chip ${view === "collection" ? "selected" : ""}`} aria-pressed={view === "collection"} onClick={() => setView("collection")}>{zh ? "浏览馆藏" : "Browse collection"}</button>
       <button className={`theme-chip ${view === "map" ? "selected" : ""}`} aria-pressed={view === "map"} onClick={() => setView("map")}>{zh ? "探索地图" : "Explore map"}</button>
-    </div><div hidden={view !== "map"}><LiaoningAtlas selectedId={region} onSelect={id => { setRegion(id); setCursor(undefined); }} availableIds={regions.map(r => r.id)} /></div></>}
+    </div><div hidden={view !== "map"}><LiaoningAtlas selectedId={region} onSelect={id => { setRegion(id); setCursor(undefined); }} availableIds={regions.map(r => r.id)} availability={state} /></div></>}
     <div className="collection-layout">
 <GlassPanel className="collection-results" id={page === "explore" ? "liaoning-city-collection" : undefined}><div className="panel-heading"><h2>{region.startsWith("liaoning-") ? atlasCities.find(c => c.id === region)?.names[locale] : zh ? "馆藏中的相遇" : "Meet the collection"}</h2><span className="demo-tag">{zh ? "人工编辑审核" : "Human editorial review"}</span></div>
       {state === "loading" && <p role="status" className="empty-state">{zh ? "正在加载馆藏…" : "Loading the collection…"}</p>}
@@ -86,11 +87,11 @@ export function CatalogExperience({ page, mode, fixture, initialExhibitId }: { p
     </GlassPanel>
     <GlassPanel className="collection-controls"><p className="eyebrow">{zh ? "循着来源探索" : "FOLLOW THE EVIDENCE"}</p><h2>{page === "explore" ? (zh ? "走进辽宁" : "Discover Liaoning") : (zh ? "出处与记录" : "Sources, in the open")}</h2>
       {page === "explore" && <><label className="field"><span>{zh ? "搜索已发布展览" : "Search published exhibits"}</span><input type="search" maxLength={200} value={query} onChange={e => { setQuery(e.target.value); setCursor(undefined); }} placeholder={zh ? "光影、工艺、传承…" : "Light, craft, heritage…"} /></label>
-        <MuseumSelect label={zh ? "地区" : "Region"} value={region} onChange={value => { setRegion(value); setCursor(undefined); }} options={[{ value: "", label: zh ? "辽宁全省" : "All Liaoning" }, { value: "liaoning", label: zh ? "辽宁省" : "Liaoning province" }, ...atlasCities.map(r => ({ value: r.id, label: r.names[locale] }))]} />
+        <MuseumSelect label={zh ? "地区" : "Region"} value={region} onChange={value => { setRegion(value); setCursor(undefined); }} options={[{ value: "", label: zh ? "辽宁全省" : "All Liaoning" }, ...atlasCities.map(r => ({ value: r.id, label: r.names[locale] }))]} />
         <MuseumSelect label={zh ? "主题" : "Theme"} value={theme} onChange={value => { setTheme(value); setCursor(undefined); }} options={[{ value: "", label: zh ? "所有主题" : "All themes" }, ...[["performance", "Performance", "表演"], ["craft", "Craft", "工艺"], ["music", "Music", "音乐"], ["custom", "Customs", "民俗"], ["learning", "Learning", "学习"]].map(([value, en, cn]) => ({ value, label: zh ? cn : en }))]} /></>}
-      <p className="fine-print">{page === "explore" ? (zh ? "全省14个地级市是馆藏采集范围。选择城市，查看已有审核展览。" : "Select a city to explore reviewed exhibits across Liaoning’s 14 cities.") : (zh ? "查看展览所依据的机构资料与审核记录。" : "Read the institutional evidence and review records behind the exhibits.")}</p>
+      <p className="fine-print">{page === "explore" ? (zh ? "全省14个地级市是馆藏采集范围。选择城市，查看已有审核展览。" : "Select a city to explore reviewed exhibits across Liaoning’s 14 cities.") : (zh ? "浏览已发布来源记录，打开记录查看获准摘录、机构署名、编辑审核与使用权限。" : "Browse published source records. Open a record to read permitted excerpts, institution attribution, editorial review and rights.")}</p>
       <button className="text-button" onClick={refresh}>{zh ? "刷新馆藏" : "Refresh collection"} ↻</button>
     </GlassPanel></div></>}
-    <SourceDrawer open={selection !== null} title={title} onClose={() => setSelection(null)}>{detailError ? <p role="alert">{zh ? "此记录已撤回或暂时无法访问。请关闭并刷新馆藏。" : "This record was withdrawn or cannot currently be reached. Close this drawer and refresh the collection."}</p> : detail ? <>{"summary" in detail && <><span className="demo-tag">{zh ? "已发布展览" : "Published exhibit"}</span><p>{detail.summary}</p><p className="fine-print">{zh ? "审核人" : "Reviewed by"}: {detail.review.reviewer}</p></>}{("sources" in detail ? detail.sources : [detail]).map(s => <SourceRecord key={s.id} source={s} />)}</> : <p role="status">{zh ? "正在读取审核记录…" : "Reading the reviewed record…"}</p>}</SourceDrawer>
+    <SourceDrawer open={selection !== null} title={title} onClose={() => setSelection(null)}>{detailError ? <p role="alert">{zh ? "此记录已撤回或暂时无法访问。请关闭并刷新馆藏。" : "This record was withdrawn or cannot currently be reached. Close this drawer and refresh the collection."}</p> : detail ? <>{"summary" in detail && <><span className="demo-tag">{zh ? "已发布展览" : "Published exhibit"}</span><p>{detail.summary}</p><p className="fine-print">{zh ? "审核人" : "Reviewed by"}: {detail.review.reviewer}</p><nav className="exhibit-next" aria-label={zh ? "继续探索此展览" : "Continue with this exhibit"}>{[["/guide", "Ask about this exhibit", "询问此展览"], ["/journey", "Learn from this exhibit", "从此展览开始学习"], ["/stories/lantern-path", "Explore story options", "探索故事选项"], ["/dna", "Explore interests", "探索兴趣"]].map(([href, en, cn]) => <Link className="outline-button" key={href} href={`${href}?exhibit=${encodeURIComponent(detail.id)}`}>{zh ? cn : en} ↗︎</Link>)}</nav><p className="fine-print">{zh ? "展览上下文会随链接保留；AI 问答、个性化路线与故事生成尚未连接。" : "These links carry the exhibit context. AI answers, personalized routes and story generation are not connected."}</p></>}{("sources" in detail ? detail.sources : [detail]).map(s => <SourceRecord key={s.id} source={s} />)}</> : <p role="status">{zh ? "正在读取审核记录…" : "Reading the reviewed record…"}</p>}</SourceDrawer>
   </div>;
 }

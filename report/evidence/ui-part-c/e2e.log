@@ -1,0 +1,67 @@
+$ playwright test
+[WebServer] INFO:     Started server process [1119836]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:1119888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:1119902) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1119931) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1119945) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 46 tests using 1 worker
+
+(node:1120006) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/content.spec.ts:4:5 › Liaoning published region → exhibit → attributed source works in both languages (3.1s)
+  ✓   2 tests/e2e/content.spec.ts:45:5 › published source index hides draft sources and exposes only permitted passages (858ms)
+  ✓   3 tests/e2e/content.spec.ts:56:5 › collection error recovers and withdrawn drawer clears on revalidation (1.3s)
+  ✓   4 tests/e2e/dropdowns.spec.ts:5:5 › collection dropdown supports keyboard selection, cancellation, typeahead and outside dismissal (1.7s)
+  ✓   5 tests/e2e/dropdowns.spec.ts:48:5 › compact and Chinese touch dropdowns fit the viewport and preserve their choices (1.8s)
+  ✓   6 tests/e2e/foundation.spec.ts:23:5 › museum routes work at desktop, mobile and tablet without page overflow (7.9s)
+  ✓   7 tests/e2e/foundation.spec.ts:43:5 › navigation, language persistence and keyboard skip path work (1.9s)
+  ✓   8 tests/e2e/foundation.spec.ts:62:5 › real web to API health and signed session round trip (1.2s)
+  ✓   9 tests/e2e/foundation.spec.ts:79:5 › health service errors are visible and retry recovers (886ms)
+  ✓  10 tests/e2e/foundation.spec.ts:93:5 › guide portrait retains transparency and narrow zoom layout stays usable (852ms)
+  ✓  11 tests/e2e/foundation.spec.ts:104:5 › unknown routes stay missing and cross-origin session mutation is rejected (273ms)
+  ✓  12 tests/e2e/liaoning-map.spec.ts:4:5 › real Liaoning silhouette, 14 city markers and geographical city selection (2.5s)
+  ✓  13 tests/e2e/liaoning-map.spec.ts:36:5 › map pan, wheel zoom, keyboard camera, minimap and expanded map (1.8s)
+  ✓  14 tests/e2e/liaoning-map.spec.ts:66:5 › selected city circle stays centered through time and zoom for all fourteen cities (5.3s)
+  ✓  15 tests/e2e/liaoning-map.spec.ts:101:5 › sourced city territory highlights from map clicks and clears when returning to the province (1.2s)
+  ✓  16 tests/e2e/liaoning-map.spec.ts:135:5 › all cities remain selectable and searchable in Chinese at phone size (1.8s)
+  ✓  17 tests/e2e/liaoning-map.spec.ts:157:5 › touch pinch changes the map camera without scrolling the page (833ms)
+  ✓  18 tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages (20.7s)
+  ✓  19 tests/e2e/museum-ui.spec.ts:41:5 › explore filters, empty state and source drawer keyboard focus (849ms)
+  ✓  20 tests/e2e/museum-ui.spec.ts:60:5 › journey reorder, remove and duration-constrained empty state (865ms)
+  ✓  21 tests/e2e/museum-ui.spec.ts:75:5 › both story branches, restart and actual recorded audio (728ms)
+  ✓  22 tests/e2e/museum-ui.spec.ts:86:5 › lens exposes unknown, poor image, denial, outage and loading without claiming recognition (1.8s)
+  ✓  23 tests/e2e/museum-ui.spec.ts:99:5 › guide submits bounded text, clearly scripted response and voice unavailable (1.3s)
+  ✓  24 tests/e2e/museum-ui.spec.ts:109:5 › interest edits redraw chart and reset clears suggestions (604ms)
+  ✓  25 tests/e2e/museum-ui.spec.ts:124:5 › live mode fails closed with no demo controls (1.1s)
+  ✓  26 tests/e2e/museum-ui.spec.ts:132:5 › published collection works in live mode with no fixture toggle (883ms)
+  ✓  27 tests/e2e/museum-ui.spec.ts:141:5 › reduced graphics, keyboard path and 200 percent page zoom (2.2s)
+  ✓  28 tests/e2e/ui-part-a.spec.ts:3:5 › Home features published EN/ZH text and opens that exhibit with its sources in both modes (3.0s)
+  ✓  29 tests/e2e/ui-part-a.spec.ts:23:5 › featured publication fails closed for errors, empty results and withdrawn records (1.2s)
+  ✓  30 tests/e2e/ui-part-a.spec.ts:39:5 › status keeps diagnostics optional and recovers from an outage in both languages (1.4s)
+  ✓  31 tests/e2e/ui-part-a.spec.ts:59:5 › decorative card purposes stay distinct and crops retain their aspect ratio (1.3s)
+  ✓  32 tests/e2e/ui-part-b.spec.ts:3:5 › source dialog includes integrity disclosure in keyboard order and distinguishes padding from backdrop (1.3s)
+  ✓  33 tests/e2e/ui-part-b.spec.ts:27:5 › region dropdown and directory fit the same city camera (1.8s)
+  ✓  34 tests/e2e/ui-part-b.spec.ts:40:5 › graphics preference survives navigation and reload (1.3s)
+  ✓  35 tests/e2e/ui-part-b.spec.ts:49:5 › phone map labels and controls remain readable and expanded map is a native modal (1.2s)
+  ✓  36 tests/e2e/ui-part-b.spec.ts:77:5 › each screen has a distinct localized title including server reloads (4.7s)
+  ✓  37 tests/e2e/ui-part-c.spec.ts:4:5 › Sources instructions, live capability copy and province query match actual scope (1.2s)
+  ✓  38 tests/e2e/ui-part-c.spec.ts:19:5 › atlas distinguishes loading, outage, published city and empty city (1.6s)
+  ✓  39 tests/e2e/ui-part-c.spec.ts:37:5 › Guide keeps multiple turns and draft through navigation, clears safely and resets on reload (3.3s)
+  ✓  40 tests/e2e/ui-part-c.spec.ts:57:5 › Journey draft criteria never relabel committed route and plan survives navigation (822ms)
+  ✓  41 tests/e2e/ui-part-c.spec.ts:78:5 › Chinese story offers explicit English audio, text-only mode and complete transcript (599ms)
+  ✓  42 tests/e2e/ui-part-c.spec.ts:88:5 › reviewed exhibit context carries to all four next screens in demo/live and fails closed (7.8s)
+  ✓  43 tests/e2e/ui-refinement.spec.ts:3:5 › home leads to reviewed exhibits and collection view preserves map filters (1.3s)
+  ✓  44 tests/e2e/ui-refinement.spec.ts:16:5 › prototype controls are opt-in and keyboard can open every preview (1.0s)
+  ✓  45 tests/e2e/ui-refinement.spec.ts:28:5 › interests begin empty and contain only voluntary choices (656ms)
+  ✓  46 tests/e2e/ui-refinement.spec.ts:43:5 › phone artwork stays sharp at DPR 2 and the companion stays compact (2.3s)
+
+  46 passed (1.8m)

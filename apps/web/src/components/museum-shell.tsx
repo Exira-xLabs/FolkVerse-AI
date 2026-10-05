@@ -26,7 +26,7 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
   const { locale, setLocale, t } = useLocale();
   const { simple, setSimple } = useGraphics();
   useEffect(() => { document.title = `${t.nav[page]} | FolkVerse China`; }, [page, t.nav]);
-  const demoLabel = locale === "en" ? "Reviewed collection · optional previews" : "审核馆藏 · 可选体验预览";
+  const demoLabel = locale === "en" ? (mode === "demo" ? "Reviewed collection · optional previews" : "Published collection available · AI experiences not connected") : (mode === "demo" ? "审核馆藏 · 可选体验预览" : "已发布馆藏可用 · AI 体验尚未连接");
   const route = routes[page];
   const cards = ["explore", "stories", "journey", "guide"] as const;
   return <MuseumScene page={page} simple={simple}>

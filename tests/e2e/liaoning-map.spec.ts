@@ -24,7 +24,7 @@ test("real Liaoning silhouette, 14 city markers and geographical city selection"
   await atlas.getByRole("button", { name: "Select Shenyang", exact: true }).click();
   await expect(page.getByLabel("Region", { exact: true })).toHaveText("Shenyang");
   await expect(page.getByText("No published exhibits match these filters.")).toBeVisible();
-  await expect(atlas.getByText("Exhibits open as their records are reviewed.")).toBeVisible();
+  await expect(atlas.getByText("No published exhibits currently available.")).toBeVisible();
   await expect(page.getByRole("button", { name: /Lanterns of Shenyang/ })).toHaveCount(0);
   await atlas.getByRole("button", { name: "Back to all Liaoning" }).click();
   await expect(page.getByRole("button", { name: /Fuzhou shadow puppetry/ })).toBeVisible();

@@ -85,17 +85,20 @@ export function SourceDrawer({ open, onClose, title, children }: { open: boolean
 
 export function AudioControls() {
   const audio = useRef<HTMLAudioElement>(null);
+  const [narration, setNarration] = useState("en");
   const [playing, setPlaying] = useState(false); const [time, setTime] = useState(0); const [duration, setDuration] = useState(0); const [error, setError] = useState(false);
   const { locale } = useLocale(); const zh = locale !== "en";
   const clock = (value: number) => `${Math.floor(value / 60)}:${String(Math.floor(value % 60)).padStart(2, "0")}`;
-  return <div className="audio-controls">
+  return <div className="narration-panel"><label className="field">{zh ? "旁白语言" : "Narration language"}<select value={narration} onChange={event => { setNarration(event.target.value); audio.current?.pause(); }}><option value="en">{zh ? "英语录音" : "English recording"}</option><option value="off">{zh ? "仅文字 · 中文音频尚未开放" : "Text only · Chinese audio unavailable"}</option></select></label>
+    <details className="narration-transcript"><summary>{zh ? "英语录音文字稿与中文翻译" : "English audio transcript & Chinese translation"}</summary><p lang="en">A lantern drifts beyond the screen. In this fictional tale, you may follow its light toward the mountain, or take the bridge across the river. Which path will you choose?</p><p lang="zh-CN">一盏灯笼飘出幕布。在这个虚构故事里，您可以追随灯火走向山间，或从桥梁跨过河流。您将选择哪条道路？</p></details>
+    <div className="audio-controls">
     <audio ref={audio} src="/folkverse/audio/lantern-demo.mp3" preload="metadata" onTimeUpdate={() => setTime(audio.current?.currentTime ?? 0)}
       onLoadedMetadata={() => setDuration(audio.current?.duration ?? 0)} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)} onError={() => setError(true)} />
-    <button className="icon-button" disabled={error} aria-label={playing ? (zh ? "暂停旁白" : "Pause narration") : (zh ? "播放旁白" : "Play narration")}
+    <button className="icon-button" disabled={error || narration === "off"} aria-label={playing ? (zh ? "暂停旁白" : "Pause narration") : (zh ? "播放旁白" : "Play narration")}
       onClick={() => { if (playing) audio.current?.pause(); else void audio.current?.play().catch(() => setError(true)); }}>{playing ? "Ⅱ" : "▶︎"}</button>
-    <label className="audio-timeline"><span className="sr-only">{zh ? "旁白位置" : "Narration position"}</span><input type="range" min="0" max={duration || 1} step="0.1" value={time} onChange={e => { const value = Number(e.target.value); if (audio.current) audio.current.currentTime = value; setTime(value); }} /></label>
+    <label className="audio-timeline"><span className="sr-only">{zh ? "旁白位置" : "Narration position"}</span><input type="range" min="0" max={duration || 1} step="0.1" disabled={narration === "off" || error} value={time} onChange={e => { const value = Number(e.target.value); if (audio.current) audio.current.currentTime = value; setTime(value); }} /></label>
     <span>{clock(time)} / {clock(duration)}</span><small>{error ? (zh ? "音频不可用" : "Audio unavailable") : (zh ? "预录合成英语旁白" : "Recorded synthetic EN narration")}</small>
-  </div>;
+  </div></div>;
 }
 
 export function InterestChart({ weights }: { weights: number[] }) {

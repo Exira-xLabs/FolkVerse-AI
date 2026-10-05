@@ -2,15 +2,19 @@
 
 **Updated:** 5 October 2026, Asia/Shanghai. **Phase 02: complete locally; all five acceptance gates pass.** Scope: the whole Liaoning province, as explicitly requested by the user. Phase 01 remains delivered at `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`; Phase 02 and the UI refinement are included in the four-commit delivery on `main` requested on 5 October 2026. Consult Git history for delivery hashes. Next: [Phase 03 — grounded guide](../phases/03_GROUNDED_GUIDE.md).
 
+## Part C completion — 5 October 2026
+
+C01–C12 are complete locally. Sources/live copy and province filters match their scope; atlas publication has explicit loading/error/ready states; Guide retains drafts/multiple scripted turns during navigation; Journey retains temporary plans and separates draft criteria from applied routes. Narration has an English/text-only choice and transcript, voice availability is visible, and approved exhibit links carry revalidated context into Guide/Journey/Story/interests. No later-phase AI APIs or durable persistence are claimed. Full browser suite: **46 passed, 0 failed**. [Completion report](../report/UI_PART_C_COMPLETION.md), [visit-state contract](visit-state-and-context.md). Screenshots remain local. Next: Part 4 of the UI audit.
+
 ## Part B completion — 5 October 2026
 
-B01–B12 are complete locally: drawer keyboard/backdrop/scroll behavior, unified city camera, persistent graphics preference, readable map labels and 44px controls, native modal atlas and localized page titles. Earlier artwork/navigation/chart fixes are reverified. Final browser suite: **40 passed, 0 failed**; automated accessibility scan: 24 EN/ZH states with no detected violations. [Completion report and evidence](../report/UI_PART_B_COMPLETION.md). Screenshots remain local. Next: Part C of the UI audit.
+B01–B12 are complete locally: drawer keyboard/backdrop/scroll behavior, unified city camera, persistent graphics preference, readable map labels and 44px controls, native modal atlas and localized page titles. Earlier artwork/navigation/chart fixes are reverified. Final browser suite: **40 passed, 0 failed**; automated accessibility scan: 24 EN/ZH states with no detected violations. [Completion report and evidence](../report/UI_PART_B_COMPLETION.md). Screenshots remain local. Next: Part 4 of the UI audit. Part B is pushed at `faed2c5`.
 
 ## Part A completion — 5 October 2026
 
 All nine Part 1 design corrections are complete locally. The remaining A01/A08/A09 work adds a real API-backed featured exhibit on Home with exact exhibit/source navigation; distinct collection/Story covers and documented hero/card/thumbnail/detail compositions; visitor-first EN/ZH status, retry, last-check feedback and expandable diagnostics. The optional anonymous visit is explained without implying tracking or saved interests.
 
-Full browser regression: **35 passed**. Fresh lint, typecheck, production build and original-art/content/geography preservation checks pass; final focused checks and evidence are recorded in [Part A completion](../report/UI_PART_A_COMPLETION.md). New screenshots remain local and ignored. This pass is included in the owner-requested Part A delivery commit on `main`; consult Git history for the delivery hash. The wider audit remains open; next is **Part C: UI logical errors and confusing behavior**. Later live AI integrations remain assigned phase work.
+Full browser regression: **35 passed**. Fresh lint, typecheck, production build and original-art/content/geography preservation checks pass; final focused checks and evidence are recorded in [Part A completion](../report/UI_PART_A_COMPLETION.md). New screenshots remain local and ignored. This pass is included in the owner-requested Part A delivery commit on `main`; consult Git history for the delivery hash. The wider audit remains open; next is **Part 4: UI things that must be added**. Later live AI integrations remain assigned phase work.
 
 ## UI refinement — 5 October 2026
 

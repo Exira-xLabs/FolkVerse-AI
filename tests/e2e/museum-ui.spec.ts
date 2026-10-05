@@ -103,7 +103,7 @@ test("guide submits bounded text, clearly scripted response and voice unavailabl
   await input.fill("How does this tradition work?"); await page.getByRole("button", { name: /Send/ }).click();
   await expect(page.getByText("Loading the scripted response…")).toBeVisible();
   await expect(page.getByText(/I cannot answer your question from evidence yet/)).toBeVisible();
-  await page.getByRole("button", { name: /Voice/ }).click(); await expect(page.getByText(/Live microphone transcription is unavailable/)).toBeVisible();
+  await expect(page.getByRole("button", { name: /Voice/ })).toBeDisabled(); await expect(page.getByText(/Live microphone transcription is unavailable/)).toBeVisible();
 });
 
 test("interest edits redraw chart and reset clears suggestions", async ({ page }) => {
