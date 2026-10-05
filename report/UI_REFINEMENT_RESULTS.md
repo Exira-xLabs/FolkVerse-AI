@@ -6,6 +6,8 @@
 
 **Screenshot delivery:** the owner requested that screenshots stay local. New raster evidence is excluded from the final branch tree; links below refer to local evidence files. Text reports, logs, structured results and app artwork remain committed. Some map screenshots were already uploaded in push 2; removal from the current tree does not remove them from that earlier commit history.
 
+**Later Part A completion:** A01, A08 and A09 are now implemented; all nine Part 1 corrections are marked complete in the audit. [Current completion report](UI_PART_A_COMPLETION.md) records the new featured exhibit, image composition inventory and visitor-first status work. The evidence below records the earlier seven-change pass.
+
 ## Delivered changes
 
 | Selected change | Result | Evidence |

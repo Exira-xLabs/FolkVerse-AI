@@ -1,0 +1,26 @@
+$ playwright test --grep 'nine museum screens|Home features|featured publication|status keeps|decorative card'
+[WebServer] INFO:     Started server process [1025926]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:1025954) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:1025980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1026009) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1026022) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:1026072) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages (16.0s)
+  ✓  2 tests/e2e/ui-part-a.spec.ts:3:5 › Home features published EN/ZH text and opens that exhibit with its sources in both modes (3.1s)
+  ✓  3 tests/e2e/ui-part-a.spec.ts:23:5 › featured publication fails closed for errors, empty results and withdrawn records (1.2s)
+  ✓  4 tests/e2e/ui-part-a.spec.ts:39:5 › status keeps diagnostics optional and recovers from an outage in both languages (1.4s)
+  ✓  5 tests/e2e/ui-part-a.spec.ts:59:5 › decorative card purposes stay distinct and crops retain their aspect ratio (1.3s)
+
+  5 passed (26.3s)

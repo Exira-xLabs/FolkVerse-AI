@@ -2,6 +2,12 @@
 
 **Updated:** 5 October 2026, Asia/Shanghai. **Phase 02: complete locally; all five acceptance gates pass.** Scope: the whole Liaoning province, as explicitly requested by the user. Phase 01 remains delivered at `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`; Phase 02 and the UI refinement are included in the four-commit delivery on `main` requested on 5 October 2026. Consult Git history for delivery hashes. Next: [Phase 03 — grounded guide](../phases/03_GROUNDED_GUIDE.md).
 
+## Part A completion — 5 October 2026
+
+All nine Part 1 design corrections are complete locally. The remaining A01/A08/A09 work adds a real API-backed featured exhibit on Home with exact exhibit/source navigation; distinct collection/Story covers and documented hero/card/thumbnail/detail compositions; visitor-first EN/ZH status, retry, last-check feedback and expandable diagnostics. The optional anonymous visit is explained without implying tracking or saved interests.
+
+Full browser regression: **35 passed**. Fresh lint, typecheck, production build and original-art/content/geography preservation checks pass; final focused checks and evidence are recorded in [Part A completion](../report/UI_PART_A_COMPLETION.md). New screenshots remain local and ignored. This pass is included in the owner-requested Part A delivery commit on `main`; consult Git history for the delivery hash. The wider audit remains open; next are **B03–B05 source-drawer behavior**. Later live AI integrations remain assigned phase work.
+
 ## UI refinement — 5 October 2026
 
 The owner-selected seven changes and image-delivery pass are complete locally. Home leads to Liaoning; Explore defaults to the collection with an optional atlas; Journey/Lens/Guide previews are collapsed; Guide uses a 72px identity badge; cultural interests begin empty with a labelled example; bounded artwork and calmer task panels replace full-page scenery. Narrow navigation reveals the current tab.

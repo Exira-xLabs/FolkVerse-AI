@@ -14,7 +14,7 @@ type Copy = {
     database: string; vector: string; schema: string; mode: string;
     available: string; unavailable: string; current: string;
     session: string; start: string; clear: string; anonymous: string; privacy: string;
-    sessionError: string;
+    sessionError: string; description: string; lastChecked: string; diagnostics: string;
   };
 };
 
@@ -36,7 +36,7 @@ export const dictionaries: Record<Locale, Copy> = {
       dna: "No interests have been collected. Choose your own cultural preferences; each is editable and optional.",
       sources: "No reviewed source records have been published yet. Every future exhibit and factual answer will link back to its evidence.",
     },
-    status: { checking: "Checking services…", refresh: "Check again", error: "The museum service cannot be reached. Start the local API and try again.", ok: "Services connected", degraded: "Some services are unavailable", database: "Database", vector: "Vector extension", schema: "Database schema", mode: "Application mode", available: "Available", unavailable: "Unavailable", current: "Current", session: "Your anonymous visit", start: "Start a visit", clear: "End this visit", anonymous: "Anonymous visit active", privacy: "No account required. Behavioral tracking is off. Ending this visit revokes its session.", sessionError: "The visit could not be updated. Check the services and try again." },
+    status: { checking: "Checking services…", refresh: "Check again", error: "We couldn’t connect to the museum right now. Please try again.", ok: "Ready to explore", degraded: "The museum is temporarily unavailable. Please try again shortly.", database: "Database", vector: "Vector extension", schema: "Database schema", mode: "Application mode", available: "Available", unavailable: "Unavailable", current: "Current", session: "Your anonymous visit", start: "Start a visit", clear: "End this visit", anonymous: "Anonymous visit active", privacy: "An anonymous visit identifies this browser’s session. Browsing works without one. No account or behavioral tracking is required, and your interests are not saved. Ending the visit clears its session.", sessionError: "The visit could not be updated. Please try again.", description: "Explore reviewed exhibits and their sources. Guide, recognition and personalized journeys are still being prepared.", lastChecked: "Last checked:", diagnostics: "Technical connection details" },
   },
   "zh-CN": {
     nav: { home: "首页", explore: "探索", journey: "旅程", stories: "故事", lens: "识物", guide: "向导", dna: "我的兴趣", sources: "资料来源", status: "服务状态" },
@@ -55,6 +55,6 @@ export const dictionaries: Record<Locale, Copy> = {
       dna: "尚未收集兴趣信息。文化偏好将保持可编辑、可选择；兴趣图谱不代表血统或族群身份。",
       sources: "尚未发布经过审核的来源记录。未来的展览和事实性回答都将关联相应依据。",
     },
-    status: { checking: "正在检查服务…", refresh: "重新检查", error: "无法连接博物馆服务。请启动本地 API 后重试。", ok: "服务已连接", degraded: "部分服务暂不可用", database: "数据库", vector: "向量扩展", schema: "数据库结构", mode: "应用模式", available: "可用", unavailable: "不可用", current: "已更新", session: "您的匿名访问", start: "开始访问", clear: "结束本次访问", anonymous: "匿名访问已开启", privacy: "无需注册账号。行为追踪已关闭；结束访问将撤销本次会话。", sessionError: "无法更新此次访问。请检查服务后重试。" },
+    status: { checking: "正在检查服务…", refresh: "重新检查", error: "暂时无法连接博物馆，请重试。", ok: "可以开始探索", degraded: "博物馆暂不可用，请稍后重试。", database: "数据库", vector: "向量扩展", schema: "数据库结构", mode: "应用模式", available: "可用", unavailable: "不可用", current: "已更新", session: "您的匿名访问", start: "开始访问", clear: "结束本次访问", anonymous: "匿名访问已开启", privacy: "匿名访问用于识别此浏览器的本次会话，不开启也可浏览。无需注册，不进行行为追踪，也不会保存您的兴趣。结束访问会清除此会话。", sessionError: "无法更新此次访问，请重试。", description: "探索审核展览及其来源。向导、识别和个性化旅程仍在准备中。", lastChecked: "上次检查：", diagnostics: "技术连接详情" },
   },
 };

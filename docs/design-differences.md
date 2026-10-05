@@ -45,3 +45,9 @@ Eight versioned scene refinements now live in `apps/web/public/folkverse/enhance
 Home prominently opens the Liaoning collection. Explore defaults to exhibits with an optional map view. Journey, Lens and Guide put their scripted controls inside optional preview disclosures. Guide uses a compact 72-pixel identity badge. English DNA wording is replaced by cultural interests, initially empty, with a labelled example action and local editing. Task panels are opaque navy; artwork and restrained navigation glass carry the atmosphere.
 
 Current verification and limitations belong to `report/UI_REFINEMENT_CHECKLIST.md` and `report/UI_REFINEMENT_RESULTS.md`. This UI work does not complete Phase 03 or connect live guide, journey or recognition providers. The `/dna` URL remains compatible with existing links.
+
+## Part A completion — 5 October 2026
+
+Home now features the real published Liaoning exhibit title and summary, with an action opening that exact record and its sources. Decorative cover images are separate from reviewed exhibit text. The collection card uses the relief-map scene while Story uses the shadow-stage scene. Distinct 16:9 card frames, per-subject thumbnail crops and text-first reviewed details are documented in [art compositions](art-compositions.md); no new generation or native-resolution increase is claimed.
+
+Status puts visitor availability and retry first, provides an Explore action and last-check time, and hides implementation diagnostics in an optional disclosure. EN/ZH failures no longer instruct visitors to start a local API. Anonymous visits remain optional and explicitly do not save interests or track behavior. See [Part A completion evidence](../report/UI_PART_A_COMPLETION.md). The original artwork, authoritative geography and reviewed-content hashes remain preserved.

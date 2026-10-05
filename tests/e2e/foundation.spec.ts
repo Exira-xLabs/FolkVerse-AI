@@ -10,6 +10,7 @@ async function waitForArtwork(page: Page) {
     images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0)
   ), { timeout: 15000 }).toBe(true);
   await page.evaluate(() => document.fonts.ready);
+  if (await page.locator(".featured-exhibit").count()) await expect(page.locator(".featured-record h3")).toBeVisible();
   await expect(page.locator(".collection-results [role=status]")).toHaveCount(0);
   if (await page.locator(".liaoning-atlas").count()) await expect(page.locator(".liaoning-atlas")).toHaveAttribute("data-terrain-ready", "true");
 }
@@ -60,7 +61,7 @@ test("navigation, language persistence and keyboard skip path work", async ({ pa
 
 test("real web to API health and signed session round trip", async ({ page, context }) => {
   await page.goto("/status");
-  await expect(page.getByText("Services connected", { exact: true })).toBeVisible();
+  await expect(page.getByText("Ready to explore", { exact: true })).toBeVisible();
   await expect(page.locator("dd").nth(0)).toHaveText("Available");
   await page.getByRole("button", { name: "Start a visit" }).click();
   await expect(page.getByText("Anonymous visit active", { exact: true })).toBeVisible();
@@ -81,12 +82,12 @@ test("health service errors are visible and retry recovers", async ({ page }) =>
     body: JSON.stringify({ error: { code: "api_unavailable", message: "Unavailable", retryable: true }, request_id: "test" }),
   }));
   await page.goto("/status");
-  await expect(page.getByText(/The museum service cannot be reached/)).toBeVisible();
+  await expect(page.getByText("We couldn’t connect to the museum right now. Please try again.")).toBeVisible();
   await expect(page.locator("dd").nth(0)).toHaveText("Unavailable");
   await capture(page, "status-unavailable-1600");
   await page.unroute("**/api/v1/health");
   await page.getByRole("button", { name: "Check again" }).click();
-  await expect(page.getByText("Services connected", { exact: true })).toBeVisible();
+  await expect(page.getByText("Ready to explore", { exact: true })).toBeVisible();
 });
 
 test("guide portrait retains transparency and narrow zoom layout stays usable", async ({ page }) => {

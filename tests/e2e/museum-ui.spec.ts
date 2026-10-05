@@ -6,6 +6,7 @@ async function ready(page: Page) {
   await page.locator("img").evaluateAll(images => images.forEach(image => image.setAttribute("loading", "eager")));
   await expect.poll(() => page.locator("img").evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await page.evaluate(() => document.fonts.ready);
+  if (await page.locator(".featured-exhibit").count()) await expect(page.locator(".featured-record h3")).toBeVisible();
   await expect(page.locator(".collection-results [role=status]")).toHaveCount(0);
   if (await page.locator(".liaoning-atlas").count()) await expect(page.locator(".liaoning-atlas")).toHaveAttribute("data-terrain-ready", "true");
   const current = page.locator(".nav-tabs [aria-current=page]");

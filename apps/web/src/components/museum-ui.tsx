@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useId, useRef, useState, type ReactNode, type ButtonHTMLAttributes } from "react";
 import { useLocale } from "./locale-provider";
 import { navigation, routes, type PageKey } from "@/lib/routes";
-import { museumArt } from "@/lib/museum-art";
+import { museumArt, museumArtFocus } from "@/lib/museum-art";
 
 export function GlassPanel({ children, className = "", id }: { children: ReactNode; className?: string; id?: string }) {
   return <section id={id} className={`glass-panel reading-panel ${className}`}>{children}</section>;
@@ -50,7 +50,7 @@ export const demoExhibits: DemoExhibit[] = [
 export function ExhibitCard({ exhibit, onOpen }: { exhibit: DemoExhibit; onOpen: () => void }) {
   const { locale } = useLocale(); const n = locale === "en" ? 0 : 1;
   return <button className="exhibit-card" onClick={onOpen}><span className="exhibit-thumb">
-    <Image src={museumArt(exhibit.asset)} alt="" fill quality={90} sizes="160px" />
+    <Image src={museumArt(exhibit.asset)} alt="" fill quality={90} sizes="64px" style={{ objectPosition: museumArtFocus(exhibit.asset, "thumbnail") }} />
     </span><span><small>{exhibit.region[n]} · {exhibit.minutes} {n === 0 ? "min" : "分钟"}</small><strong>{exhibit.title[n]}</strong><span className="card-caption">{n === 0 ? "Illustrative exhibit · view notes ↗︎" : "示例展览 · 查看说明 ↗︎"}</span></span></button>;
 }
 

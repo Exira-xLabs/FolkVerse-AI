@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import { routes, type PageKey } from "@/lib/routes";
-import { museumArt } from "@/lib/museum-art";
+import { museumArt, museumArtFocus } from "@/lib/museum-art";
 import { useLocale } from "./locale-provider";
 import { ServiceStatus } from "./service-status";
 import { GlassTabs } from "./museum-ui";
 import { MuseumExperiences } from "./museum-experiences";
+import { FeaturedExhibit } from "./featured-exhibit";
 
 function DiscoveryArrow() {
   return <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -20,7 +21,7 @@ export function MuseumScene({ page, simple, children }: { page: PageKey; simple:
   return <div className={`museum-scene scene-${page} ${simple ? "reduced-graphics" : ""}`}>{children}</div>;
 }
 
-export function MuseumShell({ page, mode }: { page: PageKey; mode: "demo" | "live" }) {
+export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; mode: "demo" | "live"; initialExhibitId?: string }) {
   const { locale, setLocale, t } = useLocale();
   const [simple, setSimple] = useState(false);
   const demoLabel = locale === "en" ? "Reviewed collection · optional previews" : "审核馆藏 · 可选体验预览";
@@ -46,18 +47,20 @@ export function MuseumShell({ page, mode }: { page: PageKey; mode: "demo" | "liv
         <p className="subtitle">{t.subtitles[page]}</p>
         {page === "home" && <div className="hero-actions"><Link className="gold-button" href="/explore">{locale === "en" ? "Explore Liaoning" : "探索辽宁"}<DiscoveryArrow /></Link><Link className="text-button" href="/sources">{locale === "en" ? "Meet the sources" : "了解资料来源"} ↗︎</Link></div>}
       </div></section>
-      {page === "home" ? <div className="discovery-cards">
+      {page === "home" ? <><FeaturedExhibit /><div className="discovery-cards">
         {cards.map((key, index) => <article className={`glass-panel discovery-card card-${key}`} key={key}>
           <h2>{t.homeCards[index]}</h2>
           <p className="card-availability">{locale === "en" ? (index === 0 ? "Published collection" : key === "stories" ? "Original fiction · preview" : "Experience preview") : (index === 0 ? "已发布馆藏" : key === "stories" ? "原创虚构故事 · 预览" : "体验预览")}</p>
           <div className="card-art">
-            <Image src={museumArt(key === "guide" ? "09_ai_guide_character.png" : key === "explore" ? "04_shadow_puppetry.png" : routes[key].asset)}
-              alt="" fill quality={90} sizes="(max-width: 700px) 100vw, 25vw" className={key === "guide" ? "portrait-art" : ""} />
+            <Image src={museumArt(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset)}
+              alt="" fill quality={90} sizes="(max-width: 700px) 100vw, (max-width: 1050px) 50vw, 25vw" className={key === "guide" ? "portrait-art" : ""}
+              style={{ objectPosition: museumArtFocus(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset, "card") }} />
           </div>
+          <p className="art-caption">{locale === "en" ? (key === "guide" ? "Fictional companion" : "Decorative museum illustration") : (key === "guide" ? "虚构伙伴" : "装饰性博物馆插画")}</p>
           <Link className={index === 0 ? "gold-button" : "outline-button"}
             href={routes[key].href}>{t.homeActions[index]}<DiscoveryArrow /></Link>
         </article>)}
-      </div> : page === "status" ? <ServiceStatus /> : <MuseumExperiences page={page} mode={mode} />}
+      </div></> : page === "status" ? <ServiceStatus /> : <MuseumExperiences page={page} mode={mode} initialExhibitId={initialExhibitId} />}
     </main>
     <footer className="museum-footer">
       <span className="preview-label"><span aria-hidden="true" className="preview-dot" />{demoLabel}</span>

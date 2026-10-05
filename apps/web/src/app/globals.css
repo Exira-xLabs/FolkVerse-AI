@@ -537,3 +537,22 @@ button:disabled { cursor: default; }
   .collection-view-switch { margin-bottom: 18px; }
   .published-card { padding: 22px; gap: 14px; }
 }
+
+/* Part A completion: distinct cover compositions and visitor-first status. */
+.featured-exhibit { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(0, 1.4fr); gap: 28px; padding: 32px; margin-bottom: 28px; }
+.featured-heading h2 { font-size: clamp(24px, 2.4vw, 34px); margin-top: 14px; }
+.featured-record h3 { font-family: var(--font-serif); font-size: clamp(24px, 2.4vw, 32px); margin: 16px 0; }
+.featured-exhibit p { line-height: 1.7; }
+.featured-record > p { margin-bottom: 22px; max-width: 700px; }
+.card-art, .card-guide .card-art { height: auto; aspect-ratio: 16 / 9; overflow: hidden; }
+.art-caption { color: var(--text-secondary); font-size: 11px; line-height: 1.5; padding-inline: 7px; }
+.discovery-card > a { margin-top: auto; }
+.status-panel { background: #0b1722; }
+.status-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 24px 0; }
+.status-actions button { margin-top: 0; }
+.status-panel .fine-print { font-size: 13px; }
+.service-diagnostics { margin-top: 28px; border-top: 1px solid #d6c19638; padding-top: 12px; }
+.service-diagnostics summary { min-height: 44px; padding: 12px 0; cursor: pointer; color: var(--text-secondary); }
+@media (max-width: 700px) {
+  .featured-exhibit { grid-template-columns: 1fr; padding: 24px; gap: 20px; }
+}

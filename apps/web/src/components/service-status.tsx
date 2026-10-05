@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import { api, type Health, type AnonymousSession } from "@folkverse/contracts";
 import { useLocale } from "./locale-provider";
 
@@ -13,10 +14,11 @@ async function requestHealth(signal: AbortSignal): Promise<Health | null> {
 }
 
 export function ServiceStatus() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const [health, setHealth] = useState<Health | null>(null);
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
+  const [checkedAt, setCheckedAt] = useState<Date | null>(null);
   const [session, setSession] = useState<AnonymousSession | null>(null);
   const [sessionBusy, setSessionBusy] = useState(false);
   const [sessionFailed, setSessionFailed] = useState(false);
@@ -25,6 +27,7 @@ export function ServiceStatus() {
     setHealth(result);
     setFailed(result === null);
     setLoading(false);
+    setCheckedAt(new Date());
   }, []);
 
   useEffect(() => {
@@ -64,19 +67,21 @@ export function ServiceStatus() {
     <section className="glass-panel status-panel" aria-labelledby="connection-title" aria-busy={loading}>
       <h2 id="connection-title" className="service-heading">{t.nav.status}</h2>
       <p role="status" className={health?.status === "ok" ? "connection-ok" : "connection-message"}>{statusLabel}</p>
-      <dl className="service-list">
+      <p>{t.status.description}</p>
+      {checkedAt && <p className="fine-print">{t.status.lastChecked} <time dateTime={checkedAt.toISOString()}>{checkedAt.toLocaleTimeString(locale)}</time></p>}
+      <div className="status-actions"><button className="gold-button" disabled={loading} onClick={() => {
+        setLoading(true);
+        setFailed(false);
+        void requestHealth(AbortSignal.timeout(7000)).then(applyHealth);
+      }}>{t.status.refresh}</button><Link className="outline-button" href="/explore">{locale === "en" ? "Explore the collection" : "探索馆藏"} ↗︎</Link></div>
+      <details className="service-diagnostics"><summary>{t.status.diagnostics}</summary><dl className="service-list">
         {[
           [t.status.database, available(health?.database)],
           [t.status.vector, available(health?.pgvector)],
           [t.status.schema, available(health?.schema_status)],
           [t.status.mode, health?.mode ?? "—"],
         ].map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{loading ? "—" : value}</dd></div>)}
-      </dl>
-      <button className="gold-button" disabled={loading} onClick={() => {
-        setLoading(true);
-        setFailed(false);
-        void requestHealth(AbortSignal.timeout(7000)).then(applyHealth);
-      }}>{t.status.refresh}</button>
+      </dl></details>
     </section>
     <section className="glass-panel status-panel" aria-labelledby="visit-title">
       <h2 id="visit-title" className="service-heading">{t.status.session}</h2>

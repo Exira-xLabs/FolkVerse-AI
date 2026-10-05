@@ -17,13 +17,13 @@ function SourceRecord({ source }: { source: SourceCard }) {
   </article>;
 }
 
-export function CatalogExperience({ page, mode, fixture }: { page: "explore" | "sources"; mode: "demo" | "live"; fixture: ReactNode }) {
+export function CatalogExperience({ page, mode, fixture, initialExhibitId }: { page: "explore" | "sources"; mode: "demo" | "live"; fixture: ReactNode; initialExhibitId?: string }) {
   const { locale } = useLocale(); const zh = locale !== "en";
   const [preview, setPreview] = useState(false); const [query, setQuery] = useState(""); const [region, setRegion] = useState(""); const [theme, setTheme] = useState("");
   const [view, setView] = useState<"collection" | "map">("collection");
   const [regions, setRegions] = useState<RegionList["items"]>([]); const [exhibits, setExhibits] = useState<ExhibitPage | null>(null); const [sources, setSources] = useState<SourceList["items"]>([]);
   const [state, setState] = useState<"loading" | "ready" | "error">("loading"); const [reload, setReload] = useState(0); const [cursor, setCursor] = useState<string | undefined>();
-  const [selection, setSelection] = useState<{ kind: "exhibit" | "source"; id: string } | null>(null);
+  const [selection, setSelection] = useState<{ kind: "exhibit" | "source"; id: string } | null>(() => initialExhibitId ? { kind: "exhibit", id: initialExhibitId } : null);
   const [detail, setDetail] = useState<ExhibitDetail | SourceCard | null>(null); const [detailError, setDetailError] = useState(false);
   const refresh = useCallback(() => setReload(n => n + 1), []);
   useEffect(() => {
