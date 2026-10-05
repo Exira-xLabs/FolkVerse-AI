@@ -57,9 +57,10 @@
 .jinyao-chat-prompts { display: flex; gap: 7px; padding: 10px 16px; flex: none; overflow-x: auto; }
 .jinyao-chat-prompts button { min-height: 44px; flex: none; padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 999px; background: transparent; color: var(--text-secondary); font-size: 11px; }
 .jinyao-chat-prompts button:hover { border-color: var(--accent-gold); }
-.jinyao-chat-composer { display: flex; align-items: flex-end; gap: 10px; padding: 10px 16px 6px; flex: none; border-top: 1px solid var(--border-subtle); }
-.jinyao-chat-composer textarea { width: 100%; min-width: 0; min-height: 52px; max-height: 100px; resize: none; padding: 12px; border-radius: 16px; border: 1px solid var(--border-subtle); background: var(--surface-elevated); font-size: 14px; }
-.jinyao-chat-composer .gold-button { width: 48px; min-height: 48px; padding: 8px; border-radius: 12px; flex: none; font-size: 22px; }
+.jinyao-chat-composer { display: flex; align-items: stretch; gap: 10px; padding: 10px 16px 6px; flex: none; border-top: 1px solid var(--border-subtle); }
+.jinyao-chat-composer textarea, .jinyao-chat-composer .gold-button { height: 44px; min-height: 44px; border-radius: 12px; }
+.jinyao-chat-composer textarea { width: 100%; min-width: 0; resize: none; padding: 10px 12px; border: 1px solid var(--border-subtle); background: var(--surface-elevated); font-size: 14px; line-height: 22px; }
+.jinyao-chat-composer .gold-button { width: 44px; padding: 8px; flex: none; }
 .jinyao-chat-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px 10px; font-size: 10px; color: var(--text-secondary); flex: none; }
 .jinyao-chat-footer button { border: 0; background: none; color: var(--accent-gold); padding: 8px 0; min-height: 44px; font-size: 11px; }
 .jinyao-chat-limit { padding: 0 16px 12px; font-size: 11px; color: var(--text-secondary); }
