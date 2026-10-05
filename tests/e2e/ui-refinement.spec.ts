@@ -1,8 +1,12 @@
 import { expect, test } from "@playwright/test";
 
-test("home leads to reviewed exhibits and collection view preserves map filters", async ({ page }) => {
+test("Explore defaults to map and collection view preserves map filters", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("link", { name: "Explore Liaoning", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Explore map", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".liaoning-atlas")).toBeVisible();
+  await expect(page.getByRole("dialog", { name: "Expanded interactive map of Liaoning" })).toHaveCount(0);
+  await page.getByRole("button", { name: "Browse collection", exact: true }).click();
   await expect(page.getByRole("button", { name: "Browse collection", exact: true })).toHaveAttribute("aria-pressed", "true");
   await expect(page.locator(".liaoning-atlas")).not.toBeVisible();
   await expect(page.getByRole("button", { name: /Fuzhou shadow puppetry/ })).toBeVisible();
@@ -11,6 +15,9 @@ test("home leads to reviewed exhibits and collection view preserves map filters"
   await page.getByRole("button", { name: "Browse collection", exact: true }).click();
   await expect(page.getByRole("combobox", { name: "Region", exact: true })).toHaveText("Shenyang");
   await expect(page.getByText("No published exhibits match these filters.")).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole("button", { name: "Explore map", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".liaoning-atlas")).toBeVisible();
 });
 
 test("prototype controls are opt-in and keyboard can open every preview", async ({ page }) => {

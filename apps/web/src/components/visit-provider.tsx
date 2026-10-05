@@ -8,7 +8,7 @@ type ReadingVisit = { lastRead: string | null; saving: boolean; saved: string[] 
 const ReadingContext = createContext<{ reading: ReadingVisit; setReading: Dispatch<SetStateAction<ReadingVisit>> } | null>(null);
 export function VisitProvider({ children }: { children: React.ReactNode }) {
   const [reading, setReading] = useState<ReadingVisit>({ lastRead: null, saving: false, saved: [] });
-  const [catalog, setCatalog] = useState<CatalogVisit>({ query: "", region: "", theme: "", view: "collection" });
+  const [catalog, setCatalog] = useState<CatalogVisit>({ query: "", region: "", theme: "", view: "map" });
   const [guide, setGuide] = useState<GuideVisit>({ draft: "", turns: [] });
   const [journey, setJourney] = useState<JourneyVisit>({ ids: ["screen", "table", "song"], duration: 20, theme: "all", appliedDuration: 20, appliedTheme: "all" });
   return <ReadingContext.Provider value={{ reading, setReading }}><VisitContext.Provider value={{ guide, setGuide, journey, setJourney, catalog, setCatalog }}>{children}</VisitContext.Provider></ReadingContext.Provider>;
