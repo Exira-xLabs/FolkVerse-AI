@@ -1,14 +1,23 @@
+const evidenceDir = process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/phase02";
+
 import { expect, test, type Page } from "@playwright/test";
 
 async function ready(page: Page) {
   await page.locator("img").evaluateAll(images => images.forEach(image => image.setAttribute("loading", "eager")));
   await expect.poll(() => page.locator("img").evaluateAll(images => images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator(".collection-results [role=status]")).toHaveCount(0);
+  if (await page.locator(".liaoning-atlas").count()) await expect(page.locator(".liaoning-atlas")).toHaveAttribute("data-terrain-ready", "true");
+  const current = page.locator(".nav-tabs [aria-current=page]");
+  if (await current.count()) await expect.poll(() => current.evaluate(node => {
+    const tab = node.getBoundingClientRect(), row = node.parentElement!.getBoundingClientRect();
+    return tab.left >= row.left - 1 && tab.right <= row.right + 1;
+  })).toBe(true);
 }
 
-test("eight museum screens retain artwork and stay usable at three sizes in both languages", async ({ page }) => {
+test("nine museum screens retain artwork and stay usable at three sizes in both languages", async ({ page }) => {
   test.setTimeout(120000);
-  const routes = ["/", "/explore", "/journey", "/stories/lantern-path", "/lens", "/guide", "/dna", "/sources"];
+  const routes = ["/", "/explore", "/journey", "/stories/lantern-path", "/lens", "/guide", "/dna", "/sources", "/status"];
   const errors: string[] = []; page.on("pageerror", e => errors.push(e.message));
   for (const size of [{ width: 1600, height: 900 }, { width: 390, height: 844 }, { width: 768, height: 1024 }]) {
     await page.setViewportSize(size);
@@ -16,11 +25,12 @@ test("eight museum screens retain artwork and stay usable at three sizes in both
       await page.goto(route); await ready(page);
       await expect(page.locator("h1")).toBeVisible();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} at ${size.width}`).toBe(true);
-      await page.screenshot({ path: `report/evidence/phase01/${String(index + 1).padStart(2, "0")}-${route === "/" ? "home" : route.split("/")[1]}-${size.width}.png`, fullPage: true, animations: "disabled" });
+      await page.screenshot({ path: `${evidenceDir}/${String(index + 1).padStart(2, "0")}-${route === "/" ? "home" : route.split("/")[1]}-${size.width}.png`, fullPage: true, animations: "disabled" });
       await page.getByRole("button", { name: "Switch to Chinese" }).click();
       await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN"); await ready(page);
+      if (route === "/explore") await expect(page.locator(".published-card h3")).toHaveText("复州皮影戏");
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} Chinese at ${size.width}`).toBe(true);
-      if (size.width === 1600) await page.screenshot({ path: `report/evidence/phase01/zh-${index + 1}-1600.png`, fullPage: true, animations: "disabled" });
+      await page.screenshot({ path: `${evidenceDir}/zh-${index + 1}-${size.width}.png`, fullPage: true, animations: "disabled" });
       await page.getByRole("button", { name: "Switch to English" }).click();
     }
   }
@@ -29,6 +39,7 @@ test("eight museum screens retain artwork and stay usable at three sizes in both
 
 test("explore filters, empty state and source drawer keyboard focus", async ({ page }) => {
   await page.goto("/explore");
+  await page.getByRole("button", { name: "Preview examples" }).click();
   await page.getByRole("button", { name: "Music", exact: true }).click();
   await expect(page.getByRole("button", { name: /An evening of melodies/ })).toBeVisible();
   await expect(page.getByRole("button", { name: /Behind the illuminated screen/ })).toHaveCount(0);
@@ -47,12 +58,15 @@ test("explore filters, empty state and source drawer keyboard focus", async ({ p
 
 test("journey reorder, remove and duration-constrained empty state", async ({ page }) => {
   await page.goto("/journey");
+  await page.locator("summary").filter({ hasText: "Preview a learning route" }).click();
   await page.getByRole("button", { name: "Move down screen" }).click();
   await expect(page.locator(".journey-stops li").first()).toContainText("Fujian");
   await page.getByRole("button", { name: "Remove table" }).click();
   await expect(page.locator(".panel-heading")).toContainText("13 / 20");
-  await page.getByLabel("Time", { exact: true }).selectOption("5");
-  await page.getByLabel("Interests", { exact: true }).selectOption("Craft");
+  await page.getByRole("combobox", { name: "Time", exact: true }).click();
+  await page.getByRole("option", { name: "5 minutes", exact: true }).click();
+  await page.getByRole("combobox", { name: "Interests", exact: true }).click();
+  await page.getByRole("option", { name: "Craft", exact: true }).click();
   await page.getByRole("button", { name: /Shape my route/ }).click();
   await expect(page.getByText(/Not enough time/)).toBeVisible();
 });
@@ -70,8 +84,10 @@ test("both story branches, restart and actual recorded audio", async ({ page }) 
 
 test("lens exposes unknown, poor image, denial, outage and loading without claiming recognition", async ({ page }) => {
   await page.goto("/lens");
-  for (const [value, heading] of [["unknown", "No eligible catalog match"], ["poor", "More detail is needed"], ["denied", "Camera permission denied"], ["unavailable", "Recognition service unavailable"]]) {
-    await page.getByLabel("Choose a demo scenario").selectOption(value); await expect(page.getByRole("heading", { name: heading })).toBeVisible();
+  await page.locator("summary").filter({ hasText: "Preview Object Lens" }).click();
+  for (const [value, heading] of [["Unknown object", "No eligible catalog match"], ["Insufficient image", "More detail is needed"], ["Permission denied", "Camera permission denied"], ["Service unavailable", "Recognition service unavailable"]]) {
+    await page.getByRole("combobox", { name: "Choose a demo scenario" }).click();
+    await page.getByRole("option", { name: value, exact: true }).click(); await expect(page.getByRole("heading", { name: heading })).toBeVisible();
   }
   await page.getByRole("button", { name: /Replay simulation/ }).click();
   await expect(page.getByText("Comparing demo…")).toBeVisible();
@@ -80,7 +96,8 @@ test("lens exposes unknown, poor image, denial, outage and loading without claim
 });
 
 test("guide submits bounded text, clearly scripted response and voice unavailable", async ({ page }) => {
-  await page.goto("/guide"); await expect(page.getByRole("button", { name: /Send/ })).toBeDisabled();
+  await page.goto("/guide");
+  await page.locator("summary").filter({ hasText: "Preview a conversation" }).click(); await expect(page.getByRole("button", { name: /Send/ })).toBeDisabled();
   const input = page.getByLabel("Ask the guide"); await expect(input).toHaveAttribute("maxlength", "2000");
   await input.fill("How does this tradition work?"); await page.getByRole("button", { name: /Send/ }).click();
   await expect(page.getByText("Loading the scripted response…")).toBeVisible();
@@ -89,7 +106,11 @@ test("guide submits bounded text, clearly scripted response and voice unavailabl
 });
 
 test("interest edits redraw chart and reset clears suggestions", async ({ page }) => {
-  await page.goto("/dna"); const polygon = page.locator("polygon"); const before = await polygon.getAttribute("points");
+  await page.goto("/dna");
+  await expect(page.locator(".interest-chart dd")).toHaveText(["0 / 100", "0 / 100", "0 / 100", "0 / 100"]);
+  await page.getByRole("button", { name: "Try example interests" }).click();
+  await expect(page.getByText("Example interests · not your profile")).toBeVisible();
+  const polygon = page.locator("polygon"); const before = await polygon.getAttribute("points");
   await page.getByRole("button", { name: "Edit interests" }).click();
   await page.getByRole("slider", { name: "Craft", exact: true }).fill("12");
   expect(await polygon.getAttribute("points")).not.toBe(before);
@@ -100,9 +121,18 @@ test("interest edits redraw chart and reset clears suggestions", async ({ page }
 });
 
 test("live mode fails closed with no demo controls", async ({ page }) => {
-  for (const route of ["explore", "journey", "guide", "lens", "dna", "sources", "stories/lantern-path"]) {
+  for (const route of ["journey", "guide", "lens", "dna", "stories/lantern-path"]) {
     await page.goto(`http://127.0.0.1:3002/${route}`);
     await expect(page.getByRole("heading", { name: "This experience is not available yet." })).toBeVisible();
+    await expect(page.locator(".fixture-content")).toHaveCount(0);
+  }
+});
+
+test("published collection works in live mode with no fixture toggle", async ({ page }) => {
+  for (const route of ["explore", "sources"]) {
+    await page.goto(`http://127.0.0.1:3002/${route}`);
+    await expect(page.getByRole("button", { name: "Published collection" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Preview examples" })).toHaveCount(0);
     await expect(page.locator(".fixture-content")).toHaveCount(0);
   }
 });

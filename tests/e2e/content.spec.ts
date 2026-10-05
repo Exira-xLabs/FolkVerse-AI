@@ -1,0 +1,72 @@
+import { expect, test } from "@playwright/test";
+const evidenceDir = process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/phase02";
+
+test("Liaoning published region → exhibit → attributed source works in both languages", async ({ page, request }) => {
+  const collection = await request.get("/api/v1/exhibits?region_id=liaoning");
+  expect(collection.ok()).toBe(true);
+  expect(collection.headers()["cache-control"]).toContain("no-store");
+  expect((await collection.json()).items.map((e: { id: string }) => e.id)).toEqual(["liaoning-dalian-01"]);
+  await page.goto("/explore");
+  await page.getByRole("combobox", { name: "Region", exact: true }).click();
+  await page.getByRole("option", { name: "Liaoning province", exact: true }).click();
+  const opener = page.getByRole("button", { name: /Fuzhou shadow puppetry/ });
+  await expect(opener).toBeVisible();
+  await expect(page.getByText("1 published exhibit", { exact: true })).toBeVisible();
+  await expect(page.locator(".published-cards")).not.toContainText("Shaanxi");
+  await expect(page.locator(".published-cards")).not.toContainText("Lanterns of Shenyang");
+  await opener.click();
+  const drawer = page.getByRole("dialog");
+  await expect(drawer.getByRole("heading", { name: "Fuzhou shadow puppetry", exact: true })).toBeVisible();
+  await expect(drawer.getByText("Liaoning Provincial Government", { exact: true })).toBeVisible();
+  await expect(drawer.getByRole("link", { name: /Visit institutional source/ })).toHaveAttribute("href", /2023010509411077517/);
+  await expect(drawer.getByText(/Project owner \(user\)/).first()).toBeVisible();
+  await drawer.getByText("Record integrity", { exact: true }).click();
+  await expect(drawer.locator("code")).toHaveText(/^[a-f0-9]{64}$/);
+  await drawer.evaluate(el => { el.scrollTop = 0; });
+  await page.screenshot({ path: `${evidenceDir}/liaoning-source-drawer.png`, fullPage: true });
+  await page.keyboard.press("Escape"); await expect(opener).toBeFocused();
+  await page.getByRole("button", { name: "Switch to Chinese" }).click();
+  await expect(page.getByRole("button", { name: /复州皮影戏/ })).toBeVisible();
+  await page.getByRole("button", { name: /复州皮影戏/ }).click();
+  await expect(drawer.getByText("复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。", { exact: true }).first()).toBeVisible();
+  await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: "Switch to English" }).click();
+  await page.getByRole("searchbox").fill("does-not-match");
+  await expect(page.getByText("No published exhibits match these filters.")).toBeVisible();
+  await page.getByRole("searchbox").fill("");
+  await page.getByRole("combobox", { name: "Theme", exact: true }).click();
+  await page.getByRole("option", { name: "Craft", exact: true }).click();
+  await expect(page.getByText("No published exhibits match these filters.")).toBeVisible();
+  await page.getByRole("combobox", { name: "Theme", exact: true }).click();
+  await page.getByRole("option", { name: "Performance", exact: true }).click();
+  await expect(opener).toBeVisible();
+});
+
+test("published source index hides draft sources and exposes only permitted passages", async ({ page, request }) => {
+  await page.goto("/sources");
+  await expect(page.getByText("1 published source", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: /First provincial intangible/ }).click();
+  await expect(page.getByRole("dialog").getByText(/Fuzhou shadow puppetry is listed/)).toBeVisible();
+  await expect(page.getByRole("dialog")).not.toContainText("Gaizhou stilt yangge");
+  expect((await request.get("/api/v1/exhibits/shadow-02")).status()).toBe(404);
+  expect((await request.get("/api/v1/exhibits/liaoning-shenyang-01")).status()).toBe(404);
+  await expect((await request.get("/api/v1/artifacts")).json()).resolves.toEqual({ items: [] });
+});
+
+test("collection error recovers and withdrawn drawer clears on revalidation", async ({ page }) => {
+  await page.route("**/api/v1/exhibits?*", route => route.fulfill({ status: 503, contentType: "application/json", body: '{"error":{"code":"database_unavailable"}}' }));
+  await page.goto("/explore");
+  await expect(page.locator(".collection-results").getByRole("alert")).toContainText("temporarily unavailable");
+  await expect(page.locator(".published-card")).toHaveCount(0);
+  await page.unroute("**/api/v1/exhibits?*");
+  await page.getByRole("button", { name: "Try again" }).click();
+  await page.getByRole("button", { name: /Fuzhou shadow puppetry/ }).click();
+  await expect(page.getByRole("dialog").getByRole("heading", { name: "Fuzhou shadow puppetry", exact: true })).toBeVisible();
+  await page.route("**/api/v1/exhibits/liaoning-dalian-01?*", route => route.fulfill({ status: 404, contentType: "application/json", body: '{"error":{"code":"not_found"}}' }));
+  await page.evaluate(() => window.dispatchEvent(new Event("focus")));
+  await expect(page.getByRole("dialog").getByRole("heading", { name: "Record no longer available" })).toBeVisible();
+  await expect(page.getByRole("dialog").getByRole("link", { name: /Visit institutional/ })).toHaveCount(0);
+  await page.unroute("**/api/v1/exhibits/liaoning-dalian-01?*");
+  await page.evaluate(() => window.dispatchEvent(new Event("focus")));
+  await expect(page.getByRole("dialog").getByRole("heading", { name: "Fuzhou shadow puppetry", exact: true })).toBeVisible();
+});

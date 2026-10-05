@@ -1,0 +1,28 @@
+[
+  {
+    "source": "apps/web/public/folkverse/09_ai_guide_character.png",
+    "dest": "apps/web/public/folkverse/enhanced/09_ai_guide_character-lossless.webp",
+    "visibleDifferences": 0,
+    "alphaDifferences": 0,
+    "transparentRgbDifferences": 76981,
+    "originalBytes": 1673187,
+    "deliveredBytes": 1154362,
+    "width": 1311,
+    "height": 1200,
+    "hasAlpha": true,
+    "sha256": "f8263f364990d0ef1a3ef05027fb8e4f62d6fc12bcbf95b7c2d52a2748d3c8f0"
+  },
+  {
+    "source": "apps/web/public/folkverse/maps/liaoning-terrain-v2.png",
+    "dest": "apps/web/public/folkverse/maps/liaoning-terrain-v2-lossless.webp",
+    "visibleDifferences": 0,
+    "alphaDifferences": 0,
+    "transparentRgbDifferences": 0,
+    "originalBytes": 3147927,
+    "deliveredBytes": 2470558,
+    "width": 1309,
+    "height": 1201,
+    "hasAlpha": false,
+    "sha256": "416a152b686fd56c98a5d8db6d9d2ba584b8e884cc63caae1b6dc066ee04a7bf"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "assets/08_museum_everywhere.png": "479cea2e20c7202448b7c5dc296d7fcf69ab8a5da437529eeead6f9f930c7eb9",
+  "assets/01_museum_entrance.png": "a1b866c5b50cdedabf5fce6e81bd3000548093e5c1fe354f35115a44d1228f8f",
+  "assets/09_ai_guide_character.png": "b9ed8f99c4caf4826b8b2c2b3e836fc7870eaae69ede4fea76489f93984f46af",
+  "assets/03_cultural_journey.png": "9bad3fe56057e5a7866e76b1f424986b5a4949c5a95924552a8e077c3d9038b4",
+  "assets/05_object_lens.png": "36e293b72d804e392245c9c044d99d962fc2ac1edc79badc109c2c9b3b644803",
+  "assets/02_interactive_map.png": "65920754ce5065c756f5b2bbf23fd8065524f4db65c5de72f230149c6aab4022",
+  "assets/07_folklore_dna.png": "f6251fc4e9ab1f2cefbaa8cd0c667365628d714893ccf55f6be501be542d9963",
+  "assets/06_ai_guide.png": "6ac351de8b6a120b9cb08b626fbb3e415412cfb3d4c7bdaaa35d60819a3cbb7e",
+  "assets/04_shadow_puppetry.png": "eeead5c758fd00abb54a6959ac024704c89d016ea39dd0fab9fb5d98bb63e538",
+  "apps/web/public/folkverse/maps/liaoning-terrain-v2.png": "a742d6227d04677fa59b791bc32ddae6a6a4020be680c066fded77e9eda1eb5e",
+  "apps/web/src/lib/maps/liaoning-geography.json": "46bd6f30842ba88746978c560ae3dbfbcb25f415fd316ce0a4546d278d3e4a93",
+  "apps/web/src/lib/maps/liaoning-city-boundaries.json": "adb97406894fa251602bf692bf2857f07fdfec833d258798eafabe38d3212592",
+  "data/manifests/corpus.json": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "data/manifests/review-ledger.json": "006717c893efd799e9a72ca7ea5a86779d103e26a4f69adef4e6863789aee940"
+}

@@ -1,0 +1,80 @@
+import { expect, test } from "@playwright/test";
+
+const evidenceDir = process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/dropdown-ui";
+
+test("collection dropdown supports keyboard selection, cancellation, typeahead and outside dismissal", async ({ page }) => {
+  await page.goto("/explore");
+  const region = page.getByRole("combobox", { name: "Region", exact: true });
+  await region.scrollIntoViewIfNeeded();
+  await region.focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("listbox", { name: "Region" })).toBeVisible();
+  await expect(page.getByRole("option")).toHaveCount(16);
+  await expect(page.getByRole("option", { name: "All Liaoning", exact: true })).toHaveAttribute("aria-selected", "true");
+  await page.keyboard.press("End");
+  await expect(page.getByRole("option", { name: "Huludao", exact: true })).toBeInViewport();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("listbox")).toHaveCount(0);
+  await expect(region).toHaveText("All Liaoning");
+  await expect(region).toBeFocused();
+  await page.keyboard.press("d");
+  await page.keyboard.press("Enter");
+  await expect(region).toHaveText("Dalian");
+  await expect(page.locator(".atlas-district-selected")).toHaveAttribute("data-city-id", "liaoning-dalian");
+  await expect(page.getByRole("button", { name: /Fuzhou shadow puppetry/ })).toBeVisible();
+  const theme = page.getByRole("combobox", { name: "Theme", exact: true });
+  await region.click();
+  await theme.click();
+  await expect(page.getByRole("listbox")).toHaveCount(1);
+  await expect(page.getByRole("listbox", { name: "Theme" })).toBeVisible();
+  await page.getByRole("option", { name: "Craft", exact: true }).click();
+  await expect(page.getByText("No published exhibits match these filters.")).toBeVisible();
+  await theme.click();
+  await page.keyboard.press("Home");
+  await page.keyboard.press("Enter");
+  await expect(theme).toHaveText("All themes");
+  await region.click();
+  await page.screenshot({ path: `${evidenceDir}/region-menu-desktop.png` });
+  await page.getByRole("heading", { name: "Discover Liaoning", exact: true }).click();
+  await expect(region).toHaveAttribute("aria-expanded", "false");
+  await theme.focus();
+  await page.keyboard.press("ArrowDown");
+  await page.keyboard.press("Tab");
+  await expect(page.getByRole("listbox")).toHaveCount(0);
+  await expect(theme).toHaveText("All themes");
+  await expect(page.getByRole("button", { name: /Refresh collection/ })).toBeFocused();
+});
+
+test("compact and Chinese touch dropdowns fit the viewport and preserve their choices", async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true, reducedMotion: "reduce" });
+  const page = await context.newPage();
+  try {
+    await page.goto("/journey");
+    await page.locator("summary").filter({ hasText: "Preview a learning route" }).tap();
+    const time = page.getByRole("combobox", { name: "Time", exact: true });
+    await time.tap();
+    await page.getByRole("option", { name: "10 minutes", exact: true }).tap();
+    await expect(time).toHaveText("10 minutes");
+    await time.tap();
+    await page.screenshot({ path: `${evidenceDir}/time-menu-phone.png` });
+    await page.keyboard.press("Escape");
+    await page.goto("/lens");
+    await page.getByRole("button", { name: "Switch to Chinese" }).tap();
+    await page.locator("summary").filter({ hasText: "预览识物体验" }).tap();
+    const scenario = page.getByRole("combobox", { name: "选择演示场景" });
+    await scenario.tap();
+    await page.getByRole("option", { name: "未知物件", exact: true }).tap();
+    await expect(page.getByRole("heading", { name: "没有符合条件的目录匹配" })).toBeVisible();
+    await scenario.tap();
+    const bounds = await page.getByRole("listbox").boundingBox();
+    expect(bounds).not.toBeNull();
+    expect(bounds!.x).toBeGreaterThanOrEqual(12);
+    expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(378);
+    expect(bounds!.y).toBeGreaterThanOrEqual(0);
+    expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(844);
+    await page.screenshot({ path: `${evidenceDir}/scenario-menu-phone-zh.png` });
+    await page.getByRole("option", { name: "服务不可用", exact: true }).tap();
+    await expect(page.getByRole("heading", { name: "识别服务不可用" })).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  } finally { await context.close(); }
+});

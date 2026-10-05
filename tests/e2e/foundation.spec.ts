@@ -1,3 +1,5 @@
+const evidenceDir = process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/phase02";
+
 import { expect, test, type Page } from "@playwright/test";
 
 const routes = ["/", "/explore", "/journey", "/stories/lantern-path", "/lens", "/guide", "/dna", "/sources"];
@@ -8,11 +10,13 @@ async function waitForArtwork(page: Page) {
     images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0)
   ), { timeout: 15000 }).toBe(true);
   await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator(".collection-results [role=status]")).toHaveCount(0);
+  if (await page.locator(".liaoning-atlas").count()) await expect(page.locator(".liaoning-atlas")).toHaveAttribute("data-terrain-ready", "true");
 }
 
 async function capture(page: Page, filename: string) {
   await waitForArtwork(page);
-  await page.screenshot({ path: `report/evidence/phase01/regression-${filename}.png`, fullPage: true, animations: "disabled" });
+  await page.screenshot({ path: `${evidenceDir}/regression-${filename}.png`, fullPage: true, animations: "disabled" });
 }
 
 test("museum routes work at desktop, mobile and tablet without page overflow", async ({ page }) => {
@@ -25,7 +29,7 @@ test("museum routes work at desktop, mobile and tablet without page overflow", a
       await page.goto(route);
       await expect(page.locator("h1")).toBeVisible();
       await waitForArtwork(page);
-      await expect(page.getByText("Interactive demo", { exact: true }).last()).toBeVisible();
+      await expect(page.getByText("Reviewed collection · optional previews", { exact: true }).last()).toBeVisible();
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
       expect(overflow, `${route} at ${viewport.width}px`).toBe(false);
     }
@@ -45,9 +49,9 @@ test("navigation, language persistence and keyboard skip path work", async ({ pa
   await expect(page.getByRole("link", { name: "Explore", exact: true })).toHaveAttribute("aria-current", "page");
   await page.getByRole("button", { name: "Switch to Chinese" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
-  await expect(page.locator("h1")).toHaveText("每一方土地，都有故事");
+  await expect(page.locator("h1")).toHaveText("辽宁，一省故事");
   await page.reload();
-  await expect(page.locator("h1")).toHaveText("每一方土地，都有故事");
+  await expect(page.locator("h1")).toHaveText("辽宁，一省故事");
   await capture(page, "explore-zh-1600");
   await page.getByRole("button", { name: "Switch to English" }).click();
   await page.getByRole("link", { name: "FolkVerse China", exact: true }).click();

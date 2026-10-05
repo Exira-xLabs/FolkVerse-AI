@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import { routes, type PageKey } from "@/lib/routes";
+import { museumArt } from "@/lib/museum-art";
 import { useLocale } from "./locale-provider";
 import { ServiceStatus } from "./service-status";
 import { GlassTabs } from "./museum-ui";
@@ -22,12 +23,10 @@ export function MuseumScene({ page, simple, children }: { page: PageKey; simple:
 export function MuseumShell({ page, mode }: { page: PageKey; mode: "demo" | "live" }) {
   const { locale, setLocale, t } = useLocale();
   const [simple, setSimple] = useState(false);
-  const demoLabel = mode === "demo" ? (locale === "en" ? "Interactive demo" : "交互演示") : (locale === "en" ? "Live mode · features unavailable" : "实时模式 · 功能尚未开放");
+  const demoLabel = locale === "en" ? "Reviewed collection · optional previews" : "审核馆藏 · 可选体验预览";
   const route = routes[page];
-  const cards = ["journey", "stories", "lens", "guide"] as const;
+  const cards = ["explore", "stories", "journey", "guide"] as const;
   return <MuseumScene page={page} simple={simple}>
-    <Image className="scene-art" src={`/folkverse/${route.asset}`} alt="" fill priority sizes="100vw" />
-    <div className="scene-shade" />
     <a className="skip-link" href="#main">{t.skip}</a>
     <header className="museum-nav glass-panel">
       <Link className="brand" href="/" aria-label="FolkVerse China"><span>FolkVerse</span><small>CHINA / AI</small></Link>
@@ -36,19 +35,26 @@ export function MuseumShell({ page, mode }: { page: PageKey; mode: "demo" | "liv
         onClick={() => setLocale(locale === "en" ? "zh-CN" : "en")}>{locale === "en" ? "EN / 中文" : "中文 / EN"}</button>
     </header>
     <main id="main" tabIndex={-1} className="museum-main">
+      <section className="scene-hero" aria-labelledby="page-title">
+      <div className="scene-picture">
+        <Image className="scene-art" src={museumArt(route.asset)} alt="" fill priority quality={90} sizes="(max-width: 700px) 100vw, 70vw" />
+        <div className="scene-shade" />
+      </div>
       <div className="hero-copy">
         <p className="kicker">{page === "home" ? t.kicker : `${String(Object.keys(routes).indexOf(page)).padStart(2, "0")} / ${t.nav[page].toUpperCase()}`}</p>
-        <h1>{t.titles[page]}</h1>
+        <h1 id="page-title">{t.titles[page]}</h1>
         <p className="subtitle">{t.subtitles[page]}</p>
-      </div>
+        {page === "home" && <div className="hero-actions"><Link className="gold-button" href="/explore">{locale === "en" ? "Explore Liaoning" : "探索辽宁"}<DiscoveryArrow /></Link><Link className="text-button" href="/sources">{locale === "en" ? "Meet the sources" : "了解资料来源"} ↗︎</Link></div>}
+      </div></section>
       {page === "home" ? <div className="discovery-cards">
         {cards.map((key, index) => <article className={`glass-panel discovery-card card-${key}`} key={key}>
           <h2>{t.homeCards[index]}</h2>
+          <p className="card-availability">{locale === "en" ? (index === 0 ? "Published collection" : key === "stories" ? "Original fiction · preview" : "Experience preview") : (index === 0 ? "已发布馆藏" : key === "stories" ? "原创虚构故事 · 预览" : "体验预览")}</p>
           <div className="card-art">
-            <Image src={`/folkverse/${key === "guide" ? "09_ai_guide_character.png" : routes[key].asset}`}
-              alt="" fill sizes="(max-width: 700px) 80vw, 25vw" className={key === "guide" ? "portrait-art" : ""} />
+            <Image src={museumArt(key === "guide" ? "09_ai_guide_character.png" : key === "explore" ? "04_shadow_puppetry.png" : routes[key].asset)}
+              alt="" fill quality={90} sizes="(max-width: 700px) 100vw, 25vw" className={key === "guide" ? "portrait-art" : ""} />
           </div>
-          <Link className={index === 0 || index === 3 ? "gold-button" : "outline-button"}
+          <Link className={index === 0 ? "gold-button" : "outline-button"}
             href={routes[key].href}>{t.homeActions[index]}<DiscoveryArrow /></Link>
         </article>)}
       </div> : page === "status" ? <ServiceStatus /> : <MuseumExperiences page={page} mode={mode} />}

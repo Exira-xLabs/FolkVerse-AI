@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { useLocale } from "./locale-provider";
 import { AudioControls, demoExhibits, ExhibitCard, GlassPanel, GoldButton, GuidePortrait, InterestChart, SourceDrawer, ThemeChip } from "./museum-ui";
+import { CatalogExperience } from "./catalog-explorer";
+import { MuseumSelect } from "./museum-select";
 import type { PageKey } from "@/lib/routes";
 
 function useCopy() {
@@ -11,6 +13,22 @@ function useCopy() {
   return (en: string, zh: string) => locale === "en" ? en : zh;
 }
 type OpenSource = (title?: string) => void;
+
+function ExperiencePreview({ page, children }: { page: "journey" | "lens" | "guide"; children: React.ReactNode }) {
+  const c = useCopy();
+  const copy = {
+    journey: ["A little time, a new discovery", "用一点时间，发现新的文化", "Personal routes are being prepared. Start with the reviewed Liaoning collection, or try a sample digital learning route.", "个性化路线正在准备中。您可以先浏览审核后的辽宁馆藏，或尝试示例数字学习路线。", "Preview a learning route", "预览学习路线"],
+    lens: ["Curious about an object?", "想了解眼前的物件？", "Photo recognition is being prepared. Explore reviewed exhibits and their sources while you wait. The optional example below shows how results could look.", "照片识别正在准备中。您可以先探索审核展览及其来源。下方的可选示例展示未来结果的呈现方式。", "Preview Object Lens", "预览识物体验"],
+    guide: ["Welcome to the museum", "欢迎来到博物馆", "Source-backed conversation is being prepared. Discover a reviewed exhibit today, or try a clearly labelled conversation example.", "有来源依据的对话正在准备中。您可以先探索审核展览，或尝试明确标注的对话示例。", "Preview a conversation", "预览对话体验"],
+  }[page];
+  return <div className="experience-preview"><GlassPanel className="experience-intro">
+    {page === "guide" && <GuidePortrait />}
+    <p className="eyebrow">{c("COMING SOON", "即将开放")}</p><h2>{c(copy[0], copy[1])}</h2><p>{c(copy[2], copy[3])}</p>
+    <Link href="/explore" className="gold-button">{c("Explore the collection", "探索馆藏")} ↗︎</Link>
+  </GlassPanel><details className="optional-preview"><summary>{c(copy[4], copy[5])}<span>{c("Optional example", "可选示例")}</span></summary>
+    <p className="preview-explanation">{c("This preview uses scripted examples. It does not connect to live AI services.", "此预览使用预设示例，未连接真实 AI 服务。")}</p>{children}
+  </details></div>;
+}
 
 function Explore({ open }: { open: OpenSource }) {
   const c = useCopy(); const [query, setQuery] = useState(""); const [theme, setTheme] = useState("Craft"); const [selected, setSelected] = useState("screen");
@@ -32,8 +50,8 @@ function Journey({ open }: { open: OpenSource }) {
   const move = (index: number, direction: number) => setStops(previous => { const next = [...previous]; [next[index], next[index + direction]] = [next[index + direction], next[index]]; return next; });
   const total = stops.reduce((sum, e) => sum + e.minutes, 0);
   return <div className="journey-layout"><div className="journey-controls">
-    <label className="select-pill">{c("Interests", "兴趣")}<select aria-label={c("Interests", "兴趣")} value={theme} onChange={e => setTheme(e.target.value)}><option value="all">{c("Performance + craft", "表演与工艺")}</option><option value="Craft">{c("Craft", "工艺")}</option><option value="Music">{c("Music", "音乐")}</option><option value="Food">{c("Food", "饮食")}</option></select></label>
-    <label className="select-pill">{c("Time", "时长")}<select aria-label={c("Time", "时长")} value={duration} onChange={e => setDuration(Number(e.target.value))}>{[5, 10, 20, 30].map(v => <option key={v} value={v}>{v} {c("minutes", "分钟")}</option>)}</select></label>
+    <MuseumSelect compact label={c("Interests", "兴趣")} value={theme} onChange={setTheme} options={[{ value: "all", label: c("All interests", "所有兴趣") }, ...[["Craft", "工艺"], ["Music", "音乐"], ["Food", "饮食"]].map(([value, zh]) => ({ value, label: c(value, zh) }))]} />
+    <MuseumSelect compact label={c("Time", "时长")} value={String(duration)} onChange={value => setDuration(Number(value))} options={[5, 10, 20, 30].map(value => ({ value: String(value), label: `${value} ${c("minutes", "分钟")}` }))} />
     <GoldButton onClick={regenerate}>{c("Shape my route", "生成我的路线")} ↗︎</GoldButton>
   </div><GlassPanel className="journey-route"><div className="panel-heading"><h2>{c("Your next discoveries", "您的下一站发现")}</h2><span className="demo-tag" aria-live="polite">{stops.length} {c("stops", "站")} · {total} / {duration} {c("min", "分钟")}</span></div>
     <p className="fine-print">{c("A digital learning route · illustrative stops, not physical travel directions.", "数字学习路线 · 示例站点，不是实际旅行导航。")}</p>
@@ -58,7 +76,7 @@ function Lens({ open }: { open: OpenSource }) {
     related: ["A related object class", "相关物件类别"], unknown: ["No eligible catalog match", "没有符合条件的目录匹配"], poor: ["More detail is needed", "需要更多细节"], denied: ["Camera permission denied", "相机权限被拒绝"], unavailable: ["Recognition service unavailable", "识别服务不可用"],
   };
   return <GlassPanel className="lens-panel"><h2>{c("Look closer", "仔细看看")}</h2><span className="demo-tag">{c("SIMULATED RESULT · NO RECOGNITION", "模拟结果 · 非真实识别")}</span>
-    <label className="field"><span>{c("Choose a demo scenario", "选择演示场景")}</span><select value={state} onChange={e => setState(e.target.value)}><option value="related">{c("Related object class", "相关物件类别")}</option><option value="unknown">{c("Unknown object", "未知物件")}</option><option value="poor">{c("Insufficient image", "图像不足")}</option><option value="denied">{c("Permission denied", "权限被拒绝")}</option><option value="unavailable">{c("Service unavailable", "服务不可用")}</option></select></label>
+    <MuseumSelect label={c("Choose a demo scenario", "选择演示场景")} value={state} onChange={setState} options={[["related", "Related object class", "相关物件类别"], ["unknown", "Unknown object", "未知物件"], ["poor", "Insufficient image", "图像不足"], ["denied", "Permission denied", "权限被拒绝"], ["unavailable", "Service unavailable", "服务不可用"]].map(([value, en, zh]) => ({ value, label: c(en, zh) }))} />
     <div className="lens-result" aria-live="polite" aria-busy={busy}><span className="lens-symbol" aria-hidden="true">{busy ? "◌" : state === "related" ? "◇" : "?"}</span><h3>{busy ? c("Comparing demo…", "正在比较演示…") : c(...message[state])}</h3><p>{state === "related" ? c("Visible silhouette and articulated shapes suggest a puppet-like object in this scripted example. Similarity is not identity or authentication.", "在此脚本示例中，轮廓和关节形状提示类似偶人的物件。相似性不代表身份或鉴定。") : state === "poor" ? c("Try a clear, well-lit photograph of the object and its label when capture is available.", "拍摄功能开放后，请提供清晰、光线充足的物件及标签照片。") : state === "denied" ? c("Camera access is not requested by this demo. This is a permission-error preview.", "本演示不会请求相机权限，此处仅预览权限错误。") : c("No live recognition is connected. This demo does not upload images or claim a catalog identity.", "尚未连接真实识别服务，本演示不会上传图像或宣称目录身份。")}</p></div>
     <GoldButton disabled={busy} onClick={() => void compare()}>{c("Replay simulation", "重播模拟")} ↻</GoldButton><button className="text-button" onClick={() => open()}>{c("Inspect catalog requirements", "查看目录要求")} ↗︎</button>
   </GlassPanel>;
@@ -70,17 +88,20 @@ function Guide({ open }: { open: OpenSource }) {
   return <div className="guide-layout"><GlassPanel className="chat-panel"><span className="demo-tag">{c("SCRIPTED DEMO · NO MODEL CALL", "脚本演示 · 无模型调用")}</span><div className="chat-history" aria-live="polite" aria-busy={state === "loading"}><p className="eyebrow">{c("YOU", "您")}</p><div className="chat-question">{asked || c("What can I discover here?", "我能在这里发现什么？")}</div><p className="eyebrow">{c("GUIDE", "向导")}</p><p className="chat-answer">{state === "loading" ? c("Loading the scripted response…", "正在加载脚本回答…") : asked ? c("This is a recorded UI demonstration, so I cannot answer your question from evidence yet. Explore a demo exhibit, or inspect the source requirements below.", "这是预设界面演示，目前无法根据证据回答您的问题。您可以探索示例展览，或查看下方来源要求。") : c("Follow a lantern, shape a learning route, or explore your cultural interests. These interactive previews use demo material; reviewed cultural answers are coming in a later phase.", "追随灯笼、规划学习路线，或探索文化兴趣。这些交互预览使用演示资料，经过审核的文化问答将在后续阶段上线。")}</p><button className="source-pill" onClick={() => open()}>{c("Demo provenance & source requirements", "演示出处与来源要求")} ↗︎</button></div>
     <form className="guide-composer" onSubmit={e => { e.preventDefault(); void send(); }}><label className="sr-only" htmlFor="guide-question">{c("Ask the guide", "向向导提问")}</label><textarea id="guide-question" maxLength={2000} rows={2} value={question} onChange={e => setQuestion(e.target.value)} placeholder={c("Ask about a tradition…", "询问文化传统…")} /><GoldButton type="submit" disabled={!question.trim() || state === "loading"}>{c("Send", "发送")} ↑</GoldButton></form>
     <div className="composer-bottom"><small>{question.length} / 2000</small><button className="text-button" onClick={() => setNotice(c("Live microphone transcription is unavailable. Type your question instead.", "实时麦克风转写尚未开放，请输入您的问题。"))}>{c("Voice", "语音")} ◉</button></div>{notice && <p role="status" className="fine-print">{notice}</p>}
-  </GlassPanel><GuidePortrait /></div>;
+  </GlassPanel></div>;
 }
 
 function Dna({ open }: { open: OpenSource }) {
-  const c = useCopy(); const [weights, setWeights] = useState([78, 64, 53, 41]); const [editing, setEditing] = useState(false); const [paused, setPaused] = useState(true);
+  const c = useCopy(); const [weights, setWeights] = useState([0, 0, 0, 0]); const [editing, setEditing] = useState(false); const [example, setExample] = useState(false);
   const names = [["Craft", "工艺"], ["Legends", "传说"], ["Music", "音乐"], ["Food culture", "饮食文化"]]; const strongest = weights.indexOf(Math.max(...weights));
-  return <div className="dna-layout"><GlassPanel className="dna-panel"><h2>{c("Your cultural constellation", "您的文化星图")}</h2><InterestChart weights={weights} /><p className="fine-print">{c("Sample interests, not ancestry. Changes stay in this page; no tracking or profile is saved.", "示例兴趣，不代表血统。修改仅保留在此页面，不会追踪或保存个人档案。")}</p>
-    <div className="compact-actions"><GoldButton onClick={() => setEditing(!editing)} aria-expanded={editing}>{editing ? c("Done", "完成") : c("Edit interests", "编辑兴趣")}</GoldButton><button className="outline-button" onClick={() => setWeights([0, 0, 0, 0])}>{c("Reset", "重置")}</button></div>
-    {editing && <fieldset className="interest-edit"><legend>{c("Set your own weights", "设置您的兴趣权重")}</legend>{names.map(([en, zh], i) => <label key={en}>{c(en, zh)}<input type="range" min="0" max="100" value={weights[i]} onChange={e => setWeights(weights.map((v, j) => i === j ? Number(e.target.value) : v))} /><output>{weights[i]}</output></label>)}</fieldset>}
-    <button className="text-button" aria-pressed={!paused} onClick={() => setPaused(!paused)}>{paused ? c("Preview tracking opt-in", "预览追踪同意") : c("Pause demo tracking", "暂停演示追踪")}</button><small className="fine-print">{paused ? c("Tracking is off.", "追踪已关闭。") : c("Opt-in preview only; no events are collected.", "仅预览同意状态，不收集事件。")}</small>
-  </GlassPanel><GlassPanel className="recommendation-panel"><p className="eyebrow">{c("RECOMMENDED FOR YOUR DEMO", "为您的演示推荐")}</p><h2>{weights.every(v => v === 0) ? c("Begin with curiosity", "从好奇开始") : c(names[strongest][0], names[strongest][1])}</h2><p>{weights.every(v => v === 0) ? c("Choose an interest to shape a suggestion.", "选择一项兴趣来获得建议。") : c("Based on your strongest explicit demo interest.", "根据您设置的最强演示兴趣。")}</p><button className="text-button" onClick={() => open()}>{c("Why this suggestion?", "为什么推荐？")} ↗︎</button></GlassPanel></div>;
+  return <div className="dna-layout"><GlassPanel className="dna-panel"><h2>{c("Your cultural constellation", "您的文化星图")}</h2>
+    {example && <p className="demo-tag">{c("Example interests · not your profile", "示例兴趣 · 非您的档案")}</p>}
+    {weights.every(v => v === 0) && <p className="interest-intro">{c("Nothing selected yet. Choose a little, a lot, or leave any theme open.", "尚未选择兴趣。您可以选择不同程度，也可以保留任何主题为空。")}</p>}
+    <InterestChart weights={weights} /><p className="fine-print">{c("Only the preferences you choose here. Changes stay on this page; no tracking or profile is saved.", "仅使用您在此选择的偏好。修改保留在此页面，不会追踪或保存个人档案。")}</p>
+    <div className="compact-actions"><GoldButton onClick={() => setEditing(!editing)} aria-expanded={editing}>{editing ? c("Done", "完成") : c("Edit interests", "编辑兴趣")}</GoldButton><button className="outline-button" onClick={() => { setWeights([0, 0, 0, 0]); setExample(false); }}>{c("Reset", "重置")}</button></div>
+    {editing && <fieldset className="interest-edit"><legend>{c("How curious are you?", "您对哪些主题感到好奇？")}</legend>{names.map(([en, zh], i) => <label key={en}>{c(en, zh)}<input type="range" min="0" max="100" value={weights[i]} onChange={e => { setExample(false); setWeights(weights.map((v, j) => i === j ? Number(e.target.value) : v)); }} /><output>{weights[i]}</output></label>)}</fieldset>}
+    <button className="text-button" onClick={() => { setWeights([78, 64, 53, 41]); setExample(true); }}>{c("Try example interests", "尝试示例兴趣")}</button>
+  </GlassPanel><GlassPanel className="recommendation-panel"><p className="eyebrow">{c(example ? "EXAMPLE DISCOVERY" : "A DIRECTION TO EXPLORE", example ? "示例探索方向" : "探索方向")}</p><h2>{weights.every(v => v === 0) ? c("Begin with curiosity", "从好奇开始") : c(names[strongest][0], names[strongest][1])}</h2><p>{weights.every(v => v === 0) ? c("The collection is open to everyone. Choose interests whenever you like.", "馆藏向所有人开放。您可以随时选择兴趣。") : c("Your strongest selected interest offers a starting direction. Browse the reviewed collection to see what is available.", "您选择的最强兴趣提供探索方向。浏览审核馆藏，了解现有展览。")}</p><Link className="gold-button" href="/explore">{c("Browse reviewed exhibits", "浏览审核展览")} ↗︎</Link><button className="text-button" onClick={() => open(c("About these interests", "关于这些兴趣"))}>{c("About this preview", "关于此预览")} ↗︎</button></GlassPanel></div>;
 }
 
 function Sources({ open }: { open: OpenSource }) {
@@ -90,7 +111,8 @@ function Sources({ open }: { open: OpenSource }) {
 
 export function MuseumExperiences({ page, mode }: { page: PageKey; mode: "demo" | "live" }) {
   const c = useCopy(); const [source, setSource] = useState<string | null>(null); const open: OpenSource = title => setSource(title || "");
+  if (page === "explore" || page === "sources") return <><CatalogExperience page={page} mode={mode} fixture={<div className="fixture-content">{page === "explore" ? <Explore open={open} /> : <Sources open={open} />}</div>} /><SourceDrawer open={source !== null} title={source || undefined} onClose={() => setSource(null)} /></>;
   if (mode !== "demo") return <GlassPanel className="experience-panel"><p className="eyebrow">{c("LIVE MODE", "实时模式")}</p><h2>{c("This experience is not available yet.", "此功能尚未开放。")}</h2><p>{c("Live content and providers are not connected. Demo fixtures are disabled in live mode.", "尚未连接真实内容及服务，实时模式不提供演示资料。")}</p><Link href="/status" className="outline-button">{c("Check services", "检查服务")}</Link></GlassPanel>;
   const screens: Partial<Record<PageKey, React.ReactNode>> = { explore: <Explore open={open} />, journey: <Journey open={open} />, stories: <Stories open={open} />, lens: <Lens open={open} />, guide: <Guide open={open} />, dna: <Dna open={open} />, sources: <Sources open={open} /> };
-  return <><div className="fixture-content">{screens[page]}</div><SourceDrawer open={source !== null} title={source || undefined} onClose={() => setSource(null)} /></>;
+  return <><div className="fixture-content">{page === "journey" || page === "lens" || page === "guide" ? <ExperiencePreview page={page}>{screens[page]}</ExperiencePreview> : screens[page]}</div><SourceDrawer open={source !== null} title={source || undefined} onClose={() => setSource(null)} /></>;
 }
