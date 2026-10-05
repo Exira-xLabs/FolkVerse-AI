@@ -1,0 +1,201 @@
+{
+  "accessed_at": "2026-10-05",
+  "source": "OpenStreetMap contributors",
+  "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "© OpenStreetMap contributors",
+  "query": "[out:json][timeout:60];rel(38.5,118.7,43.7,126)[\"boundary\"=\"administrative\"][\"admin_level\"=\"5\"];out geom;",
+  "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "timestamp_osm_base": "2026-10-05T02:34:32Z",
+  "raw_payload_sha256": "f1d2856583469dc35c0b0bb0a36c386ab2864c97e903c363b82ec6f3867a979c",
+  "public_path": "apps/web/public/folkverse/maps/liaoning-cities.geojson",
+  "client_path": "apps/web/src/lib/maps/liaoning-city-boundaries.json",
+  "sha256": "adb97406894fa251602bf692bf2857f07fdfec833d258798eafabe38d3212592",
+  "city_count": 14,
+  "cities": [
+    {
+      "id": "liaoning-dalian",
+      "relation_id": 2764565,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        121.08629040431643,
+        38.721354481746374,
+        123.51317626092202,
+        40.2039986
+      ],
+      "land_overlap_area_degrees2": 1.320269880402959
+    },
+    {
+      "id": "liaoning-shenyang",
+      "relation_id": 2769604,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        122.4167356,
+        41.1976943,
+        123.8085417,
+        43.0402961
+      ],
+      "land_overlap_area_degrees2": 1.399237045961461
+    },
+    {
+      "id": "liaoning-anshan",
+      "relation_id": 2769683,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        122.1870151,
+        39.9986906,
+        123.761882,
+        41.5681838
+      ],
+      "land_overlap_area_degrees2": 0.987046818358294
+    },
+    {
+      "id": "liaoning-fushun",
+      "relation_id": 2766526,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        123.6580384,
+        41.2369004,
+        125.47815244932288,
+        42.4766201
+      ],
+      "land_overlap_area_degrees2": 1.2181224377201219
+    },
+    {
+      "id": "liaoning-benxi",
+      "relation_id": 2766193,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        123.5766828,
+        40.8137055,
+        125.76693627913332,
+        41.5663834
+      ],
+      "land_overlap_area_degrees2": 0.9032745921901857
+    },
+    {
+      "id": "liaoning-dandong",
+      "relation_id": 9638643,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        123.37104,
+        39.7726390722129,
+        125.7019871,
+        41.1528125
+      ],
+      "land_overlap_area_degrees2": 1.5553618268112144
+    },
+    {
+      "id": "liaoning-jinzhou",
+      "relation_id": 2770977,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        120.7114608,
+        40.797401,
+        122.5964159,
+        42.1267409
+      ],
+      "land_overlap_area_degrees2": 1.0619631511283096
+    },
+    {
+      "id": "liaoning-yingkou",
+      "relation_id": 2771992,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        121.96042399467827,
+        39.9189943,
+        123.0012997,
+        40.9384475
+      ],
+      "land_overlap_area_degrees2": 0.5563908554377256
+    },
+    {
+      "id": "liaoning-fuxin",
+      "relation_id": 2769803,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        121.0227494,
+        41.6913163,
+        122.9685488,
+        42.8413834
+      ],
+      "land_overlap_area_degrees2": 1.108335824448276
+    },
+    {
+      "id": "liaoning-liaoyang",
+      "relation_id": 2769643,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        122.5884182,
+        40.7109564,
+        123.6839683,
+        41.6152073
+      ],
+      "land_overlap_area_degrees2": 0.5061616013114248
+    },
+    {
+      "id": "liaoning-tieling",
+      "relation_id": 2767515,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        123.4436419,
+        41.989395,
+        125.1030812,
+        43.472074745707225
+      ],
+      "land_overlap_area_degrees2": 1.4160217218862308
+    },
+    {
+      "id": "liaoning-chaoyang",
+      "relation_id": 2769829,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        118.8484199999538,
+        40.5973321,
+        121.2962625,
+        42.38532150669707
+      ],
+      "land_overlap_area_degrees2": 2.0982354769057308
+    },
+    {
+      "id": "liaoning-panjin",
+      "relation_id": 2771970,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        121.4798703,
+        40.680121,
+        123.062804,
+        41.9365451
+      ],
+      "land_overlap_area_degrees2": 0.38202488485663355
+    },
+    {
+      "id": "liaoning-huludao",
+      "relation_id": 2769902,
+      "coordinate_inside_own_boundary": true,
+      "valid": true,
+      "land_bounds": [
+        119.22453488604191,
+        39.989418195562855,
+        121.033067,
+        41.2180415
+      ],
+      "land_overlap_area_degrees2": 1.0875656378131824
+    }
+  ],
+  "natural_earth_land_coverage_fraction": 0.9902363371586093,
+  "method": "Polygonize complete OSM outer member ways, subtract inner rings, topology-preserving 0.0008-degree simplification. Display clipped to original Natural Earth province outline. No hand-drawn or generated subdivision geometry.",
+  "limits": "Generalized community mapping snapshot, not cadastral/legal boundaries. Independent province and city sources have small coastal/outer-edge differences; display is clipped to province."
+}

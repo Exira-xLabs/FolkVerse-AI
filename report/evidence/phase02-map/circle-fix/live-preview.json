@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-05T02:29:28.776Z",
+  "url": "http://localhost:3000/explore",
+  "http_status": 200,
+  "health": {
+    "status": "ok",
+    "mode": "demo",
+    "database": "available",
+    "pgvector": "available",
+    "schema_status": "current",
+    "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+    "pgvector_version": "0.8.5"
+  },
+  "selected_city": "Dalian",
+  "highlight": {
+    "animation": "none",
+    "active_animations": 0,
+    "pointer_events": "none",
+    "center_distance_px": 0.000009606738845796
+  }
+}

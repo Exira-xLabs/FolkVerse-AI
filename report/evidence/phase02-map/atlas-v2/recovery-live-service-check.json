@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-05T06:10:03.902Z",
+  "url": "http://127.0.0.1:3000/explore",
+  "checks": {
+    "/explore": {
+      "status": 200
+    },
+    "/api/v1/health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "mode": "demo",
+        "database": "available",
+        "pgvector": "available",
+        "schema_status": "current",
+        "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+        "pgvector_version": "0.8.5"
+      }
+    },
+    "/api/v1/exhibits?region_id=liaoning": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": "liaoning-dalian-01",
+            "title": "Fuzhou shadow puppetry",
+            "summary": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "locale": "en",
+            "themes": [
+              "performance"
+            ],
+            "estimated_minutes": 3,
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "next_cursor": null,
+        "total": 1
+      }
+    },
+    "/folkverse/maps/liaoning-cities.geojson": {
+      "status": 200,
+      "sha256": "adb97406894fa251602bf692bf2857f07fdfec833d258798eafabe38d3212592",
+      "matches_local": true
+    },
+    "/folkverse/maps/liaoning-terrain-v2.png": {
+      "status": 200,
+      "sha256": "a742d6227d04677fa59b791bc32ddae6a6a4020be680c066fded77e9eda1eb5e",
+      "matches_local": true
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-05T02:50:18.855Z",
+  "url": "http://localhost:3000/explore",
+  "status": 200,
+  "city_markers": 14,
+  "city_territories": 14,
+  "highlighted_city": "liaoning-dalian",
+  "health": {
+    "status": "ok",
+    "mode": "demo",
+    "database": "available",
+    "pgvector": "available",
+    "schema_status": "current",
+    "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+    "pgvector_version": "0.8.5"
+  },
+  "published_liaoning_exhibits": 1,
+  "asset_checks": {
+    "city_boundaries": {
+      "status": 200,
+      "sha256": "adb97406894fa251602bf692bf2857f07fdfec833d258798eafabe38d3212592"
+    },
+    "terrain": {
+      "status": 200,
+      "sha256": "a742d6227d04677fa59b791bc32ddae6a6a4020be680c066fded77e9eda1eb5e"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+$ pnpm --filter @folkverse/web typecheck && uv run --project apps/api mypy --config-file apps/api/pyproject.toml apps/api/src
+$ next typegen && tsc --noEmit
+Generating route types...
+✓ Types generated successfully
+Success: no issues found in 14 source files

@@ -1,0 +1,193 @@
+{
+  "checked_at": "2026-10-05 Asia/Shanghai",
+  "province_identity": "CN-LN / Liaoning",
+  "boundary_source": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+  "boundary_license": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "city_names_source": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+  "cities": [
+    {
+      "id": "liaoning-dalian",
+      "names": {
+        "en": "Dalian",
+        "zh-CN": "大连"
+      },
+      "coordinates": [
+        121.627885,
+        38.924784
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-shenyang",
+      "names": {
+        "en": "Shenyang",
+        "zh-CN": "沈阳"
+      },
+      "coordinates": [
+        123.448028,
+        41.806925
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-anshan",
+      "names": {
+        "en": "Anshan",
+        "zh-CN": "鞍山"
+      },
+      "coordinates": [
+        122.938085,
+        41.116967
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-fushun",
+      "names": {
+        "en": "Fushun",
+        "zh-CN": "抚顺"
+      },
+      "coordinates": [
+        123.868054,
+        41.867335
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-benxi",
+      "names": {
+        "en": "Benxi",
+        "zh-CN": "本溪"
+      },
+      "coordinates": [
+        123.748061,
+        41.332329
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-dandong",
+      "names": {
+        "en": "Dandong",
+        "zh-CN": "丹东"
+      },
+      "coordinates": [
+        124.391639,
+        40.145554
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-jinzhou",
+      "names": {
+        "en": "Jinzhou",
+        "zh-CN": "锦州"
+      },
+      "coordinates": [
+        121.098094,
+        41.122316
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-yingkou",
+      "names": {
+        "en": "Yingkou",
+        "zh-CN": "营口"
+      },
+      "coordinates": [
+        122.278073,
+        40.672292
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-fuxin",
+      "names": {
+        "en": "Fuxin",
+        "zh-CN": "阜新"
+      },
+      "coordinates": [
+        121.658059,
+        42.012417
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-liaoyang",
+      "names": {
+        "en": "Liaoyang",
+        "zh-CN": "辽阳"
+      },
+      "coordinates": [
+        123.17807,
+        41.281944
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-tieling",
+      "names": {
+        "en": "Tieling",
+        "zh-CN": "铁岭"
+      },
+      "coordinates": [
+        123.819977,
+        42.300375
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-chaoyang",
+      "names": {
+        "en": "Chaoyang",
+        "zh-CN": "朝阳"
+      },
+      "coordinates": [
+        120.419978,
+        41.550421
+      ],
+      "coordinate_source": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"
+    },
+    {
+      "id": "liaoning-panjin",
+      "names": {
+        "en": "Panjin",
+        "zh-CN": "盘锦"
+      },
+      "coordinates": [
+        122.06339,
+        41.11983
+      ],
+      "coordinate_source": "https://www.wikidata.org/wiki/Q75230"
+    },
+    {
+      "id": "liaoning-huludao",
+      "names": {
+        "en": "Huludao",
+        "zh-CN": "葫芦岛"
+      },
+      "coordinates": [
+        120.83777777778,
+        40.709444444444
+      ],
+      "coordinate_source": "https://www.wikidata.org/wiki/Q75379"
+    }
+  ],
+  "city_count": 14,
+  "all_city_points_inside_sourced_boundary": true,
+  "bounds": [
+    118.847557,
+    38.720933,
+    125.768892,
+    43.472282
+  ],
+  "source_hashes": {
+    "natural-earth-admin1.json": "22d0e3ad85eb3e27f17cabf8ba2d50e554fbc27a87796ff891d958185da62fb5",
+    "natural-earth-cities.json": "9b8e3de09048ef00dfc70357dbb9fa324493f214b5e0ae4daf1aa79a8d10116b",
+    "panjin-wikidata.json": "bbf1c1ef830ba927551508026846120e2ba4f841326e4ed5d65063fead4a6f32",
+    "huludao-wikidata.json": "11bfd25d491c7c458afef73f24bf270507c77763079fef63d08c2de62cc09bb5"
+  },
+  "geometry_hash": "1f06b04c6a6db9258a43d804ec4d06d49bdccf0dbb153c99454b47682686f80a",
+  "generalization": "Natural Earth generalized provincial geometry, not a cadastral or street navigation map; city-centre markers, no invented city administrative subdivisions."
+}

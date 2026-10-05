@@ -1,0 +1,26 @@
+$ playwright test tests/e2e/liaoning-map.spec.ts
+[WebServer] INFO:     Started server process [421170]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:421179) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:421214) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:421274) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:421289) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:421319) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/liaoning-map.spec.ts:4:5 › real Liaoning silhouette, 14 city markers and geographical city selection (3.6s)
+  ✓  2 tests/e2e/liaoning-map.spec.ts:34:5 › map pan, wheel zoom, keyboard camera, minimap and expanded map (2.2s)
+  ✓  3 tests/e2e/liaoning-map.spec.ts:62:5 › selected city circle stays centered through time and zoom for all fourteen cities (7.4s)
+  ✓  4 tests/e2e/liaoning-map.spec.ts:93:5 › all cities remain selectable and searchable in Chinese at phone size (1.8s)
+  ✓  5 tests/e2e/liaoning-map.spec.ts:114:5 › touch pinch changes the map camera without scrolling the page (714ms)
+
+  5 passed (19.4s)

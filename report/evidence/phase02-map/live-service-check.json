@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-05T02:23:36.787Z",
+  "base_url": "http://127.0.0.1:3000",
+  "checks": {
+    "/explore": {
+      "status": 200,
+      "bytes": 160392,
+      "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "city_marker_count": 14,
+      "atlas_present": true
+    },
+    "/api/v1/health": {
+      "status": 200,
+      "bytes": 181,
+      "cache_control": "no-store",
+      "body": {
+        "status": "ok",
+        "mode": "demo",
+        "database": "available",
+        "pgvector": "available",
+        "schema_status": "current",
+        "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+        "pgvector_version": "0.8.5"
+      }
+    },
+    "/api/v1/exhibits?region_id=liaoning": {
+      "status": 200,
+      "bytes": 301,
+      "cache_control": "no-store",
+      "total": 1,
+      "ids": [
+        "liaoning-dalian-01"
+      ]
+    },
+    "/api/v1/exhibits?region_id=liaoning-shenyang": {
+      "status": 200,
+      "bytes": 41,
+      "cache_control": "no-store",
+      "total": 0,
+      "ids": []
+    },
+    "/folkverse/maps/liaoning.geojson": {
+      "status": 200,
+      "bytes": 38602,
+      "cache_control": "public, max-age=0",
+      "sha256": "1f06b04c6a6db9258a43d804ec4d06d49bdccf0dbb153c99454b47682686f80a"
+    },
+    "/folkverse/maps/liaoning-terrain-v1.png": {
+      "status": 200,
+      "bytes": 4151569,
+      "cache_control": "public, max-age=0",
+      "sha256": "38c8f07d7d778e1d78ee25f7066d54df58bdfa743c6a6b0af59ecbccf2752447"
+    }
+  }
+}

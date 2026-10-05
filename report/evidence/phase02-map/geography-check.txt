@@ -1,0 +1,1 @@
+PASS: Liaoning CN-LN geometry/hash preserved, 14 official city names, all sourced coordinates inside the province, generated scenery hash verified.

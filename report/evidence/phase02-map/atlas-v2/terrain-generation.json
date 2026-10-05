@@ -1,0 +1,14 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "asset_path": "apps/web/public/folkverse/maps/liaoning-terrain-v2.png",
+  "prompt": "Use case: scientific-educational. Asset type: realistic geographic terrain artwork for an interactive Liaoning province atlas. Input image 1 is a numerical shaded-relief geographic reference, not the old artwork. Generate a premium realistic satellite-like physical terrain map from that reference. Preserve its exact north-up frame, relative land/coast positions, central lowland corridor, eastern ridges, western ridges, and south-pointing Liaodong peninsula. Geographic extent is west 118.847557 E, east 125.768892 E, south 38.720933 N, north 43.472282 N; keep this extent with no crop, no rotation, no perspective or camera tilt. Full canvas approximately 1536 by 1408. The broad central Liao River plain through Shenyang and Panjin is low, level agricultural terrain, with a restrained patchwork of fields and delta wetlands near the bay; do not place mountains there. Western Chaoyang and Fuxin terrain has drier olive/tan foothills, ridgelines and valley basins. Eastern Fushun, Benxi and Dandong terrain has deeper green forested low-to-medium mountains following the ridges in the reference. Anshan and Liaoyang transition between the central plain and eastern foothills; Yingkou follows the flatter west coast of the southern hill system. Dalian occupies the low hilly Liaodong peninsula at the south, not an alpine ridge. Tieling is a northern plain-to-upland transition. Jinzhou and Huludao have western inland hills descending into the narrow coastal plain. Follow the spatial topography in the supplied elevation image above all. Make terrain convincing at provincial scale: finely textured continuous vegetation, cultivated lowlands, realistic ridges and soft shaded relief, subtle estuarine wetlands and restrained river traces, deep dark blue sea, muted natural greens, ochre and gray rock, clear daylight from northwest, no cartoon trees. This is an AI geographic interpretation based on elevation reference, not measured satellite imagery. The app will clip it to separately sourced province geometry and overlay exact city boundaries and markers. No labels, text, letters, UI, city markers, administrative borders, glowing outlines, buildings, roads, snowcapped fantasy mountains, flags, watermarks or blank margins. Fill the entire frame; preserve all reference geography and its approximate terrain relief distribution.",
+  "reference_path": "report/evidence/phase02-map/atlas-v2/liaoning-elevation-reference.png",
+  "role": "Generated realistic terrain interpretation guided by sourced elevation; clipped to sourced province geometry. City boundary data and markers remain separate.",
+  "sha256": "a742d6227d04677fa59b791bc32ddae6a6a4020be680c066fded77e9eda1eb5e",
+  "dimensions": [
+    1309,
+    1201
+  ],
+  "accessed_at": "2026-10-05"
+}

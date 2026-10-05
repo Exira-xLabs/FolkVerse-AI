@@ -1,0 +1,10 @@
+{
+  "mode": "Built-in image_gen",
+  "use_case": "stylized-concept",
+  "asset_path": "apps/web/public/folkverse/maps/liaoning-terrain-v1.png",
+  "sha256": "38c8f07d7d778e1d78ee25f7066d54df58bdfa743c6a6b0af59ecbccf2752447",
+  "prompt": "Use case: stylized-concept. Asset type: decorative terrain texture for an interactive Liaoning province game map, clipped by sourced province geometry in the app. Primary request: Create a beautiful high-detail hand-painted strategy-game landscape texture seen directly overhead, orthographic top-down with miniature 3D relief, suitable for pan and zoom. A continuous broad land surface fills the entire wide 3:2 frame edge-to-edge: rich jade and sage forests, tiny individual trees, softly lit ridged mountains along the eastern (right) third and western (left) edge, an open green/golden plain in the centre, delicate blue river threads, scattered natural rocky outcrops. Painterly premium adventure-game cartography with small diorama scenery, luminous warm late-afternoon light, rich depth and crisp fine detail. No province silhouette, no coast or surrounding ocean; our real boundary will clip the texture. No labels, text, letters, city markers, UI, flags, characters, borders, roads, fantasy buildings or watermark. This is decorative scenery, not authoritative terrain data. Fill the image completely with terrain without white margins.",
+  "role": "Decorative terrain, clipped to sourced Liaoning boundary. No generated geography, recognition reference or historic evidence.",
+  "width": 1536,
+  "height": 1024
+}
