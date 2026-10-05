@@ -1,0 +1,371 @@
+{
+  "prepared_at": "2026-10-05T01:26:30.047882+00:00",
+  "scope": {
+    "id": "liaoning",
+    "names": {
+      "en": "Liaoning",
+      "zh-CN": "辽宁"
+    },
+    "coverage": "All 14 prefecture-level cities; one draft candidate per city, not a claim of comprehensive cultural coverage.",
+    "geography_source": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+    "approved_geometry_ref": null
+  },
+  "sources": [
+    {
+      "id": "ln-first",
+      "institution": "Liaoning Provincial Government",
+      "title": "First provincial intangible cultural heritage list (2006)",
+      "url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+      "external_id": "liaoning-2006-23",
+      "capture_kind": "Verified official page via browser; source descriptor, not an original HTML snapshot."
+    },
+    {
+      "id": "ln-sixth",
+      "institution": "Liaoning Provincial Government",
+      "title": "Sixth provincial intangible cultural heritage list (2020)",
+      "url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+      "external_id": "liaoning-2020-20",
+      "capture_kind": "Verified official page via browser; source descriptor, not an original HTML snapshot."
+    }
+  ],
+  "cities": [
+    {
+      "id": "liaoning-dalian",
+      "names": {
+        "en": "Dalian",
+        "zh-CN": "大连"
+      }
+    },
+    {
+      "id": "liaoning-shenyang",
+      "names": {
+        "en": "Shenyang",
+        "zh-CN": "沈阳"
+      }
+    },
+    {
+      "id": "liaoning-anshan",
+      "names": {
+        "en": "Anshan",
+        "zh-CN": "鞍山"
+      }
+    },
+    {
+      "id": "liaoning-fushun",
+      "names": {
+        "en": "Fushun",
+        "zh-CN": "抚顺"
+      }
+    },
+    {
+      "id": "liaoning-benxi",
+      "names": {
+        "en": "Benxi",
+        "zh-CN": "本溪"
+      }
+    },
+    {
+      "id": "liaoning-dandong",
+      "names": {
+        "en": "Dandong",
+        "zh-CN": "丹东"
+      }
+    },
+    {
+      "id": "liaoning-jinzhou",
+      "names": {
+        "en": "Jinzhou",
+        "zh-CN": "锦州"
+      }
+    },
+    {
+      "id": "liaoning-yingkou",
+      "names": {
+        "en": "Yingkou",
+        "zh-CN": "营口"
+      }
+    },
+    {
+      "id": "liaoning-fuxin",
+      "names": {
+        "en": "Fuxin",
+        "zh-CN": "阜新"
+      }
+    },
+    {
+      "id": "liaoning-liaoyang",
+      "names": {
+        "en": "Liaoyang",
+        "zh-CN": "辽阳"
+      }
+    },
+    {
+      "id": "liaoning-tieling",
+      "names": {
+        "en": "Tieling",
+        "zh-CN": "铁岭"
+      }
+    },
+    {
+      "id": "liaoning-chaoyang",
+      "names": {
+        "en": "Chaoyang",
+        "zh-CN": "朝阳"
+      }
+    },
+    {
+      "id": "liaoning-panjin",
+      "names": {
+        "en": "Panjin",
+        "zh-CN": "盘锦"
+      }
+    },
+    {
+      "id": "liaoning-huludao",
+      "names": {
+        "en": "Huludao",
+        "zh-CN": "葫芦岛"
+      }
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "liaoning-dalian-01",
+      "city_id": "liaoning-dalian",
+      "title": {
+        "en": "Fuzhou shadow puppetry",
+        "zh-CN": "复州皮影戏"
+      },
+      "summary": {
+        "en": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "zh-CN": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。"
+      },
+      "source_id": "ln-first",
+      "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+      "themes": [
+        "performance"
+      ]
+    },
+    {
+      "id": "liaoning-shenyang-01",
+      "city_id": "liaoning-shenyang",
+      "title": {
+        "en": "Lanterns of Shenyang",
+        "zh-CN": "沈阳花灯"
+      },
+      "summary": {
+        "en": "Shenyang lantern making appears in Liaoning’s provincial heritage list.",
+        "zh-CN": "沈阳花灯制作技艺列入辽宁省省级非遗名录。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 25, declaring city Shenyang.",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "id": "liaoning-anshan-01",
+      "city_id": "liaoning-anshan",
+      "title": {
+        "en": "Rhythm and words",
+        "zh-CN": "鞍山快板书"
+      },
+      "summary": {
+        "en": "Anshan kuaiban storytelling is listed as narrative performance.",
+        "zh-CN": "鞍山快板书在省级非遗名录中归入曲艺类。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 4, declaring city Anshan.",
+      "themes": [
+        "performance"
+      ]
+    },
+    {
+      "id": "liaoning-fushun-01",
+      "city_id": "liaoning-fushun",
+      "title": {
+        "en": "Xinbin embroidery",
+        "zh-CN": "新宾满族刺绣"
+      },
+      "summary": {
+        "en": "Xinbin Manchu embroidery is listed with Fushun as its declaring city.",
+        "zh-CN": "新宾满族刺绣的省级非遗申报地区为抚顺市。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 16.",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "id": "liaoning-benxi-01",
+      "city_id": "liaoning-benxi",
+      "title": {
+        "en": "A pouch from Benxi",
+        "zh-CN": "本溪满族荷包"
+      },
+      "summary": {
+        "en": "Benxi Manchu pouches appear in the provincial list of traditional crafts.",
+        "zh-CN": "本溪满族荷包在省级非遗名录中归入传统技艺类。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 29.",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "id": "liaoning-dandong-01",
+      "city_id": "liaoning-dandong",
+      "title": {
+        "en": "Kuandian willow weaving",
+        "zh-CN": "宽甸柳编技艺"
+      },
+      "summary": {
+        "en": "Kuandian willow weaving is listed with Dandong as its declaring city.",
+        "zh-CN": "宽甸柳编技艺的省级非遗申报地区为丹东市。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 17.",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "id": "liaoning-jinzhou-01",
+      "city_id": "liaoning-jinzhou",
+      "title": {
+        "en": "Copper in relief",
+        "zh-CN": "锦州锻铜浮雕画"
+      },
+      "summary": {
+        "en": "Jinzhou forged-copper relief pictures are listed among traditional arts.",
+        "zh-CN": "锦州锻铜浮雕画在省级非遗名录中归入传统美术类。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 18.",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "id": "liaoning-yingkou-01",
+      "city_id": "liaoning-yingkou",
+      "title": {
+        "en": "Gaizhou stilt yangge",
+        "zh-CN": "盖州高跷秧歌"
+      },
+      "summary": {
+        "en": "Gaizhou stilt yangge is listed as a folk dance from Gaizhou.",
+        "zh-CN": "盖州高跷秧歌在辽宁省首批非遗名录中列为盖州市申报的民间舞蹈。"
+      },
+      "source_id": "ln-first",
+      "locator": "Entry 19; Gaizhou belongs to Yingkou in the administrative table.",
+      "themes": [
+        "performance"
+      ]
+    },
+    {
+      "id": "liaoning-fuxin-01",
+      "city_id": "liaoning-fuxin",
+      "title": {
+        "en": "Building a huqin",
+        "zh-CN": "胡琴制作技艺"
+      },
+      "summary": {
+        "en": "Huqin making is listed with Fuxin as its declaring city.",
+        "zh-CN": "胡琴制作技艺的省级非遗申报地区为阜新市。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 34.",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "id": "liaoning-liaoyang-01",
+      "city_id": "liaoning-liaoyang",
+      "title": {
+        "en": "Liaoyang drum music",
+        "zh-CN": "辽阳鼓乐"
+      },
+      "summary": {
+        "en": "Liaoyang drum music appears in Liaoning’s first provincial heritage list.",
+        "zh-CN": "辽阳鼓乐列入辽宁省首批省级非遗名录。"
+      },
+      "source_id": "ln-first",
+      "locator": "Entry 12, declaring city Liaoyang.",
+      "themes": [
+        "music"
+      ]
+    },
+    {
+      "id": "liaoning-tieling-01",
+      "city_id": "liaoning-tieling",
+      "title": {
+        "en": "First full moon",
+        "zh-CN": "铁岭朝鲜族上元节"
+      },
+      "summary": {
+        "en": "Tieling’s Korean-community Shangyuan festival is listed among provincial folk customs.",
+        "zh-CN": "铁岭朝鲜族上元节在省级非遗名录中归入民俗类。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 43.",
+      "themes": [
+        "custom"
+      ]
+    },
+    {
+      "id": "liaoning-chaoyang-01",
+      "city_id": "liaoning-chaoyang",
+      "title": {
+        "en": "Drums of Chaoyang",
+        "zh-CN": "朝阳民间鼓乐"
+      },
+      "summary": {
+        "en": "Chaoyang folk drum music is listed among provincial traditional music projects.",
+        "zh-CN": "朝阳民间鼓乐在省级非遗名录中归入传统音乐类。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 1.",
+      "themes": [
+        "music"
+      ]
+    },
+    {
+      "id": "liaoning-panjin-01",
+      "city_id": "liaoning-panjin",
+      "title": {
+        "en": "A river-mouth kitchen",
+        "zh-CN": "辽河口渔家菜"
+      },
+      "summary": {
+        "en": "Liao River estuary fishing-community food processing and customs are listed under Panjin.",
+        "zh-CN": "辽河口渔家菜特色食材加工技艺与习俗的省级非遗申报地区为盘锦市。"
+      },
+      "source_id": "ln-sixth",
+      "locator": "Entry 46.",
+      "themes": [
+        "custom"
+      ]
+    },
+    {
+      "id": "liaoning-huludao-01",
+      "city_id": "liaoning-huludao",
+      "title": {
+        "en": "Western Liaoning taiping drum",
+        "zh-CN": "辽西太平鼓"
+      },
+      "summary": {
+        "en": "Western Liaoning taiping drum is listed as a folk dance from Suizhong.",
+        "zh-CN": "辽西太平鼓在辽宁省首批非遗名录中列为绥中县申报的民间舞蹈。"
+      },
+      "source_id": "ln-first",
+      "locator": "Entry 24; Suizhong belongs to Huludao in the administrative table.",
+      "themes": [
+        "performance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "prepared_at": "2026-10-05T01:12:25.701255+00:00",
+  "status": "draft",
+  "regional_scope": "Shaanxi contextual entry point; general Chinese practice is not attributed exclusively to Shaanxi",
+  "sources": [
+    {
+      "id": "unesco-shadow",
+      "institution": "UNESCO Intangible Cultural Heritage",
+      "title": "Chinese shadow puppetry",
+      "url": "https://ich.unesco.org/en/RL/chinese-shadow-puppetry-00421",
+      "external_id": "00421",
+      "accessed_date": "2026-10-05",
+      "capture_kind": "metadata and original summaries; full page and images not reproduced"
+    },
+    {
+      "id": "ihchina-shadow",
+      "institution": "China Intangible Cultural Heritage Network",
+      "title": "皮影戏（华阴老腔）",
+      "url": "https://www.ihchina.cn/project_details/13403.html",
+      "external_id": "13403",
+      "accessed_date": "2026-10-05",
+      "capture_kind": "metadata and original summaries; full page and images not reproduced"
+    }
+  ],
+  "exhibits": [
+    {
+      "title": {
+        "en": "Regional voices",
+        "zh-CN": "地方声腔"
+      },
+      "summary": {
+        "en": "Shaanxi includes Huaxian and Huayin shadow-puppetry traditions.",
+        "zh-CN": "陕西的皮影传统包括华县皮影戏与华阴老腔。"
+      },
+      "source_id": "ihchina-shadow",
+      "locator": "Project overview; regional forms",
+      "themes": [
+        "performance"
+      ]
+    },
+    {
+      "title": {
+        "en": "Light behind the screen",
+        "zh-CN": "幕后的光"
+      },
+      "summary": {
+        "en": "Backlighting brings figures into view on a translucent screen.",
+        "zh-CN": "背后的灯光让影人在半透明幕布上显现。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; performance technique",
+      "themes": [
+        "performance"
+      ]
+    },
+    {
+      "title": {
+        "en": "Leather and paper",
+        "zh-CN": "皮革与纸"
+      },
+      "summary": {
+        "en": "Figures can be made from leather or paper.",
+        "zh-CN": "影人可由皮革或纸制成。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; materials",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "title": {
+        "en": "Movement by rods",
+        "zh-CN": "签杆与动作"
+      },
+      "summary": {
+        "en": "Puppeteers move the figures with rods.",
+        "zh-CN": "艺人通过签杆操纵影人。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; manipulation",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "title": {
+        "en": "Music and singing",
+        "zh-CN": "音乐与演唱"
+      },
+      "summary": {
+        "en": "Music and singing accompany the visual performance.",
+        "zh-CN": "音乐和演唱伴随视觉表演。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; accompaniment",
+      "themes": [
+        "music"
+      ]
+    },
+    {
+      "title": {
+        "en": "Articulated figures",
+        "zh-CN": "关节影人"
+      },
+      "summary": {
+        "en": "Figures may have twelve to twenty-four movable joints.",
+        "zh-CN": "影人可能具有十二至二十四个活动关节。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; joints",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "title": {
+        "en": "Maker and performer",
+        "zh-CN": "制作与表演"
+      },
+      "summary": {
+        "en": "Some performers also carve their own puppets.",
+        "zh-CN": "部分表演者也雕刻制作自己的影人。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; craft and performance",
+      "themes": [
+        "craft"
+      ]
+    },
+    {
+      "title": {
+        "en": "Working as a troupe",
+        "zh-CN": "戏班协作"
+      },
+      "summary": {
+        "en": "Small and large troupes share the performance work.",
+        "zh-CN": "小型与大型戏班共同分担表演工作。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; troupe sizes",
+      "themes": [
+        "performance"
+      ]
+    },
+    {
+      "title": {
+        "en": "Passing skills onward",
+        "zh-CN": "技艺传承"
+      },
+      "summary": {
+        "en": "Skills pass through families, troupes and apprenticeships.",
+        "zh-CN": "技艺通过家庭、戏班及师徒关系传承。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Description; transmission",
+      "themes": [
+        "learning"
+      ]
+    },
+    {
+      "title": {
+        "en": "A shared heritage",
+        "zh-CN": "共同的遗产"
+      },
+      "summary": {
+        "en": "UNESCO inscribed Chinese shadow puppetry in 2011.",
+        "zh-CN": "中国皮影戏于2011年列入联合国教科文组织名录。"
+      },
+      "source_id": "unesco-shadow",
+      "locator": "Inscription; Representative List 2011",
+      "themes": [
+        "learning"
+      ]
+    }
+  ]
+}

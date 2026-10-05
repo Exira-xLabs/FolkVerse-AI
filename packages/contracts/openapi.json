@@ -1,6 +1,102 @@
 {
   "components": {
     "schemas": {
+      "ArtifactCard": {
+        "properties": {
+          "catalog_date": {
+            "title": "Catalog Date",
+            "type": "string"
+          },
+          "current_location": {
+            "title": "Current Location",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "image_hashes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Image Hashes",
+            "type": "array"
+          },
+          "medium": {
+            "title": "Medium",
+            "type": "string"
+          },
+          "origin": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Origin",
+            "type": "object"
+          },
+          "source_id": {
+            "title": "Source Id",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "catalog_date",
+          "medium",
+          "origin",
+          "current_location",
+          "source_id",
+          "image_hashes"
+        ],
+        "title": "ArtifactCard",
+        "type": "object"
+      },
+      "ArtifactList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ArtifactCard"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "ArtifactList",
+        "type": "object"
+      },
+      "ClaimCard": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "passage_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Passage Ids",
+            "type": "array"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "text",
+          "passage_ids"
+        ],
+        "title": "ClaimCard",
+        "type": "object"
+      },
       "ErrorDetail": {
         "properties": {
           "code": {
@@ -39,6 +135,178 @@
           "request_id"
         ],
         "title": "ErrorEnvelope",
+        "type": "object"
+      },
+      "ExhibitCard": {
+        "properties": {
+          "estimated_minutes": {
+            "title": "Estimated Minutes",
+            "type": "integer"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "locale": {
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Locale",
+            "type": "string"
+          },
+          "region_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Region Ids",
+            "type": "array"
+          },
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          },
+          "themes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Themes",
+            "type": "array"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "summary",
+          "locale",
+          "themes",
+          "estimated_minutes",
+          "region_ids"
+        ],
+        "title": "ExhibitCard",
+        "type": "object"
+      },
+      "ExhibitDetail": {
+        "properties": {
+          "claims": {
+            "items": {
+              "$ref": "#/components/schemas/ClaimCard"
+            },
+            "title": "Claims",
+            "type": "array"
+          },
+          "estimated_minutes": {
+            "title": "Estimated Minutes",
+            "type": "integer"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "locale": {
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Locale",
+            "type": "string"
+          },
+          "region_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Region Ids",
+            "type": "array"
+          },
+          "review": {
+            "$ref": "#/components/schemas/ReviewInfo"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/SourceCard"
+            },
+            "title": "Sources",
+            "type": "array"
+          },
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          },
+          "themes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Themes",
+            "type": "array"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "summary",
+          "locale",
+          "themes",
+          "estimated_minutes",
+          "region_ids",
+          "review",
+          "claims",
+          "sources"
+        ],
+        "title": "ExhibitDetail",
+        "type": "object"
+      },
+      "ExhibitPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ExhibitCard"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Cursor"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "next_cursor",
+          "total"
+        ],
+        "title": "ExhibitPage",
+        "type": "object"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
         "type": "object"
       },
       "HealthResponse": {
@@ -116,6 +384,119 @@
         "title": "HealthResponse",
         "type": "object"
       },
+      "PassageCard": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "language": {
+            "title": "Language",
+            "type": "string"
+          },
+          "locator": {
+            "title": "Locator",
+            "type": "string"
+          },
+          "review": {
+            "$ref": "#/components/schemas/ReviewInfo"
+          },
+          "rights_basis": {
+            "title": "Rights Basis",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "text",
+          "language",
+          "locator",
+          "rights_basis",
+          "review"
+        ],
+        "title": "PassageCard",
+        "type": "object"
+      },
+      "RegionCard": {
+        "properties": {
+          "approved_geometry_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approved Geometry Ref"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "approved_geometry_ref"
+        ],
+        "title": "RegionCard",
+        "type": "object"
+      },
+      "RegionList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/RegionCard"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "RegionList",
+        "type": "object"
+      },
+      "ReviewInfo": {
+        "properties": {
+          "kind": {
+            "const": "editorial",
+            "default": "editorial",
+            "title": "Kind",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "reviewed_at": {
+            "format": "date-time",
+            "title": "Reviewed At",
+            "type": "string"
+          },
+          "reviewer": {
+            "title": "Reviewer",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reviewer",
+          "reviewed_at",
+          "notes"
+        ],
+        "title": "ReviewInfo",
+        "type": "object"
+      },
       "SessionDeleted": {
         "properties": {
           "deleted": {
@@ -152,6 +533,118 @@
         ],
         "title": "SessionResponse",
         "type": "object"
+      },
+      "SourceCard": {
+        "properties": {
+          "canonical_url": {
+            "title": "Canonical Url",
+            "type": "string"
+          },
+          "fetched_at": {
+            "format": "date-time",
+            "title": "Fetched At",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "institution": {
+            "title": "Institution",
+            "type": "string"
+          },
+          "passages": {
+            "items": {
+              "$ref": "#/components/schemas/PassageCard"
+            },
+            "title": "Passages",
+            "type": "array"
+          },
+          "raw_hash": {
+            "title": "Raw Hash",
+            "type": "string"
+          },
+          "review": {
+            "$ref": "#/components/schemas/ReviewInfo"
+          },
+          "rights_basis": {
+            "title": "Rights Basis",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "institution",
+          "title",
+          "canonical_url",
+          "fetched_at",
+          "raw_hash",
+          "rights_basis",
+          "review",
+          "passages"
+        ],
+        "title": "SourceCard",
+        "type": "object"
+      },
+      "SourceList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/SourceCard"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "SourceList",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "ctx": {
+            "title": "Context",
+            "type": "object"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
       }
     }
   },
@@ -161,6 +654,193 @@
   },
   "openapi": "3.1.0",
   "paths": {
+    "/api/v1/artifacts": {
+      "get": {
+        "operationId": "artifacts",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArtifactList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Artifacts"
+      }
+    },
+    "/api/v1/exhibits": {
+      "get": {
+        "operationId": "exhibits",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "default": "en",
+              "enum": [
+                "en",
+                "zh-CN"
+              ],
+              "title": "Locale",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "region_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Region Id"
+            }
+          },
+          {
+            "in": "query",
+            "name": "themes",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Themes"
+            }
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "default": "",
+              "maxLength": 200,
+              "title": "Q",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 100,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Cursor"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 12,
+              "maximum": 50,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExhibitPage"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Exhibits"
+      }
+    },
+    "/api/v1/exhibits/{identifier}": {
+      "get": {
+        "operationId": "exhibit",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "identifier",
+            "required": true,
+            "schema": {
+              "title": "Identifier",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "default": "en",
+              "enum": [
+                "en",
+                "zh-CN"
+              ],
+              "title": "Locale",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExhibitDetail"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Exhibit"
+      }
+    },
     "/api/v1/health": {
       "get": {
         "operationId": "health",
@@ -195,6 +875,50 @@
           }
         },
         "summary": "Health"
+      }
+    },
+    "/api/v1/regions": {
+      "get": {
+        "operationId": "regions",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "default": "en",
+              "enum": [
+                "en",
+                "zh-CN"
+              ],
+              "title": "Locale",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegionList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Regions"
       }
     },
     "/api/v1/session": {
@@ -365,6 +1089,63 @@
           }
         },
         "summary": "Start Session"
+      }
+    },
+    "/api/v1/sources": {
+      "get": {
+        "operationId": "sources",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Sources"
+      }
+    },
+    "/api/v1/sources/{identifier}": {
+      "get": {
+        "operationId": "source",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "identifier",
+            "required": true,
+            "schema": {
+              "title": "Identifier",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceCard"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Source"
       }
     },
     "/health": {

@@ -31,5 +31,5 @@ function inspect(folder) {
     }
   }
 }
-for (const folder of ["apps/web/src", "apps/web/.next/static", "apps/api/src", "packages", "docs", "report", "scripts", "tests"]) inspect(path.join(root, folder));
+for (const folder of ["apps/web/src", "apps/web/.next/static", "apps/api/src", "packages", "docs", "data", "report", "scripts", "tests"]) inspect(path.join(root, folder));
 console.log(`Contracts regenerated identically; local env files ignored; ${files} source/document/browser-output files checked for configured secrets.`);

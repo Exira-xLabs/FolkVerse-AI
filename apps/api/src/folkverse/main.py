@@ -15,6 +15,7 @@ from starlette.exceptions import HTTPException
 from starlette.middleware.base import RequestResponseEndpoint
 
 from folkverse.config import Settings
+from folkverse.content_api import router as content_router
 from folkverse.contracts import (
     ErrorDetail,
     ErrorEnvelope,
@@ -26,7 +27,7 @@ from folkverse.database import AnonymousSession, make_engine
 from folkverse.errors import ApiError
 from folkverse.sessions import COOKIE_NAME, SessionService
 
-REVISION = "0001_sessions"
+REVISION = "0002_content"
 
 
 def error_response(
@@ -54,6 +55,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         engine.dispose()
 
     app = FastAPI(title="FolkVerse API", version="0.1.0", lifespan=lifespan)
+    app.include_router(content_router)
     app.state.engine = engine
     app.state.settings = settings
     app.add_middleware(

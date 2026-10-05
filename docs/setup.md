@@ -1,4 +1,4 @@
-# Local setup — Phase 00
+# Local setup — Phases 00–02
 
 Run all commands from the repository root. There is one Next.js application and one FastAPI service. The original build kit is already in this repository; do not scaffold another application or copy confidential PDFs into the web app.
 
@@ -89,3 +89,7 @@ If health shows unavailable, check `docker compose ps`, run `pnpm db:up`, then `
 If credentials were changed after the database volume was initialized, restore the previous matching local configuration or deliberately rotate the database user's password. Merely editing `POSTGRES_PASSWORD` does not change an existing database user's password. Keep secrets out of shared reports and shell output.
 
 The foundation stores only anonymous-session identifiers and timestamps. Session expiry prevents reuse, and ending a visit deletes its row and clears its cookie. Periodic expiry cleanup and deletion of future personal feature data must be added with the relevant feature lifecycle; no private media is accepted in Phase 00.
+
+## Phase 02 content
+
+After migrating a fresh database, restore the delivered Liaoning corpus and its original review history with `uv run --project apps/api python -m folkverse.curation restore-manifest`. Existing content is never overwritten. For drafts only, use `uv run --project apps/api python -m folkverse.curation seed` instead. See [content operations](curation.md), [review packet](content-review.md) and [rights report](data-rights.md). The browser suite now expects the delivered approved Liaoning exhibit.

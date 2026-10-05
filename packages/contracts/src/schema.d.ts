@@ -4,6 +4,57 @@
  */
 
 export interface paths {
+    "/api/v1/artifacts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Artifacts */
+        get: operations["artifacts"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/exhibits": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Exhibits */
+        get: operations["exhibits"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/exhibits/{identifier}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Exhibit */
+        get: operations["exhibit"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/health": {
         parameters: {
             query?: never;
@@ -13,6 +64,23 @@ export interface paths {
         };
         /** Health */
         get: operations["health"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/regions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Regions */
+        get: operations["regions"];
         put?: never;
         post?: never;
         delete?: never;
@@ -40,6 +108,40 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/sources": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Sources */
+        get: operations["sources"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/sources/{identifier}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Source */
+        get: operations["source"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/health": {
         parameters: {
             query?: never;
@@ -61,6 +163,41 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** ArtifactCard */
+        ArtifactCard: {
+            /** Catalog Date */
+            catalog_date: string;
+            /** Current Location */
+            current_location: string;
+            /** Id */
+            id: string;
+            /** Image Hashes */
+            image_hashes: string[];
+            /** Medium */
+            medium: string;
+            /** Origin */
+            origin: {
+                [key: string]: string;
+            };
+            /** Source Id */
+            source_id: string;
+            /** Title */
+            title: string;
+        };
+        /** ArtifactList */
+        ArtifactList: {
+            /** Items */
+            items: components["schemas"]["ArtifactCard"][];
+        };
+        /** ClaimCard */
+        ClaimCard: {
+            /** Id */
+            id: string;
+            /** Passage Ids */
+            passage_ids: string[];
+            /** Text */
+            text: string;
+        };
         /** ErrorDetail */
         ErrorDetail: {
             /** Code */
@@ -75,6 +212,65 @@ export interface components {
             error: components["schemas"]["ErrorDetail"];
             /** Request Id */
             request_id: string;
+        };
+        /** ExhibitCard */
+        ExhibitCard: {
+            /** Estimated Minutes */
+            estimated_minutes: number;
+            /** Id */
+            id: string;
+            /**
+             * Locale
+             * @enum {string}
+             */
+            locale: "en" | "zh-CN";
+            /** Region Ids */
+            region_ids: string[];
+            /** Summary */
+            summary: string;
+            /** Themes */
+            themes: string[];
+            /** Title */
+            title: string;
+        };
+        /** ExhibitDetail */
+        ExhibitDetail: {
+            /** Claims */
+            claims: components["schemas"]["ClaimCard"][];
+            /** Estimated Minutes */
+            estimated_minutes: number;
+            /** Id */
+            id: string;
+            /**
+             * Locale
+             * @enum {string}
+             */
+            locale: "en" | "zh-CN";
+            /** Region Ids */
+            region_ids: string[];
+            review: components["schemas"]["ReviewInfo"];
+            /** Sources */
+            sources: components["schemas"]["SourceCard"][];
+            /** Summary */
+            summary: string;
+            /** Themes */
+            themes: string[];
+            /** Title */
+            title: string;
+        };
+        /** ExhibitPage */
+        ExhibitPage: {
+            /** Items */
+            items: components["schemas"]["ExhibitCard"][];
+            /** Next Cursor */
+            next_cursor: string | null;
+            /** Total */
+            total: number;
+        };
+        /** HTTPValidationError */
+        HTTPValidationError: {
+            /** Detail */
+            detail?: components["schemas"]["ValidationError"][];
         };
         /** HealthResponse */
         HealthResponse: {
@@ -108,6 +304,52 @@ export interface components {
              */
             status: "ok" | "degraded";
         };
+        /** PassageCard */
+        PassageCard: {
+            /** Id */
+            id: string;
+            /** Language */
+            language: string;
+            /** Locator */
+            locator: string;
+            review: components["schemas"]["ReviewInfo"];
+            /** Rights Basis */
+            rights_basis: string;
+            /** Text */
+            text: string;
+        };
+        /** RegionCard */
+        RegionCard: {
+            /** Approved Geometry Ref */
+            approved_geometry_ref: string | null;
+            /** Id */
+            id: string;
+            /** Name */
+            name: string;
+        };
+        /** RegionList */
+        RegionList: {
+            /** Items */
+            items: components["schemas"]["RegionCard"][];
+        };
+        /** ReviewInfo */
+        ReviewInfo: {
+            /**
+             * Kind
+             * @default editorial
+             * @constant
+             */
+            kind: "editorial";
+            /** Notes */
+            notes: string;
+            /**
+             * Reviewed At
+             * Format: date-time
+             */
+            reviewed_at: string;
+            /** Reviewer */
+            reviewer: string;
+        };
         /** SessionDeleted */
         SessionDeleted: {
             /**
@@ -133,6 +375,47 @@ export interface components {
             /** Session Id */
             session_id: string;
         };
+        /** SourceCard */
+        SourceCard: {
+            /** Canonical Url */
+            canonical_url: string;
+            /**
+             * Fetched At
+             * Format: date-time
+             */
+            fetched_at: string;
+            /** Id */
+            id: string;
+            /** Institution */
+            institution: string;
+            /** Passages */
+            passages: components["schemas"]["PassageCard"][];
+            /** Raw Hash */
+            raw_hash: string;
+            review: components["schemas"]["ReviewInfo"];
+            /** Rights Basis */
+            rights_basis: string;
+            /** Title */
+            title: string;
+        };
+        /** SourceList */
+        SourceList: {
+            /** Items */
+            items: components["schemas"]["SourceCard"][];
+        };
+        /** ValidationError */
+        ValidationError: {
+            /** Context */
+            ctx?: Record<string, never>;
+            /** Input */
+            input?: unknown;
+            /** Location */
+            loc: (string | number)[];
+            /** Message */
+            msg: string;
+            /** Error Type */
+            type: string;
+        };
     };
     responses: never;
     parameters: never;
@@ -142,6 +425,95 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
+    artifacts: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ArtifactList"];
+                };
+            };
+        };
+    };
+    exhibits: {
+        parameters: {
+            query?: {
+                locale?: "en" | "zh-CN";
+                region_id?: string | null;
+                themes?: string | null;
+                q?: string;
+                cursor?: string | null;
+                limit?: number;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExhibitPage"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    exhibit: {
+        parameters: {
+            query?: {
+                locale?: "en" | "zh-CN";
+            };
+            header?: never;
+            path: {
+                identifier: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExhibitDetail"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     health: {
         parameters: {
             query?: never;
@@ -167,6 +539,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HealthResponse"] | components["schemas"]["ErrorEnvelope"];
+                };
+            };
+        };
+    };
+    regions: {
+        parameters: {
+            query?: {
+                locale?: "en" | "zh-CN";
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RegionList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
@@ -335,6 +738,57 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ErrorEnvelope"];
+                };
+            };
+        };
+    };
+    sources: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SourceList"];
+                };
+            };
+        };
+    };
+    source: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                identifier: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SourceCard"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
