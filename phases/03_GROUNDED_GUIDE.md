@@ -4,7 +4,7 @@
 
 **Outcome:** Jinyao (锦瑶), FolkVerse's fictional museum guide, explains Chinese history and culture in English/Chinese through reviewed evidence, real citations and honest failures.
 
-**Current boundary:** Jinyao's character introduction, cinematic scroll presentation and Messenger-style conversation preview are implemented locally. The current replies are scripted; the expert guide harness below is required work for this phase, not an implemented AI capability. Visual likeness does not establish historical expertise. See [the local presentation](../docs/jinyao-guide.md).
+**Current boundary:** Jinyao's introduction and Messenger preview are implemented locally; demo replies remain scripted. Parts 1–6 implement reviewed retrieval, optional dense/hybrid retrieval, a bounded gateway, a conservative extractive harness, owned live chat and a dated 64-case bilingual fixture evaluation. Initial reserved score: 42/48; diagnostic rerun after fixing language-switch follow-ups: 44/48. The later push audit fixes bounded listing paraphrases and reaches 48/48 on these exposed cases; Ollama authentication is verified. Real provider/database/dense integration, broad explanations and independent human quality judgments remain unverified. See [evaluation](../docs/guide-evaluation.md), [handoff](../docs/phase-03-handoff.md) and [presentation](../docs/jinyao-guide.md).
 
 ## Paste into Codex
 ```text

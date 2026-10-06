@@ -1,3 +1,5 @@
+import asyncio
+import time
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from datetime import UTC, datetime
@@ -25,9 +27,16 @@ from folkverse.contracts import (
 )
 from folkverse.database import AnonymousSession, make_engine
 from folkverse.errors import ApiError
+from folkverse.gateway_limits import UsageLedger
+from folkverse.guide_api import GuideRequestLimits
+from folkverse.guide_api import router as guide_router
+from folkverse.guide_embeddings import LocalBGEEncoder
+from folkverse.guide_harness import GuideHarness
+from folkverse.guide_hybrid import HybridEvidenceRepository
+from folkverse.provider_gateway import GuideGateway
 from folkverse.sessions import COOKIE_NAME, SessionService
 
-REVISION = "0002_content"
+REVISION = "0003_gateway"
 
 
 def error_response(
@@ -51,13 +60,59 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-        yield
-        engine.dispose()
+        async def maintain() -> None:
+            while True:
+                await asyncio.sleep(60)
+                pending = asyncio.create_task(asyncio.to_thread(app.state.guide_ledger.prune))
+                try:
+                    await asyncio.shield(pending)
+                    app.state.guide_maintenance = "ok"
+                except asyncio.CancelledError:
+                    try:
+                        await pending
+                    except (SQLAlchemyError, ApiError):
+                        pass
+                    raise
+                except (SQLAlchemyError, ApiError):
+                    app.state.guide_maintenance = "unavailable"
+
+        maintenance = asyncio.create_task(maintain())
+        try:
+            yield
+        finally:
+            maintenance.cancel()
+            try:
+                await maintenance
+            except asyncio.CancelledError:
+                pass
+            engine.dispose()
 
     app = FastAPI(title="FolkVerse API", version="0.1.0", lifespan=lifespan)
     app.include_router(content_router)
+    app.include_router(guide_router)
     app.state.engine = engine
     app.state.settings = settings
+    app.state.guide_ledger = UsageLedger(engine, settings)
+    app.state.guide_gateway = GuideGateway(settings, app.state.guide_ledger)
+    app.state.guide_request_limits = GuideRequestLimits(
+        settings.session_secret.get_secret_value(),
+        settings.model_rate_limit_per_minute,
+        settings.model_global_rate_limit_per_minute,
+    )
+    app.state.guide_harness = GuideHarness(
+        HybridEvidenceRepository(
+            engine,
+            LocalBGEEncoder(settings.embedding_model_dir),
+            settings.embedding_index_path,
+            settings.embedding_enabled,
+            settings.embedding_query_timeout_seconds,
+            settings.embedding_min_cosine,
+        ),
+        app.state.guide_gateway,
+        settings.session_secret.get_secret_value(),
+        timeout_seconds=settings.model_timeout_seconds + 10,
+        max_output_tokens=settings.model_max_output_tokens,
+    )
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.allowed_origins,
@@ -68,6 +123,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @app.middleware("http")
     async def boundary(request: Request, call_next: RequestResponseEndpoint) -> Response:
+        request.state.guide_started_at = time.monotonic()
         request.state.request_id = f"req_{uuid4().hex}"
         if request.method not in {"GET", "HEAD", "OPTIONS"}:
             if request.headers.get("origin") not in settings.allowed_origins:

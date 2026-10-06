@@ -1,6 +1,59 @@
 # FolkVerse build status
 
-**Updated:** 5 October 2026, Asia/Shanghai. **Phase 02: complete locally; all five acceptance gates pass.** Scope: the whole Liaoning province, as explicitly requested by the user. Phase 01 remains delivered at `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`; Phase 02 and the UI refinement are included in the four-commit delivery on `main` requested on 5 October 2026. Consult Git history for delivery hashes. Next: [Phase 03 — grounded guide](../phases/03_GROUNDED_GUIDE.md).
+**Updated:** 6 October 2026, Asia/Shanghai. **Phase 03: Parts 1–6 implemented as a conservative baseline; full expert-guide acceptance, live/dense integration and review expansion remain incomplete.** Phase 02 was reported complete on the original machine; the current checkout audit records unavailable PostgreSQL and additional prerequisite discrepancies. Historical verification below remains dated evidence. Scope: the whole Liaoning province, as explicitly requested by the user. Phase 01 remains delivered at `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`; Phase 02 and the UI refinement are included in the four-commit delivery on `main` requested on 5 October 2026. Consult Git history for delivery hashes. Next: [Phase 03 — grounded guide](../phases/03_GROUNDED_GUIDE.md).
+
+
+## Phase 03 push audit — 6 October 2026
+
+**Provider mismatch resolved:** the user supplied an Ollama-issued key. Earlier DeepSeek 401 responses came from sending it to DeepSeek's own endpoint. The ignored configuration now selects Ollama Cloud, its separate key and the catalog's `deepseek-v4.1-flash` model. Authentication is actually verified with a nonexistent-model request and invalid-key control; no successful inference ran. Demo mode and zero daily Ollama request quota still disable generation. [Provider setup and doctor](guide-ollama.md).
+
+The audit strengthens browser claim/source/display validation, scans every Git candidate and browser artifact for configured secrets, excludes database/custom credentials from embedding workers, and adds bounded inventory paraphrases in both languages. **251 portable API checks, 25 fixture browser checks and 7 secret-check tests pass.** Lint, types (27 API source files), browser/config types, production build, contracts and foundation checks pass. The exposed v1 regression set now meets **64/64 functional targets**; initial Part 6 runs are preserved. Human historical/clarity/bilingual dimensions remain pending. PostgreSQL still cannot start because the Docker image pull times out; actual JSON/SSE inference, BGE runtime and broader reviewed explanations remain unverified. [Push audit report](../report/PHASE_03_PUSH_AUDIT.md).
+
+## Phase 03 Part 6 — 6 October 2026
+
+The dated evaluation contains **64 bilingual cases**, with 16 development and 48 reserved cases, manifest-bound reviewed statements, separate dimensions and human-review worksheets. Initial fixture baseline: **58/64**, including **42/48 reserved**. Harness v2 fixes SQL follow-up validation across EN/ZH by checking current signed evidence versions independently of title retrieval. The diagnostic rerun reaches **60/64**, including **44/48 reserved**; these exposed cases now provide regression evidence. Four supported locality/classification paraphrases still falsely abstain.
+
+**219 portable API checks pass**, including 22 new Part 6 checks; lint, types, contracts and foundation checks pass. Diagnostic support and citation validity each score **18/18 actual answered responses**; uncertainty **54/58 responses**; follow-up consistency **10/10 cases**. Historical correctness, clarity and bilingual faithfulness remain pending human review. Fixture latency is approximately 20.91 ms median / 116.67 ms maximum, including follow-up seeds and excluding restoration; real generation requests: zero, actual tokens/cost: unmeasured. Fresh authentication-only `/models` returns **HTTP 401**; PostgreSQL remains unavailable. Demo mode, zero budget and disabled semantic retrieval remain configured. [Part 6 report](../report/PHASE_03_PART_6.md), [methodology](guide-evaluation.md), [remaining handoff gates](phase-03-handoff.md).
+
+## Phase 03 Part 5 — 6 October 2026
+
+Optional pinned BGE-M3 offline indexing, model/corpus/encoder invalidation, bounded cancellable CPU query workers and deterministic BM25+dense rank fusion are implemented. The guide exposes explicit lexical-only outcomes and search labels. Thirty-two new tests plus prior portable regressions pass (**197 total**); **19 fixture browser checks** pass. Ruff, strict mypy, web lint/types/build and contract/secret checks pass.
+
+Actual lexical ranking/bundle timing on the dated two-passage export is approximately 0.034 ms median, excluding DB reads. The four-minute model download timed out before weights completed; actual BGE runtime and semantic relevance gains are unverified. PostgreSQL index build remains unavailable. Semantic search is disabled by default. Sixteen attributable review candidates stay draft and do not expand published expertise. [Part 5 report](../report/PHASE_03_PART_5.md), [retrieval contract](guide-hybrid-retrieval.md). Next: Part 6 dated bilingual evaluation and handoff; external model/DB/provider/human-review gates remain open.
+
+## Phase 03 Part 4 — 6 October 2026
+
+Owned POST Guide JSON/SSE, the streaming BFF, live Jinyao chat and current-source inspection are implemented. Stop/close cancels upstream work; checked answer publication follows session/evidence rechecks; consented context stays temporary and page history stays local. Progress, unsupported responses and checked-content latency are distinct. Periodic ledger maintenance is connected to the API lifespan.
+
+165 portable API regression checks pass, including 13 new HTTP/SSE tests. 18 dedicated fixture browser checks pass and cover EN/ZH answers/insufficiency/errors, source withdrawal, consented follow-ups, cancellation/retry, incomplete/mismatched streams, BFF transport and retained demo behavior. Production build, lint/typecheck and foundation checks pass. Full database-backed integration is unavailable here: the authentication-only DeepSeek probe still returns **HTTP 401**, PostgreSQL is not running, and the daily provider budget remains zero. No paid completion or real quality/latency score is claimed. [Part 4 report](../report/PHASE_03_PART_4.md), [transport contract](guide-live.md). Next: Part 5 hybrid retrieval and reviewed coverage; Part 6 evaluation remains pending.
+
+## Phase 03 Part 3 — 6 October 2026
+
+The internal [guide harness](guide-harness.md) is implemented for the existing narrow listing evidence. It validates schema, citation/related IDs, complete reviewed claim text, locale/depth and display mappings; generated paraphrases and historical reclassification cannot pass. Unsupported/ambiguous questions receive bilingual insufficiency/clarification. Consent-bound signed topic context supports follow-ups and separately reviewed locale switches without treating previous model prose as evidence. Withdrawal is rechecked before returning factual segments. No new public endpoint or UI change was made.
+
+Verification: **152 focused checks pass** (66 harness + 86 retrieval/gateway/outage regressions), with Ruff and strict mypy for 19 API source files. Foundation contracts/secret checks and web/API lint/type checks are recorded in [the Part 3 report](../report/PHASE_03_PART_3.md). These are functional tests, not held-out historical-expertise scoring. Free rewritten explanations, glossary/chronology generation and broad historical classifications remain gated, rather than being claimed as implemented expertise.
+
+The supplied credential is stored only in ignored `.env`; `.env.example` contains placeholders. Authentication-only DeepSeek `/models` returned **HTTP 401**. No question/evidence or generation request was sent. The zero budget and demo configuration are preserved. Actual provider generation remains unverified; PostgreSQL remains unavailable. Next: **Part 4 — owned live Guide/SSE and Jinyao/source controls**, while carrying these live-activation blockers honestly.
+
+## Phase 03 Part 2 — 6 October 2026
+
+The server-only DeepSeek JSON gateway and persistent database admission/usage ledger are implemented. Timeout/cancellation, at most one transient retry, per-session/global rate limits, shared concurrency leases, price-bound worst-case reservations and UTC daily caps are covered by mock transport and portable transaction tests. Provider failures remain unavailable; raw replies require the upcoming factual-support harness. No live UI or provider endpoint is enabled. [Configuration and limits](guide-gateway.md), [Part 2 report](../report/PHASE_03_PART_2.md).
+
+Verification: **86 checks pass** (62 gateway, 23 retrieval, one existing outage regression). Ruff and strict mypy pass for 18 API source files; portable migration upgrade/downgrade and offline PostgreSQL SQL generation pass. Foundation contracts regenerate identically and configured-secret checks pass. Web/API type checks and lint are recorded in the report. Node 26 is outside the project's Node 22 range; no supported-runtime certification is inferred.
+
+Migration `0003_gateway` is required for current health/schema and admission checks. Real PostgreSQL migration/locking remains unverified because the dedicated DB is unavailable. No DeepSeek key is configured and no paid/credentialed request was made; actual provider usage/billing/latency remains unverified. Current API/JSON/vision/model/pricing documentation was inspected through official DeepSeek pages. The API now defaults missing APP_MODE to live consistently with the web app; generated demo configuration still explicitly selects demo. Missing credentials, price bindings or positive budget disable calls.
+
+Changed files include gateway/ledger models and tests, the migration/metadata registration, API settings/service initialization, runtime httpx dependency/lock metadata, `.env.example`, documentation and new evidence. Existing UI, audit and Part 1 work are preserved. Next: **Part 3 — expert explanation and support-validation harness**. Phase 03 remains incomplete.
+
+## Phase 03 Part 1 — 6 October 2026
+
+The project scan and [six-part implementation sequence](phase-03-plan.md) are recorded. Part 1 adds reviewed-only English/Chinese lexical retrieval, bounded evidence bundles, deterministic corpus versions, explicit coverage gaps and publication-time evidence rechecks in `apps/api/src/folkverse/guide_retrieval.py`. The CLI inspects the real configured corpus; it returns an honest database-unavailable error here. No provider, vectors, chat/SSE integration or new editorial approval is claimed. The current Jinyao UI remains a labelled preview.
+
+Verification: **23 portable retrieval tests pass**, Ruff passes, and strict mypy passes for all 15 API source files. Tests exercise withdrawal at five dependency levels, unreviewed edits, rights, language, context and absent coverage. SQLite is a test substrate only, not a replacement for PostgreSQL. The current machine has no running FolkVerse database; `docker compose up -d --wait db` failed resolving the pinned pgvector image because the Docker registry connection timed out. Live corpus inspection and PostgreSQL integration remain blocked. [Part 1 results](../report/PHASE_03_PART_1.md).
+
+Changed files: retrieval module and its focused test file, `docs/phase-03-plan.md`, this status file, `docs/decisions.md`, and the new Part 1 report/evidence. Existing audit files and unrelated UI changes are preserved. No visual change was made, so no new visual fidelity result is claimed.
+
+Next: **Part 2 — DeepSeek gateway and resource limits**. Parts 3–6 cover support validation, live Guide/source UI, BGE-M3 hybrid retrieval and the 40-case bilingual evaluation. Phase 03 acceptance gates remain incomplete.
 
 ## Part 4 delivery — 5 October 2026
 

@@ -1,0 +1,606 @@
+{
+  "mode": "demo",
+  "database": "unavailable",
+  "states": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "FolkVerse China",
+      "atlasVisible": false
+    },
+    {
+      "route": "/explore",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Liaoning, a province of stories",
+      "atlasVisible": true
+    },
+    {
+      "route": "/journey",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Your cultural journey",
+      "atlasVisible": false
+    },
+    {
+      "route": "/stories/lantern-path",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "The lantern path",
+      "atlasVisible": false
+    },
+    {
+      "route": "/lens",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "A discovery in every detail",
+      "atlasVisible": false
+    },
+    {
+      "route": "/guide",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Hi, I’mJinyao.",
+      "atlasVisible": false
+    },
+    {
+      "route": "/dna",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Your cultural interests",
+      "atlasVisible": false
+    },
+    {
+      "route": "/sources",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Every story has a source",
+      "atlasVisible": false
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "华韵 AI · FolkVerse China",
+      "atlasVisible": false
+    },
+    {
+      "route": "/explore",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "辽宁，一省故事",
+      "atlasVisible": true
+    },
+    {
+      "route": "/journey",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "您的文化探索之旅",
+      "atlasVisible": false
+    },
+    {
+      "route": "/stories/lantern-path",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "灯笼之路",
+      "atlasVisible": false
+    },
+    {
+      "route": "/lens",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "在细节中发现文化",
+      "atlasVisible": false
+    },
+    {
+      "route": "/guide",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "你好，我是锦瑶。",
+      "atlasVisible": false
+    },
+    {
+      "route": "/dna",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "您的文化兴趣图谱",
+      "atlasVisible": false
+    },
+    {
+      "route": "/sources",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "每个故事，都有出处",
+      "atlasVisible": false
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "FolkVerse China",
+      "atlasVisible": false
+    },
+    {
+      "route": "/explore",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Liaoning, a province of stories",
+      "atlasVisible": true
+    },
+    {
+      "route": "/journey",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Your cultural journey",
+      "atlasVisible": false
+    },
+    {
+      "route": "/stories/lantern-path",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "The lantern path",
+      "atlasVisible": false
+    },
+    {
+      "route": "/lens",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "A discovery in every detail",
+      "atlasVisible": false
+    },
+    {
+      "route": "/guide",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Hi, I’mJinyao.",
+      "atlasVisible": false
+    },
+    {
+      "route": "/dna",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Your cultural interests",
+      "atlasVisible": false
+    },
+    {
+      "route": "/sources",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Every story has a source",
+      "atlasVisible": false
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "华韵 AI · FolkVerse China",
+      "atlasVisible": false
+    },
+    {
+      "route": "/explore",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "辽宁，一省故事",
+      "atlasVisible": true
+    },
+    {
+      "route": "/journey",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "您的文化探索之旅",
+      "atlasVisible": false
+    },
+    {
+      "route": "/stories/lantern-path",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "灯笼之路",
+      "atlasVisible": false
+    },
+    {
+      "route": "/lens",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "在细节中发现文化",
+      "atlasVisible": false
+    },
+    {
+      "route": "/guide",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "你好，我是锦瑶。",
+      "atlasVisible": false
+    },
+    {
+      "route": "/dna",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "您的文化兴趣图谱",
+      "atlasVisible": false
+    },
+    {
+      "route": "/sources",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "每个故事，都有出处",
+      "atlasVisible": false
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "FolkVerse China",
+      "atlasVisible": false
+    },
+    {
+      "route": "/explore",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Liaoning, a province of stories",
+      "atlasVisible": true
+    },
+    {
+      "route": "/journey",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Your cultural journey",
+      "atlasVisible": false
+    },
+    {
+      "route": "/stories/lantern-path",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "The lantern path",
+      "atlasVisible": false
+    },
+    {
+      "route": "/lens",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "A discovery in every detail",
+      "atlasVisible": false
+    },
+    {
+      "route": "/guide",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Hi, I’mJinyao.",
+      "atlasVisible": false
+    },
+    {
+      "route": "/dna",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Your cultural interests",
+      "atlasVisible": false
+    },
+    {
+      "route": "/sources",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "en",
+      "status": 200,
+      "overflow": false,
+      "heading": "Every story has a source",
+      "atlasVisible": false
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "华韵 AI · FolkVerse China",
+      "atlasVisible": false
+    },
+    {
+      "route": "/explore",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "辽宁，一省故事",
+      "atlasVisible": true
+    },
+    {
+      "route": "/journey",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "您的文化探索之旅",
+      "atlasVisible": false
+    },
+    {
+      "route": "/stories/lantern-path",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "灯笼之路",
+      "atlasVisible": false
+    },
+    {
+      "route": "/lens",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "在细节中发现文化",
+      "atlasVisible": false
+    },
+    {
+      "route": "/guide",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "你好，我是锦瑶。",
+      "atlasVisible": false
+    },
+    {
+      "route": "/dna",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "您的文化兴趣图谱",
+      "atlasVisible": false
+    },
+    {
+      "route": "/sources",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "locale": "zh-CN",
+      "status": 200,
+      "overflow": false,
+      "heading": "每个故事，都有出处",
+      "atlasVisible": false
+    }
+  ],
+  "selectorChecks": {
+    "oldHomeLink": 0,
+    "actualHomeLink": 1,
+    "oldGuideSceneImage": 0,
+    "newGuideImage": 1,
+    "defaultView": "true",
+    "defaultAtlasVisible": true
+  },
+  "errors": [],
+  "fixtureDrawerKeyboard": "PASS (labelled fixture; not a published source)",
+  "fixtureStoryAudioAndBranches": "PASS (original fiction and real recorded audio)",
+  "cssZoom200Overflow": true,
+  "fixtureJourneyEdits": "PASS (deterministic fixtures, not API journeys)",
+  "health": {
+    "status": 503,
+    "body": {
+      "error": {
+        "code": "api_unavailable",
+        "message": "The museum service is temporarily unavailable.",
+        "retryable": true
+      },
+      "request_id": "req_b27972d7-f72f-48d8-8095-dfdba78619e8"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "catalog_status": 200,
+  "deepseek_models": [
+    "deepseek-v4.1-flash",
+    "deepseek-v4-pro:0813"
+  ],
+  "generation_requests": 0,
+  "auth_probes": [
+    {
+      "credential": "saved_key",
+      "status": 404
+    },
+    {
+      "credential": "invalid_control",
+      "status": 401
+    }
+  ]
+}

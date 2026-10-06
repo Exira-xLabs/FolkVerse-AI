@@ -2,6 +2,8 @@ import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./tests/e2e",
+  // Isolated guide fixtures have their own servers/configuration.
+  testIgnore: ["**/guide-live.spec.ts", "**/guide-proxy.spec.ts"],
   fullyParallel: false,
   workers: 1,
   retries: 0,

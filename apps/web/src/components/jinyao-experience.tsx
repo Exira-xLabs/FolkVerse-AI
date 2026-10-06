@@ -32,7 +32,7 @@ function ChatSymbol() {
   return <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 3v-11a9 9 0 0 1 18 0Z" /><path d="M7 11h8M7 15h5" /></svg>;
 }
 
-export function JinyaoExperience({ mode, children }: { mode: "demo" | "live"; children?: ReactNode }) {
+export function JinyaoExperience({ mode, children, initialExhibitId }: { mode: "demo" | "live"; children?: ReactNode; initialExhibitId?: string }) {
   const { locale } = useLocale();
   const zh = locale !== "en";
   const c = (en: string, cn: string) => zh ? cn : en;
@@ -68,8 +68,8 @@ export function JinyaoExperience({ mode, children }: { mode: "demo" | "live"; ch
           <h1 id="page-title">{c("Hi, I’m", "你好，我是")}<span>{c("Jinyao.", "锦瑶。")}</span></h1>
           <p className="jinyao-hero-subtitle">{c("Your curiosity has company.", "让好奇心，有人相伴。")}</p></div>
           <div className="jinyao-hero-details"><p className="jinyao-hero-description">{c("A fictional cultural guide for the stories, details, and little discoveries that make a museum yours.", "一位虚构的文化向导，陪您发现故事、细节，以及属于您的博物馆时刻。")}</p>
-          <div className="hero-actions"><button className="gold-button" onClick={() => setChatOpen(true)} disabled={mode !== "demo"}><ChatSymbol />{c("Chat with Jinyao", "与锦瑶聊天")}</button><Link className="text-button" href="/explore">{c("Explore the collection", "探索馆藏")} <ArrowIcon direction="diagonal" /></Link></div>
-          <p className="jinyao-preview-note">{c("Fictional companion · scripted chat preview · live AI not connected", "虚构伙伴 · 预设聊天预览 · 未连接真实 AI")}</p></div>
+          <div className="hero-actions"><button className="gold-button" onClick={() => setChatOpen(true)}><ChatSymbol />{c("Chat with Jinyao", "与锦瑶聊天")}</button><Link className="text-button" href="/explore">{c("Explore the collection", "探索馆藏")} <ArrowIcon direction="diagonal" /></Link></div>
+          <p className="jinyao-preview-note">{mode === "demo" ? c("Fictional companion · scripted chat preview · live AI not connected", "虚构伙伴 · 预设聊天预览 · 未连接真实 AI") : c("Fictional companion · reviewed evidence · limited coverage", "虚构伙伴 · 审核资料 · 有限覆盖")}</p></div>
         </motion.div>
         <a className="jinyao-scroll-cue" href="#meet-jinyao" onClick={event => { event.preventDefault(); document.getElementById("meet-jinyao")?.scrollIntoView({ behavior: animate ? "smooth" : "instant" }); }}>{c("Scroll to get to know me", "向下滚动，认识锦瑶")} <ArrowIcon direction="down" /></a>
         <motion.div className="jinyao-scroll-progress" aria-hidden="true" style={{ scaleX: animate ? scrollYProgress : 0 }} />
@@ -78,13 +78,13 @@ export function JinyaoExperience({ mode, children }: { mode: "demo" | "live"; ch
 
     <section id="meet-jinyao" className="jinyao-story" aria-label={c("Meet Jinyao", "认识锦瑶")}>
       <figure className="jinyao-story-portrait">{!lowData && <Image src="/folkverse/jinyao/welcome.webp" alt={c("Jinyao offers a welcoming hand, wearing her red and gold robe.", "身穿红金服饰的锦瑶伸出手，欢迎您的到来。")} width={960} height={1440} sizes="(max-width: 700px) 100vw, 40vw" quality={90} />}<figcaption><span>{c("Jinyao / 锦瑶", "锦瑶 / Jinyao")}</span>{c("Your cultural companion", "您的文化伙伴")}</figcaption></figure>
-      <div className="jinyao-chapters">{chapters.map(([number, title, titleZh, text, textZh]) => <article key={number} className="jinyao-chapter"><p className="eyebrow">{number} / {c("GET TO KNOW ME", "认识锦瑶")}</p><h2>{c(title, titleZh)}</h2><p>{c(text, textZh)}</p><span className="jinyao-chapter-line" aria-hidden="true" /></article>)}</div>
+      <div className="jinyao-chapters">{chapters.map(([number, title, titleZh, text, textZh]) => <article key={number} className="jinyao-chapter"><p className="eyebrow">{number} / {c("GET TO KNOW ME", "认识锦瑶")}</p><h2>{c(title, titleZh)}</h2><p>{number === "03" && mode === "live" ? c("Ask about a reviewed exhibit and open its evidence alongside the conversation.", "围绕审核展项提问，并在对话旁查看资料。") : c(text, textZh)}</p><span className="jinyao-chapter-line" aria-hidden="true" /></article>)}</div>
     </section>
 
     {mode === "demo" && <section className="jinyao-conversation" aria-labelledby="jinyao-example-title"><div className="jinyao-example-intro"><p className="eyebrow">{c("A GLIMPSE OF THE CONVERSATION", "看看对话会是什么样")}</p><h2 id="jinyao-example-title">{c("A question becomes a beginning.", "一个问题，开启一段探索。")}</h2><p>{c("A prepared example of the tone and flow. No messages are sent to an AI service.", "一段预先准备的对话，展示语气与交流方式。不会向 AI 服务发送消息。")}</p><button className="gold-button" onClick={() => setChatOpen(true)}>{c("Try the chat preview", "试试聊天预览")} <ChatSymbol /></button></div>
       <div className="jinyao-example-window"><header><JinyaoAvatar size={56} /><div><h3>{c("Jinyao", "锦瑶")}</h3><p>{c("Example conversation", "示例对话")}</p></div><span className="jinyao-example-label">{c("PREVIEW", "预览")}</span></header><ol>{examples.map((message, index) => <li key={index} className={`jinyao-message from-${message.who}`}><span className="sr-only">{message.who === "visitor" ? c("You: ", "您：") : "Jinyao: "}</span>{message.who === "jinyao" && <JinyaoAvatar size={32} />}<p>{message.text}</p></li>)}</ol><p className="jinyao-example-footnote">{c("Scripted illustration · not a factual AI answer", "预设对话示例 · 非真实 AI 事实回答")}</p></div>
     </section>}
     {children}
-    {mode === "demo" ? <><button className="jinyao-chat-launcher" onClick={() => setChatOpen(true)} aria-label={c("Open Jinyao chat", "打开锦瑶聊天")} aria-haspopup="dialog" aria-expanded={chatOpen}><JinyaoAvatar size={44} /><span>{c("Chat with Jinyao", "与锦瑶聊天")}</span><ChatSymbol /></button><JinyaoChat open={chatOpen} onClose={() => setChatOpen(false)} /></> : <section className="glass-panel experience-panel"><h2>{c("This experience is not available yet.", "此功能尚未开放。")}</h2><p>{c("Chat is unavailable in live mode. Explore the published collection while the guide is being built.", "实时模式下聊天尚未开放。您可以先探索已发布馆藏。")}</p><Link className="outline-button" href="/explore">{c("Explore the collection", "探索馆藏")} <ArrowIcon direction="diagonal" /></Link></section>}
+    <button className="jinyao-chat-launcher" onClick={() => setChatOpen(true)} aria-label={c("Open Jinyao chat", "打开锦瑶聊天")} aria-haspopup="dialog" aria-expanded={chatOpen}><JinyaoAvatar size={44} /><span>{c("Chat with Jinyao", "与锦瑶聊天")}</span><ChatSymbol /></button><JinyaoChat open={chatOpen} onClose={() => setChatOpen(false)} mode={mode} initialExhibitId={initialExhibitId} />
   </div>;
 }

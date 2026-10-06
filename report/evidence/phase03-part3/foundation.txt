@@ -1,0 +1,11 @@
+[WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ node scripts/check-foundation.mjs
+[WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ uv run --project apps/api python scripts/export-openapi.py && pnpm --filter @folkverse/contracts generate
+Exported packages/contracts/openapi.json
+.                                        | [WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ openapi-typescript openapi.json -o src/schema.d.ts
+✨ openapi-typescript 7.13.0
+🚀 openapi.json → src/schema.d.ts [71.6ms]
+Verified 9 original assets, PNG dimensions/color modes, and all reference copies.
+Contracts regenerated identically; local env files ignored; 221 source/document/browser-output files checked for configured secrets.

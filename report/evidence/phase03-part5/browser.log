@@ -1,0 +1,40 @@
+[WebServer] (node:123659) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:123671) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:123736) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:123771) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:123797) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:123810) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:123827) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 19 tests using 1 worker
+
+(node:123854) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/guide-live.spec.ts:33:7 › live English desktop answer, consent, sources and retained history (1.6s)
+  ✓   2 tests/e2e/guide-live.spec.ts:33:7 › live Chinese phone answer, consent, sources and retained history (1.6s)
+  ✓   3 tests/e2e/guide-live.spec.ts:66:7 › live provider_timeout is retryable without facts (948ms)
+  ✓   4 tests/e2e/guide-live.spec.ts:66:7 › live budget_exhausted is retryable without facts (983ms)
+  ✓   5 tests/e2e/guide-live.spec.ts:66:7 › live rate_limited is retryable without facts (816ms)
+  ✓   6 tests/e2e/guide-live.spec.ts:66:7 › live invalid_context is retryable without facts (833ms)
+  ✓   7 tests/e2e/guide-live.spec.ts:74:5 › truncated stream discards the whole answer (862ms)
+  ✓   8 tests/e2e/guide-live.spec.ts:80:5 › stop and retry cancel pending answer (3.3s)
+  ✓   9 tests/e2e/guide-live.spec.ts:89:5 › withdrawn source has no inspectable stale evidence (832ms)
+  ✓  10 tests/e2e/guide-live.spec.ts:97:37 › insufficiency EN displays no citations or factual latency (729ms)
+  ✓  11 tests/e2e/guide-live.spec.ts:97:37 › insufficiency ZH displays no citations or factual latency (1.0s)
+  ✓  12 tests/e2e/guide-live.spec.ts:105:5 › mismatched evidence stream never publishes factual text (705ms)
+  ✓  13 tests/e2e/guide-live.spec.ts:112:5 › hybrid answers identify semantic retrieval while retaining citations (845ms)
+  ✓  14 tests/e2e/guide-proxy.spec.ts:3:5 › BFF forwards owned cookie and typed body, preserves status, and refuses demo/origin/oversize (208ms)
+  ✓  15 tests/e2e/guide-proxy.spec.ts:16:5 › BFF stream cancellation closes the upstream fixture connection (686ms)
+  ✓  16 tests/e2e/jinyao.spec.ts:3:5 › Jinyao cinematic hero responds to scrolling and replaces the previous scene (878ms)
+  ✓  17 tests/e2e/jinyao.spec.ts:19:5 › Messenger preview keeps messages local, cancels replies and restores keyboard focus (2.6s)
+  ✓  18 tests/e2e/jinyao.spec.ts:58:5 › mobile Chinese chat fits the viewport and reduced motion unpins the hero (2.0s)
+  ✓  19 tests/e2e/jinyao.spec.ts:76:5 › low data loads no Jinyao images (795ms)
+
+  19 passed (28.7s)

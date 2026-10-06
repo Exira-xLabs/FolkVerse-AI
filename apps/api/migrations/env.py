@@ -1,6 +1,6 @@
 from alembic import context
 
-from folkverse import content_models  # noqa: F401
+from folkverse import content_models, gateway_models  # noqa: F401
 from folkverse.config import Settings
 from folkverse.database import Base, make_engine
 

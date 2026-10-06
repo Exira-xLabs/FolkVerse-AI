@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-06T08:09:08.352731+00:00",
+  "app_mode": "demo",
+  "daily_ai_budget_usd": "0",
+  "embedding_enabled": false,
+  "embedding_model_version": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181:cls:normalized-f32:8192:v1",
+  "provider_model": "deepseek-flash",
+  "credential_present": true,
+  "generation_requests": 0,
+  "postgresql": "unavailable",
+  "authentication_only_http_status": 401
+}

@@ -120,3 +120,11 @@
   .jinyao-cinematic-stage { position: relative; }
   .jinyao-chapter { animation: none; }
 }
+
+.jinyao-live-options { flex: none; padding: 6px 16px; display: grid; gap: 6px; font-size: 11px; color: var(--text-secondary); }
+.jinyao-live-options label { display: flex; align-items: center; gap: 8px; }
+.jinyao-live-options select { min-height: 32px; background: var(--surface-elevated); color: var(--text-primary); border: 1px solid var(--border-subtle); border-radius: 8px; }
+.jinyao-live-options input { flex: none; }
+.jinyao-chat-turn .from-jinyao p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.jinyao-chat-turn .from-jinyao .outline-button { margin: 8px 0; display: block; }
+.jinyao-chat-turn .from-jinyao small { display: block; color: var(--text-secondary); }

@@ -19,6 +19,8 @@
     "typecheck": "pnpm --filter @folkverse/web typecheck && uv run --project apps/api mypy --config-file apps/api/pyproject.toml apps/api/src",
     "build": "pnpm --filter @folkverse/web build",
     "test:api": "uv run --project apps/api pytest apps/api/tests",
+    "test:guide": "node scripts/test-guide.mjs",
+    "test:secrets": "node --test scripts/check-secrets.test.mjs",
     "test:e2e": "playwright test",
     "check:foundation": "node scripts/check-foundation.mjs"
   },

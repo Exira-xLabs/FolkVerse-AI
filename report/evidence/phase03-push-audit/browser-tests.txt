@@ -1,0 +1,46 @@
+[WebServer] (node:161594) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:161606) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:161657) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:161676) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:161701) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:161715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:161750) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 25 tests using 1 worker
+
+(node:161777) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/guide-live.spec.ts:42:7 › live English desktop answer, consent, sources and retained history (1.5s)
+  ✓   2 tests/e2e/guide-live.spec.ts:42:7 › live Chinese phone answer, consent, sources and retained history (1.5s)
+  ✓   3 tests/e2e/guide-live.spec.ts:75:7 › live provider_timeout is retryable without facts (630ms)
+  ✓   4 tests/e2e/guide-live.spec.ts:75:7 › live budget_exhausted is retryable without facts (613ms)
+  ✓   5 tests/e2e/guide-live.spec.ts:75:7 › live rate_limited is retryable without facts (617ms)
+  ✓   6 tests/e2e/guide-live.spec.ts:75:7 › live invalid_context is retryable without facts (608ms)
+  ✓   7 tests/e2e/guide-live.spec.ts:83:5 › truncated stream discards the whole answer (604ms)
+  ✓   8 tests/e2e/guide-live.spec.ts:89:5 › stop and retry cancel pending answer (3.0s)
+  ✓   9 tests/e2e/guide-live.spec.ts:98:5 › withdrawn source has no inspectable stale evidence (651ms)
+  ✓  10 tests/e2e/guide-live.spec.ts:106:37 › insufficiency EN displays no citations or factual latency (618ms)
+  ✓  11 tests/e2e/guide-live.spec.ts:106:37 › insufficiency ZH displays no citations or factual latency (779ms)
+  ✓  12 tests/e2e/guide-live.spec.ts:114:5 › mismatched evidence stream never publishes factual text (596ms)
+  ✓  13 tests/e2e/guide-live.spec.ts:121:5 › hybrid answers identify semantic retrieval while retaining citations (602ms)
+  ✓  14 tests/e2e/guide-live.spec.ts:129:7 › invalid display publication is discarded before display (587ms)
+  ✓  15 tests/e2e/guide-live.spec.ts:129:7 › invalid empty_support publication is discarded before display (609ms)
+  ✓  16 tests/e2e/guide-live.spec.ts:129:7 › invalid claim_reference publication is discarded before display (621ms)
+  ✓  17 tests/e2e/guide-live.spec.ts:129:7 › invalid source_reference publication is discarded before display (639ms)
+  ✓  18 tests/e2e/guide-live.spec.ts:129:7 › invalid source_language publication is discarded before display (653ms)
+  ✓  19 tests/e2e/guide-live.spec.ts:129:7 › invalid unused_source publication is discarded before display (652ms)
+  ✓  20 tests/e2e/guide-proxy.spec.ts:3:5 › BFF forwards owned cookie and typed body, preserves status, and refuses demo/origin/oversize (96ms)
+  ✓  21 tests/e2e/guide-proxy.spec.ts:16:5 › BFF stream cancellation closes the upstream fixture connection (424ms)
+  ✓  22 tests/e2e/jinyao.spec.ts:3:5 › Jinyao cinematic hero responds to scrolling and replaces the previous scene (791ms)
+  ✓  23 tests/e2e/jinyao.spec.ts:19:5 › Messenger preview keeps messages local, cancels replies and restores keyboard focus (2.5s)
+  ✓  24 tests/e2e/jinyao.spec.ts:58:5 › mobile Chinese chat fits the viewport and reduced motion unpins the hero (1.9s)
+  ✓  25 tests/e2e/jinyao.spec.ts:76:5 › low data loads no Jinyao images (581ms)
+
+  25 passed (27.6s)

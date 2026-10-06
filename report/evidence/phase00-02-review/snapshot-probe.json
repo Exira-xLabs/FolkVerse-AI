@@ -1,0 +1,94 @@
+{
+  "record_counts": {
+    "region": {
+      "draft": 13,
+      "withdrawn": 1,
+      "approved": 2
+    },
+    "source": {
+      "draft": 38,
+      "withdrawn": 2,
+      "approved": 1
+    },
+    "passage": {
+      "draft": 26,
+      "approved": 2,
+      "withdrawn": 20
+    },
+    "exhibit": {
+      "draft": 13,
+      "withdrawn": 10,
+      "approved": 1
+    },
+    "claim": {
+      "draft": 13,
+      "withdrawn": 10,
+      "approved": 1
+    },
+    "artifact": {
+      "draft": 37
+    },
+    "media": {
+      "draft": 32
+    }
+  },
+  "approved_hash_checks": [
+    {
+      "kind": "region",
+      "id": "liaoning",
+      "passed": true
+    },
+    {
+      "kind": "region",
+      "id": "liaoning-dalian",
+      "passed": true
+    },
+    {
+      "kind": "source",
+      "id": "ln-first",
+      "passed": true
+    },
+    {
+      "kind": "passage",
+      "id": "passage-liaoning-dalian-01-en",
+      "passed": true
+    },
+    {
+      "kind": "passage",
+      "id": "passage-liaoning-dalian-01-zh-CN",
+      "passed": true
+    },
+    {
+      "kind": "exhibit",
+      "id": "liaoning-dalian-01",
+      "passed": true
+    },
+    {
+      "kind": "claim",
+      "id": "claim-liaoning-dalian-01",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "verified_source_payloads": 41,
+  "review_count": 56,
+  "approved_passages": [
+    {
+      "id": "passage-liaoning-dalian-01-en",
+      "language": "en",
+      "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+      "source_id": "ln-first",
+      "rights_status": "cleared"
+    },
+    {
+      "id": "passage-liaoning-dalian-01-zh-CN",
+      "language": "zh-CN",
+      "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+      "source_id": "ln-first",
+      "rights_status": "cleared"
+    }
+  ],
+  "present_image_files": 0,
+  "manifest_downloaded_count": 32,
+  "fresh_snapshot_check_would_match_counts": false
+}

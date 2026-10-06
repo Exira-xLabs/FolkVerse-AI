@@ -1,0 +1,768 @@
+{
+  "version": "guide-review-candidates-v1",
+  "prepared_date": "2026-10-06",
+  "scope": "Existing Liaoning inventory drafts plus three China catalog candidates",
+  "provenance": "existing_export_not_current_database",
+  "manifest_sha256": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "published": false,
+  "human_approval_granted": false,
+  "note": "Review packet only. No new passage, approval, chronology or live coverage is created.",
+  "candidates": [
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-shenyang-01",
+      "title": {
+        "en": "Lanterns of Shenyang",
+        "zh-CN": "沈阳花灯"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-shenyang-01-en",
+          "language": "en",
+          "text": "Shenyang lantern making appears in Liaoning’s provincial heritage list.",
+          "locator": "Entry 25, declaring city Shenyang.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-shenyang-01-zh-CN",
+          "language": "zh-CN",
+          "text": "沈阳花灯制作技艺列入辽宁省省级非遗名录。",
+          "locator": "Entry 25, declaring city Shenyang.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-anshan-01",
+      "title": {
+        "en": "Rhythm and words",
+        "zh-CN": "鞍山快板书"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-anshan-01-en",
+          "language": "en",
+          "text": "Anshan kuaiban storytelling is listed as narrative performance.",
+          "locator": "Entry 4, declaring city Anshan.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-anshan-01-zh-CN",
+          "language": "zh-CN",
+          "text": "鞍山快板书在省级非遗名录中归入曲艺类。",
+          "locator": "Entry 4, declaring city Anshan.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-fushun-01",
+      "title": {
+        "en": "Xinbin embroidery",
+        "zh-CN": "新宾满族刺绣"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-fushun-01-en",
+          "language": "en",
+          "text": "Xinbin Manchu embroidery is listed with Fushun as its declaring city.",
+          "locator": "Entry 16.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-fushun-01-zh-CN",
+          "language": "zh-CN",
+          "text": "新宾满族刺绣的省级非遗申报地区为抚顺市。",
+          "locator": "Entry 16.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-benxi-01",
+      "title": {
+        "en": "A pouch from Benxi",
+        "zh-CN": "本溪满族荷包"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-benxi-01-en",
+          "language": "en",
+          "text": "Benxi Manchu pouches appear in the provincial list of traditional crafts.",
+          "locator": "Entry 29.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-benxi-01-zh-CN",
+          "language": "zh-CN",
+          "text": "本溪满族荷包在省级非遗名录中归入传统技艺类。",
+          "locator": "Entry 29.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-dandong-01",
+      "title": {
+        "en": "Kuandian willow weaving",
+        "zh-CN": "宽甸柳编技艺"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-dandong-01-en",
+          "language": "en",
+          "text": "Kuandian willow weaving is listed with Dandong as its declaring city.",
+          "locator": "Entry 17.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-dandong-01-zh-CN",
+          "language": "zh-CN",
+          "text": "宽甸柳编技艺的省级非遗申报地区为丹东市。",
+          "locator": "Entry 17.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-jinzhou-01",
+      "title": {
+        "en": "Copper in relief",
+        "zh-CN": "锦州锻铜浮雕画"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-jinzhou-01-en",
+          "language": "en",
+          "text": "Jinzhou forged-copper relief pictures are listed among traditional arts.",
+          "locator": "Entry 18.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-jinzhou-01-zh-CN",
+          "language": "zh-CN",
+          "text": "锦州锻铜浮雕画在省级非遗名录中归入传统美术类。",
+          "locator": "Entry 18.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-yingkou-01",
+      "title": {
+        "en": "Gaizhou stilt yangge",
+        "zh-CN": "盖州高跷秧歌"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-yingkou-01-en",
+          "language": "en",
+          "text": "Gaizhou stilt yangge is listed as a folk dance from Gaizhou.",
+          "locator": "Entry 19; Gaizhou belongs to Yingkou in the administrative table.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-first",
+            "institution": "Liaoning Provincial Government",
+            "title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-yingkou-01-zh-CN",
+          "language": "zh-CN",
+          "text": "盖州高跷秧歌在辽宁省首批非遗名录中列为盖州市申报的民间舞蹈。",
+          "locator": "Entry 19; Gaizhou belongs to Yingkou in the administrative table.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-first",
+            "institution": "Liaoning Provincial Government",
+            "title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-fuxin-01",
+      "title": {
+        "en": "Building a huqin",
+        "zh-CN": "胡琴制作技艺"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-fuxin-01-en",
+          "language": "en",
+          "text": "Huqin making is listed with Fuxin as its declaring city.",
+          "locator": "Entry 34.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-fuxin-01-zh-CN",
+          "language": "zh-CN",
+          "text": "胡琴制作技艺的省级非遗申报地区为阜新市。",
+          "locator": "Entry 34.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-liaoyang-01",
+      "title": {
+        "en": "Liaoyang drum music",
+        "zh-CN": "辽阳鼓乐"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-liaoyang-01-en",
+          "language": "en",
+          "text": "Liaoyang drum music appears in Liaoning’s first provincial heritage list.",
+          "locator": "Entry 12, declaring city Liaoyang.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-first",
+            "institution": "Liaoning Provincial Government",
+            "title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-liaoyang-01-zh-CN",
+          "language": "zh-CN",
+          "text": "辽阳鼓乐列入辽宁省首批省级非遗名录。",
+          "locator": "Entry 12, declaring city Liaoyang.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-first",
+            "institution": "Liaoning Provincial Government",
+            "title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-tieling-01",
+      "title": {
+        "en": "First full moon",
+        "zh-CN": "铁岭朝鲜族上元节"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-tieling-01-en",
+          "language": "en",
+          "text": "Tieling’s Korean-community Shangyuan festival is listed among provincial folk customs.",
+          "locator": "Entry 43.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-tieling-01-zh-CN",
+          "language": "zh-CN",
+          "text": "铁岭朝鲜族上元节在省级非遗名录中归入民俗类。",
+          "locator": "Entry 43.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-chaoyang-01",
+      "title": {
+        "en": "Drums of Chaoyang",
+        "zh-CN": "朝阳民间鼓乐"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-chaoyang-01-en",
+          "language": "en",
+          "text": "Chaoyang folk drum music is listed among provincial traditional music projects.",
+          "locator": "Entry 1.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-chaoyang-01-zh-CN",
+          "language": "zh-CN",
+          "text": "朝阳民间鼓乐在省级非遗名录中归入传统音乐类。",
+          "locator": "Entry 1.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-panjin-01",
+      "title": {
+        "en": "A river-mouth kitchen",
+        "zh-CN": "辽河口渔家菜"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-panjin-01-en",
+          "language": "en",
+          "text": "Liao River estuary fishing-community food processing and customs are listed under Panjin.",
+          "locator": "Entry 46.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-panjin-01-zh-CN",
+          "language": "zh-CN",
+          "text": "辽河口渔家菜特色食材加工技艺与习俗的省级非遗申报地区为盘锦市。",
+          "locator": "Entry 46.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-sixth",
+            "institution": "Liaoning Provincial Government",
+            "title": "Sixth provincial intangible cultural heritage list (2020)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010321420390585/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "dce34947ba6fd3dcb9999b01e8d51d9cd1589eb84c839e8e1c37ef8f533fd9fd",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "heritage_inventory",
+      "status": "draft",
+      "exhibit_id": "liaoning-huludao-01",
+      "title": {
+        "en": "Western Liaoning taiping drum",
+        "zh-CN": "辽西太平鼓"
+      },
+      "existing_draft_passages": [
+        {
+          "passage_id": "passage-liaoning-huludao-01-en",
+          "language": "en",
+          "text": "Western Liaoning taiping drum is listed as a folk dance from Suizhong.",
+          "locator": "Entry 24; Suizhong belongs to Huludao in the administrative table.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-first",
+            "institution": "Liaoning Provincial Government",
+            "title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        },
+        {
+          "passage_id": "passage-liaoning-huludao-01-zh-CN",
+          "language": "zh-CN",
+          "text": "辽西太平鼓在辽宁省首批非遗名录中列为绥中县申报的民间舞蹈。",
+          "locator": "Entry 24; Suizhong belongs to Huludao in the administrative table.",
+          "rights_status": "pending",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "source": {
+            "id": "ln-first",
+            "institution": "Liaoning Provincial Government",
+            "title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05 01:26:30.047882+00:00",
+            "raw_hash": "ef8dd834c7bb9259cfd26258c47fa93249c56ababc7b331ee4d732b3e531d115",
+            "rights_basis": "Original attributed summaries only; no source images or full text licensed"
+          }
+        }
+      ],
+      "required_review": [
+        "Verify exact source/locator and listing scope",
+        "Review each EN/ZH passage and translation separately",
+        "Resolve rights, claim mapping and regional dependencies",
+        "Do not infer historical origins, chronology or technique"
+      ]
+    },
+    {
+      "kind": "museum_catalog_metadata",
+      "status": "draft",
+      "source": {
+        "id": "met-source-50824",
+        "institution": "The Metropolitan Museum of Art",
+        "title": "Vase with Daoist Immortals",
+        "canonical_url": "https://www.metmuseum.org/art/collection/search/50824",
+        "fetched_at": "2026-10-05 01:11:16.875405+00:00",
+        "raw_hash": "3ca62e87487bc5991bd40f280fd34e806aee29d4ecf8875dd7b344e4e33c2c3c",
+        "rights_basis": "Met Open Access API metadata: CC0; image rights checked separately"
+      },
+      "catalog_fields": {
+        "objectID": 50824,
+        "title": "Vase with Daoist Immortals",
+        "culture": "China",
+        "period": "Qing dynasty (1644–1911), Kangxi period (1662–1722)",
+        "objectDate": "early 18th century",
+        "medium": "Porcelain painted in overglaze polychrome enamels and gilt (Jingdezhen ware)",
+        "country": "",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "isPublicDomain": true
+      },
+      "required_review": [
+        "Refresh and verify the dated museum catalog record",
+        "Keep institution catalog dates/interpretations attributed",
+        "Create rights-cleared EN/ZH passages and reviewed claim links",
+        "Do not treat museum location as creation origin",
+        "No image/reference eligibility is granted by this file"
+      ]
+    },
+    {
+      "kind": "museum_catalog_metadata",
+      "status": "draft",
+      "source": {
+        "id": "met-source-449479",
+        "institution": "The Metropolitan Museum of Art",
+        "title": "Fragment of an Imported Chinese Bowl",
+        "canonical_url": "https://www.metmuseum.org/art/collection/search/449479",
+        "fetched_at": "2026-10-05 01:11:20.767268+00:00",
+        "raw_hash": "bd1bd7a55e52a71935ee66ed65e4f6872374e3d7fa074e79341eacb36cce347b",
+        "rights_basis": "Met Open Access API metadata: CC0; image rights checked separately"
+      },
+      "catalog_fields": {
+        "objectID": 449479,
+        "title": "Fragment of an Imported Chinese Bowl",
+        "culture": "",
+        "period": "",
+        "objectDate": "late 7th–first half 8th century",
+        "medium": "Earthenware; applied relief medallion under three color (sancai) glaze",
+        "country": "China",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "isPublicDomain": true
+      },
+      "required_review": [
+        "Refresh and verify the dated museum catalog record",
+        "Keep institution catalog dates/interpretations attributed",
+        "Create rights-cleared EN/ZH passages and reviewed claim links",
+        "Do not treat museum location as creation origin",
+        "No image/reference eligibility is granted by this file"
+      ]
+    },
+    {
+      "kind": "museum_catalog_metadata",
+      "status": "draft",
+      "source": {
+        "id": "met-source-460669",
+        "institution": "The Metropolitan Museum of Art",
+        "title": "Small wine pot or teapot",
+        "canonical_url": "https://www.metmuseum.org/art/collection/search/460669",
+        "fetched_at": "2026-10-05 01:11:23.736635+00:00",
+        "raw_hash": "f8f10f46acb04969bbd20ecd0140181111aa7da16d8a3b21f60a8ee294278d90",
+        "rights_basis": "Met Open Access API metadata: CC0; image rights checked separately"
+      },
+      "catalog_fields": {
+        "objectID": 460669,
+        "title": "Small wine pot or teapot",
+        "culture": "Chinese",
+        "period": "",
+        "objectDate": "1662–1722",
+        "medium": "Porcelain painted in underglaze blue.",
+        "country": "",
+        "repository": "Metropolitan Museum of Art, New York, NY",
+        "isPublicDomain": true
+      },
+      "required_review": [
+        "Refresh and verify the dated museum catalog record",
+        "Keep institution catalog dates/interpretations attributed",
+        "Create rights-cleared EN/ZH passages and reviewed claim links",
+        "Do not treat museum location as creation origin",
+        "No image/reference eligibility is granted by this file"
+      ]
+    }
+  ]
+}

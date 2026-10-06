@@ -137,6 +137,106 @@
         "title": "ErrorEnvelope",
         "type": "object"
       },
+      "EvidencePassage": {
+        "properties": {
+          "canonical_url": {
+            "title": "Canonical Url",
+            "type": "string"
+          },
+          "content_hash": {
+            "title": "Content Hash",
+            "type": "string"
+          },
+          "exhibit_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Exhibit Ids",
+            "type": "array"
+          },
+          "fetched_at": {
+            "format": "date-time",
+            "title": "Fetched At",
+            "type": "string"
+          },
+          "institution": {
+            "title": "Institution",
+            "type": "string"
+          },
+          "language": {
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "locator": {
+            "title": "Locator",
+            "type": "string"
+          },
+          "passage_id": {
+            "title": "Passage Id",
+            "type": "string"
+          },
+          "region_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Region Ids",
+            "type": "array"
+          },
+          "review_id": {
+            "title": "Review Id",
+            "type": "string"
+          },
+          "reviewed_at": {
+            "format": "date-time",
+            "title": "Reviewed At",
+            "type": "string"
+          },
+          "reviewer": {
+            "title": "Reviewer",
+            "type": "string"
+          },
+          "rights_basis": {
+            "title": "Rights Basis",
+            "type": "string"
+          },
+          "source_id": {
+            "title": "Source Id",
+            "type": "string"
+          },
+          "source_title": {
+            "title": "Source Title",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "passage_id",
+          "source_id",
+          "text",
+          "language",
+          "locator",
+          "rights_basis",
+          "institution",
+          "source_title",
+          "canonical_url",
+          "fetched_at",
+          "reviewed_at",
+          "reviewer",
+          "review_id",
+          "content_hash",
+          "exhibit_ids",
+          "region_ids"
+        ],
+        "title": "EvidencePassage",
+        "type": "object"
+      },
       "ExhibitCard": {
         "properties": {
           "estimated_minutes": {
@@ -294,6 +394,281 @@
           "total"
         ],
         "title": "ExhibitPage",
+        "type": "object"
+      },
+      "GuideAnswer": {
+        "properties": {
+          "answer_claim_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Answer Claim Ids",
+            "type": "array"
+          },
+          "answer_id": {
+            "title": "Answer Id",
+            "type": "string"
+          },
+          "answer_text": {
+            "title": "Answer Text",
+            "type": "string"
+          },
+          "claims": {
+            "items": {
+              "$ref": "#/components/schemas/ValidatedClaim"
+            },
+            "title": "Claims",
+            "type": "array"
+          },
+          "context_claim_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Context Claim Ids",
+            "type": "array"
+          },
+          "context_token": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Context Token"
+          },
+          "corpus_version": {
+            "title": "Corpus Version",
+            "type": "string"
+          },
+          "coverage_limit": {
+            "title": "Coverage Limit",
+            "type": "string"
+          },
+          "depth": {
+            "enum": [
+              "concise",
+              "beginner",
+              "deeper"
+            ],
+            "title": "Depth",
+            "type": "string"
+          },
+          "embedding_encoder_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Embedding Encoder Version"
+          },
+          "embedding_model_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Embedding Model Version"
+          },
+          "embedding_status": {
+            "default": "disabled",
+            "title": "Embedding Status",
+            "type": "string"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "harness_version": {
+            "default": "guide-extractive-v3",
+            "title": "Harness Version",
+            "type": "string"
+          },
+          "locale": {
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Locale",
+            "type": "string"
+          },
+          "mode": {
+            "const": "live",
+            "default": "live",
+            "title": "Mode",
+            "type": "string"
+          },
+          "prompt_version": {
+            "default": "jinyao-evidence-selector-v1",
+            "title": "Prompt Version",
+            "type": "string"
+          },
+          "provider_attempt_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Attempt Id"
+          },
+          "query_embedding_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Query Embedding Ms"
+          },
+          "reason": {
+            "enum": [
+              "reviewed_excerpt",
+              "coverage_gap",
+              "ambiguous_topic",
+              "unsupported_claim",
+              "evidence_changed",
+              "unsafe_source"
+            ],
+            "title": "Reason",
+            "type": "string"
+          },
+          "related_exhibit_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Related Exhibit Ids",
+            "type": "array"
+          },
+          "retrieval_mode": {
+            "default": "lexical_only",
+            "enum": [
+              "lexical_only",
+              "hybrid"
+            ],
+            "title": "Retrieval Mode",
+            "type": "string"
+          },
+          "retrieval_version": {
+            "default": "lexical-bm25-cjk-v1",
+            "title": "Retrieval Version",
+            "type": "string"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/EvidencePassage"
+            },
+            "title": "Sources",
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "answered",
+              "insufficient",
+              "clarification"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "uncertainty": {
+            "enum": [
+              "partial",
+              "insufficient"
+            ],
+            "title": "Uncertainty",
+            "type": "string"
+          }
+        },
+        "required": [
+          "answer_id",
+          "locale",
+          "depth",
+          "status",
+          "uncertainty",
+          "reason",
+          "answer_text",
+          "coverage_limit",
+          "corpus_version"
+        ],
+        "title": "GuideAnswer",
+        "type": "object"
+      },
+      "GuideRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "context_consent": {
+            "default": false,
+            "title": "Context Consent",
+            "type": "boolean"
+          },
+          "context_token": {
+            "anyOf": [
+              {
+                "maxLength": 4096,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Context Token"
+          },
+          "depth": {
+            "default": "concise",
+            "enum": [
+              "concise",
+              "beginner",
+              "deeper"
+            ],
+            "title": "Depth",
+            "type": "string"
+          },
+          "exhibit_id": {
+            "anyOf": [
+              {
+                "maxLength": 100,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Exhibit Id"
+          },
+          "locale": {
+            "default": "en",
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Locale",
+            "type": "string"
+          },
+          "question": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Question",
+            "type": "string"
+          }
+        },
+        "required": [
+          "question"
+        ],
+        "title": "GuideRequest",
         "type": "object"
       },
       "HTTPValidationError": {
@@ -606,6 +981,53 @@
         "title": "SourceList",
         "type": "object"
       },
+      "ValidatedClaim": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "title": "Claim Id",
+            "type": "string"
+          },
+          "kind": {
+            "const": "source_statement",
+            "default": "source_statement",
+            "title": "Kind",
+            "type": "string"
+          },
+          "passage_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Passage Ids",
+            "type": "array"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "support_method": {
+            "const": "complete_reviewed_passage",
+            "default": "complete_reviewed_passage",
+            "title": "Support Method",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_id",
+          "text",
+          "passage_ids",
+          "source_ids"
+        ],
+        "title": "ValidatedClaim",
+        "type": "object"
+      },
       "ValidationError": {
         "properties": {
           "ctx": {
@@ -839,6 +1261,54 @@
           }
         },
         "summary": "Exhibit"
+      }
+    },
+    "/api/v1/guide": {
+      "post": {
+        "operationId": "guide",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GuideRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GuideAnswer"
+                }
+              },
+              "text/event-stream": {}
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "description": "Anonymous session required"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          },
+          "429": {
+            "description": "Request or provider limit reached"
+          },
+          "503": {
+            "description": "Guide unavailable"
+          }
+        },
+        "summary": "Guide"
       }
     },
     "/api/v1/health": {

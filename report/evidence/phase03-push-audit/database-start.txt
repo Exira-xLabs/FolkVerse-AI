@@ -1,0 +1,6 @@
+[WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ docker compose up -d --wait db
+ Image pgvector/pgvector:pg17@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0 Pulling
+ Image pgvector/pgvector:pg17@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0 Error failed to resolve reference "docker.io/pgvector/pgvector@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0": failed to do request: Head "https://registry-1.docker.io/v2/pgvector/pgvector/manifests/sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0": dial tcp [2a03:2880:f11a:83:face:b00c:0:25de]:443: i/o timeout
+Error response from daemon: failed to resolve reference "docker.io/pgvector/pgvector@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0": failed to do request: Head "https://registry-1.docker.io/v2/pgvector/pgvector/manifests/sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0": dial tcp [2a03:2880:f11a:83:face:b00c:0:25de]:443: i/o timeout
+[ELIFECYCLE] Command failed with exit code 1.

@@ -1,0 +1,602 @@
+{
+  "version": "guide-human-review-v1",
+  "run_sha256": "c85283731163b882e48b97fb87c06eafd9837dd2ac76c66ebce8170ba2e52fab",
+  "run_mode": "fixture",
+  "instructions": "Leave passed/reviewer/time/rationale/basis empty until actual human review. Apply the evaluation rubric, record independent basis, and attest human review. Reviewing a fixture cannot certify real provider expertise.",
+  "ratings": [
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "listing_region_en",
+      "case_ids": [
+        "listing_region_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "listing_region_en",
+      "case_ids": [
+        "listing_region_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "listing_region_zh-CN",
+      "case_ids": [
+        "listing_region_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "listing_region_zh-CN",
+      "case_ids": [
+        "listing_region_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "listing_category_en",
+      "case_ids": [
+        "listing_category_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "listing_category_en",
+      "case_ids": [
+        "listing_category_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "listing_category_zh-CN",
+      "case_ids": [
+        "listing_category_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "listing_category_zh-CN",
+      "case_ids": [
+        "listing_category_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "listing_intro_en",
+      "case_ids": [
+        "listing_intro_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "listing_intro_en",
+      "case_ids": [
+        "listing_intro_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "listing_intro_zh-CN",
+      "case_ids": [
+        "listing_intro_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "listing_intro_zh-CN",
+      "case_ids": [
+        "listing_intro_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "polite_intro_en",
+      "case_ids": [
+        "polite_intro_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "polite_intro_en",
+      "case_ids": [
+        "polite_intro_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "polite_intro_zh-CN",
+      "case_ids": [
+        "polite_intro_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "polite_intro_zh-CN",
+      "case_ids": [
+        "polite_intro_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "deeper_listing_en",
+      "case_ids": [
+        "deeper_listing_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "deeper_listing_en",
+      "case_ids": [
+        "deeper_listing_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "deeper_listing_zh-CN",
+      "case_ids": [
+        "deeper_listing_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "deeper_listing_zh-CN",
+      "case_ids": [
+        "deeper_listing_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "beginner_listing_en",
+      "case_ids": [
+        "beginner_listing_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "beginner_listing_en",
+      "case_ids": [
+        "beginner_listing_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "beginner_listing_zh-CN",
+      "case_ids": [
+        "beginner_listing_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "beginner_listing_zh-CN",
+      "case_ids": [
+        "beginner_listing_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "followup_simplification_en",
+      "case_ids": [
+        "followup_simplification_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "followup_simplification_en",
+      "case_ids": [
+        "followup_simplification_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "followup_simplification_zh-CN",
+      "case_ids": [
+        "followup_simplification_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "followup_simplification_zh-CN",
+      "case_ids": [
+        "followup_simplification_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "followup_depth_en",
+      "case_ids": [
+        "followup_depth_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "followup_depth_en",
+      "case_ids": [
+        "followup_depth_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "followup_depth_zh-CN",
+      "case_ids": [
+        "followup_depth_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "followup_depth_zh-CN",
+      "case_ids": [
+        "followup_depth_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "followup_locale_switch_en",
+      "case_ids": [
+        "followup_locale_switch_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "followup_locale_switch_en",
+      "case_ids": [
+        "followup_locale_switch_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "followup_locale_switch_zh-CN",
+      "case_ids": [
+        "followup_locale_switch_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "followup_locale_switch_zh-CN",
+      "case_ids": [
+        "followup_locale_switch_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "listing_region",
+      "case_ids": [
+        "listing_region_en",
+        "listing_region_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "listing_category",
+      "case_ids": [
+        "listing_category_en",
+        "listing_category_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "listing_intro",
+      "case_ids": [
+        "listing_intro_en",
+        "listing_intro_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "polite_intro",
+      "case_ids": [
+        "polite_intro_en",
+        "polite_intro_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "deeper_listing",
+      "case_ids": [
+        "deeper_listing_en",
+        "deeper_listing_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "beginner_listing",
+      "case_ids": [
+        "beginner_listing_en",
+        "beginner_listing_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "followup_simplification",
+      "case_ids": [
+        "followup_simplification_en",
+        "followup_simplification_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "followup_depth",
+      "case_ids": [
+        "followup_depth_en",
+        "followup_depth_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "followup_locale_switch",
+      "case_ids": [
+        "followup_locale_switch_en",
+        "followup_locale_switch_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    }
+  ]
+}

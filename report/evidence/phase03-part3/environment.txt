@@ -1,0 +1,8 @@
+6 October 2026, Asia/Shanghai
+The supplied credential is saved in ignored .env; .env.example has an empty key placeholder.
+Authentication-only GET https://api.deepseek.com/models: HTTP 401.
+Credential accepted by this check: False.
+No evidence/question, completion request, provider error body or secret value was retained here.
+Local provider mode remains demo; daily budget remains zero.
+docker compose ps: no FolkVerse database container running.
+Real generation and PostgreSQL integration remain unverified.

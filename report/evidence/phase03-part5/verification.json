@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-06",
+  "timezone": "Asia/Shanghai",
+  "part": 5,
+  "api_passed": 197,
+  "new_tests": 32,
+  "browser_passed": 19,
+  "browser_integration": "Labelled synthetic chat/vector fixtures and local BFF upstream, no provider/database",
+  "checks": {
+    "ruff": "pass",
+    "mypy": "pass, 24 source files",
+    "web_lint": "pass",
+    "web_typecheck": "pass",
+    "web_build": "pass",
+    "foundation": "pass",
+    "whitespace": "pass"
+  },
+  "benchmark": {
+    "provenance": "offline_export_not_live_database",
+    "passages": 2,
+    "lexical_median_ms": 0.034102499739674386,
+    "lexical_max_ms": 1.2417910002113786,
+    "measurements": 600,
+    "dense_runtime_verified": false,
+    "model_preparation": "240-second bounded download timeout",
+    "production_index_written": false
+  },
+  "review_candidates": {
+    "inventory_drafts": 13,
+    "museum_catalog_drafts": 3,
+    "new_approvals": 0,
+    "original_manifest_and_ledger_changed": false
+  },
+  "semantic_enabled": false,
+  "phase_complete": false,
+  "next_part": 6,
+  "limitations": [
+    "Actual BGE model inference unverified",
+    "Current PostgreSQL unavailable",
+    "Provider generation not performed",
+    "Human coverage review remains pending",
+    "Node 26 outside declared Node 22 runtime",
+    "Physical device, Safari and screen reader not executed"
+  ]
+}

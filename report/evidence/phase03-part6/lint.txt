@@ -1,0 +1,5 @@
+[WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ pnpm --filter @folkverse/web lint && uv run --project apps/api ruff check apps/api scripts/export-openapi.py
+.                                        | [WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ eslint .
+All checks passed!

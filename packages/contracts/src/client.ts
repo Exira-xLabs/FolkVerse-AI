@@ -10,3 +10,6 @@ export type ExhibitPage = components["schemas"]["ExhibitPage"];
 export type ExhibitDetail = components["schemas"]["ExhibitDetail"];
 export type SourceCard = components["schemas"]["SourceCard"];
 export type SourceList = components["schemas"]["SourceList"];
+export type GuideAnswer = components["schemas"]["GuideAnswer"];
+export type GuideRequest = components["schemas"]["GuideRequest"];
+export type GuideEvidence = components["schemas"]["EvidencePassage"];

@@ -11,10 +11,14 @@ dependencies = [
   "alembic>=1.15,<2",
   "psycopg[binary]>=3.2,<4",
   "itsdangerous>=2.2,<3",
+  "httpx>=0.28,<1",
 ]
 
+[project.optional-dependencies]
+embeddings = ["sentence-transformers==6.1.0", "torch==2.9.1"]
+
 [dependency-groups]
-dev = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.11,<1", "mypy>=1.15,<2", "types-itsdangerous>=1.1"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "types-itsdangerous>=1.1"]
 
 [build-system]
 requires = ["hatchling"]
@@ -37,3 +41,12 @@ plugins = ["pydantic.mypy"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+# Keep the optional local inference runtime CPU-only on this development machine.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }

@@ -1,0 +1,33 @@
+{
+  "run_sha256": "fb1130c192cd99869e18f5c53ab93a5ec6dab2ab65c450cbe45ab1dbc0348c4d",
+  "review_sha256": "0a19e8248cb12a211a3dddeab51fc44ca394eee290585ff1bd570cdac282bdd0",
+  "run_mode": "fixture",
+  "human_dimensions": {
+    "historical_correctness": {
+      "numerator": 0,
+      "denominator": 0,
+      "sample_size": 0,
+      "rate": null,
+      "method": "Attributed human pass/fail judgments",
+      "pending": 22
+    },
+    "explanatory_clarity": {
+      "numerator": 0,
+      "denominator": 0,
+      "sample_size": 0,
+      "rate": null,
+      "method": "Attributed human pass/fail judgments",
+      "pending": 22
+    },
+    "bilingual_faithfulness": {
+      "numerator": 0,
+      "denominator": 0,
+      "sample_size": 0,
+      "rate": null,
+      "method": "Attributed human pass/fail judgments",
+      "pending": 11
+    }
+  },
+  "expert_quality_verified": false,
+  "note": "Recorded judgments remain attributable; this tool cannot verify reviewer identity or certify independent expertise, production integration or missing phase gates."
+}

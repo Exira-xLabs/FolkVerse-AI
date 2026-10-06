@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-06T08:17:57.436484+00:00",
+  "env_file_key_present": true,
+  "settings_uses_env_file_key": true,
+  "shell_key_override_present": false,
+  "key_has_outer_whitespace": false,
+  "base_url": "https://api.deepseek.com",
+  "app_mode": "demo",
+  "daily_budget_usd": "0",
+  "probes": [
+    {
+      "trust_env": false,
+      "path": "/models",
+      "status": 401
+    },
+    {
+      "trust_env": true,
+      "path": "/models",
+      "status": 401
+    },
+    {
+      "trust_env": false,
+      "path": "/v1/models",
+      "status": 401
+    }
+  ]
+}

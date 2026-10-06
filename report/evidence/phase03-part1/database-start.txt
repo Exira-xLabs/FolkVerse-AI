@@ -1,0 +1,7 @@
+6 October 2026, Asia/Shanghai
+Command: docker compose up -d --wait db
+Exit: 1
+The pinned docker.io/pgvector/pgvector image could not be resolved. The Docker registry HTTPS request timed out. No FolkVerse database container started.
+Command: uv run --project apps/api python -m folkverse.guide_retrieval
+Exit: 1
+Museum database unavailable; no evidence or coverage was returned.

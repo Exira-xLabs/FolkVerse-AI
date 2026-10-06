@@ -39,3 +39,42 @@
 ## 5 October 2026 — Part C visit and context contracts
 
 Guide history/drafts and temporary Journey plans now survive internal navigation in root-provider memory, with explicit clear/reset and reload/close lifetimes. Journey criteria are drafts until Apply; the visible committed route retains its applied time. Published exhibit IDs travel into later experience screens with current-record revalidation and honest capability limits. Audio remains the actual English recording with transcript/Chinese translation and text-only choice. These changes do not implement later AI APIs or durable storage. [Exact UI contract](visit-state-and-context.md).
+
+## Phase 03 Part 1 — 6 October 2026
+
+- Follow the owner's requested part-by-part method. The sequence and separate completion checks are in `docs/phase-03-plan.md`; do not call the full grounded guide complete after a retrieval baseline.
+- Reuse current published-exhibit/claim evidence and hash-bound approvals. Do not introduce snapshot-backed production fallback, automatic review, vectors, provider calls or UI changes in Part 1.
+- Use a labelled Latin/CJK BM25 baseline without new runtime dependencies. Similarity is candidate retrieval, not semantic claim validation. BGE-M3, support validation and broader reviewed historical coverage remain distinct later deliverables.
+- Portable synthetic SQLite tests verify eligibility and retrieval rules while the actual PostgreSQL environment is unavailable. Preserve current audit findings and historical evidence; do not reclassify these tests as PostgreSQL or expert-quality certification.
+
+## Phase 03 Part 2 — 6 October 2026
+
+- Use the documented DeepSeek Chat Completions JSON contract with thinking explicitly disabled. Treat parsed replies as untrusted transport output; no live answers or new citations are published by this part. Text only; vision and additional providers remain outside this adapter.
+- Persist admission and conservative usage accounting in the existing PostgreSQL database. A migration-created singleton lock serializes admission across workers; budgets do not reset on API restart. Unknown billing retains the reserved amount, including cancelled/failed attempts. Every retry gets its own reservation.
+- Default the daily budget to zero and require explicit positive rates bound to the configured model/base URL. Meter token usage without storing raw private content. Cached/off-peak discounts are not assumed; cost is a conservative configured-rate estimate, not an asserted invoice amount.
+- Align the API's missing APP_MODE default to live, matching the existing web behavior. Setup still creates explicit demo configuration. No credentials, budget activation, deployment or paid call were performed.
+- Tests use mocked HTTP and portable SQLite transactions. Offline PostgreSQL migration SQL generation is evidence of compilation only; actual PostgreSQL migration/locking and credentialed network/billing checks remain unverified. Add service lifecycle pruning when Part 4 wires owned live requests; current maintenance is lazy or explicit.
+
+## Phase 03 Part 3 — 6 October 2026
+
+- Restrict initial factual publication to complete attributed reviewed passages. Citation ID matching alone cannot validate facts; generated paraphrases, shortened quotations and classifications remain gated. This is an extractive support method with explicit limits, not a general historical-expertise claim.
+- Use published localized exhibit names and deliberately narrow listing/overview question patterns. Broader history, definitions, chronology and techniques are insufficiency even with lexical overlap. Expand interpretation only with reviewed coverage and independent evaluation.
+- Carry only consented, signed, session-bound topic/evidence references for thirty-minute follow-ups, with no raw question/model answer and no server chat-history storage. Locale switches retrieve separately reviewed language material. Prior uncertainty and revocation checks remain in force.
+- Keep Jinyao's presentation and browser API unchanged until Part 4. The internal service returns checked segments and actual source metadata; SSE and source UI remain pending.
+- Store the supplied credential only in ignored `.env`; do not activate paid generation by changing demo/zero-budget configuration. Authentication-only `/models` returned HTTP 401, with no key/error body logged. Live generation and actual PostgreSQL remain unverified.
+
+## 6 October 2026 — Guide publication and transport boundary
+
+Phase 03 Part 4 streams only progress before validation; facts and source metadata are published after current session ownership and evidence rechecks. Interrupted/malformed streams never become successful replies. Browser questions use the owned BFF, forwarding only the session cookie, with cancellation propagated upstream. Source inspection checks current published evidence. Chat remains page memory; optional signed follow-up context carries only topic/evidence IDs for 30 minutes. Cheap request limits are per worker; provider admission remains shared in PostgreSQL. Isolated browser fixtures are explicitly separate from real integration and expert-quality evaluation. [Contract](guide-live.md).
+
+## 6 October 2026 — Hybrid retrieval artifact and local worker
+
+Part 5 uses a private atomic, bounded small-corpus JSON vector artifact, with PostgreSQL still authoritative for eligibility, rather than claiming a deployed pgvector search service while the database is unavailable. BGE-M3 is revision-pinned; vectors bind to model/encoder/corpus versions and all metadata changes require a rebuild. Query inference runs in an offline CPU subprocess so cancellation kills and reaps work without keeping multiple resident model copies. Cold start costs remain real and semantic retrieval stays disabled pending the actual benchmark. No review approval is inferred from embeddings or candidate preparation. The exported-corpus benchmark preserves timestamp-bound review hashes with a SQLite-only adapter, without weakening restore gates. [Contract](guide-hybrid-retrieval.md).
+
+## 6 October 2026 — Evaluation provenance and language-switch validation
+
+Part 6 separates functional support/citation/uncertainty checks from historical correctness, clarity and bilingual meaning, which require independent human judgments. Null ratings earn no score. Frozen gold maps to existing reviewed export passages; scenario targets remain machine-authored drafts. Preserve the initial reserved baseline and label reruns after exposure as diagnostic regression. Never infer provider latency, tokens/cost, dense inference or 95% expertise from mocks. Harness v2 validates signed prior evidence against current eligibility independently of locale/title retrieval, then retrieves the requested language's reviewed material. [Evaluation](guide-evaluation.md), [handoff](phase-03-handoff.md).
+
+## 6 October 2026 — Push audit and Ollama provider identity
+
+The user identified the credential issuer as Ollama. Route it only through explicit Ollama Cloud configuration, without credential fallback to DeepSeek. Cloud account usage uses a shared daily admitted-attempt quota, including retries/failures; never invent subscription token USD prices. Auth verification uses a nonexistent model and invalid-key control, without successful generation. Keep demo mode and zero request quota until normal live activation. Browser publication checks now validate the entire displayed attribution/statement and all claim/source mappings. Secret checks cover all Git candidates, quoted dotenv values and browser output; embedding workers receive an environment allowlist. Listing grammar extensions remain bounded and evaluated as regression on exposed cases, never fresh expertise scoring. [Audit](../report/PHASE_03_PUSH_AUDIT.md).

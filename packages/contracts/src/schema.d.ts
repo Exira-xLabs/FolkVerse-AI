@@ -55,6 +55,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/guide": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Guide */
+        post: operations["guide"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/health": {
         parameters: {
             query?: never;
@@ -213,6 +230,50 @@ export interface components {
             /** Request Id */
             request_id: string;
         };
+        /** EvidencePassage */
+        EvidencePassage: {
+            /** Canonical Url */
+            canonical_url: string;
+            /** Content Hash */
+            content_hash: string;
+            /** Exhibit Ids */
+            exhibit_ids: string[];
+            /**
+             * Fetched At
+             * Format: date-time
+             */
+            fetched_at: string;
+            /** Institution */
+            institution: string;
+            /**
+             * Language
+             * @enum {string}
+             */
+            language: "en" | "zh-CN";
+            /** Locator */
+            locator: string;
+            /** Passage Id */
+            passage_id: string;
+            /** Region Ids */
+            region_ids: string[];
+            /** Review Id */
+            review_id: string;
+            /**
+             * Reviewed At
+             * Format: date-time
+             */
+            reviewed_at: string;
+            /** Reviewer */
+            reviewer: string;
+            /** Rights Basis */
+            rights_basis: string;
+            /** Source Id */
+            source_id: string;
+            /** Source Title */
+            source_title: string;
+            /** Text */
+            text: string;
+        };
         /** ExhibitCard */
         ExhibitCard: {
             /** Estimated Minutes */
@@ -266,6 +327,122 @@ export interface components {
             next_cursor: string | null;
             /** Total */
             total: number;
+        };
+        /** GuideAnswer */
+        GuideAnswer: {
+            /** Answer Claim Ids */
+            answer_claim_ids?: string[];
+            /** Answer Id */
+            answer_id: string;
+            /** Answer Text */
+            answer_text: string;
+            /** Claims */
+            claims?: components["schemas"]["ValidatedClaim"][];
+            /** Context Claim Ids */
+            context_claim_ids?: string[];
+            /** Context Token */
+            context_token?: string | null;
+            /** Corpus Version */
+            corpus_version: string;
+            /** Coverage Limit */
+            coverage_limit: string;
+            /**
+             * Depth
+             * @enum {string}
+             */
+            depth: "concise" | "beginner" | "deeper";
+            /** Embedding Encoder Version */
+            embedding_encoder_version?: string | null;
+            /** Embedding Model Version */
+            embedding_model_version?: string | null;
+            /**
+             * Embedding Status
+             * @default disabled
+             */
+            embedding_status: string;
+            /** Evidence Ids */
+            evidence_ids?: string[];
+            /**
+             * Harness Version
+             * @default guide-extractive-v3
+             */
+            harness_version: string;
+            /**
+             * Locale
+             * @enum {string}
+             */
+            locale: "en" | "zh-CN";
+            /**
+             * Mode
+             * @default live
+             * @constant
+             */
+            mode: "live";
+            /**
+             * Prompt Version
+             * @default jinyao-evidence-selector-v1
+             */
+            prompt_version: string;
+            /** Provider Attempt Id */
+            provider_attempt_id?: string | null;
+            /** Query Embedding Ms */
+            query_embedding_ms?: number | null;
+            /**
+             * Reason
+             * @enum {string}
+             */
+            reason: "reviewed_excerpt" | "coverage_gap" | "ambiguous_topic" | "unsupported_claim" | "evidence_changed" | "unsafe_source";
+            /** Related Exhibit Ids */
+            related_exhibit_ids?: string[];
+            /**
+             * Retrieval Mode
+             * @default lexical_only
+             * @enum {string}
+             */
+            retrieval_mode: "lexical_only" | "hybrid";
+            /**
+             * Retrieval Version
+             * @default lexical-bm25-cjk-v1
+             */
+            retrieval_version: string;
+            /** Sources */
+            sources?: components["schemas"]["EvidencePassage"][];
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "answered" | "insufficient" | "clarification";
+            /**
+             * Uncertainty
+             * @enum {string}
+             */
+            uncertainty: "partial" | "insufficient";
+        };
+        /** GuideRequest */
+        GuideRequest: {
+            /**
+             * Context Consent
+             * @default false
+             */
+            context_consent: boolean;
+            /** Context Token */
+            context_token?: string | null;
+            /**
+             * Depth
+             * @default concise
+             * @enum {string}
+             */
+            depth: "concise" | "beginner" | "deeper";
+            /** Exhibit Id */
+            exhibit_id?: string | null;
+            /**
+             * Locale
+             * @default en
+             * @enum {string}
+             */
+            locale: "en" | "zh-CN";
+            /** Question */
+            question: string;
         };
         /** HTTPValidationError */
         HTTPValidationError: {
@@ -403,6 +580,29 @@ export interface components {
             /** Items */
             items: components["schemas"]["SourceCard"][];
         };
+        /** ValidatedClaim */
+        ValidatedClaim: {
+            /** Claim Id */
+            claim_id: string;
+            /**
+             * Kind
+             * @default source_statement
+             * @constant
+             */
+            kind: "source_statement";
+            /** Passage Ids */
+            passage_ids: string[];
+            /** Source Ids */
+            source_ids: string[];
+            /**
+             * Support Method
+             * @default complete_reviewed_passage
+             * @constant
+             */
+            support_method: "complete_reviewed_passage";
+            /** Text */
+            text: string;
+        };
         /** ValidationError */
         ValidationError: {
             /** Context */
@@ -511,6 +711,61 @@ export interface operations {
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
                 };
+            };
+        };
+    };
+    guide: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["GuideRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GuideAnswer"];
+                    "text/event-stream": unknown;
+                };
+            };
+            /** @description Anonymous session required */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description Request or provider limit reached */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Guide unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
         };
     };

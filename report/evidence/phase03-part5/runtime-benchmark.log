@@ -1,0 +1,94 @@
+{
+  "provenance": "offline_export_not_live_database",
+  "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+  "passages": 2,
+  "model_version": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181:cls:normalized-f32:8192:v1",
+  "platform": "Linux-7.2.4-arch1-2-x86_64-with-glibc2.44",
+  "processor": "",
+  "iterations_per_lexical_query": 100,
+  "lexical_ms_median": 0.034102499739674386,
+  "lexical_ms_max": 1.2417910002113786,
+  "cases": [
+    {
+      "locale": "en",
+      "question": "Fuzhou shadow puppetry",
+      "lexical_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "hybrid_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "mode": "lexical_only",
+      "embedding_status": "index_missing",
+      "query_embedding_ms": null,
+      "hybrid_total_ms": 1.8637869998201495
+    },
+    {
+      "locale": "zh-CN",
+      "question": "复州皮影戏",
+      "lexical_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "hybrid_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "mode": "lexical_only",
+      "embedding_status": "index_missing",
+      "query_embedding_ms": null,
+      "hybrid_total_ms": 0.17900400052894838
+    },
+    {
+      "locale": "en",
+      "question": "shadow theatre regional inventory",
+      "lexical_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "hybrid_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "mode": "lexical_only",
+      "embedding_status": "index_missing",
+      "query_embedding_ms": null,
+      "hybrid_total_ms": 0.223419001486036
+    },
+    {
+      "locale": "zh-CN",
+      "question": "瓦房店传统戏剧名录",
+      "lexical_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "hybrid_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "mode": "lexical_only",
+      "embedding_status": "index_missing",
+      "query_embedding_ms": null,
+      "hybrid_total_ms": 0.21875400125281885
+    },
+    {
+      "locale": "en",
+      "question": "Qin dynasty emperor birth date",
+      "lexical_ids": [],
+      "hybrid_ids": [],
+      "mode": "lexical_only",
+      "embedding_status": "index_missing",
+      "query_embedding_ms": null,
+      "hybrid_total_ms": 0.1400359997205669
+    },
+    {
+      "locale": "zh-CN",
+      "question": "秦始皇出生年月",
+      "lexical_ids": [],
+      "hybrid_ids": [],
+      "mode": "lexical_only",
+      "embedding_status": "index_missing",
+      "query_embedding_ms": null,
+      "hybrid_total_ms": 0.15961700046318583
+    }
+  ],
+  "quality_score": null,
+  "note": "Diagnostic queries, not held-out expert evaluation. Lexical timing excludes database eligibility reads. Each dense query loads a CPU worker; cold start and artifact verification are included in query_embedding_ms.",
+  "index_build_status": "model_unavailable",
+  "index_build_ms": 1.0532039996178355,
+  "dense_runtime_verified": false
+}

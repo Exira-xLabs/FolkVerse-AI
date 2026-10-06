@@ -1,0 +1,7 @@
+[WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ pnpm --filter @folkverse/web typecheck && uv run --project apps/api mypy --config-file apps/api/pyproject.toml apps/api/src
+.                                        | [WARN] Unsupported engine: wanted: {"node":">=22.0.0 <23"} (current: {"node":"v26.8.2","pnpm":"11.10.0"})
+$ next typegen && tsc --noEmit
+Generating route types...
+✓ Types generated successfully
+Success: no issues found in 19 source files

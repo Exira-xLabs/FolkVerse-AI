@@ -1,0 +1,8 @@
+6 October 2026, Asia/Shanghai
+Settings inspection (values not emitted):
+credential_present: False
+provider_calls_enabled_by_config: False
+No provider request was made.
+docker compose ps: no FolkVerse container running.
+PostgreSQL integration blocked by the image registry timeout recorded in phase03-part1/database-start.txt.
+Node: 26.8.2; declared supported range: >=22 <23.

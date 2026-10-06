@@ -12,6 +12,7 @@ Explore opens an interactive atlas with Liaoning's sourced province outline and 
 
 - [Local setup for Linux and Windows/PowerShell](docs/setup.md)
 - [Current build status and verification](docs/build-status.md)
+- [Phase 03 push audit](report/PHASE_03_PUSH_AUDIT.md) and [DeepSeek through Ollama Cloud](docs/guide-ollama.md)
 - [Architecture decisions and path mapping](docs/decisions.md)
 - [Original competition build-kit entry point](README_START_HERE.md)
 - [Phase 00 requirements](phases/00_FOUNDATION.md)

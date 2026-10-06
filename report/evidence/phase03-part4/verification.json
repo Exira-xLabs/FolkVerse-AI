@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-06",
+  "timezone": "Asia/Shanghai",
+  "part": 4,
+  "fixture_only_integration": true,
+  "api": {
+    "command": "uv run --project apps/api pytest apps/api/tests/test_guide_api.py apps/api/tests/test_guide_harness.py apps/api/tests/test_guide_retrieval.py apps/api/tests/test_provider_gateway.py apps/api/tests/test_foundation.py::test_database_outage_is_not_success -q",
+    "passed": 165,
+    "new_boundary_tests": 13,
+    "warnings": [
+      "Upstream TestClient httpx deprecation"
+    ]
+  },
+  "browser": {
+    "command": "pnpm exec playwright test --config playwright.guide.config.ts",
+    "passed": 18,
+    "fixtures": "Synthetic evidence and local HTTP upstream; not a real provider/database",
+    "physical_device": false
+  },
+  "checks": {
+    "api_ruff": "pass",
+    "strict_mypy": "pass, 20 source files",
+    "web_lint": "pass",
+    "web_typecheck": "pass",
+    "production_build": "pass",
+    "git_diff_check": "pass"
+  },
+  "environment": {
+    "deepseek_models_auth_http_status": 401,
+    "generation_requests": 0,
+    "folkverse_postgres_running": false,
+    "daily_budget": "unchanged, zero",
+    "app_mode": "unchanged, demo",
+    "node": "26.8.2, outside declared >=22 <23"
+  },
+  "phase_complete": false,
+  "next_part": 5
+}
