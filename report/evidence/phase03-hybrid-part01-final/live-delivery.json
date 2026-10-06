@@ -1,0 +1,43 @@
+{
+  "mode": "real local browser/BFF/API; no intercepted responses",
+  "checks": [
+    {
+      "name": "live chat visible",
+      "passed": true
+    },
+    {
+      "name": "en greeting reaches ready state",
+      "passed": true
+    },
+    {
+      "name": "en reply is nonempty",
+      "passed": true
+    },
+    {
+      "name": "en composer released",
+      "passed": true
+    },
+    {
+      "name": "zh-CN greeting reaches ready state",
+      "passed": true
+    },
+    {
+      "name": "zh-CN reply is nonempty",
+      "passed": true
+    },
+    {
+      "name": "zh-CN composer released",
+      "passed": true
+    },
+    {
+      "name": "close/reopen preserves both greetings",
+      "passed": true
+    },
+    {
+      "name": "no browser exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "provider_usage": "Not scored by this delivery check; configured service admission applies."
+}

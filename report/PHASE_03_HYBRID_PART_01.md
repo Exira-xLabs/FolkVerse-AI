@@ -3,6 +3,8 @@
 Date: 6 October 2026, Asia/Shanghai. Base commit: `6d6096a`.
 Scope: Part 0 design/requirement alignment and Part 1 message delivery. Full hybrid Phase 03 remains in progress.
 
+**Final Part 1 update:** the initial batch was pushed as `6094a94`. The subsequent delivery-completion changes below are verified locally; Part 1 message-delivery acceptance is complete within the stated browser/runtime scope. Generated personality and hybrid generation remain Part 2 onward.
+
 ## Delivered
 
 The original Phase 03, content rules, API specification, QA feature definition and guide documentation now acknowledge the owner-authorized hybrid direction. A versioned output design maps all eight acceptance gates and makes the distinction between conversation, evidence sections and explicitly unverified general explanation precise. Runtime schemas/generation remain restricted until their coordinated later migration; documentation does not claim they have changed.
@@ -35,4 +37,34 @@ Part 2 must implement generated, varied social conversation and bounded consente
 
 Province-wide source acquisition, reviewed explanatory material, representative retrieval, independent bilingual/personality assessment and full release verification remain planned in the [execution parts](../docs/phase-03-hybrid-execution-parts.md). Live factual generation and new human quality results are not established by this delivery.
 
-Private configuration and persistent database contents are preserved. Build-generated instruction/type imports are not treated as authored source changes. No commit, push or deployment is implied by this report.
+Private configuration and persistent database contents are preserved. Build-generated instruction/type imports are not treated as authored source changes. The initial batch is pushed at `6094a94`; subsequent completion changes remain local. No deployment was made.
+
+## Final Part 1 checks and fixes
+
+Popup closure now cancels the scripted-preview timer immediately, and a timer/controller guard prevents duplicate concurrent sends. Session-connect and incomplete-stream failures have specific localized recovery messages. Turn elements expose their terminal status for reliable delivery checks without displaying technical diagnostics to visitors.
+
+The final focused suite passes **37/37**, exit 0, including the previous checks plus failed-session recovery, rapid duplicate submit with preserved follow-up draft, close/reopen while a request is pending, and a real BFF fixture stream that remains open without a terminal event. Its browser deadline produces a visible timeout and closes the upstream connection. [Final browser results](evidence/phase03-hybrid-part01-final/browser-results.json).
+
+The reusable [real delivery script](../scripts/verify-guide-delivery.mjs) passes **9/9 checks**, exit 0: live presentation, actual EN/ZH greeting replies, released composers, preserved close/reopen history and no browser exceptions. [Actual local delivery results](evidence/phase03-hybrid-part01-final/live-delivery.json). The script does not intercept responses or change configuration and deletes its temporary session afterward. Existing social-policy replies use no provider generation; these results are not generated-personality or historical-quality evidence.
+
+Reproduction against running local live services:
+
+```sh
+FOLKVERSE_DELIVERY_URL=http://127.0.0.1:3114 FOLKVERSE_EVIDENCE_DIR=report/evidence/phase03-hybrid-part01-final node scripts/verify-guide-delivery.mjs
+FOLKVERSE_EVIDENCE_DIR=report/evidence/phase03-hybrid-part01-final pnpm exec playwright test -c playwright.guide.config.ts
+```
+
+The first command requires the API's allowed origin and web/API base configuration to match the test port. Future generated social replies may consume the configured bounded quota; the script does not authorize or expand it.
+
+Web typecheck/lint and `env -u NODE_TLS_REJECT_UNAUTHORIZED pnpm build` pass on Node 22.22.3; the final build runs without the inherited TLS-disable environment warning. Foundation passes with identical regenerated contracts, preserved nine original assets/reference copies and 1,135 candidate/browser-output files checked for configured secrets. Whitespace validation passes. Temporary smoke-test API/web processes are stopped; the persistent database is left intact.
+
+| Part 1 gate | Final evidence |
+|---|---|
+| Typed/repeated greeting delivery | Actual EN/ZH smoke and controlled 25-turn/102-turn UI scenarios |
+| Sustained composer with bounded history | 102 submissions; 100 retained turns, visible truncation notice, send still enabled |
+| Session/context failure recovery | Failed bootstrap sends no guide request; explicit retry succeeds; invalid-context error and token clearing retained |
+| Cancellation, duplicate send, close/reopen | Pending guard, Stop/Retry, BFF cancellation and old/new reply isolation browser checks |
+| Incomplete/stalled transport | Truncated/malformed publication rejection, stalled bootstrap and open upstream stream reach visible errors |
+| Honest demo/live separation | Existing labelled preview regressions and live BFF demo refusal pass |
+
+The friend's original missing-reply cause is still unproven. This acceptance covers the specified current delivery behaviors, not a claim of zero possible defects, physical-device/Safari verification, greeting variety or full Phase 03 completion.

@@ -262,3 +262,82 @@ test("stalled session setup reaches a visible timeout and releases the composer"
     await expect(page.getByRole("button", { name: "Send message", exact: true })).toBeEnabled();
   } finally { release(); }
 });
+
+test("failed session setup preserves the submitted message and never starts generation", async ({ page }) => {
+  await fixtures(page); await open(page);
+  await page.unroute("**/api/v1/session");
+  await page.route("**/api/v1/session", route => route.fulfill({ status: 503, json: { error: { code: "database_unavailable" } } }));
+  let generations = 0;
+  page.on("request", request => { if (request.url().endsWith("/api/v1/guide")) generations++; });
+  await page.getByRole("textbox").fill("hi");
+  await page.getByRole("textbox").press("Enter");
+  await expect(page.locator(".jinyao-chat-turn")).toHaveAttribute("data-status", "error");
+  await expect(page.getByRole("log")).toContainText("Retry to reconnect");
+  await expect(page.locator(".from-visitor")).toContainText("hi");
+  expect(generations).toBe(0);
+  await page.unroute("**/api/v1/session");
+  await page.route("**/api/v1/session", route => route.fulfill({ json: { session_id: "recovered_fixture" } }));
+  await page.getByRole("button", { name: "Retry question" }).click();
+  await expect(page.locator(".jinyao-chat-turn").last()).toHaveAttribute("data-status", "ready");
+  expect(generations).toBe(1);
+});
+
+test("rapid duplicate submission admits one request and keeps typed follow-up text", async ({ page }) => {
+  await fixtures(page, { delay: 600 }); await open(page);
+  let generations = 0;
+  page.on("request", request => { if (request.url().endsWith("/api/v1/guide")) generations++; });
+  await page.getByRole("textbox").fill("First question");
+  await page.getByRole("textbox").evaluate(node => {
+    const form = node.closest("form")!;
+    form.requestSubmit(); form.requestSubmit();
+  });
+  await expect(page.locator(".jinyao-chat-turn")).toHaveCount(1);
+  await page.getByRole("textbox").fill("Follow-up draft");
+  await page.getByRole("textbox").press("Enter");
+  await expect(page.locator(".jinyao-chat-turn")).toHaveAttribute("data-status", "ready");
+  await expect(page.getByRole("textbox")).toHaveValue("Follow-up draft");
+  expect(generations).toBe(1);
+});
+
+test("close and reopen cancels an old pending reply without damaging a new request", async ({ page }) => {
+  await fixtures(page); await open(page);
+  await page.unroute("**/api/v1/guide");
+  let release!: () => void;
+  const oldReply = new Promise<void>(resolve => { release = resolve; });
+  await page.route("**/api/v1/guide", async route => {
+    const body = route.request().postDataJSON();
+    if (body.question === "Old question") await oldReply;
+    await route.fulfill({ contentType: "text/event-stream", body: reply(false, body.depth) }).catch(() => undefined);
+  });
+  try {
+    const first = page.waitForRequest(r => r.url().endsWith("/api/v1/guide"));
+    await page.getByRole("textbox").fill("Old question");
+    await page.getByRole("textbox").press("Enter");
+    await first;
+    await page.getByRole("button", { name: "Close Jinyao chat", exact: true }).click();
+    await page.getByRole("button", { name: "Open Jinyao chat", exact: true }).click();
+    await expect(page.locator(".jinyao-chat-turn").first()).toHaveAttribute("data-status", "cancelled");
+    await page.getByRole("textbox").fill("New question");
+    await page.getByRole("textbox").press("Enter");
+    await expect(page.locator(".jinyao-chat-turn").last()).toHaveAttribute("data-status", "ready");
+    release();
+    await expect(page.locator(".jinyao-chat-turn").first()).toHaveAttribute("data-status", "cancelled");
+    await expect(page.getByRole("button", { name: "Inspect answer sources" })).toHaveCount(1);
+  } finally { release(); }
+});
+
+test("an open upstream stream without a terminal event times out and is cancelled", async ({ page, request }) => {
+  await page.clock.install();
+  await fixtures(page); await open(page);
+  await page.unroute("**/api/v1/guide");
+  const before = (await (await request.get("http://127.0.0.1:3210")).json()).cancelled;
+  const upstream = page.waitForResponse(r => r.url().endsWith("/api/v1/guide"));
+  await page.getByRole("textbox").fill("stall_fixture");
+  await page.getByRole("textbox").press("Enter");
+  await upstream;
+  await page.clock.fastForward(61000);
+  await expect(page.locator(".jinyao-chat-turn")).toHaveAttribute("data-status", "error");
+  await expect(page.getByRole("log")).toContainText("The guide timed out");
+  await expect(page.getByRole("button", { name: "Inspect answer sources" })).toHaveCount(0);
+  await expect.poll(async () => (await (await request.get("http://127.0.0.1:3210")).json()).cancelled).toBe(before + 1);
+});

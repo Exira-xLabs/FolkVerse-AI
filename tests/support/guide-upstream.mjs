@@ -8,10 +8,10 @@ createServer(async (request, response) => {
   }
   let body = ''; for await (const chunk of request) body += chunk;
   const payload = JSON.parse(body);
-  if (payload.question === 'cancel_fixture') {
+  if (payload.question === 'cancel_fixture' || payload.question === 'stall_fixture') {
     response.writeHead(200, { 'Content-Type': 'text/event-stream' });
     response.write('event: meta\ndata: {"mode":"live"}\n\n');
-    const timer = setTimeout(() => response.end('event: done\ndata: {}\n\n'), 10000);
+    const timer = setTimeout(() => response.end('event: done\ndata: {}\n\n'), payload.question === 'stall_fixture' ? 120000 : 10000);
     response.on('close', () => { clearTimeout(timer); if (!response.writableEnded) cancelled++; });
     return;
   }

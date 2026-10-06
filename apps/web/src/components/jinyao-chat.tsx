@@ -57,7 +57,7 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
     const trigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     node.showModal();
     const unlock = lockDocumentScroll();
-    return () => { node.close(); unlock(); trigger?.focus({ preventScroll: true }); controller.current?.abort(); controller.current = null; setTurns(previous => previous.map(turn => turn.status === "pending" ? { ...turn, status: "cancelled" } : turn)); };
+    return () => { node.close(); unlock(); trigger?.focus({ preventScroll: true }); controller.current?.abort(); controller.current = null; if (timer.current) clearTimeout(timer.current); timer.current = null; setTurns(previous => previous.map(turn => turn.status === "pending" ? { ...turn, status: "cancelled" } : turn)); };
   }, [open]);
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current); controller.current?.abort(); }, []);
   useEffect(() => {
@@ -66,7 +66,7 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
 
   const send = (question = draft, prompt?: string) => {
     const text = question.trim().slice(0, 2000);
-    if (!text || pending || (live && controller.current)) return;
+    if (!text || pending || controller.current || timer.current) return;
     const id = ++nextId.current;
     const normalized = text.toLocaleLowerCase().replace(/[?.!。！？]+$/, "");
     const replyLocale = ["say that in chinese", "用中文说"].includes(normalized) ? "zh-CN" :
@@ -108,6 +108,8 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
   };
 
   const liveError = (code?: string) => {
+    if (code === "session_unavailable" || code === "session_expired") return zh ? "无法连接本次对话。请重试以重新连接；您的消息仍保留在本页。" : "Chat could not connect. Retry to reconnect; your message is still on this page.";
+    if (["invalid_stream", "incomplete_stream", "connection_interrupted"].includes(code ?? "")) return zh ? "回复未完整收到，尚未显示。请重试。" : "The reply did not arrive completely and was not displayed. Please retry.";
     if (code === "budget_exhausted") return zh ? "今日向导预算已用完，请稍后再试。" : "The daily guide budget has been reached. Please try later.";
     if (code === "rate_limited" || code === "guide_busy") return zh ? "请求较多，请稍后再试。" : "The guide is busy. Please try again shortly.";
     if (code === "provider_timeout" || code === "guide_timeout") return zh ? "回复超时，请重试。" : "The guide timed out. Please retry.";
@@ -128,7 +130,7 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
       <div className="jinyao-message from-jinyao"><JinyaoAvatar size={32} /><div><span className="sr-only">Jinyao: </span><p>{live ? (zh ? "您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。" : "Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.") : (zh ? "您好，我是锦瑶。想从哪里开始探索？选择下方的问题，试试和我聊天的感觉。" : "Hi, I’m Jinyao. What are you curious about today? Try a question below to see how a conversation could feel.")}</p></div></div>
       {turns.map(turn => {
         const response = prompts.find(prompt => prompt.id === turn.prompt);
-        return <div className="jinyao-chat-turn" key={turn.id}>
+        return <div className="jinyao-chat-turn" key={turn.id} data-status={turn.status}>
           <div className="jinyao-message from-visitor"><span className="sr-only">{zh ? "您：" : "You: "}</span><p>{turn.question}</p></div>
           <div className="jinyao-message from-jinyao"><JinyaoAvatar size={32} /><div><span className="sr-only">Jinyao: </span><p>{turn.status === "pending" ? (live ? stageText(turn.stage) : (zh ? "正在准备示例回复…" : "Preparing an example reply…")) : turn.status === "cancelled" ? (zh ? "回复已停止。您可以尝试另一个问题。" : "Reply stopped. You can try another question.") : turn.status === "error" ? liveError(turn.error) : turn.answer ? turn.answer.answer_text : response ? response.answer[language] : (zh ? "谢谢您的问题。此处只能展示预设对话，暂时无法依据证据回答自由输入的问题。您可以尝试上方的示例问题，或浏览审核馆藏。" : "Thank you for asking. I can only show prepared conversations here, so I cannot answer your question from evidence yet. Try a suggested question, or explore the reviewed collection.")}</p>{live && turn.answer && turn.answer.status !== "conversational" && <><p className="fine-print">{turn.answer.coverage_limit}</p><span className="demo-tag">{turn.answer.uncertainty === "partial" ? (zh ? "有限证据" : "Limited evidence") : (zh ? "资料不足" : "Insufficient evidence")}</span>{(turn.answer.sources ?? []).length > 0 && <button className="outline-button" onClick={() => setEvidence(turn.answer!.sources ?? [])}>{zh ? "查看回答来源" : "Inspect answer sources"}</button>}</>}{live && (turn.status === "error" || turn.status === "cancelled") && <button className="outline-button" disabled={pending} onClick={() => send(turn.question)}>{zh ? "重试问题" : "Retry question"}</button>}{turn.status === "ready" && response && "href" in response && <Link href={response.href} onClick={onClose}>{response.link[language]} <ArrowIcon direction="diagonal" /></Link>}</div></div>
         </div>;

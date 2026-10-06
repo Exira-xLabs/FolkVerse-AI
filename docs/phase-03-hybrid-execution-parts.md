@@ -1,6 +1,6 @@
 # Phase 03 — ordered implementation parts and acceptance
 
-Planning date: 6 October 2026, Asia/Shanghai. Status: implementation plan; no parts implemented by this document.
+Planning date: 6 October 2026, Asia/Shanghai. Execution update: Parts 0–1 requirements/design and delivery behavior are implemented; [dated report and limits](../report/PHASE_03_HYBRID_PART_01.md). Parts 2–8 remain pending. This document is the execution contract, not standalone completion evidence.
 
 Read with [the conversation and Liaoning collection design](phase-03-hybrid-conversation-plan.md). The owner will work with Codex directly. This document replaces vague next steps with dependencies, concrete defaults, review checkpoints and evidence. It makes no promise of zero defects: claims of completion require checks and recorded limitations.
 
