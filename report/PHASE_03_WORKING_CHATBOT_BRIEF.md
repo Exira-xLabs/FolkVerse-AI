@@ -1,5 +1,7 @@
 # To Soufiane — finish Phase 03: a working Jinyao chatbot with personality
 
+**Direction update:** The owner now works directly with Codex and authorized [the hybrid execution plan](../docs/phase-03-hybrid-execution-parts.md). Its knowledge/publication contract supersedes evidence-only wording in this older brief. Preserve historical evidence and remaining review requirements.
+
 Date: 6 October 2026, Asia/Shanghai.
 
 ## Objective from the project owner

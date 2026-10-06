@@ -184,3 +184,81 @@ test("open answer inspector clears evidence after source withdrawal revalidation
   await expect(drawer).toContainText("The evidence changed");
   await expect(drawer).not.toContainText(evidence().text);
 });
+
+test("a typed hi replies through the live UI and sending continues beyond 20 turns", async ({ page }) => {
+  await fixtures(page);
+  await page.unroute("**/api/v1/guide");
+  await page.route("**/api/v1/guide", route => route.fulfill({ contentType: "text/event-stream", body: socialReply() }));
+  await open(page);
+  for (let i = 0; i < 25; i++) {
+    await page.getByRole("textbox").fill("hi");
+    await page.getByRole("textbox").press("Enter");
+    await expect(page.locator(".jinyao-chat-turn").last()).toContainText(policy.social.greeting.en);
+    await expect(page.locator(".jinyao-chat-turn")).toHaveCount(i + 1);
+  }
+  await page.getByRole("textbox").fill("Another message");
+  await expect(page.getByRole("button", { name: "Send message", exact: true })).toBeEnabled();
+  await expect(page.getByRole("button", { name: "Inspect answer sources" })).toHaveCount(0);
+});
+
+test("Shift+Enter keeps a newline while Enter submits a visible message", async ({ page }) => {
+  await fixtures(page); await open(page);
+  const input = page.getByRole("textbox");
+  await input.fill("First line");
+  await input.press("Shift+Enter");
+  await expect(page.locator(".jinyao-chat-turn")).toHaveCount(0);
+  await expect(input).toHaveValue("First line\n");
+  await input.press("Enter");
+  await expect(page.locator(".jinyao-chat-turn")).toHaveCount(1);
+  await expect(page.getByRole("button", { name: "Inspect answer sources" })).toBeVisible();
+});
+
+test("IME confirmation does not submit the partially composed message", async ({ page }) => {
+  await fixtures(page); await open(page);
+  const input = page.getByRole("textbox");
+  await input.fill("你好");
+  await input.dispatchEvent("keydown", { key: "Enter", code: "Enter", isComposing: true });
+  await expect(page.locator(".jinyao-chat-turn")).toHaveCount(0);
+  await expect(input).toHaveValue("你好");
+});
+
+test("visible history stays bounded without disabling future conversation", async ({ page }) => {
+  test.setTimeout(60000);
+  await fixtures(page);
+  await page.unroute("**/api/v1/guide");
+  await page.route("**/api/v1/guide", route => route.fulfill({ contentType: "text/event-stream", body: socialReply() }));
+  await open(page);
+  for (let i = 0; i < 102; i++) {
+    await page.getByRole("textbox").fill(`hi ${i}`);
+    await page.getByRole("textbox").press("Enter");
+    await expect(page.locator(".jinyao-chat-turn").last()).toContainText(policy.social.greeting.en);
+    await expect(page.locator(".jinyao-chat-turn")).toHaveCount(Math.min(i + 1, 100));
+  }
+  await expect(page.getByRole("log")).not.toContainText("hi 0\n");
+  await expect(page.getByRole("status")).toContainText("Showing the latest 100 turns");
+  await page.getByRole("textbox").fill("Keep talking");
+  await expect(page.getByRole("button", { name: "Send message", exact: true })).toBeEnabled();
+});
+
+test("stalled session setup reaches a visible timeout and releases the composer", async ({ page }) => {
+  await page.clock.install();
+  await fixtures(page); await open(page);
+  await page.unroute("**/api/v1/session");
+  let release!: () => void;
+  const stalled = new Promise<void>(resolve => { release = resolve; });
+  await page.route("**/api/v1/session", async route => {
+    await stalled;
+    await route.abort().catch(() => undefined);
+  });
+  try {
+    const session = page.waitForRequest(r => r.url().endsWith("/api/v1/session"));
+    await page.getByRole("textbox").fill("hi");
+    await page.getByRole("button", { name: "Send message", exact: true }).click();
+    await session;
+    await page.clock.fastForward(61000);
+    await expect(page.getByRole("log")).toContainText("The guide timed out. Please retry.");
+    await expect(page.getByRole("button", { name: "Retry question" })).toBeEnabled();
+    await page.getByRole("textbox").fill("Try again");
+    await expect(page.getByRole("button", { name: "Send message", exact: true })).toBeEnabled();
+  } finally { release(); }
+});

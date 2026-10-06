@@ -1,0 +1,12 @@
+{
+  "mode": "real browser/BFF/API/PostgreSQL; no intercepted requests",
+  "provider_calls": 0,
+  "reply_kind": "existing fixed social policy; generated variety pending Part 2",
+  "greeting_replied": true,
+  "keyboard_submit": true,
+  "page_errors": [],
+  "initial_check": {
+    "outcome": "session_unavailable",
+    "cause": "test port 3114 absent from allowed origins; process-only test origin then configured"
+  }
+}

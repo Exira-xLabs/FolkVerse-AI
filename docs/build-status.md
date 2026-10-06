@@ -2,6 +2,12 @@
 
 **Updated:** 6 October 2026, Asia/Shanghai. **Phase 03 remains partial: a real bounded EN/ZH Jinyao conversation now works; broader reviewed explanations and independent human acceptance remain pending.** PostgreSQL is running, migration `0003_gateway` and the original corpus are restored, Ollama generation is verified, and pinned BGE-M3 CPU inference/indexing is measured. The current scope remains all of Liaoning. See [current delivery report](../report/PHASE_03_COMPLETION.md), [handoff](phase-03-handoff.md), [personality](jinyao-personality.md) and [coverage](guide-coverage.md).
 
+
+## Owner-led hybrid Phase 03 — implementation started
+
+The owner approved hybrid knowledge and natural varied conversation and now works directly with Codex. [Execution parts](phase-03-hybrid-execution-parts.md) define the sequence; [output design](guide-hybrid-output-contract.md) maps the revised gates. Part 0 requirements/design are aligned. Part 1 removes the permanent 20-turn composer block, bounds visible history to 100 turns, supports Enter/Shift+Enter/IME, and gives session/streaming work a 60-second terminal timeout. **31 focused browser checks plus 2 retention/IME checks pass**, as do web lint/types/build. A real browser/BFF/API/PostgreSQL `hi` returns the existing fixed policy reply with no provider call. Generated greeting variety, consented recent-turn context and hybrid cultural generation are not yet delivered. [Part 1 report](../report/PHASE_03_HYBRID_PART_01.md). Full Phase 03 remains partial; next implementation is Part 2.
+
+
 ## Working chatbot integration — 6 October 2026
 
 The browser → owned visit → Next.js BFF → PostgreSQL approved evidence → Ollama → validation → SSE → current source inspector path passes a real English/Chinese walkthrough. Beginner/deeper modes provide bounded inventory explanations while retaining original claims and source qualifiers. Social turns use a separate versioned non-factual policy. Consent, language/depth follow-ups and popup history are preserved. Technical retrieval/latency diagnostics stay in evidence rather than visitor messages.

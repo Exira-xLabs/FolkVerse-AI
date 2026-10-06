@@ -78,3 +78,8 @@ Part 6 separates functional support/citation/uncertainty checks from historical 
 ## 6 October 2026 — Push audit and Ollama provider identity
 
 The user identified the credential issuer as Ollama. Route it only through explicit Ollama Cloud configuration, without credential fallback to DeepSeek. Cloud account usage uses a shared daily admitted-attempt quota, including retries/failures; never invent subscription token USD prices. Auth verification uses a nonexistent model and invalid-key control, without successful generation. Keep demo mode and zero request quota until normal live activation. Browser publication checks now validate the entire displayed attribution/statement and all claim/source mappings. Secret checks cover all Git candidates, quoted dotenv values and browser output; embedding workers receive an environment allowlist. Listing grammar extensions remain bounded and evaluated as regression on exposed cases, never fresh expertise scoring. [Audit](../report/PHASE_03_PUSH_AUDIT.md).
+
+
+## 6 October 2026 — Owner-led hybrid chatbot implementation
+
+The owner authorized natural generated conversation and distinct general educational context alongside reviewed-source cultural explanations. The [output contract](guide-hybrid-output-contract.md) revises evidence-only wording without allowing unsupported precise local claims or citation fabrication. Runtime schemas migrate together in a later part; current strict publication stays intact. The first delivery repairs sustained composer behavior, keyboard submission and bounded browser request lifetime. Raw conversational context remains disabled pending revised disclosure/consent and bounded validators; no private-content retention or model quota is expanded by this delivery.

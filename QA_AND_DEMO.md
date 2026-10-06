@@ -21,7 +21,7 @@ Critical path: eligible reviewed corpus → retrieval → supported guide/scan d
 |---|---|---|
 | Map | Real region/list filters open approved exhibits | No approved geometry/empty region |
 | Journeys | Real eligible stops fit selected time and can be edited | Too few exhibits or unpublished stop |
-| Guide | Answer uses retrieved reviewed passages and source drawer | Unsupported question, timeout, invalid citation |
+| Guide | Natural bilingual conversation; source-supported cultural explanations and distinctly unverified broad general context | Unsupported precise local claim, failed greeting delivery, timeout, invalid citation |
 | Stories | One complete graph with labelled creative choices | Stale/invalid branch; restricted context |
 | Lens | Uploaded photo yields catalog candidates or honest unknown | Reproduction, unrelated photo, poor photo, outage |
 | Voice | Transcript edited before submission, narration interruptible | Mic denial, unavailable speech provider |

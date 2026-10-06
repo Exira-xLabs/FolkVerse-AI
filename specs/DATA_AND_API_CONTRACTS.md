@@ -56,6 +56,8 @@ Local curation CLI initially; no public admin endpoint. Render sanitized markdow
 400 malformed input; 401 missing identity; 403 denied ownership; 404 hidden/not found; 409 stale state; 413 oversized upload; 422 schema failure; 429 rate/budget limit; 503 provider unavailable. Avoid raw SQL, credentials or provider-internal details in responses.
 
 ## Guide output and streaming
+
+The owner-authorized hybrid extension is specified in [the versioned output design](../docs/guide-hybrid-output-contract.md). Runtime schemas remain the existing contract until generation, validation and browser rendering are migrated together. Social/general sections cannot carry fabricated citations; precise local claims require evidence.
 Retrieve evidence, obtain structured model output, validate, then display factual content. MVP SSE can emit progress immediately but sends only validated answer segments. Never stream raw unsupported claims as already sourced facts. First meaningful answer latency excludes progress messages.
 
 Events: `meta` (request_id, mode, corpus_version), `status` (retrieving/generating/validating), `answer` (text + passage IDs), `sources`, `done` (answer_id), or terminal `error`. Use fetch for POST streaming; native EventSource doesn't submit POST bodies. Cancel local work on disconnect, bound retries and disable proxy buffering.

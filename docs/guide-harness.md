@@ -1,5 +1,7 @@
 # Guide explanation harness
 
+**Hybrid revision approved; implementation in progress.** This document describes the delivered restricted runtime below. The new behavior and migration gates are in [the execution plan](phase-03-hybrid-execution-parts.md) and [output contract](guide-hybrid-output-contract.md). Do not infer that planned generated social/general output is live.
+
 Current integration update (6 October 2026): actual PostgreSQL and bounded Ollama EN/ZH
 browser generation now pass; pinned BGE CPU inference/indexing is measured. The root
 configuration remains demo/zero quota; live verification uses process-only bounded settings.

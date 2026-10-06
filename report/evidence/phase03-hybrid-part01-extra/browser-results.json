@@ -1,0 +1,159 @@
+{
+  "config": {
+    "argv": [
+      "/home/oualid/.hermes/node/bin/node",
+      "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/node_modules/@playwright/test/cli.js",
+      "test",
+      "-c",
+      "playwright.guide.config.ts",
+      "--grep",
+      "IME confirmation|visible history stays bounded"
+    ],
+    "configFile": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/playwright.guide.config.ts",
+    "rootDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/guide",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "guide-live.spec.ts",
+          "jinyao.spec.ts",
+          "guide-proxy.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report/evidence/phase03-hybrid-part01-extra/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "guide-live.spec.ts",
+      "file": "guide-live.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "IME confirmation does not submit the partially composed message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 733,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T13:44:03.123Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-04776c1f2be2bb2178da",
+          "file": "guide-live.spec.ts",
+          "line": 216,
+          "column": 5
+        },
+        {
+          "title": "visible history stays bounded without disabling future conversation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7656,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T13:44:03.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-c7683acf52f7b19974a8",
+          "file": "guide-live.spec.ts",
+          "line": 225,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-06T13:44:00.380Z",
+    "duration": 11286.005000000001,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

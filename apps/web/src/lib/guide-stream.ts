@@ -78,7 +78,7 @@ function checkedPublication(answer: GuideAnswer, sources: GuideEvidence[]): bool
   return answer.answer_text === `${projection}${lead}\n\n${sections.join("\n\n")}`;
 }
 
-export async function sendGuide(
+async function receiveGuide(
   payload: GuideRequest, signal: AbortSignal, onStage: (stage: GuideStage) => void,
 ): Promise<GuideReply> {
   onStage("connecting");
@@ -136,5 +136,23 @@ export async function sendGuide(
   } finally {
     await reader.cancel().catch(() => undefined);
     reader.releaseLock();
+  }
+}
+
+
+// Covers session bootstrap as well as response streaming: a stalled connection must
+// not leave the composer pending indefinitely. Caller cancellation remains distinct.
+export async function sendGuide(
+  payload: GuideRequest, signal: AbortSignal, onStage: (stage: GuideStage) => void,
+): Promise<GuideReply> {
+  const deadline = new AbortController();
+  const timer = setTimeout(() => deadline.abort(), 60000);
+  try {
+    return await receiveGuide(payload, AbortSignal.any([signal, deadline.signal]), onStage);
+  } catch (error) {
+    if (deadline.signal.aborted && !signal.aborted) throw new GuideError("guide_timeout");
+    throw error;
+  } finally {
+    clearTimeout(timer);
   }
 }
