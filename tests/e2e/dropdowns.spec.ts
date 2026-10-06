@@ -1,3 +1,4 @@
+import { setLocale } from "../support/locale";
 import { expect, test } from "@playwright/test";
 
 const evidenceDir = process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/dropdown-ui";
@@ -59,7 +60,7 @@ test("compact and Chinese touch dropdowns fit the viewport and preserve their ch
     await page.screenshot({ path: `${evidenceDir}/time-menu-phone.png` });
     await page.keyboard.press("Escape");
     await page.goto("/lens");
-    await page.getByRole("button", { name: "Switch to Chinese" }).tap();
+    await setLocale(page, "zh-CN");
     await page.locator("summary").filter({ hasText: "预览识物体验" }).tap();
     const scenario = page.getByRole("combobox", { name: "选择演示场景" });
     await scenario.tap();

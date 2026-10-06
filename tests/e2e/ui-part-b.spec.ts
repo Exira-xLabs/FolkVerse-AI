@@ -1,3 +1,4 @@
+import { setLocale } from "../support/locale";
 import { expect, test } from "@playwright/test";
 
 test("source dialog includes integrity disclosure in keyboard order and distinguishes padding from backdrop", async ({ page }) => {
@@ -77,7 +78,7 @@ test("phone map labels and controls remain readable and expanded map is a native
 test("each screen has a distinct localized title including server reloads", async ({ page }) => {
   for (const zh of [false, true]) {
     await page.goto("/");
-    if (zh) await page.getByRole("button", { name: "Switch to Chinese" }).click();
+    if (zh) await setLocale(page, "zh-CN");
     const titles = new Set<string>();
     for (const route of ["/", "/explore", "/stories/lantern-path", "/journey", "/lens", "/guide", "/dna", "/sources", "/status"]) {
       await page.goto(route); await expect(page).toHaveTitle(/.+ \| FolkVerse China/);

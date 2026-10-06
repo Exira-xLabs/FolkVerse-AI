@@ -8,8 +8,8 @@ test("Sources instructions, live capability copy and province query match actual
   const provinceRequest = page.waitForRequest(request => request.url().includes("/api/v1/exhibits?") && new URL(request.url()).searchParams.get("region_id") === "liaoning");
   await page.goto("http://127.0.0.1:3002/explore"); await provinceRequest;
   await expect(page.locator(".published-card")).toHaveCount(1);
-  await expect(page.locator("footer")).toContainText("Published collection available");
-  await expect(page.locator("footer")).toContainText("AI experiences not connected");
+  await expect(page.locator(".museum-footer")).toContainText("Published collection");
+  await expect(page.locator(".museum-footer")).toContainText("guide uses reviewed sources");
   await page.getByLabel("Region", { exact: true }).click();
   await expect(page.getByRole("option")).toHaveCount(15);
   await expect(page.getByRole("option", { name: "Liaoning province", exact: true })).toHaveCount(0);

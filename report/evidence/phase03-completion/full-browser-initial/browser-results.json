@@ -1,0 +1,2678 @@
+{
+  "config": {
+    "argv": [
+      "/home/soufiane/FolkVerse-AI/.local/runtime/node-v22.23.3-linux-x64/bin/node",
+      "/home/soufiane/FolkVerse-AI/node_modules/@playwright/test/cli.js",
+      "test"
+    ],
+    "configFile": "/home/soufiane/FolkVerse-AI/playwright.config.ts",
+    "rootDir": "/home/soufiane/FolkVerse-AI/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/soufiane/FolkVerse-AI/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/soufiane/FolkVerse-AI/tests/e2e",
+        "testIgnore": [
+          "**/guide-live.spec.ts",
+          "**/guide-proxy.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report/evidence/phase03-completion/full-browser/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "content.spec.ts",
+      "file": "content.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Liaoning published region → exhibit → attributed source works in both languages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:26:19.494Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d74cd27346db6aa64657-8ce016909b8ade7bd011",
+          "file": "content.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "published source index hides draft sources and exposes only permitted passages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1864,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:26:28.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d74cd27346db6aa64657-4b3c35d7617e7f4c9688",
+          "file": "content.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "collection error recovers and withdrawn drawer clears on revalidation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:26:30.137Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d74cd27346db6aa64657-fb466d836bdce462cd87",
+          "file": "content.spec.ts",
+          "line": 56,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "dropdowns.spec.ts",
+      "file": "dropdowns.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "collection dropdown supports keyboard selection, cancellation, typeahead and outside dismissal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1907,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:26:32.011Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "749c864ab9b04165abdd-912ffd1c594c611ef8de",
+          "file": "dropdowns.spec.ts",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "compact and Chinese touch dropdowns fit the viewport and preserve their choices",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30001,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "message": "Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/home/soufiane/FolkVerse-AI/test-results/.playwright-artifacts-0/traces/749c864ab9b04165abdd-a8197b44e387f5a19a77-recording11.network' -> '/home/soufiane/FolkVerse-AI/test-results/.playwright-artifacts-0/traces/749c864ab9b04165abdd-a8197b44e387f5a19a77-recording11-pwnetcopy-1.network'"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/soufiane/FolkVerse-AI/tests/e2e/dropdowns.spec.ts",
+                        "column": 15,
+                        "line": 79
+                      },
+                      "message": "Error: browserContext.close: Target page, context or browser has been closed\n\n  77 |     await expect(page.getByRole(\"heading\", { name: \"识别服务不可用\" })).toBeVisible();\n  78 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);\n> 79 |   } finally { await context.close(); }\n     |               ^\n  80 | });\n  81 |\n    at /home/soufiane/FolkVerse-AI/tests/e2e/dropdowns.spec.ts:79:15"
+                    },
+                    {
+                      "message": "Error: ENOENT: no such file or directory, open '/home/soufiane/FolkVerse-AI/test-results/.playwright-artifacts-0/d8ab340f23cb3d1c12ed034f8df0c53e.zip'"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:26:33.931Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "749c864ab9b04165abdd-a8197b44e387f5a19a77",
+          "file": "dropdowns.spec.ts",
+          "line": 48,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "foundation.spec.ts",
+      "file": "foundation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "museum routes work at desktop, mobile and tablet without page overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8566,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:04.353Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-a4c8e102cf150afc9a8c",
+          "file": "foundation.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "navigation, language persistence and keyboard skip path work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2345,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:13.005Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-f24364b3f1a78ab7039e",
+          "file": "foundation.spec.ts",
+          "line": 43,
+          "column": 5
+        },
+        {
+          "title": "real web to API health and signed session round trip",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1232,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:15.363Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-8c501987f55752648bc4",
+          "file": "foundation.spec.ts",
+          "line": 62,
+          "column": 5
+        },
+        {
+          "title": "health service errors are visible and retry recovers",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 982,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:16.612Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-aefadf1e510ff3e9ea32",
+          "file": "foundation.spec.ts",
+          "line": 79,
+          "column": 5
+        },
+        {
+          "title": "guide portrait retains transparency and narrow zoom layout stays usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1348,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:17.609Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-309b8a3096bd560d98d6",
+          "file": "foundation.spec.ts",
+          "line": 93,
+          "column": 5
+        },
+        {
+          "title": "unknown routes stay missing and cross-origin session mutation is rejected",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 314,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:18.971Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-90fbc7739dd18fe30c5f",
+          "file": "foundation.spec.ts",
+          "line": 104,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "jinyao.spec.ts",
+      "file": "jinyao.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Jinyao cinematic hero responds to scrolling and replaces the previous scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:19.302Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-a627435fd0c6517ca4b4",
+          "file": "jinyao.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Messenger preview keeps messages local, cancels replies and restores keyboard focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2512,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:19.944Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-aa2d36cc91df918d3197",
+          "file": "jinyao.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "mobile Chinese chat fits the viewport and reduced motion unpins the hero",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1874,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:22.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-a735454dd44415bcf697",
+          "file": "jinyao.spec.ts",
+          "line": 58,
+          "column": 5
+        },
+        {
+          "title": "low data loads no Jinyao images",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:24.353Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-fea63d4d65b6e36ae49c",
+          "file": "jinyao.spec.ts",
+          "line": 76,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "liaoning-map.spec.ts",
+      "file": "liaoning-map.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real Liaoning silhouette, 14 city markers and geographical city selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2486,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:24.961Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "563e8c2393cbbf1c0929-5fc8b9bdc9e1e3b363fc",
+          "file": "liaoning-map.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "map pan, wheel zoom, keyboard camera, minimap and expanded map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1638,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:27.462Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "563e8c2393cbbf1c0929-bed1a83420a69b345171",
+          "file": "liaoning-map.spec.ts",
+          "line": 36,
+          "column": 5
+        },
+        {
+          "title": "selected city circle stays centered through time and zoom for all fourteen cities",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4822,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:29.112Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "563e8c2393cbbf1c0929-24efec164ffa4a2f76bd",
+          "file": "liaoning-map.spec.ts",
+          "line": 66,
+          "column": 5
+        },
+        {
+          "title": "sourced city territory highlights from map clicks and clears when returning to the province",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1086,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:33.953Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "563e8c2393cbbf1c0929-7277240ed90024c12ee6",
+          "file": "liaoning-map.spec.ts",
+          "line": 101,
+          "column": 5
+        },
+        {
+          "title": "all cities remain selectable and searchable in Chinese at phone size",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30214,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/soufiane/FolkVerse-AI/tests/e2e/liaoning-map.spec.ts",
+                        "column": 65,
+                        "line": 139
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch to Chinese' })\u001b[22m\n\n\n  137 |   await page.goto(\"/explore\");\n  138 |   await page.getByRole(\"button\", { name: \"Explore map\", exact: true }).click();\n> 139 |   await page.getByRole(\"button\", { name: \"Switch to Chinese\" }).click();\n      |                                                                 ^\n  140 |   const atlas = page.getByRole(\"region\", { name: \"辽宁交互地图\" });\n  141 |   await expect(atlas.locator(\".atlas-city-grid button\")).toHaveCount(14);\n  142 |   await atlas.getByLabel(\"搜索辽宁城市\").fill(\"丹东\");\n    at /home/soufiane/FolkVerse-AI/tests/e2e/liaoning-map.spec.ts:139:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:27:35.049Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "563e8c2393cbbf1c0929-cb25d4fd234161317391",
+          "file": "liaoning-map.spec.ts",
+          "line": 135,
+          "column": 5
+        },
+        {
+          "title": "touch pinch changes the map camera without scrolling the page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1064,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:28:05.876Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "563e8c2393cbbf1c0929-2b06b93978d071c2c1b3",
+          "file": "liaoning-map.spec.ts",
+          "line": 157,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "mobile-navigation.spec.ts",
+      "file": "mobile-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone menu supports links, Escape, focus restoration and desktop resizing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1049,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:28:07.082Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c5769ca8d3a9eeb2f0b2-73c82dfe66938024fb22",
+          "file": "mobile-navigation.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "phone hero uses desktop artwork and places text in its empty left side",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1011,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:28:08.144Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c5769ca8d3a9eeb2f0b2-29d6983cb070fc1bb969",
+          "file": "mobile-navigation.spec.ts",
+          "line": 30,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "museum-ui.spec.ts",
+      "file": "museum-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "nine museum screens retain artwork and stay usable at three sizes in both languages",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 120591,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts",
+                        "column": 69,
+                        "line": 30
+                      },
+                      "message": "Error: locator.click: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch to Chinese' })\u001b[22m\n\n\n  28 |       await expect(page.locator(\"h1\")).toBeVisible();\n  29 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} at ${size.width}`).toBe(true);\n> 30 |       await page.screenshot({ path: `${evidenceDir}/${String(index + 1).padStart(2, \"0\")}-${route === \"/\" ? \"home\" : route.split(\"/\")[1]}-${size.width}.png`, fullPage: true, animations: \"disabled\" });\n     |                                                                     ^\n  31 |       await setLocale(page, \"zh-CN\");\n  32 |       await expect(page.locator(\"html\")).toHaveAttribute(\"lang\", \"zh-CN\"); await ready(page);\n  33 |       if (route === \"/explore\") await expect(page.locator(\".published-card h3\")).toHaveText(\"复州皮影戏\");\n    at /home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts:30:69"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:28:09.172Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-6999c9fbf62fac23599a",
+          "file": "museum-ui.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "explore filters, empty state and source drawer keyboard focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 978,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:10.702Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-f616911077bf166712ea",
+          "file": "museum-ui.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "journey reorder, remove and duration-constrained empty state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 819,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:11.776Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-444e62849ee42c9ebb23",
+          "file": "museum-ui.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "both story branches, restart and actual recorded audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 852,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:12.605Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-926b8612dcd6d4c84d4d",
+          "file": "museum-ui.spec.ts",
+          "line": 75,
+          "column": 5
+        },
+        {
+          "title": "lens exposes unknown, poor image, denial, outage and loading without claiming recognition",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1728,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:13.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-c36c4f42ee47c3f49c9d",
+          "file": "museum-ui.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "guide submits bounded text, clearly scripted response and voice unavailable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1617,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:15.203Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-a42d232251f0403a3355",
+          "file": "museum-ui.spec.ts",
+          "line": 99,
+          "column": 5
+        },
+        {
+          "title": "interest edits redraw chart and reset clears suggestions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:16.831Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-1e161c76a9884b383bdf",
+          "file": "museum-ui.spec.ts",
+          "line": 109,
+          "column": 5
+        },
+        {
+          "title": "live mode fails closed with no demo controls",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5736,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'This experience is not available yet.' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'This experience is not available yet.' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'This experience is not available yet.' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'This experience is not available yet.' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'This experience is not available yet.' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'This experience is not available yet.' })\u001b[22m\n\n    at /home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts:127:96",
+                    "location": {
+                      "file": "/home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts",
+                      "column": 96,
+                      "line": 127
+                    },
+                    "snippet": "  125 | test(\"live mode fails closed with no demo controls\", async ({ page }) => {\n  126 |   for (const route of [\"journey\", \"guide\", \"lens\", \"dna\", \"stories/lantern-path\"]) {\n> 127 |     await page.goto(`http://127.0.0.1:3002/${route}`);\n      |                                                       ^\n  128 |     await expect(page.getByRole(\"heading\", { name: \"This experience is not available yet.\" })).toBeVisible();\n  129 |     await expect(page.locator(\".fixture-content\")).toHaveCount(0);\n  130 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts",
+                        "column": 96,
+                        "line": 127
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'This experience is not available yet.' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'This experience is not available yet.' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'This experience is not available yet.' })\u001b[22m\n\n\n  125 | test(\"live mode fails closed with no demo controls\", async ({ page }) => {\n  126 |   for (const route of [\"journey\", \"guide\", \"lens\", \"dna\", \"stories/lantern-path\"]) {\n> 127 |     await page.goto(`http://127.0.0.1:3002/${route}`);\n      |                                                       ^\n  128 |     await expect(page.getByRole(\"heading\", { name: \"This experience is not available yet.\" })).toBeVisible();\n  129 |     await expect(page.locator(\".fixture-content\")).toHaveCount(0);\n  130 |   }\n    at /home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts:127:96"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:17.556Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/museum-ui-live-mode-fails-closed-with-no-demo-controls/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/museum-ui-live-mode-fails-closed-with-no-demo-controls/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts",
+                    "column": 96,
+                    "line": 127
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-12ae4418784a9899613f",
+          "file": "museum-ui.spec.ts",
+          "line": 124,
+          "column": 5
+        },
+        {
+          "title": "published collection works in live mode with no fixture toggle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 885,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:23.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-cce7c0e586b30593981f",
+          "file": "museum-ui.spec.ts",
+          "line": 132,
+          "column": 5
+        },
+        {
+          "title": "reduced graphics, keyboard path and 200 percent page zoom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2240,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:24.720Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "790b1435c61b8edd16de-fb7a285182f32be88a73",
+          "file": "museum-ui.spec.ts",
+          "line": 141,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui-part-4.spec.ts",
+      "file": "ui-part-4.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "phone quick navigation and filters retain place, clear and recover empty results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1725,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:26.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-ddf3e79327a6851e5dc8",
+          "file": "ui-part-4.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "reading, citations, shareable URL and evidence remain distinct and keyboard reachable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1569,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:28.710Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-44fd2f550ec9e60b2c9f",
+          "file": "ui-part-4.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "Guide approved prompts, stop/retry/error/insufficient states stay clearly scripted",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2731,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:30.289Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-b1c3f0b35c03b3947ac3",
+          "file": "ui-part-4.spec.ts",
+          "line": 42,
+          "column": 5
+        },
+        {
+          "title": "composer adapts to narrowed viewport without hiding the active question",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1629,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:33.033Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-51ca98212907b57de83e",
+          "file": "ui-part-4.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "Lens capture stays unavailable and cancelled preview cannot resume itself",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1276,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:34.672Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-9284840d75ab080579c0",
+          "file": "ui-part-4.spec.ts",
+          "line": 72,
+          "column": 5
+        },
+        {
+          "title": "Story reading mode and endings offer actual continuations; interests link only approved records",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:35.956Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-a73b51b76b38d1c415b7",
+          "file": "ui-part-4.spec.ts",
+          "line": 85,
+          "column": 5
+        },
+        {
+          "title": "friendly 404 and audio metadata delay have concrete recoveries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1563,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:37.606Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-aeba5c5d20e189fed75a",
+          "file": "ui-part-4.spec.ts",
+          "line": 100,
+          "column": 5
+        },
+        {
+          "title": "constrained network, offline collection and reconnect recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:39.178Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a0c9ea665f75f8510047-76bfb435e00d6e8fec9c",
+          "file": "ui-part-4.spec.ts",
+          "line": 111,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui-part-a.spec.ts",
+      "file": "ui-part-a.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Home features published EN/ZH text and opens that exhibit with its sources in both modes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3785,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:30:57.316Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ab26f6ff6b8820c5f8cc-f83918652de7623f3f5e",
+          "file": "ui-part-a.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "featured publication fails closed for errors, empty results and withdrawn records",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1012,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:01.114Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ab26f6ff6b8820c5f8cc-4be7586a96d82ee4de53",
+          "file": "ui-part-a.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "status keeps diagnostics optional and recovers from an outage in both languages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1186,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:02.134Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ab26f6ff6b8820c5f8cc-83f1b6f64686a7197655",
+          "file": "ui-part-a.spec.ts",
+          "line": 39,
+          "column": 5
+        },
+        {
+          "title": "decorative card purposes stay distinct and crops retain their aspect ratio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1063,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:03.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ab26f6ff6b8820c5f8cc-38531a366eaf550b7e53",
+          "file": "ui-part-a.spec.ts",
+          "line": 59,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui-part-b.spec.ts",
+      "file": "ui-part-b.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "source dialog includes integrity disclosure in keyboard order and distinguishes padding from backdrop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1137,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:04.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1ab7dc209c8ee34d744-d6454dada47d8dc0ce0c",
+          "file": "ui-part-b.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "region dropdown and directory fit the same city camera",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:05.553Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1ab7dc209c8ee34d744-d1887c64055caae093be",
+          "file": "ui-part-b.spec.ts",
+          "line": 27,
+          "column": 5
+        },
+        {
+          "title": "graphics preference survives navigation and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1165,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:06.928Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1ab7dc209c8ee34d744-b3ff873fbd413b49155b",
+          "file": "ui-part-b.spec.ts",
+          "line": 40,
+          "column": 5
+        },
+        {
+          "title": "phone map labels and controls remain readable and expanded map is a native modal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1109,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:08.101Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1ab7dc209c8ee34d744-43426d6686253fa22545",
+          "file": "ui-part-b.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "each screen has a distinct localized title including server reloads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4211,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:09.220Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1ab7dc209c8ee34d744-aa3d7e8c9d6c21d3e964",
+          "file": "ui-part-b.spec.ts",
+          "line": 77,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui-part-c.spec.ts",
+      "file": "ui-part-c.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Sources instructions, live capability copy and province query match actual scope",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1310,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('footer')\nExpected substring: \u001b[32m\"Published collection available\"\u001b[39m\nError: strict mode violation: locator('footer') resolved to 2 elements:\n    1) <footer>…</footer> aka getByText('LanguageEN / 中文')\n    2) <footer class=\"museum-footer\">…</footer> aka getByText('Published collection · guide uses reviewed sourcesUse less dataSimplify')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('footer') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('footer')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('footer')\nExpected substring: \u001b[32m\"Published collection available\"\u001b[39m\nError: strict mode violation: locator('footer') resolved to 2 elements:\n    1) <footer>…</footer> aka getByText('LanguageEN / 中文')\n    2) <footer class=\"museum-footer\">…</footer> aka getByText('Published collection · guide uses reviewed sourcesUse less dataSimplify')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('footer') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('footer')\u001b[22m\n\n    at /home/soufiane/FolkVerse-AI/tests/e2e/ui-part-c.spec.ts:11:40",
+                    "location": {
+                      "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-part-c.spec.ts",
+                      "column": 40,
+                      "line": 11
+                    },
+                    "snippet": "   9 |   await page.goto(\"http://127.0.0.1:3002/explore\"); await provinceRequest;\n  10 |   await expect(page.locator(\".published-card\")).toHaveCount(1);\n> 11 |   await expect(page.locator(\"footer\")).toContainText(\"Published collection available\");\n     |                                        ^\n  12 |   await expect(page.locator(\"footer\")).toContainText(\"AI experiences not connected\");\n  13 |   await page.getByLabel(\"Region\", { exact: true }).click();\n  14 |   await expect(page.getByRole(\"option\")).toHaveCount(15);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-part-c.spec.ts",
+                        "column": 40,
+                        "line": 11
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('footer')\nExpected substring: \u001b[32m\"Published collection available\"\u001b[39m\nError: strict mode violation: locator('footer') resolved to 2 elements:\n    1) <footer>…</footer> aka getByText('LanguageEN / 中文')\n    2) <footer class=\"museum-footer\">…</footer> aka getByText('Published collection · guide uses reviewed sourcesUse less dataSimplify')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('footer') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('footer')\u001b[22m\n\n\n   9 |   await page.goto(\"http://127.0.0.1:3002/explore\"); await provinceRequest;\n  10 |   await expect(page.locator(\".published-card\")).toHaveCount(1);\n> 11 |   await expect(page.locator(\"footer\")).toContainText(\"Published collection available\");\n     |                                        ^\n  12 |   await expect(page.locator(\"footer\")).toContainText(\"AI experiences not connected\");\n  13 |   await page.getByLabel(\"Region\", { exact: true }).click();\n  14 |   await expect(page.getByRole(\"option\")).toHaveCount(15);\n    at /home/soufiane/FolkVerse-AI/tests/e2e/ui-part-c.spec.ts:11:40"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:13.447Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/ui-part-c-Sources-instruct-b2965-ce-query-match-actual-scope/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/ui-part-c-Sources-instruct-b2965-ce-query-match-actual-scope/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-part-c.spec.ts",
+                    "column": 40,
+                    "line": 11
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "66128d305ee0a5cf4fa4-e84ae44c771409c28276",
+          "file": "ui-part-c.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "atlas distinguishes loading, outage, published city and empty city",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1486,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:15.348Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "66128d305ee0a5cf4fa4-fd274d367c730592e309",
+          "file": "ui-part-c.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "Guide keeps conversation through navigation without a clear control and resets on reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3077,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:16.921Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "66128d305ee0a5cf4fa4-29fd6187283d9f2527be",
+          "file": "ui-part-c.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "Journey draft criteria never relabel committed route and plan survives navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1152,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:20.012Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "66128d305ee0a5cf4fa4-6800565fbfb9bb4b496c",
+          "file": "ui-part-c.spec.ts",
+          "line": 58,
+          "column": 5
+        },
+        {
+          "title": "Chinese story offers explicit English audio, text-only mode and complete transcript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 703,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:21.173Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "66128d305ee0a5cf4fa4-f6f439dc089259ff3337",
+          "file": "ui-part-c.spec.ts",
+          "line": 79,
+          "column": 5
+        },
+        {
+          "title": "reviewed exhibit context carries to all four next screens in demo/live and fails closed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8945,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:21.885Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "66128d305ee0a5cf4fa4-ca473976635bb67e8cb0",
+          "file": "ui-part-c.spec.ts",
+          "line": 89,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui-refinement.spec.ts",
+      "file": "ui-refinement.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Explore defaults to map and collection view preserves map filters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1586,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:30.847Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0dedc0c9b9177bfdcd72-d1ba8d6e48e1f64f1232",
+          "file": "ui-refinement.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "prototype controls are opt-in and keyboard can open every preview",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:32.444Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0dedc0c9b9177bfdcd72-ccdd56b42813ea5bfb8b",
+          "file": "ui-refinement.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "interests begin empty and contain only voluntary choices",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:33.588Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0dedc0c9b9177bfdcd72-c84df3630b54d097bbf2",
+          "file": "ui-refinement.spec.ts",
+          "line": 40,
+          "column": 5
+        },
+        {
+          "title": "phone artwork stays sharp at DPR 2 and the companion stays compact",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 597,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m250\u001b[39m\nReceived:   \u001b[31m540\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m250\u001b[39m\nReceived:   \u001b[31m540\u001b[39m\n    at /home/soufiane/FolkVerse-AI/tests/e2e/ui-refinement.spec.ts:80:31",
+                    "location": {
+                      "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-refinement.spec.ts",
+                      "column": 31,
+                      "line": 80
+                    },
+                    "snippet": "  78 |         return { width: box.width, height: box.height, candidateWidth: Number(candidate), fit: getComputedStyle(image).objectFit };\n  79 |       });\n> 80 |       expect(geometry.height).toBeLessThan(250);\n     |                               ^\n  81 |       expect(geometry.candidateWidth).toBeGreaterThanOrEqual(geometry.width * 2);\n  82 |       expect(geometry.fit).toBe(\"contain\");\n  83 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-refinement.spec.ts",
+                        "column": 31,
+                        "line": 80
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m250\u001b[39m\nReceived:   \u001b[31m540\u001b[39m\n\n  78 |         return { width: box.width, height: box.height, candidateWidth: Number(candidate), fit: getComputedStyle(image).objectFit };\n  79 |       });\n> 80 |       expect(geometry.height).toBeLessThan(250);\n     |                               ^\n  81 |       expect(geometry.candidateWidth).toBeGreaterThanOrEqual(geometry.width * 2);\n  82 |       expect(geometry.fit).toBe(\"contain\");\n  83 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);\n    at /home/soufiane/FolkVerse-AI/tests/e2e/ui-refinement.spec.ts:80:31"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:34.316Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/ui-refinement-phone-artwor-af3e3-the-companion-stays-compact/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/ui-refinement-phone-artwor-af3e3-the-companion-stays-compact/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-refinement.spec.ts",
+                    "column": 31,
+                    "line": 80
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0dedc0c9b9177bfdcd72-d6bd21b3fd935b747460",
+          "file": "ui-refinement.spec.ts",
+          "line": 55,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui-remaining.spec.ts",
+      "file": "ui-remaining.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "named control groups remain exposed to assistive navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 935,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:35.373Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b382131f1718a2031268-eb9b636219c2c5d0c769",
+          "file": "ui-remaining.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "visit bookmarks require opt-in, revalidate records, reset and never write browser storage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2197,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:36.400Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b382131f1718a2031268-ed5f64fe1fc6506cf6a0",
+          "file": "ui-remaining.spec.ts",
+          "line": 12,
+          "column": 5
+        },
+        {
+          "title": "reading sizes, light surface and actual dialog scroll progress stay usable on a phone",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:38.610Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b382131f1718a2031268-2caa1d1f174ef37c74a5",
+          "file": "ui-remaining.spec.ts",
+          "line": 33,
+          "column": 5
+        },
+        {
+          "title": "city focus preview does not select a city and topographic tiles load at higher zoom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:39.740Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b382131f1718a2031268-8b80026b7907236fca6f",
+          "file": "ui-remaining.spec.ts",
+          "line": 44,
+          "column": 5
+        },
+        {
+          "title": "fictional ending art and chapter progress differ; soundscape never autoplays and stops on exit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 950,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:40.916Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b382131f1718a2031268-3c06fd199c72c9ad3337",
+          "file": "ui-remaining.spec.ts",
+          "line": 59,
+          "column": 5
+        },
+        {
+          "title": "constellation can be edited by keyboard with equivalent sliders and reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:41.876Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b382131f1718a2031268-73b9278a9f8e99d23478",
+          "file": "ui-remaining.spec.ts",
+          "line": 70,
+          "column": 5
+        },
+        {
+          "title": "low-data preference skips decorative image requests on reload and survives navigation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1172,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"http://127.0.0.1:3000/folkverse/brand/folkverse-shrine.png\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"http://127.0.0.1:3000/folkverse/brand/folkverse-shrine.png\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /home/soufiane/FolkVerse-AI/tests/e2e/ui-remaining.spec.ts:81:189",
+                    "location": {
+                      "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-remaining.spec.ts",
+                      "column": 189,
+                      "line": 81
+                    },
+                    "snippet": "  79 |   await page.reload(); await expect(page.locator(\".scene-art, .card-art img\")).toHaveCount(0); await expect(page.locator(\".featured-record\")).toContainText(\"Fuzhou shadow puppetry\");\n  80 |   await page.getByRole(\"link\", { name: \"Explore\", exact: true }).click(); await expect(page.getByRole(\"button\", { name: \"Restore images\", exact: true })).toHaveAttribute(\"aria-pressed\", \"true\");\n> 81 |   await page.getByRole(\"button\", { name: \"Explore map\", exact: true }).click(); await expect(page.locator(\".liaoning-atlas\")).toHaveAttribute(\"data-terrain-ready\", \"true\"); expect(images).toEqual([]);\n     |                                                                                                                                                                                             ^\n  82 |   await page.getByRole(\"button\", { name: \"Restore images\", exact: true }).click(); await page.goto(\"/\"); await expect(page.locator(\".scene-art\")).toBeVisible();\n  83 | });\n  84 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-remaining.spec.ts",
+                        "column": 189,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"http://127.0.0.1:3000/folkverse/brand/folkverse-shrine.png\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  79 |   await page.reload(); await expect(page.locator(\".scene-art, .card-art img\")).toHaveCount(0); await expect(page.locator(\".featured-record\")).toContainText(\"Fuzhou shadow puppetry\");\n  80 |   await page.getByRole(\"link\", { name: \"Explore\", exact: true }).click(); await expect(page.getByRole(\"button\", { name: \"Restore images\", exact: true })).toHaveAttribute(\"aria-pressed\", \"true\");\n> 81 |   await page.getByRole(\"button\", { name: \"Explore map\", exact: true }).click(); await expect(page.locator(\".liaoning-atlas\")).toHaveAttribute(\"data-terrain-ready\", \"true\"); expect(images).toEqual([]);\n     |                                                                                                                                                                                             ^\n  82 |   await page.getByRole(\"button\", { name: \"Restore images\", exact: true }).click(); await page.goto(\"/\"); await expect(page.locator(\".scene-art\")).toBeVisible();\n  83 | });\n  84 |\n    at /home/soufiane/FolkVerse-AI/tests/e2e/ui-remaining.spec.ts:81:189"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T12:31:42.519Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/ui-remaining-low-data-pref-750ec-oad-and-survives-navigation/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/soufiane/FolkVerse-AI/test-results/ui-remaining-low-data-pref-750ec-oad-and-survives-navigation/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/soufiane/FolkVerse-AI/tests/e2e/ui-remaining.spec.ts",
+                    "column": 189,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b382131f1718a2031268-c3c39078332b92fec82c",
+          "file": "ui-remaining.spec.ts",
+          "line": 77,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-06T12:26:10.780Z",
+    "duration": 333150.357,
+    "expected": 60,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}

@@ -1,6 +1,18 @@
 # FolkVerse build status
 
-**Updated:** 6 October 2026, Asia/Shanghai. **Phase 03: Parts 1–6 implemented as a conservative baseline; full expert-guide acceptance, live/dense integration and review expansion remain incomplete.** Phase 02 was reported complete on the original machine; the current checkout audit records unavailable PostgreSQL and additional prerequisite discrepancies. Historical verification below remains dated evidence. Scope: the whole Liaoning province, as explicitly requested by the user. Phase 01 remains delivered at `be911c8e4c3d34fa1b6e6c1398d4dd1436ce3172`; Phase 02 and the UI refinement are included in the four-commit delivery on `main` requested on 5 October 2026. Consult Git history for delivery hashes. Next: [Phase 03 — grounded guide](../phases/03_GROUNDED_GUIDE.md).
+**Updated:** 6 October 2026, Asia/Shanghai. **Phase 03 remains partial: a real bounded EN/ZH Jinyao conversation now works; broader reviewed explanations and independent human acceptance remain pending.** PostgreSQL is running, migration `0003_gateway` and the original corpus are restored, Ollama generation is verified, and pinned BGE-M3 CPU inference/indexing is measured. The current scope remains all of Liaoning. See [current delivery report](../report/PHASE_03_COMPLETION.md), [handoff](phase-03-handoff.md), [personality](jinyao-personality.md) and [coverage](guide-coverage.md).
+
+## Working chatbot integration — 6 October 2026
+
+The browser → owned visit → Next.js BFF → PostgreSQL approved evidence → Ollama → validation → SSE → current source inspector path passes a real English/Chinese walkthrough. Beginner/deeper modes provide bounded inventory explanations while retaining original claims and source qualifiers. Social turns use a separate versioned non-factual policy. Consent, language/depth follow-ups and popup history are preserved. Technical retrieval/latency diagnostics stay in evidence rather than visitor messages.
+
+The dedicated Docker image was recovered through the existing user proxy with manifest/blob hashes checked against the pinned image. No Docker daemon/system configuration changed. Node 22.23.3 runs locally. Real PostgreSQL shared limits and committed withdrawal pass in disposable databases. Optional ignored artifact image bytes are separated from database snapshot integrity. Navigation's 200% zoom overflow and low-data logo loading are fixed; stale mobile/Guide browser assertions now match the approved interface.
+
+BGE-M3's 2.29 GB pinned artifact runs and indexes the two eligible passages. Six diagnostic queries use actual CPU inference; cold query workers take roughly 10.7–14.3 seconds. Keyword retrieval remains the default pending representative approved relevance data. This tiny sample does not demonstrate broad semantic improvement.
+
+New v2 has 48 bilingual functional/personality targets: 24 development cases were exercised, 24 reserve cases remain unexecuted. Machine-authored targets do not provide independent historical/clarity/bilingual/personality judgments. Original v1 and dated evidence are preserved. New explanation drafts remain unpublished and the actual-answer human worksheet is pending. Full Phase 03 and Phase 04 acceptance are **not** claimed.
+
+The root configuration remains demo with zero request quota. Authorized live checks use a bounded process-only quota of 24 Ollama attempts; deployment budgets and private credentials are unchanged. Reproducible commands, actual usage, latency, verification counts and remaining gates are in the current report. The sections below are historical snapshots; their earlier database/provider/model blockers are superseded by this update.
 
 
 ## Phase 03 push audit — 6 October 2026

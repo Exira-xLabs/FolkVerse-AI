@@ -1,0 +1,8 @@
+{
+  "checks": 22,
+  "failed": [
+    "current source inspector",
+    "turn: Explain that simply"
+  ],
+  "errors": []
+}

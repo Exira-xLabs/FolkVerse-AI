@@ -1,5 +1,15 @@
 # Versioned BGE-M3 and hybrid retrieval
 
+Current integration update (6 October 2026): actual PostgreSQL and bounded Ollama EN/ZH
+browser generation now pass; pinned BGE CPU inference/indexing is measured. The root
+configuration remains demo/zero quota; live verification uses process-only bounded settings.
+[Current report](../report/PHASE_03_COMPLETION.md), [personality policy](jinyao-personality.md),
+[coverage](guide-coverage.md) and [handoff](phase-03-handoff.md) supersede earlier unavailable
+integration statements below. Broader classified explanations and independent human quality
+remain pending. Beginner/deeper presentation uses a lossless inventory grammar; exact
+reviewed claims, attribution, revocation and browser publication validation remain enforced.
+
+
 Push audit: the CPU worker environment now uses a runtime/localization allowlist, excluding database URLs and custom credential names as well as API keys. Cancellation/timeout checks cover this isolation.
 
 Phase 03 Part 5, 6 October 2026 (Asia/Shanghai). The offline index/query path and explicit lexical fallback are implemented. Actual dense inference and production PostgreSQL integration are unverified here; semantic search stays disabled by default. New review candidates remain unpublished.

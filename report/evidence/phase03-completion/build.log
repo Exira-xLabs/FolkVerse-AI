@@ -1,0 +1,31 @@
+$ pnpm --filter @folkverse/web build
+$ next build
+▲ Next.js 16.3.8 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.ts took 22ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1756ms
+  Running TypeScript ...
+  Finished TypeScript in 4.3s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/5) ...
+  Generating static pages using 7 workers (1/5)
+  Generating static pages using 7 workers (2/5)
+  Generating static pages using 7 workers (3/5)
+✓ Generating static pages using 7 workers (5/5) in 349ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /[...slug]
+├ ƒ /api/v1/[...content]
+├ ƒ /api/v1/guide
+├ ƒ /api/v1/health
+├ ƒ /api/v1/session
+└ ○ /icon.png
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

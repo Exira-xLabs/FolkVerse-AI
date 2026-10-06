@@ -18,7 +18,7 @@ test("visit bookmarks require opt-in, revalidate records, reset and never write 
   await page.locator(".published-card").click(); await page.getByRole("button", { name: "Bookmark for this visit" }).click();
   await expect(page.getByRole("button", { name: "Remove visit bookmark" })).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Close sources" }).click();
-  await page.getByRole("link", { name: "FolkVerse China", exact: true }).click();
+  await page.getByRole("link", { name: "FolkVerse home", exact: true }).click();
   await expect(page.getByRole("link", { name: "Continue exploring", exact: false })).toBeVisible();
   await page.locator(".visit-reading summary").click(); await expect(page.locator(".saved-records")).toContainText("Fuzhou shadow puppetry");
   expect(await page.evaluate(() => ({ local: localStorage.length, session: sessionStorage.length }))).toEqual({ local: 0, session: 0 });
@@ -63,7 +63,7 @@ test("fictional ending art and chapter progress differ; soundscape never autopla
   await expect(page.getByRole("progressbar", { name: "Chapter progress", exact: false })).toHaveAttribute("value", "2");
   await page.getByRole("button", { name: "Begin again", exact: false }).click(); await page.getByRole("button", { name: "Cross the river bridge", exact: false }).click(); await expect(page.getByRole("img", { name: "Fictional river and lantern illustration" })).toBeVisible();
   await page.getByRole("button", { name: "Play soft soundscape", exact: true }).click(); await expect(page.getByRole("button", { name: "Stop soundscape", exact: true })).toHaveAttribute("aria-pressed", "true");
-  await page.getByRole("link", { name: "FolkVerse China", exact: true }).click();
+  await page.getByRole("link", { name: "FolkVerse home", exact: true }).click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { testAudioContexts: AudioContext[] }).testAudioContexts.map(context => context.state))).toEqual(["closed"]);
 });
 

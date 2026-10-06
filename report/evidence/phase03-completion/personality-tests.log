@@ -1,0 +1,176 @@
+EEEEEE...EEEEEE....                                                      [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_social_turns_are_policy_not_generated_cultural_evidence[en-Hi Jinyao!] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 12
+  @pytest.mark.parametrize("locale,question", [
+      ("en", "Hi Jinyao!"), ("en", "Who are you?"), ("en", "Thank you"),
+      ("zh-CN", "你好！"), ("zh-CN", "你是谁？"), ("zh-CN", "谢谢你"),
+  ])
+  def test_social_turns_are_policy_not_generated_cultural_evidence(service, locale, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_social_turns_are_policy_not_generated_cultural_evidence[en-Who are you?] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 12
+  @pytest.mark.parametrize("locale,question", [
+      ("en", "Hi Jinyao!"), ("en", "Who are you?"), ("en", "Thank you"),
+      ("zh-CN", "你好！"), ("zh-CN", "你是谁？"), ("zh-CN", "谢谢你"),
+  ])
+  def test_social_turns_are_policy_not_generated_cultural_evidence(service, locale, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_social_turns_are_policy_not_generated_cultural_evidence[en-Thank you] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 12
+  @pytest.mark.parametrize("locale,question", [
+      ("en", "Hi Jinyao!"), ("en", "Who are you?"), ("en", "Thank you"),
+      ("zh-CN", "你好！"), ("zh-CN", "你是谁？"), ("zh-CN", "谢谢你"),
+  ])
+  def test_social_turns_are_policy_not_generated_cultural_evidence(service, locale, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_social_turns_are_policy_not_generated_cultural_evidence[zh-CN-\u4f60\u597d\uff01] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 12
+  @pytest.mark.parametrize("locale,question", [
+      ("en", "Hi Jinyao!"), ("en", "Who are you?"), ("en", "Thank you"),
+      ("zh-CN", "你好！"), ("zh-CN", "你是谁？"), ("zh-CN", "谢谢你"),
+  ])
+  def test_social_turns_are_policy_not_generated_cultural_evidence(service, locale, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_social_turns_are_policy_not_generated_cultural_evidence[zh-CN-\u4f60\u662f\u8c01\uff1f] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 12
+  @pytest.mark.parametrize("locale,question", [
+      ("en", "Hi Jinyao!"), ("en", "Who are you?"), ("en", "Thank you"),
+      ("zh-CN", "你好！"), ("zh-CN", "你是谁？"), ("zh-CN", "谢谢你"),
+  ])
+  def test_social_turns_are_policy_not_generated_cultural_evidence(service, locale, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_social_turns_are_policy_not_generated_cultural_evidence[zh-CN-\u8c22\u8c22\u4f60] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 12
+  @pytest.mark.parametrize("locale,question", [
+      ("en", "Hi Jinyao!"), ("en", "Who are you?"), ("en", "Thank you"),
+      ("zh-CN", "你好！"), ("zh-CN", "你是谁？"), ("zh-CN", "谢谢你"),
+  ])
+  def test_social_turns_are_policy_not_generated_cultural_evidence(service, locale, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_social_turn_preserves_context_without_extending_expiry _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 31
+  def test_social_turn_preserves_context_without_extending_expiry(service):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_resolved_followup_does_not_invent_glossary_or_importance[why?] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 44
+  @pytest.mark.parametrize("question", ["why?", "what does that word mean?", "为什么", "有什么意义"])
+  def test_resolved_followup_does_not_invent_glossary_or_importance(service, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_resolved_followup_does_not_invent_glossary_or_importance[what does that word mean?] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 44
+  @pytest.mark.parametrize("question", ["why?", "what does that word mean?", "为什么", "有什么意义"])
+  def test_resolved_followup_does_not_invent_glossary_or_importance(service, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_resolved_followup_does_not_invent_glossary_or_importance[\u4e3a\u4ec0\u4e48] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 44
+  @pytest.mark.parametrize("question", ["why?", "what does that word mean?", "为什么", "有什么意义"])
+  def test_resolved_followup_does_not_invent_glossary_or_importance(service, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_resolved_followup_does_not_invent_glossary_or_importance[\u6709\u4ec0\u4e48\u610f\u4e49] _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 44
+  @pytest.mark.parametrize("question", ["why?", "what does that word mean?", "为什么", "有什么意义"])
+  def test_resolved_followup_does_not_invent_glossary_or_importance(service, question):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+_ ERROR at setup of test_beginner_explanation_preserves_listing_qualifier_and_locality _
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_personality.py, line 54
+  def test_beginner_explanation_preserves_listing_qualifier_and_locality(service):
+file /home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py, line 256
+  @pytest.fixture
+  def service(db: Session) -> tuple[GuideHarness, FakeRepository, FakeGateway]:
+E       fixture 'db' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, service, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/home/soufiane/FolkVerse-AI/apps/api/tests/test_guide_harness.py:256
+=========================== short test summary info ============================
+ERROR apps/api/tests/test_guide_personality.py::test_social_turns_are_policy_not_generated_cultural_evidence[en-Hi Jinyao!]
+ERROR apps/api/tests/test_guide_personality.py::test_social_turns_are_policy_not_generated_cultural_evidence[en-Who are you?]
+ERROR apps/api/tests/test_guide_personality.py::test_social_turns_are_policy_not_generated_cultural_evidence[en-Thank you]
+ERROR apps/api/tests/test_guide_personality.py::test_social_turns_are_policy_not_generated_cultural_evidence[zh-CN-\u4f60\u597d\uff01]
+ERROR apps/api/tests/test_guide_personality.py::test_social_turns_are_policy_not_generated_cultural_evidence[zh-CN-\u4f60\u662f\u8c01\uff1f]
+ERROR apps/api/tests/test_guide_personality.py::test_social_turns_are_policy_not_generated_cultural_evidence[zh-CN-\u8c22\u8c22\u4f60]
+ERROR apps/api/tests/test_guide_personality.py::test_social_turn_preserves_context_without_extending_expiry
+ERROR apps/api/tests/test_guide_personality.py::test_resolved_followup_does_not_invent_glossary_or_importance[why?]
+ERROR apps/api/tests/test_guide_personality.py::test_resolved_followup_does_not_invent_glossary_or_importance[what does that word mean?]
+ERROR apps/api/tests/test_guide_personality.py::test_resolved_followup_does_not_invent_glossary_or_importance[\u4e3a\u4ec0\u4e48]
+ERROR apps/api/tests/test_guide_personality.py::test_resolved_followup_does_not_invent_glossary_or_importance[\u6709\u4ec0\u4e48\u610f\u4e49]
+ERROR apps/api/tests/test_guide_personality.py::test_beginner_explanation_preserves_listing_qualifier_and_locality
+7 passed, 12 errors in 0.46s

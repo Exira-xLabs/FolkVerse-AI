@@ -28,13 +28,13 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
   const { locale, setLocale, t } = useLocale();
   const { simple, setSimple, lowData, setLowData } = useGraphics();
   useEffect(() => { document.title = `${t.nav[page]} | FolkVerse China`; }, [page, t.nav]);
-  const demoLabel = locale === "en" ? (mode === "demo" ? "Reviewed collection · optional previews" : "Published collection available · AI experiences not connected") : (mode === "demo" ? "审核馆藏 · 可选体验预览" : "已发布馆藏可用 · AI 体验尚未连接");
+  const demoLabel = locale === "en" ? (mode === "demo" ? "Reviewed collection · optional previews" : "Published collection · guide uses reviewed sources") : (mode === "demo" ? "审核馆藏 · 可选体验预览" : "已发布馆藏 · 向导依据审核资料回答");
   const route = routes[page];
   const cards = ["explore", "stories", "journey", "guide"] as const;
   return <MuseumScene page={page} simple={simple} lowData={lowData}>
     <a className="skip-link" href="#main">{t.skip}</a>
     <header className="museum-nav glass-panel">
-      <Link className="brand" href="/" aria-label="FolkVerse home"><Image className="brand-mark" src="/folkverse/brand/folkverse-shrine.png" alt="" width={44} height={44} unoptimized /><span>FolkVerse</span></Link>
+      <Link className="brand" href="/" aria-label="FolkVerse home">{!lowData && <Image className="brand-mark" src="/folkverse/brand/folkverse-shrine.png" alt="" width={44} height={44} unoptimized />}<span>FolkVerse</span></Link>
       <GlassTabs page={page} />
       <MobileNavigation page={page} />
       <button className="language-switch nav-tab" aria-label={t.language}
@@ -55,7 +55,7 @@ export function MuseumShell({ page, mode, initialExhibitId }: { page: PageKey; m
       {page === "home" ? <><VisitReading home /><FeaturedExhibit /><div className="discovery-cards">
         {cards.map((key, index) => <article className={`glass-panel discovery-card card-${key}`} key={key}>
           <h2>{t.homeCards[index]}</h2>
-          <p className="card-availability">{locale === "en" ? (index === 0 ? "Published collection" : mode === "live" ? "Not available yet" : key === "stories" ? "Original fiction · preview" : "Experience preview") : (index === 0 ? "已发布馆藏" : mode === "live" ? "尚未开放" : key === "stories" ? "原创虚构故事 · 预览" : "体验预览")}</p>
+          <p className="card-availability">{locale === "en" ? (index === 0 ? "Published collection" : mode === "live" ? (key === "guide" ? "Reviewed cultural guide" : "Not available yet") : key === "stories" ? "Original fiction · preview" : "Experience preview") : (index === 0 ? "已发布馆藏" : mode === "live" ? (key === "guide" ? "依据审核资料的文化向导" : "尚未开放") : key === "stories" ? "原创虚构故事 · 预览" : "体验预览")}</p>
           <div className="card-art">
             {!lowData && <Image src={museumArt(key === "guide" ? "09_ai_guide_character.png" : routes[key].asset)}
               alt="" fill quality={90} sizes="(max-width: 700px) 100vw, (max-width: 1050px) 50vw, 25vw" className={key === "guide" ? "portrait-art" : ""}

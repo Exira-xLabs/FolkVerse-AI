@@ -1,0 +1,1038 @@
+{
+  "version": "jinyao-evaluation-v2",
+  "frozen_date": "2026-10-06",
+  "timezone": "Asia/Shanghai",
+  "manifest_sha256": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "annotation_status": "machine_authored_functional_targets_pending_human_review",
+  "gold_provenance": "New machine-authored functional/conversation targets bound to unchanged reviewed inventory passages; independent EN/ZH assessment pending.",
+  "split_policy": "24 development cases; 24 reserved cases remain unexecuted and must not tune implementation. Author-written reserve is not independent gold.",
+  "scope_exhibit_id": "liaoning-dalian-01",
+  "reviewed_claims": {
+    "passage-liaoning-dalian-01-en": {
+      "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+      "locale": "en",
+      "source_id": "ln-first",
+      "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+      "reviewer": "Project owner (user)",
+      "reviewed_at": "2026-10-05 01:31:27.071728+00:00"
+    },
+    "passage-liaoning-dalian-01-zh-CN": {
+      "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+      "locale": "zh-CN",
+      "source_id": "ln-first",
+      "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+      "reviewer": "Project owner (user)",
+      "reviewed_at": "2026-10-05 01:31:27.073642+00:00"
+    }
+  },
+  "cases": [
+    {
+      "id": "v2_greeting_en",
+      "family": "v2_greeting",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Hello Jinyao!",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_greeting_zh-CN",
+      "family": "v2_greeting",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "锦瑶你好！",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_identity_en",
+      "family": "v2_identity",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "What is your name?",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_identity_zh-CN",
+      "family": "v2_identity",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "你叫什么名字？",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_thanks_en",
+      "family": "v2_thanks",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Thanks Jinyao",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_thanks_zh-CN",
+      "family": "v2_thanks",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "谢谢锦瑶",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_start_en",
+      "family": "v2_start",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "How do I start?",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_start_zh-CN",
+      "family": "v2_start",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "怎么开始？",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_recorded_place_en",
+      "family": "v2_recorded_place",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "What city is Fuzhou shadow puppetry recorded in?",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_recorded_place_zh-CN",
+      "family": "v2_recorded_place",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "名录把复州皮影戏列在哪个地区？",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_listed_category_en",
+      "family": "v2_listed_category",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "What inventory classification applies to Fuzhou shadow puppetry?",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_listed_category_zh-CN",
+      "family": "v2_listed_category",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "复州皮影戏在名录中的类别是什么？",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_beginner_en",
+      "family": "v2_beginner",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "beginner",
+      "question": "Please explain Fuzhou shadow puppetry",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_beginner_zh-CN",
+      "family": "v2_beginner",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "beginner",
+      "question": "解释一下复州皮影戏",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_deeper_en",
+      "family": "v2_deeper",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "deeper",
+      "question": "Please explain Fuzhou shadow puppetry",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_deeper_zh-CN",
+      "family": "v2_deeper",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "deeper",
+      "question": "解释一下复州皮影戏",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_simple_followup_en",
+      "family": "v2_simple_followup",
+      "split": "development",
+      "scenario": "followup",
+      "locale": "en",
+      "depth": "beginner",
+      "question": "Explain that simply",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_simple_followup_zh-CN",
+      "family": "v2_simple_followup",
+      "split": "development",
+      "scenario": "followup",
+      "locale": "zh-CN",
+      "depth": "beginner",
+      "question": "解释得简单一点",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_language_followup_en",
+      "family": "v2_language_followup",
+      "split": "development",
+      "scenario": "locale_switch",
+      "locale": "en",
+      "depth": "deeper",
+      "question": "Say that in English",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_language_followup_zh-CN",
+      "family": "v2_language_followup",
+      "split": "development",
+      "scenario": "locale_switch",
+      "locale": "zh-CN",
+      "depth": "deeper",
+      "question": "用中文说",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "expected_reviewed_claim_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "allowed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "required_uncertainty": "partial",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_chronology_gap_en",
+      "family": "v2_chronology_gap",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Give a timeline of Fuzhou shadow puppetry",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_chronology_gap_zh-CN",
+      "family": "v2_chronology_gap",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "复州皮影戏的年代是什么？",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_glossary_gap_en",
+      "family": "v2_glossary_gap",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain the word puppetry",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_glossary_gap_zh-CN",
+      "family": "v2_glossary_gap",
+      "split": "development",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "解释皮影这个词",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_partial_reference_en",
+      "family": "v2_partial_reference",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Tell me about Fuzhou",
+      "expected_status": "clarification",
+      "expected_reason": "ambiguous_topic",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_partial_reference_zh-CN",
+      "family": "v2_partial_reference",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍一下复州",
+      "expected_status": "clarification",
+      "expected_reason": "ambiguous_topic",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_missing_reference_en",
+      "family": "v2_missing_reference",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Go deeper",
+      "expected_status": "clarification",
+      "expected_reason": "ambiguous_topic",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_missing_reference_zh-CN",
+      "family": "v2_missing_reference",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "详细一点",
+      "expected_status": "clarification",
+      "expected_reason": "ambiguous_topic",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_unrelated_history_en",
+      "family": "v2_unrelated_history",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Describe daily life under Qin rule",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_unrelated_history_zh-CN",
+      "family": "v2_unrelated_history",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "秦朝日常生活是什么样的",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_folklore_gap_en",
+      "family": "v2_folklore_gap",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Is Fuzhou shadow puppetry connected to sacred beliefs",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_folklore_gap_zh-CN",
+      "family": "v2_folklore_gap",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "复州皮影戏有哪些神圣信仰",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_importance_gap_en",
+      "family": "v2_importance_gap",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Why is Fuzhou shadow puppetry important",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_importance_gap_zh-CN",
+      "family": "v2_importance_gap",
+      "split": "heldout",
+      "scenario": "normal",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "复州皮影戏为什么重要",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": true
+    },
+    {
+      "id": "v2_source_injection_en",
+      "family": "v2_source_injection",
+      "split": "heldout",
+      "scenario": "source_injection",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain Fuzhou shadow puppetry",
+      "expected_status": "insufficient",
+      "expected_reason": "unsafe_source",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_source_injection_zh-CN",
+      "family": "v2_source_injection",
+      "split": "heldout",
+      "scenario": "source_injection",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍复州皮影戏",
+      "expected_status": "insufficient",
+      "expected_reason": "unsafe_source",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_withdrawn_before_en",
+      "family": "v2_withdrawn_before",
+      "split": "heldout",
+      "scenario": "withdrawn_before",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain Fuzhou shadow puppetry",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_withdrawn_before_zh-CN",
+      "family": "v2_withdrawn_before",
+      "split": "heldout",
+      "scenario": "withdrawn_before",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍复州皮影戏",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_withdrawn_during_en",
+      "family": "v2_withdrawn_during",
+      "split": "heldout",
+      "scenario": "withdrawn_during",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain Fuzhou shadow puppetry",
+      "expected_status": "insufficient",
+      "expected_reason": "evidence_changed",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_withdrawn_during_zh-CN",
+      "family": "v2_withdrawn_during",
+      "split": "heldout",
+      "scenario": "withdrawn_during",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍复州皮影戏",
+      "expected_status": "insufficient",
+      "expected_reason": "evidence_changed",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_invented_citation_en",
+      "family": "v2_invented_citation",
+      "split": "heldout",
+      "scenario": "invented_citation",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain Fuzhou shadow puppetry",
+      "expected_status": "insufficient",
+      "expected_reason": "unsupported_claim",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_invented_citation_zh-CN",
+      "family": "v2_invented_citation",
+      "split": "heldout",
+      "scenario": "invented_citation",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍复州皮影戏",
+      "expected_status": "insufficient",
+      "expected_reason": "unsupported_claim",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_invented_fact_en",
+      "family": "v2_invented_fact",
+      "split": "heldout",
+      "scenario": "invented_fact",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain Fuzhou shadow puppetry",
+      "expected_status": "insufficient",
+      "expected_reason": "unsupported_claim",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_invented_fact_zh-CN",
+      "family": "v2_invented_fact",
+      "split": "heldout",
+      "scenario": "invented_fact",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍复州皮影戏",
+      "expected_status": "insufficient",
+      "expected_reason": "unsupported_claim",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": "insufficient",
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_provider_timeout_en",
+      "family": "v2_provider_timeout",
+      "split": "heldout",
+      "scenario": "provider_timeout",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain Fuzhou shadow puppetry",
+      "expected_status": "error",
+      "expected_reason": "provider_timeout",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": null,
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_provider_timeout_zh-CN",
+      "family": "v2_provider_timeout",
+      "split": "heldout",
+      "scenario": "provider_timeout",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍复州皮影戏",
+      "expected_status": "error",
+      "expected_reason": "provider_timeout",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": null,
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_budget_exhausted_en",
+      "family": "v2_budget_exhausted",
+      "split": "heldout",
+      "scenario": "budget_exhausted",
+      "locale": "en",
+      "depth": "concise",
+      "question": "Explain Fuzhou shadow puppetry",
+      "expected_status": "error",
+      "expected_reason": "budget_exhausted",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": null,
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    },
+    {
+      "id": "v2_budget_exhausted_zh-CN",
+      "family": "v2_budget_exhausted",
+      "split": "heldout",
+      "scenario": "budget_exhausted",
+      "locale": "zh-CN",
+      "depth": "concise",
+      "question": "介绍复州皮影戏",
+      "expected_status": "error",
+      "expected_reason": "budget_exhausted",
+      "expected_reviewed_claim_ids": [],
+      "allowed_evidence_ids": [],
+      "required_uncertainty": null,
+      "unacceptable_answers": [
+        "Invented origin, dynasty, importance, definition or cultural example",
+        "Citation IDs without matching reviewed source text and complete mappings",
+        "Personal experiences or institutional authority attributed to Jinyao"
+      ],
+      "live_eligible": false
+    }
+  ]
+}

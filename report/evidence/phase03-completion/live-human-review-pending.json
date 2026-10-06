@@ -1,0 +1,284 @@
+{
+  "version": "jinyao-live-human-review-v1",
+  "status": "pending_independent_review",
+  "run_sha256": "259d19a25a84b3ce08bc652eda4c4bba8c37b81dff99672f9db90ad6be25df17",
+  "checked_at": "2026-10-06T12:45:28.661Z",
+  "scoring": "PASS/FAIL/N/A with attributed rationale; null is unscored, never passing.",
+  "rubric": {
+    "historical_correctness": "Verify against independent primary sources; unsupported facts fail.",
+    "claim_support": "Every fact and qualifier in displayed prose must follow reviewed evidence.",
+    "citation_validity": "Inspect actual links, IDs, dates and claim mappings; check current source.",
+    "explanatory_clarity": "Direct, useful, appropriate depth; do not reward length or repetition.",
+    "bilingual_faithfulness": "Compare EN/ZH meaning, locality, source qualifications and limits.",
+    "uncertainty": "Listing scope and missing historical evidence must remain clear.",
+    "followup_consistency": "Simplification and language switches retain topic and supported facts.",
+    "personality": "Warm, natural, patient; no personal memories, authority or repetitive questions."
+  },
+  "units": [
+    {
+      "answer_id": "ans_c8bc4c1c19294301a7d3be845dc148df",
+      "question": "Hello Jinyao!",
+      "locale": "en",
+      "status": "conversational",
+      "display_text": "Hi, I’m Jinyao, your fictional museum companion. We can explore a reviewed exhibit together, at your pace.",
+      "sources": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    },
+    {
+      "answer_id": "ans_02d0659e7c724afeb601d85e5f6ac31e",
+      "question": "Where is Fuzhou shadow puppetry listed?",
+      "locale": "en",
+      "status": "answered",
+      "display_text": "Here is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    },
+    {
+      "answer_id": "ans_4ea7c566d2d04011b7aea36af67b77ac",
+      "question": "Explain that simply",
+      "locale": "en",
+      "status": "answered",
+      "display_text": "The inventory lists Fuzhou shadow puppetry under traditional theatre, with Wafangdian, Liaoning as the recorded locality.\n\nHere is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    },
+    {
+      "answer_id": "ans_0504ae8ee6084333be54c6fe9a767ed1",
+      "question": "Go deeper",
+      "locale": "en",
+      "status": "answered",
+      "display_text": "The listing identifies two details: its category is traditional theatre, and its recorded locality is Wafangdian, Liaoning. This listing alone does not establish an origin date or describe how it is performed.\n\nHere is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    },
+    {
+      "answer_id": "ans_c1ec4382c197412798bf199f3f5f9898",
+      "question": "Thank you",
+      "locale": "en",
+      "status": "conversational",
+      "display_text": "You’re welcome. We can stay with this topic or explore another reviewed exhibit whenever you’re ready.",
+      "sources": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    },
+    {
+      "answer_id": "ans_cf95ac18b96d427191c295cc29f9b208",
+      "question": "Say that in Chinese",
+      "locale": "zh-CN",
+      "status": "answered",
+      "display_text": "名录提供了两项信息：项目类别为传统戏剧，申报地区为瓦房店市。仅凭这条记载，无法确定起源年代或解释表演技法。\n\n经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-zh-CN",
+          "source_id": "ln-first",
+          "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+          "language": "zh-CN",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.073642Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+          "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    },
+    {
+      "answer_id": "ans_33d6ebd62d9447579ebe166df8f84626",
+      "question": "复州皮影戏起源于哪一年？",
+      "locale": "zh-CN",
+      "status": "insufficient",
+      "display_text": "目前经过审核的资料不足以回答这个问题。",
+      "sources": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    },
+    {
+      "answer_id": "ans_967b9c469ea24023bea436d0dda06ace",
+      "question": "为什么？",
+      "locale": "zh-CN",
+      "status": "insufficient",
+      "display_text": "目前经过审核的资料不足以回答这个问题。",
+      "sources": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "ratings": {
+        "historical_correctness": null,
+        "claim_support": null,
+        "citation_validity": null,
+        "explanatory_clarity": null,
+        "bilingual_faithfulness": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality": null
+      },
+      "comments": null
+    }
+  ],
+  "note": "Source text alone is not independent correctness gold. Reviewer must check authoritative references and disclose affiliation; no human scores are synthesized."
+}

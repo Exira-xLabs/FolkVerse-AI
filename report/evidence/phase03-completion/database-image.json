@@ -1,0 +1,8 @@
+{
+  "upstream_index": "sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0",
+  "platform_manifest": "sha256:815bf5378222044da3b34d98e6a5fdac37b15c428b67d09c7c2d90a038e597bf",
+  "config_digest": "sha256:ca46538882b0ab2dcbd6fd51fd918602200e48df7fae5cb079efaadba739fcd6",
+  "local_tag": "pgvector/pgvector:folkverse-verified-pg17",
+  "transport": "existing user HTTPS proxy",
+  "all_blob_hashes_verified": true
+}

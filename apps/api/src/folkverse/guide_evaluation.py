@@ -39,6 +39,7 @@ from folkverse.guide_harness import (
 )
 from folkverse.guide_hybrid import HybridEvidenceRepository
 from folkverse.guide_index import SnapshotDateTime
+from folkverse.guide_personality import POLICY, inventory_projection
 from folkverse.guide_retrieval import (
     RETRIEVAL_VERSION,
     EvidencePassage,
@@ -55,7 +56,7 @@ from folkverse.provider_gateway import (
 )
 from folkverse.sessions import SessionService
 
-EVALUATOR_VERSION = "guide-functional-evaluation-v1"
+EVALUATOR_VERSION = "guide-functional-evaluation-v2"
 FOLLOWUP_SCENARIOS = {"followup", "locale_switch", "unconsented", "cross_owner"}
 
 
@@ -93,7 +94,7 @@ class EvaluationCase(BaseModel):
     locale: Locale
     depth: Depth
     question: str = Field(min_length=1, max_length=2000)
-    expected_status: Literal["answered", "insufficient", "clarification", "error"]
+    expected_status: Literal["answered", "insufficient", "clarification", "conversational", "error"]
     expected_reason: str
     expected_reviewed_claim_ids: list[str]
     allowed_evidence_ids: list[str]
@@ -104,7 +105,7 @@ class EvaluationCase(BaseModel):
 
 class EvaluationSuite(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
-    version: Literal["jinyao-evaluation-v1"]
+    version: Literal["jinyao-evaluation-v1", "jinyao-evaluation-v2"]
     frozen_date: str
     timezone: str
     manifest_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
@@ -383,7 +384,13 @@ def checked_display(answer: GuideAnswer, corpus: dict[str, EvidencePassage]) -> 
         if answer.locale == "en"
         else "经过审核的来源这样记载："
     )
-    return answer.answer_text == lead + "\n\n" + "\n\n".join(sections)
+    prefix = ""
+    if answer.presentation_version == "inventory_projection_v1":
+        projection = inventory_projection(claims[refs[0]].text, answer.locale, answer.depth)
+        if projection is None:
+            return False
+        prefix = projection + "\n\n"
+    return answer.answer_text == prefix + lead + "\n\n" + "\n\n".join(sections)
 
 
 def score_case(
@@ -401,6 +408,12 @@ def score_case(
         if answer
         else None
     )
+    if answer and answer.status == "conversational":
+        uncertainty = None  # Social policy is not a factual uncertainty observation.
+        outcome = outcome and bool(answer.social_intent) and (
+            answer.answer_text == POLICY["social"][answer.social_intent][answer.locale]
+            and not answer.related_exhibit_ids and not answer.provider_attempt_id
+        )
     support = citations = None
     if answer and answer.status == "answered":
         # Not a historical truth score: every actual statement must be exact reviewed wording.

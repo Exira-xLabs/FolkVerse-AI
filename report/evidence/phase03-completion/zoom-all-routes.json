@@ -1,0 +1,50 @@
+[
+  {
+    "route": "/",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  },
+  {
+    "route": "/explore",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  },
+  {
+    "route": "/journey",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  },
+  {
+    "route": "/stories/lantern-path",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  },
+  {
+    "route": "/lens",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  },
+  {
+    "route": "/guide",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  },
+  {
+    "route": "/dna",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  },
+  {
+    "route": "/sources",
+    "viewport": 1600,
+    "width": 1690,
+    "overflow": true
+  }
+]

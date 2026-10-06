@@ -1,0 +1,108 @@
+{
+  "version": "jinyao-explanation-review-v1",
+  "prepared_date": "2026-10-06",
+  "timezone": "Asia/Shanghai",
+  "status": "draft",
+  "scope": "Fuzhou / 复州 shadow puppetry in Wafangdian, Liaoning; not Fuzhou / 福州 in Fujian",
+  "exhibit_id": "liaoning-dalian-01",
+  "publication_allowed": false,
+  "rights_review": "Pending: original brief attributed summaries proposed; no images or full-text reuse authorized",
+  "reviewer": null,
+  "reviewed_at": null,
+  "sources": [
+    {
+      "id": "candidate-ihchina-fuzhou",
+      "title": "皮影戏（复州皮影戏）",
+      "url": "https://www.ihchina.cn/project_details/13395.html",
+      "institution": "中国非物质文化遗产保护中心",
+      "source_language": "zh-CN",
+      "verification_date": "2026-10-06",
+      "source_publication_date": null,
+      "date_note": "Page navigation clock is not the document publication date. 2006 is the listed recognition year, not an origin date."
+    },
+    {
+      "id": "candidate-guangming-fuzhou",
+      "title": "穿越400年的光影",
+      "url": "https://www.ihchina.cn/project_details/9992",
+      "institution": "光明日报; republished by 中国非物质文化遗产保护中心",
+      "author": "吴琳",
+      "source_language": "zh-CN",
+      "source_publication_date": "2017-05-09",
+      "verification_date": "2026-10-06"
+    }
+  ],
+  "units": [
+    {
+      "id": "draft-shadow-definition",
+      "kind": "attributed_source_statement",
+      "intent": "glossary",
+      "scope": "General shadow puppetry; not proof of every regional technique",
+      "source_id": "candidate-ihchina-fuzhou",
+      "locator": "Opening explanatory paragraph, after project metadata",
+      "wording": {
+        "en": "The heritage entry describes shadow puppetry as storytelling using cut-out figures and projected light.",
+        "zh-CN": "非遗条目将皮影戏描述为借助剪制形象和灯光来表演故事的戏曲形式。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "draft-fuzhou-recognition",
+      "kind": "documented_inventory",
+      "intent": "chronology",
+      "scope": "National recognition; separate from the approved provincial listing",
+      "source_id": "candidate-ihchina-fuzhou",
+      "locator": "Project metadata: publication year and declaring area",
+      "wording": {
+        "en": "The national entry lists Fuzhou shadow puppetry in the first 2006 batch, with Wafangdian as its declaring area.",
+        "zh-CN": "国家级条目将复州皮影戏列入2006年第一批名录，申报地区为瓦房店市。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "draft-fuzhou-cultural-role",
+      "kind": "attributed_interpretation",
+      "intent": "importance",
+      "scope": "Source's assessment, not independently established universal impact",
+      "source_id": "candidate-ihchina-fuzhou",
+      "locator": "Final paragraph of project description",
+      "wording": {
+        "en": "The entry credits Fuzhou shadow puppetry with passing on local legends, customs and cultural knowledge.",
+        "zh-CN": "条目认为复州皮影戏有助于传承地方传说、风俗和文化知识。"
+      },
+      "status": "draft"
+    },
+    {
+      "id": "draft-fuzhou-chronology-caution",
+      "kind": "attributed_disagreement",
+      "intent": "chronology",
+      "source_ids": ["candidate-ihchina-fuzhou", "candidate-guangming-fuzhou"],
+      "locator": "Project description's Jiaqing paragraph; 2017 article's parallel paragraph",
+      "wording": {
+        "en": "These accounts give different end years for the Jiaqing period. Review the chronology before presenting an exact range.",
+        "zh-CN": "两篇资料对嘉庆时期的结束年份记载不同。展示确切年代区间前，需要核验年表。"
+      },
+      "status": "draft",
+      "review_required": "Resolve 1821 versus 1820 against an independent authoritative chronology; do not average dates or infer the tradition's origin from a period range."
+    },
+    {
+      "id": "draft-shadow-legend-caution",
+      "kind": "folklore_belief",
+      "intent": "history_vs_legend",
+      "source_id": "candidate-guangming-fuzhou",
+      "locator": "General shadow-puppetry introduction, marked 相传",
+      "wording": {
+        "en": "The article presents a Han-period origin as a traditional account, rather than a verified origin date.",
+        "zh-CN": "报道以“相传”描述汉代起源说，不能将其当作已经核实的起源年代。"
+      },
+      "status": "draft"
+    }
+  ],
+  "review_checklist": [
+    "Verify each source and precise locator; assess reliability and conflicting chronology",
+    "Review English and Chinese wording, qualifier preservation and rights separately",
+    "Approve each actual passage and claim link through the named human curation workflow",
+    "Implement and review explanation-unit classification/support before runtime publication",
+    "Create independently reviewed glossary, depth and chronology gold answers",
+    "No approval of this packet is implied by the implementation task"
+  ]
+}

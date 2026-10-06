@@ -1,8 +1,17 @@
 import { expect, test, type Page } from "@playwright/test";
+import policy from "../../packages/contracts/src/jinyao-policy.json";
 // Synthetic reviewed text and responses exercise presentation, not provider quality.
 const evidence = (zh = false) => ({ passage_id: "passage_fixture", source_id: "source_fixture", text: zh ? "复州皮影戏在瓦房店名录中列为传统戏剧。" : "Fuzhou shadow puppetry is listed as traditional theatre in Wafangdian.", language: zh ? "zh-CN" : "en", locator: "Fixture row 1", rights_basis: "Synthetic test evidence", institution: "Fixture institution", source_title: "Fixture inventory", canonical_url: "https://example.org/inventory", fetched_at: "2026-10-06T00:00:00Z", reviewed_at: "2026-10-06T00:00:00Z", reviewer: "Fixture reviewer", review_id: "review_fixture", content_hash: "fixture_hash", exhibit_ids: ["exhibit_fixture"], region_ids: [] });
 const event = (name: string, body: unknown) => `event: ${name}\r\ndata: ${JSON.stringify(body)}\r\n\r\n`;
 type InvalidPublication = "display" | "empty_support" | "claim_reference" | "source_reference" | "source_language" | "unused_source";
+function socialReply(inventedFact = false) {
+  const answer = { answer_id: "social_fixture", locale: "en", depth: "concise", status: "conversational",
+    uncertainty: "insufficient", reason: "social_turn", answer_text: policy.social.greeting.en +
+      (inventedFact ? " It originated in 1644." : ""), coverage_limit: "", social_intent: "greeting",
+    personality_version: policy.version, claims: [], answer_claim_ids: [], context_claim_ids: [],
+    evidence_ids: [], related_exhibit_ids: [], mode: "live", corpus_version: "not_applicable" };
+  return event("answer", answer) + event("sources", { answer_id: answer.answer_id, items: [] }) + event("done", { answer_id: answer.answer_id });
+}
 function reply(zh: boolean, depth: string, insufficient = false, hybrid = false, invalid?: InvalidPublication) {
   const p = evidence(zh);
   const answer = { answer_id: "answer_fixture", locale: zh ? "zh-CN" : "en", depth, status: insufficient ? "insufficient" : "answered", uncertainty: insufficient ? "insufficient" : "partial", reason: insufficient ? "coverage_gap" : "reviewed_excerpt", answer_text: insufficient ? (zh ? "审核资料不足，无法回答。" : "Reviewed evidence is insufficient to answer.") : p.text, coverage_limit: zh ? "仅支持名录信息。" : "Only inventory information is supported.", claims: insufficient ? [] : [{ claim_id: "claim_1", text: p.text, passage_ids: [p.passage_id], source_ids: [p.source_id], kind: "source_statement", support_method: "complete_reviewed_passage" }], answer_claim_ids: insufficient ? [] : ["claim_1"], context_claim_ids: [], evidence_ids: insufficient ? [] : [p.passage_id], related_exhibit_ids: insufficient ? [] : p.exhibit_ids, mode: "live", retrieval_mode: hybrid ? "hybrid" : "lexical_only", corpus_version: "fixture_corpus", context_token: "fixture_signed_context" };
@@ -50,7 +59,7 @@ for (const zh of [false, true]) {
     await page.getByRole("button", { name: zh ? "复州皮影戏" : "Fuzhou shadow puppetry", exact: true }).click();
     expect((await request).postDataJSON()).toMatchObject({ context_consent: true, depth: "beginner", locale: zh ? "zh-CN" : "en" });
     await expect(page.getByRole("log")).toContainText(evidence(zh).text);
-    await expect(page.getByRole("log")).toContainText(zh ? "仅关键词匹配" : "keyword matches only");
+    await expect(page.getByRole("log")).not.toContainText(zh ? "检索：" : "Search:");
     await page.getByRole("button", { name: zh ? "查看回答来源" : "Inspect answer sources" }).click();
     const drawer = page.getByRole("dialog", { name: zh ? "回答所依据的资料" : "Evidence behind this answer" });
     await expect(drawer).toContainText("Fixture inventory");
@@ -121,7 +130,7 @@ test("mismatched evidence stream never publishes factual text", async ({ page })
 test("hybrid answers identify semantic retrieval while retaining citations", async ({ page }) => {
   await fixtures(page, { hybrid: true }); await open(page);
   await page.getByRole("textbox").fill("Question"); await page.getByRole("button", { name: "Send message", exact: true }).click();
-  await expect(page.getByRole("log")).toContainText("keyword and semantic matches");
+  await expect(page.getByRole("log")).not.toContainText("Search:");
   await expect(page.getByRole("button", { name: "Inspect answer sources" })).toBeVisible();
 });
 
@@ -136,3 +145,42 @@ for (const invalid of ["display", "empty_support", "claim_reference", "source_re
     await expect(page.getByRole("button", { name: "Inspect answer sources" })).toHaveCount(0);
   });
 }
+
+for (const invented of [false, true]) test(`social policy ${invented ? "rejects injected facts" : "preserves consented topic"}`, async ({ page }) => {
+  await fixtures(page); await open(page);
+  await page.getByRole("checkbox").check();
+  await page.getByRole("textbox").fill("Where is Fuzhou shadow puppetry listed?");
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Inspect answer sources" })).toBeVisible();
+  await page.unroute("**/api/v1/guide");
+  await page.route("**/api/v1/guide", route => route.fulfill({ contentType: "text/event-stream", body: socialReply(invented) }));
+  await page.getByRole("textbox").fill("Hello!");
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
+  if (invented) {
+    await expect(page.getByRole("button", { name: "Retry question" })).toBeVisible();
+    await expect(page.getByRole("log")).not.toContainText("1644");
+  } else {
+    await expect(page.getByRole("log")).toContainText(policy.social.greeting.en);
+    await page.unroute("**/api/v1/guide");
+    await page.route("**/api/v1/guide", route => route.fulfill({ contentType: "text/event-stream", body: reply(false, "beginner") }));
+    const request = page.waitForRequest(r => r.url().endsWith("/api/v1/guide"));
+    await page.getByRole("textbox").fill("Explain that simply");
+    await page.getByRole("button", { name: "Send message", exact: true }).click();
+    expect((await request).postDataJSON()).toMatchObject({ context_token: "fixture_signed_context", depth: "beginner" });
+  }
+});
+
+test("open answer inspector clears evidence after source withdrawal revalidation", async ({ page }) => {
+  await page.clock.install();
+  await fixtures(page); await open(page);
+  await page.getByRole("textbox").fill("Where is Fuzhou shadow puppetry listed?");
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
+  await page.getByRole("button", { name: "Inspect answer sources" }).click();
+  const drawer = page.getByRole("dialog", { name: "Evidence behind this answer" });
+  await expect(drawer).toContainText(evidence().text);
+  await page.unroute("**/api/v1/sources/source_fixture");
+  await page.route("**/api/v1/sources/source_fixture", route => route.fulfill({ status: 404, json: { error: { code: "unavailable" } } }));
+  await page.clock.fastForward(16000);
+  await expect(drawer).toContainText("The evidence changed");
+  await expect(drawer).not.toContainText(evidence().text);
+});

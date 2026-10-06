@@ -1,41 +1,104 @@
 # Phase 03 handoff — 6 October 2026
 
-Parts 1–6 are implemented as a conservative evidence baseline. Phase 03's full expert-guide acceptance remains incomplete. The [Part 6 report](../report/PHASE_03_PART_6.md) publishes fixture results, the unchanged baseline, failures and pending human judgments.
+Jinyao now works through actual PostgreSQL and Ollama in English and Chinese, with owned
+sessions, checked SSE, current source inspection, consented follow-ups and honest coverage
+limits. **Phase 03 remains partial.** Broader approved knowledge, classified explanation units,
+representative hybrid relevance and independent bilingual/personality review remain required.
+The [current report](../report/PHASE_03_COMPLETION.md) records the evidence and exact checks.
 
-Push audit update: [Ollama authentication is verified](guide-ollama.md), and harness v3 fixes the four listing-paraphrase misses. The exposed v1 regression reaches 64/64 functional targets. Original baseline and v2 evidence remain preserved. Real generation/SSE, PostgreSQL, BGE runtime and human quality review remain unverified. See [the audit report](../report/PHASE_03_PUSH_AUDIT.md).
+## Current implementation
 
-## Implementation map
-
-| Responsibility | Implementation and contract |
+| Responsibility | Implementation |
 |---|---|
-| Reviewed corpus, eligibility, coverage, bounded bilingual BM25 | `guide_retrieval.py`; [retrieval contract](../report/PHASE_03_PART_1.md) |
-| Optional offline CPU BGE, corpus/model invalidation, hybrid fusion | `guide_embeddings.py`, `embedding_worker.py`, `guide_index.py`, `guide_hybrid.py`; [hybrid contract](guide-hybrid-retrieval.md) |
-| Provider JSON, cancellation/retry, persistent shared admission and usage | `provider_gateway.py`, `gateway_limits.py`, migration `0003_gateway`; [gateway contract](guide-gateway.md) |
-| Narrow supported questions, exact statement support, signed owner-bound context | `guide_harness.py`; [harness contract](guide-harness.md) |
-| Owned JSON/SSE, BFF, page-memory chat and current sources | `guide_api.py`, web `/api/v1/guide`, Jinyao chat/source inspector; [live contract](guide-live.md) |
-| Frozen paired cases, independent functional scoring, bound human review worksheets | `guide_evaluation.py`, `guide_review.py`, `tests/evaluation/guide/v1.json`; [evaluation method](guide-evaluation.md) |
+| Reviewed corpus, rights and publication eligibility | `content.py`, `guide_retrieval.py` |
+| Pinned offline CPU BGE, versioned indexes and hybrid ranking | `guide_embeddings.py`, `embedding_worker.py`, `guide_index.py`, `guide_hybrid.py` |
+| Ollama/direct DeepSeek JSON gateway and shared bounded usage | `provider_gateway.py`, `gateway_limits.py`, migration `0003_gateway` |
+| Exact claim support, bounded inventory explanations, signed context | `guide_harness.py`, `guide_personality.py` |
+| Versioned social personality and browser display validation | `packages/contracts/src/jinyao-policy.json`, web `guide-stream.ts` |
+| Owned JSON/SSE and page-memory Messenger lifecycle | `guide_api.py`, web guide BFF and `jinyao-chat.tsx` |
+| Dated functional evaluation and unscored human worksheets | `guide_evaluation.py`, `guide_review.py`, v1/v2 suites and live-review script |
 
-## Acceptance evidence
+## Original acceptance gates
 
-| Original Phase 03 gate | Current evidence and remaining work |
+| Gate | Current evidence / remaining limit |
 |---|---|
-| Real credentialed completion | Successful completion unverified. The earlier 401 was a provider mismatch; Ollama authentication is now verified. Demo mode and zero Ollama request quota disable generation. |
-| Supported/unsupported distinction in both languages | Verified in portable fixtures; v3 also handles the four previously missed listing paraphrases. Real-provider generation remains unverified. |
-| Reject invented citations and source instruction attacks | Verified in harness/evaluation fixtures; real model output remains unverified. |
-| Withdrawal, timeout and daily-cap errors | Verified in isolated portable tests; real PostgreSQL locking/withdrawal and live provider failure remain unverified. |
-| Keys absent from browser/logs; actual source drawer | Secret/foundation checks and prior browser fixtures pass. Current real PostgreSQL/provider browser round trip remains unverified. |
-| Dated bilingual evaluation and expert explanations | 64 cases with separated metrics delivered. Three human dimensions pending; broad explanatory behavior and reviewed coverage incomplete. No 95% expert-quality claim. |
-| Historical evidence versus interpretations/folklore/adaptation; checked chronology | Unavailable chronology and classification upgrades are rejected. Actual competing interpretations, glossary and chronology explanations need reviewed material and support validation. |
-| Follow-up simplification/depth with citations and uncertainty | Checked excerpts, consent/ownership and EN/ZH switches verified in fixtures. Simplification/depth repeats exact evidence; meaningful rewritten explanations remain unavailable. |
+| Real credentialed call | PASS for bounded Ollama EN/ZH browser calls; actual attempts, tokens and latency recorded |
+| Supported versus unsupported, both languages | PASS within one reviewed bilingual listing; ambiguity requests clarification |
+| Invented IDs / source instruction attacks | Portable harness, API and browser fault regressions; no unchecked raw model prose published |
+| Revocation / timeout / cap errors | Real PostgreSQL committed withdrawal/shared limits; injected provider timeout/cancellation regressions are labelled separately |
+| Keys server-side / actual source drawer | Real source inspector and configured-secret checks; no deployment or credential publication |
+| Dated expert-guide evaluation | PARTIAL: new functional development set passes; human correctness, clarity, faithfulness and personality remain unscored |
+| History / interpretation / folklore / chronology | PARTIAL: source statements remain attributed, unsupported upgrades rejected; new explanatory drafts need review and classified support |
+| Follow-up glossary / meaningful depth / simplification | PARTIAL: lossless listing simplification and language/depth controls work; glossary and broader explanations are honest coverage gaps |
 
-## Coverage and next work
+The [coverage matrix](guide-coverage.md) describes the single published Liaoning exhibit.
+Fuzhou / 复州 here means Wafangdian, not the Fujian city 福州. No province mismatch or new
+editorial approval is inferred. The new explanation packet and the earlier 16 candidates stay
+draft. Source-level approval does not approve additional wording or translations.
 
-The dated approved export contains two passages, English and Chinese versions of one Fuzhou shadow-puppetry inventory listing. It supports the listed locality and theatre category, not dynasty chronology, provenance, historical figures, material objects, beliefs, contested interpretations or a glossary. Sixteen prepared candidates remain drafts. Editorial review must precede publication; no approval is synthesized by the evaluator.
+## Reproduce locally
 
-1. Restore the dedicated PostgreSQL environment, apply migration `0003_gateway`, and verify current reviews, withdrawal and shared admission with actual database-backed tests. Existing historical DB evidence does not establish the current machine's readiness.
-2. Use the verified Ollama configuration with the deployment's positive bounded daily request quota after PostgreSQL is ready, then run live evaluation and actual SSE latency/usage checks. Fixture latency and mock tokens cannot establish provider behavior or cost.
-3. Complete the pinned BGE weights, run actual CPU indexing/inference on the current eligible corpus, and measure semantic relevance and latency before enabling dense retrieval.
-4. Obtain human editorial review of the draft coverage packet and independent bilingual review of actual answers. Expand explained terminology, chronology and attributed interpretations only with support checks and suitable reviewed evidence.
-5. Measure paraphrase recall and broader explanations with an independently reviewed, newly reserved evaluation version. Keep v1's failures and post-exposure interpretation intact. Broader explanation quality needs a new representative sample, not repeated inventory quotations.
+Use Node 22 and the locked pnpm/Python dependencies. On this checkout the project-local
+runtime is `.local/runtime/node-v22.23.3-linux-x64/bin`.
 
-Phase 04 should not be reported as the next accepted phase until these Phase 03 gates have evidence. Current blockers and results are also recorded in [build status](build-status.md).
+```sh
+export PATH="$PWD/.local/runtime/node-v22.23.3-linux-x64/bin:$PATH"
+pnpm db:up
+pnpm db:migrate
+```
+
+If the daemon's image pull still fails while the user proxy works, use the verified local-image
+recovery instead; it changes no daemon settings and preserves the pinned source identity:
+
+```sh
+uv run --project apps/api python scripts/pull-database-image.py
+docker load --input .local/pgvector-image/image.tar
+docker compose -f compose.yaml -f .local/compose-proxy.yaml up -d --wait db
+pnpm db:migrate
+```
+
+Restore only a fresh empty content database. This checkout is already restored; do not seed
+or overwrite it. `restore-manifest` deliberately refuses nonempty content tables.
+
+For the authorized bounded local live preview, use two terminals:
+
+```sh
+APP_MODE=live OLLAMA_DAILY_REQUEST_LIMIT=24 MODEL_RATE_LIMIT_PER_MINUTE=20 MODEL_MAX_OUTPUT_TOKENS=1200 pnpm dev:api
+APP_MODE=live API_BASE_URL=http://127.0.0.1:8000 pnpm dev
+```
+
+These overrides do not edit `.env` or change deployment budgets. Attempts persist in the
+UTC daily ledger, including failures; a restart does not reset the cap. The configured provider
+key stays in the ignored root configuration. Other later features still have unavailable live
+states. See [Ollama configuration](guide-ollama.md).
+
+Walkthrough: open `/guide`, open Jinyao, enable topic-context consent, ask “Where is Fuzhou
+shadow puppetry listed?”, inspect sources, ask “Explain that simply”, “Go deeper”, “Say that in
+Chinese”, then ask an unsupported origin-year question. Close/reopen preserves page history.
+The real controlled outage/recovery script starts isolated local services and stops them afterward.
+
+```sh
+node scripts/verify-guide-live.mjs
+OLLAMA_DAILY_REQUEST_LIMIT=24 node scripts/verify-guide-recovery.mjs
+uv run --project apps/api python scripts/prepare-guide-live-review.py
+```
+
+Both verification scripts may consume the explicit bounded live quota. Ordinary regression
+checks use isolated faults and do not exhaust an actual account's quota.
+
+## Next required work
+
+1. Obtain named human content/rights/translation review for the explanation packet. Implement
+   and independently evaluate classified reviewed explanation units before broader publication.
+2. Have independent bilingual reviewers assess the recorded actual answers and personality
+   using the bound worksheet. Pending fields are not passing scores.
+3. Keep v2's 24 reserved cases unexecuted until independent target review and final evaluation.
+   Neither v1's exposed score nor v2's machine-authored development score proves 95% quality.
+4. Expand reviewed relevance data before assessing hybrid gains. BGE now runs, but the
+   two-passage/six-query diagnostic is too small and cold queries are slow on this host.
+5. Check native browser zoom, Safari, physical devices, assistive technology and pitch network.
+   CSS zoom and Chromium emulation do not certify those environments.
+
+Earlier intermediate blockers are preserved in the dated Part 1–6 and push-audit reports.
+The current report supersedes their unavailable database/provider/BGE statements for this
+checkout. No Phase 04 acceptance or public deployment is implied.

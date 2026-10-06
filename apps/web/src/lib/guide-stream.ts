@@ -1,4 +1,5 @@
 import type { GuideAnswer, GuideEvidence, GuideRequest } from "@folkverse/contracts";
+import policy from "@folkverse/contracts/jinyao-policy.json";
 
 export class GuideError extends Error {
   constructor(public code: string) { super(code); }
@@ -11,7 +12,7 @@ const strings = (v: unknown): v is string[] => Array.isArray(v) && v.every(x => 
 
 function answerShape(v: unknown): v is GuideAnswer {
   return object(v) && typeof v.answer_id === "string" && typeof v.answer_text === "string" &&
-    v.answer_text.length <= 50000 && ["answered", "insufficient", "clarification"].includes(String(v.status)) &&
+    v.answer_text.length <= 50000 && ["answered", "insufficient", "clarification", "conversational"].includes(String(v.status)) &&
     ["en", "zh-CN"].includes(String(v.locale)) && ["concise", "beginner", "deeper"].includes(String(v.depth)) &&
     v.mode === "live" && ["partial", "insufficient"].includes(String(v.uncertainty)) &&
     typeof v.coverage_limit === "string" && strings(v.evidence_ids) && strings(v.related_exhibit_ids) &&
@@ -31,6 +32,13 @@ function checkedPublication(answer: GuideAnswer, sources: GuideEvidence[]): bool
   const claims = answer.claims ?? [];
   const evidence = answer.evidence_ids ?? [];
   const refs = [...(answer.answer_claim_ids ?? []), ...(answer.context_claim_ids ?? [])];
+  if (answer.status === "conversational") {
+    const intent = answer.social_intent;
+    return !!intent && Object.hasOwn(policy.social, intent) && answer.personality_version === policy.version &&
+      answer.answer_text === policy.social[intent][answer.locale] && !answer.coverage_limit &&
+      !claims.length && !sources.length && !evidence.length && !refs.length &&
+      !(answer.related_exhibit_ids ?? []).length && !answer.provider_attempt_id;
+  }
   if (answer.status !== "answered") return !claims.length && !sources.length && !evidence.length && !refs.length;
   const sameIds = (a: string[], b: string[]) => new Set(a).size === a.length &&
     new Set(b).size === b.length && a.length === b.length && a.every(id => b.includes(id));
@@ -56,7 +64,18 @@ function checkedPublication(answer: GuideAnswer, sources: GuideEvidence[]): bool
     return `${labels.join("; ")}:\n${claim.text}`;
   });
   const lead = answer.locale === "en" ? "Here is what the reviewed source says:" : "经过审核的来源这样记载：";
-  return answer.answer_text === `${lead}\n\n${sections.join("\n\n")}`;
+  let projection = "";
+  if (answer.presentation_version === "inventory_projection_v1") {
+    if (answer.depth === "concise") return false;
+    const text = claims.find(c => c.claim_id === refs[0])!.text;
+    const match = answer.locale === "en"
+      ? /^([A-Za-z -]+) is listed as ([A-Za-z -]+) (?:from|in) ([A-Z][a-z]+(?:[ ,'-]+[A-Z][a-z]+)*)\.$/.exec(text)
+      : /^([\u3400-\u9fff]+)在[\u3400-\u9fff]+名录中列为([\u3400-\u9fff]+)申报的([\u3400-\u9fff]+)项目。$/.exec(text);
+    if (!match) return false;
+    const fields: Record<string, string> = { title: match[1], category: match[answer.locale === "en" ? 2 : 3], location: match[answer.locale === "en" ? 3 : 2] };
+    projection = policy.projection[answer.locale][answer.depth].replace(/\{(title|category|location)\}/g, (_, name: string) => fields[name]) + "\n\n";
+  } else if (answer.presentation_version && answer.presentation_version !== "attributed_excerpt_v1") return false;
+  return answer.answer_text === `${projection}${lead}\n\n${sections.join("\n\n")}`;
 }
 
 export async function sendGuide(

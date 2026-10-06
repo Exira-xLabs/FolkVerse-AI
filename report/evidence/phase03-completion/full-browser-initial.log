@@ -1,0 +1,312 @@
+$ playwright test
+[WebServer] INFO:     Started server process [322638]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:322718) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:322766) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ next start --hostname 127.0.0.1
+[WebServer] (node:322803) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:322861) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:322934) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:322980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 67 tests using 1 worker
+
+(node:323093) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/content.spec.ts:4:5 › Liaoning published region → exhibit → attributed source works in both languages (8.4s)
+  ✓   2 tests/e2e/content.spec.ts:45:5 › published source index hides draft sources and exposes only permitted passages (1.9s)
+  ✓   3 tests/e2e/content.spec.ts:56:5 › collection error recovers and withdrawn drawer clears on revalidation (1.9s)
+  ✓   4 tests/e2e/dropdowns.spec.ts:5:5 › collection dropdown supports keyboard selection, cancellation, typeahead and outside dismissal (1.9s)
+  ✘   5 tests/e2e/dropdowns.spec.ts:48:5 › compact and Chinese touch dropdowns fit the viewport and preserve their choices (30.0s)
+(node:324533) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 tests/e2e/foundation.spec.ts:23:5 › museum routes work at desktop, mobile and tablet without page overflow (8.6s)
+  ✓   7 tests/e2e/foundation.spec.ts:43:5 › navigation, language persistence and keyboard skip path work (2.3s)
+  ✓   8 tests/e2e/foundation.spec.ts:62:5 › real web to API health and signed session round trip (1.2s)
+  ✓   9 tests/e2e/foundation.spec.ts:79:5 › health service errors are visible and retry recovers (982ms)
+  ✓  10 tests/e2e/foundation.spec.ts:93:5 › guide portrait retains transparency and narrow zoom layout stays usable (1.3s)
+  ✓  11 tests/e2e/foundation.spec.ts:104:5 › unknown routes stay missing and cross-origin session mutation is rejected (314ms)
+  ✓  12 tests/e2e/jinyao.spec.ts:3:5 › Jinyao cinematic hero responds to scrolling and replaces the previous scene (631ms)
+  ✓  13 tests/e2e/jinyao.spec.ts:19:5 › Messenger preview keeps messages local, cancels replies and restores keyboard focus (2.5s)
+  ✓  14 tests/e2e/jinyao.spec.ts:58:5 › mobile Chinese chat fits the viewport and reduced motion unpins the hero (1.9s)
+  ✓  15 tests/e2e/jinyao.spec.ts:76:5 › low data loads no Jinyao images (585ms)
+  ✓  16 tests/e2e/liaoning-map.spec.ts:4:5 › real Liaoning silhouette, 14 city markers and geographical city selection (2.5s)
+  ✓  17 tests/e2e/liaoning-map.spec.ts:36:5 › map pan, wheel zoom, keyboard camera, minimap and expanded map (1.6s)
+  ✓  18 tests/e2e/liaoning-map.spec.ts:66:5 › selected city circle stays centered through time and zoom for all fourteen cities (4.8s)
+  ✓  19 tests/e2e/liaoning-map.spec.ts:101:5 › sourced city territory highlights from map clicks and clears when returning to the province (1.1s)
+  ✘  20 tests/e2e/liaoning-map.spec.ts:135:5 › all cities remain selectable and searchable in Chinese at phone size (30.2s)
+(node:326181) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 tests/e2e/liaoning-map.spec.ts:157:5 › touch pinch changes the map camera without scrolling the page (1.1s)
+  ✓  22 tests/e2e/mobile-navigation.spec.ts:3:5 › phone menu supports links, Escape, focus restoration and desktop resizing (1.0s)
+  ✓  23 tests/e2e/mobile-navigation.spec.ts:30:5 › phone hero uses desktop artwork and places text in its empty left side (1.0s)
+  ✘  24 tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages (2.0m)
+(node:329168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  25 tests/e2e/museum-ui.spec.ts:41:5 › explore filters, empty state and source drawer keyboard focus (978ms)
+  ✓  26 tests/e2e/museum-ui.spec.ts:60:5 › journey reorder, remove and duration-constrained empty state (819ms)
+  ✓  27 tests/e2e/museum-ui.spec.ts:75:5 › both story branches, restart and actual recorded audio (852ms)
+  ✓  28 tests/e2e/museum-ui.spec.ts:86:5 › lens exposes unknown, poor image, denial, outage and loading without claiming recognition (1.7s)
+  ✓  29 tests/e2e/museum-ui.spec.ts:99:5 › guide submits bounded text, clearly scripted response and voice unavailable (1.6s)
+  ✓  30 tests/e2e/museum-ui.spec.ts:109:5 › interest edits redraw chart and reset clears suggestions (714ms)
+  ✘  31 tests/e2e/museum-ui.spec.ts:124:5 › live mode fails closed with no demo controls (5.7s)
+(node:329716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  32 tests/e2e/museum-ui.spec.ts:132:5 › published collection works in live mode with no fixture toggle (885ms)
+  ✓  33 tests/e2e/museum-ui.spec.ts:141:5 › reduced graphics, keyboard path and 200 percent page zoom (2.2s)
+  ✓  34 tests/e2e/ui-part-4.spec.ts:4:5 › phone quick navigation and filters retain place, clear and recover empty results (1.7s)
+  ✓  35 tests/e2e/ui-part-4.spec.ts:26:5 › reading, citations, shareable URL and evidence remain distinct and keyboard reachable (1.6s)
+  ✓  36 tests/e2e/ui-part-4.spec.ts:42:5 › Guide approved prompts, stop/retry/error/insufficient states stay clearly scripted (2.7s)
+  ✓  37 tests/e2e/ui-part-4.spec.ts:60:5 › composer adapts to narrowed viewport without hiding the active question (1.6s)
+  ✓  38 tests/e2e/ui-part-4.spec.ts:72:5 › Lens capture stays unavailable and cancelled preview cannot resume itself (1.3s)
+  ✓  39 tests/e2e/ui-part-4.spec.ts:85:5 › Story reading mode and endings offer actual continuations; interests link only approved records (1.6s)
+  ✓  40 tests/e2e/ui-part-4.spec.ts:100:5 › friendly 404 and audio metadata delay have concrete recoveries (1.6s)
+  ✓  41 tests/e2e/ui-part-4.spec.ts:111:5 › constrained network, offline collection and reconnect recovery (18.1s)
+  ✓  42 tests/e2e/ui-part-a.spec.ts:3:5 › Home features published EN/ZH text and opens that exhibit with its sources in both modes (3.8s)
+  ✓  43 tests/e2e/ui-part-a.spec.ts:23:5 › featured publication fails closed for errors, empty results and withdrawn records (1.0s)
+  ✓  44 tests/e2e/ui-part-a.spec.ts:39:5 › status keeps diagnostics optional and recovers from an outage in both languages (1.2s)
+  ✓  45 tests/e2e/ui-part-a.spec.ts:59:5 › decorative card purposes stay distinct and crops retain their aspect ratio (1.1s)
+  ✓  46 tests/e2e/ui-part-b.spec.ts:3:5 › source dialog includes integrity disclosure in keyboard order and distinguishes padding from backdrop (1.1s)
+  ✓  47 tests/e2e/ui-part-b.spec.ts:27:5 › region dropdown and directory fit the same city camera (1.4s)
+  ✓  48 tests/e2e/ui-part-b.spec.ts:40:5 › graphics preference survives navigation and reload (1.2s)
+  ✓  49 tests/e2e/ui-part-b.spec.ts:49:5 › phone map labels and controls remain readable and expanded map is a native modal (1.1s)
+  ✓  50 tests/e2e/ui-part-b.spec.ts:77:5 › each screen has a distinct localized title including server reloads (4.2s)
+  ✘  51 tests/e2e/ui-part-c.spec.ts:4:5 › Sources instructions, live capability copy and province query match actual scope (1.3s)
+(node:331171) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  52 tests/e2e/ui-part-c.spec.ts:19:5 › atlas distinguishes loading, outage, published city and empty city (1.5s)
+  ✓  53 tests/e2e/ui-part-c.spec.ts:37:5 › Guide keeps conversation through navigation without a clear control and resets on reload (3.1s)
+  ✓  54 tests/e2e/ui-part-c.spec.ts:58:5 › Journey draft criteria never relabel committed route and plan survives navigation (1.2s)
+  ✓  55 tests/e2e/ui-part-c.spec.ts:79:5 › Chinese story offers explicit English audio, text-only mode and complete transcript (703ms)
+  ✓  56 tests/e2e/ui-part-c.spec.ts:89:5 › reviewed exhibit context carries to all four next screens in demo/live and fails closed (8.9s)
+  ✓  57 tests/e2e/ui-refinement.spec.ts:3:5 › Explore defaults to map and collection view preserves map filters (1.6s)
+  ✓  58 tests/e2e/ui-refinement.spec.ts:23:5 › prototype controls are opt-in and keyboard can open every preview (1.1s)
+  ✓  59 tests/e2e/ui-refinement.spec.ts:40:5 › interests begin empty and contain only voluntary choices (716ms)
+  ✘  60 tests/e2e/ui-refinement.spec.ts:55:5 › phone artwork stays sharp at DPR 2 and the companion stays compact (597ms)
+(node:331786) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  61 tests/e2e/ui-remaining.spec.ts:3:5 › named control groups remain exposed to assistive navigation (935ms)
+  ✓  62 tests/e2e/ui-remaining.spec.ts:12:5 › visit bookmarks require opt-in, revalidate records, reset and never write browser storage (2.2s)
+  ✓  63 tests/e2e/ui-remaining.spec.ts:33:5 › reading sizes, light surface and actual dialog scroll progress stay usable on a phone (1.1s)
+  ✓  64 tests/e2e/ui-remaining.spec.ts:44:5 › city focus preview does not select a city and topographic tiles load at higher zoom (1.2s)
+  ✓  65 tests/e2e/ui-remaining.spec.ts:59:5 › fictional ending art and chapter progress differ; soundscape never autoplays and stops on exit (950ms)
+  ✓  66 tests/e2e/ui-remaining.spec.ts:70:5 › constellation can be edited by keyboard with equivalent sliders and reset (633ms)
+  ✘  67 tests/e2e/ui-remaining.spec.ts:77:5 › low-data preference skips decorative image requests on reload and survives navigation (1.2s)
+
+
+  1) tests/e2e/dropdowns.spec.ts:48:5 › compact and Chinese touch dropdowns fit the viewport and preserve their choices
+
+    Test timeout of 30000ms exceeded.
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/home/soufiane/FolkVerse-AI/test-results/.playwright-artifacts-0/traces/749c864ab9b04165abdd-a8197b44e387f5a19a77-recording11.network' -> '/home/soufiane/FolkVerse-AI/test-results/.playwright-artifacts-0/traces/749c864ab9b04165abdd-a8197b44e387f5a19a77-recording11-pwnetcopy-1.network'
+
+    Error: browserContext.close: Target page, context or browser has been closed
+
+      77 |     await expect(page.getByRole("heading", { name: "识别服务不可用" })).toBeVisible();
+      78 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    > 79 |   } finally { await context.close(); }
+         |               ^
+      80 | });
+      81 |
+        at /home/soufiane/FolkVerse-AI/tests/e2e/dropdowns.spec.ts:79:15
+
+    Error: ENOENT: no such file or directory, open '/home/soufiane/FolkVerse-AI/test-results/.playwright-artifacts-0/d8ab340f23cb3d1c12ed034f8df0c53e.zip'
+
+  2) tests/e2e/liaoning-map.spec.ts:135:5 › all cities remain selectable and searchable in Chinese at phone size
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Switch to Chinese' })
+
+
+      137 |   await page.goto("/explore");
+      138 |   await page.getByRole("button", { name: "Explore map", exact: true }).click();
+    > 139 |   await page.getByRole("button", { name: "Switch to Chinese" }).click();
+          |                                                                 ^
+      140 |   const atlas = page.getByRole("region", { name: "辽宁交互地图" });
+      141 |   await expect(atlas.locator(".atlas-city-grid button")).toHaveCount(14);
+      142 |   await atlas.getByLabel("搜索辽宁城市").fill("丹东");
+        at /home/soufiane/FolkVerse-AI/tests/e2e/liaoning-map.spec.ts:139:65
+
+    Error Context: test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/liaoning-map-all-cities-re-3b3d2-le-in-Chinese-at-phone-size/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Switch to Chinese' })
+
+
+      28 |       await expect(page.locator("h1")).toBeVisible();
+      29 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} at ${size.width}`).toBe(true);
+    > 30 |       await page.screenshot({ path: `${evidenceDir}/${String(index + 1).padStart(2, "0")}-${route === "/" ? "home" : route.split("/")[1]}-${size.width}.png`, fullPage: true, animations: "disabled" });
+         |                                                                     ^
+      31 |       await setLocale(page, "zh-CN");
+      32 |       await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN"); await ready(page);
+      33 |       if (route === "/explore") await expect(page.locator(".published-card h3")).toHaveText("复州皮影戏");
+        at /home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts:30:69
+
+    Error Context: test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/museum-ui-nine-museum-scre-0460e-ree-sizes-in-both-languages/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/e2e/museum-ui.spec.ts:124:5 › live mode fails closed with no demo controls ──────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'This experience is not available yet.' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'This experience is not available yet.' }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'This experience is not available yet.' })
+
+
+      125 | test("live mode fails closed with no demo controls", async ({ page }) => {
+      126 |   for (const route of ["journey", "guide", "lens", "dna", "stories/lantern-path"]) {
+    > 127 |     await page.goto(`http://127.0.0.1:3002/${route}`);
+          |                                                       ^
+      128 |     await expect(page.getByRole("heading", { name: "This experience is not available yet." })).toBeVisible();
+      129 |     await expect(page.locator(".fixture-content")).toHaveCount(0);
+      130 |   }
+        at /home/soufiane/FolkVerse-AI/tests/e2e/museum-ui.spec.ts:127:96
+
+    Error Context: test-results/museum-ui-live-mode-fails-closed-with-no-demo-controls/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/museum-ui-live-mode-fails-closed-with-no-demo-controls/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/museum-ui-live-mode-fails-closed-with-no-demo-controls/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests/e2e/ui-part-c.spec.ts:4:5 › Sources instructions, live capability copy and province query match actual scope
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('footer')
+    Expected substring: "Published collection available"
+    Error: strict mode violation: locator('footer') resolved to 2 elements:
+        1) <footer>…</footer> aka getByText('LanguageEN / 中文')
+        2) <footer class="museum-footer">…</footer> aka getByText('Published collection · guide uses reviewed sourcesUse less dataSimplify')
+
+    Call log:
+      - Expect "toContainText" locator('footer') with timeout 5000ms
+      - waiting for locator('footer')
+
+
+       9 |   await page.goto("http://127.0.0.1:3002/explore"); await provinceRequest;
+      10 |   await expect(page.locator(".published-card")).toHaveCount(1);
+    > 11 |   await expect(page.locator("footer")).toContainText("Published collection available");
+         |                                        ^
+      12 |   await expect(page.locator("footer")).toContainText("AI experiences not connected");
+      13 |   await page.getByLabel("Region", { exact: true }).click();
+      14 |   await expect(page.getByRole("option")).toHaveCount(15);
+        at /home/soufiane/FolkVerse-AI/tests/e2e/ui-part-c.spec.ts:11:40
+
+    Error Context: test-results/ui-part-c-Sources-instruct-b2965-ce-query-match-actual-scope/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-part-c-Sources-instruct-b2965-ce-query-match-actual-scope/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-part-c-Sources-instruct-b2965-ce-query-match-actual-scope/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) tests/e2e/ui-refinement.spec.ts:55:5 › phone artwork stays sharp at DPR 2 and the companion stays compact
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 250
+    Received:   540
+
+      78 |         return { width: box.width, height: box.height, candidateWidth: Number(candidate), fit: getComputedStyle(image).objectFit };
+      79 |       });
+    > 80 |       expect(geometry.height).toBeLessThan(250);
+         |                               ^
+      81 |       expect(geometry.candidateWidth).toBeGreaterThanOrEqual(geometry.width * 2);
+      82 |       expect(geometry.fit).toBe("contain");
+      83 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+        at /home/soufiane/FolkVerse-AI/tests/e2e/ui-refinement.spec.ts:80:31
+
+    Error Context: test-results/ui-refinement-phone-artwor-af3e3-the-companion-stays-compact/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-refinement-phone-artwor-af3e3-the-companion-stays-compact/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-refinement-phone-artwor-af3e3-the-companion-stays-compact/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) tests/e2e/ui-remaining.spec.ts:77:5 › low-data preference skips decorative image requests on reload and survives navigation
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "http://127.0.0.1:3000/folkverse/brand/folkverse-shrine.png",
+    + ]
+
+      79 |   await page.reload(); await expect(page.locator(".scene-art, .card-art img")).toHaveCount(0); await expect(page.locator(".featured-record")).toContainText("Fuzhou shadow puppetry");
+      80 |   await page.getByRole("link", { name: "Explore", exact: true }).click(); await expect(page.getByRole("button", { name: "Restore images", exact: true })).toHaveAttribute("aria-pressed", "true");
+    > 81 |   await page.getByRole("button", { name: "Explore map", exact: true }).click(); await expect(page.locator(".liaoning-atlas")).toHaveAttribute("data-terrain-ready", "true"); expect(images).toEqual([]);
+         |                                                                                                                                                                                             ^
+      82 |   await page.getByRole("button", { name: "Restore images", exact: true }).click(); await page.goto("/"); await expect(page.locator(".scene-art")).toBeVisible();
+      83 | });
+      84 |
+        at /home/soufiane/FolkVerse-AI/tests/e2e/ui-remaining.spec.ts:81:189
+
+    Error Context: test-results/ui-remaining-low-data-pref-750ec-oad-and-survives-navigation/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-remaining-low-data-pref-750ec-oad-and-survives-navigation/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/ui-remaining-low-data-pref-750ec-oad-and-survives-navigation/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7 failed
+    tests/e2e/dropdowns.spec.ts:48:5 › compact and Chinese touch dropdowns fit the viewport and preserve their choices
+    tests/e2e/liaoning-map.spec.ts:135:5 › all cities remain selectable and searchable in Chinese at phone size
+    tests/e2e/museum-ui.spec.ts:19:5 › nine museum screens retain artwork and stay usable at three sizes in both languages
+    tests/e2e/museum-ui.spec.ts:124:5 › live mode fails closed with no demo controls ───────────────
+    tests/e2e/ui-part-c.spec.ts:4:5 › Sources instructions, live capability copy and province query match actual scope
+    tests/e2e/ui-refinement.spec.ts:55:5 › phone artwork stays sharp at DPR 2 and the companion stays compact
+    tests/e2e/ui-remaining.spec.ts:77:5 › low-data preference skips decorative image requests on reload and survives navigation
+  60 passed (5.6m)
+[ELIFECYCLE] Command failed with exit code 1.

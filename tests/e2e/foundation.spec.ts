@@ -55,7 +55,7 @@ test("navigation, language persistence and keyboard skip path work", async ({ pa
   await expect(page.locator("h1")).toHaveText("辽宁，一省故事");
   await capture(page, "explore-zh-1600");
   await page.getByRole("button", { name: "Switch to English" }).click();
-  await page.getByRole("link", { name: "FolkVerse China", exact: true }).click();
+  await page.getByRole("link", { name: "FolkVerse home", exact: true }).click();
   await expect(page).toHaveURL("/");
 });
 
@@ -107,4 +107,21 @@ test("unknown routes stay missing and cross-origin session mutation is rejected"
   const denied = await request.post("/api/v1/session", { headers: { Origin: "https://attacker.example" } });
   expect(denied.status()).toBe(403);
   expect((await denied.json()).error.code).toBe("origin_denied");
+});
+
+test("navigation stays contained and current tab is reachable at 200 percent CSS zoom", async ({ page }) => {
+  for (const route of routes) {
+    await page.goto(route);
+    await page.evaluate(() => { document.body.style.zoom = "2"; });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route).toBe(true);
+    const current = page.locator(".museum-nav > .nav-tabs [aria-current=page]");
+    if (await current.count()) {
+      await current.focus();
+      await expect(current).toBeFocused();
+      await expect.poll(() => current.evaluate(node => {
+        const bounds = node.getBoundingClientRect(), row = node.parentElement!.getBoundingClientRect();
+        return bounds.left >= row.left - 1 && bounds.right <= row.right + 1;
+      })).toBe(true);
+    }
+  }
 });

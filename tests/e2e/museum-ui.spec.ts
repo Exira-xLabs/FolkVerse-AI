@@ -1,3 +1,4 @@
+import { setLocale } from "../support/locale";
 const evidenceDir = process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/phase02";
 
 import { expect, test, type Page } from "@playwright/test";
@@ -27,12 +28,12 @@ test("nine museum screens retain artwork and stay usable at three sizes in both 
       await expect(page.locator("h1")).toBeVisible();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} at ${size.width}`).toBe(true);
       await page.screenshot({ path: `${evidenceDir}/${String(index + 1).padStart(2, "0")}-${route === "/" ? "home" : route.split("/")[1]}-${size.width}.png`, fullPage: true, animations: "disabled" });
-      await page.getByRole("button", { name: "Switch to Chinese" }).click();
+      await setLocale(page, "zh-CN");
       await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN"); await ready(page);
       if (route === "/explore") await expect(page.locator(".published-card h3")).toHaveText("复州皮影戏");
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `${route} Chinese at ${size.width}`).toBe(true);
       await page.screenshot({ path: `${evidenceDir}/zh-${index + 1}-${size.width}.png`, fullPage: true, animations: "disabled" });
-      await page.getByRole("button", { name: "Switch to English" }).click();
+      await setLocale(page, "en");
     }
   }
   expect(errors).toEqual([]);
@@ -122,11 +123,20 @@ test("interest edits redraw chart and reset clears suggestions", async ({ page }
 });
 
 test("live mode fails closed with no demo controls", async ({ page }) => {
-  for (const route of ["journey", "guide", "lens", "dna", "stories/lantern-path"]) {
+  for (const route of ["journey", "lens", "dna", "stories/lantern-path"]) {
     await page.goto(`http://127.0.0.1:3002/${route}`);
     await expect(page.getByRole("heading", { name: "This experience is not available yet." })).toBeVisible();
     await expect(page.locator(".fixture-content")).toHaveCount(0);
   }
+  await page.goto("http://127.0.0.1:3002/guide");
+  await page.getByRole("button", { name: "Open Jinyao chat", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Send message", exact: true })).toBeVisible();
+  await expect(page.getByText("Scripted preview · no live AI · messages are not sent")).toHaveCount(0);
+  await page.getByRole("textbox", { name: "Message Jinyao" }).fill("Where is Fuzhou shadow puppetry listed?");
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
+  // This config intentionally points a live web app at the demo API: honest failure.
+  await expect(page.getByRole("button", { name: "Retry question" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Inspect answer sources" })).toHaveCount(0);
 });
 
 test("published collection works in live mode with no fixture toggle", async ({ page }) => {

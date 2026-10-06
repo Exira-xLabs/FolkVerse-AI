@@ -490,7 +490,7 @@
             "type": "array"
           },
           "harness_version": {
-            "default": "guide-extractive-v3",
+            "default": "guide-supported-conversation-v4",
             "title": "Harness Version",
             "type": "string"
           },
@@ -508,8 +508,22 @@
             "title": "Mode",
             "type": "string"
           },
+          "personality_version": {
+            "default": "jinyao-conversation-v1",
+            "title": "Personality Version",
+            "type": "string"
+          },
+          "presentation_version": {
+            "default": "attributed_excerpt_v1",
+            "enum": [
+              "attributed_excerpt_v1",
+              "inventory_projection_v1"
+            ],
+            "title": "Presentation Version",
+            "type": "string"
+          },
           "prompt_version": {
-            "default": "jinyao-evidence-selector-v1",
+            "default": "jinyao-evidence-selector-v4",
             "title": "Prompt Version",
             "type": "string"
           },
@@ -542,7 +556,8 @@
               "ambiguous_topic",
               "unsupported_claim",
               "evidence_changed",
-              "unsafe_source"
+              "unsafe_source",
+              "social_turn"
             ],
             "title": "Reason",
             "type": "string"
@@ -568,6 +583,23 @@
             "title": "Retrieval Version",
             "type": "string"
           },
+          "social_intent": {
+            "anyOf": [
+              {
+                "enum": [
+                  "greeting",
+                  "identity",
+                  "thanks",
+                  "start"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Social Intent"
+          },
           "sources": {
             "items": {
               "$ref": "#/components/schemas/EvidencePassage"
@@ -579,7 +611,8 @@
             "enum": [
               "answered",
               "insufficient",
-              "clarification"
+              "clarification",
+              "conversational"
             ],
             "title": "Status",
             "type": "string"

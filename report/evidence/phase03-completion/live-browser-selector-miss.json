@@ -1,0 +1,576 @@
+{
+  "checkedAt": "2026-10-06T12:40:42.730Z",
+  "provenance": "real_browser_no_interception",
+  "conversations": [
+    {
+      "question": "Hello Jinyao!",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_47dc92b2c9e743d7ae0ede8fb99113bd",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "Hi, I’m Jinyao, your fictional museum companion. We can explore a reviewed exhibit together, at your pace.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "greeting",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "done": {
+        "answer_id": "ans_47dc92b2c9e743d7ae0ede8fb99113bd",
+        "first_meaningful_content_ms": null,
+        "response_content_ms": 107
+      },
+      "browserRoundTripMs": 195
+    },
+    {
+      "question": "Where is Fuzhou shadow puppetry listed?",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_fdfd78f06c4443a5b18f183df1e5ac40",
+        "locale": "en",
+        "depth": "concise",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "Here is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": "call_4ba039afe03048b1959ac5d2c9d872bc",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "done": {
+        "answer_id": "ans_fdfd78f06c4443a5b18f183df1e5ac40",
+        "first_meaningful_content_ms": 2758,
+        "response_content_ms": 2758
+      },
+      "browserRoundTripMs": 2847
+    },
+    {
+      "question": "Explain that simply",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_cde30f350dd4495186240e20f0d2ba4a",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "I do not have enough reviewed evidence to answer that question.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "The reviewed material currently supports a heritage listing, not broader history, techniques, definitions or chronology.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "done": {
+        "answer_id": "ans_cde30f350dd4495186240e20f0d2ba4a",
+        "first_meaningful_content_ms": null,
+        "response_content_ms": 2503
+      },
+      "browserRoundTripMs": 2613
+    },
+    {
+      "question": "Go deeper",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_95d5a15e14724e3c9f3ace2ba68cee7d",
+        "locale": "en",
+        "depth": "deeper",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "The listing identifies two details: its category is traditional theatre, and its recorded locality is Wafangdian, Liaoning. This listing alone does not establish an origin date or describe how it is performed.\n\nHere is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": "call_2382df986a8c467bb4591b080e79759a",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "done": {
+        "answer_id": "ans_95d5a15e14724e3c9f3ace2ba68cee7d",
+        "first_meaningful_content_ms": 1673,
+        "response_content_ms": 1673
+      },
+      "browserRoundTripMs": 1732
+    },
+    {
+      "question": "Thank you",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_cfb4543de0a94f1389ddfa9c83f48de1",
+        "locale": "en",
+        "depth": "deeper",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "You’re welcome. We can stay with this topic or explore another reviewed exhibit whenever you’re ready.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "thanks",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "done": {
+        "answer_id": "ans_cfb4543de0a94f1389ddfa9c83f48de1",
+        "first_meaningful_content_ms": null,
+        "response_content_ms": 105
+      },
+      "browserRoundTripMs": 198
+    },
+    {
+      "question": "Say that in Chinese",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_802b906562eb4fba8e8d8969d8bb58b0",
+        "locale": "zh-CN",
+        "depth": "deeper",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "名录提供了两项信息：项目类别为传统戏剧，申报地区为瓦房店市。仅凭这条记载，无法确定起源年代或解释表演技法。\n\n经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "这些资料仅支持名录信息；更广泛的历史解释及独立核验的改述目前仍不可用。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": "call_4ae16cd4798f40c69df50efacfc740bf",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-zh-CN",
+          "source_id": "ln-first",
+          "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+          "language": "zh-CN",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.073642Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+          "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ]
+        }
+      ],
+      "done": {
+        "answer_id": "ans_802b906562eb4fba8e8d8969d8bb58b0",
+        "first_meaningful_content_ms": 2925,
+        "response_content_ms": 2925
+      },
+      "browserRoundTripMs": 3188
+    },
+    {
+      "question": "复州皮影戏起源于哪一年？",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_a58e99b8ba814916957c08716503b419",
+        "locale": "zh-CN",
+        "depth": "deeper",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "目前经过审核的资料不足以回答这个问题。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "当前审核资料仅支持非遗名录信息，尚不足以解释更广泛的历史、技法、术语定义或年代。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "done": {
+        "answer_id": "ans_a58e99b8ba814916957c08716503b419",
+        "first_meaningful_content_ms": null,
+        "response_content_ms": 109
+      },
+      "browserRoundTripMs": 201
+    },
+    {
+      "question": "为什么？",
+      "httpStatus": 200,
+      "answer": {
+        "answer_id": "ans_fc2e2132f90b4d3d8f7cefa9fad3b00d",
+        "locale": "zh-CN",
+        "depth": "deeper",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "目前经过审核的资料不足以回答这个问题。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "当前审核资料仅支持非遗名录信息，尚不足以解释更广泛的历史、技法、术语定义或年代。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v3",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "done": {
+        "answer_id": "ans_fc2e2132f90b4d3d8f7cefa9fad3b00d",
+        "first_meaningful_content_ms": null,
+        "response_content_ms": 104
+      },
+      "browserRoundTripMs": 167
+    }
+  ],
+  "checks": [
+    {
+      "name": "web API PostgreSQL health",
+      "passed": true,
+      "details": {
+        "status": "ok",
+        "mode": "live",
+        "database": "available",
+        "pgvector": "available",
+        "schema_status": "current",
+        "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+        "pgvector_version": "0.8.5"
+      }
+    },
+    {
+      "name": "turn: Hello Jinyao!",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "turn: Where is Fuzhou shadow puppetry listed?",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual provider attempt recorded",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "current source inspector",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source inspector restores focus",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "turn: Explain that simply",
+      "passed": false,
+      "details": null
+    },
+    {
+      "name": "turn: Go deeper",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "turn: Thank you",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "turn: Say that in Chinese",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "language switched with supported context",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "turn: 复州皮影戏起源于哪一年？",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "turn: 为什么？",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "close reopen keeps page history",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no overflow 1600",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "composer reachable 1600",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no overflow 390",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "composer reachable 390",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no overflow 768",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "composer reachable 768",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "200 percent CSS zoom has no document overflow",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unscoped reference asks clarification",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "errors": []
+}

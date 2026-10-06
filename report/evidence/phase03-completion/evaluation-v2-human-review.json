@@ -1,0 +1,404 @@
+{
+  "version": "guide-human-review-v1",
+  "run_sha256": "19f671ede68f26545e0c22cd81b79598dd1d941325ba8ce496a2b296eb37efa3",
+  "run_mode": "fixture",
+  "instructions": "Leave passed/reviewer/time/rationale/basis empty until actual human review. Apply the evaluation rubric, record independent basis, and attest human review. Reviewing a fixture cannot certify real provider expertise.",
+  "ratings": [
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_recorded_place_en",
+      "case_ids": [
+        "v2_recorded_place_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_recorded_place_en",
+      "case_ids": [
+        "v2_recorded_place_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_recorded_place_zh-CN",
+      "case_ids": [
+        "v2_recorded_place_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_recorded_place_zh-CN",
+      "case_ids": [
+        "v2_recorded_place_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_listed_category_en",
+      "case_ids": [
+        "v2_listed_category_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_listed_category_en",
+      "case_ids": [
+        "v2_listed_category_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_listed_category_zh-CN",
+      "case_ids": [
+        "v2_listed_category_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_listed_category_zh-CN",
+      "case_ids": [
+        "v2_listed_category_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_beginner_en",
+      "case_ids": [
+        "v2_beginner_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_beginner_en",
+      "case_ids": [
+        "v2_beginner_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_beginner_zh-CN",
+      "case_ids": [
+        "v2_beginner_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_beginner_zh-CN",
+      "case_ids": [
+        "v2_beginner_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_deeper_en",
+      "case_ids": [
+        "v2_deeper_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_deeper_en",
+      "case_ids": [
+        "v2_deeper_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_deeper_zh-CN",
+      "case_ids": [
+        "v2_deeper_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_deeper_zh-CN",
+      "case_ids": [
+        "v2_deeper_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_simple_followup_en",
+      "case_ids": [
+        "v2_simple_followup_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_simple_followup_en",
+      "case_ids": [
+        "v2_simple_followup_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_simple_followup_zh-CN",
+      "case_ids": [
+        "v2_simple_followup_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_simple_followup_zh-CN",
+      "case_ids": [
+        "v2_simple_followup_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_language_followup_en",
+      "case_ids": [
+        "v2_language_followup_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_language_followup_en",
+      "case_ids": [
+        "v2_language_followup_en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "v2_language_followup_zh-CN",
+      "case_ids": [
+        "v2_language_followup_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "v2_language_followup_zh-CN",
+      "case_ids": [
+        "v2_language_followup_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "v2_recorded_place",
+      "case_ids": [
+        "v2_recorded_place_en",
+        "v2_recorded_place_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "v2_listed_category",
+      "case_ids": [
+        "v2_listed_category_en",
+        "v2_listed_category_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "v2_beginner",
+      "case_ids": [
+        "v2_beginner_en",
+        "v2_beginner_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "v2_deeper",
+      "case_ids": [
+        "v2_deeper_en",
+        "v2_deeper_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "v2_simple_followup",
+      "case_ids": [
+        "v2_simple_followup_en",
+        "v2_simple_followup_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "v2_language_followup",
+      "case_ids": [
+        "v2_language_followup_en",
+        "v2_language_followup_zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    }
+  ]
+}

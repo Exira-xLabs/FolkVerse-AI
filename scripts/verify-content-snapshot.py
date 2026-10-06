@@ -54,18 +54,25 @@ try:
             expected = json.loads((ROOT / "data/manifests/corpus.json").read_text())[
                 "counts"
             ]
-            assert counts(db) == expected
+            actual = counts(db)
+            # Downloaded bytes are optional ignored local state, not restored DB records.
+            local_images = actual.pop("downloaded_cc0_candidates")
+            expected = {k: v for k, v in expected.items() if k != "downloaded_cc0_candidates"}
+            assert actual == expected
             try:
                 restore(db, ROOT / "data/manifests/corpus.json")
                 raise AssertionError("Existing content must be preserved")
             except ValueError as exc:
                 assert "empty content tables" in str(exc)
             db.rollback()
-            assert counts(db) == expected
+            preserved = counts(db)
+            assert preserved.pop("downloaded_cc0_candidates") == local_images
+            assert preserved == expected
             print(
                 "PASS: fresh migrations, original review hashes, exact corpus counts, "
                 "and refusal to overwrite existing content."
             )
+            print(f"Local optional CC0 image files available: {local_images}; not restored by Git.")
     finally:
         temporary.dispose()
 finally:

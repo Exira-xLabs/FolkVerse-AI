@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-06T20:47:15.199268+08:00",
+  "timezone": "Asia/Shanghai",
+  "base_commit": "7e8a0150a2c5de7c78dbf3b95c5521f54a6af3e0",
+  "branch": "main",
+  "python": "3.12.13",
+  "platform": "Linux-7.2.4-arch1-2-x86_64-with-glibc2.44",
+  "node": "v22.23.3",
+  "pnpm": "11.10.0",
+  "harness": "guide-supported-conversation-v4",
+  "prompt": "jinyao-evidence-selector-v4",
+  "gateway": "guide-json-v3",
+  "personality": "jinyao-conversation-v1",
+  "hashes": {
+    "apps/api/src/folkverse/guide_harness.py": "54739053e2b8c80d7de31680ac8b70256a7464faa6beebc4fd08b35cf0b75cb7",
+    "apps/api/src/folkverse/provider_gateway.py": "95537e109f29991eaa1f37c38e5cf6cabd5546f562259caa10ea74e41c0c488a",
+    "apps/api/src/folkverse/guide_personality.py": "9cdb1cbe666f94ef39fc017d75772d4bb960dffdb501eea9c52e46d6540d53a3",
+    "apps/web/src/lib/guide-stream.ts": "f1fa669574c2c5203d566855d98c27328e6c63d22a266ddd734d83e76016fa8d",
+    "packages/contracts/src/jinyao-policy.json": "12707498cd0e17a4d1aebed128516a45433f341fe233df0446fe1ac7bf909ff9",
+    "data/manifests/corpus.json": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+    "tests/evaluation/guide/v2.json": "96da71c0550b8f81c84d8cb06352cab635898f761e983d6d48b121b8e2599395"
+  },
+  "root_mode": "demo",
+  "root_daily_requests": 0,
+  "preview_daily_requests": 24,
+  "preview_retrieval": "lexical_only"
+}

@@ -1,0 +1,32 @@
+{
+  "version": "jinyao-conversation-v1",
+  "social": {
+    "greeting": {
+      "en": "Hi, I’m Jinyao, your fictional museum companion. We can explore a reviewed exhibit together, at your pace.",
+      "zh-CN": "你好，我是锦瑶，FolkVerse 的虚构博物馆伙伴。我们可以从一件经过审核的展项开始，按你的节奏慢慢探索。"
+    },
+    "identity": {
+      "en": "I’m Jinyao, a fictional companion in FolkVerse. I help you explore reviewed cultural sources, and I’ll tell you when those sources don’t support an answer.",
+      "zh-CN": "我是锦瑶，FolkVerse 中的虚构文化伙伴。我会陪你阅读经过审核的文化资料；资料不足时，我会坦诚说明。"
+    },
+    "thanks": {
+      "en": "You’re welcome. We can stay with this topic or explore another reviewed exhibit whenever you’re ready.",
+      "zh-CN": "不客气。你可以继续聊这个话题，也可以随时探索另一件经过审核的展项。"
+    },
+    "start": {
+      "en": "Choose an exhibit from Explore, or tap one of the exhibit names below. I can help you read its sources and distinguish what is documented from what remains unknown.",
+      "zh-CN": "可以在探索页面选择展项，或点击下方的展项名称。我会陪你查看来源，分清资料记载了什么、还有哪些问题尚无依据。"
+    }
+  },
+  "lead": {"en": "Here is what the reviewed source says:", "zh-CN": "经过审核的来源这样记载："},
+  "projection": {
+    "en": {
+      "beginner": "The inventory lists {title} under {category}, with {location} as the recorded locality.",
+      "deeper": "The listing identifies two details: its category is {category}, and its recorded locality is {location}. This listing alone does not establish an origin date or describe how it is performed."
+    },
+    "zh-CN": {
+      "beginner": "这份名录把{title}列为{category}项目，申报地区是{location}。",
+      "deeper": "名录提供了两项信息：项目类别为{category}，申报地区为{location}。仅凭这条记载，无法确定起源年代或解释表演技法。"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-06T12:16:52.437606+00:00",
+  "provider": "ollama",
+  "base_url": "https://ollama.com/v1",
+  "model": "deepseek-v4.1-flash",
+  "key_present": true,
+  "app_mode": "demo",
+  "daily_request_limit": 0,
+  "daily_usd_budget": null,
+  "authentication": "accepted",
+  "generation_verified": false,
+  "catalog_http_status": 200,
+  "model_in_catalog": true,
+  "http_status": 404,
+  "invalid_control_http_status": 401
+}

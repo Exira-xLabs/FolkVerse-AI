@@ -1,3 +1,4 @@
+import { setLocale } from "../support/locale";
 import { expect, test } from "@playwright/test";
 const evidenceDir = process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/phase02-map";
 
@@ -136,7 +137,7 @@ test("all cities remain selectable and searchable in Chinese at phone size", asy
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/explore");
   await page.getByRole("button", { name: "Explore map", exact: true }).click();
-  await page.getByRole("button", { name: "Switch to Chinese" }).click();
+  await setLocale(page, "zh-CN");
   const atlas = page.getByRole("region", { name: "辽宁交互地图" });
   await expect(atlas.locator(".atlas-city-grid button")).toHaveCount(14);
   await atlas.getByLabel("搜索辽宁城市").fill("丹东");

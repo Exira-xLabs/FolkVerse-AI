@@ -1,0 +1,6 @@
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [05:56<00:00, 35.64s/it]Fetching 10 files: 100%|██████████| 10/10 [05:56<00:00, 35.64s/it]
+{
+  "status": "prepared",
+  "model_version": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181:cls:normalized-f32:8192:v1",
+  "bytes": 2293315801
+}

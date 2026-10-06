@@ -1,0 +1,2033 @@
+{
+  "evaluator_sha256": "4f0edba07c0695fe6a9ceeb291555bf5e6de90c27b1c4fc7c7fc3f65248f7553",
+  "evaluator_version": "guide-functional-evaluation-v2",
+  "evaluated_at": "2026-10-06T12:45:35.705199+00:00",
+  "suite_version": "jinyao-evaluation-v2",
+  "suite_sha256": "96da71c0550b8f81c84d8cb06352cab635898f761e983d6d48b121b8e2599395",
+  "manifest_sha256": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "annotation_status": "machine_authored_functional_targets_pending_human_review",
+  "split_policy": "24 development cases; 24 reserved cases remain unexecuted and must not tune implementation. Author-written reserve is not independent gold.",
+  "mode": "fixture",
+  "run_status": "completed",
+  "provenance": "offline_export_mock_gateway",
+  "versions": {
+    "provider": "evaluation-fixture",
+    "corpus": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+    "harness": "guide-supported-conversation-v4",
+    "prompt": "jinyao-evidence-selector-v4",
+    "retrieval": "lexical-bm25-cjk-v1",
+    "gateway": "guide-json-v3",
+    "embedding_model": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181:cls:normalized-f32:8192:v1",
+    "provider_model": "evaluation-fixture",
+    "harness_sha256": "54739053e2b8c80d7de31680ac8b70256a7464faa6beebc4fd08b35cf0b75cb7"
+  },
+  "coverage": {
+    "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+    "passage_counts": {
+      "en": 1,
+      "zh-CN": 1
+    },
+    "source_ids": [
+      "ln-first"
+    ],
+    "exhibit_ids": [
+      "liaoning-dalian-01"
+    ],
+    "region_ids": [
+      "liaoning",
+      "liaoning-dalian"
+    ],
+    "periods": [],
+    "people": [],
+    "objects": [],
+    "gaps": [
+      "Period, dynasty, person and object coverage is not indexed.",
+      "A lexical match does not establish support for a question or historical claim.",
+      "No reviewed translations; dense retrieval needs a current offline index."
+    ]
+  },
+  "split_counts": {
+    "development": 24
+  },
+  "overall": {
+    "cases_executed": 24,
+    "dimensions": {
+      "historical_correctness": {
+        "numerator": null,
+        "denominator": 0,
+        "sample_size": 12,
+        "rate": null,
+        "status": "pending_independent_human_review",
+        "rubric": "Human check history against independent primary/scholarly evidence."
+      },
+      "claim_support": {
+        "numerator": 12,
+        "denominator": 12,
+        "sample_size": 12,
+        "rate": 1.0,
+        "method": "Exact reviewed statement support per answer; abstentions excluded."
+      },
+      "citation_validity": {
+        "numerator": 12,
+        "denominator": 12,
+        "sample_size": 12,
+        "rate": 1.0,
+        "method": "Per answered response: complete eligible IDs, metadata and source mapping."
+      },
+      "explanatory_clarity": {
+        "numerator": null,
+        "denominator": 0,
+        "sample_size": 12,
+        "rate": null,
+        "status": "pending_independent_human_review",
+        "rubric": "Human judge directness, depth and usefulness; copying alone is insufficient."
+      },
+      "bilingual_faithfulness": {
+        "numerator": null,
+        "denominator": 0,
+        "sample_size": 6,
+        "rate": null,
+        "status": "pending_independent_human_review",
+        "rubric": "Human compare EN/ZH meaning and terminology; locale IDs alone are insufficient."
+      },
+      "uncertainty": {
+        "numerator": 16,
+        "denominator": 16,
+        "sample_size": 16,
+        "rate": 1.0,
+        "method": "Per response: required partial/insufficient state; errors excluded."
+      },
+      "followup_consistency": {
+        "numerator": 4,
+        "denominator": 4,
+        "sample_size": 4,
+        "rate": 1.0,
+        "method": "Checked seed, expected result, citations and uncertainty per follow-up case."
+      }
+    },
+    "diagnostics": {
+      "scenario_outcome": {
+        "numerator": 24,
+        "denominator": 24,
+        "sample_size": 24,
+        "rate": 1.0,
+        "method": "Frozen draft functional targets, including supported paraphrases."
+      },
+      "locale_delivery": {
+        "numerator": 24,
+        "denominator": 24,
+        "sample_size": 24,
+        "rate": 1.0,
+        "method": "Locale field agreement, not bilingual quality."
+      }
+    },
+    "failures": []
+  },
+  "by_split": {
+    "development": {
+      "cases_executed": 24,
+      "dimensions": {
+        "historical_correctness": {
+          "numerator": null,
+          "denominator": 0,
+          "sample_size": 12,
+          "rate": null,
+          "status": "pending_independent_human_review",
+          "rubric": "Human check history against independent primary/scholarly evidence."
+        },
+        "claim_support": {
+          "numerator": 12,
+          "denominator": 12,
+          "sample_size": 12,
+          "rate": 1.0,
+          "method": "Exact reviewed statement support per answer; abstentions excluded."
+        },
+        "citation_validity": {
+          "numerator": 12,
+          "denominator": 12,
+          "sample_size": 12,
+          "rate": 1.0,
+          "method": "Per answered response: complete eligible IDs, metadata and source mapping."
+        },
+        "explanatory_clarity": {
+          "numerator": null,
+          "denominator": 0,
+          "sample_size": 12,
+          "rate": null,
+          "status": "pending_independent_human_review",
+          "rubric": "Human judge directness, depth and usefulness; copying alone is insufficient."
+        },
+        "bilingual_faithfulness": {
+          "numerator": null,
+          "denominator": 0,
+          "sample_size": 6,
+          "rate": null,
+          "status": "pending_independent_human_review",
+          "rubric": "Human compare EN/ZH meaning and terminology; locale IDs alone are insufficient."
+        },
+        "uncertainty": {
+          "numerator": 16,
+          "denominator": 16,
+          "sample_size": 16,
+          "rate": 1.0,
+          "method": "Per response: required partial/insufficient state; errors excluded."
+        },
+        "followup_consistency": {
+          "numerator": 4,
+          "denominator": 4,
+          "sample_size": 4,
+          "rate": 1.0,
+          "method": "Checked seed, expected result, citations and uncertainty per follow-up case."
+        }
+      },
+      "diagnostics": {
+        "scenario_outcome": {
+          "numerator": 24,
+          "denominator": 24,
+          "sample_size": 24,
+          "rate": 1.0,
+          "method": "Frozen draft functional targets, including supported paraphrases."
+        },
+        "locale_delivery": {
+          "numerator": 24,
+          "denominator": 24,
+          "sample_size": 24,
+          "rate": 1.0,
+          "method": "Locale field agreement, not bilingual quality."
+        }
+      },
+      "failures": []
+    },
+    "heldout": {
+      "cases_executed": 0,
+      "dimensions": {
+        "historical_correctness": {
+          "numerator": null,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "status": "pending_independent_human_review",
+          "rubric": "Human check history against independent primary/scholarly evidence."
+        },
+        "claim_support": {
+          "numerator": 0,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "method": "Exact reviewed statement support per answer; abstentions excluded."
+        },
+        "citation_validity": {
+          "numerator": 0,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "method": "Per answered response: complete eligible IDs, metadata and source mapping."
+        },
+        "explanatory_clarity": {
+          "numerator": null,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "status": "pending_independent_human_review",
+          "rubric": "Human judge directness, depth and usefulness; copying alone is insufficient."
+        },
+        "bilingual_faithfulness": {
+          "numerator": null,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "status": "pending_independent_human_review",
+          "rubric": "Human compare EN/ZH meaning and terminology; locale IDs alone are insufficient."
+        },
+        "uncertainty": {
+          "numerator": 0,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "method": "Per response: required partial/insufficient state; errors excluded."
+        },
+        "followup_consistency": {
+          "numerator": 0,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "method": "Checked seed, expected result, citations and uncertainty per follow-up case."
+        }
+      },
+      "diagnostics": {
+        "scenario_outcome": {
+          "numerator": 0,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "method": "Frozen draft functional targets, including supported paraphrases."
+        },
+        "locale_delivery": {
+          "numerator": 0,
+          "denominator": 0,
+          "sample_size": 0,
+          "rate": null,
+          "method": "Locale field agreement, not bilingual quality."
+        }
+      },
+      "failures": []
+    }
+  },
+  "latency": {
+    "measurement": "Local elapsed including follow-up seed; no SSE measurement.",
+    "median_ms": 15.837688501051161,
+    "max_ms": 46.43762700288789
+  },
+  "usage": {
+    "real_provider_requests": 0,
+    "mocked_gateway_calls": 16,
+    "actual_tokens": null,
+    "actual_cost_usd": null,
+    "note": "Mock usage is excluded; no real provider call was made."
+  },
+  "skipped": [],
+  "cases": [
+    {
+      "id": "v2_greeting_en",
+      "family": "v2_greeting",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.08348600022145547,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_a212d7dd14094135b1c58b4e047057ad",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "Hi, I’m Jinyao, your fictional museum companion. We can explore a reviewed exhibit together, at your pace.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "greeting",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_greeting_zh-CN",
+      "family": "v2_greeting",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.16090599820017815,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_c08ba97db4af4c3eb63227455dae2fc6",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "你好，我是锦瑶，FolkVerse 的虚构博物馆伙伴。我们可以从一件经过审核的展项开始，按你的节奏慢慢探索。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "greeting",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_identity_en",
+      "family": "v2_identity",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.10936900071101263,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_909912c405fe46b29796c65ccf9e3e89",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "I’m Jinyao, a fictional companion in FolkVerse. I help you explore reviewed cultural sources, and I’ll tell you when those sources don’t support an answer.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "identity",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_identity_zh-CN",
+      "family": "v2_identity",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.08981000064522959,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_a856427b529a46c394a8a075768887c0",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "我是锦瑶，FolkVerse 中的虚构文化伙伴。我会陪你阅读经过审核的文化资料；资料不足时，我会坦诚说明。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "identity",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_thanks_en",
+      "family": "v2_thanks",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.10122599996975623,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_825d3fdb0d1e458496b1d76419829a49",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "You’re welcome. We can stay with this topic or explore another reviewed exhibit whenever you’re ready.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "thanks",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_thanks_zh-CN",
+      "family": "v2_thanks",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.10818800001288764,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_99ff45626b844b3bb670d18009c499dc",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "不客气。你可以继续聊这个话题，也可以随时探索另一件经过审核的展项。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "thanks",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_start_en",
+      "family": "v2_start",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.07778600047458895,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_2acaa08de38d409f94d4abd818053a5f",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "Choose an exhibit from Explore, or tap one of the exhibit names below. I can help you read its sources and distinguish what is documented from what remains unknown.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "start",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_start_zh-CN",
+      "family": "v2_start",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "conversational",
+      "expected_reason": "social_turn",
+      "actual_status": "conversational",
+      "actual_reason": "social_turn",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 0.06943599873920903,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_02fd309e0552469688ffe89a55f96959",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "可以在探索页面选择展项，或点击下方的展项名称。我会陪你查看来源，分清资料记载了什么、还有哪些问题尚无依据。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": "start",
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_recorded_place_en",
+      "family": "v2_recorded_place",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 24.687952998647233,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_1095413237d8466284817b1e69dd10c9",
+        "locale": "en",
+        "depth": "concise",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "Here is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-en",
+            "source_id": "ln-first",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "language": "en",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.071728Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+            "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_recorded_place_zh-CN",
+      "family": "v2_recorded_place",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 21.164476002013544,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_04abb84886ce4e778f111c781c65cf2a",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-zh-CN",
+            "source_id": "ln-first",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "language": "zh-CN",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.073642Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+            "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "这些资料仅支持名录信息；更广泛的历史解释及独立核验的改述目前仍不可用。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_listed_category_en",
+      "family": "v2_listed_category",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 23.150299999542767,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_adf8d6ca2be44f1bb1123a4ae15f19cf",
+        "locale": "en",
+        "depth": "concise",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "Here is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-en",
+            "source_id": "ln-first",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "language": "en",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.071728Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+            "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_listed_category_zh-CN",
+      "family": "v2_listed_category",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 22.084983000240754,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_8b49ed3350be49348921843114d559ce",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-zh-CN",
+            "source_id": "ln-first",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "language": "zh-CN",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.073642Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+            "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "这些资料仅支持名录信息；更广泛的历史解释及独立核验的改述目前仍不可用。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_beginner_en",
+      "family": "v2_beginner",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 22.06728500095778,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_960ad99862dd477a97d4e496fdbb051d",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "The inventory lists Fuzhou shadow puppetry under traditional theatre, with Wafangdian, Liaoning as the recorded locality.\n\nHere is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-en",
+            "source_id": "ln-first",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "language": "en",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.071728Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+            "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_beginner_zh-CN",
+      "family": "v2_beginner",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 25.582074998965254,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_e0b92ae2ba874d4695832986822808a1",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "这份名录把复州皮影戏列为传统戏剧项目，申报地区是瓦房店市。\n\n经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-zh-CN",
+            "source_id": "ln-first",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "language": "zh-CN",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.073642Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+            "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "这些资料仅支持名录信息；更广泛的历史解释及独立核验的改述目前仍不可用。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_deeper_en",
+      "family": "v2_deeper",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 22.39605500290054,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_14d7ce02779849c79931eaa1d2c72fbc",
+        "locale": "en",
+        "depth": "deeper",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "The listing identifies two details: its category is traditional theatre, and its recorded locality is Wafangdian, Liaoning. This listing alone does not establish an origin date or describe how it is performed.\n\nHere is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-en",
+            "source_id": "ln-first",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "language": "en",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.071728Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+            "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_deeper_zh-CN",
+      "family": "v2_deeper",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 24.381266001000768,
+      "provider_calls_mocked": 1,
+      "answer": {
+        "answer_id": "ans_fd2c024d24bb4d07a618af0721a274ea",
+        "locale": "zh-CN",
+        "depth": "deeper",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "名录提供了两项信息：项目类别为传统戏剧，申报地区为瓦房店市。仅凭这条记载，无法确定起源年代或解释表演技法。\n\n经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-zh-CN",
+            "source_id": "ln-first",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "language": "zh-CN",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.073642Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+            "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "这些资料仅支持名录信息；更广泛的历史解释及独立核验的改述目前仍不可用。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_1",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_simple_followup_en",
+      "family": "v2_simple_followup",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": true,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 46.43762700288789,
+      "provider_calls_mocked": 2,
+      "answer": {
+        "answer_id": "ans_76771e2abff64ae3b2126d5b797230a2",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "The inventory lists Fuzhou shadow puppetry under traditional theatre, with Wafangdian, Liaoning as the recorded locality.\n\nHere is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-en",
+            "source_id": "ln-first",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "language": "en",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.071728Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+            "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_2",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": "ans_0a1d05adf82a46dc95f46e953e56d12d"
+    },
+    {
+      "id": "v2_simple_followup_zh-CN",
+      "family": "v2_simple_followup",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": true,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 45.94499399900087,
+      "provider_calls_mocked": 2,
+      "answer": {
+        "answer_id": "ans_c7523a6e30884b0ca97b0370a61290b5",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "这份名录把复州皮影戏列为传统戏剧项目，申报地区是瓦房店市。\n\n经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-zh-CN",
+            "source_id": "ln-first",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "language": "zh-CN",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.073642Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+            "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "这些资料仅支持名录信息；更广泛的历史解释及独立核验的改述目前仍不可用。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_2",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": "ans_7bd5d403019c45659f567ffc7724767d"
+    },
+    {
+      "id": "v2_language_followup_en",
+      "family": "v2_language_followup",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": true,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 45.249763999891,
+      "provider_calls_mocked": 2,
+      "answer": {
+        "answer_id": "ans_32ee56f9760c486e95b96de9f93535b6",
+        "locale": "en",
+        "depth": "deeper",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "The listing identifies two details: its category is traditional theatre, and its recorded locality is Wafangdian, Liaoning. This listing alone does not establish an origin date or describe how it is performed.\n\nHere is what the reviewed source says:\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\nFuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-en",
+            "source_id": "ln-first",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "language": "en",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.071728Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+            "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "This supports the listing only. Broader historical explanation and independently checked paraphrases are not yet available.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_2",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": "ans_005f82aa243d41f6ab1b3f6287b82869"
+    },
+    {
+      "id": "v2_language_followup_zh-CN",
+      "family": "v2_language_followup",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "answered",
+      "expected_reason": "reviewed_excerpt",
+      "actual_status": "answered",
+      "actual_reason": "reviewed_excerpt",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": true,
+        "citation_validity": true,
+        "uncertainty": true,
+        "followup_consistency": true,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 46.213038000132656,
+      "provider_calls_mocked": 2,
+      "answer": {
+        "answer_id": "ans_aefe1c1813404db8a8a0332af6a3646c",
+        "locale": "zh-CN",
+        "depth": "deeper",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "reviewed_excerpt",
+        "answer_text": "名录提供了两项信息：项目类别为传统戏剧，申报地区为瓦房店市。仅凭这条记载，无法确定起源年代或解释表演技法。\n\n经过审核的来源这样记载：\n\nFirst provincial intangible cultural heritage list (2006) (Liaoning Provincial Government):\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+        "claims": [
+          {
+            "claim_id": "claim_eval",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_eval"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "sources": [
+          {
+            "passage_id": "passage-liaoning-dalian-01-zh-CN",
+            "source_id": "ln-first",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "language": "zh-CN",
+            "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+            "rights_basis": "Original short attributed summary; no source images or full text reused",
+            "institution": "Liaoning Provincial Government",
+            "source_title": "First provincial intangible cultural heritage list (2006)",
+            "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+            "fetched_at": "2026-10-05T01:26:30.047882Z",
+            "reviewed_at": "2026-10-05T01:31:27.073642Z",
+            "reviewer": "Project owner (user)",
+            "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+            "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+            "exhibit_ids": [
+              "liaoning-dalian-01"
+            ],
+            "region_ids": [
+              "liaoning",
+              "liaoning-dalian"
+            ]
+          }
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "这些资料仅支持名录信息；更广泛的历史解释及独立核验的改述目前仍不可用。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": "fixture_2",
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "inventory_projection_v1"
+      },
+      "prior_answer_id": "ans_d37f46493e4e47028a5e967b2e48a7d1"
+    },
+    {
+      "id": "v2_chronology_gap_en",
+      "family": "v2_chronology_gap",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "actual_status": "insufficient",
+      "actual_reason": "coverage_gap",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 10.50401700194925,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_29205afd080d42abae1167198a718c38",
+        "locale": "en",
+        "depth": "concise",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "I do not have enough reviewed evidence to answer that question.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "The reviewed material currently supports a heritage listing, not broader history, techniques, definitions or chronology.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_chronology_gap_zh-CN",
+      "family": "v2_chronology_gap",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "actual_status": "insufficient",
+      "actual_reason": "coverage_gap",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 10.51090100008878,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_2f4d9a7cebea4d979f5e54201cec46e2",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "目前经过审核的资料不足以回答这个问题。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "当前审核资料仅支持非遗名录信息，尚不足以解释更广泛的历史、技法、术语定义或年代。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_glossary_gap_en",
+      "family": "v2_glossary_gap",
+      "split": "development",
+      "locale": "en",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "actual_status": "insufficient",
+      "actual_reason": "coverage_gap",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 10.0734689985984,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_d428f4d99b824e7cbc0c950cf7c7d6c9",
+        "locale": "en",
+        "depth": "concise",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "I do not have enough reviewed evidence to answer that question.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "The reviewed material currently supports a heritage listing, not broader history, techniques, definitions or chronology.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    },
+    {
+      "id": "v2_glossary_gap_zh-CN",
+      "family": "v2_glossary_gap",
+      "split": "development",
+      "locale": "zh-CN",
+      "expected_status": "insufficient",
+      "expected_reason": "coverage_gap",
+      "actual_status": "insufficient",
+      "actual_reason": "coverage_gap",
+      "scores": {
+        "scenario_outcome": true,
+        "claim_support": null,
+        "citation_validity": null,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "locale_delivery": true
+      },
+      "elapsed_ms": 10.285798001859803,
+      "provider_calls_mocked": 0,
+      "answer": {
+        "answer_id": "ans_dc7528af20494b88b85cf0d93daad4e7",
+        "locale": "zh-CN",
+        "depth": "concise",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "目前经过审核的资料不足以回答这个问题。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "当前审核资料仅支持非遗名录信息，尚不足以解释更广泛的历史、技法、术语定义或年代。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_ae6cecdf5f5608052d40a9a52c33658b42cb7aadc1a5a946cae5591c4563ca48",
+        "harness_version": "guide-supported-conversation-v4",
+        "prompt_version": "jinyao-evidence-selector-v4",
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v1",
+        "social_intent": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "prior_answer_id": null
+    }
+  ],
+  "expert_quality_verified": false,
+  "run_label": "v2-development-only"
+}

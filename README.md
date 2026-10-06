@@ -4,6 +4,8 @@ FolkVerse is a competition project for a bilingual interactive cultural museum. 
 
 The supplied business plan and competition deck are proposals. The first prototype targets one reviewed region, ten reviewed exhibits, thirty eligible artifact records and one small branching story. These counts are targets, not imported or approved content. The competition schedule recorded in the kit has a 30 September document deadline, a 10 October internal rehearsal target and finals on 11–18 October if selected; this implementation does not alter submitted materials.
 
+Current Phase 03: a real bounded bilingual Jinyao guide is verified through PostgreSQL and Ollama; broader reviewed explanations and independent quality review remain pending. [Current delivery report](report/PHASE_03_COMPLETION.md), [personality](docs/jinyao-personality.md), [coverage](docs/guide-coverage.md).
+
 Current scope: **the whole Liaoning province**. Phase 02 is locally complete with 14 city candidates, 1 user-approved published exhibit and 2 approved passages. The separate Met catalog has 37 draft records and 32 downloaded CC0 image candidates; none is published or assigned invented Liaoning provenance. See the [current verified status](docs/build-status.md).
 
 Explore opens an interactive atlas with Liaoning's sourced province outline and all 14 municipal territories. Selecting a city highlights its boundary and fits it into view; modern locator markers, drag, wheel/pinch zoom, a minimap and expanded view work in English and Chinese. Realistic generated terrain follows a sourced elevation reference, while fine terrain details remain approximate. [Map implementation and sources](docs/liaoning-map.md). Preview: <http://localhost:3000/explore>.

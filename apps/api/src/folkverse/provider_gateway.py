@@ -12,7 +12,7 @@ from folkverse.config import Settings
 from folkverse.errors import ApiError
 from folkverse.gateway_limits import UsageLedger
 
-GATEWAY_VERSION = "guide-json-v2"
+GATEWAY_VERSION = "guide-json-v3"
 MAX_RESPONSE_BYTES = 131072
 TRANSIENT_STATUSES = {429, 500, 502, 503, 504}
 
@@ -123,6 +123,7 @@ class GuideGateway:
             "messages": [m.model_dump() for m in messages],
             "max_tokens": s.model_max_output_tokens,
             "stream": False,
+            "temperature": 0,
             "response_format": {"type": "json_object"},
         }
         if s.guide_provider == "deepseek":

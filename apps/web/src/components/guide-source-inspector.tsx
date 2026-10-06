@@ -10,7 +10,10 @@ export function GuideSourceInspector({ evidence, onClose }: { evidence: GuideEvi
   useEffect(() => {
     if (!evidence) return;
     const controller = new AbortController();
-    void (async () => {
+    let checking = false;
+    const revalidate = async () => {
+      if (checking) return;
+      checking = true;
       try {
         const results = await Promise.all(evidence.map(async p => {
           const result = await api.GET("/api/v1/sources/{identifier}", { params: { path: { identifier: p.source_id } }, cache: "no-store", signal: controller.signal });
@@ -18,8 +21,12 @@ export function GuideSourceInspector({ evidence, onClose }: { evidence: GuideEvi
         }));
         if (!controller.signal.aborted) setChecked({ evidence, current: results.every(Boolean) });
       } catch { if (!controller.signal.aborted) setChecked({ evidence, current: false }); }
-    })();
-    return () => controller.abort();
+      finally { checking = false; }
+    };
+    void revalidate();
+    const interval = setInterval(() => void revalidate(), 15000);
+    window.addEventListener("focus", revalidate);
+    return () => { clearInterval(interval); window.removeEventListener("focus", revalidate); controller.abort(); };
   }, [evidence]);
   const ready = checked?.evidence === evidence;
   return <SourceDrawer open={!!evidence} onClose={onClose} title={zh ? "回答所依据的资料" : "Evidence behind this answer"}>

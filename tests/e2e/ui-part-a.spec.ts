@@ -1,3 +1,4 @@
+import { setLocale } from "../support/locale";
 import { expect, test } from "@playwright/test";
 
 test("Home features published EN/ZH text and opens that exhibit with its sources in both modes", async ({ page }) => {
@@ -10,13 +11,13 @@ test("Home features published EN/ZH text and opens that exhibit with its sources
     await expect(page.getByRole("dialog").getByRole("link", { name: /Visit institutional source/ })).toBeVisible();
     await page.keyboard.press("Escape");
     await page.goto(base);
-    await page.getByRole("button", { name: "Switch to Chinese" }).click();
+    await setLocale(page, "zh-CN");
     await expect(page.locator(".featured-record h3")).toHaveText("复州皮影戏");
     await expect(page.locator(".featured-record")).not.toContainText("Fuzhou shadow puppetry");
     await page.getByRole("link", { name: "阅读展览与来源" }).click();
     await expect(page.getByRole("dialog").getByRole("heading", { name: "复州皮影戏", exact: true })).toBeVisible();
     await page.keyboard.press("Escape");
-    await page.getByRole("button", { name: "Switch to English" }).click();
+    await setLocale(page, "en");
   }
 });
 
@@ -40,7 +41,7 @@ test("status keeps diagnostics optional and recovers from an outage in both lang
   for (const zh of [false, true]) {
     await page.route("**/api/v1/health", route => route.fulfill({ status: 503, json: { error: { code: "unavailable" } } }));
     await page.goto("/status");
-    if (zh) await page.getByRole("button", { name: "Switch to Chinese" }).click();
+    if (zh) await setLocale(page, "zh-CN");
     const panel = page.locator('.status-panel').first();
     await expect(panel.getByRole("status")).toHaveText(zh ? "暂时无法连接博物馆，请重试。" : "We couldn’t connect to the museum right now. Please try again.");
     await expect(panel.locator(".service-list")).not.toBeVisible();

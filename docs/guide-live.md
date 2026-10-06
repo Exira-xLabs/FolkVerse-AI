@@ -1,5 +1,15 @@
 # Guide HTTP transport and Jinyao chat
 
+Current integration update (6 October 2026): actual PostgreSQL and bounded Ollama EN/ZH
+browser generation now pass; pinned BGE CPU inference/indexing is measured. The root
+configuration remains demo/zero quota; live verification uses process-only bounded settings.
+[Current report](../report/PHASE_03_COMPLETION.md), [personality policy](jinyao-personality.md),
+[coverage](guide-coverage.md) and [handoff](phase-03-handoff.md) supersede earlier unavailable
+integration statements below. Broader classified explanations and independent human quality
+remain pending. Beginner/deeper presentation uses a lossless inventory grammar; exact
+reviewed claims, attribution, revocation and browser publication validation remain enforced.
+
+
 Phase 03 Part 4, 6 October 2026 (Asia/Shanghai). The live UI and transport are implemented; real PostgreSQL/provider integration remains unverified. The extractive harness still supports only the narrow reviewed listing coverage described in [guide-harness.md](guide-harness.md).
 
 Push audit: the browser additionally requires nonempty support arrays, exact claim/source/reference mappings, requested source language, full cited-source coverage and the controlled attributed display before publishing. Six added browser cases reject violations. Provider selection now includes [Ollama Cloud](guide-ollama.md); real inference remains unverified.

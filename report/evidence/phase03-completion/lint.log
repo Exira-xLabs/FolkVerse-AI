@@ -1,0 +1,3 @@
+$ pnpm --filter @folkverse/web lint && uv run --project apps/api ruff check apps/api scripts/export-openapi.py
+$ eslint .
+All checks passed!

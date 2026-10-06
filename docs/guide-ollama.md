@@ -1,5 +1,15 @@
 # DeepSeek through Ollama Cloud
 
+Current integration update (6 October 2026): actual PostgreSQL and bounded Ollama EN/ZH
+browser generation now pass; pinned BGE CPU inference/indexing is measured. The root
+configuration remains demo/zero quota; live verification uses process-only bounded settings.
+[Current report](../report/PHASE_03_COMPLETION.md), [personality policy](jinyao-personality.md),
+[coverage](guide-coverage.md) and [handoff](phase-03-handoff.md) supersede earlier unavailable
+integration statements below. Broader classified explanations and independent human quality
+remain pending. Beginner/deeper presentation uses a lossless inventory grammar; exact
+reviewed claims, attribution, revocation and browser publication validation remain enforced.
+
+
 The active user-supplied credential is issued by **Ollama**, not DeepSeek's own platform. The earlier DeepSeek `/models` 401 responses resulted from sending that credential to the wrong provider. The push audit verifies Ollama authentication using an intentionally absent model: the saved key reaches model lookup (404), while an invalid control key fails authentication (401). No successful generation is needed for that diagnostic.
 
 The adapter uses Ollama's documented hosted compatibility endpoint, `https://ollama.com/v1/chat/completions`, JSON mode and `reasoning_effort=none`. Model identifiers come from the current `https://ollama.com/api/tags` catalog; the audit found `deepseek-v4.1-flash`. See [Ollama's compatibility documentation](https://github.com/ollama/ollama/blob/main/docs/api/openai-compatibility.mdx) and [authentication documentation](https://github.com/ollama/ollama/blob/main/docs/api/authentication.mdx).

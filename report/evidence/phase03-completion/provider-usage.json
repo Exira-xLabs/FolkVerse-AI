@@ -1,0 +1,138 @@
+{
+  "provider": "ollama",
+  "model": "deepseek-v4.1-flash",
+  "attempts": [
+    {
+      "id": "call_1c3a3521ca3046c9bdd7c78558c29fd5",
+      "status": "completed",
+      "prompt_tokens": 363,
+      "completion_tokens": 105,
+      "latency_ms": 1732
+    },
+    {
+      "id": "call_6c1ca59a73e548978b20a3d40240cdaa",
+      "status": "completed",
+      "prompt_tokens": 357,
+      "completion_tokens": 41,
+      "latency_ms": 2126
+    },
+    {
+      "id": "call_6ba87d82b1984a66b31085a6226fc17b",
+      "status": "completed",
+      "prompt_tokens": 356,
+      "completion_tokens": 105,
+      "latency_ms": 1761
+    },
+    {
+      "id": "call_63f898ff600d45d9a0bd4732c86a30eb",
+      "status": "completed",
+      "prompt_tokens": 363,
+      "completion_tokens": 109,
+      "latency_ms": 1699
+    },
+    {
+      "id": "call_f13f827e5fcd42c2bc941ec49322005d",
+      "status": "completed",
+      "prompt_tokens": 395,
+      "completion_tokens": 105,
+      "latency_ms": 2246
+    },
+    {
+      "id": "call_379d579295ed4f44851973fb2c9962e8",
+      "status": "completed",
+      "prompt_tokens": 399,
+      "completion_tokens": 105,
+      "latency_ms": 1511
+    },
+    {
+      "id": "call_d231863aee6f44768d8bd7ea62ae4b02",
+      "status": "completed",
+      "prompt_tokens": 399,
+      "completion_tokens": 105,
+      "latency_ms": 1575
+    },
+    {
+      "id": "call_132aaf628ec1467886e0a4333905d8b6",
+      "status": "completed",
+      "prompt_tokens": 397,
+      "completion_tokens": 109,
+      "latency_ms": 2717
+    },
+    {
+      "id": "call_4ba039afe03048b1959ac5d2c9d872bc",
+      "status": "completed",
+      "prompt_tokens": 396,
+      "completion_tokens": 105,
+      "latency_ms": 2540
+    },
+    {
+      "id": "call_b4815c3b2d314c78a524a4faf04c49e6",
+      "status": "completed",
+      "prompt_tokens": 400,
+      "completion_tokens": 41,
+      "latency_ms": 2307
+    },
+    {
+      "id": "call_2382df986a8c467bb4591b080e79759a",
+      "status": "completed",
+      "prompt_tokens": 400,
+      "completion_tokens": 105,
+      "latency_ms": 1488
+    },
+    {
+      "id": "call_4ae16cd4798f40c69df50efacfc740bf",
+      "status": "completed",
+      "prompt_tokens": 398,
+      "completion_tokens": 109,
+      "latency_ms": 2687
+    },
+    {
+      "id": "call_0b4676f91d774457a7cf247d7029963f",
+      "status": "completed",
+      "prompt_tokens": 465,
+      "completion_tokens": 105,
+      "latency_ms": 1585
+    },
+    {
+      "id": "call_d879ce6c0fbe4a7e9a17b392fae51752",
+      "status": "completed",
+      "prompt_tokens": 461,
+      "completion_tokens": 105,
+      "latency_ms": 1308
+    },
+    {
+      "id": "call_a09cd36b39544f758e4505f5ae0ade5e",
+      "status": "completed",
+      "prompt_tokens": 465,
+      "completion_tokens": 105,
+      "latency_ms": 1227
+    },
+    {
+      "id": "call_46bdf0826c1340ddb365f384ef5cc614",
+      "status": "completed",
+      "prompt_tokens": 465,
+      "completion_tokens": 105,
+      "latency_ms": 1104
+    },
+    {
+      "id": "call_aa0d9ed218b546d3a3328e37e46f1d45",
+      "status": "completed",
+      "prompt_tokens": 463,
+      "completion_tokens": 109,
+      "latency_ms": 1798
+    },
+    {
+      "id": "call_5cde727426294cceb0c87f9f2b8428b6",
+      "status": "completed",
+      "prompt_tokens": 461,
+      "completion_tokens": 105,
+      "latency_ms": 5017
+    }
+  ],
+  "attempt_count": 18,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 7403,
+  "completion_tokens": 1778,
+  "usd_cost": null,
+  "process_request_cap": 24
+}

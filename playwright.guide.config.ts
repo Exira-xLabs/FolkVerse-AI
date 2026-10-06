@@ -1,6 +1,7 @@
 // Part 4 browser fixtures deliberately bypass unavailable PostgreSQL/DeepSeek.
 import { defineConfig } from "@playwright/test";
 export default defineConfig({
+  outputDir: "test-results/guide",
   testDir: "./tests/e2e", testMatch: ["guide-live.spec.ts", "jinyao.spec.ts", "guide-proxy.spec.ts"],
   workers: 1, retries: 0, timeout: 30000,
   reporter: [["list"], ["json", { outputFile: `${process.env.FOLKVERSE_EVIDENCE_DIR ?? "report/evidence/phase03-part4"}/browser-results.json` }]],

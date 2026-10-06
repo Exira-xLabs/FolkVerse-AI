@@ -1,5 +1,15 @@
 # Guide explanation harness
 
+Current integration update (6 October 2026): actual PostgreSQL and bounded Ollama EN/ZH
+browser generation now pass; pinned BGE CPU inference/indexing is measured. The root
+configuration remains demo/zero quota; live verification uses process-only bounded settings.
+[Current report](../report/PHASE_03_COMPLETION.md), [personality policy](jinyao-personality.md),
+[coverage](guide-coverage.md) and [handoff](phase-03-handoff.md) supersede earlier unavailable
+integration statements below. Broader classified explanations and independent human quality
+remain pending. Beginner/deeper presentation uses a lossless inventory grammar; exact
+reviewed claims, attribution, revocation and browser publication validation remain enforced.
+
+
 Part 3, 6 October 2026 (Asia/Shanghai). The internal harness is implemented for the **existing narrow reviewed heritage-listing corpus**. It is a conservative evidence harness, not a demonstrated expert on Chinese history. [Phase sequence](phase-03-plan.md).
 
 Part 6 updates `guide-extractive-v2`: signed prior evidence versions are checked against current eligible passages independently of retrieval rank, title query or requested language. Locale switches then retrieve separately reviewed passages in the new language. Actual SQL EN↔ZH and withdrawal regressions verify this behavior. Frozen evaluation results and the initial baseline are in the [evaluation contract](guide-evaluation.md).

@@ -364,7 +364,7 @@ export interface components {
             evidence_ids?: string[];
             /**
              * Harness Version
-             * @default guide-extractive-v3
+             * @default guide-supported-conversation-v4
              */
             harness_version: string;
             /**
@@ -379,8 +379,19 @@ export interface components {
              */
             mode: "live";
             /**
+             * Personality Version
+             * @default jinyao-conversation-v1
+             */
+            personality_version: string;
+            /**
+             * Presentation Version
+             * @default attributed_excerpt_v1
+             * @enum {string}
+             */
+            presentation_version: "attributed_excerpt_v1" | "inventory_projection_v1";
+            /**
              * Prompt Version
-             * @default jinyao-evidence-selector-v1
+             * @default jinyao-evidence-selector-v4
              */
             prompt_version: string;
             /** Provider Attempt Id */
@@ -391,7 +402,7 @@ export interface components {
              * Reason
              * @enum {string}
              */
-            reason: "reviewed_excerpt" | "coverage_gap" | "ambiguous_topic" | "unsupported_claim" | "evidence_changed" | "unsafe_source";
+            reason: "reviewed_excerpt" | "coverage_gap" | "ambiguous_topic" | "unsupported_claim" | "evidence_changed" | "unsafe_source" | "social_turn";
             /** Related Exhibit Ids */
             related_exhibit_ids?: string[];
             /**
@@ -405,13 +416,15 @@ export interface components {
              * @default lexical-bm25-cjk-v1
              */
             retrieval_version: string;
+            /** Social Intent */
+            social_intent?: ("greeting" | "identity" | "thanks" | "start") | null;
             /** Sources */
             sources?: components["schemas"]["EvidencePassage"][];
             /**
              * Status
              * @enum {string}
              */
-            status: "answered" | "insufficient" | "clarification";
+            status: "answered" | "insufficient" | "clarification" | "conversational";
             /**
              * Uncertainty
              * @enum {string}

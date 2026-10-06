@@ -1,0 +1,33 @@
+{
+  "purpose": "fixed public question; actual provider selector diagnostic",
+  "payload": {
+    "locale": "en",
+    "depth": "beginner",
+    "status": "evidence",
+    "claims": [
+      {
+        "claim_id": "claim_1",
+        "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+        "passage_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "kind": "source_statement"
+      }
+    ],
+    "answer_claim_ids": [
+      "claim_1"
+    ],
+    "context_claim_ids": [],
+    "related_exhibit_ids": [
+      "liaoning-dalian-01"
+    ]
+  },
+  "validated_status": "answered",
+  "reason": "reviewed_excerpt",
+  "attempt_id": "call_0b4676f91d774457a7cf247d7029963f",
+  "tokens": {
+    "prompt_tokens": 465,
+    "completion_tokens": 105,
+    "total_tokens": 570
+  }
+}

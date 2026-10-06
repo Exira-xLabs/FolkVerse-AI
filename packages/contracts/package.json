@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/client.ts"
+    ".": "./src/client.ts",
+    "./jinyao-policy.json": "./src/jinyao-policy.json"
   },
   "scripts": {
     "generate": "openapi-typescript openapi.json -o src/schema.d.ts"
