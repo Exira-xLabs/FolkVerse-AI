@@ -476,6 +476,18 @@ async def answer_hybrid(
             alias for values in harness.lookup.aliases.values() for alias in values.values()
         )
     general = general_request(request, names, bool(scope))
+    # A generic verb such as "explain" does not establish a cultural topic.
+    # Let the bounded router distinguish unfamiliar traditions from unrelated requests.
+    if general and not scope and not re.search(
+        r"culture|art|folklore|festival|custom|ritual|puppet|legend|museum|dance|craft|"
+        r"tradition|shadow|文化|艺术|民俗|民间|节日|习俗|传统|传说|故事|皮影|"
+        r"博物馆|舞蹈|工艺|春节|端午|中秋",
+        request.question,
+        re.I,
+    ):
+        social = await harness.route_unfamiliar_conversation(request, actor_id, progress)
+        if social is not None:
+            return social
     # Useful broad conceptual context can accompany reviewed facts, never precise requests.
     if (
         scope

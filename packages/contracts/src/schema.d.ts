@@ -444,7 +444,7 @@ export interface components {
             generation_ms?: number | null;
             /**
              * Harness Version
-             * @default guide-hybrid-sections-v6
+             * @default guide-hybrid-sections-v7
              */
             harness_version: string;
             /**
@@ -465,7 +465,7 @@ export interface components {
             mode: "live";
             /**
              * Personality Version
-             * @default jinyao-conversation-v2
+             * @default jinyao-conversation-v3
              */
             personality_version: string;
             /**
@@ -476,7 +476,7 @@ export interface components {
             presentation_version: "attributed_excerpt_v1" | "inventory_projection_v1" | "conversation_composition_v1" | "hybrid_sections_v1";
             /**
              * Prompt Version
-             * @default jinyao-hybrid-explanations-v9
+             * @default jinyao-hybrid-explanations-v10
              */
             prompt_version: string;
             /** Provider Attempt Id */

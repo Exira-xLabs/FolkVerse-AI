@@ -27,7 +27,9 @@ async def diagnose(
         "daily_request_limit": settings.ollama_daily_request_limit
         if settings.guide_provider == "ollama"
         else None,
-        "daily_usd_budget": str(settings.daily_ai_budget_usd)
+        "daily_usd_budget": (
+            "unlimited" if settings.daily_ai_budget_unlimited else str(settings.daily_ai_budget_usd)
+        )
         if settings.guide_provider == "deepseek"
         else None,
         "authentication": "unverified",

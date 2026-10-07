@@ -43,6 +43,7 @@ class Settings(BaseSettings):
     model_rate_limit_per_minute: int = Field(default=6, ge=1, le=100)
     model_global_rate_limit_per_minute: int = Field(default=30, ge=1, le=1000)
     daily_ai_budget_usd: Decimal = Field(default=Decimal("0"), ge=0, le=100)
+    daily_ai_budget_unlimited: bool = False
     # No inferred price: exact model/base binding and positive configured rates required.
     deepseek_price_model: str | None = None
     deepseek_price_base_url: str | None = None

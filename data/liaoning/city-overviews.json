@@ -1,0 +1,301 @@
+{
+  "version": "city-overviews-v1",
+  "human_review_performed": false,
+  "basis": "Short bilingual administrative-membership projections checked against the official administrative table; no full page republication.",
+  "sources": [
+    {
+      "id": "city-overview-liaoning-dalian",
+      "kind": "city_overview",
+      "names": {
+        "en": "Dalian",
+        "zh-CN": "大连"
+      },
+      "title": "大连市·大连市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "大连市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Dalian is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "大连是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-shenyang",
+      "kind": "city_overview",
+      "names": {
+        "en": "Shenyang",
+        "zh-CN": "沈阳"
+      },
+      "title": "沈阳市·沈阳市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "沈阳市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Shenyang is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "沈阳是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-anshan",
+      "kind": "city_overview",
+      "names": {
+        "en": "Anshan",
+        "zh-CN": "鞍山"
+      },
+      "title": "鞍山市·鞍山市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "鞍山市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Anshan is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "鞍山是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-fushun",
+      "kind": "city_overview",
+      "names": {
+        "en": "Fushun",
+        "zh-CN": "抚顺"
+      },
+      "title": "抚顺市·抚顺市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "抚顺市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Fushun is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "抚顺是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-benxi",
+      "kind": "city_overview",
+      "names": {
+        "en": "Benxi",
+        "zh-CN": "本溪"
+      },
+      "title": "本溪市·本溪市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "本溪市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Benxi is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "本溪是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-dandong",
+      "kind": "city_overview",
+      "names": {
+        "en": "Dandong",
+        "zh-CN": "丹东"
+      },
+      "title": "丹东市·丹东市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "丹东市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Dandong is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "丹东是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-jinzhou",
+      "kind": "city_overview",
+      "names": {
+        "en": "Jinzhou",
+        "zh-CN": "锦州"
+      },
+      "title": "锦州市·锦州市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "锦州市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Jinzhou is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "锦州是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-yingkou",
+      "kind": "city_overview",
+      "names": {
+        "en": "Yingkou",
+        "zh-CN": "营口"
+      },
+      "title": "营口市·营口市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "营口市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Yingkou is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "营口是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-fuxin",
+      "kind": "city_overview",
+      "names": {
+        "en": "Fuxin",
+        "zh-CN": "阜新"
+      },
+      "title": "阜新市·阜新市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "阜新市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Fuxin is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "阜新是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-liaoyang",
+      "kind": "city_overview",
+      "names": {
+        "en": "Liaoyang",
+        "zh-CN": "辽阳"
+      },
+      "title": "辽阳市·辽阳市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "辽阳市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Liaoyang is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "辽阳是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-tieling",
+      "kind": "city_overview",
+      "names": {
+        "en": "Tieling",
+        "zh-CN": "铁岭"
+      },
+      "title": "铁岭市·铁岭市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "铁岭市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Tieling is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "铁岭是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-chaoyang",
+      "kind": "city_overview",
+      "names": {
+        "en": "Chaoyang",
+        "zh-CN": "朝阳"
+      },
+      "title": "朝阳市·朝阳市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "朝阳市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Chaoyang is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "朝阳是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-panjin",
+      "kind": "city_overview",
+      "names": {
+        "en": "Panjin",
+        "zh-CN": "盘锦"
+      },
+      "title": "盘锦市·盘锦市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "盘锦市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Panjin is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "盘锦是中国辽宁省的一座城市。"
+        ]
+      }
+    },
+    {
+      "id": "city-overview-liaoning-huludao",
+      "kind": "city_overview",
+      "names": {
+        "en": "Huludao",
+        "zh-CN": "葫芦岛"
+      },
+      "title": "葫芦岛市·葫芦岛市",
+      "url": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+      "locality": "葫芦岛市",
+      "institution": "Liaoning Provincial Government",
+      "source_raw_sha256": "e1e5eb76ec6d5f4d00c9ff20f6c27097acdd33aec7e610e23a037adfae6f6ff7",
+      "facts": {
+        "en": [
+          "Huludao is a city in Liaoning Province, China."
+        ],
+        "zh-CN": [
+          "葫芦岛是中国辽宁省的一座城市。"
+        ]
+      }
+    }
+  ]
+}

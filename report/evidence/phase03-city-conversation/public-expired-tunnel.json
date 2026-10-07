@@ -1,0 +1,10 @@
+{
+  "origin": "https://a18bdf54348a9c.lhr.life",
+  "started_at": "2026-10-07T06:34:11.999Z",
+  "intercepted_responses": false,
+  "turns": [],
+  "errors": [
+    "page.waitForFunction: Timeout 60000ms exceeded."
+  ],
+  "completed_at": "2026-10-07T06:35:12.998Z"
+}

@@ -1,0 +1,26 @@
+{
+  "api_tests_passed": 476,
+  "isolated_browser_checks_passed": 61,
+  "lint": "passed",
+  "typecheck": "passed",
+  "production_build": "passed",
+  "live_public_turns": 5,
+  "live_public_passed": true,
+  "identical_unclear_messages_received_distinct_replies": true,
+  "live_response_interception": false,
+  "city_membership_coverage": 14,
+  "city_membership_locales": [
+    "en",
+    "zh-CN"
+  ],
+  "human_review_performed": false,
+  "city_membership_source": "https://www.ln.gov.cn/web/sqgk/xzqh/index.shtml",
+  "unlimited_spending": {
+    "implemented": true,
+    "default": false,
+    "owner_authorized_local_setting": true,
+    "usage_accounting_retained": true,
+    "rate_limits_retained": true,
+    "api_restarted": true
+  }
+}

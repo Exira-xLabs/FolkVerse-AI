@@ -568,3 +568,47 @@ def test_gateway_migration_upgrade_and_downgrade_preserve_other_tables() -> None
         assert "gateway_attempts" not in inspect(connection).get_table_names()
         assert connection.exec_driver_sql("SELECT id FROM existing_work").scalar() == 42
     engine.dispose()
+
+
+def test_unlimited_budget_allows_calls_and_preserves_billed_usage(engine):
+    result = complete(
+        engine,
+        lambda request: httpx.Response(200, json=reply()),
+        daily_ai_budget_usd="0",
+        daily_ai_budget_unlimited=True,
+    )
+    assert result.attempt_id
+    assert attempts(engine)[0].charged_nano_usd == 18000
+    with Session(engine) as db:
+        assert db.scalar(select(GatewayBudget.charged_nano_usd)) == 18000
+
+
+def test_unlimited_budget_survives_worker_restart_and_can_be_disabled(engine):
+    settings = configuration(daily_ai_budget_usd="0.0000001", daily_ai_budget_unlimited=True)
+    first = UsageLedger(engine, settings).reserve("first", 8160000, now=1000)
+    UsageLedger(engine, settings).finish(first, "completed", 1)
+    second = UsageLedger(engine, settings).reserve("second", 8160000, now=1001)
+    UsageLedger(engine, settings).finish(second, "completed", 1)
+    with pytest.raises(ApiError) as error:
+        UsageLedger(
+            engine, settings.model_copy(update={"daily_ai_budget_unlimited": False})
+        ).reserve("third", 8160000, now=1002)
+    assert error.value.code == "budget_exhausted"
+
+
+def test_unlimited_budget_keeps_rate_limits_and_pricing_checks(engine):
+    settings = configuration(daily_ai_budget_unlimited=True, model_global_rate_limit_per_minute=1)
+    ledger = UsageLedger(engine, settings)
+    first = ledger.reserve("first", 8160000, now=1000)
+    ledger.finish(first, "completed", 1)
+    with pytest.raises(ApiError) as error:
+        ledger.reserve("second", 8160000, now=1001)
+    assert error.value.code == "rate_limited"
+    with pytest.raises(ApiError) as error:
+        complete(
+            engine,
+            lambda request: pytest.fail("Missing pricing reached provider"),
+            daily_ai_budget_unlimited=True,
+            deepseek_input_usd_per_million=None,
+        )
+    assert error.value.code == "provider_unavailable"

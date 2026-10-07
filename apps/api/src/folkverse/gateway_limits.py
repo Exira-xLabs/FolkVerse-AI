@@ -99,7 +99,10 @@ class UsageLedger:
                         raise ApiError(
                             429, "budget_exhausted", "The daily guide request cap was reached."
                         )
-                elif amount <= 0 or budget.charged_nano_usd + amount > cap:
+                elif amount <= 0 or (
+                    not self.settings.daily_ai_budget_unlimited
+                    and budget.charged_nano_usd + amount > cap
+                ):
                     raise ApiError(429, "budget_exhausted", "The daily guide budget was reached.")
                 budget.charged_nano_usd += amount
                 identifier = f"call_{uuid4().hex}"

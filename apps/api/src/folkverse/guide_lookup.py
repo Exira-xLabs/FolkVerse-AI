@@ -21,7 +21,7 @@ from folkverse.guide_retrieval import EvidencePassage, Locale, tokenize
 from folkverse.liaoning_inventory import AGENT, Article
 
 MAX_LOOKUP_BYTES = 1024 * 1024
-LOOKUP_VERSION = "official-directory-lookup-v1"
+LOOKUP_VERSION = "official-directory-lookup-v2"
 HOSTS = {"www.ln.gov.cn", "whly.ln.gov.cn", "mzt.ln.gov.cn"}
 
 
@@ -104,10 +104,25 @@ class OfficialLookup:
         path = folder / "search-aliases.json"
         if path.exists():
             self.aliases = json.loads(path.read_text())["aliases"]
+        for source in self.city_directory():
+            self.aliases[source["id"]] = source["names"]
+
+    def city_directory(self) -> list[dict[str, Any]]:
+        path = self.folder / "city-overviews.json"
+        if not path.exists():
+            return []
+        data = json.loads(path.read_text())
+        if data.get("version") != "city-overviews-v1":
+            return []
+        return list(data["sources"])
 
     def audit_signature(self) -> str:
         path = self.folder / "machine-source-audit.json"
-        return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else ""
+        city_path = self.folder / "city-overviews.json"
+        return hashlib.sha256(
+            (path.read_bytes() if path.exists() else b"")
+            + (city_path.read_bytes() if city_path.exists() else b"")
+        ).hexdigest()
 
     def audited_summary(self, source_id: str, raw: bytes, locale: Locale) -> dict[str, Any] | None:
         """Machine-assessed summaries are distinct from human-approved corpus publication."""
@@ -166,9 +181,26 @@ class OfficialLookup:
                             "institution": "Liaoning Department of Culture and Tourism",
                         }
                     )
-        return sources
+        return sources + self.city_directory()
 
     def search(self, question: str, locale: Locale) -> list[dict[str, Any]]:
+        # Basic whole-message city requests must not select unrelated museum profiles.
+        # Attached dates, prices, attraction names and multi-city questions stay specific.
+        for source in self.city_directory():
+            for name in source["names"].values():
+                city = re.escape(name)
+                if re.fullmatch(
+                    rf"(?:where (?:is|exactly is) {city}(?: located)?|where'?s {city}|"
+                    rf"(?:do (?:you|u)|dont you|don't you) know (?:about )?{city}|"
+                    rf"(?:(?:can you |could you |please )?tell me about|introduce|"
+                    rf"what is|what about) {city}|{city}|"
+                    rf"{city}(?:市)?(?:在哪里|在哪|是什么地方)|"
+                    rf"(?:你知道|你了解|介绍一下|介绍|聊聊){city}(?:市)?(?:吗)?)"
+                    r"[.!?。！？ ]*",
+                    question.strip(),
+                    re.I,
+                ):
+                    return [source]
         query = set(tokenize(question)) - {
             "the",
             "a",
@@ -184,6 +216,8 @@ class OfficialLookup:
         }
         matches = []
         for source in self.directory():
+            if source.get("kind") == "city_overview":
+                continue
             title = source["title"].split("·", 1)[-1]
             alias = self.aliases.get(source["id"], {}).get(locale, title)
             terms = set(tokenize(alias)) - {"the", "a", "in", "of"}
@@ -211,6 +245,37 @@ class OfficialLookup:
         return [s for s in self.directory() if s["id"] in identifiers][:3]
 
     def render(self, source: dict[str, Any], raw: bytes, locale: Locale) -> EvidencePassage:
+        if source.get("kind") == "city_overview":
+            if hashlib.sha256(raw).hexdigest() != source["source_raw_sha256"]:
+                raise ValueError("Official city source changed; reassessment required")
+            facts = source["facts"][locale]
+            return EvidencePassage(
+                passage_id="lookup_"
+                + hashlib.sha256(
+                    (source["id"] + source["source_raw_sha256"] + locale).encode()
+                ).hexdigest()[:32],
+                source_id=source["id"],
+                text="\n".join(facts),
+                language=locale,
+                locator="official-administrative-table;machine-assessed-membership",
+                rights_basis=(
+                    "Short attributed bilingual membership projection; "
+                    "no full page republication."
+                ),
+                institution=source["institution"],
+                source_title=source["title"],
+                canonical_url=checked_url(source["url"]),
+                fetched_at=datetime.now(UTC),
+                classification="source_statement",
+                reviewed_at=None,
+                reviewer="",
+                review_id="machine_source_assessed_v1",
+                content_hash=source["source_raw_sha256"],
+                exhibit_ids=[],
+                region_ids=[source["locality"]],
+                evidence_origin="official_lookup",
+                statement_variants=facts,
+            )
         article = Article()
         article.feed(raw.decode("utf-8"))
         body = "\n".join(article.paragraphs)

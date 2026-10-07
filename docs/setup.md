@@ -62,6 +62,14 @@ PostgreSQL binds to **127.0.0.1:5440**; the API to **127.0.0.1:8000**; the web a
 
 `APP_MODE=demo` and `APP_MODE=live` use different cookie-signing namespaces. The foundation never invokes a provider in either mode. Changing mode does not make future AI capabilities work; Phase 03 must implement and verify the gateway. Do not add provider credentials to the web environment or any `NEXT_PUBLIC_*` variable. No configured daily budget is permission to spend.
 
+The live DeepSeek gateway supports an explicit uncapped spending setting:
+`DAILY_AI_BUDGET_UNLIMITED=true` in the ignored root `.env` bypasses the application's
+daily USD cap, including a zero `DAILY_AI_BUDGET_USD`. It still records usage and
+enforces concurrency, request rates, token limits, pricing bindings and provider
+authentication. Enable it only when the owner authorizes uncapped API spending,
+then restart the API. Set it back to `false` to enforce `DAILY_AI_BUDGET_USD` again.
+The shared example defaults to `false`; Ollama account request quotas are separate.
+
 For a different port, update the corresponding local configuration, command and allowed origin together. `POSTGRES_PORT` controls Compose, while `DATABASE_URL` must point to that same port. To use a manually managed local database instead of Compose, install PostgreSQL/pgvector using their official instructions, create a dedicated database/user, set `DATABASE_URL` accordingly, and run `pnpm db:migrate`. That alternative has not been exercised here.
 
 ## Verification and contracts

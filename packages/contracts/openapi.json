@@ -702,7 +702,7 @@
             "title": "Generation Ms"
           },
           "harness_version": {
-            "default": "guide-hybrid-sections-v6",
+            "default": "guide-hybrid-sections-v7",
             "title": "Harness Version",
             "type": "string"
           },
@@ -726,7 +726,7 @@
             "type": "string"
           },
           "personality_version": {
-            "default": "jinyao-conversation-v2",
+            "default": "jinyao-conversation-v3",
             "title": "Personality Version",
             "type": "string"
           },
@@ -742,7 +742,7 @@
             "type": "string"
           },
           "prompt_version": {
-            "default": "jinyao-hybrid-explanations-v9",
+            "default": "jinyao-hybrid-explanations-v10",
             "title": "Prompt Version",
             "type": "string"
           },

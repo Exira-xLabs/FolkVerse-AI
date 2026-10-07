@@ -1,0 +1,296 @@
+{
+  "origin": "https://dd5bd73fb38a8d.lhr.life",
+  "started_at": "2026-10-07T06:35:53.148Z",
+  "intercepted_responses": false,
+  "turns": [
+    {
+      "question": "Where is Dalian?",
+      "http_status": 200,
+      "answer": {
+        "answer_id": "ans_dbde702a34054847b3865a09c1acf88b",
+        "locale": "en",
+        "depth": "concise",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "Dalian is a city in Liaoning Province, China.",
+        "claims": [
+          {
+            "claim_id": "claim_0",
+            "text": "Dalian is a city in Liaoning Province, China.",
+            "passage_ids": [
+              "lookup_29338269a2aa626b41d54a21527c35b3"
+            ],
+            "source_ids": [
+              "city-overview-liaoning-dalian"
+            ],
+            "kind": "source_statement",
+            "support_method": "machine_source_summary_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_0"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_29338269a2aa626b41d54a21527c35b3"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v7",
+        "prompt_version": "jinyao-hybrid-explanations-v10",
+        "provider_attempt_id": "call_7e7586a1c95942099f9f509c04d89cfb",
+        "personality_version": "jinyao-conversation-v3",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "Dalian is a city in Liaoning Province, China.",
+            "claim_ids": [
+              "claim_0"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 481.70027600281173,
+        "database_ms": 19.927998997445684,
+        "ranking_ms": 1.1161179972987156,
+        "generation_ms": 1247.6096119971771,
+        "validation_ms": 10.934692996670492,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "ui_status": "ready"
+    },
+    {
+      "question": "Do you know Dalian?",
+      "http_status": 200,
+      "answer": {
+        "answer_id": "ans_ced1832a3f3c4f59aca4b51f4fb59bfb",
+        "locale": "en",
+        "depth": "concise",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "Dalian is a city in Liaoning Province, China.",
+        "claims": [
+          {
+            "claim_id": "claim_0",
+            "text": "Dalian is a city in Liaoning Province, China.",
+            "passage_ids": [
+              "lookup_29338269a2aa626b41d54a21527c35b3"
+            ],
+            "source_ids": [
+              "city-overview-liaoning-dalian"
+            ],
+            "kind": "source_statement",
+            "support_method": "machine_source_summary_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_0"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_29338269a2aa626b41d54a21527c35b3"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v7",
+        "prompt_version": "jinyao-hybrid-explanations-v10",
+        "provider_attempt_id": "call_8be9f748cff34807942a1d7b60a398af",
+        "personality_version": "jinyao-conversation-v3",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "Dalian is a city in Liaoning Province, China.",
+            "claim_ids": [
+              "claim_0"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 517.4958079987846,
+        "database_ms": 18.02593500178773,
+        "ranking_ms": 0.12779700045939535,
+        "generation_ms": 1248.6570090004534,
+        "validation_ms": 14.702255000884179,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "ui_status": "ready"
+    },
+    {
+      "question": "asdf qwer ???",
+      "http_status": 200,
+      "answer": {
+        "answer_id": "ans_0b314e677c9240889182006f80078f7f",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "I couldn’t quite follow that message. Could you put it another way? What are you curious about today?",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-hybrid-sections-v7",
+        "prompt_version": "jinyao-hybrid-explanations-v10",
+        "provider_attempt_id": "call_7c8d11f0e8a947258aeebdde1f321a57",
+        "personality_version": "jinyao-conversation-v3",
+        "social_intent": "clarification",
+        "conversation_choice": {
+          "locale": "en",
+          "intent": "clarification",
+          "opening_id": 3,
+          "invitation_id": 0
+        },
+        "contract_version": null,
+        "sections": [],
+        "lookup_status": "not_requested",
+        "retrieval_ms": null,
+        "database_ms": null,
+        "ranking_ms": null,
+        "generation_ms": null,
+        "validation_ms": null,
+        "presentation_version": "conversation_composition_v1"
+      },
+      "ui_status": "ready"
+    },
+    {
+      "question": "asdf qwer ???",
+      "http_status": 200,
+      "answer": {
+        "answer_id": "ans_0e59233e385c4588a59c685edcf20772",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "I may be missing what you mean. A few more words would help me respond. What would you like me to explain?",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-hybrid-sections-v7",
+        "prompt_version": "jinyao-hybrid-explanations-v10",
+        "provider_attempt_id": "call_4f60ae63edcb42b492a920108b0e84f9",
+        "personality_version": "jinyao-conversation-v3",
+        "social_intent": "clarification",
+        "conversation_choice": {
+          "locale": "en",
+          "intent": "clarification",
+          "opening_id": 4,
+          "invitation_id": 4
+        },
+        "contract_version": null,
+        "sections": [],
+        "lookup_status": "not_requested",
+        "retrieval_ms": null,
+        "database_ms": null,
+        "ranking_ms": null,
+        "generation_ms": null,
+        "validation_ms": null,
+        "presentation_version": "conversation_composition_v1"
+      },
+      "ui_status": "ready"
+    },
+    {
+      "question": "Explain how to repair my car",
+      "http_status": 200,
+      "answer": {
+        "answer_id": "ans_e8527fa9b6f143d4a9c744186fe700f8",
+        "locale": "en",
+        "depth": "concise",
+        "status": "conversational",
+        "uncertainty": "insufficient",
+        "reason": "social_turn",
+        "answer_text": "That’s outside my cultural-guide role, but I’m happy to help with a place, story or tradition. Is there a particular place or topic you’d like to explore?",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v1",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "not_applicable",
+        "harness_version": "guide-hybrid-sections-v7",
+        "prompt_version": "jinyao-hybrid-explanations-v10",
+        "provider_attempt_id": "call_51493c4f48e84419b6d8fda541c1ee8f",
+        "personality_version": "jinyao-conversation-v3",
+        "social_intent": "clarification",
+        "conversation_choice": {
+          "locale": "en",
+          "intent": "clarification",
+          "opening_id": 6,
+          "invitation_id": 2
+        },
+        "contract_version": null,
+        "sections": [],
+        "lookup_status": "not_requested",
+        "retrieval_ms": null,
+        "database_ms": null,
+        "ranking_ms": null,
+        "generation_ms": null,
+        "validation_ms": null,
+        "presentation_version": "conversation_composition_v1"
+      },
+      "ui_status": "ready"
+    }
+  ],
+  "errors": [],
+  "live_banner": "JinyaoYour cultural companion · reviewed evidence×Messages are sent to the guide service and may be processed by the configured AI provider. Reviewed coverage is limited; this app keeps the transcript on this page and does not store raw chat history.Jinyao: Hi, I’m Jinyao. You can talk to me about Chinese folklore, festivals or stories, or start with a topic below.Reply languageAutomaticEnglish中文Explanation depthConciseBeginnerDeeperSend up to 6 recent conversation turns (8,000 characters) to the model, and use topic and evidence context for 30 minutesMessage JinyaoUp to 2,000 characters. Enter sends; Shift plus Enter adds a new line.0 / 2000Conversation for this page visit",
+  "completed_at": "2026-10-07T06:36:56.377Z"
+}

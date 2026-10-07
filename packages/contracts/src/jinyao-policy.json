@@ -1,5 +1,5 @@
 {
-  "version": "jinyao-conversation-v2",
+  "version": "jinyao-conversation-v3",
   "social": {
     "greeting": {
       "en": "Hi, I’m Jinyao, your fictional museum companion. We can explore a reviewed exhibit together, at your pace.",
@@ -127,12 +127,26 @@
       "en": [
         "I’d like to understand what you mean.",
         "Could we narrow that down a little?",
-        "Let’s choose one thing to explore first."
+        "Let’s choose one thing to explore first.",
+        "I couldn’t quite follow that message. Could you put it another way?",
+        "I may be missing what you mean. A few more words would help me respond.",
+        "My focus is Chinese culture and places in Liaoning. I can help you explore those topics.",
+        "That’s outside my cultural-guide role, but I’m happy to help with a place, story or tradition.",
+        "We can keep chatting respectfully. Tell me what you’d like to explore.",
+        "I’m happy to listen, but let’s keep the conversation respectful.",
+        "I can help with cultural questions, but I can’t follow requests to invent sources or ignore my rules."
       ],
       "zh-CN": [
         "我想先弄清楚你的意思。",
         "我们先把范围缩小一点，好吗？",
-        "先选一件想了解的事情吧。"
+        "先选一件想了解的事情吧。",
+        "这条消息我还没看明白，可以换个说法吗？",
+        "我可能没理解你的意思，多说几个字会更方便我回答。",
+        "我主要帮助你了解中国文化和辽宁的地方，可以陪你探索这些话题。",
+        "这个问题超出了文化向导的范围，不过我很乐意聊聊地方、故事或传统。",
+        "我们可以友善地继续聊天，告诉我你想了解什么吧。",
+        "我愿意听你说，不过我们还是互相尊重地聊吧。",
+        "我可以回答文化问题，但不能编造来源或忽略回答规则。"
       ]
     }
   },

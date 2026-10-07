@@ -283,3 +283,113 @@ def test_model_cultural_route_does_not_create_coverage(service):
     )
     assert answer.status == "insufficient" and gateway.calls == 1
     assert not answer.claims and not answer.sources
+
+
+@pytest.mark.parametrize("locale", ["en", "zh-CN"])
+def test_unusual_message_replies_avoid_recent_wording(locale):
+    from folkverse.guide_personality import POLICY, ConversationPair, conversation_options
+
+    openings = POLICY["conversation"]["clarification"][locale]
+    history = [ConversationPair(user="???", assistant=text) for text in openings[-2:]]
+    options = conversation_options("clarification", locale, history)
+    assert all(text not in openings[-2:] for text in options["openings"].values())
+    assert len(options["openings"]) > 3
+
+
+def test_unusual_route_offers_message_specific_polite_choices(service):
+    import json
+
+    harness, _, gateway = service
+    asyncio.run(harness.route_unfamiliar_conversation(request(question="asdf???"), "owner", None))
+    prompt = gateway.last_messages[0].content
+    assert "unintelligible" in prompt and "insults" in prompt and "unrelated" in prompt
+    options = json.loads(gateway.last_messages[1].content)["allowed_options"]["clarification"]
+    wording = " ".join(options["openings"].values())
+    assert "another way" in wording and "respectful" in wording and "cultural-guide role" in wording
+
+
+@pytest.mark.parametrize(
+    "locale,question",
+    [
+        ("en", "Where is Dalian?"),
+        ("en", "Do you know Dalian?"),
+        ("zh-CN", "大连在哪里？"),
+        ("zh-CN", "你知道大连吗？"),
+    ],
+)
+def test_city_lookup_reaches_checked_hybrid_answer(service, monkeypatch, locale, question):
+    import hashlib
+    import json
+
+    import folkverse.guide_lookup as lookup_module
+    from folkverse.guide_lookup import OfficialLookup
+    from folkverse.provider_gateway import ProviderResult, ProviderUsage
+
+    harness, _, _ = service
+    lookup = OfficialLookup()
+    source = lookup.search(question, locale)[0]
+    raw = b"Synthetic official table for integration boundary test"
+    source["source_raw_sha256"] = hashlib.sha256(raw).hexdigest()
+    monkeypatch.setattr(lookup, "search", lambda *args: [source])
+
+    async def fetch(url):
+        return raw
+
+    monkeypatch.setattr(lookup_module, "fetch_official", fetch)
+
+    class Selector:
+        async def complete(self, messages, actor):
+            data = json.loads(messages[1].content)
+            evidence = data["untrusted_evidence"][0]
+            return ProviderResult(
+                payload={
+                    "locale": locale,
+                    "depth": data["depth"],
+                    "status": "answer",
+                    "claims": [
+                        {
+                            "claim_id": "claim_city",
+                            "statement_id": "statement_0",
+                            "text": "",
+                            "passage_ids": [evidence["passage_id"]],
+                            "kind": "source_statement",
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "section_id": "section_city",
+                            "kind": "evidence",
+                            "text": "",
+                            "claim_ids": ["claim_city"],
+                        }
+                    ],
+                    "related_exhibit_ids": [],
+                },
+                model="fixture",
+                attempt_id="call_city_test",
+                latency_ms=1,
+                usage=ProviderUsage(prompt_tokens=1, completion_tokens=1, total_tokens=2),
+            )
+
+    harness.hybrid_explanations = True
+    harness.lookup = lookup
+    harness.gateway = Selector()
+    answer = asyncio.run(harness.answer(request(locale, question=question), "owner"))
+    assert answer.status == "answered" and len(answer.sources) == 1
+    assert answer.lookup_status == "original_page_checked"
+    assert ("Liaoning" if locale == "en" else "辽宁") in answer.answer_text
+    assert answer.claims[0].source_ids == [source["id"]]
+
+
+def test_generic_explain_request_can_receive_polite_scope_response(service):
+    harness, _, gateway = service
+    harness.hybrid_explanations = True
+
+    def unrelated(payload):
+        payload.update(intent="clarification", opening_id=5, invitation_id=0)
+
+    gateway.mutate = unrelated
+    answer = asyncio.run(harness.answer(request(question="Explain how to repair my car"), "owner"))
+    assert answer.status == "conversational" and not answer.sources and not answer.claims
+    assert "Chinese culture" in answer.answer_text
+    assert gateway.calls == 1

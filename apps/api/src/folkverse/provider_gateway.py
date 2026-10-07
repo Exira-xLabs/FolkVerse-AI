@@ -79,7 +79,7 @@ class GuideGateway:
             if s.ollama_daily_request_limit <= 0:
                 raise unavailable()
         elif (
-            s.daily_ai_budget_usd <= 0
+            (not s.daily_ai_budget_unlimited and s.daily_ai_budget_usd <= 0)
             or s.deepseek_price_model != s.deepseek_model
             or s.deepseek_price_base_url != s.deepseek_base_url
             or s.deepseek_input_usd_per_million is None
