@@ -1,0 +1,546 @@
+{
+  "version": "jinyao-evaluation-v5-phase03-pilot",
+  "frozen_at": "2026-10-07T03:15:13.522532+00:00",
+  "authorship": "Codex-authored machine source-assessed targets; owner waived human review. No independent expert gold.",
+  "reservation": "Exposed 28-case diagnostic of eight refusal failures and conceptual-accuracy corrections; not a blind or full second pilot.",
+  "corpus_sha256": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "machine_source_audit_sha256": "fb399be5471e4bba4c9306a0a2803046eb60aed739535eb191988d22c6e62275",
+  "cases": [
+    {
+      "id": "pilot-v5-shadow-en",
+      "family": "shadow",
+      "split": "development",
+      "locale": "en",
+      "question": "What is shadow puppetry in plain language?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-shadow-zh-CN",
+      "family": "shadow",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "用简单的话解释什么是皮影戏",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-restoration-en",
+      "family": "restoration",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain the difference between conservation and restoration",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-restoration-zh-CN",
+      "family": "restoration",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释文物保护与修复的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-archaeology-en",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is archaeology?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-archaeology-zh-CN",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是考古学？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-excavation-en",
+      "family": "excavation",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain an archaeological excavation",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-excavation-zh-CN",
+      "family": "excavation",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释考古发掘是什么",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-primary-en",
+      "family": "primary",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is a primary source in history?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-primary-zh-CN",
+      "family": "primary",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "历史研究中的一手资料是什么？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-secondary-en",
+      "family": "secondary",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain primary and secondary sources",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-secondary-zh-CN",
+      "family": "secondary",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释一手资料和二手资料的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-calligraphy-en",
+      "family": "calligraphy",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is calligraphy?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-calligraphy-zh-CN",
+      "family": "calligraphy",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是书法？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-ceramic-en",
+      "family": "ceramic",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain pottery and porcelain simply",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-ceramic-zh-CN",
+      "family": "ceramic",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "简单解释陶器和瓷器的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-jade-en",
+      "family": "jade",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is jade carving?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-jade-zh-CN",
+      "family": "jade",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是玉雕？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-fossil-en",
+      "family": "fossil",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is a fossil?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-fossil-zh-CN",
+      "family": "fossil",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是化石？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-wetland-en",
+      "family": "wetland",
+      "split": "development",
+      "locale": "en",
+      "question": "What is a wetland?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-wetland-zh-CN",
+      "family": "wetland",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "什么是湿地？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-tangible-en",
+      "family": "tangible",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain tangible and intangible cultural heritage",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-tangible-zh-CN",
+      "family": "tangible",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释物质文化遗产和非物质文化遗产的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-belief-en",
+      "family": "belief",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain the difference between belief and a verified historical claim",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-belief-zh-CN",
+      "family": "belief",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释信仰和核实过的历史说法有什么区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-switch-en",
+      "family": "switch",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Could you explain that in English?",
+      "depth": "beginner",
+      "seed": "other_language",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-switch-zh-CN",
+      "family": "switch",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "请用中文再解释一次",
+      "depth": "beginner",
+      "seed": "other_language",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 
 **Approved direction:** Hybrid conversation: natural EN/ZH social replies, source-supported cultural explanations and clearly labelled general educational context. Precise local facts, quotations, disputed claims and current information require evidence. A failed supported claim cannot be downgraded to general knowledge. See [execution parts](../docs/phase-03-hybrid-execution-parts.md) and [the output contract](../docs/guide-hybrid-output-contract.md). This direction is authorized; the runtime remains the restricted implementation until its coordinated changes pass verification.
 
-**Current boundary — 7 October 2026:** Engineering and autonomous source assessment are delivered. The owner declined human review; Codex assessed 42 bilingual official profiles spanning all 14 cities, with fresh hash-bound original-page lookup and an explicit machine-review label. The current verification is 433 API tests, 60 guide/browser checks, 16 isolated bilingual faults and clean reproduction. The 200-question final live pilot remains open because the existing spending cap stopped generation; no human worksheet is required. See the [current closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md) and [review amendment](../docs/phase-03-machine-review-acceptance.md).
+**Current boundary — 7 October 2026:** Phase 3 complete under the owner's machine-review amendment. Working bilingual chatbot, 42 source-assessed profiles across all 14 cities, complete 200-question live pilot (192/200 scenarios; 89/89 support/citations), exposed corrective checks and actual-answer Codex assessment. Verification: 439 API tests, 60 browser tests, 16 bilingual faults and 18 clean-checkout reproduction checks. No human ratings or independent specialist gold are claimed. See the [completion report](../report/PHASE_03_FINAL_COMPLETION.md) for metrics, budget and documented limits. Phase 4 is next.
 
 ## Paste into Codex
 ```text
@@ -34,7 +34,7 @@ Update docs/build-status.md with actual results, blockers and the next phase. Re
 - [x] Invented citation IDs are rejected; source-injected instructions do not change policy.
 - [x] Revoked passages stop being retrieved; model timeout/cap exhaustion show honest errors.
 - [x] Keys never reach browser/logs; source drawer shows actual evidence.
-- [ ] Jinyao's hybrid conversation and explanation harness is implemented and evaluated on a dated bilingual set, with measured factual, clarity, personality and conversational results; general knowledge and reviewed coverage are distinguished.
+- [x] Jinyao's hybrid conversation and explanation harness is implemented and evaluated on a dated bilingual set, with measured factual, clarity, personality and conversational results; general knowledge and reviewed coverage are distinguished.
 - [x] Explanations separate historical evidence, attributed interpretations, folklore/belief and creative adaptation; chronology and source support are checked.
 - [x] Follow-ups, glossary and depth changes preserve factual support and uncertainty in evidence sections; general explanations remain explicitly unverified. Natural greetings, clarification and consented context work without silent failures or a permanent turn-count block.
 

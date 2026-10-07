@@ -1,0 +1,48 @@
+{
+  "version": "jinyao-evaluation-v5-phase03-pilot",
+  "frozen_at": "2026-10-07T03:15:13.522532+00:00",
+  "authorship": "Codex-authored machine source-assessed targets; owner waived human review. No independent expert gold.",
+  "reservation": "Exposed final archaeology diagnostic after one guarded refusal; never replaces the full pilot.",
+  "corpus_sha256": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "machine_source_audit_sha256": "fb399be5471e4bba4c9306a0a2803046eb60aed739535eb191988d22c6e62275",
+  "cases": [
+    {
+      "id": "pilot-v5-archaeology-en",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is archaeology?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-archaeology-zh-CN",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是考古学？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    }
+  ]
+}

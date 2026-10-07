@@ -1,0 +1,266 @@
+{
+  "started_at": "2026-10-07T03:35:35.921Z",
+  "mode": "real local browser/BFF/API/configured provider",
+  "turns": [
+    {
+      "question": "Explain Shenyang Industrial Museum",
+      "status": 200,
+      "elapsed_ms": 9647.962849,
+      "answer": {
+        "answer_id": "ans_44a74647f9a54ce9a1abc391a6dd45db",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+        "claims": [
+          {
+            "claim_id": "claim_0",
+            "text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+            "passage_ids": [
+              "lookup_69e146534b7cad877ae55e90569b8d86"
+            ],
+            "source_ids": [
+              "explanation-shenyang-2"
+            ],
+            "kind": "source_statement",
+            "support_method": "machine_source_summary_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_0"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_69e146534b7cad877ae55e90569b8d86"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v7",
+        "context_token": null,
+        "provider_attempt_id": "call_9ccdfb9d00274d8997e9f9c286abe31c",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+            "claim_ids": [
+              "claim_0"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 587.3017720005009,
+        "database_ms": 92.59676999954536,
+        "ranking_ms": 2.3167610006566974,
+        "generation_ms": 6147.913950000657,
+        "validation_ms": 23.916592999739805,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "lookup_69e146534b7cad877ae55e90569b8d86",
+          "source_id": "explanation-shenyang-2",
+          "text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.\nThe workshops themselves illustrate the spaces used for industrial production.",
+          "language": "en",
+          "locator": "article:pages_content;machine-assessed-bilingual-summary",
+          "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳工业博物馆",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+          "fetched_at": "2026-10-07T03:35:38.239859Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "machine_source_assessed_v1",
+          "content_hash": "c8e899182a49b4476a57a21d9cc2105f8b0836d80f8bead5e5ee9dd901c50493",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+            "The workshops themselves illustrate the spaces used for industrial production."
+          ],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "解释沈阳工业博物馆",
+      "status": 200,
+      "elapsed_ms": 2163.8004680000013,
+      "answer": {
+        "answer_id": "ans_05d5f566d4e64c6ab74b4018986c0fc3",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "官方介绍说明：沈阳工业博物馆利用原铸造厂车间展示工业历史。",
+        "claims": [
+          {
+            "claim_id": "claim_0",
+            "text": "官方介绍说明：沈阳工业博物馆利用原铸造厂车间展示工业历史。",
+            "passage_ids": [
+              "lookup_5e9cbf18583d3914487399e21985f221"
+            ],
+            "source_ids": [
+              "explanation-shenyang-2"
+            ],
+            "kind": "source_statement",
+            "support_method": "machine_source_summary_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_0"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_5e9cbf18583d3914487399e21985f221"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "来源支持已经检查；一般背景说明未经独立事实核验。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v7",
+        "context_token": null,
+        "provider_attempt_id": "call_9f17aa8390fa404cbe7d5b54c3f98f92",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "官方介绍说明：沈阳工业博物馆利用原铸造厂车间展示工业历史。",
+            "claim_ids": [
+              "claim_0"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 443.3224739996149,
+        "database_ms": 93.66653599954589,
+        "ranking_ms": 0.33424899993406143,
+        "generation_ms": 790.2582330007135,
+        "validation_ms": 30.33955800037802,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "lookup_5e9cbf18583d3914487399e21985f221",
+          "source_id": "explanation-shenyang-2",
+          "text": "官方介绍说明：沈阳工业博物馆利用原铸造厂车间展示工业历史。\n车间本身也是理解工业生产空间的例子。",
+          "language": "zh-CN",
+          "locator": "article:pages_content;machine-assessed-bilingual-summary",
+          "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳工业博物馆",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+          "fetched_at": "2026-10-07T03:35:49.438138Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "machine_source_assessed_v1",
+          "content_hash": "c8e899182a49b4476a57a21d9cc2105f8b0836d80f8bead5e5ee9dd901c50493",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "官方介绍说明：沈阳工业博物馆利用原铸造厂车间展示工业历史。",
+            "车间本身也是理解工业生产空间的例子。"
+          ],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "什么是考古学？",
+      "status": 200,
+      "elapsed_ms": 2105.1984679999987,
+      "answer": {
+        "answer_id": "ans_f9691f971dbb4ec48017fce81004a9c1",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "insufficient",
+        "reason": "general_explanation",
+        "answer_text": "考古学就像通过古人留下的“生活痕迹”来读一本没有文字的历史书。它研究过去人类留下的实物遗存，比如工具、房屋、墓葬和垃圾堆，借此了解他们怎么生活、吃什么、信什么。考古学家会小心发掘、记录位置和地层关系，再结合其他资料推断年代与用途。它不等于寻宝，也不只研究很久以前的事。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "来源支持已经检查；一般背景说明未经独立事实核验。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v7",
+        "context_token": null,
+        "provider_attempt_id": "call_ba6dcf00f0dc43dfbd04e8c635966ef9",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "考古学就像通过古人留下的“生活痕迹”来读一本没有文字的历史书。它研究过去人类留下的实物遗存，比如工具、房屋、墓葬和垃圾堆，借此了解他们怎么生活、吃什么、信什么。考古学家会小心发掘、记录位置和地层关系，再结合其他资料推断年代与用途。它不等于寻宝，也不只研究很久以前的事。",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 91.20245000030991,
+        "database_ms": 89.07427700069093,
+        "ranking_ms": 0.3417070001887623,
+        "generation_ms": 1622.1083919999728,
+        "validation_ms": 40.713813999900594,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [],
+      "ui_status": "ready"
+    }
+  ],
+  "errors": [],
+  "completed_at": "2026-10-07T03:35:55.601Z"
+}

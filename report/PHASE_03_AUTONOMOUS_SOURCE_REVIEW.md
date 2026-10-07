@@ -1,6 +1,6 @@
 # Phase 3 autonomous completion work — 7 October 2026
 
-The owner declined human review. Codex has completed the source assessment, broader Liaoning lookup, attribution reliability fixes and regression verification. **Final Phase 3 closure is still blocked by the existing live-test spending cap; no human worksheet is required.** The 200-question pilot is frozen and ready, but has not completed. This report supersedes the previous owner-review handoff.
+The owner declined human review. Codex has completed the source assessment, broader Liaoning lookup, attribution reliability fixes and regression verification. **Phase 3 is complete; no human worksheet is required.** The 200-question pilot completed, actual responses were assessed and corrective diagnostics were preserved. See the [final completion evidence](PHASE_03_FINAL_COMPLETION.md). This report supersedes the previous owner-review handoff.
 
 ## What changed
 
@@ -18,13 +18,13 @@ The owner declined human review. Codex has completed the source assessment, broa
 | --- | --- |
 | Fresh original profile/hash assessment | 42/42; all 14 cities. Temporary timeout evidence is preserved; final corrected assessment uses a 41-profile pass plus one explicit successful source retry, not a simultaneous snapshot. |
 | Source discovery floor | Both languages resolve all 42 aliases uniquely; three profiles per city; multi-city queries cannot silently select one city. |
-| Full API suite | 433 passed. |
+| Full API suite | 439 passed. |
 | Guide/browser suite | 60 passed; English/Chinese, phone/desktop, source assessment label, withdrawal, keyboard, scroll and presentation checks. |
 | Accessibility | Four axe-core 4.13.0 chat/source audits; zero violations and zero incomplete checks. |
 | Isolated bilingual faults | 16/16; no paid calls or live content mutation. |
 | Lint/types/build/contracts/assets/secrets | Passed; original nine assets preserved. |
-| Disposable-checkout reproduction | 18 checks passed; isolated PostgreSQL/pgvector, startup, migrations, restore, web/API and cleanup. Final evidence binds runtime and new machine-manifest hashes. |
-| Real model pilot | First diagnostic subset: 53/62 scenario targets; nine attribution-copy refusals. After statement-reference fix: first three live cases passed, then the existing budget admission gate stopped further paid generation. This is not a completed 200-question pilot. |
+| Disposable-checkout reproduction | 18 checks passed; isolated PostgreSQL/pgvector, startup, migrations, restore, web/API and cleanup. Final `reproduction-accepted.json` evidence binds prompt v8/runtime and machine-manifest hashes. |
+| Real model pilot | Completed v5: 192/200 scenarios, 89/89 returned sourced answers passed support/citations; false refusals investigated, targeted corrections checked and actual-response machine assessment recorded. Earlier incomplete/cap-limited runs remain preserved. |
 
 [Raw evidence](evidence/phase03-final/) preserves the incomplete runs and faults. The earlier 48/48 live diagnostic remains evidence for personality, consented follow-ups and general educational behavior; it is not a fresh score for the final broader corpus. Previous retrieval/BGE and 68 broader museum browser checks remain separately dated historical evidence.
 
@@ -34,8 +34,6 @@ The owner declined human review. Codex has completed the source assessment, broa
 
 These are attributed machine judgments, not fabricated human or specialist approvals, a legal clearance certificate, or proof of exhaustive Liaoning knowledge. The original inventories/research queue continue the content program. General explanations stay visibly unverified. Current hours, prices and schedules remain unsupported until a suitable current-information adapter exists. Physical screen-reader/device and independent specialist review remain later validation opportunities, rather than a request that this owner review the chatbot.
 
-## Remaining live acceptance
+## Final acceptance
 
-Run the frozen [200-question suite](../tests/evaluation/guide/v5-phase03-pilot.json) against the final runtime, preserve exposure information, assess the actual general explanations and publish answered/refused/error denominators and meaningful latency. Do not label the exposed topic subset as blind expert gold.
-
-The existing local daily cap is US$0.10. The ledger has US$0.091854 charged/reserved; the remaining allowance is insufficient for the next maximum-cost reservation. The API returns `budget_exhausted`. No cap increase, billing bypass or automatic paid retry was performed. A question requesting permission for up to US$0.15 additional testing is pending. No provider credentials appear in the report.
+The [completion report](PHASE_03_FINAL_COMPLETION.md) supersedes the previous budget blocker. The owner authorized an additional $0.15; the ignored local cap is $0.25 and actual calls remain bounded. Original partial runs and refusals are retained. The fresh 200-question result is 192/200; later selected successful corrections are a composite diagnostic, never labelled a fresh 200/200 run. No fabricated human ratings or specialist gold.

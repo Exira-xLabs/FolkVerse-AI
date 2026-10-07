@@ -1,3 +1,5 @@
+> Current status, 7 October 2026: Phase 3 complete. The [completion report](PHASE_03_FINAL_COMPLETION.md) supersedes historical pending-review/budget status below and records measured pilot/corrections, attributed machine assessment and limitations. Phase 4 is next.
+
 # Phases 00–02 review before Phase 03
 
 ## 1. Repository and scope

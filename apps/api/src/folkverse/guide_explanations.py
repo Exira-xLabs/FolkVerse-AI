@@ -91,7 +91,7 @@ def general_request(request: GuideRequest, names: list[str], scoped: bool) -> bo
         re.search(
             r"explain|what is|what are|what does .{1,80} mean|define|meaning|compare|difference|"
             r"why|simpl|deeper|history|culture|art|"
-            r"museum|dance|craft|tradition|folklore|shadow|解释|是什么|区别|为什么|简单|详细|"
+            r"museum|dance|craft|tradition|folklore|shadow|解释|是什么|什么是|区别|为什么|简单|详细|"
             r"历史|文化|艺术|博物馆|舞蹈|工艺|传统|传说|皮影|含义|是什么意思",
             q,
             re.I,
@@ -351,6 +351,23 @@ years or numbers in general context. forbidden_general_names lists registered lo
 NONE may occur in a general section. For a named local tradition, explain ONLY the generic art form
 in general (for example 皮影戏), never the named local variant (for example 复州皮影戏), its style,
 local characteristics or a comparison with neighbouring places. Those require reviewed evidence.
+General text must not use verified, officially, according to, 治疗 or 最早; these trigger the
+applicability guard even inside analogies. For evidence/belief definitions, say "a historical
+claim supported by evidence" rather than "verified". Describe puppetry as live shadow theatre
+with continuous movement; do not use frame-by-frame
+or earliest-animation analogies. Describe conservation as an umbrella including preventive care,
+remedial conservation and restoration; restoration supports appreciation/use while respecting
+original material, not necessarily returning to a pristine original state. Avoid medical analogies.
+Pottery is a broad ceramic category: earthenware is often porous, but stoneware can be dense;
+do not say all pottery absorbs water. Primary sources can include later first-hand interviews,
+not only records made at the event. Archaeological layers may be disturbed: deeper does not
+always mean older. Heritage practices may be visible performances; intangible does not mean
+invisible. Fossils form in several ways, not only mineral replacement. These are conceptual
+accuracy reminders. When contrasting belief with historical claims, respect personal/religious
+belief and discuss testable evidence; more fragments alone do not make a conclusion reliable.
+A creative adaptation may change history, so distinguish documented events from invented scenes;
+do not guarantee that adaptations preserve historical accuracy. These reminders are not permission
+to add local facts or claim independent verification.
 Do not number points. Keep the entire JSON compact: at most two claims and two sections; general
 text at most 90 English words or 180 Chinese characters, including deeper explanations.
 If useful general context would break these rules, provide just the supported evidence section.

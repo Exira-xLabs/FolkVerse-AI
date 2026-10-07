@@ -1,0 +1,276 @@
+{
+  "version": "guide-hybrid-functional-evaluation-v3",
+  "run_status": "completed",
+  "mode": "live",
+  "started_at": "2026-10-07T03:34:56.828519+00:00",
+  "suite_sha256": "4e5f6b216684d916cea015a1c3e3c43dfa60d5c5fd7c2ad162a45a7c6a2909d4",
+  "run_label": "Actual final v7 bilingual archaeology diagnostic; prior guarded refusal preserved",
+  "authorship": "Codex-authored machine source-assessed targets; owner waived human review. No independent expert gold.",
+  "reservation": "Exposed final archaeology diagnostic after one guarded refusal; never replaces the full pilot.",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "gateway_admission_changed": false,
+  "cases": [
+    {
+      "id": "pilot-v5-archaeology-en",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is archaeology?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null,
+      "actual_status": "answered",
+      "actual_reason": "general_explanation",
+      "elapsed_ms": 1382.5139299997318,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": true,
+        "scenario": true,
+        "locale_delivery": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": {
+        "answer_id": "ans_ee022782692941c68a082741f363ee1d",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "insufficient",
+        "reason": "general_explanation",
+        "answer_text": "Archaeology is the study of past people through the things they left behind, such as tools, buildings, and food remains. Archaeologists dig carefully, record where each object was found, and then piece together how people lived. Think of it like solving a puzzle where most pieces are missing.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v7",
+        "provider_attempt_id": "call_24efa409d015493a986626a809908dda",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "Archaeology is the study of past people through the things they left behind, such as tools, buildings, and food remains. Archaeologists dig carefully, record where each object was found, and then piece together how people lived. Think of it like solving a puzzle where most pieces are missing.",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 40.086567999424005,
+        "database_ms": 37.61379299976397,
+        "ranking_ms": 1.572292999298952,
+        "generation_ms": 1252.1614319994114,
+        "validation_ms": 24.092587000268395,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "error": null,
+      "sources": []
+    },
+    {
+      "id": "pilot-v5-archaeology-zh-CN",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是考古学？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null,
+      "actual_status": "answered",
+      "actual_reason": "general_explanation",
+      "elapsed_ms": 1276.7186699993545,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": true,
+        "scenario": true,
+        "locale_delivery": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": {
+        "answer_id": "ans_9e09b9d29acd49c682fba634486a3c2a",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "insufficient",
+        "reason": "general_explanation",
+        "answer_text": "考古学就像通过古人留下的“生活痕迹”来读一本没有文字的历史书。研究者会寻找房屋、工具、食物残渣等遗存，记录它们的位置和关系，再小心发掘、分析，从而了解过去的人怎样生活、交流和改变环境。它既需要耐心，也需要像侦探一样把零散线索拼成故事。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "sources": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "来源支持已经检查；一般背景说明未经独立事实核验。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v7",
+        "provider_attempt_id": "call_012e4005b7484090a7fd768c66c85d76",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "考古学就像通过古人留下的“生活痕迹”来读一本没有文字的历史书。研究者会寻找房屋、工具、食物残渣等遗存，记录它们的位置和关系，再小心发掘、分析，从而了解过去的人怎样生活、交流和改变环境。它既需要耐心，也需要像侦探一样把零散线索拼成故事。",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 39.92218100029277,
+        "database_ms": 39.11459200026002,
+        "ranking_ms": 0.3063570002268534,
+        "generation_ms": 1180.730007999955,
+        "validation_ms": 21.88209099949745,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "error": null,
+      "sources": []
+    }
+  ],
+  "seed_answers": [],
+  "attempt_ids": [
+    "call_24efa409d015493a986626a809908dda",
+    "call_012e4005b7484090a7fd768c66c85d76"
+  ],
+  "completed_at": "2026-10-07T03:34:59.597304+00:00",
+  "metrics": {
+    "claim_support": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "citation_validity": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "display_integrity": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "scenario": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "locale_delivery": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "uncertainty": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "followup_consistency": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "personality_structure": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    }
+  },
+  "splits": {
+    "development": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "reserved": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    }
+  },
+  "meaningful_api_latency_ms": {
+    "sample": 2,
+    "p50": 1382.5139299997318,
+    "p95": 1382.5139299997318,
+    "includes_seed": false,
+    "browser_latency": false
+  },
+  "usage": {
+    "attempts_including_seeds": 2,
+    "statuses": {
+      "completed": 2
+    },
+    "prompt_tokens": 3242,
+    "completion_tokens": 230,
+    "configured_rate_charge_usd": 0.0012486,
+    "provider_invoice": false
+  },
+  "human_dimensions": {
+    "historical_correctness": {
+      "numerator": null,
+      "denominator": 0,
+      "pending": 2
+    },
+    "explanatory_clarity": {
+      "numerator": null,
+      "denominator": 0,
+      "pending": 2
+    },
+    "bilingual_faithfulness": {
+      "numerator": null,
+      "denominator": 0,
+      "pending": 2
+    },
+    "personality": {
+      "numerator": null,
+      "denominator": 0,
+      "pending": 2
+    }
+  }
+}

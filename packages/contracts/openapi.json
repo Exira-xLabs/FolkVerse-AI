@@ -742,7 +742,7 @@
             "type": "string"
           },
           "prompt_version": {
-            "default": "jinyao-hybrid-explanations-v6",
+            "default": "jinyao-hybrid-explanations-v8",
             "title": "Prompt Version",
             "type": "string"
           },

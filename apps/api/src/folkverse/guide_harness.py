@@ -42,7 +42,7 @@ from folkverse.guide_retrieval import (
 from folkverse.provider_gateway import ProviderMessage, ProviderResult
 
 HARNESS_VERSION = "guide-hybrid-sections-v6"
-PROMPT_VERSION = "jinyao-hybrid-explanations-v6"
+PROMPT_VERSION = "jinyao-hybrid-explanations-v8"
 Depth = Literal["concise", "beginner", "deeper"]
 
 

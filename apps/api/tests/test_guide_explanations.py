@@ -254,3 +254,21 @@ def test_original_objects_are_a_general_concept_not_an_origin_date_request():
         False,
     )
     assert not general_request(GuideRequest(question="Where did this object originate?"), [], False)
+
+
+@pytest.mark.parametrize(
+    "question", ["什么是考古学？", "什么是书法？", "什么是玉雕？", "什么是化石？", "什么是湿地？"]
+)
+def test_chinese_definition_prefix_accepts_generic_concepts(question):
+    assert general_request(
+        GuideRequest(question=question, locale="zh-CN", depth="beginner"), ["辽宁", "沈阳"], False
+    )
+
+
+def test_chinese_definition_prefix_preserves_local_and_precise_fact_boundary():
+    for question in ["什么是沈阳故宫？", "什么是辽宁最早的书法？", "什么是今天的开放时间？"]:
+        assert not general_request(
+            GuideRequest(question=question, locale="zh-CN", depth="beginner"),
+            ["辽宁", "沈阳"],
+            False,
+        )

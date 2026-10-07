@@ -1,0 +1,2643 @@
+{
+  "version": "phase03-codex-actual-answer-assessment-v1",
+  "assessed_at": "2026-10-07T03:38:35.596781+00:00",
+  "assessor": "Codex",
+  "review_kind": "machine",
+  "human_review": false,
+  "independent_expert_gold": false,
+  "scope": "All 200 question IDs: actual full pilot plus explicitly exposed targeted corrections. This composite is NOT a fresh 200/200 run on the final prompt. Source faithfulness is not independent historical correctness. Basic adequacy permits disclosed introductory simplifications; no perfection claim.",
+  "run_hashes": {
+    "pilot-v5-live.json": "5353b9ea98fc2c727d9cd855261e0face6265876c74dfefc792c16d49cd15210",
+    "pilot-v5-corrective-final.json": "9b6bb8388b0eebcda388d790916f8ec54fb1986f54133889ddf365d047e7f010",
+    "pilot-v5-archaeology-final.json": "0362b12f60328fe8696a9a9c04362f21562fbb3e8b425aa304d9540f3488c657",
+    "pilot-v5-editorial-final.json": "ecb8f0b1e4022ff69c46833d19672e121a9ae786b50d6920c96f7c5113aed8c7"
+  },
+  "source_assessment": "data/liaoning/machine-source-audit.json",
+  "source_assessment_sha256": "fb399be5471e4bba4c9306a0a2803046eb60aed739535eb191988d22c6e62275",
+  "original_full_pilot": {
+    "claim_support": {
+      "numerator": 89,
+      "denominator": 89,
+      "rate": 1.0
+    },
+    "citation_validity": {
+      "numerator": 89,
+      "denominator": 89,
+      "rate": 1.0
+    },
+    "display_integrity": {
+      "numerator": 200,
+      "denominator": 200,
+      "rate": 1.0
+    },
+    "scenario": {
+      "numerator": 192,
+      "denominator": 200,
+      "rate": 0.96
+    },
+    "locale_delivery": {
+      "numerator": 200,
+      "denominator": 200,
+      "rate": 1.0
+    },
+    "uncertainty": {
+      "numerator": 195,
+      "denominator": 196,
+      "rate": 0.9948979591836735
+    },
+    "followup_consistency": {
+      "numerator": 5,
+      "denominator": 6,
+      "rate": 0.8333333333333334
+    },
+    "personality_structure": {
+      "numerator": 4,
+      "denominator": 4,
+      "rate": 1.0
+    }
+  },
+  "selected_observations": {
+    "scenario": {
+      "numerator": 200,
+      "denominator": 200,
+      "composite_diagnostic_only": true
+    },
+    "source_faithfulness": {
+      "numerator": 90,
+      "denominator": 90
+    },
+    "basic_conceptual_adequacy": {
+      "numerator": 83,
+      "denominator": 83
+    },
+    "clarity": {
+      "numerator": 200,
+      "denominator": 200,
+      "assessor": "Codex"
+    },
+    "paired_language_appropriateness": {
+      "numerator": 100,
+      "denominator": 100,
+      "scope": "Meaning/classification appropriate to each prompt; examples may differ and conceptual prompts are not all literal translations."
+    },
+    "social_personality": {
+      "numerator": 4,
+      "denominator": 4,
+      "scope": "Two greetings/two thanks; earlier variation and consent scenarios are separately dated."
+    }
+  },
+  "original_quality_corrections": [
+    "Restoration is within conservation, not two mutually exclusive categories.",
+    "Pottery umbrella is not universally porous.",
+    "Deeper archaeological layers are not always older.",
+    "First-hand interviews may be recorded later.",
+    "Intangible practice may be visible.",
+    "Fossils have multiple formation pathways.",
+    "Shadow puppetry action is continuous, not frame-by-frame.",
+    "Evidence quality matters; adaptation may invent/change historical details."
+  ],
+  "remaining_limits": [
+    "One conservative Chinese archaeology refusal occurred in the 28-case diagnostic; later actual English/Chinese diagnostic and real Chinese browser passed. Stochastic false refusals remain possible.",
+    "General explanations are not independently verified or a scholarly gold corpus; beginner wording leaves exceptions.",
+    "42 profiles across 14 cities are a launch baseline, not exhaustive Liaoning content.",
+    "No physical-device/screen-reader or independent specialist certification."
+  ],
+  "cases": [
+    {
+      "case_id": "pilot-v5-explanation-shenyang-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e5398f819d974c1cf3367e21835ebc420661a003066bddc52309c71e9df9a684",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-shenyang-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "981c98d44807f6d4b6b649e8b1ac284542a1980dd4253f41d59b73ee2b6a43d0",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-shenyang-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "a46b0fc423bd15c755f8606f7074c79a8ba0bd1d37ed0099d06882b0ae0be4cc",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-shenyang-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "10c9cc5bb7ed6ac4350f91b24054285a9ad838fc695a017eab07d88cf76424fd",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-shenyang-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "6c3d4262b5b3af317dc057b765470ba9748ac455ae5066c4df7a78f3520cb90f",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026032314000396035/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-shenyang-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d552eafaff423244143f24031be9489091acd2d90889044483bcccf697fca9a5",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026032314000396035/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dalian-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "551553b2e180d0aa1f6d4f2d172147e2985cc66258623aaa115ed0dcd380fba5",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216072229736/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dalian-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "c5c05e0d6ca635fab36f569c582f4f5f43aab4c9c16caea4d338b2047876f46a",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216072229736/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dalian-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "705dd891eba4553fd2f08cd7975af4056607351dc3a85c7c4925d63d2734aab0",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815521914267/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dalian-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "06a14e7a293e9c3a42a7e0f691ed4b3acf129c88a339d8252b929dc565788fe8",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815521914267/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dalian-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "f98bc95d7dacfa65fa0727149fa6f05606045f367773fa6ebdecfa7c739ec5fb",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215492936959/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dalian-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "aaf5f0d3a23e3b40332aef3e6e39be595dc81409742942aca669fe71286963b8",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215492936959/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-anshan-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0221678491ff3c4d940527c3141baf78b729a55c4b033aeea354548b93fc50a1",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815300948615/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-anshan-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e119835f123b4f80d70816ada062cdd46ea76f4bb0f8749e2a834ff47caa932f",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815300948615/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-anshan-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e0f0fe406c82e98acf155396a71e87f878909f52ef1d1feeddd0a04b9513feaa",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815264870826/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-anshan-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "bce08794bc25f6215fc3ad541c0ec03ec53f2c8e1ef0efd89898cbf1006d3420",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815264870826/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-anshan-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "a48fc1e1def194e221d245e25a971173c9081143d1260c708fa33bd7ecbd9358",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026010815314636506/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-anshan-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "f3c08577177d632815d246e8adda331d76eace12829c5e4782c3deb214e1cc1a",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026010815314636506/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fushun-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "57bf9f9bda7a577e26242d471bc83fb28362bd4b998596f386b6f799315de0a3",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215360785153/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fushun-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "f273ea5a3f54a4805f51d75905998d31cf8ad0f8c0c1933570551b79aa92ff4d",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215360785153/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fushun-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "454b2f72d63b37d12c60347f9f862179d7231fee15bd5a41769495b14d91a32b",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215232757710/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fushun-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "07e0c9b30d1ba17c547f1618fe8e25346a7d9d69e7ec2e09348280f80ca7e850",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215232757710/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fushun-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "36759e3cf0d35d1ae4e4fcd839e07d91a0320433b251ecbae29d64727b9737be",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215341060360/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fushun-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0fa7ce8d6feacf340e624f5b6f40abfe4cfd1b691b44de1f1bd9c9353fb17125",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215341060360/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-benxi-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "594bfe453b8f51caa81309082789e74ae065a8035140afba667099613e917a80",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516270563816/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-benxi-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0b4e8b652555eb85fc106a5bea5ae5307e87db97d76e03e58311bb380e0ff406",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516270563816/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-benxi-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "4b15ba9ae76a1654df7fdab605e4cf03688bf851c6ccc7fea003b7a4ece2ff02",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516252322421/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-benxi-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "436fc06c26c36ae7e3b556ecf198cb12071c67a6491f7f35050d4f461c1c7fab",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516252322421/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-benxi-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "725fec8490083c4d0d51e57414a03f336413d762ab03f4a1673b54a0b5771416",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514113343131/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-benxi-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d11e12d81dbefb2be451ecbc0afba31054be074e6fb6a8b51dce0b4342bd98cc",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514113343131/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dandong-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "54992f8d38ceae028d4efb3db7b70146f019d1adf266aa8bc63f1eee7ebd756d",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115523216542/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dandong-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "4b94044ebb6d485a6c5c8d78b623e43a8b480a41c43f5bd59def4cbf63afde30",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115523216542/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dandong-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9bacbc3dd2c4b13b6e57c45bf14d7702010001fd29115d55c583863ca6da8ed3",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115505128051/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dandong-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e0c1a49e48f085e43201d8a5024f2d876767f5dad9c71257733a9e42494be4fa",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115505128051/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dandong-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d16edb4a150d656b9594733f174c75b48f60393aadb10f8a9f5c324c31b8518f",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115345033432/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-dandong-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d87f8fe0f673120109f27b79ba2d67558b3a054bfc267f86d0bf005c667bacb1",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115345033432/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-jinzhou-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "41709a520540f32ba1c2fcca900ac5f5f5ac2e316aa0cc0491376f0027f3d35f",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415582121511/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-jinzhou-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "a68dd12264ccd93b18cf11d15eec4253f81a06cf5c40510674f1e0b7af31e895",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415582121511/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-jinzhou-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d753423d38ca6b2d9e6d52ab56c52dea23189dbd4970114bf20b3e5cb078dc9e",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415515877032/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-jinzhou-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "460a5e0d233571872d672e1008eaeb568f6a42ed85a86cdca41e51d840ec288d",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415515877032/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-jinzhou-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e23527ac34d6c5c55d303bb637797f7c013b8ee3e31b628fd237787ba0403084",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415381968121/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-jinzhou-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "34d62889c3e7626c7f61a0c499c58063da9ab7597fcc97e54b6db2b43dae06c9",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415381968121/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-yingkou-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "93c79f834ed355a748cbdb0dbc727a9a33092154a04b82199e08a997588c030e",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415253497628/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-yingkou-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e1207482e44cbe9f7255a7dc4ae44972cd8ee40116de8ca748720569b8bc6ba7",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415253497628/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-yingkou-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "f4498236cd12154f256108d140ce81f7d21d7ad5a01f18b86db90d6e4ee4b277",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415290813331/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-yingkou-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "fb5d014364767a1c655037a5b07520ab65c977f56edc6c3acc6e383175896c09",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415290813331/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-yingkou-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8da0c88ee0671b994c1368eb93e89a0d15b52575b43c298d80ebfb0c7259c15f",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415322259752/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-yingkou-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "ef11c9ef636904f48285f2c7e6017b9a0c5f7e051e33846af1b2be7c94d12106",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415322259752/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fuxin-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "7163564e26e3aaeb30bf1ae3eb06a56892c822bac7c1e3b13591e16def8db75e",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116121250991/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fuxin-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "1b222edd12368619fa7180ecaaeee155ee65acf6e1936cd3e08b982173ca78aa",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116121250991/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fuxin-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "4961b987f0802f6b8e4b0578f837b4cf4158c4a024b504b01bbbf26665b89850",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116301135521/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fuxin-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e41c2259c743914f5f36d18a9cee0d496379296239dfa865177864b2f6204622",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116301135521/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fuxin-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "790ed81e7ba6cf0aee667ca36e0502841a7ed8e3b4c44338d2420644652ba412",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116255955709/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-fuxin-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "23f9234682d03da8c36142ed6dddda19fca7a126c9b3382628bb30ee1e68fa57",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116255955709/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-liaoyang-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8d10dc05f090bf15fe6010557dd7031e4eb1ad1510d99fc5540d40d8359ef157",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814532846903/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-liaoyang-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d824183281eb832afe02d557c317beb134eed07fe05baa304ce305e216a328b9",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814532846903/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-liaoyang-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8c1a941d9d8a165ac083fdcac54d453650ed72046fae43d9bc53447da71ed0df",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814590371766/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-liaoyang-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8c4da0fa71cfba39cdf321654736bf043cf6d2fbb4299d55592bb10a9d6e8740",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814590371766/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-liaoyang-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "6728287c05342547eac2cd66f58afded4ba6588bb013822b1ab55c3d6cc5233f",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814543749109/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-liaoyang-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9412d2fac6846d1924792ea85b5b40779b454e1ea642c60a789237149d01c990",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814543749109/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-tieling-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "403156457c70a796d37293eec9ac85e0f8cadb7f2f18a19d79641215c89ddb11",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415201655580/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-tieling-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "47f6d348976a23a61644a450daddaff36fcd0c13c1e05da41952f54ec976bdc1",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415201655580/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-tieling-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9cab01d1726b92fbdd90e927763237767f8cd0c7feb535c873dbc7985ffeb5f2",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415182414713/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-tieling-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "be09ef572f3d742159c5d48d7d0820a0462d4044840ccb1cca523458508243e7",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415182414713/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-tieling-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d9e119291c3ee9a0aedfca3b686d842435ccb0064072d8b8d3d2c941ae644268",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114460837555/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-tieling-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "de60f6ad48dbcdf608e11befbf6e164fc0406397afc13acabae936970c0b09c7",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114460837555/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-chaoyang-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8b96f9299452fe01eaad1810e4d07fc55eb01c8f91b5aa6f0d1b8d6c672de4da",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114190360298/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-chaoyang-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "7892769d38e26d8c951838c861b712b1303605031123b282bd7265cc40932d2b",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114190360298/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-chaoyang-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "fc7ac7e396c4e053e370fc170bb49d8be9a7448407ce05943e42c310ff5daa5b",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102716004434532/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-chaoyang-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8c8d099c964576de639bdb1f36c7ac5f64500ee365ea53454795c00f4a08b2be",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102716004434532/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-chaoyang-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e3a199bc96845ccc05bb79fe58b55c1652e9875afbc2247b050400044a01e871",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715574271950/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-chaoyang-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "65be9e3fbd90fe7305ccaf7057312ab84a2226c8f1d5a1edc73349a6fc34bddb",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715574271950/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-panjin-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9ffe948c612642163ec32ee8264df5e72edb78ca06152d6510557ca8bcc55109",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216333845478/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-panjin-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "50255034bd100e050fb12d71284f3d1283a5546a558645815908635657f7141a",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216333845478/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-panjin-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "4749ec56f8dec5b324e2d5dc42d9ab8d164426815512526d7622a8b2154116d9",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216325764499/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-panjin-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "5b571af7507d2244d5eb6ed7f799eef9e6cb83543cd97efd3b69e844a5747f70",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216325764499/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-panjin-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "cf9fc861c30d35090d816211bb353bb6b1c02f7e8d893e7c469402674b219eed",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216303459994/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-panjin-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9606f4b8c09a830169b64c4451099fef9a834c38ea6958bd40483b2cffb10782",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216303459994/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-huludao-1-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "104ab9958a35d3eb08075e7e147fa6a75c3bbdcc126bd0bc5e8d519d9696fb91",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216222773432/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-huludao-1-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9e00650e9f1a139a0600d755a6bb0aff3ef12620d7a5e02ca885eaf28988822a",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216222773432/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-huludao-2-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "c0c9f0bebfa270898f681f36c3f8dd2992254f0c8533e81632865b3f0c914151",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015153218498/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-huludao-2-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "a3a806d918a731724a703a5d649e709b1eaf2d9f77dd2297220559e26ada57a5",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015153218498/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-huludao-3-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "55dbe7fb6c1f1365f72f18b89183796b7a08db43226bdea299d390de1061f553",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714243445981/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-explanation-huludao-3-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "61b2263664cf2bf5727c12952b428729c7734d8abb9e1e58e57bd8a4b667d1f9",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714243445981/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-shenyang-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "3e837567e1383fd094d974d84909cc6e8145d4066416190d874a4ec8b2444934",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-shenyang-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d764e1af2c0fc4ab94d392b8c7dacd76012c9e282a6fc57ac4666249f36d3928",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-dalian-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "905a863e0db46de920614bda19d0ae552441262643a5e45a0e098bbbfd357caa",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-dalian-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2edf7d1329843a78c9aa4755ac77c13b07bf584a59cafea9720a311c90789a26",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-anshan-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2650a1d43c2d4b44459a4d98b4efb07081b1cc5a288a20aa7248ec2d9939096f",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-anshan-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9c4756734bf0b7b6bd77f66574f5b06ed13b6928dedd9e7767412a0a280b7e27",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-fushun-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "13c5b11112b5fe1b60461a3f6c801e2b624828ca9e7dbba95408bb89936cb464",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-fushun-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2767abf2deb66e59cf9f22c23191c5652b9595d2ebd3ba56cdcd7e24826f46c3",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-benxi-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "36f41271d21288a762f70aa0ec0314daba670d159a383871c72fd231fdfda9d9",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-benxi-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "b767846a09db6dd3cc08e174d13d166a9f50b9633a0afde143fc971da5cc8859",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-dandong-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "43580e49aa3be80490c1a3a449179fa927866d1c51ea84d5c072440902082d7c",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-dandong-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "6ac404d83db81e10ac61e4f64d87be505ef4a8345f4df7f7b5d6eabe850760d6",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-jinzhou-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "4661666f02712d78bb3342f4a001eb35d4333512bf300d7a9d3a0f5012402606",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-jinzhou-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "a75be41660777688ffbf7e66eaca37501d6b58f05b2bc22b1bbb0554f5b81527",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-yingkou-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "57376eb2fa139e9fa07e8781ae17e64b0c0db1c474dbdb1f057c2e54938882b6",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-yingkou-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "6d8a884b0a4f5bba33ec35784ae4440c59ee055df79abfcc2906a3d8fe5abdbd",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-fuxin-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "339fb1d09d682927bd467c3dccf77dac1bd934e3bb5d1f5fddfad74b3cf39748",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-fuxin-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "ba7e969347f8f472628643116cc9d0275c8b3e7510e1db1d8fa9d1dfb6387644",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-liaoyang-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "29a46c715a11697eb1ca2f4601df2db9fe64136ed64a3aecefb89869f6760289",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-liaoyang-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0f405b57d13b3327fccea5b3f2e3ed82f9fb84bb5c8786cff85c0fd35814b40c",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-tieling-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e5af31aaaef437105a21c73b570c4a2150c2f672023682b48788888aa887a5d3",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-tieling-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "3cf58a6abc5a3720d37bb365a3f39fb6333864b1e56ed250f03060b395a57708",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-chaoyang-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "3638c07b607e04232407d4c8298a5a05598c6ea1ac5e085b3e5b85c30a702f16",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-chaoyang-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "84da0f2a32f477d090c9234e1571497b2a51a015a809b74106342431a9871dc5",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-panjin-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "3a6aaf79e34e3aba680a49d269eb083a24e2ee7bfa0a2a08ad8629636cc009ad",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-panjin-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d02c4cf27c270187ae17c0efa66b82d7f16e8a30010b630d09e58a2bcdb5e416",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-huludao-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2e22ceb8aceae704f191a253b9ba02bedabbfa109412dc60cc5d5355c00a5d55",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-hours-liaoning-huludao-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "f361b0e744b6e83fafc1f5922e6aa104bd822d386a7c0dcbd3006d65be436447",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "No current operational source exists: explicit refusal is appropriate and contains no invented schedules, fees or source links."
+    },
+    {
+      "case_id": "pilot-v5-shadow-en",
+      "run": "pilot-v5-editorial-final.json",
+      "answer_sha256": "5d134897d396f4ee99c90f291ee7dd75486e7d9ba971c7cbe2ff7604b6131031",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ich.unesco.org/en/RL/chinese-shadow-puppetry-00421"
+      ],
+      "rationale": "Live lit-screen performance, flat figures, voices/music; corrected continuous movement rather than frame-by-frame or earliest-animation claims."
+    },
+    {
+      "case_id": "pilot-v5-shadow-zh-CN",
+      "run": "pilot-v5-editorial-final.json",
+      "answer_sha256": "f1750a12a70b9ed7648dffd48cc7d2338d44a25c936793a441739ab16026b7ef",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ich.unesco.org/en/RL/chinese-shadow-puppetry-00421"
+      ],
+      "rationale": "Live lit-screen performance, flat figures, voices/music; corrected continuous movement rather than frame-by-frame or earliest-animation claims."
+    },
+    {
+      "case_id": "pilot-v5-silhouette-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e0f2ea662fb4863e2675ea4afab5b7a11e531ee1da2f3dcb3640d9711d6fb3a2",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-silhouette-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2f718e9631a079783013c49a938c2144daeef28ba6384de9c06afddca39e693b",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-museum-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "164ad2fba71f6edabceb8fefaac8b3bca57b4189a29943170611e81923f79965",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://icom.museum/en/resources/standards-guidelines/museum-definition/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-museum-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "a69e410beccf825fe1249f984d3ebd567ec376607cc31984bef92440474dee00",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://icom.museum/en/resources/standards-guidelines/museum-definition/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-artifact-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0342450de49de5935241021f819b51fe8529f17ae1f27629ac42e5459f149e87",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-artifact-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "dd145328271dbb06bd3ee1f67ee7773ffe877e8a572af0d5c31b38fed15480c1",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-curator-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2b82c8fce4769b2e9d686be4379bf2e862028d6a45b364f4953ab24cce2a7d64",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic collection research, exhibition selection, interpretation and collaboration; responsibilities vary by institution."
+    },
+    {
+      "case_id": "pilot-v5-curator-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "3a11f94d058d16be169e4efbaf1010d8e4f6b2818f0cfec93b115af74a6ced14",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic collection research, exhibition selection, interpretation and collaboration; responsibilities vary by institution."
+    },
+    {
+      "case_id": "pilot-v5-conservation-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8c9d54931df2b1db395a639cb37333a0f4220f6ea16bd364b53657a3574b0f32",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.icom-cc.org/en/terminology-for-conservation"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-conservation-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "364ebd0c5932d3c2c0c8232b3bad7ec591dcc7d0d9d4a3bad545dbc1280fda76",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.icom-cc.org/en/terminology-for-conservation"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-restoration-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "552f217702b2a3e2d0b20921ee3894578c3b1702d22918ad55454eba243a4ef8",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.icom-cc.org/en/terminology-for-conservation"
+      ],
+      "rationale": "Conservation umbrella and restoration purpose/material respect. English expressly states inclusion; Chinese gives accessible care/repair distinction and rejects a pristine-original requirement."
+    },
+    {
+      "case_id": "pilot-v5-restoration-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "2decf96fec790e7e4366e5f225f47454f3b37c0020d503a23524383924a3333f",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.icom-cc.org/en/terminology-for-conservation"
+      ],
+      "rationale": "Conservation umbrella and restoration purpose/material respect. English expressly states inclusion; Chinese gives accessible care/repair distinction and rejects a pristine-original requirement."
+    },
+    {
+      "case_id": "pilot-v5-archaeology-en",
+      "run": "pilot-v5-archaeology-final.json",
+      "answer_sha256": "355247371c5f6332812db7cbacba66c8f83d8a7e1caf833286c9ccd2af3b1107",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-archaeology-zh-CN",
+      "run": "pilot-v5-archaeology-final.json",
+      "answer_sha256": "1380e27c933159e5d578c2d8ebaeca09d98d11e7287fd281bd6c67921c97e051",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-excavation-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "4e864389d2b0cc57eeab767efe26b6615727fb50985a19b9226b6de996547569",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/articles/000/what-is-archeological-context.htm"
+      ],
+      "rationale": "Recorded context and irreversible disturbance; corrected deeper-always-older simplification. Digging is not the only archaeological method."
+    },
+    {
+      "case_id": "pilot-v5-excavation-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "8303f48b92a6b8a8cecb7dfde391bae20a1ae7a239fb66bb415ecbfb6a0dfcf3",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/articles/000/what-is-archeological-context.htm"
+      ],
+      "rationale": "Recorded context and irreversible disturbance; corrected deeper-always-older simplification. Digging is not the only archaeological method."
+    },
+    {
+      "case_id": "pilot-v5-context-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0b4b215bc550d6d23932633c6cafdb7dedf0da985543e37786d1240221c72da1",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/articles/000/what-is-archeological-context.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-context-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "ba57b04f2ca5b1877468e6fa36d0257f95c3d94f334d0a0c3722ba17d4a3949d",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/articles/000/what-is-archeological-context.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-replica-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "c2b10f5cef154bb5ca5da1e7849f1f9bb29e385f41162e57ff252f455bdc51db",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-replica-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8e7e7c2984eaa97801e6aa332850efe2c9f40a6c4c4c65bbebdfe26d95084e95",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-provenance-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "804711f7ca33dd64f3e4ab61732d83288aec98aba89f16c98e5fd21d27eaa602",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.metmuseum.org/pt/policies/about-the-mets-collecting-practices"
+      ],
+      "rationale": "Ownership/whereabouts and documentation matter. Research can support authenticity/ethics; it does not guarantee either from a complete-looking record."
+    },
+    {
+      "case_id": "pilot-v5-provenance-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2108bc9ac414b4d0bc6048d80cffd887cbbab894545ea4cd7dbc0939d2d1613d",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.metmuseum.org/pt/policies/about-the-mets-collecting-practices"
+      ],
+      "rationale": "Ownership/whereabouts and documentation matter. Research can support authenticity/ethics; it does not guarantee either from a complete-looking record."
+    },
+    {
+      "case_id": "pilot-v5-oral-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "eb4c77812b46a327595d7c33b307cfd2cf9290435224d7d1b83017cece7fcfea",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.loc.gov/classroom-materials/oral-history-and-social-history/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-oral-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "dee95dbed35548634b159524a33a728f0afcbff50f0a38efa8bbca00c25025c5",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.loc.gov/classroom-materials/oral-history-and-social-history/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-folklore-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0eaa8dd0df843b4338d918f88efbf0dafd291b3909b57c17cb35522761bf31ff",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.loc.gov/research-centers/american-folklife-center/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-folklore-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "008c6a3ca22e54c60981df3ba4e64bc11c6fd3d8fca69434bb507446c848db6a",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.loc.gov/research-centers/american-folklife-center/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-legend-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "8dc4ff263949f81b5e79da660bf05b819bd55c2221f1a4cea0a12018d00fd341",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Tradition and checkable traces separated; primary records themselves can be biased, so examples are not automatic truth."
+    },
+    {
+      "case_id": "pilot-v5-legend-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "318c9c26bebc9cf51a3dec1961b1235f89ac0d46aec236f2e46ecb5bf4404beb",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Tradition and checkable traces separated; primary records themselves can be biased, so examples are not automatic truth."
+    },
+    {
+      "case_id": "pilot-v5-primary-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "918565a9ac30b50d409ad7b4abaca9bf70e27ac5839d0d4131f42fe2bbe9a1f1",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "First-hand records/objects and interviews; original contemporaneous-only English oversimplification corrected."
+    },
+    {
+      "case_id": "pilot-v5-primary-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "010f55e5c34901fa770bd8c2b75d57516b015ed108f0ddc80a006b8ca0612afd",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "First-hand records/objects and interviews; original contemporaneous-only English oversimplification corrected."
+    },
+    {
+      "case_id": "pilot-v5-secondary-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "7622f0fd65670fc1f5d4e5f600f2b39212c68264bb932d14d0a301a4a7325afc",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "First-hand traces versus later interpretation; Chinese opening remains simplified but explicitly includes participant interviews."
+    },
+    {
+      "case_id": "pilot-v5-secondary-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "be7467d7bfdfeb2dd34c7e49eacd25ba06419d165de756c0aa6d20acbfc12bce",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://home.nps.gov/teachers/classrooms/primary-and-secondary-sources-in-archeology.htm"
+      ],
+      "rationale": "First-hand traces versus later interpretation; Chinese opening remains simplified but explicitly includes participant interviews."
+    },
+    {
+      "case_id": "pilot-v5-uncertainty-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "4f66142040c2fdd667285230b1ddc54458604dbf4bb2f9ab2c97865529de784b",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-uncertainty-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d2c095a14c98ceaa75acc2a25b37a632d1d22f23ab1244b6d25533c851170297",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-interpretation-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e97c33b37d5c4fe2737f4873f8b7b3cccebb2c01622e4e9ad792d37fb4675e01",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Both explain evidence versus conclusions/opinion; prompts differ in breadth and are assessed against their own wording, not as literal translations."
+    },
+    {
+      "case_id": "pilot-v5-interpretation-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "c9c461d500a32cda389b6155642179f96daf8483e710a0cd4eff82416ac10636",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Both explain evidence versus conclusions/opinion; prompts differ in breadth and are assessed against their own wording, not as literal translations."
+    },
+    {
+      "case_id": "pilot-v5-exhibition-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "a8fd0cb94e41860e5d0190e46e76ecd53303363c0bfd5686ea5bdd5456fc32ae",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-exhibition-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "005955208f6b4becf2dfbbc37bcb54a4a556e3c147530270c2a788bfdd8a1b39",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-caption-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "beb3f4d76369217f97a2f9c77804dcaf1313457b24feea002fe3cb34240ce189",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-caption-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "383138824b055b8e7c6d8fc4e77209642a1ab68fc6d49a2015c520d1461a90c4",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-chronology-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "3d40fa96946afb9e461fc87d4d44fabb38695fff7c513c69d6b69e736d1496e4",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-chronology-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d2f71a18bd91acc0a506108cdc2992f2add8ed6c61dbfd988c93cddac38bcef6",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-craft-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "29203292da9e8f722afd2fa60569e8ae84feed13902bf1a58c8b72ed35333264",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ich.unesco.org/en/what-is-intangible-heritage-00003"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-craft-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "0770769562d67aebb793a2fd93449e000728163a85b6ce31637dd3b352786fa2",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ich.unesco.org/en/what-is-intangible-heritage-00003"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-calligraphy-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "f4acd98541c595f160228984dbf14af754c777d0da10968437a25513d0826a29",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.metmuseum.org/exhibitions/listings/2006/brush-and-ink"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-calligraphy-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "889437f2e900ff6e24a9dbdbf7ceca45bc263e9fbaad797235b58fa642646e0a",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.metmuseum.org/exhibitions/listings/2006/brush-and-ink"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-ceramic-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "5a6f2f98693b25678baf0648ea528f0b191883afa7fd08979c7ece908931818f",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.vam.ac.uk/articles/a-z-of-ceramics"
+      ],
+      "rationale": "English now distinguishes porous earthenware from potentially dense stoneware and porcelain. Chinese uses the common narrower 陶器/瓷器 distinction; not a literal translation of the English umbrella term."
+    },
+    {
+      "case_id": "pilot-v5-ceramic-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "c5350604d24b2dbe8b07cc7f0037230d1f6d979ee17a6d0629d00643d03d7dbc",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.vam.ac.uk/articles/a-z-of-ceramics"
+      ],
+      "rationale": "English now distinguishes porous earthenware from potentially dense stoneware and porcelain. Chinese uses the common narrower 陶器/瓷器 distinction; not a literal translation of the English umbrella term."
+    },
+    {
+      "case_id": "pilot-v5-jade-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "4040da1fd5ee8f7aab560547c825199d96b57a310f3b7129faca3470f69fd3c2",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://australian.museum/learn/minerals/mineral-factsheets/nephrite-jade-carving/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-jade-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "6a38c561d0f064287af68547389ff4193ad9f03c47c50cccaeb5bb7b0a1db0f6",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://australian.museum/learn/minerals/mineral-factsheets/nephrite-jade-carving/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-pagoda-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "cd7b2b3e3619c712f328ff0f0c9cf3be8bbea8b27f7d9a7a1c9db9904e91f1cb",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.metmuseum.org/art/collection/search/4448"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-pagoda-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "86308f01676abeb58eb608d91b0a0d189fb6261b3c49fba4ec2bbd2e1949c78a",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.metmuseum.org/art/collection/search/4448"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-temple-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "3f5951f61a8c54484f3b8cc1f4022d742ab6d8d0055efee940e1f3fb81ab2c52",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-temple-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "56ce43c9b553856c6806bdc17d0c96773172de1be238f937d589ae84c9e122fb",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-industrial-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "34616b212d7f070b7ee49ffb39d5d5ca9e9daf7d776c0f04509c268641f835cb",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ticcih.org/about/about-ticcih/dublin-principles/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-industrial-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "2f9184d6b64d53386e15e3c44497b2cb37de32a9f1a0188c5bfe883f78418d16",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ticcih.org/about/about-ticcih/dublin-principles/"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-fossil-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "9524e122c195cffa98c6c44a07ca773f079c71fcce1cc3ed5a70c299ca083928",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/subjects/fossils/what-is-a-fossil.htm"
+      ],
+      "rationale": "Preserved life/remains/traces and multiple formation pathways. Rock-based definition is a beginner simplification and does not cover every preservation medium."
+    },
+    {
+      "case_id": "pilot-v5-fossil-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "2dda024dea9ea615ff11f16259db854e713c3226d33ceeeb97a71a7ec180d6b5",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/subjects/fossils/what-is-a-fossil.htm"
+      ],
+      "rationale": "Preserved life/remains/traces and multiple formation pathways. Rock-based definition is a beginner simplification and does not cover every preservation medium."
+    },
+    {
+      "case_id": "pilot-v5-karst-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e8c6d31dd200c72115e5b772ec5158d92ef821526db725051592679381795be8",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/subjects/caves/solution-caves.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-karst-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "63e1c359c102ba155c828a6ffbbcaa2600cb6058e6ae562844673deabb2f3021",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/subjects/caves/solution-caves.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-stalactite-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "83490508b78680fdbc7aae7400720fd4cd942fbebc21411a73c12732b4edc69c",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/subjects/caves/speleothems.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-stalactite-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d7f593f7ff00428cebeb5e121e9f1d80da8f408006b3dfa724092611bf2e4a31",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.nps.gov/subjects/caves/speleothems.htm"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-wetland-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "e6c46c654bdde66e81fec35f97db10b12a3a5cfc32a412402216c074d83502cc",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.epa.gov/wetlands/what-wetland"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-wetland-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "9168e9595ba8038054483c2ffaca4027b9838458636e6b57839ef91d96d836d7",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.epa.gov/wetlands/what-wetland"
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-tangible-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "5ab763bdcc5b712ccd7fa4581a707a16106a483802664cbbe14ef7a5aba20081",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ich.unesco.org/en/what-is-intangible-heritage-00003"
+      ],
+      "rationale": "Physical objects versus transmitted practice; corrected invisible-practice claim. Chinese includes observable performance."
+    },
+    {
+      "case_id": "pilot-v5-tangible-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "9a1f7994a63e5d7b5d5e22a7e01adff8e86a5fb3cc03bd81fbd544b554e9bf51",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://ich.unesco.org/en/what-is-intangible-heritage-00003"
+      ],
+      "rationale": "Physical objects versus transmitted practice; corrected invisible-practice claim. Chinese includes observable performance."
+    },
+    {
+      "case_id": "pilot-v5-translation-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "212c0a59a53842216388960bf20e8f32377b553c236d6c5a1f7c1cd4801b51d8",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-translation-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "694a906ffd89af99a92de7e63c498053c8d2195b1bcc4916e5d36bb46e168997",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-sources-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "cfadffddd299e89178de42ad1fd3b2a4799815ce449bf662647b6a4e60a10c21",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-sources-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "066db035445851af905b58b9eea6bd163e17e65c6d7b0010f81b4392f6144942",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-belief-en",
+      "run": "pilot-v5-editorial-final.json",
+      "answer_sha256": "1481aabde007afef1abf44d59b4a1c9f5fc7888420240adb31370c78ba1de442",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Respectful faith/personal conviction versus testable past claims; quality of evidence matters. This is an introductory contrast, not philosophy-of-religion certification."
+    },
+    {
+      "case_id": "pilot-v5-belief-zh-CN",
+      "run": "pilot-v5-editorial-final.json",
+      "answer_sha256": "f719db1745b4c7b860a1c1b4dd9da4c1eb2ed22bc923270f96438005c6b24d13",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Respectful faith/personal conviction versus testable past claims; quality of evidence matters. This is an introductory contrast, not philosophy-of-religion certification."
+    },
+    {
+      "case_id": "pilot-v5-adaptation-en",
+      "run": "pilot-v5-editorial-final.json",
+      "answer_sha256": "fde9ddf2a0eb76a17f59aca65e304d399532b3b5bd4d50d9d4e63ec6cb6f58a8",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Historical material plus imagined scenes; explicitly asks what is documented rather than guaranteeing accuracy."
+    },
+    {
+      "case_id": "pilot-v5-adaptation-zh-CN",
+      "run": "pilot-v5-editorial-final.json",
+      "answer_sha256": "1686938e88276b3e4301c59324e5a00ba33c3eb5af9c216c3c28ec2b44ba1f57",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Historical material plus imagined scenes; explicitly asks what is documented rather than guaranteeing accuracy."
+    },
+    {
+      "case_id": "pilot-v5-comparison-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "39171490da2e7b4fba8acdb1aa05dcfcab7b19cf1130d3e40aaa0cb9e64fcf95",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-comparison-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "9330d08a90dbde4e03f311c9ba7e4cd853ba853f3c6383387b5945ebaec7490b",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "Codex reading of the actual conceptual explanation and its question; no claimed independent specialist adjudication."
+      ],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-simpler-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "fbe77cf8a7837c629991f6f54c63cdbe7b9aa52944a186e130cd16730e4ffdfb",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-simpler-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "215c8a4e26cb43a49015b1a8bbcef84bd65a5f2cc2a600d3985eaf1c2a50e54a",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-depth-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "e9581230e052d5ec1b0938975c370664c36574d734748b4a4ca75ebdd27e307d",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [
+        "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-depth-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "6e4a6ef2f61b30f7d5666f5591e02e0d8ac05a885b04093e36ad67f1cbc2588d",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-switch-en",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "7f3d8f90d4b89a10af2d27ff086d7ff8541e6c44fba225d0ef74c8a9e774e1b9",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-switch-zh-CN",
+      "run": "pilot-v5-corrective-final.json",
+      "answer_sha256": "21175b289e9d86f07f4d99bb313ce39f05600dc1d2616f181237900711cf9ddc",
+      "scenario_pass": true,
+      "source_faithfulness": true,
+      "conceptual_adequacy": true,
+      "clarity": true,
+      "basis": [
+        "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml"
+      ],
+      "rationale": "Exact attributed source statements match the original-profile machine assessment or existing reviewed passage; classification and English/Chinese meaning remain qualified. Source agreement is not independent historical truth."
+    },
+    {
+      "case_id": "pilot-v5-greeting-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "d55f7cc2a2100505b56f94c21507964d8ada83c05dac7ce5f4679ad521d9a1a4",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-greeting-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "4e743a636c0acce1b77dfb3f6e7b38cc2d275aa63aacf58ea32e6cd1568e3462",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-thanks-en",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "df00416799f3fe2ae5b852ee1268b476b86fb3c424634b5aa38edb27e3b19a63",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    },
+    {
+      "case_id": "pilot-v5-thanks-zh-CN",
+      "run": "pilot-v5-live.json",
+      "answer_sha256": "90b66aa4a157391a3a023a4b57587b96fa70d534c804714a7ee183aeee8beaa2",
+      "scenario_pass": true,
+      "source_faithfulness": null,
+      "conceptual_adequacy": null,
+      "clarity": true,
+      "basis": [],
+      "rationale": "Basic conceptual answer addresses the question in plain words with an example or distinction. General knowledge remains visibly unverified; no local precision or fabricated citations."
+    }
+  ]
+}

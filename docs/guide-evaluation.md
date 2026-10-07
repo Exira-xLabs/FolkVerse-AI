@@ -1,3 +1,5 @@
+> Current status, 7 October 2026: Phase 3 complete. The [completion report](../report/PHASE_03_FINAL_COMPLETION.md) supersedes historical pending-review/budget status below and records measured pilot/corrections, attributed machine assessment and limitations. Phase 4 is next.
+
 # Dated guide evaluation
 
 The frozen [v1 set](../tests/evaluation/guide/v1.json), dated 6 October 2026 (Asia/Shanghai), contains 64 cases: 32 English/Chinese scenario pairs, with 16 development cases and 48 reserved scoring cases. Both languages of a family share the split. Expected supported statements are copied from the export's existing editorially reviewed passages, with source, reviewer, review ID and review date. The scenario targets and unacceptable answers are machine-authored drafts pending human adjudication. No new editorial approval or independent historical judgment is implied.

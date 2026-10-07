@@ -11,3 +11,7 @@ The [machine launch manifest](../data/liaoning/machine-launch-manifest.json) rec
 Phase 3 acceptance uses source-bound factual support, citation freshness, classification, actual bilingual delivery, consented context, understandable presentation, personality behavior, fault handling, accessibility and reproducible startup. A machine assessment is not an independent expert quality score. General explanations remain visibly unverified; structural validation does not establish their truth. Independent specialist review can strengthen later content releases without requiring the owner to fill a worksheet.
 
 The 200-question live pilot retains its own gate. Its dataset contains 100 paired families: all 42 topics, unavailable current-information requests in every city, concepts, conversation and follow-ups. Questions were frozen before the first run. The initial topic subset was exposed while fixing attribution-copy failures; later reruns must be labelled accordingly. Provider limits and the owner's existing spending cap remain enforced.
+
+## Closure evidence — 7 October 2026
+
+The [final completion report](../report/PHASE_03_FINAL_COMPLETION.md) records the completed 200-question pilot, actual-answer machine assessment and preserved corrective diagnostics. Owner human review remains waived; optional human worksheets remain unscored. No source-publication approval was fabricated. Phase 4 is next.

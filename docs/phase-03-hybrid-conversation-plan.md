@@ -1,3 +1,5 @@
+> Current status, 7 October 2026: Phase 3 complete. The [completion report](../report/PHASE_03_FINAL_COMPLETION.md) supersedes historical pending-review/budget status below and records measured pilot/corrections, attributed machine assessment and limitations. Phase 4 is next.
+
 > 7 October owner amendment: human review is not required from the owner. Codex performs explicitly labelled machine source assessment for original-page-checked lookup; protected human corpus publication is unchanged. See [acceptance amendment](phase-03-machine-review-acceptance.md).
 
 # Phase 03 — hybrid Jinyao conversation plan

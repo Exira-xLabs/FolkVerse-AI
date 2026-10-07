@@ -3,12 +3,16 @@ import { chromium } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const followups = process.argv.includes('--followups');
 const polish = process.argv.includes('--polish');
-const output = polish ? 'report/evidence/phase03-hybrid-part06-live' : followups ? 'report/evidence/phase03-hybrid-part04-followups' : 'report/evidence/phase03-hybrid-part04';
+const closure = process.argv.includes('--closure');
+const output = closure ? 'report/evidence/phase03-final/live-browser-closure' : polish ? 'report/evidence/phase03-hybrid-part06-live' : followups ? 'report/evidence/phase03-hybrid-part04-followups' : 'report/evidence/phase03-hybrid-part04';
 mkdirSync(output, { recursive: true });
 const result = { started_at: new Date().toISOString(), mode: 'real local browser/BFF/API/configured provider', turns: [], errors: [] };
 const browser = await chromium.launch();
 try {
-  for (const questions of polish ? [
+  for (const questions of closure ? [
+    ['Explain Shenyang Industrial Museum', '解释沈阳工业博物馆'],
+    ['什么是考古学？'],
+  ] : polish ? [
     ['Explain Fuzhou shadow puppetry', '剪影是什么意思？'],
     ['沈阳故宫始建于哪一年？'],
   ] : followups ? [

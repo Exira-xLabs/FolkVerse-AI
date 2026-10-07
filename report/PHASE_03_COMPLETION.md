@@ -1,3 +1,5 @@
+> Historical completion report preserved. The [7 October final closure](PHASE_03_FINAL_COMPLETION.md) supersedes pending review and evaluation status below.
+
 # Phase 03 working-chatbot delivery — partial acceptance
 
 ## 1. Repository, brief and verdict
