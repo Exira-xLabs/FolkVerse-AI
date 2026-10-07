@@ -1,0 +1,13 @@
+# Part 6 — chat, sources and accessibility
+
+7 October 2026. Implemented locally, preserving Jinyao artwork and the approved Messenger presentation.
+
+The chat now preserves the reader's position when progress or an answer arrives. Sending a question follows the latest turn; scrolling up provides an explicit “Jump to latest messages” control. Hybrid paragraphs and original source excerpts retain their answer language. A single progress status announces work outside the busy conversation log, and the composer exposes character/keyboard instructions without announcing each keystroke.
+
+The source inspector displays source statements, historical evidence, interpretation, folklore/belief and creative adaptation as separate classifications. Official-page lookup remains visibly pending editorial review. No whole-answer verified badge is used. Evidence revalidation checks language and classification as well as source/version metadata. When withdrawal removes the inspector's trigger, closing the drawer returns keyboard focus to the composer; ordinary close restores the source button.
+
+Verification: **59 dedicated browser checks pass**, including EN desktop/ZH phone, 1600×900/390×844/768×1024/800×450 reflow, nested modal focus, Stop/Retry, IME, newline, bounded history, retained reading position and source withdrawal. Axe 4.13.0 WCAG A/AA checks report **zero violations and zero incomplete checks** for both chat and sources in both languages. This is scoped automated accessibility evidence, not certification of every screen reader or device. The first run's one failure was a test locator ambiguity after adding a progress status; the existing bounded-history behavior passed after selecting its actual status text. Initial results remain preserved.
+
+Three fresh real browser → BFF → API → DeepSeek turns all reach ready: reviewed English explanation, general Chinese glossary explanation and original-source Chinese founding date, with actual source inspection. Latencies: 1.47–1.99 seconds. These calls use existing admission and budget settings. No vision calls were made. New screenshots remain local and ignored, as requested; public result JSON contains no embedded image data.
+
+Evidence: [browser results](evidence/phase03-hybrid-part06-final/browser-results.json), [scoped accessibility summary](evidence/phase03-hybrid-part06-final/accessibility-summary.json), [fresh live workflow](evidence/phase03-hybrid-part06-live/live-hybrid.json). Physical phone/Safari/screen-reader execution and native browser zoom remain unavailable. Equivalent reduced-viewport and CSS-zoom regression checks are reported separately.

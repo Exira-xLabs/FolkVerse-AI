@@ -1,0 +1,288 @@
+{
+  "started_at": "2026-10-07T02:20:58.228979+00:00",
+  "scope": "Git-visible candidate tree; fresh dependency installs, setup, isolated PostgreSQL/pgvector, migrations, corpus restore, API and production web startup",
+  "production_database_modified": false,
+  "provider_key_copied": false,
+  "provider_calls": 0,
+  "steps": [
+    {
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 893.6103309999908,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "sync",
+        "--project",
+        "apps/api",
+        "--frozen"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 262.91287300000477,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "setup:local"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 365.94334899996284,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "setup:local"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 363.9326560000882,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "folkverse-phase3-reproduce-c574bc84520f",
+        "--env-file",
+        "/tmp/folkverse-phase3-reproduction-66nv1l77/database.env",
+        "-p",
+        "127.0.0.1::5432",
+        "pgvector/pgvector:pg17@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 134.23254100007398,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "port",
+        "folkverse-phase3-reproduce-c574bc84520f",
+        "5432/tcp"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 8.503678999886688,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "db:migrate"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 1783.4345579999535,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "db:migrate"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 837.9371719997835,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "restore-manifest"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 514.5920390000356,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "counts"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 447.89715900014926,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "ledger"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 431.88667699996586,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "restore-manifest"
+      ],
+      "exit_code": 2,
+      "elapsed_ms": 426.4987349999956,
+      "expected_codes": [
+        2
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "counts"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 455.4365709998365,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "ledger"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 434.06245100004526,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "assets:sync"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 428.4427710001637,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 5982.020236999915,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 15164.551329999995,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 16879.010963999917,
+      "expected_codes": [
+        0
+      ]
+    }
+  ],
+  "candidate_tree_sha256": "1650f97bdc80920705920e93e669f0c494276a04ca96787de67987391c0ce8c5",
+  "files_copied": 949,
+  "setup_preserves_existing_secrets": true,
+  "restore_refuses_existing_content": false,
+  "fresh_api_health": {
+    "status": "ok",
+    "mode": "live",
+    "database": "available",
+    "pgvector": "available",
+    "schema_status": "current",
+    "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+    "pgvector_version": "0.8.5"
+  },
+  "fresh_published_exhibits": 1,
+  "fresh_owned_session": true,
+  "missing_key_fails_closed": true,
+  "fresh_web_to_api_health": {
+    "status": "ok",
+    "mode": "live",
+    "database": "available",
+    "pgvector": "available",
+    "schema_status": "current",
+    "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+    "pgvector_version": "0.8.5"
+  },
+  "fresh_guide_http_status": 200,
+  "passed": true,
+  "temporary_container_removed": true,
+  "completed_at": "2026-10-07T02:21:47.908686+00:00"
+}

@@ -1,0 +1,1864 @@
+{
+  "version": "guide-human-review-v2",
+  "run_sha256": "98b39f9e2e3d39a564843edce6d01bd40255ae56ca1a1654de2a1d6927d49dae",
+  "run_mode": "live",
+  "instructions": "Leave passed/reviewer/time/rationale/basis empty until actual human review. Apply the evaluation rubric, record independent basis, and attest human review. Reviewing a fixture cannot certify real provider expertise.",
+  "ratings": [
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-listing-en",
+      "case_ids": [
+        "hybrid-v3-listing-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-listing-zh-CN",
+      "case_ids": [
+        "hybrid-v3-listing-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-beginner-en",
+      "case_ids": [
+        "hybrid-v3-beginner-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-beginner-zh-CN",
+      "case_ids": [
+        "hybrid-v3-beginner-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-depth-en",
+      "case_ids": [
+        "hybrid-v3-depth-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-depth-zh-CN",
+      "case_ids": [
+        "hybrid-v3-depth-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-definition-en",
+      "case_ids": [
+        "hybrid-v3-definition-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-definition-zh-CN",
+      "case_ids": [
+        "hybrid-v3-definition-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-glossary-en",
+      "case_ids": [
+        "hybrid-v3-glossary-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-glossary-zh-CN",
+      "case_ids": [
+        "hybrid-v3-glossary-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-concept_why-en",
+      "case_ids": [
+        "hybrid-v3-concept_why-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-concept_why-zh-CN",
+      "case_ids": [
+        "hybrid-v3-concept_why-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-comparison-en",
+      "case_ids": [
+        "hybrid-v3-comparison-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-comparison-zh-CN",
+      "case_ids": [
+        "hybrid-v3-comparison-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-simple_followup-en",
+      "case_ids": [
+        "hybrid-v3-simple_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-simple_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-simple_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-deeper_followup-en",
+      "case_ids": [
+        "hybrid-v3-deeper_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-deeper_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-deeper_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-language_followup-en",
+      "case_ids": [
+        "hybrid-v3-language_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-language_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-language_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-mixed_greeting-en",
+      "case_ids": [
+        "hybrid-v3-mixed_greeting-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-mixed_greeting-zh-CN",
+      "case_ids": [
+        "hybrid-v3-mixed_greeting-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-lookup_date-en",
+      "case_ids": [
+        "hybrid-v3-lookup_date-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-lookup_date-zh-CN",
+      "case_ids": [
+        "hybrid-v3-lookup_date-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-lookup_followup-en",
+      "case_ids": [
+        "hybrid-v3-lookup_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "historical_correctness",
+      "unit_id": "hybrid-v3-lookup_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-lookup_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-hello-en",
+      "case_ids": [
+        "hybrid-v3-hello-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-hello-en",
+      "case_ids": [
+        "hybrid-v3-hello-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-hello-zh-CN",
+      "case_ids": [
+        "hybrid-v3-hello-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-hello-zh-CN",
+      "case_ids": [
+        "hybrid-v3-hello-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-identity-en",
+      "case_ids": [
+        "hybrid-v3-identity-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-identity-en",
+      "case_ids": [
+        "hybrid-v3-identity-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-identity-zh-CN",
+      "case_ids": [
+        "hybrid-v3-identity-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-identity-zh-CN",
+      "case_ids": [
+        "hybrid-v3-identity-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-thanks-en",
+      "case_ids": [
+        "hybrid-v3-thanks-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-thanks-en",
+      "case_ids": [
+        "hybrid-v3-thanks-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-thanks-zh-CN",
+      "case_ids": [
+        "hybrid-v3-thanks-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-thanks-zh-CN",
+      "case_ids": [
+        "hybrid-v3-thanks-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-emoji-en",
+      "case_ids": [
+        "hybrid-v3-emoji-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-emoji-en",
+      "case_ids": [
+        "hybrid-v3-emoji-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-emoji-zh-CN",
+      "case_ids": [
+        "hybrid-v3-emoji-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-emoji-zh-CN",
+      "case_ids": [
+        "hybrid-v3-emoji-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-listing-en",
+      "case_ids": [
+        "hybrid-v3-listing-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-listing-en",
+      "case_ids": [
+        "hybrid-v3-listing-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-listing-zh-CN",
+      "case_ids": [
+        "hybrid-v3-listing-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-listing-zh-CN",
+      "case_ids": [
+        "hybrid-v3-listing-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-beginner-en",
+      "case_ids": [
+        "hybrid-v3-beginner-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-beginner-en",
+      "case_ids": [
+        "hybrid-v3-beginner-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-beginner-zh-CN",
+      "case_ids": [
+        "hybrid-v3-beginner-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-beginner-zh-CN",
+      "case_ids": [
+        "hybrid-v3-beginner-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-depth-en",
+      "case_ids": [
+        "hybrid-v3-depth-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-depth-en",
+      "case_ids": [
+        "hybrid-v3-depth-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-depth-zh-CN",
+      "case_ids": [
+        "hybrid-v3-depth-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-depth-zh-CN",
+      "case_ids": [
+        "hybrid-v3-depth-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-definition-en",
+      "case_ids": [
+        "hybrid-v3-definition-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-definition-en",
+      "case_ids": [
+        "hybrid-v3-definition-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-definition-zh-CN",
+      "case_ids": [
+        "hybrid-v3-definition-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-definition-zh-CN",
+      "case_ids": [
+        "hybrid-v3-definition-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-glossary-en",
+      "case_ids": [
+        "hybrid-v3-glossary-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-glossary-en",
+      "case_ids": [
+        "hybrid-v3-glossary-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-glossary-zh-CN",
+      "case_ids": [
+        "hybrid-v3-glossary-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-glossary-zh-CN",
+      "case_ids": [
+        "hybrid-v3-glossary-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-concept_why-en",
+      "case_ids": [
+        "hybrid-v3-concept_why-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-concept_why-en",
+      "case_ids": [
+        "hybrid-v3-concept_why-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-concept_why-zh-CN",
+      "case_ids": [
+        "hybrid-v3-concept_why-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-concept_why-zh-CN",
+      "case_ids": [
+        "hybrid-v3-concept_why-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-comparison-en",
+      "case_ids": [
+        "hybrid-v3-comparison-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-comparison-en",
+      "case_ids": [
+        "hybrid-v3-comparison-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-comparison-zh-CN",
+      "case_ids": [
+        "hybrid-v3-comparison-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-comparison-zh-CN",
+      "case_ids": [
+        "hybrid-v3-comparison-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-simple_followup-en",
+      "case_ids": [
+        "hybrid-v3-simple_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-simple_followup-en",
+      "case_ids": [
+        "hybrid-v3-simple_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-simple_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-simple_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-simple_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-simple_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-deeper_followup-en",
+      "case_ids": [
+        "hybrid-v3-deeper_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-deeper_followup-en",
+      "case_ids": [
+        "hybrid-v3-deeper_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-deeper_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-deeper_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-deeper_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-deeper_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-language_followup-en",
+      "case_ids": [
+        "hybrid-v3-language_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-language_followup-en",
+      "case_ids": [
+        "hybrid-v3-language_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-language_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-language_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-language_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-language_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-mixed_greeting-en",
+      "case_ids": [
+        "hybrid-v3-mixed_greeting-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-mixed_greeting-en",
+      "case_ids": [
+        "hybrid-v3-mixed_greeting-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-mixed_greeting-zh-CN",
+      "case_ids": [
+        "hybrid-v3-mixed_greeting-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-mixed_greeting-zh-CN",
+      "case_ids": [
+        "hybrid-v3-mixed_greeting-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-lookup_date-en",
+      "case_ids": [
+        "hybrid-v3-lookup_date-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-lookup_date-en",
+      "case_ids": [
+        "hybrid-v3-lookup_date-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-lookup_date-zh-CN",
+      "case_ids": [
+        "hybrid-v3-lookup_date-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-lookup_date-zh-CN",
+      "case_ids": [
+        "hybrid-v3-lookup_date-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-lookup_followup-en",
+      "case_ids": [
+        "hybrid-v3-lookup_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-lookup_followup-en",
+      "case_ids": [
+        "hybrid-v3-lookup_followup-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-lookup_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-lookup_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-lookup_followup-zh-CN",
+      "case_ids": [
+        "hybrid-v3-lookup_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-missing_origin-en",
+      "case_ids": [
+        "hybrid-v3-missing_origin-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-missing_origin-en",
+      "case_ids": [
+        "hybrid-v3-missing_origin-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-missing_origin-zh-CN",
+      "case_ids": [
+        "hybrid-v3-missing_origin-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-missing_origin-zh-CN",
+      "case_ids": [
+        "hybrid-v3-missing_origin-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-current_hours-en",
+      "case_ids": [
+        "hybrid-v3-current_hours-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-current_hours-en",
+      "case_ids": [
+        "hybrid-v3-current_hours-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-current_hours-zh-CN",
+      "case_ids": [
+        "hybrid-v3-current_hours-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-current_hours-zh-CN",
+      "case_ids": [
+        "hybrid-v3-current_hours-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-disputed-en",
+      "case_ids": [
+        "hybrid-v3-disputed-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-disputed-en",
+      "case_ids": [
+        "hybrid-v3-disputed-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-disputed-zh-CN",
+      "case_ids": [
+        "hybrid-v3-disputed-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-disputed-zh-CN",
+      "case_ids": [
+        "hybrid-v3-disputed-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-unsupported_year-en",
+      "case_ids": [
+        "hybrid-v3-unsupported_year-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-unsupported_year-en",
+      "case_ids": [
+        "hybrid-v3-unsupported_year-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-unsupported_year-zh-CN",
+      "case_ids": [
+        "hybrid-v3-unsupported_year-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-unsupported_year-zh-CN",
+      "case_ids": [
+        "hybrid-v3-unsupported_year-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-greeting_repeat-en",
+      "case_ids": [
+        "hybrid-v3-greeting_repeat-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-greeting_repeat-en",
+      "case_ids": [
+        "hybrid-v3-greeting_repeat-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-greeting_repeat-zh-CN",
+      "case_ids": [
+        "hybrid-v3-greeting_repeat-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-greeting_repeat-zh-CN",
+      "case_ids": [
+        "hybrid-v3-greeting_repeat-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-goodbye-en",
+      "case_ids": [
+        "hybrid-v3-goodbye-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-goodbye-en",
+      "case_ids": [
+        "hybrid-v3-goodbye-en"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "explanatory_clarity",
+      "unit_id": "hybrid-v3-goodbye-zh-CN",
+      "case_ids": [
+        "hybrid-v3-goodbye-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "personality",
+      "unit_id": "hybrid-v3-goodbye-zh-CN",
+      "case_ids": [
+        "hybrid-v3-goodbye-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "hello",
+      "case_ids": [
+        "hybrid-v3-hello-en",
+        "hybrid-v3-hello-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "identity",
+      "case_ids": [
+        "hybrid-v3-identity-en",
+        "hybrid-v3-identity-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "thanks",
+      "case_ids": [
+        "hybrid-v3-thanks-en",
+        "hybrid-v3-thanks-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "emoji",
+      "case_ids": [
+        "hybrid-v3-emoji-en",
+        "hybrid-v3-emoji-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "listing",
+      "case_ids": [
+        "hybrid-v3-listing-en",
+        "hybrid-v3-listing-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "beginner",
+      "case_ids": [
+        "hybrid-v3-beginner-en",
+        "hybrid-v3-beginner-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "depth",
+      "case_ids": [
+        "hybrid-v3-depth-en",
+        "hybrid-v3-depth-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "definition",
+      "case_ids": [
+        "hybrid-v3-definition-en",
+        "hybrid-v3-definition-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "glossary",
+      "case_ids": [
+        "hybrid-v3-glossary-en",
+        "hybrid-v3-glossary-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "concept_why",
+      "case_ids": [
+        "hybrid-v3-concept_why-en",
+        "hybrid-v3-concept_why-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "comparison",
+      "case_ids": [
+        "hybrid-v3-comparison-en",
+        "hybrid-v3-comparison-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "simple_followup",
+      "case_ids": [
+        "hybrid-v3-simple_followup-en",
+        "hybrid-v3-simple_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "deeper_followup",
+      "case_ids": [
+        "hybrid-v3-deeper_followup-en",
+        "hybrid-v3-deeper_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "language_followup",
+      "case_ids": [
+        "hybrid-v3-language_followup-en",
+        "hybrid-v3-language_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "mixed_greeting",
+      "case_ids": [
+        "hybrid-v3-mixed_greeting-en",
+        "hybrid-v3-mixed_greeting-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "lookup_date",
+      "case_ids": [
+        "hybrid-v3-lookup_date-en",
+        "hybrid-v3-lookup_date-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "lookup_followup",
+      "case_ids": [
+        "hybrid-v3-lookup_followup-en",
+        "hybrid-v3-lookup_followup-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "missing_origin",
+      "case_ids": [
+        "hybrid-v3-missing_origin-en",
+        "hybrid-v3-missing_origin-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "current_hours",
+      "case_ids": [
+        "hybrid-v3-current_hours-en",
+        "hybrid-v3-current_hours-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "disputed",
+      "case_ids": [
+        "hybrid-v3-disputed-en",
+        "hybrid-v3-disputed-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "unsupported_year",
+      "case_ids": [
+        "hybrid-v3-unsupported_year-en",
+        "hybrid-v3-unsupported_year-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "greeting_repeat",
+      "case_ids": [
+        "hybrid-v3-greeting_repeat-en",
+        "hybrid-v3-greeting_repeat-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    },
+    {
+      "dimension": "bilingual_faithfulness",
+      "unit_id": "goodbye",
+      "case_ids": [
+        "hybrid-v3-goodbye-en",
+        "hybrid-v3-goodbye-zh-CN"
+      ],
+      "passed": null,
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": null,
+      "basis": null,
+      "attest_human_review": false
+    }
+  ]
+}

@@ -83,9 +83,10 @@ def general_request(request: GuideRequest, names: list[str], scoped: bool) -> bo
         return False
     return bool(
         re.search(
-            r"explain|what is|what are|compare|difference|why|simpl|deeper|history|culture|art|"
+            r"explain|what is|what are|what does .{1,80} mean|define|meaning|compare|difference|"
+            r"why|simpl|deeper|history|culture|art|"
             r"museum|dance|craft|tradition|folklore|shadow|解释|是什么|区别|为什么|简单|详细|"
-            r"历史|文化|艺术|博物馆|舞蹈|工艺|传统|传说|皮影",
+            r"历史|文化|艺术|博物馆|舞蹈|工艺|传统|传说|皮影|含义|是什么意思",
             q,
             re.I,
         )
@@ -283,7 +284,10 @@ def validate_hybrid(
 
 
 def hybrid_prompt(
-    request: GuideRequest, bundle: EvidenceBundle, general_allowed: bool
+    request: GuideRequest,
+    bundle: EvidenceBundle,
+    general_allowed: bool,
+    names: list[str] | None = None,
 ) -> list[ProviderMessage]:
     allowed = [
         {
@@ -309,7 +313,14 @@ or question when helpful. When general_allowed is true and supplied evidence is 
 broad definition (including 什么是皮影戏) in a general section using ordinary educational knowledge.
 An empty collection alone is not a reason to refuse such a broad definition. Never move a rejected
 evidence claim into general. No local proper names,
-years or numbers in general context. Concise: one short paragraph, at most one claim. Beginner:
+years or numbers in general context. forbidden_general_names lists registered local proper names;
+NONE may occur in a general section. For a named local tradition, explain ONLY the generic art form
+in general (for example 皮影戏), never the named local variant (for example 复州皮影戏), its style,
+local characteristics or a comparison with neighbouring places. Those require reviewed evidence.
+Do not number points. Keep the entire JSON compact: at most two claims and two sections; general
+text at most 90 English words or 180 Chinese characters, including deeper explanations.
+If useful general context would break these rules, provide just the supported evidence section.
+Concise: one short paragraph, at most one claim. Beginner:
 plain words and a conceptual example. Deeper: context, distinctions and a useful question.
 Do not repeat the same content across sections. Respond insufficient with empty claims/sections
 when the requested precise facts are unsupported. No fabricated URLs or exhibit IDs.
@@ -327,6 +338,7 @@ Example shape: {"locale":"en","depth":"concise","status":"answer","claims":[],
                     "locale": request.locale,
                     "depth": request.depth,
                     "general_allowed": general_allowed,
+                    "forbidden_general_names": names or [],
                     "untrusted_conversation": [p.model_dump() for p in request.conversation],
                     "untrusted_evidence": allowed,
                     "allowed_related_exhibit_ids": sorted(
@@ -359,9 +371,11 @@ async def answer_hybrid(
     if (
         prior
         and normalize(request.question) not in FOLLOW_UPS
-        and not re.search(r"\b(it|its|that|this)\b|它|这个|刚才|该|再解释|再说|用中文说|用英文说",
+        and not re.search(
+            r"\b(it|its|that|this)\b|它|这个|刚才|该|再解释|再说|用中文说|用英文说",
             request.question,
-            re.I)
+            re.I,
+        )
     ):
         prior = None
     lookup_prior = prior if prior and prior["exhibit_id"].startswith("lookup:") else None
@@ -474,7 +488,7 @@ async def answer_hybrid(
     if progress:
         progress("generating")
     generated = time.perf_counter()
-    reply = await harness.gateway.complete(hybrid_prompt(request, bundle, general), actor_id)
+    reply = await harness.gateway.complete(hybrid_prompt(request, bundle, general, names), actor_id)
     generation_ms = (time.perf_counter() - generated) * 1000
     if progress:
         progress("validating")

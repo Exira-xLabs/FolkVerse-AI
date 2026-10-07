@@ -1,5 +1,13 @@
 # FolkVerse build status
 
+## October 7, 2026 — Parts 6–8 engineering, evaluation and closure audit
+
+Prior Parts 2–5 were pushed as `7fa2e7e`. [Chat/source/accessibility polish](../report/PHASE_03_HYBRID_PART_06.md) preserves reading position, separates progress announcements, labels source classifications and restores focus after withdrawal. 59 dedicated browser tests pass; scoped EN/ZH chat/source axe checks have zero violations/incomplete checks. Fresh real browser replies and source inspection pass.
+
+[Fresh evaluation](../report/PHASE_03_HYBRID_PART_07.md): first 46/48, initially reserved 32/32; corrected exposed diagnostic 48/48, support/citation 18/18 actual sourced answers, follow-ups 8/8. Sixteen isolated bilingual safety faults pass without live data mutation or provider usage. The [human review packet](../report/PHASE_03_HUMAN_REVIEW_PACKET.md) is ready; actual ratings remain pending. Final API checks: 421 passed; 68 broad museum browser regressions also pass.
+
+[Reproducibility](../report/PHASE_03_HYBRID_PART_08.md) passes fresh isolated dependency/setup/migration/restoration/build/API/web startup with zero paid calls and cleaned temporary resources. **Phase 03 remains partial**, as the [closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md) records: engineering is delivered, but human quality, expanded approved all-city content, the 200-question pilot and unavailable production/device evidence cannot be invented. No public deployment is claimed.
+
 ## October 7, 2026 — hybrid Parts 4–5 engineering delivery
 
 [Part 4](../report/PHASE_03_HYBRID_PART_04.md) implements EN/ZH source-backed plus visibly unverified general explanation sections, independent factual-support checks, registered official-page lookup and actual human-approved-unit publication eligibility. Official lookup has 189 registered profile URLs and 42 bilingual aliases; current hours/fees/schedules remain unavailable. Source withdrawal removes dependent display/context. No draft received automatic approval.

@@ -1,0 +1,903 @@
+{
+  "version": "jinyao-evaluation-v3-hybrid",
+  "frozen_at": "2026-10-07T02:12:08.797001+00:00",
+  "authorship": "Codex-authored functional targets; human adjudication pending",
+  "reservation": "Whole bilingual families share a split; reserved cases frozen before first new run. Post-implementation authored, not blind expert gold. Any rerun after inspection is exposed diagnostic evidence.",
+  "corpus_sha256": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "live_fault_policy": "No live content mutation; corpus/provider failure attacks are exercised by isolated API/browser fixtures, not production quota exhaustion.",
+  "cases": [
+    {
+      "id": "hybrid-v3-hello-en",
+      "family": "hello",
+      "split": "development",
+      "locale": "en",
+      "question": "Hi Jinyao!",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-hello-zh-CN",
+      "family": "hello",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "锦瑶你好！",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-identity-en",
+      "family": "identity",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is your name?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-identity-zh-CN",
+      "family": "identity",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "你叫什么名字？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-thanks-en",
+      "family": "thanks",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Thank you",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-thanks-zh-CN",
+      "family": "thanks",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "谢谢你",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-emoji-en",
+      "family": "emoji",
+      "split": "development",
+      "locale": "en",
+      "question": "🙂",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-emoji-zh-CN",
+      "family": "emoji",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "🙂",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-listing-en",
+      "family": "listing",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Where is Fuzhou shadow puppetry listed?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-listing-zh-CN",
+      "family": "listing",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "复州皮影戏在哪个地区？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-beginner-en",
+      "family": "beginner",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Fuzhou shadow puppetry simply",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-beginner-zh-CN",
+      "family": "beginner",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "简单介绍复州皮影戏",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-depth-en",
+      "family": "depth",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Fuzhou shadow puppetry in more detail",
+      "depth": "deeper",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-depth-zh-CN",
+      "family": "depth",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "详细介绍复州皮影戏",
+      "depth": "deeper",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-definition-en",
+      "family": "definition",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is shadow puppetry?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-definition-zh-CN",
+      "family": "definition",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是皮影戏？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-glossary-en",
+      "family": "glossary",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What does silhouette mean?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-glossary-zh-CN",
+      "family": "glossary",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "剪影是什么意思？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-concept_why-en",
+      "family": "concept_why",
+      "split": "development",
+      "locale": "en",
+      "question": "Why do museums explain their sources?",
+      "depth": "deeper",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-concept_why-zh-CN",
+      "family": "concept_why",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "为什么博物馆要说明资料来源？",
+      "depth": "deeper",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-comparison-en",
+      "family": "comparison",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is the difference between folklore and historical evidence?",
+      "depth": "deeper",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-comparison-zh-CN",
+      "family": "comparison",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "民间传说和历史证据有什么区别？",
+      "depth": "deeper",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-simple_followup-en",
+      "family": "simple_followup",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain that simply",
+      "depth": "beginner",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-simple_followup-zh-CN",
+      "family": "simple_followup",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释得简单一点",
+      "depth": "beginner",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-deeper_followup-en",
+      "family": "deeper_followup",
+      "split": "development",
+      "locale": "en",
+      "question": "Go deeper",
+      "depth": "deeper",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-deeper_followup-zh-CN",
+      "family": "deeper_followup",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "详细一点",
+      "depth": "deeper",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-language_followup-en",
+      "family": "language_followup",
+      "split": "reserved",
+      "locale": "en",
+      "question": "用英文说",
+      "depth": "beginner",
+      "seed": "other_language",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-language_followup-zh-CN",
+      "family": "language_followup",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "Say that in Chinese",
+      "depth": "beginner",
+      "seed": "other_language",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-mixed_greeting-en",
+      "family": "mixed_greeting",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Hi, explain Fuzhou shadow puppetry",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-mixed_greeting-zh-CN",
+      "family": "mixed_greeting",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "你好，介绍复州皮影戏",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-lookup_date-en",
+      "family": "lookup_date",
+      "split": "development",
+      "locale": "en",
+      "question": "When was Shenyang Imperial Palace founded?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-lookup_date-zh-CN",
+      "family": "lookup_date",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "沈阳故宫始建于哪一年？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-lookup_followup-en",
+      "family": "lookup_followup",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain that simply",
+      "depth": "beginner",
+      "seed": "official",
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-lookup_followup-zh-CN",
+      "family": "lookup_followup",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释得简单一点",
+      "depth": "beginner",
+      "seed": "official",
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-missing_origin-en",
+      "family": "missing_origin",
+      "split": "reserved",
+      "locale": "en",
+      "question": "When was Fuzhou shadow puppetry invented?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-missing_origin-zh-CN",
+      "family": "missing_origin",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "复州皮影戏是哪一年发明的？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-current_hours-en",
+      "family": "current_hours",
+      "split": "development",
+      "locale": "en",
+      "question": "What are the current opening hours of Shenyang Imperial Palace?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-current_hours-zh-CN",
+      "family": "current_hours",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "沈阳故宫今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-disputed-en",
+      "family": "disputed",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Who first invented Fuzhou shadow puppetry?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-disputed-zh-CN",
+      "family": "disputed",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "复州皮影戏最早是谁发明的？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-unsupported_year-en",
+      "family": "unsupported_year",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Was Fuzhou shadow puppetry founded in 1644?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-unsupported_year-zh-CN",
+      "family": "unsupported_year",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "复州皮影戏始建于1644年吗？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-context_owner-en",
+      "family": "context_owner",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain that simply",
+      "depth": "beginner",
+      "seed": "different_owner",
+      "expected_status": "error",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-context_owner-zh-CN",
+      "family": "context_owner",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释得简单一点",
+      "depth": "beginner",
+      "seed": "different_owner",
+      "expected_status": "error",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-greeting_repeat-en",
+      "family": "greeting_repeat",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Hi again",
+      "depth": "concise",
+      "seed": "greeting",
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-greeting_repeat-zh-CN",
+      "family": "greeting_repeat",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "你好呀",
+      "depth": "concise",
+      "seed": "greeting",
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-goodbye-en",
+      "family": "goodbye",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Bye",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    },
+    {
+      "id": "hybrid-v3-goodbye-zh-CN",
+      "family": "goodbye",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "再见",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "fabricated local facts or citations",
+        "unlabelled general explanation",
+        "failed supported claim relabelled general"
+      ]
+    }
+  ],
+  "reviewed_gold_provenance": "Actual existing owner-reviewed inventory passages in the frozen corpus export; general/official functional targets are machine authored and require separate human review."
+}

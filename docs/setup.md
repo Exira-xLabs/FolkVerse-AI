@@ -93,3 +93,15 @@ The foundation stores only anonymous-session identifiers and timestamps. Session
 ## Phase 02 content
 
 After migrating a fresh database, restore the delivered Liaoning corpus and its original review history with `uv run --project apps/api python -m folkverse.curation restore-manifest`. Existing content is never overwritten. For drafts only, use `uv run --project apps/api python -m folkverse.curation seed` instead. See [content operations](curation.md), [review packet](content-review.md) and [rights report](data-rights.md). The browser suite now expects the delivered approved Liaoning exhibit.
+
+## Phase 3 reproducibility and acceptance — 7 October 2026
+
+The isolated Linux verification script copies the Git-visible candidate into a disposable checkout, installs frozen dependencies from the existing pnpm cache, creates fresh secrets and a separate temporary pinned PostgreSQL/pgvector container, migrates, restores the original corpus and verifies build/API/web startup. It never copies ignored provider keys or touches the populated project database. Ports 8004 and 3004 must be free. Docker must already work, and the locked packages/image must be locally available. Generated artifacts, weights and private config are not part of the Git-visible input.
+
+```sh
+uv run --project apps/api python scripts/verify-phase03-reproduction.py --output <new-dated-reproduction.json>
+```
+
+Restoring into populated content tables intentionally exits 2 and preserves existing content; use `curation counts`/`ledger` to inspect it. Re-running setup and migrations is safe. Do not remove a populated project volume to make verification pass. A fresh live-mode install with no key remains unavailable for generation; actual model integration is tested separately under existing authorization.
+
+Current [Phase 3 closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md) distinguishes completed engineering from outstanding actual human/content/pilot evidence. Demo browser regressions explicitly start their web instance in demo mode; real guide fixtures/live verification use their own live configuration. No remote CI or production deployment is inferred from local startup or a Git push.

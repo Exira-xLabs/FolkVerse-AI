@@ -196,3 +196,26 @@ def test_general_request_cannot_override_specific_local_scope():
 def test_single_chinese_sentence_keeps_complete_passage_support_method(db):
     p = retrieve(db, "皮影", "zh-CN").passages[0]
     assert variants(p)[p.text] == "complete_reviewed_passage"
+
+
+@pytest.mark.parametrize(
+    "locale,question", [("en", "What does silhouette mean?"), ("zh-CN", "剪影是什么意思？")]
+)
+def test_broad_glossary_definition_uses_labelled_general_mode(locale, question):
+    assert general_request(
+        GuideRequest(question=question, locale=locale), ["Fuzhou shadow puppetry"], False
+    )
+
+
+def test_deeper_chinese_general_section_cannot_invent_local_style(db):
+    bundle = retrieve(db, "皮影", "zh-CN")
+    payload = proposal(bundle.passages[0])
+    payload["sections"].append(
+        {
+            "section_id": "section_context",
+            "kind": "general",
+            "text": "复州皮影戏在地方上形成了自己的唱腔和雕刻风格。",
+            "claim_ids": [],
+        }
+    )
+    assert checked(db, "zh-CN", payload).reason == "unsupported_claim"

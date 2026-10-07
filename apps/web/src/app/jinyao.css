@@ -128,3 +128,5 @@
 .jinyao-chat-turn .from-jinyao p { white-space: pre-wrap; overflow-wrap: anywhere; }
 .jinyao-chat-turn .from-jinyao .outline-button { margin: 8px 0; display: block; }
 .jinyao-chat-turn .from-jinyao small { display: block; color: var(--text-secondary); }
+
+.jinyao-latest { align-self: center; flex: none; margin: 0 16px 6px; min-height: 44px; font-size: 12px; }

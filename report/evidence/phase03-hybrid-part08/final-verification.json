@@ -1,0 +1,142 @@
+{
+  "phase3_release_status": "partial_not_closed",
+  "engineering_status": "implemented_locally_verified",
+  "initial_push_commit": "7fa2e7e",
+  "verification": {
+    "api_tests": 421,
+    "guide_browser": {
+      "startTime": "2026-10-07T02:18:28.200Z",
+      "duration": 64653.227,
+      "expected": 59,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "broad_browser": {
+      "startTime": "2026-10-07T02:24:48.343Z",
+      "duration": 181191.027,
+      "expected": 68,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "axe_audits": [
+      {
+        "surface": "chat-accessibility.json",
+        "locale": "en",
+        "engine": {
+          "name": "axe-core",
+          "version": "4.13.0"
+        },
+        "violations": 0,
+        "incomplete": 0,
+        "passes": 18
+      },
+      {
+        "surface": "sources-accessibility.json",
+        "locale": "en",
+        "engine": {
+          "name": "axe-core",
+          "version": "4.13.0"
+        },
+        "violations": 0,
+        "incomplete": 0,
+        "passes": 17
+      },
+      {
+        "surface": "chat-accessibility.json",
+        "locale": "zh",
+        "engine": {
+          "name": "axe-core",
+          "version": "4.13.0"
+        },
+        "violations": 0,
+        "incomplete": 0,
+        "passes": 18
+      },
+      {
+        "surface": "sources-accessibility.json",
+        "locale": "zh",
+        "engine": {
+          "name": "axe-core",
+          "version": "4.13.0"
+        },
+        "violations": 0,
+        "incomplete": 0,
+        "passes": 17
+      }
+    ],
+    "live_functional": {
+      "claim_support": {
+        "numerator": 18,
+        "denominator": 18,
+        "rate": 1.0
+      },
+      "citation_validity": {
+        "numerator": 18,
+        "denominator": 18,
+        "rate": 1.0
+      },
+      "display_integrity": {
+        "numerator": 46,
+        "denominator": 46,
+        "rate": 1.0
+      },
+      "scenario": {
+        "numerator": 48,
+        "denominator": 48,
+        "rate": 1.0
+      },
+      "locale_delivery": {
+        "numerator": 46,
+        "denominator": 46,
+        "rate": 1.0
+      },
+      "uncertainty": {
+        "numerator": 34,
+        "denominator": 34,
+        "rate": 1.0
+      },
+      "followup_consistency": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "personality_structure": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      }
+    },
+    "first_reserved_sample": "32/32; now exposed for reruns",
+    "fixture_faults": "16/16; no provider calls or live data mutation",
+    "reproduction_passed": true,
+    "lint": "passed",
+    "types": "passed",
+    "build": "passed",
+    "contract_assets_configured_secrets": "passed",
+    "new_screenshots": "local ignored files only; no embedded PNG bodies in public JSON",
+    "vision_calls": 0,
+    "reproduction_artifact": "reproduction-final.json",
+    "runtime_hashes_match_final_tree": true,
+    "reproduction_temporary_container_removed": true
+  },
+  "human_review": "actual ratings pending; no fabricated judgments",
+  "content_readiness": "one eligible exhibit/two stored passages; all 14 cities inventoried; 448 explanatory drafts unapproved",
+  "separate_gates": [
+    "actual human historical/clarity/personality/bilingual judgments",
+    "expanded approved all-city content and independent relevance gold",
+    "200-question factual-support pilot",
+    "production hardware/load and physical-device/native-zoom evidence"
+  ],
+  "deployment": "not performed",
+  "remote_ci": "no configured GitHub Actions workflow",
+  "actual_provider_usage_entire_delivery": {
+    "attempts_including_seeds_diagnostic_probe_and_three_browser_turns": 104,
+    "completed": 104,
+    "prompt_tokens": 72718,
+    "completion_tokens": 13645,
+    "configured_rate_charge_usd": 0.0381894,
+    "provider_invoice": false
+  }
+}

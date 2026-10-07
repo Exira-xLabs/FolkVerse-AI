@@ -11,7 +11,9 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 from folkverse.guide_embeddings import file_hash
 from folkverse.guide_evaluation import metric
 
-HumanDimension = Literal["historical_correctness", "explanatory_clarity", "bilingual_faithfulness"]
+HumanDimension = Literal[
+    "historical_correctness", "explanatory_clarity", "bilingual_faithfulness", "personality"
+]
 
 
 class HumanRating(BaseModel):
@@ -42,7 +44,7 @@ class HumanRating(BaseModel):
 
 class HumanReviews(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
-    version: Literal["guide-human-review-v1"]
+    version: Literal["guide-human-review-v1", "guide-human-review-v2"]
     run_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
     run_mode: Literal["fixture", "live"]
     instructions: str
@@ -53,15 +55,30 @@ def template(run_path: Path) -> HumanReviews:
     run = json.loads(run_path.read_text())
     if run.get("run_status") != "completed" or run.get("mode") not in {"fixture", "live"}:
         raise ValueError("Review requires a completed evaluation run")
+    hybrid = run.get("version") == "guide-hybrid-functional-evaluation-v3"
     answered = [case for case in run["cases"] if case["actual_status"] == "answered"]
+    returned = [case for case in run["cases"] if case["actual_status"] != "error"]
     ratings = []
     families: dict[str, list[dict[str, Any]]] = {}
     for case in answered:
-        for dimension in ("historical_correctness", "explanatory_clarity"):
-            ratings.append(
-                HumanRating(dimension=dimension, unit_id=case["id"], case_ids=[case["id"]])
+        ratings.append(
+            HumanRating(
+                dimension="historical_correctness", unit_id=case["id"], case_ids=[case["id"]]
             )
+        )
+        if not hybrid:
+            ratings.append(
+                HumanRating(
+                    dimension="explanatory_clarity", unit_id=case["id"], case_ids=[case["id"]]
+                )
+            )
+    for case in returned if hybrid else answered:
         families.setdefault(case["family"], []).append(case)
+        if hybrid:
+            for dimension in ("explanatory_clarity", "personality"):
+                ratings.append(
+                    HumanRating(dimension=dimension, unit_id=case["id"], case_ids=[case["id"]])
+                )
     for family, pair in families.items():
         if {case["locale"] for case in pair} == {"en", "zh-CN"}:
             ratings.append(
@@ -72,7 +89,7 @@ def template(run_path: Path) -> HumanReviews:
                 )
             )
     return HumanReviews(
-        version="guide-human-review-v1",
+        version="guide-human-review-v2" if hybrid else "guide-human-review-v1",
         run_sha256=file_hash(run_path),
         run_mode=run["mode"],
         instructions="Leave passed/reviewer/time/rationale/basis empty until actual human review. "
@@ -91,7 +108,13 @@ def grade(run_path: Path, review_path: Path) -> dict[str, Any]:
     seen = set()
     values: dict[str, list[bool]] = {
         name: []
-        for name in ("historical_correctness", "explanatory_clarity", "bilingual_faithfulness")
+        for name in (
+            "historical_correctness",
+            "explanatory_clarity",
+            "bilingual_faithfulness",
+            "personality",
+        )
+        if any(r.dimension == name for r in expected.ratings)
     }
     for rating in reviews.ratings:
         key = (rating.dimension, rating.unit_id)

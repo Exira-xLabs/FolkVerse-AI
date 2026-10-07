@@ -1,7 +1,13 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page, type TestInfo } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
 import { checkedHybrid } from "../../apps/web/src/lib/guide-hybrid-checks";
 import type { GuideAnswer, GuideEvidence } from "@folkverse/contracts";
 const frame = (event: string, value: unknown) => `event: ${event}\ndata: ${JSON.stringify(value)}\n\n`;
+async function capture(page: Page, info: TestInfo, name: string) {
+  const filename = info.outputPath(name);
+  await page.screenshot({ path: filename });
+  await info.attach(name, { path: filename });
+}
 function fixture(zh = false, lookup = false) {
   const text = zh ? "复州皮影戏列入传统戏剧，地区为瓦房店。" : "Fuzhou shadow puppetry is listed as traditional theatre in Wafangdian.";
   const p = { passage_id: "lookup_fixture", source_id: "source_fixture", text, language: zh ? "zh-CN" : "en", locator: "Synthetic row", rights_basis: "Synthetic fixture", institution: "Fixture institution", source_title: "Fixture inventory", canonical_url: "https://www.ln.gov.cn/fixture", fetched_at: "2026-10-07T00:00:00Z", reviewed_at: lookup ? null : "2026-10-07T00:00:00Z", reviewer: lookup ? "" : "Fixture reviewer", review_id: lookup ? "not_editorially_reviewed" : "review_fixture", content_hash: "fixture_hash", exhibit_ids: lookup ? [] : ["exhibit_fixture"], region_ids: [], evidence_origin: lookup ? "official_lookup" : "reviewed_corpus", classification: "source_statement", statement_variants: lookup ? [text] : [], required_support_ids: [] } as GuideEvidence;
@@ -27,7 +33,7 @@ for (const attack of ["display", "claim", "classification", "support", "general_
   if (attack === "diagnostic") p.evidence_origin = "diagnostic_candidate";
   expect(checkedHybrid(answer, [p])).toBe(false);
 });
-for (const zh of [false, true]) test(`hybrid ${zh ? "Chinese phone" : "English desktop"} labels and source withdrawal`, async ({ page }) => {
+for (const zh of [false, true]) test(`hybrid ${zh ? "Chinese phone" : "English desktop"} labels and source withdrawal`, async ({ page }, testInfo) => {
   const { p, answer } = fixture(zh, true);
   let withdrawn = false;
   if (zh) await page.setViewportSize({ width: 390, height: 844 });
@@ -49,11 +55,70 @@ for (const zh of [false, true]) test(`hybrid ${zh ? "Chinese phone" : "English d
   await expect(page.getByRole("log")).toContainText(zh ? "一般说明" : "General explanation");
   await expect(page.getByRole("log")).toContainText(zh ? "官方来源" : "Official source");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  const chatAudit = await new AxeBuilder({ page }).include(".jinyao-messenger").withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze();
+  await testInfo.attach("chat-accessibility.json", { body: JSON.stringify(chatAudit, null, 2), contentType: "application/json" });
+  expect(chatAudit.violations).toEqual([]);
+  await capture(page, testInfo, `chat-${zh ? "zh-phone" : "en-desktop"}.png`);
   await page.getByRole("button", { name: zh ? "查看回答来源" : "Inspect answer sources" }).click();
   await expect(page.getByRole("dialog", { name: zh ? "回答所依据的资料" : "Evidence behind this answer" })).toContainText(p.text);
+  const sourceAudit = await new AxeBuilder({ page }).include(".source-drawer").withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze();
+  await testInfo.attach("sources-accessibility.json", { body: JSON.stringify(sourceAudit, null, 2), contentType: "application/json" });
+  expect(sourceAudit.violations).toEqual([]);
+  await capture(page, testInfo, `sources-${zh ? "zh-phone" : "en-desktop"}.png`);
   await page.keyboard.press("Escape");
   await expect(page.getByRole("button", { name: zh ? "查看回答来源" : "Inspect answer sources" })).toBeFocused();
   withdrawn = true;
   await page.getByRole("button", { name: zh ? "查看回答来源" : "Inspect answer sources" }).click();
   await expect(page.getByRole("log")).not.toContainText(p.text);
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("textbox")).toBeFocused();
+});
+
+test("reading older messages does not jump when an answer arrives", async ({ page }) => {
+  const { p, answer } = fixture();
+  const explanation = "Puppets and light help tell a story. The screen lets the audience follow the movement. ".repeat(10);
+  answer.sections![1].text = explanation;
+  answer.answer_text = `${p.text}\n\n${explanation}`;
+  let release: (() => void) | undefined;
+  let requests = 0;
+  await page.route("**/api/v1/session", r => r.fulfill({ json: { session_id: "fixture_visit" } }));
+  await page.route("**/api/v1/exhibits?*", r => r.fulfill({ json: { items: [], total: 0, next_cursor: null } }));
+  await page.route("**/api/v1/guide", async r => {
+    if (++requests === 2) await new Promise<void>(resolve => { release = resolve; });
+    await r.fulfill({ contentType: "text/event-stream", body: frame("answer", answer) + frame("sources", { answer_id: answer.answer_id, items: [p] }) + frame("done", { answer_id: answer.answer_id }) });
+  });
+  await page.goto("http://127.0.0.1:3102/guide");
+  await page.getByRole("button", { name: "Open Jinyao chat", exact: true }).click();
+  await page.getByRole("combobox", { name: "Explanation depth" }).selectOption("beginner");
+  await page.getByRole("textbox").fill("First question"); await page.getByRole("textbox").press("Enter");
+  await expect(page.locator(".jinyao-chat-turn").last()).toHaveAttribute("data-status", "ready");
+  await page.getByRole("textbox").fill("Another question"); await page.getByRole("textbox").press("Enter");
+  await expect(page.getByRole("button", { name: "Stop reply" })).toBeVisible();
+  await page.getByRole("log").evaluate(node => { node.scrollTop = 0; node.dispatchEvent(new Event("scroll")); });
+  await expect(page.getByRole("button", { name: "Jump to latest messages" })).toBeVisible();
+  await expect.poll(() => !!release).toBe(true); release!();
+  await expect(page.locator(".jinyao-chat-turn").last()).toHaveAttribute("data-status", "ready");
+  expect(await page.getByRole("log").evaluate(node => node.scrollTop)).toBeLessThan(5);
+  await page.getByRole("button", { name: "Jump to latest messages" }).click();
+  await expect.poll(() => page.getByRole("log").evaluate(node => node.scrollHeight - node.clientHeight - node.scrollTop)).toBeLessThan(5);
+  await expect(page.getByRole("textbox")).toHaveAttribute("aria-describedby", "jinyao-composer-help");
+});
+
+for (const viewport of [{ width: 1600, height: 900 }, { width: 390, height: 844 }, { width: 768, height: 1024 }, { width: 800, height: 450 }]) test(`chat keyboard and readable reflow ${viewport.width}x${viewport.height}`, async ({ page }) => {
+  await page.setViewportSize(viewport);
+  await page.goto("http://127.0.0.1:3102/guide");
+  await page.getByRole("button", { name: "Open Jinyao chat", exact: true }).click();
+  const close = page.getByRole("button", { name: "Close Jinyao chat", exact: true });
+  await expect(close).toBeFocused();
+  await page.keyboard.press("Shift+Tab");
+  const activeInDialog = await page.evaluate(() => !!document.activeElement?.closest(".jinyao-messenger"));
+  expect(activeInDialog).toBe(true);
+  await page.keyboard.press("Tab"); await expect(close).toBeFocused();
+  const dialog = page.getByRole("dialog", { name: "Jinyao", exact: true });
+  expect(await dialog.evaluate(node => node.scrollWidth <= node.clientWidth)).toBe(true);
+  await page.getByRole("textbox").focus();
+  const bounds = await page.getByRole("textbox").boundingBox();
+  expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(viewport.height);
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("button", { name: "Open Jinyao chat", exact: true })).toBeFocused();
 });

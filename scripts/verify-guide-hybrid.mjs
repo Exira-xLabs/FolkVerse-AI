@@ -2,12 +2,16 @@
 import { chromium } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const followups = process.argv.includes('--followups');
-const output = followups ? 'report/evidence/phase03-hybrid-part04-followups' : 'report/evidence/phase03-hybrid-part04';
+const polish = process.argv.includes('--polish');
+const output = polish ? 'report/evidence/phase03-hybrid-part06-live' : followups ? 'report/evidence/phase03-hybrid-part04-followups' : 'report/evidence/phase03-hybrid-part04';
 mkdirSync(output, { recursive: true });
 const result = { started_at: new Date().toISOString(), mode: 'real local browser/BFF/API/configured provider', turns: [], errors: [] };
 const browser = await chromium.launch();
 try {
-  for (const questions of followups ? [
+  for (const questions of polish ? [
+    ['Explain Fuzhou shadow puppetry', '剪影是什么意思？'],
+    ['沈阳故宫始建于哪一年？'],
+  ] : followups ? [
     ['Explain Fuzhou shadow puppetry', '请用中文再解释一次'],
     ['When was Shenyang Imperial Palace founded?', 'Explain that simply'],
   ] : [

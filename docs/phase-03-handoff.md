@@ -102,3 +102,7 @@ checks use isolated faults and do not exhaust an actual account's quota.
 Earlier intermediate blockers are preserved in the dated Part 1–6 and push-audit reports.
 The current report supersedes their unavailable database/provider/BGE statements for this
 checkout. No Phase 04 acceptance or public deployment is implied.
+
+## Superseding verification — 7 October 2026
+
+The [hybrid closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md) records the latest live implementation/evaluation and remaining human/content gates. Older claims in this dated snapshot describe its own state, not current completeness. Phase 3 remains partial.

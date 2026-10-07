@@ -293,3 +293,46 @@ def test_usage_counts_only_this_run_and_preserves_unknown_tokens():
         assert [a["id"] for a in usage["attempts"]] == ["test-attempt-2"]
     finally:
         engine.dispose()
+
+
+def test_hybrid_review_includes_actual_conversation_personality_and_bilingual_units(tmp_path):
+    run = tmp_path / "run.json"
+    run.write_text(
+        json.dumps(
+            {
+                "version": "guide-hybrid-functional-evaluation-v3",
+                "run_status": "completed",
+                "mode": "live",
+                "cases": [
+                    {
+                        "id": "hello-en",
+                        "family": "hello",
+                        "locale": "en",
+                        "actual_status": "conversational",
+                    },
+                    {
+                        "id": "hello-zh",
+                        "family": "hello",
+                        "locale": "zh-CN",
+                        "actual_status": "conversational",
+                    },
+                    {
+                        "id": "fact-en",
+                        "family": "fact",
+                        "locale": "en",
+                        "actual_status": "answered",
+                    },
+                ],
+            }
+        )
+    )
+    worksheet = template(run)
+    assert worksheet.version == "guide-human-review-v2"
+    assert sum(r.dimension == "personality" for r in worksheet.ratings) == 3
+    assert sum(r.dimension == "historical_correctness" for r in worksheet.ratings) == 1
+    assert sum(r.dimension == "bilingual_faithfulness" for r in worksheet.ratings) == 1
+    reviews = tmp_path / "reviews.json"
+    reviews.write_text(worksheet.model_dump_json())
+    summary = grade(run, reviews)
+    assert summary["human_dimensions"]["personality"]["denominator"] == 0
+    assert summary["human_dimensions"]["personality"]["pending"] == 3

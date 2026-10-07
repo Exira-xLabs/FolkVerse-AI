@@ -236,7 +236,7 @@ test("visible history stays bounded without disabling future conversation", asyn
     await expect(page.locator(".jinyao-chat-turn")).toHaveCount(Math.min(i + 1, 100));
   }
   await expect(page.getByRole("log")).not.toContainText("hi 0\n");
-  await expect(page.getByRole("status")).toContainText("Showing the latest 100 turns");
+  await expect(page.getByRole("status").filter({ hasText: "Showing the latest 100 turns" })).toContainText("Showing the latest 100 turns");
   await page.getByRole("textbox").fill("Keep talking");
   await expect(page.getByRole("button", { name: "Send message", exact: true })).toBeEnabled();
 });

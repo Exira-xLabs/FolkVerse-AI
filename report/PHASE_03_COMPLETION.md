@@ -216,3 +216,7 @@ The database and bounded live preview are available locally at handoff; auxiliar
 Playwright services are stopped. Original artwork is unchanged, no Clear chat was introduced,
 and new screenshots remain ignored/local as requested. The evidence supports a **narrow local
 museum-guide demo**, not general historical expertise or full pitch/release acceptance.
+
+## Superseding verification — 7 October 2026
+
+See [the current hybrid closure audit](PHASE_03_HYBRID_CLOSURE_AUDIT.md). This older report is historical; current human/content/release gates remain open.

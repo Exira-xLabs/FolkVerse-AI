@@ -68,7 +68,7 @@ export function SourceDrawer({ open, onClose, title, children }: { open: boolean
     const trigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     node.showModal();
     const unlock = lockDocumentScroll();
-    return () => { node.close(); unlock(); trigger?.focus({ preventScroll: true }); };
+    return () => { node.close(); unlock(); if (trigger?.isConnected) trigger.focus({ preventScroll: true }); else document.querySelector<HTMLTextAreaElement>("dialog[open] textarea")?.focus({ preventScroll: true }); };
   }, [open]);
   return <dialog ref={dialog} className="source-drawer glass-panel" aria-labelledby={titleId} aria-modal="true"
     onCancel={event => { event.preventDefault(); onClose(); }} onClick={event => {

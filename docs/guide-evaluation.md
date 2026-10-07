@@ -53,3 +53,11 @@ The run exposed incorrect prior-evidence validation during EN/ZH switches. Harne
 The later [push audit](../report/PHASE_03_PUSH_AUDIT.md) fixes these listing paraphrases with harness v3; its exposed-case diagnostic reaches 64/64 while preserving both Part 6 runs.
 
 Remaining failures in the Part 6 v2 run are locality/classification paraphrases in both languages. The exact narrow grammar rejects them even though the gold inventory passage supports them. Historical correctness, explanatory clarity and bilingual faithfulness remain pending. Consult the [handoff](phase-03-handoff.md) for unresolved integration and content gates.
+
+## Fresh hybrid v3 evaluation — 7 October 2026
+
+The current hybrid contract is evaluated separately from the old exact-excerpt v1/v2 tooling. `scripts/evaluate-guide-hybrid.py` runs the frozen 48-case `v3-hybrid.json` through the actual owned API and model. `scripts/evaluate-guide-hybrid-faults.py` runs 16 isolated bilingual safety cases with mocked generation. First/diagnostic exposure, seeds, real usage, support/citation denominators and general-only answers are reported separately in [Part 7](../report/PHASE_03_HYBRID_PART_07.md). Do not substitute the old excerpt evaluator or fixture gold for hybrid quality.
+
+The first v3 run scores 46/48 (initially reserved 32/32); the exposed diagnostic reaches 48/48 after a prompt correction for unsafe local detail in Chinese general context. Final support/citation integrity scores 18/18 actual sourced answers. Historical correctness, explanatory clarity, personality and bilingual faithfulness remain unscored until actual human judgments are supplied. The 200-question pilot and expert gold remain separate requirements.
+
+The review CLI accepts hash-bound v2 worksheets including personality and clarity of conversational/insufficient responses. The [readable packet](../report/PHASE_03_HUMAN_REVIEW_PACKET.md) contains actual answers and original source links; all pending values remain null. Attribution and attestation are required for scored judgments; the tool cannot authenticate reviewer identity or expertise.

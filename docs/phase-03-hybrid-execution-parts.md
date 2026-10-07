@@ -1,12 +1,12 @@
 # Phase 03 — ordered implementation parts and acceptance
 
-Planning date: 6 October 2026, Asia/Shanghai. Execution update: Parts 0–1 requirements/design and delivery behavior are implemented; [dated report and limits](../report/PHASE_03_HYBRID_PART_01.md). Part 2 is implemented locally ([dated verification](../report/PHASE_03_HYBRID_PART_02.md)). Part 3 collection/curation and all-city draft preparation are implemented, with actual human content/rights review still open ([report](../report/PHASE_03_HYBRID_PART_03.md)). Parts 4–8 remain pending. This document is the execution contract, not standalone completion evidence.
+Planning date: 6 October 2026, Asia/Shanghai. Execution update: Parts 0–1 requirements/design and delivery behavior are implemented; [dated report and limits](../report/PHASE_03_HYBRID_PART_01.md). Part 2 is implemented locally ([dated verification](../report/PHASE_03_HYBRID_PART_02.md)). Part 3 collection/curation and all-city draft preparation are implemented, with actual human content/rights review still open ([report](../report/PHASE_03_HYBRID_PART_03.md)). Parts 4–8 engineering/evaluation/audit are now delivered; human content/quality and final release acceptance remain open ([closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md)). This document is the execution contract, not standalone completion evidence.
 
 Read with [the conversation and Liaoning collection design](phase-03-hybrid-conversation-plan.md). The owner will work with Codex directly. This document replaces vague next steps with dependencies, concrete defaults, review checkpoints and evidence. It makes no promise of zero defects: claims of completion require checks and recorded limitations.
 
 ## Scope and dependency order
 
-First release: EN/ZH text, varied model-generated conversation, source-supported cultural explanations, visibly distinct broad general knowledge, bounded consented page-only context, current source inspection and honest service errors. Existing provider selection stays in the server gateway; no assumed model migration, new subscription, public deployment, voice or image analysis is included. Owner update: bounded trusted-source search is included in Part 4; it is not yet connected to visitor chat.
+First release: EN/ZH text, varied model-generated conversation, source-supported cultural explanations, visibly distinct broad general knowledge, bounded consented page-only context, current source inspection and honest service errors. Existing provider selection stays in the server gateway; no assumed model migration, new subscription, public deployment, voice or image analysis is included. Owner update: bounded trusted-source search is included in Part 4; registered official-directory lookup is connected to visitor chat; current operational-data adapters remain unavailable.
 
 | Part | Deliverable | Depends on |
 |---|---|---|

@@ -1,0 +1,123 @@
+{
+  "started_at": "2026-10-07T02:18:26.302074+00:00",
+  "scope": "Git-visible candidate tree; fresh dependency installs, setup, isolated PostgreSQL/pgvector, migrations, corpus restore, API and production web startup",
+  "production_database_modified": false,
+  "provider_key_copied": false,
+  "provider_calls": 0,
+  "steps": [
+    {
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 71573.37268699985
+    },
+    {
+      "command": [
+        "uv",
+        "sync",
+        "--project",
+        "apps/api",
+        "--frozen"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 1845.8745460000046
+    },
+    {
+      "command": [
+        "pnpm",
+        "setup:local"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 367.0714779998434
+    },
+    {
+      "command": [
+        "pnpm",
+        "setup:local"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 361.0372529999495
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "folkverse-phase3-reproduce-1b2d31f02c9b",
+        "--env-file",
+        "/tmp/folkverse-phase3-reproduction-fmmbcbtk/database.env",
+        "-p",
+        "127.0.0.1::5432",
+        "pgvector/pgvector:pg17@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 138.85789299979479
+    },
+    {
+      "command": [
+        "docker",
+        "port",
+        "folkverse-phase3-reproduce-1b2d31f02c9b",
+        "5432/tcp"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 8.767261999992115
+    },
+    {
+      "command": [
+        "pnpm",
+        "db:migrate"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 1820.0991360001808
+    },
+    {
+      "command": [
+        "pnpm",
+        "db:migrate"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 893.7958980000076
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "restore-manifest"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 685.5843499999992
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "restore-manifest"
+      ],
+      "exit_code": 2,
+      "elapsed_ms": 652.5839850000921
+    }
+  ],
+  "candidate_tree_sha256": "c97b9dd6416bfd7ea8420eab2d35e5a12c9184286e96a9702c7eb5539132eba2",
+  "files_copied": 947,
+  "setup_preserves_existing_secrets": true,
+  "passed": false,
+  "error": "Reproduction command failed: uv",
+  "temporary_container_removed": false,
+  "completed_at": "2026-10-07T02:19:46.019428+00:00"
+}
