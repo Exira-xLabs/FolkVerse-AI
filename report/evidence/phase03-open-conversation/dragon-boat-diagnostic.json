@@ -1,0 +1,50 @@
+{
+  "status": 200,
+  "answer": {
+    "answer_id": "ans_e396bb1808794c9d90b1db5580356a46",
+    "locale": "en",
+    "depth": "beginner",
+    "status": "answered",
+    "uncertainty": "insufficient",
+    "reason": "general_explanation",
+    "answer_text": "Dragon boat traditions centre on long, narrow boats shaped like dragons, raced by teams paddling to the beat of a drum. They are often linked to a festival honouring a remembered figure, with customs like eating wrapped rice dumplings. Think of it as a team sport woven together with storytelling and seasonal celebration. Which part interests you more, the racing or the festival customs?",
+    "claims": [],
+    "answer_claim_ids": [],
+    "context_claim_ids": [],
+    "evidence_ids": [],
+    "sources": [],
+    "related_exhibit_ids": [],
+    "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+    "mode": "live",
+    "retrieval_mode": "lexical_only",
+    "retrieval_version": "lexical-bm25-cjk-v2",
+    "embedding_status": "disabled",
+    "embedding_model_version": null,
+    "embedding_encoder_version": null,
+    "query_embedding_ms": null,
+    "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+    "harness_version": "guide-hybrid-sections-v6",
+    "prompt_version": "jinyao-hybrid-explanations-v9",
+    "provider_attempt_id": "call_ecb69dc956bd443ab95448d7c9fe273d",
+    "personality_version": "jinyao-conversation-v2",
+    "social_intent": null,
+    "conversation_choice": null,
+    "contract_version": "hybrid_sections_v1",
+    "sections": [
+      {
+        "section_id": "section_background",
+        "kind": "general",
+        "text": "Dragon boat traditions centre on long, narrow boats shaped like dragons, raced by teams paddling to the beat of a drum. They are often linked to a festival honouring a remembered figure, with customs like eating wrapped rice dumplings. Think of it as a team sport woven together with storytelling and seasonal celebration. Which part interests you more, the racing or the festival customs?",
+        "claim_ids": [],
+        "support_label": "general_unverified"
+      }
+    ],
+    "lookup_status": "not_requested",
+    "retrieval_ms": 30.213253001420526,
+    "database_ms": 28.50761599984253,
+    "ranking_ms": 1.0055090006062528,
+    "generation_ms": 1665.9681719993387,
+    "validation_ms": 18.363815999691724,
+    "presentation_version": "hybrid_sections_v1"
+  }
+}

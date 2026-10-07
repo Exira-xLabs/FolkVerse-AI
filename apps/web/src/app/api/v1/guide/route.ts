@@ -14,7 +14,16 @@ export async function POST(request: Request) {
   let sameOrigin = false;
   try {
     const supplied = new URL(origin ?? "");
-    sameOrigin = supplied.origin === origin && supplied.host === request.headers.get("host") && supplied.protocol === new URL(request.url).protocol;
+    let protocol = new URL(request.url).protocol;
+    // HTTPS may terminate at a proxy while Next receives HTTP on loopback. Only an
+    // explicitly configured public origin can override the scheme, with Host still exact.
+    const configured = process.env.PUBLIC_APP_ORIGIN;
+    if (configured) {
+      const publicOrigin = new URL(configured);
+      if (publicOrigin.origin === configured && publicOrigin.protocol === "https:" &&
+        publicOrigin.host === request.headers.get("host")) protocol = publicOrigin.protocol;
+    }
+    sameOrigin = supplied.origin === origin && supplied.host === request.headers.get("host") && supplied.protocol === protocol;
   } catch { /* Missing or malformed origins fail closed. */ }
   if (!sameOrigin) return unavailable(403, "origin_denied");
   if (!request.headers.get("content-type")?.includes("application/json")) return unavailable(415, "invalid_input");

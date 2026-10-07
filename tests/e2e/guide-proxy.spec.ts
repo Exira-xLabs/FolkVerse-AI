@@ -32,3 +32,17 @@ test("evidence BFF forwards only the owned cookie and never caches", async ({ re
   expect((await response.json()).received).toEqual({ cookie: "folkverse_session=fixture_cookie", authorization: null, path: "/api/v1/guide/evidence/lookup_fixture" });
   expect((await request.get("http://127.0.0.1:3100/api/v1/guide/evidence/lookup_fixture")).status()).toBe(404);
 });
+
+test("configured HTTPS preview behind HTTP preserves exact origin and Host checks", async ({ request }) => {
+  const body = { question: "fixture", locale: "en", depth: "concise" };
+  const headers = { Host: "preview.fixture.test", Origin: "https://preview.fixture.test" };
+  const response = await request.post(`${live}/api/v1/guide`, { headers, data: body });
+  expect(response.status()).toBe(200);
+  expect((await response.json()).received.origin).toBe(headers.Origin);
+  for (const invalid of [
+    { ...headers, Origin: "http://preview.fixture.test" },
+    { ...headers, Origin: "https://attacker.example" },
+    { ...headers, Host: "attacker.example" },
+    { ...headers, Origin: "https://preview.fixture.test/" },
+  ]) expect((await request.post(`${live}/api/v1/guide`, { headers: invalid, data: body })).status()).toBe(403);
+});

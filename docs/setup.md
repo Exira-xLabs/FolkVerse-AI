@@ -105,3 +105,11 @@ uv run --project apps/api python scripts/verify-phase03-reproduction.py --output
 Restoring into populated content tables intentionally exits 2 and preserves existing content; use `curation counts`/`ledger` to inspect it. Re-running setup and migrations is safe. Do not remove a populated project volume to make verification pass. A fresh live-mode install with no key remains unavailable for generation; actual model integration is tested separately under existing authorization.
 
 Current [Phase 3 closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md) distinguishes completed engineering from outstanding actual human/content/pilot evidence. Demo browser regressions explicitly start their web instance in demo mode; real guide fixtures/live verification use their own live configuration. No remote CI or production deployment is inferred from local startup or a Git push.
+
+## Try the real chatbot instead of the scripted preview
+
+The chat banner is the reliable distinction: **“Scripted preview · no live AI · messages are not sent”** means `APP_MODE=demo`. That mode deliberately plays prepared examples; it does not test DeepSeek or free conversation. A typed `hi` must be tested in live mode.
+
+For live chat, set `APP_MODE=live` in the ignored root `.env`, configure the existing provider credentials and bounded admission there, and start both API and web. Remove any conflicting `APP_MODE=demo` web/process override, or explicitly start the web with `APP_MODE=live`. Restart both processes after changing mode. Provider keys stay server-side in the ignored root file. A suggested question is optional; users can type their own cultural questions and follow-ups.
+
+For an HTTPS reverse proxy forwarding HTTP to Next, set server-only `PUBLIC_APP_ORIGIN=https://your-exact-hostname` in the web process or ignored `apps/web/.env.local`. Add that exact origin to the API's `ALLOWED_ORIGINS` and enable `COOKIE_SECURE=true`. The BFF still requires the request Origin and Host to match exactly; arbitrary forwarded headers do not configure a public hostname. Expose only the web service, keeping the API and database on loopback. Temporary hostname changes require updating these exact-origin settings. Never disable origin checks to make a preview work.

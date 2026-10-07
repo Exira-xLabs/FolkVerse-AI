@@ -140,7 +140,7 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
       followLatest.current = node.scrollHeight - node.scrollTop - node.clientHeight < 48;
       setAwayFromLatest(!followLatest.current);
     }} role="log" aria-label={live ? (zh ? "与锦瑶的对话" : "Conversation with Jinyao") : (zh ? "与锦瑶的示例对话" : "Example conversation with Jinyao")} aria-live="polite" aria-relevant="additions text" aria-busy={pending}>
-      <div className="jinyao-message from-jinyao"><JinyaoAvatar size={32} /><div><span className="sr-only">Jinyao: </span><p>{live ? (zh ? "您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。" : "Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.") : (zh ? "您好，我是锦瑶。想从哪里开始探索？选择下方的问题，试试和我聊天的感觉。" : "Hi, I’m Jinyao. What are you curious about today? Try a question below to see how a conversation could feel.")}</p></div></div>
+      <div className="jinyao-message from-jinyao"><JinyaoAvatar size={32} /><div><span className="sr-only">Jinyao: </span><p>{live ? (zh ? "您好，我是锦瑶。可以直接和我聊中国民俗、节日或故事，也可以从下方的话题开始。" : "Hi, I’m Jinyao. You can talk to me about Chinese folklore, festivals or stories, or start with a topic below.") : (zh ? "您好，我是锦瑶。想从哪里开始探索？选择下方的问题，试试和我聊天的感觉。" : "Hi, I’m Jinyao. What are you curious about today? Try a question below to see how a conversation could feel.")}</p></div></div>
       {turns.map(turn => {
         const response = prompts.find(prompt => prompt.id === turn.prompt);
         return <div className="jinyao-chat-turn" key={turn.id} data-status={turn.status}>

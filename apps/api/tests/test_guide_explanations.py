@@ -272,3 +272,48 @@ def test_chinese_definition_prefix_preserves_local_and_precise_fact_boundary():
             ["辽宁", "沈阳"],
             False,
         )
+
+
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Tell me about Chinese folklore",
+        "Let us chat about Spring Festival customs",
+        "I am curious about dragon boat traditions",
+        "Tell me more",
+        "聊聊中国民俗吧",
+        "我想了解端午节的习俗",
+        "推荐一个民间故事",
+        "继续讲吧",
+    ],
+)
+def test_freely_typed_cultural_messages_do_not_require_suggestion_wording(question):
+    assert general_request(GuideRequest(question=question), ["Shenyang", "沈阳"], False)
+
+
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Tell me when Shenyang Imperial Palace was founded",
+        "聊聊沈阳故宫今天的门票价格",
+        "Tell me the opening hours",
+        "Tell me about the origin of dragon boat racing",
+    ],
+)
+def test_open_cultural_wording_does_not_bypass_precise_source_requirements(question):
+    assert not general_request(GuideRequest(question=question), ["Shenyang", "沈阳"], False)
+
+
+def test_general_guard_distinguishes_qu_yuan_from_prices():
+    assert general_safe(
+        "Traditional accounts associate dragon boat festivals with the poet Qu Yuan; customs vary.",
+        "en",
+        ["Shenyang"],
+    )
+    for text in [
+        "Admission costs twenty yuan.",
+        "You should pay several yuan.",
+        "The fee is five yuan.",
+        "It costs 20 yuan.",
+    ]:
+        assert not general_safe(text, "en", [])

@@ -1,0 +1,17 @@
+{
+  "origin": "https://a18bdf54348a9c.lhr.life",
+  "started_at": "2026-10-07T05:45:10.615Z",
+  "intercepted_responses": false,
+  "turns": [
+    {
+      "question": "hi",
+      "http_status": 403,
+      "ui_status": "error"
+    }
+  ],
+  "errors": [
+    "Failed actual public turn: hi {}"
+  ],
+  "live_banner": "JinyaoYour cultural companion · reviewed evidence×Messages are sent to the guide service and may be processed by the configured AI provider. Reviewed coverage is limited; this app keeps the transcript on this page and does not store raw chat history.Jinyao: Hi, I’m Jinyao. You can talk to me about Chinese folklore, festivals or stories, or start with a topic below.Reply languageAutomaticEnglish中文Explanation depthConciseBeginnerDeeperSend up to 6 recent conversation turns (8,000 characters) to the model, and use topic and evidence context for 30 minutesMessage JinyaoUp to 2,000 characters. Enter sends; Shift plus Enter adds a new line.0 / 2000Conversation for this page visit",
+  "completed_at": "2026-10-07T05:45:56.805Z"
+}

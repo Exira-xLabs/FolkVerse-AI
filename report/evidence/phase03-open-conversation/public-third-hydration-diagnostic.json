@@ -1,0 +1,10 @@
+{
+  "origin": "https://a18bdf54348a9c.lhr.life",
+  "started_at": "2026-10-07T05:50:11.249Z",
+  "intercepted_responses": false,
+  "turns": [],
+  "errors": [
+    "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+  ],
+  "completed_at": "2026-10-07T05:50:51.081Z"
+}

@@ -69,7 +69,7 @@ export function JinyaoExperience({ mode, children, initialExhibitId }: { mode: "
           <p className="jinyao-hero-subtitle">{c("Your curiosity has company.", "让好奇心，有人相伴。")}</p></div>
           <div className="jinyao-hero-details"><p className="jinyao-hero-description">{c("A fictional cultural guide for the stories, details, and little discoveries that make a museum yours.", "一位虚构的文化向导，陪您发现故事、细节，以及属于您的博物馆时刻。")}</p>
           <div className="hero-actions"><button className="gold-button" onClick={() => setChatOpen(true)}><ChatSymbol />{c("Chat with Jinyao", "与锦瑶聊天")}</button><Link className="text-button" href="/explore">{c("Explore the collection", "探索馆藏")} <ArrowIcon direction="diagonal" /></Link></div>
-          <p className="jinyao-preview-note">{mode === "demo" ? c("Fictional companion · scripted chat preview · live AI not connected", "虚构伙伴 · 预设聊天预览 · 未连接真实 AI") : c("Fictional companion · reviewed evidence · limited coverage", "虚构伙伴 · 审核资料 · 有限覆盖")}</p></div>
+          <p className="jinyao-preview-note">{mode === "demo" ? c("Fictional companion · scripted chat preview · live AI not connected", "虚构伙伴 · 预设聊天预览 · 未连接真实 AI") : c("Live cultural conversation · source-backed local facts", "真实 AI 文化对话 · 地方事实有据可查")}</p></div>
         </motion.div>
         <a className="jinyao-scroll-cue" href="#meet-jinyao" onClick={event => { event.preventDefault(); document.getElementById("meet-jinyao")?.scrollIntoView({ behavior: animate ? "smooth" : "instant" }); }}>{c("Scroll to get to know me", "向下滚动，认识锦瑶")} <ArrowIcon direction="down" /></a>
         <motion.div className="jinyao-scroll-progress" aria-hidden="true" style={{ scaleX: animate ? scrollYProgress : 0 }} />

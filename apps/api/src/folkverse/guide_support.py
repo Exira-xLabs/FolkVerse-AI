@@ -92,8 +92,17 @@ def general_safe(text: str, locale: Locale, forbidden_names: list[str]) -> bool:
         return False
     if re.search(
         r"originated|founded|dates? back|born in|according to|the source says|cures?|dosage|"
-        r"legal advice|guaranteed|verified|officially|named|yuan|dollars|人民币|美元|"
+        r"legal advice|guaranteed|verified|officially|named|dollars|人民币|美元|"
         r"起源于|始建于|发源于|最早|据.{0,12}记载|治疗|剂量|保证|已核实|已验证|权威确认",
+        text,
+        re.I,
+    ):
+        return False
+    # Yuan is also a surname (for example Qu Yuan). Reject price/amount uses, not names.
+    if re.search(
+        r"\b(?:costs?|priced?|fees?|pay|spend|payment)\b[^.!?]{0,30}\byuan\b|"
+        r"\b(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|"
+        r"twenty|thirty|forty|fifty|hundred|thousand|million|several|a few)\s+yuan\b",
         text,
         re.I,
     ):

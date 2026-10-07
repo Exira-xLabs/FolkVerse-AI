@@ -1,3 +1,5 @@
+> Current runtime update, 7 October 2026: live social turns use provider-selected varied greetings and invitations; broad Chinese-cultural explanations use prompt v9 and visibly labelled general sections. Suggested prompts are optional. The old restricted policy description below is historical. [Live-mode diagnosis and checks](../report/CHATBOT_LIVE_MODE_FIX.md).
+
 # Jinyao conversation policy v1
 
 **Hybrid revision approved; implementation in progress.** This document describes the delivered restricted runtime below. The new behavior and migration gates are in [the execution plan](phase-03-hybrid-execution-parts.md) and [output contract](guide-hybrid-output-contract.md). Do not infer that planned generated social/general output is live.
