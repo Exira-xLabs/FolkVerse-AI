@@ -1,0 +1,119 @@
+{
+  "checked_at": "2026-10-07T08:02:31.452094+00:00",
+  "scope": "local production web BFF / FastAPI / PostgreSQL; no browser or provider call",
+  "browser_verified": false,
+  "provider_generation_verified": false,
+  "checks": [
+    {
+      "name": "production journey shell",
+      "passed": true
+    },
+    {
+      "name": "owned route requires session",
+      "passed": true
+    },
+    {
+      "name": "signed session proxy",
+      "passed": true
+    },
+    {
+      "name": "real BFF journey create",
+      "passed": true
+    },
+    {
+      "name": "time uses stored estimates",
+      "passed": true,
+      "stop_count": 1,
+      "total_minutes": 3,
+      "explanation_status": "deterministic"
+    },
+    {
+      "name": "small corpus notice",
+      "passed": true
+    },
+    {
+      "name": "unique stops",
+      "passed": true
+    },
+    {
+      "name": "stop resolves to published exhibit",
+      "passed": true
+    },
+    {
+      "name": "stop has actual source links",
+      "passed": true
+    },
+    {
+      "name": "database reload",
+      "passed": true
+    },
+    {
+      "name": "bilingual render",
+      "passed": true
+    },
+    {
+      "name": "unchanged deterministic regeneration",
+      "passed": true
+    },
+    {
+      "name": "no unclaimed provider generation",
+      "passed": true
+    },
+    {
+      "name": "explicit exhibit entry preserved through BFF",
+      "passed": true
+    },
+    {
+      "name": "latest list honors display locale and limit",
+      "passed": true
+    },
+    {
+      "name": "BFF forwards list bound validation",
+      "passed": true
+    },
+    {
+      "name": "owner cannot be supplied",
+      "passed": true
+    },
+    {
+      "name": "BFF missing origin rejected",
+      "passed": true
+    },
+    {
+      "name": "BFF foreign origin rejected",
+      "passed": true
+    },
+    {
+      "name": "bounded request body",
+      "passed": true
+    },
+    {
+      "name": "stranger bootstrap",
+      "passed": true
+    },
+    {
+      "name": "stranger cannot read route",
+      "passed": true
+    },
+    {
+      "name": "stranger cannot edit route",
+      "passed": true
+    },
+    {
+      "name": "stranger list private",
+      "passed": true
+    },
+    {
+      "name": "remove all recalculates",
+      "passed": true
+    },
+    {
+      "name": "empty route persists",
+      "passed": true
+    },
+    {
+      "name": "stale edit rejected",
+      "passed": true
+    }
+  ]
+}

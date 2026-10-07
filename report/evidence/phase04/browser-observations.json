@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-07",
+  "time_zone": "Asia/Shanghai",
+  "method": "Browser Skill injected tools in a dedicated owned session (mpef) bound to the verified user-started headless Chromium 153; live production build initially on 3014/8014, then rebuilt after upstream 07296c7 integration and re-verified on 3000/8000 with the isolated reviewed PostgreSQL snapshot",
+  "provider_generation_sent": false,
+  "publication_approvals_added": false,
+  "observations": [
+    {"name": "Map Dalian selection carries explicit region to journey", "passed": true, "evidence": "Selected Explore Dalian, opened published Fuzhou shadow puppetry source drawer, followed Learn from this exhibit; journey Learning region showed Dalian"},
+    {"name": "Custom time control keyboard selection", "passed": true, "evidence": "Opened Learning time combobox, Home then Enter selected 5 minutes"},
+    {"name": "Actual published starting exhibit creation", "passed": true, "evidence": "Create & save produced one Fuzhou shadow puppetry stop, 3 / 5 minutes, explicit partial-fill notice and truthful first-start reason"},
+    {"name": "Guide context preserved", "passed": true, "evidence": "Clicked saved Ask Jinyao link; Guide exhibit-context panel resolved the same published Fuzhou record; no question submitted"},
+    {"name": "Reload retains route and applied preferences", "passed": true, "evidence": "Returned to /journey, reloaded, observed same one stop, 3 / 5 minutes and Dalian selection"},
+    {"name": "Phone menu and Chinese route rendering", "passed": true, "evidence": "390 x 844 mobile emulation; opened navigation, switched language and closed menu; saved stop became 复州皮影戏 with Chinese route copy and unchanged 3 / 5 minutes"},
+    {"name": "Last stop keyboard remove and focus continuation", "passed": true, "evidence": "Focused Chinese Remove via tool press Enter; count and total became 0 / 5; Tab then Enter activated Browse available exhibits and navigated to Explore, consistent with heading-focus recovery"},
+    {"name": "Empty saved route persists", "passed": true, "evidence": "Returned to /journey after removal; current route remained zero stops and 0 / 5; neutral intentional-empty wording"},
+    {"name": "Regenerate recovers actual published stop", "passed": true, "evidence": "Regenerated with open interests: one 3-minute Chinese stop restored"},
+    {"name": "Draft preferences distinguished from saved route", "passed": true, "evidence": "Toggled Music; draft notice appeared while saved 3 / 5 remained until Apply"},
+    {"name": "Missing-theme empty state and recovery", "passed": true, "evidence": "Applied Music: zero stops, 0 / 5, no published matching interests/region notice; cleared Music and regenerated to recover one stop"},
+    {"name": "Actual source/exhibit links", "passed": true, "evidence": "HTTPS Liaoning government source in saved card; Read exhibit opened actual reviewed source drawer in Chinese"},
+    {"name": "Post-upstream rebuild restores saved route (port 3000)", "passed": true, "evidence": "After stash/pull of 07296c7 and restore, rebuilt lint/types/build ran clean; 550 API tests and the 27 HTTP checks rerun passed; /journey on the merged build again showed the saved one-stop Chinese route, 3 / 5 minutes and the Liaoning government source link"},
+    {"name": "Standalone diagnostic control page matches requested viewport", "passed": true, "evidence": "A one-shot, clearly labelled synthetic Document mock (no application components or data) served at /journey?viewport-control=1 reported view 390 x 844 under identical mobile emulation with the Browser Skill overlay still present; the application build itself was not altered. Exported as viewport-control.json"}
+  ],
+  "screenshot_files": ["desktop-en.png", "mobile-en.png", "mobile-zh.png"],
+  "desktop_requested_pixels": [1600, 900],
+  "phone_requested_pixels": [390, 844],
+  "perceptual_visual_reference_comparison": "pending; model route does not accept raster images",
+  "phone_layout_diagnostic": {
+    "screenshot_pixels": [390, 844],
+    "reported_view_outside_modal": [738, 1598],
+    "reported_view_in_navigation_and_source_modals": [390, 844],
+    "reported_view_standalone_control_page_with_overlay": [390, 844],
+    "app_element_bounds": {"hero_width": 390, "saved_controls_width": 354, "saved_panel_width": 354, "footer_width": 354, "source_link_width": 308},
+    "source_and_bundle_audit": "Read-only delegated audit found mobile rules active (354 = 390 - 2x18 gutter), no closed dropdown portal, fixed/clamped open menus, guarded grids with min-width 0, and pre-Phase04 baseline scan measured scrollWidth 390. 738/390 and 1598/844 share one ~1.89 scale factor, so the tool metric is likely viewport/scale derived rather than free-standing page overflow; attribution is not proven. One minor cascade defect (.saved-journey-controls align-items) was fixed; latent long-token wrap guards remain unadded pending attribution.",
+    "exported_probe": "viewport-control.json",
+    "status": "viewport/overflow discrepancy unresolved but narrowed: app-cause and closed-dropdown causes excluded; do not claim full-document no-overflow or physical-device certification"
+  },
+  "pending": ["Two-stop UI reorder/adjacent-focus controlled fixture (real corpus only one stop)", "Final mobile viewport attribution", "Perceptual screenshot/reference comparison", "Post-copy-fix refreshed source drawer", "Existing full browser regression not executed"]
+}

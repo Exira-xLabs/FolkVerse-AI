@@ -64,7 +64,7 @@ test("journey reorder, remove and duration-constrained empty state", async ({ pa
   await page.getByRole("button", { name: "Move down screen" }).click();
   await expect(page.locator(".journey-stops li").first()).toContainText("Fujian");
   await page.getByRole("button", { name: "Remove table" }).click();
-  await expect(page.locator(".panel-heading")).toContainText("13 / 20");
+  await expect(page.locator(".journey-route .panel-heading")).toContainText("13 / 20");
   await page.getByRole("combobox", { name: "Time", exact: true }).click();
   await page.getByRole("option", { name: "5 minutes", exact: true }).click();
   await page.getByRole("combobox", { name: "Interests", exact: true }).click();
@@ -123,7 +123,10 @@ test("interest edits redraw chart and reset clears suggestions", async ({ page }
 });
 
 test("live mode fails closed with no demo controls", async ({ page }) => {
-  for (const route of ["journey", "lens", "dna", "stories/lantern-path"]) {
+  await page.goto("http://127.0.0.1:3002/journey");
+  await expect(page.getByRole("heading", { name: "Your saved discoveries" })).toBeVisible();
+  await expect(page.locator(".fixture-content")).toHaveCount(0);
+  for (const route of ["lens", "dna", "stories/lantern-path"]) {
     await page.goto(`http://127.0.0.1:3002/${route}`);
     await expect(page.getByRole("heading", { name: "This experience is not available yet." })).toBeVisible();
     await expect(page.locator(".fixture-content")).toHaveCount(0);

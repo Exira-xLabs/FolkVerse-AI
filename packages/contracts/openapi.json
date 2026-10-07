@@ -1089,6 +1089,305 @@
         "title": "HealthResponse",
         "type": "object"
       },
+      "JourneyCreate": {
+        "additionalProperties": false,
+        "description": "Explicit preferences only; unknown fields such as an owner ID are rejected.",
+        "properties": {
+          "duration_minutes": {
+            "maximum": 60.0,
+            "minimum": 5.0,
+            "title": "Duration Minutes",
+            "type": "integer"
+          },
+          "interests": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 8,
+            "title": "Interests",
+            "type": "array"
+          },
+          "locale": {
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Locale",
+            "type": "string"
+          },
+          "novelty_exhibit_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 24,
+            "title": "Novelty Exhibit Ids",
+            "type": "array"
+          },
+          "region_id": {
+            "anyOf": [
+              {
+                "maxLength": 100,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region Id"
+          },
+          "start_exhibit_id": {
+            "anyOf": [
+              {
+                "maxLength": 100,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start Exhibit Id"
+          }
+        },
+        "required": [
+          "locale",
+          "duration_minutes"
+        ],
+        "title": "JourneyCreate",
+        "type": "object"
+      },
+      "JourneyList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/JourneyResponse"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "JourneyList",
+        "type": "object"
+      },
+      "JourneyPatch": {
+        "additionalProperties": false,
+        "description": "An explicit ordered list is required: an empty list clears the route, ``{}`` is refused.",
+        "properties": {
+          "expected_version": {
+            "anyOf": [
+              {
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Version"
+          },
+          "ordered_exhibit_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 24,
+            "title": "Ordered Exhibit Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "ordered_exhibit_ids"
+        ],
+        "title": "JourneyPatch",
+        "type": "object"
+      },
+      "JourneyResponse": {
+        "properties": {
+          "duration_minutes": {
+            "title": "Duration Minutes",
+            "type": "integer"
+          },
+          "explanation_status": {
+            "enum": [
+              "deterministic",
+              "generated",
+              "unavailable"
+            ],
+            "title": "Explanation Status",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "interests": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Interests",
+            "type": "array"
+          },
+          "locale": {
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Locale",
+            "type": "string"
+          },
+          "notice": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice"
+          },
+          "novelty_exhibit_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Novelty Exhibit Ids",
+            "type": "array"
+          },
+          "region_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region Id"
+          },
+          "stops": {
+            "items": {
+              "$ref": "#/components/schemas/JourneyStopCard"
+            },
+            "title": "Stops",
+            "type": "array"
+          },
+          "total_minutes": {
+            "title": "Total Minutes",
+            "type": "integer"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "title": "Updated At",
+            "type": "string"
+          },
+          "version": {
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "locale",
+          "interests",
+          "duration_minutes",
+          "region_id",
+          "novelty_exhibit_ids",
+          "total_minutes",
+          "version",
+          "stops",
+          "notice",
+          "explanation_status",
+          "updated_at"
+        ],
+        "title": "JourneyResponse",
+        "type": "object"
+      },
+      "JourneySource": {
+        "properties": {
+          "canonical_url": {
+            "title": "Canonical Url",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "institution": {
+            "title": "Institution",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "institution",
+          "canonical_url"
+        ],
+        "title": "JourneySource",
+        "type": "object"
+      },
+      "JourneyStopCard": {
+        "properties": {
+          "estimated_minutes": {
+            "title": "Estimated Minutes",
+            "type": "integer"
+          },
+          "exhibit_id": {
+            "title": "Exhibit Id",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          },
+          "region_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Region Ids",
+            "type": "array"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/JourneySource"
+            },
+            "title": "Sources",
+            "type": "array"
+          },
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          },
+          "themes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Themes",
+            "type": "array"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "exhibit_id",
+          "title",
+          "summary",
+          "estimated_minutes",
+          "region_ids",
+          "themes",
+          "reason",
+          "sources"
+        ],
+        "title": "JourneyStopCard",
+        "type": "object"
+      },
       "PassageCard": {
         "properties": {
           "id": {
@@ -1732,6 +2031,230 @@
           }
         },
         "summary": "Health"
+      }
+    },
+    "/api/v1/journeys": {
+      "get": {
+        "operationId": "journeys",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "en",
+                    "zh-CN"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 10,
+              "maximum": 20,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JourneyList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Journeys"
+      },
+      "post": {
+        "operationId": "create_journey",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JourneyCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JourneyResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Journey"
+      }
+    },
+    "/api/v1/journeys/{identifier}": {
+      "get": {
+        "operationId": "journey",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "identifier",
+            "required": true,
+            "schema": {
+              "title": "Identifier",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "en",
+                    "zh-CN"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JourneyResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Journey"
+      },
+      "patch": {
+        "operationId": "update_journey",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "identifier",
+            "required": true,
+            "schema": {
+              "title": "Identifier",
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "en",
+                    "zh-CN"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JourneyPatch"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JourneyResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Journey"
       }
     },
     "/api/v1/regions": {
