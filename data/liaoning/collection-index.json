@@ -1,0 +1,305 @@
+{
+  "version": "liaoning-inventory-v1",
+  "sources": {
+    "admin-2026-h1": {
+      "collection": "admin-2026-h1-bbd11c8dee0e9b72.json",
+      "collection_hash": "bbd11c8dee0e9b72389b6fac2cc558a9eb5da5f3f9540bc79ea2f1c0a5fb6fac",
+      "manifest_sha256": "68068e5b98758b1001edd491763ede52b3c70a5486ccd4cf4ba148bb9669838f"
+    },
+    "national-heritage-2021": {
+      "collection": "national-heritage-2021-0d2eee7e0599dde4.json",
+      "collection_hash": "0d2eee7e0599dde40336b3ca3bec9c6863fadf9c291d42ed0959098d92471149",
+      "manifest_sha256": "54461dec5b6569ab42b98d5b64592e2f949ecf4eb7ca1c645430b5e7c139b0b0"
+    },
+    "provincial-heritage-2021": {
+      "collection": "provincial-heritage-2021-c2fc8650f7ac65ab.json",
+      "collection_hash": "c2fc8650f7ac65abf0b78752c83ccd5cd6799e6352ed906fc06673c15b4e5333",
+      "manifest_sha256": "06a03017b5bcc43c99e90010e08c49e3c313bfa8154582cb74214df4886c7692"
+    },
+    "heritage-batch-1-2006": {
+      "collection": "heritage-batch-1-2006-72232622b540a0bf.json",
+      "collection_hash": "72232622b540a0bfde5f0ede56fb33692230bcd8cf7fb93cabfff3cbba8c5978",
+      "manifest_sha256": "17efee1a5f87bf73610850cea058a41dc40defdfe4bb6c3605692a1427c9f4ba"
+    },
+    "heritage-batch-6-2020": {
+      "collection": "heritage-batch-6-2020-eb79b1a7b24176c1.json",
+      "collection_hash": "eb79b1a7b24176c1527cd1419ded5c4860423a98afeea4f82c5d31db2eae8c89",
+      "manifest_sha256": "dd79bb56e3df556efc9c0650cc1dcb6062b7d11a2e063fda3a4eb51e0e9282ac"
+    },
+    "heritage-batch-7-2026": {
+      "collection": "heritage-batch-7-2026-2fd28a2fc69053bc.json",
+      "collection_hash": "2fd28a2fc69053bcc259d39de7d078965648727aaf735f49c2439b184f496733",
+      "manifest_sha256": "238aa4fb968ba1d6730745234de24e37ee0d7eb9422092ad6ae4f47634784188"
+    },
+    "museums-2024": {
+      "collection": "museums-2024-bc9045ac1af24539.json",
+      "collection_hash": "bc9045ac1af24539696f3fe12c392947e6c09e34e2d08688f56e41cb8e0abb03",
+      "manifest_sha256": "fef86dddde468931f02ced224641e4de8b5a9012fbb32d02804b22c1e4dcdd76"
+    },
+    "protected-sites-batch-12-2025": {
+      "collection": "protected-sites-batch-12-2025-c60e0ec29a58beab.json",
+      "collection_hash": "c60e0ec29a58beabf09b0b2e667cafbf449d989aa8ff86757e1435d0440516dc",
+      "manifest_sha256": "67fc71000fe92052088b564aeb59e7d9156e0996c2cda95e376b5df1897fd257"
+    },
+    "heritage-checkpoint-2026": {
+      "collection": "heritage-checkpoint-2026-119f1933c3b24d10.json",
+      "collection_hash": "119f1933c3b24d10137f7c6a48395b06116f2c86efc34069fddf53391a5593f6",
+      "manifest_sha256": "f36dc22f9565f3cc1bcfb065a3497f4c98cd5697b96d42b1f71c7994ecc036ca"
+    },
+    "museums-checkpoint-2025": {
+      "collection": "museums-checkpoint-2025-f47acfa1c4ae7804.json",
+      "collection_hash": "f47acfa1c4ae78047cb9e240bbf8f7a0ddb77e3f784d9808ac4f49d3599723a2",
+      "manifest_sha256": "e3244894af4ab591b88dde2402dbf6af8a3e3df6c06418b36375aa998c0765b6"
+    },
+    "sites-checkpoint-2019": {
+      "collection": "sites-checkpoint-2019-310b9b451cb66d74.json",
+      "collection_hash": "310b9b451cb66d743ae86bf51be75d07b773c5a58835c7131acd9cb1c73fe487",
+      "manifest_sha256": "42df2a5716af1b62685745e6e5ff4f131f2439e3d9ab8a52ecd4355356d35fff"
+    },
+    "local-history-provincial": {
+      "collection": "local-history-provincial-5052affdf0477203.json",
+      "collection_hash": "5052affdf047720384883dc0f4c244fd1fb4329980986ae65540803913dba486",
+      "manifest_sha256": "0e51402dd03058e14ed8bde8e32dc9ba7068278d73947cf8cd6207baa2902316"
+    },
+    "heritage-batch-2-2007": {
+      "collection": "heritage-batch-2-2007-2555a4a39f2c2248.json",
+      "collection_hash": "2555a4a39f2c2248fbd01a07cf802a2d0f60b87b99a9bec3a75b388bd4c900ac",
+      "manifest_sha256": "5f42d18dbd42bb7a841e57fd0781c10f5320c78ebc8153b505211eb528ca50fd"
+    },
+    "heritage-batch-3-2009": {
+      "collection": "heritage-batch-3-2009-c30a2d213a45afab.json",
+      "collection_hash": "c30a2d213a45afab50c5fb002281d827b7fdec9afb17d37a82fdbe4d97ca57a5",
+      "manifest_sha256": "02e51fcbc1a7fb8172bc3945d24f0a90b0a5ae989d0fcd72d75af2adf8131b67"
+    },
+    "heritage-batch-4-2011": {
+      "collection": "heritage-batch-4-2011-768639ec5e95ac41.json",
+      "collection_hash": "768639ec5e95ac410318a851acc2f851b82f2464dfbb80285fe923e48a6f92e2",
+      "manifest_sha256": "ca5e82fa88e8fbc00fcc01ece68a27f4a21c9ba175ea4ac4e62a0388cc78d25e"
+    },
+    "heritage-batch-5-2015": {
+      "collection": "heritage-batch-5-2015-8a8f2b3956e2e930.json",
+      "collection_hash": "8a8f2b3956e2e9302d4c020d7767df07108c1948c37bc33ffb8627e4054fd058",
+      "manifest_sha256": "a8ebd96785e0bff129ed1daf37a02d6407ff1461e314c6fe6c1b66f545d4dd2d"
+    },
+    "explanation-shenyang-1": {
+      "collection": "explanation-shenyang-1-7c2d714f1f3966ab.json",
+      "collection_hash": "7c2d714f1f3966ab6c358290b0de30eb6c091bc12c7d8e73c8ad4e70888a9e39",
+      "manifest_sha256": "a4ab8f1e8642c1f3844fbf5bd84bace45b307ce5f550361630dcfac1dd8ec21f"
+    },
+    "explanation-shenyang-2": {
+      "collection": "explanation-shenyang-2-09bedd54cab73339.json",
+      "collection_hash": "09bedd54cab73339878834d837c2de39656b714a48435cd28ee4c409a2abe5c7",
+      "manifest_sha256": "6dc58de6117aba375016c8b5f9c139fcdf3120b77d87c13750b61f7ee25b3123"
+    },
+    "explanation-shenyang-3": {
+      "collection": "explanation-shenyang-3-b65d33ace82e2998.json",
+      "collection_hash": "b65d33ace82e29989cd0802948cb0bb498e92c43c207616fa85af5644b8a0bae",
+      "manifest_sha256": "9b2ba6bfc103f91dea283a1b80d3e5e3339882900ecff2801af20d993fff1b7c"
+    },
+    "explanation-dalian-1": {
+      "collection": "explanation-dalian-1-90679ebcd55039e3.json",
+      "collection_hash": "90679ebcd55039e3b38938012846b8e02f57f52759bd95427abf9166c45a423f",
+      "manifest_sha256": "8f6ee23d512d0e464f74e6cc50d1640c2b20d671581439e48e99561fb8ae2cd3"
+    },
+    "explanation-dalian-2": {
+      "collection": "explanation-dalian-2-6857beb9d6f80d88.json",
+      "collection_hash": "6857beb9d6f80d888b3bb7c2330cc6fa78ef19abef0df975e13cb1281cd1df24",
+      "manifest_sha256": "45c4118583ae888de2c99f743e9f58658f7b1bb50cfad708752cbe7b0d89fb4e"
+    },
+    "explanation-dalian-3": {
+      "collection": "explanation-dalian-3-fb9569009f850240.json",
+      "collection_hash": "fb9569009f850240fd75e82fd3efb4ab2f9e8121bd43792bd28bd535939a77da",
+      "manifest_sha256": "a4a1aae02cc4ef9799d31f02d3aa512267ac9b4cba62fa52eec824982a7f3331"
+    },
+    "explanation-anshan-1": {
+      "collection": "explanation-anshan-1-798fea49b21d31d8.json",
+      "collection_hash": "798fea49b21d31d8136cb25dc9c0a79ec528c3b137bc2ea17f427611b5b9ee53",
+      "manifest_sha256": "291fc61df38b92c86008a501f532c688a853d0b282f13ba5e2d241c6fb092d03"
+    },
+    "explanation-anshan-2": {
+      "collection": "explanation-anshan-2-6b3527bf4683fdf6.json",
+      "collection_hash": "6b3527bf4683fdf6b1a702747d6908ead876c164dec41e44f7286b0250ffcf6b",
+      "manifest_sha256": "681698cd2a44f665a90491ce12a534c425867733eb0a58310fbb1e2f37c685d7"
+    },
+    "explanation-anshan-3": {
+      "collection": "explanation-anshan-3-3ee085e637584592.json",
+      "collection_hash": "3ee085e637584592bcd4d1ee9ef4067d5468c0252895f266404b283fbc1bf9b3",
+      "manifest_sha256": "9de2b0e32be8e6f15d78ff15504f04670b00d52e8f75ccced6fba3d20c1d0a02"
+    },
+    "explanation-fushun-1": {
+      "collection": "explanation-fushun-1-fb05e939e99bf7d2.json",
+      "collection_hash": "fb05e939e99bf7d20bafdfea7ed1ad2b15213872ab040134dee2e4d382bfc29e",
+      "manifest_sha256": "a8769f9bec7b72f2f7ebdfe0eb9bf0e4b2673fd044661a4a890c8c5c89ba357f"
+    },
+    "explanation-fushun-2": {
+      "collection": "explanation-fushun-2-b979253af28fbd4c.json",
+      "collection_hash": "b979253af28fbd4c8d289c37f12804faf61899b40f12fc2c8e105ddafe608258",
+      "manifest_sha256": "84f42883e1a5395b9c28980c9eda4d7ac714cce92e55caf87b3012678e64a398"
+    },
+    "explanation-fushun-3": {
+      "collection": "explanation-fushun-3-c426e61380bc6eef.json",
+      "collection_hash": "c426e61380bc6eef6e5efee024d6a968305992e50861b5b3075038624e0e0788",
+      "manifest_sha256": "39874e487df47f7ce0e83ce23680e7ffe9a6cffc26c7b7416885395cd99c9a67"
+    },
+    "explanation-benxi-1": {
+      "collection": "explanation-benxi-1-d1a369bc93fa6a7b.json",
+      "collection_hash": "d1a369bc93fa6a7ba34dc79351d72677111883d08ae7ef591684e7f51353a509",
+      "manifest_sha256": "43e5966fc3002623edf7e3fcfaca0bc15c538f0cb63e80cad22a148343cd55cb"
+    },
+    "explanation-benxi-2": {
+      "collection": "explanation-benxi-2-210d8f55948ec9e6.json",
+      "collection_hash": "210d8f55948ec9e601c30e97f4719b186dcdae54ee04940612d27b6f84630fa9",
+      "manifest_sha256": "1a9afbc6b57bcb8eea2526eeb8f8d7129efd0b19ab9d8ab0cd9ece5b9ed64c3b"
+    },
+    "explanation-benxi-3": {
+      "collection": "explanation-benxi-3-07a1cf84643622c7.json",
+      "collection_hash": "07a1cf84643622c7c9922e50ee0f46d01bda909a9406c0cb594131f20c3898d0",
+      "manifest_sha256": "1fab964fc819be3f695575b21aca569e2d9bae7d787ef8629004d700496a7003"
+    },
+    "explanation-dandong-1": {
+      "collection": "explanation-dandong-1-4269b91fa70a695c.json",
+      "collection_hash": "4269b91fa70a695c1c5ccc83ea7636f6a0dfbd5daa5a5f7b2176a62a125b27d6",
+      "manifest_sha256": "1fd5501fa486da8a8297ed6c53337648d3befc81d8af02c161ad24d71e01ff3b"
+    },
+    "explanation-dandong-2": {
+      "collection": "explanation-dandong-2-07b47095e769698c.json",
+      "collection_hash": "07b47095e769698c786fe5c4d35aa660fff3bbe2ec66c741433e7ec5c90b21e7",
+      "manifest_sha256": "1eff85732869fbb8d461ebadb80cfa0b7350275d1f57478ce3f7c03f0a5904e2"
+    },
+    "explanation-dandong-3": {
+      "collection": "explanation-dandong-3-b927c07e16d7e36f.json",
+      "collection_hash": "b927c07e16d7e36f74e9c6bf8d2050953b6a3d8fe3f70606627b3659db4d68cd",
+      "manifest_sha256": "d1edcf5a171589993e51cdfaaeef8d01b9048b2a9a0c47deffef2374ec614324"
+    },
+    "explanation-jinzhou-1": {
+      "collection": "explanation-jinzhou-1-8a438f926e0b60bc.json",
+      "collection_hash": "8a438f926e0b60bca987f566d8af1461e2b37287cc47313c9c3f470b2ffe873a",
+      "manifest_sha256": "8fd671ac91fa7030d8f70a1a7a4606fd6669c8c53611a05bf4a8d5e4d6320397"
+    },
+    "explanation-jinzhou-2": {
+      "collection": "explanation-jinzhou-2-50a0fbd32a1084ed.json",
+      "collection_hash": "50a0fbd32a1084edf259b13d6c1daab4bfedce20dc7d23e25a9d6cc6b9e7cffd",
+      "manifest_sha256": "1ac09ba15ef3ef87855b1f308b91308dcd51eeadd4a0cf5ac6581e96908feb63"
+    },
+    "explanation-jinzhou-3": {
+      "collection": "explanation-jinzhou-3-c9d1de1bc2a0730e.json",
+      "collection_hash": "c9d1de1bc2a0730e75638ebd56cf47cf547a9084e9b8fbc0cf230f8ba1267c65",
+      "manifest_sha256": "d4bc784ad6fa6045206da3d2f1a763f0aeea0c92b5793b41ba03c8170c1b7bf6"
+    },
+    "explanation-yingkou-1": {
+      "collection": "explanation-yingkou-1-f1677fc17d4598b2.json",
+      "collection_hash": "f1677fc17d4598b27a204f299be6f754e23a38c7885bc9ad138a20d666ae098d",
+      "manifest_sha256": "99a4fa5c610302a3bea5c5bbec906a065652541ba988b2d391ff950325086976"
+    },
+    "explanation-yingkou-2": {
+      "collection": "explanation-yingkou-2-ee917299751fe0fb.json",
+      "collection_hash": "ee917299751fe0fb23397aa0b934cabd0070b32a1f776ae3e826e576dcb59ebd",
+      "manifest_sha256": "790deeca3dc9f33a772cc0672ce2347128bf0795c9d4e9ca3562dfdfa0dcce8f"
+    },
+    "explanation-yingkou-3": {
+      "collection": "explanation-yingkou-3-2f18076d1a99c86b.json",
+      "collection_hash": "2f18076d1a99c86b8ff5b8fa1c82a9431492cce62876dfd4c0f8f202e54b1050",
+      "manifest_sha256": "76eb9e20cd59e0491f193ed574234778f4fbb6706d810e012d779fe1cc792792"
+    },
+    "explanation-fuxin-1": {
+      "collection": "explanation-fuxin-1-53c2be0a8033588f.json",
+      "collection_hash": "53c2be0a8033588fdfd8af73f16af81b87a7ea0a0be5867a77772da2a76c4c20",
+      "manifest_sha256": "d288c3fa9357f188ac354831eedb9992f8a87376d1f087e46f3f734c7acc3f36"
+    },
+    "explanation-fuxin-2": {
+      "collection": "explanation-fuxin-2-aa40caed7dcdae26.json",
+      "collection_hash": "aa40caed7dcdae268ab42da1a4d2946b43f0d589f1f5471626b1e895f4a41026",
+      "manifest_sha256": "abd6281a13d0d03d93b7cb25f284aacd94838c48d76213062d76242d6f4d05d4"
+    },
+    "explanation-fuxin-3": {
+      "collection": "explanation-fuxin-3-1c64d67b764ebcb0.json",
+      "collection_hash": "1c64d67b764ebcb05e4365c4aef55d4ad439efd5aa0375162ac3658720d4ee52",
+      "manifest_sha256": "6ac788d2b9017c9b7e7a4afa965ed1e5bf3d7a089212206b7b5b0edfbbbb2d21"
+    },
+    "explanation-liaoyang-1": {
+      "collection": "explanation-liaoyang-1-ca752e5d83bc56ce.json",
+      "collection_hash": "ca752e5d83bc56ce472846c9e202261427bc2af502b052cb8693976475120092",
+      "manifest_sha256": "2cfd4fc00b8c0ff1ba7ee6d98f61e9a2b4d504a62d6c0b2c71d25f401540a833"
+    },
+    "explanation-liaoyang-2": {
+      "collection": "explanation-liaoyang-2-768c94f43d4d3c2d.json",
+      "collection_hash": "768c94f43d4d3c2d16692116b94274342555d43b2633f971485d4c11dda30d9d",
+      "manifest_sha256": "b8717ff5c814dd29e071621bd420a5e918d5b63651b78628bf7d555cfb23d211"
+    },
+    "explanation-liaoyang-3": {
+      "collection": "explanation-liaoyang-3-4b0814fef976949a.json",
+      "collection_hash": "4b0814fef976949a9f7e2e5bb7640480ad1c1ccf2931f979de82aa695fc86c95",
+      "manifest_sha256": "4989b89c6494ef0d2ff177cb3f1611a82bb95706828992e863259f7a1ed1b3d5"
+    },
+    "explanation-tieling-1": {
+      "collection": "explanation-tieling-1-25fa7f05aec54c0c.json",
+      "collection_hash": "25fa7f05aec54c0c6f9a8920e5a7960c7fab7ce9d145905419da01f7d4e7e858",
+      "manifest_sha256": "c4356c42d113d51f0bc203f545f45d1c30317399aaeebf917f255a3ff050c614"
+    },
+    "explanation-tieling-2": {
+      "collection": "explanation-tieling-2-ea44c459ebb3cf84.json",
+      "collection_hash": "ea44c459ebb3cf84d0eabf99e174f3a270f0be2f2acaff93547a4ee2fa220bdc",
+      "manifest_sha256": "b7af03ecf0456014eb08f480ee4595b5af4c4ed407072d0ed1eb075ded8e1fa6"
+    },
+    "explanation-tieling-3": {
+      "collection": "explanation-tieling-3-38d70ab6b7e77bfe.json",
+      "collection_hash": "38d70ab6b7e77bfe0bbd31ac9dbabd5b2a795fe87f954ab5ad6ff232120b5186",
+      "manifest_sha256": "56d6a3b9fe285f11b81767e7452accd6a478dd4c1634f0737ab835e29e0c4ffe"
+    },
+    "explanation-chaoyang-1": {
+      "collection": "explanation-chaoyang-1-058ac67f9495808b.json",
+      "collection_hash": "058ac67f9495808b8276885a4acfc5b5fc42bc4872b105f9e129faa9db8f9b8a",
+      "manifest_sha256": "6554755fffa2ac58765dfff8d9f639b1d04b0b1f78e9ca769b27cdece0a50684"
+    },
+    "explanation-chaoyang-2": {
+      "collection": "explanation-chaoyang-2-eecf848bafe85ac8.json",
+      "collection_hash": "eecf848bafe85ac84da747ec2a3b0d21d59e1ef99b5a39d4ce080057a43920c3",
+      "manifest_sha256": "a3773f227607e358858885f915ab3bca0db98b88ef60afa9945c0842fa0dc601"
+    },
+    "explanation-chaoyang-3": {
+      "collection": "explanation-chaoyang-3-6be228d7b063a6c2.json",
+      "collection_hash": "6be228d7b063a6c23e4ce968656b60b145f8141831ded0306fe047a6605b555b",
+      "manifest_sha256": "e6af934072cb842aeb6e5539c2379eff027b6d4898247bd2b9ab22253913fb5e"
+    },
+    "explanation-panjin-1": {
+      "collection": "explanation-panjin-1-ac908640fddf0fa9.json",
+      "collection_hash": "ac908640fddf0fa9e399f8ccdd1ab0812e597231a55a9f6d0f92743a812e0298",
+      "manifest_sha256": "8024f4b67f9ea128a1193c3f01e8e3785acddf250b63255088c68dd5629f8edf"
+    },
+    "explanation-panjin-2": {
+      "collection": "explanation-panjin-2-64ac607c11e0c48a.json",
+      "collection_hash": "64ac607c11e0c48a008a25c8cd9e354f7ff3256d875bd193d8cb1cd3f61b37b7",
+      "manifest_sha256": "857a7315c41920a4058eb29a422b8833e56485c65fe3f50e3873a4eac9aa63e1"
+    },
+    "explanation-panjin-3": {
+      "collection": "explanation-panjin-3-20b9b1d9d4cac18a.json",
+      "collection_hash": "20b9b1d9d4cac18a6bca4196d309b219d6cc0211dde37ee8b93f8bed1ac945a4",
+      "manifest_sha256": "df75b0b0db32247db27e77f42001d063003fe455b135edf346fb96bacbe9a75c"
+    },
+    "explanation-huludao-1": {
+      "collection": "explanation-huludao-1-370560769c3b3e23.json",
+      "collection_hash": "370560769c3b3e23ea5394b0ef9277ca6f574abddc5d843addfa09ee55558203",
+      "manifest_sha256": "517dc7592f7ea68a008356c09a3b8832b01f79b1a84908af90d876f4c698c576"
+    },
+    "explanation-huludao-2": {
+      "collection": "explanation-huludao-2-3b00ad2c1b10220c.json",
+      "collection_hash": "3b00ad2c1b10220c018c07a2cf568633bbd151d461676053d7837af53cc35dd3",
+      "manifest_sha256": "1d6f458c4d70bb234be4e005b7be754374c6a570d514a8dcfe61e0f437c60b47"
+    },
+    "explanation-huludao-3": {
+      "collection": "explanation-huludao-3-b79d5ad4e052bff8.json",
+      "collection_hash": "b79d5ad4e052bff868166bfc42c19afdb5d1c2f39dcda74b9650559fe639deb7",
+      "manifest_sha256": "87d84453b0236748222db222ae1fc4738597e7321936ea65ac35c25912991e5e"
+    },
+    "protected-sites-batch-11-2021": {
+      "collection": "protected-sites-batch-11-2021-0c251fc430e2e717.json",
+      "collection_hash": "0c251fc430e2e7175f14df83197510edfc59e76412cf3b50569498fd7d53240e",
+      "manifest_sha256": "52fe3b081893532345462c62ef6c30f4000d14604cc1f3827284abb589dd7075"
+    },
+    "protected-sites-checkpoint-2024": {
+      "collection": "protected-sites-checkpoint-2024-2dbe0a61cf2274c1.json",
+      "collection_hash": "2dbe0a61cf2274c1348772770b668631c93dd824197e4fe4feadf3fa12f40cd8",
+      "manifest_sha256": "7df3b76a9f65d5646df856f5221780a0bc7648416cb54ebf6599f42282779754"
+    }
+  }
+}

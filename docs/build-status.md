@@ -1,6 +1,27 @@
 # FolkVerse build status
 
-**Updated:** 6 October 2026, Asia/Shanghai. **Phase 03 remains partial: a real bounded EN/ZH Jinyao conversation now works; broader reviewed explanations and independent human acceptance remain pending.** PostgreSQL is running, migration `0003_gateway` and the original corpus are restored, Ollama generation is verified, and pinned BGE-M3 CPU inference/indexing is measured. The current scope remains all of Liaoning. See [current delivery report](../report/PHASE_03_COMPLETION.md), [handoff](phase-03-handoff.md), [personality](jinyao-personality.md) and [coverage](guide-coverage.md).
+## October 7, 2026 — hybrid Parts 4–5 engineering delivery
+
+[Part 4](../report/PHASE_03_HYBRID_PART_04.md) implements EN/ZH source-backed plus visibly unverified general explanation sections, independent factual-support checks, registered official-page lookup and actual human-approved-unit publication eligibility. Official lookup has 189 registered profile URLs and 42 bilingual aliases; current hours/fees/schedules remain unavailable. Source withdrawal removes dependent display/context. No draft received automatic approval.
+
+[Part 5](../report/PHASE_03_HYBRID_PART_05.md) measures real BGE inference, lexical/hybrid relevance and stage timings, and adds bounded persistent workers/index reuse. Warm distinct hybrid p95 is 736 ms and repeated-query p95 41 ms on the 47-query unapproved diagnostic dataset. Dense negative-match failures remain recorded; lexical stays the default. The actual reviewed corpus remains two passages for one exhibit.
+
+Final functional evidence includes **417 API tests**, **54 browser tests**, production build/lint/types/contracts/artwork/secret checks, and **11 real DeepSeek browser turns**: nine answers plus two appropriate insufficiencies. Nine meaningful answers have sample p95 **2.71 seconds**; this does not complete the 200-question pilot. Browser suite results are linked in [final verification](../report/evidence/phase03-hybrid-part04/final-verification.json). Initial failed probes and corrections are preserved. No vision was used.
+
+**Engineering:** Parts 4–5 implemented and measured locally. **Content/release readiness:** expanded human-approved relevance gold, whole-province editorial review, independent bilingual quality, production-load acceptance and Parts 6–8 remain open. No push/deployment performed in this delivery; earlier Part 2/3 edits remain local.
+
+## October 6, 2026 — current Jinyao Part 3 collection delivery
+
+[Part 3 report](../report/PHASE_03_HYBRID_PART_03.md): acquisition/review tooling and all-city draft preparation are implemented locally. 60 official resources yield 1,114 inventory rows and 42 explanatory source records. All 14 cities and 100 county-level divisions are accounted for. Saved assistant scan extraction avoids repeated vision; five site rows retain explicit field ambiguity. The 448 bilingual drafts include three substantive topics across at least two subjects per city. Human content/rights approval remains pending; no new knowledge was published. Registered official-source runtime lookup is now connected through Part 4; see the newer delivery below. Part 2 and Part 3 changes are not pushed.
+
+
+## October 6, 2026 — current Jinyao Part 2 delivery
+
+[Part 2 report](../report/PHASE_03_HYBRID_PART_02.md): checked model-composed personality, unknown-message social routing, EN/ZH preferences and bounded opt-in recent conversation are implemented locally. Verified with 330 API tests, 42 browser checks, eight actual DeepSeek browser replies and three reviewed EN/ZH evidence follow-ups. Prior Part 1 was pushed as `d7d4d1b`; Part 2 is not pushed/deployed yet. Local live test configuration is in ignored `.env`; the key is server-only. Ollama remains the intended production provider.
+
+Province-wide reviewed data acquisition and final independent quality/release gates remain incomplete. Hybrid explanation engineering is now delivered locally. The older dated snapshots below describe their own verification points and should not be read as the current implementation inventory.
+
+**Updated:** 7 October 2026, Asia/Shanghai. **Phase 03 remains partial: a real bounded EN/ZH Jinyao conversation now works; expanded human-reviewed content and independent acceptance remain pending.** PostgreSQL is running, migration `0003_gateway` and the original corpus are restored, Ollama generation is verified, and pinned BGE-M3 CPU inference/indexing is measured. The current scope remains all of Liaoning. See [current delivery report](../report/PHASE_03_COMPLETION.md), [handoff](phase-03-handoff.md), [personality](jinyao-personality.md) and [coverage](guide-coverage.md).
 
 
 ## Owner-led hybrid Phase 03 — Parts 0–1 delivered

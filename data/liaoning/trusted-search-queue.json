@@ -1,0 +1,2816 @@
+{
+  "version": "liaoning-trusted-search-queue-v1",
+  "runtime_search_connected": false,
+  "official_profile_links_discovered": 189,
+  "profile_acquisition_tasks": [
+    {
+      "title": "沈阳市·沈阳市植物园（沈阳世博园）",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026032314035590613/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·辽宁省科学技术馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026032314022514242/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳铁路陈列馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026032314013126605/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳抗美援朝烈士陵园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031913552745850/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈飞航空博览园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031913543641594/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳三农博览园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031913531941347/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·老北市景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031913513242688/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·棋盘山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031913501642711/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳市北陵公园（清昭陵）",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031814010998916/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳市东陵公园（清福陵）",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031813591730688/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳科学宫",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031813573242578/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳爱新觉罗祖家坊酒业",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031813560150550/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·华晨宝马铁西工厂",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031813543384999/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·稻梦空间",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714012743934/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳方特欢乐世界",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714000332998/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·张学良旧居陈列馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031713582531639/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳怪坡风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031713563215369/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "沈阳市·沈阳森林动物园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216192239382/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连金石滩国家旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216161173987/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连老虎滩海洋公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216144677193/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大黑山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216132737631/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·七彩南山景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216100150050/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连自然博物馆景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216043826627/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连铭湖国际温泉滑雪度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216013912334/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连棒棰岛宾馆景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215590914845/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·平岛辽参小镇生态旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215574411718/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连武术文化博物馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215555537390/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连森林动物园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215532047567/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·世外俭汤旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215515977931/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·白玉山景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215441478882/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连仙浴湾旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215421323625/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·安波旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215404218472/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连圣亚海洋世界景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215381779282/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连将军石旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215220441414/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连横山北普陀主题文化公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215190329276/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连旅顺潜艇博物馆景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215165018337/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连海王九岛旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026021214544375461/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·关向应纪念馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026021214522823380/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·冰峪省级旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815580987937/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连英歌石植物园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815543984264/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连西郊国家森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815501372770/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·紫云花汐旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815482582772/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "大连市·大连天门山国家森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815465012318/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·山水庄园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815284994810/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·鞍山佳宁欢乐谷景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815250441573/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·海城市天源农业景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815230526995/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·祥和庄园景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012115223923663/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·老院子景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012115155641152/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·龙泉湖旅游度假风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012115120453361/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·御汤泉景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012115093640267/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·岫岩县龙潭湾旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012115054060984/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·清凉山旅游风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026010815363474645/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "鞍山市·汤岗子温泉旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026010815284483806/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "抚顺市·天女山森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215305029556/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "抚顺市·和睦国家森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215240396408/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "抚顺市·筐子沟原生态风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215222140829/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "抚顺市·红河峡谷漂流",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215214311850/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·枫林·谷里房车露营小镇",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121515504963272/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·本溪关山湖旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121515482887297/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·虎谷峡景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121515454940217/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·枫林谷森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514463940179/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·望天洞景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514443747663/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·大雅河漂流景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514390739298/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·小市一庄景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514355248434/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·汤池沟绿石谷森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514294428284/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·关门山森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514274521172/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·大冰沟森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514200124287/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·大石湖风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514164414218/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "本溪市·本溪大峡谷景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514141589083/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "丹东市·凤城市大梨树生态农业观光旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115481988876/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "丹东市·天桥沟景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115465335241/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "丹东市·凤城市凤凰山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115414032518/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "丹东市·天华山森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115383191754/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "丹东市·东港市獐岛风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115243987354/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "丹东市·蒲石河森林公园景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115200061948/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·锦州东方欢乐王国水世界",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112416023451665/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·锦州世博园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112416005945988/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·北普陀山景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415594388517/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·北镇大朝阳温泉山城旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415562297258/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·北镇医巫闾山大芦花风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415544082873/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·医巫闾山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415531360787/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·笔架山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415503441397/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·凌海市岩井寺旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415491691493/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·凌海市辽西九华山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415473128802/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·东方华地城湿地温泉旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415452456472/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "锦州市·北镇青岩寺景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415403322542/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "营口市·仙人岛白沙湾黄金海岸景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415333851859/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "营口市·营口虹溪谷旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415305468791/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "营口市·鲅鱼圈区月亮湖公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415273287307/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "阜新市·乌兰木图山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116361442906/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "阜新市·辽宁德力格尔草原风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116342583732/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "阜新市·阜新万人坑死难矿工纪念馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116313359615/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "阜新市·宝地斯帕温泉度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116272833916/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "阜新市·阜新黄家沟旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116224696929/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "阜新市·三沟酒文化旅游景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116171599235/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "阜新市·阜新百年国际赛道城",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116093630176/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "辽阳市·辽阳市雷锋纪念馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111815220130963/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "辽阳市·佟二堡购物旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111815210014895/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "辽阳市·辽宁汤河国际温泉旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111815050093261/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "辽阳市·辽阳龙石风景旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814511267103/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·铁岭莲花湿地景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415191858031/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·白鹭洲旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415170869966/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·调兵山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415160244672/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·铁岭噶山小镇",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415145813586/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·龙山高尔夫.辽宁职业学院景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415130139548/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·龙泉山城风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114443667224/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·铁岭市博物馆",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114413939574/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·冰砬山森林公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114392977638/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·开原象牙山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114382365577/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·银州区龙山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114350815297/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·观陵山艺术园林景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114333645424/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·七里香韵景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114314630688/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "铁岭市·昌图太阳山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114300625880/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "朝阳市·北票大玄山（曾用名：大黑山景区）",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114264670133/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "朝阳市·龙凤山风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114251027109/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "朝阳市·龙源旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114235678722/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "朝阳市·浴龙谷温泉度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114202392934/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "朝阳市·化石谷景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715415480257/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "朝阳市·千佛洞风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715290423559/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "朝阳市·喀喇沁左翼蒙古族自治县凌河第一湾景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715215518324/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "盘锦市·红海滩国家风景廊道",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216350436307/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "盘锦市·金帛滩海洋乐园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216321599782/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "盘锦市·盘锦苇海●鼎翔生态旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216313040286/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "盘锦市·盘锦中尧七彩庄园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216294053009/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "盘锦市·北旅田园大唐文化旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216284945610/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·龙湾海滨风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216260439889/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城市欢乐龙湾景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216251065706/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·灵山景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216242372644/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·辽宁东戴河新区银泰水星海洋乐园景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216232075605/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城市觉华岛旅游度假区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216212431960/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·龙潭大峡谷自然风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216201064086/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城海滨风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015174545499/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·葫芦古镇",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015164247642/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·绥中县紫竹林文化旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015131925498/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城市红海栈道景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015121464132/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城市首山景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015100985120/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城市龙薮湾旅游度假景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015085634268/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城市首山湖公园",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015080027862/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·梨花源景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714302138461/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·建昌县辽西湖风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714292075879/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·六股河风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714225311256/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·亚洲第一大果园景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714214975403/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·兴城市张学良温泉别墅景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714152646293/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·绥中县台西湖旅游风景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714133281946/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·绥中县永安大峡谷景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101115424856786/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·缸窑岭明性寺景区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101115411944253/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    },
+    {
+      "title": "葫芦岛市·绥中县九门口酒庄旅游区",
+      "source_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101115385680898/index.shtml",
+      "status": "discovered_not_collected",
+      "action": "Acquire permitted factual material, inspect original context, classify claims and prepare bilingual human review"
+    }
+  ],
+  "county_subject_gaps": [
+    {
+      "county_code": "210102",
+      "county": "和平区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210103",
+      "county": "沈河区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210104",
+      "county": "大东区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210105",
+      "county": "皇姑区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210106",
+      "county": "铁西区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210111",
+      "county": "苏家屯区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210112",
+      "county": "浑南区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210113",
+      "county": "沈北新区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210114",
+      "county": "于洪区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210115",
+      "county": "辽中区",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210123",
+      "county": "康平县",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210124",
+      "county": "法库县",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210181",
+      "county": "新民市",
+      "city_id": "liaoning-shenyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210202",
+      "county": "中山区",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210203",
+      "county": "西岗区",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210204",
+      "county": "沙河口区",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210211",
+      "county": "甘井子区",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210212",
+      "county": "旅顺口区",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210213",
+      "county": "金州区",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210214",
+      "county": "普兰店区",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210224",
+      "county": "长海县",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210281",
+      "county": "瓦房店市",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210283",
+      "county": "庄河市",
+      "city_id": "liaoning-dalian",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210302",
+      "county": "铁东区",
+      "city_id": "liaoning-anshan",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210303",
+      "county": "铁西区",
+      "city_id": "liaoning-anshan",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210304",
+      "county": "立山区",
+      "city_id": "liaoning-anshan",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210311",
+      "county": "千山区",
+      "city_id": "liaoning-anshan",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210321",
+      "county": "台安县",
+      "city_id": "liaoning-anshan",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210323",
+      "county": "岫岩满族自治县",
+      "city_id": "liaoning-anshan",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210381",
+      "county": "海城市",
+      "city_id": "liaoning-anshan",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210402",
+      "county": "新抚区",
+      "city_id": "liaoning-fushun",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210403",
+      "county": "东洲区",
+      "city_id": "liaoning-fushun",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210404",
+      "county": "望花区",
+      "city_id": "liaoning-fushun",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210411",
+      "county": "顺城区",
+      "city_id": "liaoning-fushun",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210421",
+      "county": "抚顺县",
+      "city_id": "liaoning-fushun",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210422",
+      "county": "新宾满族自治县",
+      "city_id": "liaoning-fushun",
+      "subjects_without_indexed_material": [
+        "belief",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210423",
+      "county": "清原满族自治县",
+      "city_id": "liaoning-fushun",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210502",
+      "county": "平山区",
+      "city_id": "liaoning-benxi",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210503",
+      "county": "溪湖区",
+      "city_id": "liaoning-benxi",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210504",
+      "county": "明山区",
+      "city_id": "liaoning-benxi",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210505",
+      "county": "南芬区",
+      "city_id": "liaoning-benxi",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210521",
+      "county": "本溪满族自治县",
+      "city_id": "liaoning-benxi",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210522",
+      "county": "桓仁满族自治县",
+      "city_id": "liaoning-benxi",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210602",
+      "county": "元宝区",
+      "city_id": "liaoning-dandong",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210603",
+      "county": "振兴区",
+      "city_id": "liaoning-dandong",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210604",
+      "county": "振安区",
+      "city_id": "liaoning-dandong",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210624",
+      "county": "宽甸满族自治县",
+      "city_id": "liaoning-dandong",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210681",
+      "county": "东港市",
+      "city_id": "liaoning-dandong",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210682",
+      "county": "凤城市",
+      "city_id": "liaoning-dandong",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210702",
+      "county": "古塔区",
+      "city_id": "liaoning-jinzhou",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210703",
+      "county": "凌河区",
+      "city_id": "liaoning-jinzhou",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210711",
+      "county": "太和区",
+      "city_id": "liaoning-jinzhou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210726",
+      "county": "黑山县",
+      "city_id": "liaoning-jinzhou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210727",
+      "county": "义县",
+      "city_id": "liaoning-jinzhou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210781",
+      "county": "凌海市",
+      "city_id": "liaoning-jinzhou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210782",
+      "county": "北镇市",
+      "city_id": "liaoning-jinzhou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210802",
+      "county": "站前区",
+      "city_id": "liaoning-yingkou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210803",
+      "county": "西市区",
+      "city_id": "liaoning-yingkou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210804",
+      "county": "鲅鱼圈区",
+      "city_id": "liaoning-yingkou",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210811",
+      "county": "老边区",
+      "city_id": "liaoning-yingkou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210881",
+      "county": "盖州市",
+      "city_id": "liaoning-yingkou",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210882",
+      "county": "大石桥市",
+      "city_id": "liaoning-yingkou",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210902",
+      "county": "海州区",
+      "city_id": "liaoning-fuxin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210903",
+      "county": "新邱区",
+      "city_id": "liaoning-fuxin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210904",
+      "county": "太平区",
+      "city_id": "liaoning-fuxin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210905",
+      "county": "清河门区",
+      "city_id": "liaoning-fuxin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210911",
+      "county": "细河区",
+      "city_id": "liaoning-fuxin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210921",
+      "county": "阜新蒙古族自治县",
+      "city_id": "liaoning-fuxin",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "210922",
+      "county": "彰武县",
+      "city_id": "liaoning-fuxin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211002",
+      "county": "白塔区",
+      "city_id": "liaoning-liaoyang",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211003",
+      "county": "文圣区",
+      "city_id": "liaoning-liaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211004",
+      "county": "宏伟区",
+      "city_id": "liaoning-liaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211005",
+      "county": "弓长岭区",
+      "city_id": "liaoning-liaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211011",
+      "county": "太子河区",
+      "city_id": "liaoning-liaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211021",
+      "county": "辽阳县",
+      "city_id": "liaoning-liaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211081",
+      "county": "灯塔市",
+      "city_id": "liaoning-liaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211102",
+      "county": "双台子区",
+      "city_id": "liaoning-panjin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211103",
+      "county": "兴隆台区",
+      "city_id": "liaoning-panjin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211104",
+      "county": "大洼区",
+      "city_id": "liaoning-panjin",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211122",
+      "county": "盘山县",
+      "city_id": "liaoning-panjin",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211202",
+      "county": "银州区",
+      "city_id": "liaoning-tieling",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211204",
+      "county": "清河区",
+      "city_id": "liaoning-tieling",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211221",
+      "county": "铁岭县",
+      "city_id": "liaoning-tieling",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211223",
+      "county": "西丰县",
+      "city_id": "liaoning-tieling",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211224",
+      "county": "昌图县",
+      "city_id": "liaoning-tieling",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211281",
+      "county": "调兵山市",
+      "city_id": "liaoning-tieling",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211282",
+      "county": "开原市",
+      "city_id": "liaoning-tieling",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211302",
+      "county": "双塔区",
+      "city_id": "liaoning-chaoyang",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211303",
+      "county": "龙城区",
+      "city_id": "liaoning-chaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211321",
+      "county": "朝阳县",
+      "city_id": "liaoning-chaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211322",
+      "county": "建平县",
+      "city_id": "liaoning-chaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211324",
+      "county": "喀喇沁左翼蒙古族自治县",
+      "city_id": "liaoning-chaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211381",
+      "county": "北票市",
+      "city_id": "liaoning-chaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "belief",
+        "festivals",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211382",
+      "county": "凌源市",
+      "city_id": "liaoning-chaoyang",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211402",
+      "county": "连山区",
+      "city_id": "liaoning-huludao",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211403",
+      "county": "龙港区",
+      "city_id": "liaoning-huludao",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211404",
+      "county": "南票区",
+      "city_id": "liaoning-huludao",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "performance",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211421",
+      "county": "绥中县",
+      "city_id": "liaoning-huludao",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "sites",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211422",
+      "county": "建昌县",
+      "city_id": "liaoning-huludao",
+      "subjects_without_indexed_material": [
+        "folklore",
+        "belief",
+        "festivals",
+        "crafts",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    },
+    {
+      "county_code": "211481",
+      "county": "兴城市",
+      "city_id": "liaoning-huludao",
+      "subjects_without_indexed_material": [
+        "history_geography",
+        "folklore",
+        "belief",
+        "festivals",
+        "artifacts",
+        "food",
+        "clothing",
+        "museums",
+        "people",
+        "terminology"
+      ],
+      "status": "unknown_coverage_not_proof_of_absence"
+    }
+  ],
+  "inventory_tasks": [
+    "Acquire dated complete 2025/2026 registered-museum enumeration; 135-row 2024 roster cannot represent the 152 checkpoint",
+    "Enumerate protected-site batches 1–10 and reconcile revisions/designation overlap against dated checkpoints",
+    "Human-check explicitly flagged scan fields and preserve original source ambiguity",
+    "Expand municipal/county cultural sources and historical geography crosswalks; do not infer origins from applicant addresses"
+  ],
+  "policy": "trusted-search-policy.json"
+}

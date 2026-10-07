@@ -1,0 +1,761 @@
+{
+  "version": "liaoning-research-queue-v1",
+  "tasks": [
+    {
+      "topic_id": "liaoning-dalian-entity_2da84862b1f1222368406610",
+      "city_id": "liaoning-dalian",
+      "entity_id": "entity_2da84862b1f1222368406610",
+      "supporting_rows": [
+        "row_a1fc5e67740d218b353b0cbd"
+      ],
+      "name_original": "长海号子",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-dalian-entity_57dbdf203f46bd2a4311ee92",
+      "city_id": "liaoning-dalian",
+      "entity_id": "entity_57dbdf203f46bd2a4311ee92",
+      "supporting_rows": [
+        "row_c48692f684206dfea2e0bda1"
+      ],
+      "name_original": "庄河剪纸",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-dalian-entity_69fc95fcffd4bd47e3c5cc5f",
+      "city_id": "liaoning-dalian",
+      "entity_id": "entity_69fc95fcffd4bd47e3c5cc5f",
+      "supporting_rows": [
+        "row_3561465a2be356c5612e7d37"
+      ],
+      "name_original": "中医骨诊",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-shenyang-entity_e42482e925689e57d9a5a079",
+      "city_id": "liaoning-shenyang",
+      "entity_id": "entity_e42482e925689e57d9a5a079",
+      "supporting_rows": [
+        "row_d3538cb585ebb06b68a25576"
+      ],
+      "name_original": "谭振山民间故事",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-shenyang-entity_dc74fb6904be3bf8c1923f20",
+      "city_id": "liaoning-shenyang",
+      "entity_id": "entity_dc74fb6904be3bf8c1923f20",
+      "supporting_rows": [
+        "row_9ba91d8b772d3c60165c9535"
+      ],
+      "name_original": "奉天落子",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-shenyang-entity_d5466e61f22f1a0b3e2ef9f2",
+      "city_id": "liaoning-shenyang",
+      "entity_id": "entity_d5466e61f22f1a0b3e2ef9f2",
+      "supporting_rows": [
+        "row_a3c28c1b9025e93a6cc85e81"
+      ],
+      "name_original": "沈阳“面人汤”",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-anshan-entity_2289641faebf6fdb14e0a5c0",
+      "city_id": "liaoning-anshan",
+      "entity_id": "entity_2289641faebf6fdb14e0a5c0",
+      "supporting_rows": [
+        "row_50348f0da2529e8c86df802d"
+      ],
+      "name_original": "千山寺庙音乐",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-anshan-entity_ae824f890306d80f3eade96d",
+      "city_id": "liaoning-anshan",
+      "entity_id": "entity_ae824f890306d80f3eade96d",
+      "supporting_rows": [
+        "row_7533de0d2ac9b59797d10404"
+      ],
+      "name_original": "岫岩剪纸",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-anshan-entity_1c39dfbcbe9095aabb16133e",
+      "city_id": "liaoning-anshan",
+      "entity_id": "entity_1c39dfbcbe9095aabb16133e",
+      "supporting_rows": [
+        "row_c8acae69ec1f566decf0d730"
+      ],
+      "name_original": "岫岩满族自治县雨桐玉文化博物馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-fushun-entity_869d395517dac58e19793ad6",
+      "city_id": "liaoning-fushun",
+      "entity_id": "entity_869d395517dac58e19793ad6",
+      "supporting_rows": [
+        "row_ef9c64d96008823c40a573ae"
+      ],
+      "name_original": "满族地秧歌",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-fushun-entity_2676c3b1142dee09461138a1",
+      "city_id": "liaoning-fushun",
+      "entity_id": "entity_2676c3b1142dee09461138a1",
+      "supporting_rows": [
+        "row_4d6093c3ef61dcde11495a1e"
+      ],
+      "name_original": "新宾满族刺绣",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-fushun-entity_091de6e80d5752f7268ac444",
+      "city_id": "liaoning-fushun",
+      "entity_id": "entity_091de6e80d5752f7268ac444",
+      "supporting_rows": [
+        "row_5e183cb56f09a9b60a9cbb8a"
+      ],
+      "name_original": "新宾满族自治县清永陵文物管理所（新宾满族自治县清永陵博物馆）",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-benxi-entity_d8cc117ea399f92391f6c105",
+      "city_id": "liaoning-benxi",
+      "entity_id": "entity_d8cc117ea399f92391f6c105",
+      "supporting_rows": [
+        "row_0509b4ac710b740d046aacfd"
+      ],
+      "name_original": "本溪朝鲜族农乐舞（乞粒舞）",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-benxi-entity_3d56cb04aed5f455909a3f02",
+      "city_id": "liaoning-benxi",
+      "entity_id": "entity_3d56cb04aed5f455909a3f02",
+      "supporting_rows": [
+        "row_1df143e43bf68e3037e36f71"
+      ],
+      "name_original": "本溪桥头石雕",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-benxi-entity_a6c8d43433932521d35387c8",
+      "city_id": "liaoning-benxi",
+      "entity_id": "entity_a6c8d43433932521d35387c8",
+      "supporting_rows": [
+        "row_3fbe4f6d58eeed66d070ff01"
+      ],
+      "name_original": "本溪碱厂舞龙",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-dandong-entity_53c7ea35053f65c90b4bedd4",
+      "city_id": "liaoning-dandong",
+      "entity_id": "entity_53c7ea35053f65c90b4bedd4",
+      "supporting_rows": [
+        "row_8e9789643711fbd6faae3697"
+      ],
+      "name_original": "丹东鼓乐",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-dandong-entity_907078a6dcde302bb7f779b8",
+      "city_id": "liaoning-dandong",
+      "entity_id": "entity_907078a6dcde302bb7f779b8",
+      "supporting_rows": [
+        "row_5efa80bb81f740148ee63814"
+      ],
+      "name_original": "宽甸柳编技艺",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-dandong-entity_ecd3c94c9a119d7d5d6f3798",
+      "city_id": "liaoning-dandong",
+      "entity_id": "entity_ecd3c94c9a119d7d5d6f3798",
+      "supporting_rows": [
+        "row_4fd23c549210d9e2c282d5d3"
+      ],
+      "name_original": "丹东市博物馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-jinzhou-entity_671b6d6d669aa69b22b15685",
+      "city_id": "liaoning-jinzhou",
+      "entity_id": "entity_671b6d6d669aa69b22b15685",
+      "supporting_rows": [
+        "row_873ad62f2c0b8fe30425baf4"
+      ],
+      "name_original": "医巫闾山民间文学",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-jinzhou-entity_e54892c2c4294e461d98adf8",
+      "city_id": "liaoning-jinzhou",
+      "entity_id": "entity_e54892c2c4294e461d98adf8",
+      "supporting_rows": [
+        "row_deb8453bf58d98615e6e1661"
+      ],
+      "name_original": "辽西高跷秧歌",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-jinzhou-entity_08c320df6f3cad93e4e4ef67",
+      "city_id": "liaoning-jinzhou",
+      "entity_id": "entity_08c320df6f3cad93e4e4ef67",
+      "supporting_rows": [
+        "row_43b8104c73b14982fa50f562"
+      ],
+      "name_original": "医巫闾山满族剪纸",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-yingkou-entity_9d974b10fc6be63f054bf728",
+      "city_id": "liaoning-yingkou",
+      "entity_id": "entity_9d974b10fc6be63f054bf728",
+      "supporting_rows": [
+        "row_7531720e5d02bbcea2a84d86"
+      ],
+      "name_original": "盖州高跷秧歌",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-yingkou-entity_0eb048c2a6b9423a7ee2edef",
+      "city_id": "liaoning-yingkou",
+      "entity_id": "entity_0eb048c2a6b9423a7ee2edef",
+      "supporting_rows": [
+        "row_d548c9233edfd202259b1161"
+      ],
+      "name_original": "盖州风筝",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-yingkou-entity_fbc492ec2b1b9ce1ca316eb2",
+      "city_id": "liaoning-yingkou",
+      "entity_id": "entity_fbc492ec2b1b9ce1ca316eb2",
+      "supporting_rows": [
+        "row_a0f570ace7c8f9af7d66b95c"
+      ],
+      "name_original": "沈延毅纪念馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-fuxin-entity_b37de829ba0081eeb530cd67",
+      "city_id": "liaoning-fuxin",
+      "entity_id": "entity_b37de829ba0081eeb530cd67",
+      "supporting_rows": [
+        "row_7721bdf15ae0b3937501259b"
+      ],
+      "name_original": "阜新东蒙短调民歌",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-fuxin-entity_4bcaaf4f2dbfc844799494db",
+      "city_id": "liaoning-fuxin",
+      "entity_id": "entity_4bcaaf4f2dbfc844799494db",
+      "supporting_rows": [
+        "row_2ebb1d2c825af9b9a3903639"
+      ],
+      "name_original": "阜新玛瑙雕",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-fuxin-entity_0cc6a45eebcbd2ecdd78a245",
+      "city_id": "liaoning-fuxin",
+      "entity_id": "entity_0cc6a45eebcbd2ecdd78a245",
+      "supporting_rows": [
+        "row_5f9bc3a57406d5cbfd016e7a"
+      ],
+      "name_original": "阜新查海遗址博物馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-liaoyang-entity_d88925269ad93f2ca393145c",
+      "city_id": "liaoning-liaoyang",
+      "entity_id": "entity_d88925269ad93f2ca393145c",
+      "supporting_rows": [
+        "row_5ee81a244c20dce47a446e08"
+      ],
+      "name_original": "辽阳鼓乐",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-liaoyang-entity_26f75cf4b3cc308687b33f52",
+      "city_id": "liaoning-liaoyang",
+      "entity_id": "entity_26f75cf4b3cc308687b33f52",
+      "supporting_rows": [
+        "row_98f4432e56318e00c3ed80a6"
+      ],
+      "name_original": "辽阳雷锋纪念馆（弓长岭区博物馆）",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-liaoyang-entity_5210aa4498905b0446f99f36",
+      "city_id": "liaoning-liaoyang",
+      "entity_id": "entity_5210aa4498905b0446f99f36",
+      "supporting_rows": [
+        "row_7dacf91c7f3cb95a607fd6ab"
+      ],
+      "name_original": "辽阳博物馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-tieling-entity_9c9fe9a7f48c751a448ad5f9",
+      "city_id": "liaoning-tieling",
+      "entity_id": "entity_9c9fe9a7f48c751a448ad5f9",
+      "supporting_rows": [
+        "row_d27dcdf97952668f406ebac6"
+      ],
+      "name_original": "铁岭二人转",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-tieling-entity_9f345319d17800e57f286b5d",
+      "city_id": "liaoning-tieling",
+      "entity_id": "entity_9f345319d17800e57f286b5d",
+      "supporting_rows": [
+        "row_1b6e4dafe19bbccd682013c3"
+      ],
+      "name_original": "指画艺术",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-tieling-entity_476e570a588375dedab7ef7e",
+      "city_id": "liaoning-tieling",
+      "entity_id": "entity_476e570a588375dedab7ef7e",
+      "supporting_rows": [
+        "row_05a786bbddd489bbcfe0c518"
+      ],
+      "name_original": "铁岭朝鲜族上元节",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-chaoyang-entity_87294aa75b86650315b6339f",
+      "city_id": "liaoning-chaoyang",
+      "entity_id": "entity_87294aa75b86650315b6339f",
+      "supporting_rows": [
+        "row_696b763fc29c68ba2ac3fd68"
+      ],
+      "name_original": "喀左东蒙民间故事",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-chaoyang-entity_367ffdfd8ca49de797e37840",
+      "city_id": "liaoning-chaoyang",
+      "entity_id": "entity_367ffdfd8ca49de797e37840",
+      "supporting_rows": [
+        "row_f5a5df70e33961166f618da0"
+      ],
+      "name_original": "朝阳民间秧歌",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-chaoyang-entity_d6e59d3018c0d846243b1c9b",
+      "city_id": "liaoning-chaoyang",
+      "entity_id": "entity_d6e59d3018c0d846243b1c9b",
+      "supporting_rows": [
+        "row_1a27538b25278f895c4c3e3e"
+      ],
+      "name_original": "建平剪纸",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-panjin-entity_d722fe4cbec978968b463d88",
+      "city_id": "liaoning-panjin",
+      "entity_id": "entity_d722fe4cbec978968b463d88",
+      "supporting_rows": [
+        "row_c543470b87989aabcd12cd6b"
+      ],
+      "name_original": "宝发祥月饼制作技艺",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-panjin-entity_5f2eff4e0edb0a2545b833a1",
+      "city_id": "liaoning-panjin",
+      "entity_id": "entity_5f2eff4e0edb0a2545b833a1",
+      "supporting_rows": [
+        "row_ef2b574268d9ebdcaf95eaea"
+      ],
+      "name_original": "辽河口渔家菜特色食材 加工技艺与习俗",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-panjin-entity_05099b53fab883ab1181604e",
+      "city_id": "liaoning-panjin",
+      "entity_id": "entity_05099b53fab883ab1181604e",
+      "supporting_rows": [
+        "row_a7bab1a1ddd8d374a6b4c541"
+      ],
+      "name_original": "盘锦辽河房地契博物馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-huludao-entity_6658de06b7c262910e9a3315",
+      "city_id": "liaoning-huludao",
+      "entity_id": "entity_6658de06b7c262910e9a3315",
+      "supporting_rows": [
+        "row_326bdd07d87fe5690835765d"
+      ],
+      "name_original": "辽西太平鼓",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-huludao-entity_8b3bd8a6536ac67f612e1e04",
+      "city_id": "liaoning-huludao",
+      "entity_id": "entity_8b3bd8a6536ac67f612e1e04",
+      "supporting_rows": [
+        "row_dc02a14bc066d9d3eded3e19"
+      ],
+      "name_original": "绥中县博物馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    },
+    {
+      "topic_id": "liaoning-huludao-entity_1ae90b6557998d355385c3b1",
+      "city_id": "liaoning-huludao",
+      "entity_id": "entity_1ae90b6557998d355385c3b1",
+      "supporting_rows": [
+        "row_22b44cd65410a5719377addd"
+      ],
+      "name_original": "葫芦岛关东民俗博物馆",
+      "status": "metadata_draft_only",
+      "required_research": [
+        "Find attributable context beyond list membership",
+        "Document a useful term or real example with a locator",
+        "Draft and review grounded questions in Chinese and English",
+        "Check chronology, provenance, shared traditions and conflicts",
+        "Resolve excerpt/translation rights and inspect source originals"
+      ],
+      "ready_for_publication": false
+    }
+  ]
+}

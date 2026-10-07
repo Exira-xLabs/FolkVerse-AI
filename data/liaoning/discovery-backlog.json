@@ -1,0 +1,371 @@
+{
+  "version": "liaoning-discovery-v1",
+  "tasks": [
+    {
+      "city_id": "liaoning-dalian",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-dalian",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-dalian",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-dalian",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-shenyang",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-shenyang",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-shenyang",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-shenyang",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-anshan",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-anshan",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-anshan",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-anshan",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fushun",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fushun",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fushun",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fushun",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-benxi",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-benxi",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-benxi",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-benxi",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-dandong",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-dandong",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-dandong",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-dandong",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-jinzhou",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-jinzhou",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-jinzhou",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-jinzhou",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-yingkou",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-yingkou",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-yingkou",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-yingkou",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fuxin",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fuxin",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fuxin",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-fuxin",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-liaoyang",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-liaoyang",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-liaoyang",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-liaoyang",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-tieling",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-tieling",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-tieling",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-tieling",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-chaoyang",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-chaoyang",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-chaoyang",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-chaoyang",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-panjin",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-panjin",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-panjin",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-panjin",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-huludao",
+      "kind": "municipal_heritage",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-huludao",
+      "kind": "county_inventories",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-huludao",
+      "kind": "museum_collections",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": "liaoning-huludao",
+      "kind": "gazetteers_archives",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": null,
+      "kind": "provincial_heritage_batches_2_to_5_and_expansions",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": null,
+      "kind": "complete_national_protected_sites",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": null,
+      "kind": "protected_sites_batches_1_to_11",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": null,
+      "kind": "museum_inventory_2025",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    },
+    {
+      "city_id": null,
+      "kind": "national_heritage_current_updates",
+      "status": "discovery_pending",
+      "authoritative_url": null
+    }
+  ]
+}

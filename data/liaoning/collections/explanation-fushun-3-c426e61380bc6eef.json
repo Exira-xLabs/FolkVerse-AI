@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "c426e61380bc6eef6e5efee024d6a968305992e50861b5b3075038624e0e0788",
+  "source": {
+    "id": "explanation-fushun-3",
+    "title": "抚顺市·三块石国家森林公园",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215341060360/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215341060360/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-22",
+    "edition": "2025-12-22",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "抚顺市",
+    "subject_hint": "history_geography"
+  },
+  "raw_sha256": "42570b99f39627c9cd7e149ed4dde152186fd6feabf1bb3616f12102952c52ba",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_3c55634d405b268fe491e039",
+      "ordinal": "article",
+      "name_original": "抚顺市·三块石国家森林公园",
+      "category_original": "history_geography",
+      "locality_original": "抚顺市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_62b6f60f8af509cb6097ce5f",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "4e39f36af6c8e93580d7edf7bc46527ca9d306bb4b97a627b9a0765b50709f57",
+          "characters": 186
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

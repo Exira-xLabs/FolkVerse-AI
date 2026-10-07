@@ -1,0 +1,25 @@
+{
+  "mode": "Real local API/PostgreSQL/direct DeepSeek; no fixtures",
+  "checked_at": "2026-10-06T14:41:30.461018+00:00",
+  "checks": [
+    {
+      "locale": "en",
+      "depth": "beginner",
+      "checked_reviewed_reply": true,
+      "source_count": 1
+    },
+    {
+      "locale": "zh-CN",
+      "depth": "beginner",
+      "checked_reviewed_reply": true,
+      "source_count": 1
+    },
+    {
+      "locale": "en",
+      "depth": "deeper",
+      "checked_reviewed_reply": true,
+      "source_count": 1
+    }
+  ],
+  "errors": []
+}

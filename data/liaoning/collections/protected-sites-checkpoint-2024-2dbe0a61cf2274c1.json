@@ -1,0 +1,32 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "2dbe0a61cf2274c1348772770b668631c93dd824197e4fe4feadf3fa12f40cd8",
+  "source": {
+    "id": "protected-sites-checkpoint-2024",
+    "title": "September 2024 protected-site count checkpoint",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/zfxxgk/fdzdgknr/jyta/szxta/szxssjechy2024n/2024092415074510031/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/zfxxgk/fdzdgknr/jyta/szxta/szxssjechy2024n/2024092415074510031/index.shtml",
+    "adapter": "descriptor",
+    "kind": "checkpoint",
+    "reference_date": "2024-09-24",
+    "edition": "protected-sites-checkpoint-2024",
+    "expected_count": 702,
+    "counting_unit": "reported provincial protected-site total",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Dated edition; not proof of current 2026 completeness. The checkpoint separately reports 159 national-level sites; do not add overlapping designation totals.",
+    "locality": "",
+    "subject_hint": null
+  },
+  "raw_sha256": "6c41af7dab7467816dce8e352b3d8d782146461de65dce520deb6de434ca385d",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:53:43.708481+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "extraction_pending",
+  "rows": [],
+  "errors": [
+    "Descriptor/checkpoint only; no enumeration imported"
+  ]
+}

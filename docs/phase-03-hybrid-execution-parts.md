@@ -1,12 +1,12 @@
 # Phase 03 — ordered implementation parts and acceptance
 
-Planning date: 6 October 2026, Asia/Shanghai. Execution update: Parts 0–1 requirements/design and delivery behavior are implemented; [dated report and limits](../report/PHASE_03_HYBRID_PART_01.md). Parts 2–8 remain pending. This document is the execution contract, not standalone completion evidence.
+Planning date: 6 October 2026, Asia/Shanghai. Execution update: Parts 0–1 requirements/design and delivery behavior are implemented; [dated report and limits](../report/PHASE_03_HYBRID_PART_01.md). Part 2 is implemented locally ([dated verification](../report/PHASE_03_HYBRID_PART_02.md)). Part 3 collection/curation and all-city draft preparation are implemented, with actual human content/rights review still open ([report](../report/PHASE_03_HYBRID_PART_03.md)). Parts 4–8 remain pending. This document is the execution contract, not standalone completion evidence.
 
 Read with [the conversation and Liaoning collection design](phase-03-hybrid-conversation-plan.md). The owner will work with Codex directly. This document replaces vague next steps with dependencies, concrete defaults, review checkpoints and evidence. It makes no promise of zero defects: claims of completion require checks and recorded limitations.
 
 ## Scope and dependency order
 
-First release: EN/ZH text, varied model-generated conversation, source-supported cultural explanations, visibly distinct broad general knowledge, bounded consented page-only context, current source inspection and honest service errors. Existing provider selection stays in the server gateway; no assumed model migration, new subscription, public deployment, live web search, voice or image analysis is included.
+First release: EN/ZH text, varied model-generated conversation, source-supported cultural explanations, visibly distinct broad general knowledge, bounded consented page-only context, current source inspection and honest service errors. Existing provider selection stays in the server gateway; no assumed model migration, new subscription, public deployment, voice or image analysis is included. Owner update: bounded trusted-source search is included in Part 4; it is not yet connected to visitor chat.
 
 | Part | Deliverable | Depends on |
 |---|---|---|
@@ -48,6 +48,8 @@ Remove the hard 20-turn composer stop. Bound retained history separately from th
 
 ## Part 2 — language, bounded context and natural personality
 
+Implementation and current limits: [runtime contract](guide-personality-and-context.md), [Part 2 verification](../report/PHASE_03_HYBRID_PART_02.md). Social generation currently composes vetted phrases; unrestricted cultural explanation remains Part 4.
+
 Route complete messages rather than matching only a phrase list. Handle mixed greeting/question messages, typos, emoji, corrections, clarification answers and topic switches. A classifier may propose an intent but cannot grant policy/evidence privileges. Where a separate model routing call is needed, meter it and include it in the same total deadline; avoid unnecessary multi-call routing for simple turns.
 
 Generate social wording in live operation. A first bare greeting receives one short invitation; repeated greetings use consented context and avoid unnecessary reintroduction. Varied wording is a behavior target, not a guarantee that no phrase ever recurs. Do not rerun generation simply because a response resembles a prior greeting. In service failure, show a localized unavailable message and recovery; a friendly prewritten line may accompany the error but cannot hide it.
@@ -69,6 +71,8 @@ Language precedence: explicit UI selection or recognized user request, then conf
 
 ## Part 3 — data acquisition and reviewed launch coverage
 
+**6 October execution:** collection/review workflow and all-city draft floor delivered locally. 60 official resources, 1,114 inventory rows, 42 explanatory source records and 448 unapproved bilingual units. All 14 cities have three substantive topic drafts across at least two subjects. Scan extraction is saved with assistant attribution and explicit ambiguities. Actual human rights/content review remains open. No new chatbot knowledge was published. [Report](../report/PHASE_03_HYBRID_PART_03.md).
+
 Implement the registry, named inventory reconciliation and coverage dashboard from section 6 of the companion plan. Follow source access/rights requirements. Prefer operator CLI and report artifacts for curation rather than introducing an unauthenticated admin UI.
 
 Deliver versioned manifests for source collections, inventory rows/entities, extraction errors, duplicate/shared identities, city/county/subject associations, rights and review dependencies. Never combine API/page/OCR output into published facts automatically. Model drafting/translation assists review but creates no approval. Preserve original locators and wording, distinguish list inclusion from historical origin, and expose unresolved chronology conflicts.
@@ -81,6 +85,8 @@ Acquire and account for every in-scope row in the named baseline inventories. Re
 
 ## Part 4 — hybrid explanation generation without evidence laundering
 
+Owner-approved addition: connect bounded trusted-source search for missing specific facts and current details. Use reviewed stored data for stable explanations; search snippets are discovery, never final evidence. Fetch the original official page, cite URL/institution/edition/access time, assess claim support and disclose conflicts. Enforce the [trusted-search policy](../data/liaoning/trusted-search-policy.json), strict host/redirect/network bounds, content-as-data isolation and failure states. Do not grant publication approval from retrieval. The provider model alone is not a search implementation.
+
 Replace exact-passage-only selection with structured explanation generation. Use reviewed units/variants for precise dates, quotations, glossary facts and high-risk assertions. Permit synthesis/paraphrase only through an evaluated support method. Preserve attribution, uncertainty, classification and source conflicts.
 
 Policy table:
@@ -90,7 +96,7 @@ Policy table:
 | Social interaction or learning preference | Natural conversation; no cultural citation needed |
 | Broad background explanation or conceptual analogy | General mode allowed with visible unverified status; do not present imagined examples as real Liaoning events |
 | Specific local origin/date/person/object provenance, quotation, disputed account | Current supporting evidence required |
-| Current opening hours, fees or schedules | Current authoritative evidence required; no live search in this release means unavailable when absent |
+| Current opening hours, fees or schedules | Bounded lookup on registered trusted sources; inspect original pages and current applicability; unavailable when supporting evidence cannot be obtained |
 | Medical/legal or other high-stakes advice | No specialist advice capability added by cultural scope; use an appropriate bounded response |
 | Unsupported claim from a grounded draft | Remove or return insufficiency; never relabel it general to pass validation |
 
@@ -162,3 +168,7 @@ Final walkthrough: greet → answer invitation → supported cultural question �
 - [ ] Application changes, secrets, migrations, production activation and deployment are not implied by this planning document.
 
 Track implementation of each part in `docs/build-status.md` with exact pass/fail/blocker evidence. These empty checklist boxes are future execution gates, not missing planning prose or invented completed work.
+
+## Parts 4–5 implementation evidence — 7 October 2026
+
+Hybrid explanation/support engineering and retrieval measurement/optimization are delivered locally: [Part 4](../report/PHASE_03_HYBRID_PART_04.md), [Part 5](../report/PHASE_03_HYBRID_PART_05.md). Official lookup covers the registered directory and conservative projections; current operational details remain unavailable. Expanded approved relevance gold and independent human assessments are still open acceptance evidence. Diagnostic drafts are never runtime evidence. Parts 6–8 and province-wide content readiness are not closed by these deliveries.

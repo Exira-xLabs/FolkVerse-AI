@@ -1,0 +1,57 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "dddecfa11240946a3b6156473ef452330d80c9b4cba3eeea2c9a935596831221",
+  "source": {
+    "id": "explanation-jinzhou-3",
+    "title": "锦州市·义县奉国寺景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415381968121/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415381968121/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-24",
+    "edition": "2025-11-24",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "锦州市",
+    "subject_hint": "belief"
+  },
+  "raw_sha256": "38780154fcef87e7bd6f601ea592e0c6cc45ca5d98116d01b39686b71cf3de64",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_241ef7d9ba34df0e635af9c6",
+      "ordinal": "article",
+      "name_original": "锦州市·义县奉国寺景区",
+      "category_original": "belief",
+      "locality_original": "锦州市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_da8d18dd621853751577118b",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "43d9b9ecb27c4e58f1d419a4f5131f20dbb243d5a51cf28379248e9d83a29526",
+          "characters": 108
+        },
+        {
+          "locator": "article:p:3",
+          "text_sha256": "eee990e5e9538e06a1b173437395873778abba387c8eb43d7d559f22cdb8431f",
+          "characters": 110
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

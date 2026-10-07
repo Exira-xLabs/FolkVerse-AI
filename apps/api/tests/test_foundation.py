@@ -18,7 +18,7 @@ ORIGIN = {"Origin": "http://localhost:3000"}
 
 @pytest.fixture
 def client() -> Iterator[TestClient]:
-    app = create_app()
+    app = create_app(Settings().model_copy(update={"app_mode": "demo"}))
     ids: list[str] = []
     with TestClient(app) as test_client:
         test_client.owned_ids = ids
@@ -138,7 +138,9 @@ def test_ownership_is_server_derived(client: TestClient) -> None:
     second = start(client)
     assert first != second
     with Session(client.app.state.engine) as db:
-        current = SessionService(Settings()).require(client.cookies.get(COOKIE_NAME), db)
+        current = SessionService(client.app.state.settings).require(
+            client.cookies.get(COOKIE_NAME), db
+        )
         require_owner(second, current)
         with pytest.raises(ApiError) as error:
             require_owner(first, current)

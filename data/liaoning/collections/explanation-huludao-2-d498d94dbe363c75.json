@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "d498d94dbe363c75e75b551176b72715a6502fc945f73dc1d7bbe5602035b8d1",
+  "source": {
+    "id": "explanation-huludao-2",
+    "title": "葫芦岛市·兴城市古城景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015153218498/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015153218498/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-10-20",
+    "edition": "2025-10-20",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "葫芦岛市",
+    "subject_hint": "sites"
+  },
+  "raw_sha256": "c8d30a778a4c73d00c5053e79bfcc423ac1fb2824ddaee7211798595043d8a78",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_ca752a5bc78886d50fa18c8e",
+      "ordinal": "article",
+      "name_original": "葫芦岛市·兴城市古城景区",
+      "category_original": "sites",
+      "locality_original": "葫芦岛市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_52f8e9d9004ece3bb330e2e9",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "c2906f9e038a873515f04e2f4ede7ab5fa51a617692f8c2ab028f160bad00c77",
+          "characters": 237
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

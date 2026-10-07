@@ -1,0 +1,29 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "b87e2344bee11ab04280218507af3e46b6175026186fd5cc0665f210366bc9ec",
+  "source": {
+    "id": "sites-checkpoint-2019",
+    "title": "2019 cultural heritage resources checkpoint",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/lnww/lnwwgk/B6183E917BAB475697BFB1BE19F225D7/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/lnww/lnwwgk/B6183E917BAB475697BFB1BE19F225D7/index.shtml",
+    "adapter": "descriptor",
+    "kind": "checkpoint",
+    "reference_date": "2019-10",
+    "edition": "sites-checkpoint-2019",
+    "expected_count": 673,
+    "counting_unit": "provincial protected sites at 2019 checkpoint",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Also reports 147 nationally protected sites at that historical date. Neither current complete list is acquired here."
+  },
+  "raw_sha256": "6dabfcc39e0dde94d17797a3c8509ccd96d39e94124b06265c0cddb03923f8f0",
+  "fetched_at": "2026-10-06T14:57:06.930758+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v2",
+  "status": "extraction_pending",
+  "rows": [],
+  "errors": [
+    "Descriptor/checkpoint only; no enumeration imported"
+  ]
+}

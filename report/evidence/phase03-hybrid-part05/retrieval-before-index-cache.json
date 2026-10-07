@@ -1,0 +1,1332 @@
+{
+  "version": "retrieval-diagnostics-v1",
+  "measured_at": "2026-10-06T16:35:33.905791+00:00",
+  "environment": {
+    "platform": "Linux-7.0.13-arch1-1-x86_64-with-glibc2.43",
+    "cpu_model": "11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz",
+    "threads": 2,
+    "encoder_version": "sentence-transformers:6.1.0;torch:2.9.1+cpu;transformers:5.18.0",
+    "model_version": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181:cls:normalized-f32:8192:v1"
+  },
+  "corpus": {
+    "diagnostic_candidate_passages": 84,
+    "cities": 14,
+    "actually_eligible_database_passages": 2,
+    "expert_reviewed_expanded_sample": false,
+    "candidate_index_used_by_runtime": false
+  },
+  "sample": {
+    "queries": 47,
+    "corpus_fingerprint": "2e77f7b8b2d4d7fc576eaac66a91a7a90dd672400b2d38fc2f752389da3f142a",
+    "query_fingerprint": "a50d5846fe5d078157caae3148bd7a5d370a1be1c49d0eea3ae8426b88043492"
+  },
+  "timing": {
+    "oneshot_cold_wall_ms": 14329.729388999112,
+    "oneshot_embedding_ms": 14324.998894997407,
+    "persistent_startup_and_84_passage_index_ms": 61960.37428099953,
+    "warm_distinct_queries": {
+      "sample_size": 47,
+      "p50_ms": 564.2534729995532,
+      "p95_ms": 822.9555090001668,
+      "max_ms": 881.7506429986679
+    },
+    "repeat_queries": {
+      "sample_size": 47,
+      "p50_ms": 58.052395994309336,
+      "p95_ms": 114.5883259960101,
+      "max_ms": 123.32534499728354
+    },
+    "database_eligibility_reads": {
+      "sample_size": 10,
+      "p50_ms": 45.08389300099225,
+      "p95_ms": 249.50044399884064,
+      "max_ms": 249.50044399884064
+    },
+    "old_lexical": {
+      "sample_size": 47,
+      "p50_ms": 2.3018169958959334,
+      "p95_ms": 5.323557001247536,
+      "max_ms": 5.754988000262529
+    },
+    "lexical": {
+      "sample_size": 47,
+      "p50_ms": 1.7495580032118596,
+      "p95_ms": 4.31350900180405,
+      "max_ms": 4.609884999808855
+    }
+  },
+  "worker": {
+    "resident_kib": 2208612,
+    "concurrency_two_outcomes": [
+      "ready",
+      "model_busy"
+    ],
+    "queue_capacity": 0,
+    "max_lifetime_seconds": 1800,
+    "max_worker_requests": 256,
+    "query_cache_entries": 128,
+    "shutdown_reaped": true
+  },
+  "scores": {
+    "development": {
+      "old_lexical": {
+        "recall_at_3_numerator": 15,
+        "recall_at_3_denominator": 16,
+        "recall_at_3": 0.9375,
+        "mrr_at_3": 0.9375,
+        "negative_return_rate_numerator": 0,
+        "negative_return_rate_denominator": 2
+      },
+      "lexical": {
+        "recall_at_3_numerator": 15,
+        "recall_at_3_denominator": 16,
+        "recall_at_3": 0.9375,
+        "mrr_at_3": 0.9375,
+        "negative_return_rate_numerator": 0,
+        "negative_return_rate_denominator": 2
+      },
+      "hybrid": {
+        "recall_at_3_numerator": 16,
+        "recall_at_3_denominator": 16,
+        "recall_at_3": 1.0,
+        "mrr_at_3": 0.96875,
+        "negative_return_rate_numerator": 1,
+        "negative_return_rate_denominator": 2
+      }
+    },
+    "reserved_diagnostic": {
+      "old_lexical": {
+        "recall_at_3_numerator": 27,
+        "recall_at_3_denominator": 27,
+        "recall_at_3": 1.0,
+        "mrr_at_3": 0.9629629629629629,
+        "negative_return_rate_numerator": 1,
+        "negative_return_rate_denominator": 2
+      },
+      "lexical": {
+        "recall_at_3_numerator": 27,
+        "recall_at_3_denominator": 27,
+        "recall_at_3": 1.0,
+        "mrr_at_3": 0.9629629629629629,
+        "negative_return_rate_numerator": 1,
+        "negative_return_rate_denominator": 2
+      },
+      "hybrid": {
+        "recall_at_3_numerator": 27,
+        "recall_at_3_denominator": 27,
+        "recall_at_3": 1.0,
+        "mrr_at_3": 0.9814814814814815,
+        "negative_return_rate_numerator": 2,
+        "negative_return_rate_denominator": 2
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "relevance-001",
+      "split": "development",
+      "locale": "en",
+      "question": "factory workshop heritage",
+      "expected_source_id": "explanation-shenyang-2",
+      "old_lexical": [
+        "explanation-anshan-3"
+      ],
+      "lexical": [
+        "explanation-anshan-3"
+      ],
+      "hybrid": [
+        "explanation-anshan-3",
+        "explanation-shenyang-2",
+        "explanation-dalian-2"
+      ],
+      "old_lexical_ms": 5.323557001247536,
+      "lexical_ms": 3.8276390041573904,
+      "hybrid_wall_ms": 522.9731110011926,
+      "repeat_wall_ms": 69.01577599637676,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-002",
+      "split": "development",
+      "locale": "en",
+      "question": "city museum of modern Dalian",
+      "expected_source_id": "explanation-dalian-1",
+      "old_lexical": [
+        "explanation-dalian-1",
+        "explanation-jinzhou-1",
+        "explanation-benxi-1"
+      ],
+      "lexical": [
+        "explanation-dalian-1",
+        "explanation-tieling-2",
+        "explanation-liaoyang-3"
+      ],
+      "hybrid": [
+        "explanation-dalian-1",
+        "explanation-jinzhou-1",
+        "explanation-tieling-2"
+      ],
+      "old_lexical_ms": 4.001086999778636,
+      "lexical_ms": 1.5457580011570826,
+      "hybrid_wall_ms": 528.9724260001094,
+      "repeat_wall_ms": 48.62315200443845,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-003",
+      "split": "development",
+      "locale": "en",
+      "question": "jade carving Buddhist sculpture",
+      "expected_source_id": "explanation-anshan-2",
+      "old_lexical": [
+        "explanation-anshan-2",
+        "explanation-liaoyang-2",
+        "explanation-fuxin-1"
+      ],
+      "lexical": [
+        "explanation-anshan-2",
+        "explanation-liaoyang-2",
+        "explanation-fuxin-1"
+      ],
+      "hybrid": [
+        "explanation-anshan-2",
+        "explanation-liaoyang-2",
+        "explanation-fuxin-1"
+      ],
+      "old_lexical_ms": 1.7089899993152358,
+      "lexical_ms": 1.0252560023218393,
+      "hybrid_wall_ms": 633.646353999211,
+      "repeat_wall_ms": 68.206937998184,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-004",
+      "split": "development",
+      "locale": "en",
+      "question": "Later Jin political centre in Xinbin",
+      "expected_source_id": "explanation-fushun-2",
+      "old_lexical": [
+        "explanation-fushun-2",
+        "explanation-liaoyang-1",
+        "explanation-yingkou-2"
+      ],
+      "lexical": [
+        "explanation-fushun-2",
+        "explanation-liaoyang-1"
+      ],
+      "hybrid": [
+        "explanation-fushun-2",
+        "explanation-liaoyang-1",
+        "explanation-tieling-2"
+      ],
+      "old_lexical_ms": 3.345584002090618,
+      "lexical_ms": 2.889141993364319,
+      "hybrid_wall_ms": 556.0970279984758,
+      "repeat_wall_ms": 123.18588399648434,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-005",
+      "split": "development",
+      "locale": "en",
+      "question": "karst cave with a river",
+      "expected_source_id": "explanation-benxi-2",
+      "old_lexical": [
+        "explanation-benxi-2",
+        "explanation-huludao-1",
+        "explanation-benxi-3"
+      ],
+      "lexical": [
+        "explanation-benxi-2",
+        "explanation-dandong-2",
+        "explanation-benxi-3"
+      ],
+      "hybrid": [
+        "explanation-benxi-2",
+        "explanation-dandong-2",
+        "explanation-benxi-3"
+      ],
+      "old_lexical_ms": 5.754988000262529,
+      "lexical_ms": 3.827010004897602,
+      "hybrid_wall_ms": 776.2459459991078,
+      "repeat_wall_ms": 84.03557100245962,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-006",
+      "split": "development",
+      "locale": "en",
+      "question": "Yalu riverside broken bridge",
+      "expected_source_id": "explanation-dandong-2",
+      "old_lexical": [
+        "explanation-dandong-2",
+        "explanation-huludao-1"
+      ],
+      "lexical": [
+        "explanation-dandong-2",
+        "explanation-huludao-1"
+      ],
+      "hybrid": [
+        "explanation-dandong-2",
+        "explanation-huludao-1",
+        "explanation-liaoyang-3"
+      ],
+      "old_lexical_ms": 3.462337001110427,
+      "lexical_ms": 3.126941002847161,
+      "hybrid_wall_ms": 489.7619159964961,
+      "repeat_wall_ms": 58.300461001635995,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-007",
+      "split": "development",
+      "locale": "en",
+      "question": "Liao temple timber hall seven statues",
+      "expected_source_id": "explanation-jinzhou-3",
+      "old_lexical": [
+        "explanation-jinzhou-3",
+        "explanation-fuxin-3",
+        "explanation-jinzhou-1"
+      ],
+      "lexical": [
+        "explanation-jinzhou-3",
+        "explanation-fuxin-3",
+        "explanation-jinzhou-1"
+      ],
+      "hybrid": [
+        "explanation-jinzhou-3",
+        "explanation-liaoyang-1",
+        "explanation-liaoyang-2"
+      ],
+      "old_lexical_ms": 3.25534899457125,
+      "lexical_ms": 3.062556999793742,
+      "hybrid_wall_ms": 578.9929530001245,
+      "repeat_wall_ms": 60.50688200048171,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-008",
+      "split": "development",
+      "locale": "en",
+      "question": "mother awaiting her son folk story",
+      "expected_source_id": "explanation-yingkou-1",
+      "old_lexical": [
+        "explanation-yingkou-1"
+      ],
+      "lexical": [
+        "explanation-yingkou-1"
+      ],
+      "hybrid": [
+        "explanation-yingkou-1",
+        "explanation-anshan-1",
+        "explanation-yingkou-2"
+      ],
+      "old_lexical_ms": 1.61437300266698,
+      "lexical_ms": 1.5504579932894558,
+      "hybrid_wall_ms": 665.787130004901,
+      "repeat_wall_ms": 67.79477300005965,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-009",
+      "split": "development",
+      "locale": "en",
+      "question": "agate carving town Shijiazi",
+      "expected_source_id": "explanation-fuxin-1",
+      "old_lexical": [
+        "explanation-fuxin-1",
+        "explanation-anshan-2"
+      ],
+      "lexical": [
+        "explanation-fuxin-1",
+        "explanation-anshan-2"
+      ],
+      "hybrid": [
+        "explanation-fuxin-1",
+        "explanation-anshan-2",
+        "explanation-liaoyang-3"
+      ],
+      "old_lexical_ms": 1.5259479987435043,
+      "lexical_ms": 1.2526079954113811,
+      "hybrid_wall_ms": 630.3258949992596,
+      "repeat_wall_ms": 73.63243300642353,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-010",
+      "split": "development",
+      "locale": "en",
+      "question": "Han Liao Jin Ming Qing museum",
+      "expected_source_id": "explanation-liaoyang-1",
+      "old_lexical": [
+        "explanation-liaoyang-1",
+        "explanation-jinzhou-3",
+        "explanation-fushun-2"
+      ],
+      "lexical": [
+        "explanation-liaoyang-1",
+        "explanation-jinzhou-3",
+        "explanation-fushun-2"
+      ],
+      "hybrid": [
+        "explanation-liaoyang-1",
+        "explanation-jinzhou-3",
+        "explanation-jinzhou-1"
+      ],
+      "old_lexical_ms": 2.8942680000909604,
+      "lexical_ms": 2.537561005738098,
+      "hybrid_wall_ms": 563.0189980001887,
+      "repeat_wall_ms": 64.60146099561825,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-011",
+      "split": "development",
+      "locale": "en",
+      "question": "steam locomotive museum in Diaobingshan",
+      "expected_source_id": "explanation-tieling-1",
+      "old_lexical": [
+        "explanation-tieling-1",
+        "explanation-liaoyang-1",
+        "explanation-shenyang-3"
+      ],
+      "lexical": [
+        "explanation-tieling-1",
+        "explanation-shenyang-3",
+        "explanation-jinzhou-1"
+      ],
+      "hybrid": [
+        "explanation-tieling-1",
+        "explanation-shenyang-3",
+        "explanation-jinzhou-1"
+      ],
+      "old_lexical_ms": 2.6475860067876056,
+      "lexical_ms": 3.180150000844151,
+      "hybrid_wall_ms": 718.3031700042193,
+      "repeat_wall_ms": 56.87318799755303,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-012",
+      "split": "development",
+      "locale": "en",
+      "question": "Hongshan altars stone burial mounds",
+      "expected_source_id": "explanation-chaoyang-1",
+      "old_lexical": [
+        "explanation-chaoyang-1"
+      ],
+      "lexical": [
+        "explanation-chaoyang-1"
+      ],
+      "hybrid": [
+        "explanation-chaoyang-1",
+        "explanation-fuxin-2",
+        "explanation-chaoyang-2"
+      ],
+      "old_lexical_ms": 1.9651600014185533,
+      "lexical_ms": 1.6396580031141639,
+      "hybrid_wall_ms": 880.0884569936898,
+      "repeat_wall_ms": 108.25347699574195,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-013",
+      "split": "development",
+      "locale": "en",
+      "question": "reed crafts rice crab museum park",
+      "expected_source_id": "explanation-panjin-3",
+      "old_lexical": [
+        "explanation-panjin-3",
+        "explanation-yingkou-3",
+        "explanation-shenyang-3"
+      ],
+      "lexical": [
+        "explanation-panjin-3",
+        "explanation-yingkou-3",
+        "explanation-shenyang-3"
+      ],
+      "hybrid": [
+        "explanation-panjin-3",
+        "explanation-shenyang-3",
+        "explanation-jinzhou-1"
+      ],
+      "old_lexical_ms": 2.1582660046988167,
+      "lexical_ms": 1.4851140003884211,
+      "hybrid_wall_ms": 652.3050629984937,
+      "repeat_wall_ms": 45.163862996560056,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-014",
+      "split": "development",
+      "locale": "en",
+      "question": "wall combined with a river bridge",
+      "expected_source_id": "explanation-huludao-1",
+      "old_lexical": [
+        "explanation-huludao-1",
+        "explanation-dandong-2",
+        "explanation-panjin-3"
+      ],
+      "lexical": [
+        "explanation-huludao-1",
+        "explanation-dandong-2",
+        "explanation-liaoyang-3"
+      ],
+      "hybrid": [
+        "explanation-huludao-1",
+        "explanation-dandong-2",
+        "explanation-benxi-2"
+      ],
+      "old_lexical_ms": 1.1651640015770681,
+      "lexical_ms": 1.412751997122541,
+      "hybrid_wall_ms": 564.2534729995532,
+      "repeat_wall_ms": 48.37261800275883,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-015",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "工厂车间的工业历史展示",
+      "expected_source_id": "explanation-shenyang-2",
+      "old_lexical": [
+        "explanation-shenyang-2",
+        "explanation-anshan-3",
+        "explanation-jinzhou-2"
+      ],
+      "lexical": [
+        "explanation-shenyang-2",
+        "explanation-anshan-3",
+        "explanation-jinzhou-2"
+      ],
+      "hybrid": [
+        "explanation-shenyang-2",
+        "explanation-anshan-3",
+        "explanation-jinzhou-2"
+      ],
+      "old_lexical_ms": 1.2290820013731718,
+      "lexical_ms": 0.9516130012343638,
+      "hybrid_wall_ms": 496.50079399725655,
+      "repeat_wall_ms": 43.89755799638806,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-016",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "玛瑙小镇的手工雕刻",
+      "expected_source_id": "explanation-fuxin-1",
+      "old_lexical": [
+        "explanation-fuxin-1",
+        "explanation-panjin-3",
+        "explanation-fuxin-2"
+      ],
+      "lexical": [
+        "explanation-fuxin-1",
+        "explanation-panjin-3",
+        "explanation-fuxin-2"
+      ],
+      "hybrid": [
+        "explanation-fuxin-1",
+        "explanation-fuxin-2",
+        "explanation-anshan-2"
+      ],
+      "old_lexical_ms": 3.4995240057469346,
+      "lexical_ms": 3.3759420039132237,
+      "hybrid_wall_ms": 469.4895229986287,
+      "repeat_wall_ms": 55.54122300236486,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-017",
+      "split": "development",
+      "locale": "en",
+      "question": "quantum computing semiconductor transistor",
+      "expected_source_id": null,
+      "old_lexical": [],
+      "lexical": [],
+      "hybrid": [
+        "explanation-tieling-1",
+        "explanation-anshan-3",
+        "explanation-dandong-1"
+      ],
+      "old_lexical_ms": 0.7859260003897361,
+      "lexical_ms": 0.8263019990408793,
+      "hybrid_wall_ms": 528.005955995468,
+      "repeat_wall_ms": 75.09463000315009,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-018",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "欧冠足球比赛实时比分",
+      "expected_source_id": null,
+      "old_lexical": [],
+      "lexical": [],
+      "hybrid": [],
+      "old_lexical_ms": 4.440138000063598,
+      "lexical_ms": 4.083610998350196,
+      "hybrid_wall_ms": 441.05572099942947,
+      "repeat_wall_ms": 56.256396004755516,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-019",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "historic prison forced labour workshops",
+      "expected_source_id": "explanation-dalian-2",
+      "old_lexical": [
+        "explanation-dalian-2",
+        "explanation-shenyang-2"
+      ],
+      "lexical": [
+        "explanation-dalian-2",
+        "explanation-shenyang-2"
+      ],
+      "hybrid": [
+        "explanation-dalian-2",
+        "explanation-shenyang-2",
+        "explanation-anshan-3"
+      ],
+      "old_lexical_ms": 0.7807520014466718,
+      "lexical_ms": 0.6712200047331862,
+      "hybrid_wall_ms": 409.33531599876005,
+      "repeat_wall_ms": 42.40501300228061,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-020",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "museum in a former sintering plant",
+      "expected_source_id": "explanation-anshan-3",
+      "old_lexical": [
+        "explanation-anshan-3",
+        "explanation-dalian-2",
+        "explanation-shenyang-2"
+      ],
+      "lexical": [
+        "explanation-anshan-3",
+        "explanation-shenyang-2",
+        "explanation-dalian-2"
+      ],
+      "hybrid": [
+        "explanation-anshan-3",
+        "explanation-shenyang-2",
+        "explanation-dalian-2"
+      ],
+      "old_lexical_ms": 1.1083709978265688,
+      "lexical_ms": 0.8587629999965429,
+      "hybrid_wall_ms": 459.77490299992496,
+      "repeat_wall_ms": 114.5883259960101,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-021",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "forest scenery and anti-Japanese army sites",
+      "expected_source_id": "explanation-fushun-3",
+      "old_lexical": [
+        "explanation-fushun-3",
+        "explanation-dalian-3",
+        "explanation-chaoyang-2"
+      ],
+      "lexical": [
+        "explanation-fushun-3",
+        "explanation-dalian-3",
+        "explanation-chaoyang-2"
+      ],
+      "hybrid": [
+        "explanation-fushun-3",
+        "explanation-dalian-3",
+        "explanation-yingkou-2"
+      ],
+      "old_lexical_ms": 5.665467004291713,
+      "lexical_ms": 3.3316949993604794,
+      "hybrid_wall_ms": 881.7506429986679,
+      "repeat_wall_ms": 50.6756620015949,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-022",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "underground river with stalactites and stalagmites",
+      "expected_source_id": "explanation-benxi-2",
+      "old_lexical": [
+        "explanation-benxi-2",
+        "explanation-dandong-2",
+        "explanation-panjin-3"
+      ],
+      "lexical": [
+        "explanation-benxi-2",
+        "explanation-dandong-2",
+        "explanation-huludao-1"
+      ],
+      "hybrid": [
+        "explanation-benxi-2",
+        "explanation-dandong-2",
+        "explanation-liaoyang-3"
+      ],
+      "old_lexical_ms": 2.127342995663639,
+      "lexical_ms": 1.3641089972225018,
+      "hybrid_wall_ms": 576.6675699996995,
+      "repeat_wall_ms": 50.700692998361774,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-023",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Donggang coastal island landscape",
+      "expected_source_id": "explanation-dandong-3",
+      "old_lexical": [
+        "explanation-dandong-3",
+        "explanation-yingkou-3",
+        "explanation-fuxin-2"
+      ],
+      "lexical": [
+        "explanation-dandong-3",
+        "explanation-yingkou-3",
+        "explanation-fuxin-2"
+      ],
+      "hybrid": [
+        "explanation-dandong-3",
+        "explanation-yingkou-3",
+        "explanation-fuxin-2"
+      ],
+      "old_lexical_ms": 1.7063709965441376,
+      "lexical_ms": 0.8672920012031682,
+      "hybrid_wall_ms": 485.9525979991304,
+      "repeat_wall_ms": 79.16410799953155,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-024",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "battle memorial featuring civilian support",
+      "expected_source_id": "explanation-jinzhou-2",
+      "old_lexical": [
+        "explanation-huludao-3",
+        "explanation-jinzhou-2",
+        "explanation-fushun-1"
+      ],
+      "lexical": [
+        "explanation-huludao-3",
+        "explanation-jinzhou-2",
+        "explanation-fushun-1"
+      ],
+      "hybrid": [
+        "explanation-huludao-3",
+        "explanation-jinzhou-2",
+        "explanation-dandong-1"
+      ],
+      "old_lexical_ms": 1.9816599960904568,
+      "lexical_ms": 1.0445980005897582,
+      "hybrid_wall_ms": 544.3226920033339,
+      "repeat_wall_ms": 81.0546089996933,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-025",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Yingkou coastal marine park",
+      "expected_source_id": "explanation-yingkou-3",
+      "old_lexical": [
+        "explanation-yingkou-3",
+        "explanation-dandong-3",
+        "explanation-panjin-3"
+      ],
+      "lexical": [
+        "explanation-yingkou-3",
+        "explanation-dandong-3",
+        "explanation-panjin-3"
+      ],
+      "hybrid": [
+        "explanation-yingkou-3",
+        "explanation-panjin-3",
+        "explanation-dandong-3"
+      ],
+      "old_lexical_ms": 2.3018169958959334,
+      "lexical_ms": 1.09657699795207,
+      "hybrid_wall_ms": 514.3877160007833,
+      "repeat_wall_ms": 67.75787399965338,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-026",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "religious figures cut into cliff rock",
+      "expected_source_id": "explanation-fuxin-2",
+      "old_lexical": [
+        "explanation-fuxin-2",
+        "explanation-benxi-3"
+      ],
+      "lexical": [
+        "explanation-fuxin-2",
+        "explanation-benxi-3"
+      ],
+      "hybrid": [
+        "explanation-fuxin-2",
+        "explanation-benxi-3",
+        "explanation-anshan-2"
+      ],
+      "old_lexical_ms": 2.1870509954169393,
+      "lexical_ms": 2.2860960016259924,
+      "hybrid_wall_ms": 657.3578710012953,
+      "repeat_wall_ms": 123.32534499728354,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-027",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Liaoyang birthday screen museum collection",
+      "expected_source_id": "explanation-liaoyang-1",
+      "old_lexical": [
+        "explanation-liaoyang-1",
+        "explanation-shenyang-3",
+        "explanation-jinzhou-1"
+      ],
+      "lexical": [
+        "explanation-liaoyang-1",
+        "explanation-shenyang-3",
+        "explanation-jinzhou-1"
+      ],
+      "hybrid": [
+        "explanation-liaoyang-1",
+        "explanation-shenyang-3",
+        "explanation-panjin-3"
+      ],
+      "old_lexical_ms": 3.0336369964061305,
+      "lexical_ms": 1.634781998291146,
+      "hybrid_wall_ms": 491.4423279988114,
+      "repeat_wall_ms": 53.21745800029021,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-028",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Zhou Enlai school academy study site",
+      "expected_source_id": "explanation-tieling-3",
+      "old_lexical": [
+        "explanation-tieling-3",
+        "explanation-benxi-1",
+        "explanation-shenyang-3"
+      ],
+      "lexical": [
+        "explanation-tieling-3",
+        "explanation-benxi-1",
+        "explanation-shenyang-3"
+      ],
+      "hybrid": [
+        "explanation-tieling-3",
+        "explanation-fushun-2",
+        "explanation-shenyang-3"
+      ],
+      "old_lexical_ms": 0.8835410044412129,
+      "lexical_ms": 0.7695199965382926,
+      "hybrid_wall_ms": 584.5277150001493,
+      "repeat_wall_ms": 51.065720996120945,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-029",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "archaeological temples altars burial mounds",
+      "expected_source_id": "explanation-chaoyang-1",
+      "old_lexical": [
+        "explanation-chaoyang-1",
+        "explanation-benxi-1",
+        "explanation-chaoyang-2"
+      ],
+      "lexical": [
+        "explanation-chaoyang-1",
+        "explanation-benxi-1",
+        "explanation-chaoyang-2"
+      ],
+      "hybrid": [
+        "explanation-chaoyang-1",
+        "explanation-benxi-1",
+        "explanation-chaoyang-2"
+      ],
+      "old_lexical_ms": 2.7579629968386143,
+      "lexical_ms": 2.4143619957612827,
+      "hybrid_wall_ms": 590.1996660031728,
+      "repeat_wall_ms": 58.29935100337025,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-030",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "calligraphy inscriptions on steles",
+      "expected_source_id": "explanation-panjin-1",
+      "old_lexical": [
+        "explanation-benxi-3",
+        "explanation-panjin-1",
+        "explanation-yingkou-3"
+      ],
+      "lexical": [
+        "explanation-benxi-3",
+        "explanation-panjin-1",
+        "explanation-yingkou-3"
+      ],
+      "hybrid": [
+        "explanation-panjin-1",
+        "explanation-benxi-3",
+        "explanation-anshan-2"
+      ],
+      "old_lexical_ms": 3.390243000467308,
+      "lexical_ms": 2.371764996496495,
+      "hybrid_wall_ms": 521.1345389980124,
+      "repeat_wall_ms": 44.570557001861744,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-031",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Ming ancient city walls Confucian temple archways",
+      "expected_source_id": "explanation-huludao-2",
+      "old_lexical": [
+        "explanation-huludao-2",
+        "explanation-tieling-2",
+        "explanation-fuxin-3"
+      ],
+      "lexical": [
+        "explanation-huludao-2",
+        "explanation-tieling-2",
+        "explanation-fuxin-3"
+      ],
+      "hybrid": [
+        "explanation-huludao-2",
+        "explanation-tieling-2",
+        "explanation-jinzhou-1"
+      ],
+      "old_lexical_ms": 1.153303004684858,
+      "lexical_ms": 0.8987170003820211,
+      "hybrid_wall_ms": 734.30209900107,
+      "repeat_wall_ms": 59.2348470017896,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-032",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "清代宫殿的东中西路建筑布局",
+      "expected_source_id": "explanation-shenyang-1",
+      "old_lexical": [
+        "explanation-shenyang-1",
+        "explanation-jinzhou-3",
+        "explanation-liaoyang-2"
+      ],
+      "lexical": [
+        "explanation-shenyang-1",
+        "explanation-jinzhou-3",
+        "explanation-liaoyang-2"
+      ],
+      "hybrid": [
+        "explanation-shenyang-1",
+        "explanation-liaoyang-2",
+        "explanation-chaoyang-2"
+      ],
+      "old_lexical_ms": 2.7480759963509627,
+      "lexical_ms": 1.7495580032118596,
+      "hybrid_wall_ms": 822.9555090001668,
+      "repeat_wall_ms": 72.45766899723094,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-033",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "监狱旧址保留的劳役工场",
+      "expected_source_id": "explanation-dalian-2",
+      "old_lexical": [
+        "explanation-dalian-2",
+        "explanation-tieling-3"
+      ],
+      "lexical": [
+        "explanation-dalian-2",
+        "explanation-tieling-3"
+      ],
+      "hybrid": [
+        "explanation-dalian-2",
+        "explanation-tieling-3",
+        "explanation-anshan-3"
+      ],
+      "old_lexical_ms": 3.065721000893973,
+      "lexical_ms": 3.5001830037799664,
+      "hybrid_wall_ms": 607.7893719993881,
+      "repeat_wall_ms": 49.73206899740035,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-034",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "一块玉石正反两面不同佛像",
+      "expected_source_id": "explanation-anshan-2",
+      "old_lexical": [
+        "explanation-anshan-2",
+        "explanation-liaoyang-2",
+        "explanation-jinzhou-3"
+      ],
+      "lexical": [
+        "explanation-anshan-2",
+        "explanation-liaoyang-2",
+        "explanation-jinzhou-3"
+      ],
+      "hybrid": [
+        "explanation-anshan-2",
+        "explanation-liaoyang-2",
+        "explanation-jinzhou-3"
+      ],
+      "old_lexical_ms": 2.090287998726126,
+      "lexical_ms": 1.8416460006847046,
+      "hybrid_wall_ms": 656.6626159983571,
+      "repeat_wall_ms": 57.35341600666288,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-035",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "介绍后金政治中心的古城遗址",
+      "expected_source_id": "explanation-fushun-2",
+      "old_lexical": [
+        "explanation-fushun-2",
+        "explanation-tieling-2",
+        "explanation-fushun-3"
+      ],
+      "lexical": [
+        "explanation-fushun-2",
+        "explanation-tieling-2",
+        "explanation-fushun-3"
+      ],
+      "hybrid": [
+        "explanation-fushun-2",
+        "explanation-benxi-1",
+        "explanation-tieling-2"
+      ],
+      "old_lexical_ms": 3.71910600370029,
+      "lexical_ms": 4.31350900180405,
+      "hybrid_wall_ms": 672.3177829990163,
+      "repeat_wall_ms": 44.446053994761314,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-036",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "地下河流和钟乳石景观",
+      "expected_source_id": "explanation-benxi-2",
+      "old_lexical": [
+        "explanation-benxi-2",
+        "explanation-fushun-3",
+        "explanation-dandong-2"
+      ],
+      "lexical": [
+        "explanation-benxi-2",
+        "explanation-fushun-3",
+        "explanation-dandong-2"
+      ],
+      "hybrid": [
+        "explanation-benxi-2",
+        "explanation-dandong-2",
+        "explanation-fushun-3"
+      ],
+      "old_lexical_ms": 1.5832150020287372,
+      "lexical_ms": 1.4465279964497313,
+      "hybrid_wall_ms": 558.2490779997897,
+      "repeat_wall_ms": 57.00126699957764,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-037",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "海岛与海岸关系的地理景观",
+      "expected_source_id": "explanation-dandong-3",
+      "old_lexical": [
+        "explanation-dandong-3",
+        "explanation-yingkou-3",
+        "explanation-dandong-2"
+      ],
+      "lexical": [
+        "explanation-dandong-3",
+        "explanation-yingkou-3",
+        "explanation-dandong-2"
+      ],
+      "hybrid": [
+        "explanation-dandong-3",
+        "explanation-yingkou-3",
+        "explanation-dandong-2"
+      ],
+      "old_lexical_ms": 1.5664839957025833,
+      "lexical_ms": 1.3771619996987283,
+      "hybrid_wall_ms": 607.8444500017213,
+      "repeat_wall_ms": 91.40227300667902,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-038",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "木构大殿与七尊佛像",
+      "expected_source_id": "explanation-jinzhou-3",
+      "old_lexical": [
+        "explanation-jinzhou-3",
+        "explanation-liaoyang-2"
+      ],
+      "lexical": [
+        "explanation-jinzhou-3",
+        "explanation-liaoyang-2"
+      ],
+      "hybrid": [
+        "explanation-jinzhou-3",
+        "explanation-liaoyang-2",
+        "explanation-jinzhou-1"
+      ],
+      "old_lexical_ms": 2.9470690060406923,
+      "lexical_ms": 3.2190460042329505,
+      "hybrid_wall_ms": 706.3306979980553,
+      "repeat_wall_ms": 50.34139299823437,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-039",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "母亲等待孩子回来的民间故事",
+      "expected_source_id": "explanation-yingkou-1",
+      "old_lexical": [
+        "explanation-yingkou-1",
+        "explanation-dalian-3",
+        "explanation-fuxin-1"
+      ],
+      "lexical": [
+        "explanation-yingkou-1",
+        "explanation-dalian-3",
+        "explanation-fuxin-1"
+      ],
+      "hybrid": [
+        "explanation-yingkou-1",
+        "explanation-panjin-3",
+        "explanation-fuxin-1"
+      ],
+      "old_lexical_ms": 4.242456998326816,
+      "lexical_ms": 3.366600998560898,
+      "hybrid_wall_ms": 561.0774619999574,
+      "repeat_wall_ms": 47.75154800154269,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-040",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "清代摩崖造像的宗教景观",
+      "expected_source_id": "explanation-fuxin-2",
+      "old_lexical": [
+        "explanation-fuxin-2",
+        "explanation-benxi-3",
+        "explanation-anshan-2"
+      ],
+      "lexical": [
+        "explanation-fuxin-2",
+        "explanation-benxi-3",
+        "explanation-anshan-2"
+      ],
+      "hybrid": [
+        "explanation-fuxin-2",
+        "explanation-benxi-3",
+        "explanation-anshan-2"
+      ],
+      "old_lexical_ms": 1.1930029941140674,
+      "lexical_ms": 0.9829819973674603,
+      "hybrid_wall_ms": 541.2694619953982,
+      "repeat_wall_ms": 58.91029600024922,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-041",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "辽阳馆藏的王尔烈寿屏",
+      "expected_source_id": "explanation-liaoyang-1",
+      "old_lexical": [
+        "explanation-liaoyang-1"
+      ],
+      "lexical": [
+        "explanation-liaoyang-1"
+      ],
+      "hybrid": [
+        "explanation-liaoyang-1",
+        "explanation-jinzhou-2",
+        "explanation-dalian-1"
+      ],
+      "old_lexical_ms": 3.0318429999169894,
+      "lexical_ms": 4.609884999808855,
+      "hybrid_wall_ms": 681.8460509966826,
+      "repeat_wall_ms": 46.62865399586735,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-042",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "银冈书院的读书旧址",
+      "expected_source_id": "explanation-tieling-3",
+      "old_lexical": [
+        "explanation-tieling-3",
+        "explanation-dalian-2"
+      ],
+      "lexical": [
+        "explanation-tieling-3",
+        "explanation-dalian-2"
+      ],
+      "hybrid": [
+        "explanation-tieling-3",
+        "explanation-dalian-2",
+        "explanation-liaoyang-3"
+      ],
+      "old_lexical_ms": 1.278039999306202,
+      "lexical_ms": 1.3077200055704452,
+      "hybrid_wall_ms": 545.1081410064944,
+      "repeat_wall_ms": 54.91288600023836,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-043",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "史前祭坛和积石墓遗址",
+      "expected_source_id": "explanation-chaoyang-1",
+      "old_lexical": [
+        "explanation-chaoyang-1",
+        "explanation-benxi-1",
+        "explanation-fushun-3"
+      ],
+      "lexical": [
+        "explanation-chaoyang-1",
+        "explanation-benxi-1",
+        "explanation-fushun-3"
+      ],
+      "hybrid": [
+        "explanation-chaoyang-1",
+        "explanation-benxi-1",
+        "explanation-fushun-3"
+      ],
+      "old_lexical_ms": 2.2140299988677725,
+      "lexical_ms": 3.88809600553941,
+      "hybrid_wall_ms": 677.4676569984877,
+      "repeat_wall_ms": 79.61809499829542,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-044",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "画廊与艺术家工作室",
+      "expected_source_id": "explanation-panjin-2",
+      "old_lexical": [
+        "explanation-panjin-2",
+        "explanation-anshan-2",
+        "explanation-jinzhou-3"
+      ],
+      "lexical": [
+        "explanation-panjin-2",
+        "explanation-anshan-2",
+        "explanation-jinzhou-3"
+      ],
+      "hybrid": [
+        "explanation-panjin-2",
+        "explanation-anshan-2",
+        "explanation-jinzhou-3"
+      ],
+      "old_lexical_ms": 2.8915549992234446,
+      "lexical_ms": 4.520255999523215,
+      "hybrid_wall_ms": 620.3011499965214,
+      "repeat_wall_ms": 81.23633800278185,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-045",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "长城跨河与桥体的结合",
+      "expected_source_id": "explanation-huludao-1",
+      "old_lexical": [
+        "explanation-huludao-1",
+        "explanation-chaoyang-2",
+        "explanation-jinzhou-1"
+      ],
+      "lexical": [
+        "explanation-huludao-1",
+        "explanation-chaoyang-2",
+        "explanation-jinzhou-1"
+      ],
+      "hybrid": [
+        "explanation-huludao-1",
+        "explanation-jinzhou-1",
+        "explanation-chaoyang-2"
+      ],
+      "old_lexical_ms": 4.656418997910805,
+      "lexical_ms": 2.9419049969874322,
+      "hybrid_wall_ms": 530.5803029987146,
+      "repeat_wall_ms": 58.052395994309336,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-046",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "software compiler garbage collection",
+      "expected_source_id": null,
+      "old_lexical": [
+        "explanation-liaoyang-1"
+      ],
+      "lexical": [
+        "explanation-liaoyang-1"
+      ],
+      "hybrid": [
+        "explanation-anshan-3",
+        "explanation-liaoyang-1"
+      ],
+      "old_lexical_ms": 2.8351190048852004,
+      "lexical_ms": 2.6847909975913353,
+      "hybrid_wall_ms": 420.98091499792645,
+      "repeat_wall_ms": 56.64041899581207,
+      "embedding_status": "ready"
+    },
+    {
+      "id": "relevance-047",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "飞行员考试报名实时成绩",
+      "expected_source_id": null,
+      "old_lexical": [],
+      "lexical": [],
+      "hybrid": [
+        "explanation-anshan-1"
+      ],
+      "old_lexical_ms": 1.6172120012925006,
+      "lexical_ms": 1.5093660040292889,
+      "hybrid_wall_ms": 527.7990279937512,
+      "repeat_wall_ms": 46.8735350004863,
+      "embedding_status": "ready"
+    }
+  ],
+  "historical_correctness_score": null,
+  "expert_quality_score": null,
+  "limits": "Source-derived candidate expectations, not human-reviewed gold or province-wide release evidence. Dense matches do not establish claim support. Full request latency is measured separately with the real provider; cold model startup is excluded from warm-query measurements but reported explicitly."
+}

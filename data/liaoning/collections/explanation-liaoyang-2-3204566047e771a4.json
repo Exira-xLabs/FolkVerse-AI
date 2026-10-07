@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "3204566047e771a4f1aa66fce235287bfc3f45f47f3b558a6475b8ece2161236",
+  "source": {
+    "id": "explanation-liaoyang-2",
+    "title": "辽阳市·广佑寺景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814590371766/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814590371766/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-18",
+    "edition": "2025-11-18",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "辽阳市",
+    "subject_hint": "belief"
+  },
+  "raw_sha256": "b5d14354697b231c353176fdbccabba26c9a56c68a7cad2aff91b6ae5fb38962",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_7955b4378b1db24855a595a5",
+      "ordinal": "article",
+      "name_original": "辽阳市·广佑寺景区",
+      "category_original": "belief",
+      "locality_original": "辽阳市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_c08031e1314093f7a711eb6d",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "15b7005486615f5c29dffd158d8724c58002433ccc3adf9b956a328697f426b5",
+          "characters": 119
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

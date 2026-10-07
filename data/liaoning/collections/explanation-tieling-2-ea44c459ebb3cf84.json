@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "ea44c459ebb3cf84d0eabf99e174f3a270f0be2f2acaff93547a4ee2fa220bdc",
+  "source": {
+    "id": "explanation-tieling-2",
+    "title": "铁岭市·西丰县城子山风景区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415182414713/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415182414713/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-14",
+    "edition": "2025-11-14",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "铁岭市",
+    "subject_hint": "sites"
+  },
+  "raw_sha256": "560c66b6652e5bf350e5fe8fb2a469ca69d02a5ec75b33c9eb9fd83a81866b78",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_7071831797ff7c53307abf2e",
+      "ordinal": "article",
+      "name_original": "铁岭市·西丰县城子山风景区",
+      "category_original": "sites",
+      "locality_original": "铁岭市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_050a33033e45a04b3e44d25f",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "f650ab16e63978fc832761469cd0d026a9e3ca13f2738aae2895329bc2a4a54a",
+          "characters": 186
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

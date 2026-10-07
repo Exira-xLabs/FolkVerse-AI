@@ -4,6 +4,7 @@ import asyncio
 import hashlib
 import hmac
 import json
+import re
 import threading
 import time
 from collections.abc import AsyncIterator, Callable
@@ -11,16 +12,69 @@ from dataclasses import dataclass
 from typing import Annotated, Any
 
 from fastapi import APIRouter, Depends, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse
+from pydantic import BaseModel
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
+from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from folkverse.errors import ApiError
 from folkverse.guide_harness import GuideAnswer, GuideRequest
-from folkverse.guide_retrieval import EvidenceBundle
+from folkverse.guide_retrieval import EvidenceBundle, EvidencePassage, eligible_evidence
+from folkverse.liaoning_publication import published_unit_evidence
 from folkverse.sessions import COOKIE_NAME, SessionService
 
 router = APIRouter(prefix="/api/v1")
+
+
+class GuideBodyLimitMiddleware:
+    """Bound the guide body before JSON parsing, including chunked requests."""
+
+    def __init__(self, app: ASGIApp) -> None:
+        self.app = app
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if (
+            scope["type"] != "http"
+            or scope.get("path") != "/api/v1/guide"
+            or scope.get("method") != "POST"
+        ):
+            await self.app(scope, receive, send)
+            return
+        body = bytearray()
+        while True:
+            message = await receive()
+            if message["type"] == "http.disconnect":
+                return
+            chunk = message.get("body", b"")
+            if len(body) + len(chunk) > 65536:
+                response = JSONResponse(
+                    {
+                        "error": {
+                            "code": "context_too_large",
+                            "message": "The guide context is too large.",
+                            "retryable": False,
+                        },
+                        "request_id": scope.get("state", {}).get("request_id", "unavailable"),
+                    },
+                    status_code=413,
+                    headers={"Cache-Control": "no-store"},
+                )
+                await response(scope, receive, send)
+                return
+            body.extend(chunk)
+            if not message.get("more_body", False):
+                break
+        delivered = False
+
+        async def replay() -> Message:
+            nonlocal delivered
+            if not delivered:
+                delivered = True
+                return {"type": "http.request", "body": bytes(body), "more_body": False}
+            return await receive()
+
+        await self.app(scope, replay, send)
 
 
 @dataclass
@@ -91,12 +145,20 @@ async def run_checked(
             EvidenceBundle(
                 locale=answer.locale,
                 corpus_version=answer.corpus_version,
-                passages=answer.sources,
+                passages=[p for p in answer.sources if p.evidence_origin != "official_lookup"],
                 status="evidence_found",
             ),
         )
         if not current:
             raise ApiError(409, "evidence_changed", "The evidence changed. Please ask again.", True)
+    for passage in answer.sources:
+        if (
+            passage.evidence_origin == "official_lookup"
+            and not await request.app.state.guide_lookup.current(passage, refresh=True)
+        ):
+            raise ApiError(
+                409, "evidence_changed", "The official source changed. Please ask again.", True
+            )
     return answer
 
 
@@ -228,3 +290,32 @@ async def guide(
             await task
         except (asyncio.CancelledError, Exception):
             pass
+
+
+class GuideEvidenceState(BaseModel):
+    current: bool
+    passage: EvidencePassage | None = None
+
+
+@router.get("/guide/evidence/{identifier}", response_model=GuideEvidenceState)
+async def inspect_guide_evidence(
+    identifier: str, request: Request, visit: Annotated[GuideVisit, Depends(guide_visit)]
+) -> GuideEvidenceState:
+    if len(identifier) > 100 or not re.fullmatch(r"[a-zA-Z0-9_-]+", identifier):
+        raise ApiError(422, "invalid_input", "The evidence identifier is invalid.")
+    await asyncio.to_thread(visit.recheck)
+    if identifier.startswith("lookup_"):
+        lookup = request.app.state.guide_lookup
+        entry = lookup.cache.get(identifier)
+        if entry and await lookup.current(entry[1], refresh=True):
+            return GuideEvidenceState(current=True, passage=entry[1])
+        return GuideEvidenceState(current=False)
+
+    def inspected() -> EvidencePassage | None:
+        if identifier.startswith("unit_"):
+            return next((p for p in published_unit_evidence() if p.passage_id == identifier), None)
+        with Session(request.app.state.engine) as db:
+            return next((p for p in eligible_evidence(db) if p.passage_id == identifier), None)
+
+    passage = await asyncio.to_thread(inspected)
+    return GuideEvidenceState(current=passage is not None, passage=passage)

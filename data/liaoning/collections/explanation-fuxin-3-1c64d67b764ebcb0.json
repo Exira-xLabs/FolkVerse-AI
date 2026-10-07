@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "1c64d67b764ebcb05e4365c4aef55d4ad439efd5aa0375162ac3658720d4ee52",
+  "source": {
+    "id": "explanation-fuxin-3",
+    "title": "阜新市·瑞应寺风景区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116255955709/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116255955709/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-21",
+    "edition": "2025-11-21",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "阜新市",
+    "subject_hint": "belief"
+  },
+  "raw_sha256": "1b216de663d6f3ce3233c80a6aaa202ebad7f722d1f7c4dfd14713c0be8f8f2e",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_5fc67c21dc5ccd49b1be279a",
+      "ordinal": "article",
+      "name_original": "阜新市·瑞应寺风景区",
+      "category_original": "belief",
+      "locality_original": "阜新市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_74a19b3dd25a55907bfe6314",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "1522269f5ced92548cf807067be519b99cf5d235deb70448de89b10e47177f35",
+          "characters": 93
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

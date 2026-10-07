@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "25fa7f05aec54c0c6f9a8920e5a7960c7fab7ce9d145905419da01f7d4e7e858",
+  "source": {
+    "id": "explanation-tieling-1",
+    "title": "铁岭市·铁煤蒸汽机车博物馆",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415201655580/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415201655580/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-14",
+    "edition": "2025-11-14",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "铁岭市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "ce2e5101e386415e5de86a7f9b788ce9fb9af65479d0e33230fb14d2c497abbb",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_ae614ac586c73907fd116baf",
+      "ordinal": "article",
+      "name_original": "铁岭市·铁煤蒸汽机车博物馆",
+      "category_original": "museums",
+      "locality_original": "铁岭市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_5467b07ea98452d0ab64e24f",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "452b39e18cc880ae9a2dcd4231752c327faff9eaa28743ef4159a706a92d6ace",
+          "characters": 190
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

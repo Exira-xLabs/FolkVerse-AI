@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "07a1cf84643622c7c9922e50ee0f46d01bda909a9406c0cb594131f20c3898d0",
+  "source": {
+    "id": "explanation-benxi-3",
+    "title": "本溪市·铁刹山风景区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514113343131/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514113343131/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-15",
+    "edition": "2025-12-15",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "本溪市",
+    "subject_hint": "belief"
+  },
+  "raw_sha256": "66107888ed29a94553ad0c14741b8cafce8e5b5aaa98f2972c12f81dc33f59e6",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_b20cd4db11ef14f6466c795f",
+      "ordinal": "article",
+      "name_original": "本溪市·铁刹山风景区",
+      "category_original": "belief",
+      "locality_original": "本溪市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_053375f10ae621933a48d483",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "8dad140b2b0e4a2ab14d8a052e2bef578451179ad589f537cd534a2c7a99b835",
+          "characters": 209
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

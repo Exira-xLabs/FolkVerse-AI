@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "b1124c16d00361cf970e47766b57a001ee855f76d1eb36d6a7e09602447b7911",
+  "source": {
+    "id": "explanation-jinzhou-1",
+    "title": "锦州市·锦州市博物馆",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415582121511/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415582121511/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-24",
+    "edition": "2025-11-24",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "锦州市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "b8025f42c42b21ed658a60ae9ab457c2338fb2871163f5684e83c4f3d15f4046",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_d6259ead56a13a51c3ed1524",
+      "ordinal": "article",
+      "name_original": "锦州市·锦州市博物馆",
+      "category_original": "museums",
+      "locality_original": "锦州市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_14793662fe6443e0311493d3",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "808df282d3885ce53274b4925e716413b68be7a5cfaf4ba202b437c919f86ee1",
+          "characters": 146
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

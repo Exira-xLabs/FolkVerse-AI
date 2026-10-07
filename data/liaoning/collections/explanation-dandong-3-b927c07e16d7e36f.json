@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "b927c07e16d7e36f74e9c6bf8d2050953b6a3d8fe3f70606627b3659db4d68cd",
+  "source": {
+    "id": "explanation-dandong-3",
+    "title": "丹东市·东港市大鹿岛景区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115345033432/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115345033432/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-01",
+    "edition": "2025-12-01",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "丹东市",
+    "subject_hint": "history_geography"
+  },
+  "raw_sha256": "48011fdcef4ae0ef76d9986b6a8ac6e74c61ca8e81a462a4e64763984bce56ee",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_a6af81d7c67233527f36ea72",
+      "ordinal": "article",
+      "name_original": "丹东市·东港市大鹿岛景区",
+      "category_original": "history_geography",
+      "locality_original": "丹东市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_a8a4ed712e122aa45cf436f3",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "59a6cdcc4ecfe973a554bb7fd0079ac6ba6e5f15714c64efd3407aca92c77b36",
+          "characters": 289
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

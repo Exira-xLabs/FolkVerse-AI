@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "ce81e4ca5e6bdd3898967950533927807df566370c907b51c12e327701126f7f",
+  "source": {
+    "id": "explanation-chaoyang-3",
+    "title": "朝阳市·辽宁朝阳鸟化石国家地质公园景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715574271950/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715574271950/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-10-27",
+    "edition": "2025-10-27",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "朝阳市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "9370ea6f2b542fcdc4e6c55481f47f30339fd40e8d9a7e7573e73e694646ca34",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_60880106118de9b7f5637a8e",
+      "ordinal": "article",
+      "name_original": "朝阳市·辽宁朝阳鸟化石国家地质公园景区",
+      "category_original": "museums",
+      "locality_original": "朝阳市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_b35cb05c1fc872828d608db8",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "73f99581f10129d0add1d6605e25946f74411d69f1865d1c0fa706eb3597a335",
+          "characters": 105
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

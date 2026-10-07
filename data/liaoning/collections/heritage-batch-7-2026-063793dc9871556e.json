@@ -1,0 +1,32 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "063793dc9871556e708a19253da0f5e0c4bd1f7ff3658a7a6684d6fba37f7a85",
+  "source": {
+    "id": "heritage-batch-7-2026",
+    "title": "Seventh provincial heritage batch (134), final gazette",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://www.ln.gov.cn/web/zwgkx/lnsrmzfgb/2026n/qk/2026n_dsq2/szfwj/2026021311343535065/index.shtml",
+    "resource_url": "https://www.ln.gov.cn/web/zwgkx/lnsrmzfgb/2026n/qk/2026n_dsq2/szfwj/2026021311343535065/index.shtml",
+    "adapter": "descriptor",
+    "kind": "heritage",
+    "reference_date": "2026-01-16",
+    "edition": "heritage-batch-7-2026",
+    "expected_count": 134,
+    "counting_unit": "inventory project rows",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Final list is eight scanned image pages. Requires OCR/table reconciliation; 2025 consultation proposal is not the final list.",
+    "locality": "",
+    "subject_hint": null
+  },
+  "raw_sha256": "552d4aec828739b4afd6faf6e087bf759fd7e9ba8a97c75c7061109cf52680d7",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T14:57:02.377046+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "extraction_pending",
+  "rows": [],
+  "errors": [
+    "Descriptor/checkpoint only; no enumeration imported"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "version": "liaoning-launch-v1",
+  "geography_source": "admin-2026-h1",
+  "minimum_topics_per_city": 3,
+  "minimum_subjects_per_city": 2,
+  "required_locales": [
+    "en",
+    "zh-CN"
+  ],
+  "required_topic_units": [
+    "introduction",
+    "context",
+    "term_or_example",
+    "question"
+  ],
+  "cities": [
+    {
+      "id": "liaoning-dalian",
+      "names": {
+        "en": "Dalian",
+        "zh-CN": "大连"
+      }
+    },
+    {
+      "id": "liaoning-shenyang",
+      "names": {
+        "en": "Shenyang",
+        "zh-CN": "沈阳"
+      }
+    },
+    {
+      "id": "liaoning-anshan",
+      "names": {
+        "en": "Anshan",
+        "zh-CN": "鞍山"
+      }
+    },
+    {
+      "id": "liaoning-fushun",
+      "names": {
+        "en": "Fushun",
+        "zh-CN": "抚顺"
+      }
+    },
+    {
+      "id": "liaoning-benxi",
+      "names": {
+        "en": "Benxi",
+        "zh-CN": "本溪"
+      }
+    },
+    {
+      "id": "liaoning-dandong",
+      "names": {
+        "en": "Dandong",
+        "zh-CN": "丹东"
+      }
+    },
+    {
+      "id": "liaoning-jinzhou",
+      "names": {
+        "en": "Jinzhou",
+        "zh-CN": "锦州"
+      }
+    },
+    {
+      "id": "liaoning-yingkou",
+      "names": {
+        "en": "Yingkou",
+        "zh-CN": "营口"
+      }
+    },
+    {
+      "id": "liaoning-fuxin",
+      "names": {
+        "en": "Fuxin",
+        "zh-CN": "阜新"
+      }
+    },
+    {
+      "id": "liaoning-liaoyang",
+      "names": {
+        "en": "Liaoyang",
+        "zh-CN": "辽阳"
+      }
+    },
+    {
+      "id": "liaoning-tieling",
+      "names": {
+        "en": "Tieling",
+        "zh-CN": "铁岭"
+      }
+    },
+    {
+      "id": "liaoning-chaoyang",
+      "names": {
+        "en": "Chaoyang",
+        "zh-CN": "朝阳"
+      }
+    },
+    {
+      "id": "liaoning-panjin",
+      "names": {
+        "en": "Panjin",
+        "zh-CN": "盘锦"
+      }
+    },
+    {
+      "id": "liaoning-huludao",
+      "names": {
+        "en": "Huludao",
+        "zh-CN": "葫芦岛"
+      }
+    }
+  ],
+  "note": "Readiness floor, not a collection ceiling; all 14 cities remain in scope."
+}

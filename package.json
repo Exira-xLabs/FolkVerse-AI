@@ -22,7 +22,14 @@
     "test:guide": "node scripts/test-guide.mjs",
     "test:secrets": "node --test scripts/check-secrets.test.mjs",
     "test:e2e": "playwright test",
-    "check:foundation": "node scripts/check-foundation.mjs"
+    "check:foundation": "node scripts/check-foundation.mjs",
+    "data:liaoning:collect": "uv run --project apps/api python -m folkverse.liaoning_inventory collect",
+    "data:liaoning:report": "uv run --project apps/api python -m folkverse.liaoning_inventory report",
+    "data:liaoning:queue": "uv run --project apps/api python -m folkverse.liaoning_queue",
+    "data:liaoning:review": "uv run --project apps/api python -m folkverse.liaoning_review",
+    "data:liaoning:launch": "uv run --project apps/api python -m folkverse.liaoning_launch",
+    "data:liaoning:publish": "uv run --project apps/api python -m folkverse.liaoning_publication",
+    "benchmark:guide": "uv run --project apps/api --extra embeddings python -m folkverse.guide_benchmark"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0"

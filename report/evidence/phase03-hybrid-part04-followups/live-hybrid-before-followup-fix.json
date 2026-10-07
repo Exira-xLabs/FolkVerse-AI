@@ -1,0 +1,545 @@
+{
+  "started_at": "2026-10-07T02:05:36.781Z",
+  "mode": "real local browser/BFF/API/configured provider",
+  "turns": [
+    {
+      "question": "Explain Fuzhou shadow puppetry",
+      "status": 200,
+      "elapsed_ms": 1793.5498830000001,
+      "answer": {
+        "answer_id": "ans_bd6d0df4dd3f4569ab831be2a574f346",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.\n\nShadow puppetry is a traditional performance art in which flat, cut-out figures are held behind a lit screen, so the audience sees their shadows move. Think of it like an early form of animation: the puppeteer controls the figures with rods while music and storytelling bring the scene to life.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyFjMtqwzAQRf9l1jHMSKOH_SullJE0SgVBDrbbpIT8e7UpXXTR3b1wznnAeuu6wQIonsUXXyiyKywOHRkfTK1kXHSUYi1sKSF5ySYyqhJb4Sg2zM7OcAK9v7fUjrdWRu_SZO2tn6ciY_YJaRBX2Xc56yB2WF5-7vSXnbTD6y__qdve1j6kxz_SAsbk4HOQSopJszelJstYMmPNMUvCEAKzzqpCQaPEiCFXL568MergeYKPnnU7pPXjaxSvsh1NLvD8BtZ5Xtw.asWo8w.aXEbYjTLw-BIhCvFHleNQnWSx6A",
+        "provider_attempt_id": "call_64bac2c380634c5b9209f1cc8963369e",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "sources_checked"
+          },
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "Shadow puppetry is a traditional performance art in which flat, cut-out figures are held behind a lit screen, so the audience sees their shadows move. Think of it like an early form of animation: the puppeteer controls the figures with rods while music and storytelling bring the scene to life.",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 20.403250999947886,
+        "database_ms": 20.027412999979788,
+        "ranking_ms": 0.14303800003290235,
+        "generation_ms": 1623.181170999942,
+        "validation_ms": 11.287654999932784,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ],
+          "evidence_origin": "reviewed_corpus",
+          "classification": "source_statement",
+          "statement_variants": [],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "Explain that simply",
+      "status": 200,
+      "elapsed_ms": 1836.3924809999999,
+      "answer": {
+        "answer_id": "ans_f62e7e103faf42bf802360ada465ddfe",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.\n\nShadow puppetry is a traditional performance art where flat, cut-out figures are held behind a lit screen, so the audience sees their shadows move. Think of it like an early form of animation: the puppeteer controls the figures with rods while music and storytelling bring the scene to life.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyFjMtqwzAQRf9l1jHMSKOH_SullJE0SgVBDrbbpIT8e7UpXXTR3b1wznnAeuu6wQIonsUXXyiyKywOHRkfTK1kXHSUYi1sKSF5ySYyqhJb4Sg2zM7OcAK9v7fUjrdWRu_SZO2tn6ciY_YJaRBX2Xc56yB2WF5-7vSXnbTD6y__qdve1j6kxz_SAsbk4HOQSopJszelJstYMmPNMUvCEAKzzqpCQaPEiCFXL568MergeYKPnnU7pPXjaxSvsh1NLvD8BtZ5Xtw.asWo9g.sc0Ctz2ANqcaGrbN2Wh8I0bizCo",
+        "provider_attempt_id": "call_886b4cc03ba046038ef22b8aca694649",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "sources_checked"
+          },
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "Shadow puppetry is a traditional performance art where flat, cut-out figures are held behind a lit screen, so the audience sees their shadows move. Think of it like an early form of animation: the puppeteer controls the figures with rods while music and storytelling bring the scene to life.",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 43.79758499999298,
+        "database_ms": 14.01051400000597,
+        "ranking_ms": 0.12281599993002601,
+        "generation_ms": 1629.6708329999774,
+        "validation_ms": 14.190001999963897,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ],
+          "evidence_origin": "reviewed_corpus",
+          "classification": "source_statement",
+          "statement_variants": [],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "请用中文再解释一次",
+      "status": 200,
+      "elapsed_ms": 1749.0975089999993,
+      "answer": {
+        "answer_id": "ans_db421bb4095f4251ad6b7631648cde06",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "insufficient",
+        "reason": "general_explanation",
+        "answer_text": "皮影戏是一种传统表演艺术：艺人用杆子操控扁平的剪影人偶，在灯光和幕布之间移动，观众看到的是幕布上的影子。可以把它想成一种早期的“动画”——人偶的动作配上音乐和讲故事，让画面活起来。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "来源支持已经检查；一般背景说明未经独立事实核验。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": "call_377175298ce24b7c8c06515910af3fa0",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "皮影戏是一种传统表演艺术：艺人用杆子操控扁平的剪影人偶，在灯光和幕布之间移动，观众看到的是幕布上的影子。可以把它想成一种早期的“动画”——人偶的动作配上音乐和讲故事，让画面活起来。",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 33.18694899996899,
+        "database_ms": 32.55487399997037,
+        "ranking_ms": 0.21534600000450155,
+        "generation_ms": 1482.1972409999944,
+        "validation_ms": 12.038751999966735,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [],
+      "ui_status": "ready"
+    },
+    {
+      "question": "Explain that more deeply",
+      "status": 200,
+      "elapsed_ms": 1951.2574489999988,
+      "answer": {
+        "answer_id": "ans_36ee1e8ff52740ebb8b3a9422c25ec0c",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.\n\nTo go a little deeper: shadow puppetry works because light travels in straight lines. A flat figure held close to the screen casts a small, sharp shadow, while moving it farther back makes the shadow grow and blur. Puppeteers use this trick to make characters seem to leap, shrink or loom large — a bit like holding your hand near a lamp versus across the room. What do you think a bigger shadow would make an audience feel?",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyFjMtqwzAQRf9l1jHMSKOH_SullJE0SgVBDrbbpIT8e7UpXXTR3b1wznnAeuu6wQIonsUXXyiyKywOHRkfTK1kXHSUYi1sKSF5ySYyqhJb4Sg2zM7OcAK9v7fUjrdWRu_SZO2tn6ciY_YJaRBX2Xc56yB2WF5-7vSXnbTD6y__qdve1j6kxz_SAsbk4HOQSopJszelJstYMmPNMUvCEAKzzqpCQaPEiCFXL568MergeYKPnnU7pPXjaxSvsh1NLvD8BtZ5Xtw.asWo-w.Gios0ieG-6U7CW6gW52lX_ERU9c",
+        "provider_attempt_id": "call_0d7c3f079b134b2ebdb7a49b4023fa8c",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "sources_checked"
+          },
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "To go a little deeper: shadow puppetry works because light travels in straight lines. A flat figure held close to the screen casts a small, sharp shadow, while moving it farther back makes the shadow grow and blur. Puppeteers use this trick to make characters seem to leap, shrink or loom large — a bit like holding your hand near a lamp versus across the room. What do you think a bigger shadow would make an audience feel?",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 52.47179299999516,
+        "database_ms": 19.41430900001251,
+        "ranking_ms": 0.17364299992550514,
+        "generation_ms": 1746.0208310000098,
+        "validation_ms": 13.917522000042482,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ],
+          "evidence_origin": "reviewed_corpus",
+          "classification": "source_statement",
+          "statement_variants": [],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "When was Shenyang Imperial Palace founded?",
+      "status": 200,
+      "elapsed_ms": 1864.379422,
+      "answer": {
+        "answer_id": "ans_a72ebbafaeb04d059b4cf56b15b9fdfe",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "passage_ids": [
+              "lookup_935f345a1440d4bcaedee181e83535b2"
+            ],
+            "source_ids": [
+              "explanation-shenyang-1"
+            ],
+            "kind": "source_statement",
+            "support_method": "official_metadata_projection_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_935f345a1440d4bcaedee181e83535b2"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyNkEFqwzAQRe-idQKSZmRZvkopYUYzSkSDbGynTQi5e1UodNvt5723-E8zfzVdzWQGRmehcEw4WBx49CX7LAFicjkxoQQL2YICiFefIuQoiIx9xpSdORi9XyrX_VSl967z_HFbJr0vV2q017kdt4u2B7Xz8QdeaNvorB3ezPT2i58ShAIYyCFaQc6koupGpyMECOzN-5_5qevWs11__lufTPSKKgCehHxASeJsKS6knACZOQswlAG80BiJxeU-USnJUxz6AeZ1MLeWdd2ptv3Riwute6WreX0DXARnMA.asWo_w.GftOdm2z4Mo3RgGHBD-1_pGz1RE",
+        "provider_attempt_id": "call_ca397475cfb44366a5b2ac3def464647",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 379.21371799995995,
+        "database_ms": 17.770833999975366,
+        "ranking_ms": 0.11790799999289447,
+        "generation_ms": 1031.6163690000622,
+        "validation_ms": 12.098924000042643,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "lookup_935f345a1440d4bcaedee181e83535b2",
+          "source_id": "explanation-shenyang-1",
+          "text": "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.\nAccording to the official profile, Shenyang Imperial Palace was founded in 1625.",
+          "language": "en",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Ephemeral attributed metadata/short-statement lookup; no media/full-page republication or editorial approval.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳故宫",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+          "fetched_at": "2026-10-07T02:05:50.181108Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "not_editorially_reviewed",
+          "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.",
+            "According to the official profile, Shenyang Imperial Palace was founded in 1625."
+          ],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "Explain that simply",
+      "status": 200,
+      "elapsed_ms": 2235.4081850000002,
+      "answer": {
+        "answer_id": "ans_46166197efa34990994739f021cb79ff",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "unsupported_claim",
+        "answer_text": "I do not have enough reviewed evidence to answer that question.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "The available reviewed material and official lookup do not support this specific request. General background can be explored separately.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": "call_cee84aac109c4ca3bbec3530b04a8c29",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": null,
+        "sections": [],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 792.4265940000623,
+        "database_ms": 22.748918999923262,
+        "ranking_ms": 0.11420400005590636,
+        "generation_ms": 1301.215577999983,
+        "validation_ms": 0.167884999996204,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "ui_status": "ready"
+    }
+  ],
+  "errors": [
+    "Unexpected support state 6"
+  ],
+  "completed_at": "2026-10-07T02:05:55.460Z"
+}

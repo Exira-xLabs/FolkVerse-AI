@@ -1,0 +1,30 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "44896dc1a26751e8ab38039d97155baa49e0263735e529f210f8611cfe9ac318",
+  "source": {
+    "id": "museums-checkpoint-2025",
+    "title": "2025-end registered museum count checkpoint",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/zfxxgk/fdzdgknr/jyta/szxta/szxssjschy2026n/2026081311131551908/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/zfxxgk/fdzdgknr/jyta/szxta/szxssjschy2026n/2026081311131551908/index.shtml",
+    "adapter": "descriptor",
+    "kind": "checkpoint",
+    "reference_date": "2025-12-31",
+    "edition": "museums-checkpoint-2025",
+    "expected_count": 152,
+    "counting_unit": "registered institutions at 2025 end",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "2026 departmental response reports 152 museums at 2025 end; the 2025 row-level inventory still needs discovery."
+  },
+  "raw_sha256": "be8bbdf654cb6ff984bfcb138c5bb53715a718afa87d089bb9527ae5dc82f15d",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T14:57:06.748192+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v3",
+  "status": "extraction_pending",
+  "rows": [],
+  "errors": [
+    "Descriptor/checkpoint only; no enumeration imported"
+  ]
+}

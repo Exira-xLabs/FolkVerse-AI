@@ -1,0 +1,518 @@
+{
+  "started_at": "2026-10-07T02:03:27.317Z",
+  "mode": "real local browser/BFF/API/configured provider",
+  "turns": [
+    {
+      "question": "Explain Fuzhou shadow puppetry",
+      "status": 200,
+      "elapsed_ms": 1593.487951,
+      "answer": {
+        "answer_id": "ans_c5da6e98bd824ad3843de768a58fb7dd",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.\n\nShadow puppetry is a traditional performance art where flat figures are moved behind a lit screen, creating silhouettes for the audience. Think of it like an early form of animation, with a puppeteer bringing characters to life through light and shadow.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": "call_c77885906f734729a7baa5ed4aae0307",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "sources_checked"
+          },
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "Shadow puppetry is a traditional performance art where flat figures are moved behind a lit screen, creating silhouettes for the audience. Think of it like an early form of animation, with a puppeteer bringing characters to life through light and shadow.",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 27.348352999979397,
+        "database_ms": 24.794785000040065,
+        "ranking_ms": 1.279476999968665,
+        "generation_ms": 1343.6386600000105,
+        "validation_ms": 18.857341999989785,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ],
+          "evidence_origin": "reviewed_corpus",
+          "classification": "source_statement",
+          "statement_variants": [],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "What is shadow puppetry?",
+      "status": 200,
+      "elapsed_ms": 1351.018959,
+      "answer": {
+        "answer_id": "ans_10936eaea5d946af9bbd1a6dc1c91968",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "insufficient",
+        "reason": "general_explanation",
+        "answer_text": "Shadow puppetry is a traditional form of storytelling where flat figures are held behind a lit screen, casting shadows that move and act out a tale. Think of it like an early cartoon: the puppeteer controls the characters from behind, and the audience sees only the shadows. Have you ever made hand shadows on a wall? That is the same basic idea, but with carefully cut figures and a scripted story.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": "call_8d8531a9913a4caa937f678cc40da120",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "Shadow puppetry is a traditional form of storytelling where flat figures are held behind a lit screen, casting shadows that move and act out a tale. Think of it like an early cartoon: the puppeteer controls the characters from behind, and the audience sees only the shadows. Have you ever made hand shadows on a wall? That is the same basic idea, but with carefully cut figures and a scripted story.",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 27.07807799998818,
+        "database_ms": 25.981011999988368,
+        "ranking_ms": 0.19332200002963873,
+        "generation_ms": 1166.0724579999737,
+        "validation_ms": 19.51293799999121,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [],
+      "ui_status": "ready"
+    },
+    {
+      "question": "什么是皮影戏？",
+      "status": 200,
+      "elapsed_ms": 1131.370272,
+      "answer": {
+        "answer_id": "ans_f9a53ba512a44fb2abd9a39534accf7d",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "目前经过审核的资料不足以回答这个问题。",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "现有审核资料与官方查询不足以支持这个具体问题。可以另行了解一般背景。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": null,
+        "sections": [],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 59.132088999945154,
+        "database_ms": 58.40180100000225,
+        "ranking_ms": 0.3189900000393209,
+        "generation_ms": 761.1118479999845,
+        "validation_ms": 0.09668599994938631,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "ui_status": "ready"
+    },
+    {
+      "question": "When was Shenyang Imperial Palace founded?",
+      "status": 200,
+      "elapsed_ms": 2379.075175,
+      "answer": {
+        "answer_id": "ans_14543567d0ee45e5961394af2a5f6b04",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "passage_ids": [
+              "lookup_935f345a1440d4bcaedee181e83535b2"
+            ],
+            "source_ids": [
+              "explanation-shenyang-1"
+            ],
+            "kind": "source_statement",
+            "support_method": "official_metadata_projection_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_935f345a1440d4bcaedee181e83535b2"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": "call_f8fb0da098244d52bc219dcbee289c3b",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 498.7208879999798,
+        "database_ms": 33.20106800003941,
+        "ranking_ms": 0.1752709999891522,
+        "generation_ms": 1411.5365260000772,
+        "validation_ms": 20.172372999923027,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "lookup_935f345a1440d4bcaedee181e83535b2",
+          "source_id": "explanation-shenyang-1",
+          "text": "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.\nAccording to the official profile, Shenyang Imperial Palace was founded in 1625.",
+          "language": "en",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Ephemeral attributed metadata/short-statement lookup; no media/full-page republication or editorial approval.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳故宫",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+          "fetched_at": "2026-10-07T02:03:34.042362Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "not_editorially_reviewed",
+          "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.",
+            "According to the official profile, Shenyang Imperial Palace was founded in 1625."
+          ],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "沈阳故宫始建于哪一年？",
+      "status": 200,
+      "elapsed_ms": 1845.1647229999999,
+      "answer": {
+        "answer_id": "ans_9619e8e156364b258b0c4eacd9fcfc55",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "官方介绍记载，沈阳故宫始建于1625年。",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "官方介绍记载，沈阳故宫始建于1625年。",
+            "passage_ids": [
+              "lookup_46e075dd4582704a7a23d5d88389b122"
+            ],
+            "source_ids": [
+              "explanation-shenyang-1"
+            ],
+            "kind": "source_statement",
+            "support_method": "official_metadata_projection_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_46e075dd4582704a7a23d5d88389b122"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "来源支持已经检查；一般背景说明未经独立事实核验。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": "call_616e98f8920c4b3e87c89263ad74b2d9",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "官方介绍记载，沈阳故宫始建于1625年。",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 368.330646000004,
+        "database_ms": 95.1244459999998,
+        "ranking_ms": 0.35655499993936246,
+        "generation_ms": 747.9660039999771,
+        "validation_ms": 20.329930000002605,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "lookup_46e075dd4582704a7a23d5d88389b122",
+          "source_id": "explanation-shenyang-1",
+          "text": "辽宁省文化和旅游厅的资料介绍了沈阳故宫。\n官方介绍记载，沈阳故宫始建于1625年。\n景区当前等级：4A\n沈阳故宫始建于1625年，占地面积6万平方米，共保留清代建筑114座，计500余间。",
+          "language": "zh-CN",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Ephemeral attributed metadata/short-statement lookup; no media/full-page republication or editorial approval.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳故宫",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+          "fetched_at": "2026-10-07T02:03:38.694744Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "not_editorially_reviewed",
+          "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "辽宁省文化和旅游厅的资料介绍了沈阳故宫。",
+            "官方介绍记载，沈阳故宫始建于1625年。",
+            "景区当前等级：4A\n沈阳故宫始建于1625年，占地面积6万平方米，共保留清代建筑114座，计500余间。"
+          ],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "When was Fuzhou shadow puppetry invented?",
+      "status": 200,
+      "elapsed_ms": 162.71806499999911,
+      "answer": {
+        "answer_id": "ans_63459ef463bb4da9b8d931619474fd24",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "I do not have enough reviewed evidence to answer that question.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "The available reviewed material and official lookup do not support this specific request. General background can be explored separately.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": null,
+        "sections": [],
+        "lookup_status": "no_directory_match",
+        "retrieval_ms": null,
+        "database_ms": null,
+        "ranking_ms": null,
+        "generation_ms": null,
+        "validation_ms": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "ui_status": "ready"
+    },
+    {
+      "question": "What are the current opening hours of Shenyang Imperial Palace?",
+      "status": 200,
+      "elapsed_ms": 446.2284779999991,
+      "answer": {
+        "answer_id": "ans_c3c524053b3944bc9c820111bf56a80f",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "insufficient",
+        "uncertainty": "insufficient",
+        "reason": "coverage_gap",
+        "answer_text": "I do not have enough reviewed evidence to answer that question.",
+        "claims": [],
+        "answer_claim_ids": [],
+        "context_claim_ids": [],
+        "evidence_ids": [],
+        "related_exhibit_ids": [],
+        "coverage_limit": "The available reviewed material and official lookup do not support this specific request. General background can be explored separately.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": null,
+        "provider_attempt_id": null,
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": null,
+        "sections": [],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": null,
+        "database_ms": null,
+        "ranking_ms": null,
+        "generation_ms": null,
+        "validation_ms": null,
+        "presentation_version": "attributed_excerpt_v1"
+      },
+      "sources": [],
+      "ui_status": "ready"
+    }
+  ],
+  "errors": [
+    "Unexpected support state 3"
+  ],
+  "completed_at": "2026-10-07T02:03:42.072Z"
+}

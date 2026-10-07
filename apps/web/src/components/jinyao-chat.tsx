@@ -1,10 +1,11 @@
 "use client";
 
 import { api, type GuideAnswer, type GuideEvidence } from "@folkverse/contracts";
+import { recentConversation, replyPreferences, type ReplyLanguage } from "@/lib/guide-conversation";
 import { GuideError, sendGuide, type GuideStage } from "@/lib/guide-stream";
 import { GuideSourceInspector } from "./guide-source-inspector";
 import Link from "next/link";
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { lockDocumentScroll, trapDialogTab } from "@/lib/dialog";
 import { useGuideKeyboard } from "@/lib/use-guide-keyboard";
 import { useLocale } from "./locale-provider";
@@ -34,12 +35,19 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
   const controller = useRef<AbortController | null>(null);
   const context = useRef<string | null>(null);
   const [consent, setConsent] = useState(false);
+  const [replyLanguage, setReplyLanguage] = useState<ReplyLanguage>("auto");
   const [depth, setDepth] = useState<"concise" | "beginner" | "deeper">("concise");
   const [evidence, setEvidence] = useState<GuideEvidence[] | null>(null);
   const [topics, setTopics] = useState<{ locale: string; items: { id: string; title: string }[] } | null>(null);
   const [draft, setDraft] = useState("");
   const [turns, setTurns] = useState<Turn[]>([]);
   const [historyTrimmed, setHistoryTrimmed] = useState(false);
+  const invalidateEvidence = useCallback((stale: GuideEvidence[]) => {
+    const ids = new Set(stale.map(p => p.passage_id));
+    context.current = null;
+    setTurns(previous => previous.map(turn => turn.answer?.evidence_ids?.some(id => ids.has(id))
+      ? { ...turn, status: "error", error: "evidence_changed", answer: undefined } : turn));
+  }, []);
   const pending = turns.some(turn => turn.status === "pending");
   useGuideKeyboard();
   useEffect(() => {
@@ -68,11 +76,7 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
     const text = question.trim().slice(0, 2000);
     if (!text || pending || controller.current || timer.current) return;
     const id = ++nextId.current;
-    const normalized = text.toLocaleLowerCase().replace(/[?.!。！？]+$/, "");
-    const replyLocale = ["say that in chinese", "用中文说"].includes(normalized) ? "zh-CN" :
-      ["say that in english", "用英文说"].includes(normalized) ? "en" : locale;
-    const replyDepth = ["explain that simply", "simplify that", "make it simpler", "解释得简单一点", "说简单一点"].includes(normalized) ? "beginner" :
-      ["go deeper", "explain more", "详细一点"].includes(normalized) ? "deeper" : depth;
+    const { locale: replyLocale, depth: replyDepth } = replyPreferences(text, locale, depth, replyLanguage);
     if (live) { setLocale(replyLocale); setDepth(replyDepth); }
     setDraft("");
     if (turns.length >= MAX_VISIBLE_TURNS) setHistoryTrimmed(true);
@@ -80,6 +84,7 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
     if (live) {
       const abort = new AbortController(); controller.current = abort;
       void sendGuide({ question: text, locale: replyLocale, depth: replyDepth, exhibit_id: initialExhibitId,
+        conversation: consent ? recentConversation(turns) : [],
         context_consent: consent, context_token: consent ? context.current : null }, abort.signal,
         stage => { if (!abort.signal.aborted) setTurns(previous => previous.map(turn => turn.id === id ? { ...turn, stage } : turn)); })
         .then(reply => {
@@ -125,19 +130,19 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
       if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) onClose();
     }}>
     <header className="jinyao-chat-header"><JinyaoAvatar size={52} /><div><h2 id={titleId}>{zh ? "锦瑶 · Jinyao" : "Jinyao"}</h2><p>{live ? (zh ? "您的文化伙伴 · 审核资料" : "Your cultural companion · reviewed evidence") : (zh ? "您的文化伙伴 · 示例对话" : "Your cultural companion · example chat")}</p></div><button className="jinyao-close" autoFocus onClick={onClose} aria-label={zh ? "关闭锦瑶聊天" : "Close Jinyao chat"}>×</button></header>
-    <p className="jinyao-chat-notice">{live ? (zh ? "文化问题会发送至向导服务与配置的 AI 提供商。当前审核资料范围有限；对话仅保留在本页。" : "Cultural questions are sent to the guide service and configured AI provider. Reviewed coverage is limited; chat stays on this page.") : (zh ? "预设示例 · 未连接真实 AI · 不会发送消息" : "Scripted preview · no live AI · messages are not sent")}</p>
+    <p className="jinyao-chat-notice">{live ? (zh ? "消息会发送至向导服务，并可能由配置的 AI 提供商处理。当前审核资料范围有限；本应用仅在本页保留对话，不保存原始聊天记录。" : "Messages are sent to the guide service and may be processed by the configured AI provider. Reviewed coverage is limited; this app keeps the transcript on this page and does not store raw chat history.") : (zh ? "预设示例 · 未连接真实 AI · 不会发送消息" : "Scripted preview · no live AI · messages are not sent")}</p>
     <div ref={history} className="jinyao-chat-history" role="log" aria-label={live ? (zh ? "与锦瑶的对话" : "Conversation with Jinyao") : (zh ? "与锦瑶的示例对话" : "Example conversation with Jinyao")} aria-live="polite" aria-relevant="additions text" aria-busy={pending}>
       <div className="jinyao-message from-jinyao"><JinyaoAvatar size={32} /><div><span className="sr-only">Jinyao: </span><p>{live ? (zh ? "您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。" : "Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.") : (zh ? "您好，我是锦瑶。想从哪里开始探索？选择下方的问题，试试和我聊天的感觉。" : "Hi, I’m Jinyao. What are you curious about today? Try a question below to see how a conversation could feel.")}</p></div></div>
       {turns.map(turn => {
         const response = prompts.find(prompt => prompt.id === turn.prompt);
         return <div className="jinyao-chat-turn" key={turn.id} data-status={turn.status}>
           <div className="jinyao-message from-visitor"><span className="sr-only">{zh ? "您：" : "You: "}</span><p>{turn.question}</p></div>
-          <div className="jinyao-message from-jinyao"><JinyaoAvatar size={32} /><div><span className="sr-only">Jinyao: </span><p>{turn.status === "pending" ? (live ? stageText(turn.stage) : (zh ? "正在准备示例回复…" : "Preparing an example reply…")) : turn.status === "cancelled" ? (zh ? "回复已停止。您可以尝试另一个问题。" : "Reply stopped. You can try another question.") : turn.status === "error" ? liveError(turn.error) : turn.answer ? turn.answer.answer_text : response ? response.answer[language] : (zh ? "谢谢您的问题。此处只能展示预设对话，暂时无法依据证据回答自由输入的问题。您可以尝试上方的示例问题，或浏览审核馆藏。" : "Thank you for asking. I can only show prepared conversations here, so I cannot answer your question from evidence yet. Try a suggested question, or explore the reviewed collection.")}</p>{live && turn.answer && turn.answer.status !== "conversational" && <><p className="fine-print">{turn.answer.coverage_limit}</p><span className="demo-tag">{turn.answer.uncertainty === "partial" ? (zh ? "有限证据" : "Limited evidence") : (zh ? "资料不足" : "Insufficient evidence")}</span>{(turn.answer.sources ?? []).length > 0 && <button className="outline-button" onClick={() => setEvidence(turn.answer!.sources ?? [])}>{zh ? "查看回答来源" : "Inspect answer sources"}</button>}</>}{live && (turn.status === "error" || turn.status === "cancelled") && <button className="outline-button" disabled={pending} onClick={() => send(turn.question)}>{zh ? "重试问题" : "Retry question"}</button>}{turn.status === "ready" && response && "href" in response && <Link href={response.href} onClick={onClose}>{response.link[language]} <ArrowIcon direction="diagonal" /></Link>}</div></div>
+          <div className="jinyao-message from-jinyao"><JinyaoAvatar size={32} /><div><span className="sr-only">Jinyao: </span><p>{turn.status === "pending" ? (live ? stageText(turn.stage) : (zh ? "正在准备示例回复…" : "Preparing an example reply…")) : turn.status === "cancelled" ? (zh ? "回复已停止。您可以尝试另一个问题。" : "Reply stopped. You can try another question.") : turn.status === "error" ? liveError(turn.error) : turn.answer ? (turn.answer.contract_version === "hybrid_sections_v1" ? null : turn.answer.answer_text) : response ? response.answer[language] : (zh ? "谢谢您的问题。此处只能展示预设对话，暂时无法依据证据回答自由输入的问题。您可以尝试上方的示例问题，或浏览审核馆藏。" : "Thank you for asking. I can only show prepared conversations here, so I cannot answer your question from evidence yet. Try a suggested question, or explore the reviewed collection.")}</p>{turn.status === "ready" && turn.answer?.contract_version === "hybrid_sections_v1" && turn.answer.sections?.map(section => <section key={section.section_id} data-support={section.support_label}><p className="fine-print">{section.support_label === "general_unverified" ? (zh ? "一般说明 · 未经事实核验" : "General explanation · not fact-verified") : section.support_label === "official_lookup" ? (zh ? "官方来源 · 已在线检查 · 未经编辑审核" : "Official source · checked online · not editorially reviewed") : (zh ? "已检查来源支持" : "Sources checked")}</p><p>{section.text}</p></section>)}{live && turn.answer && turn.answer.status !== "conversational" && <><p className="fine-print">{turn.answer.coverage_limit}</p><span className="demo-tag">{turn.answer.uncertainty === "partial" ? (zh ? "有限证据" : "Limited evidence") : (zh ? "资料不足" : "Insufficient evidence")}</span>{(turn.answer.sources ?? []).length > 0 && <button className="outline-button" onClick={() => setEvidence(turn.answer!.sources ?? [])}>{zh ? "查看回答来源" : "Inspect answer sources"}</button>}</>}{live && (turn.status === "error" || turn.status === "cancelled") && <button className="outline-button" disabled={pending} onClick={() => send(turn.question)}>{zh ? "重试问题" : "Retry question"}</button>}{turn.status === "ready" && response && "href" in response && <Link href={response.href} onClick={onClose}>{response.link[language]} <ArrowIcon direction="diagonal" /></Link>}</div></div>
         </div>;
       })}
     </div>
     <div className="jinyao-chat-prompts">{live ? (topics?.locale === locale ? topics.items : []).map(topic => <button key={topic.id} disabled={pending} onClick={() => send(zh ? `介绍一下${topic.title}` : `What does the reviewed source say about ${topic.title}?`)}>{topic.title}</button>) : prompts.map(prompt => <button key={prompt.id} disabled={pending} onClick={() => send(zh ? prompt.zh : prompt.en, prompt.id)}>{zh ? prompt.zh : prompt.en}</button>)}</div>
-    {live && <div className="jinyao-live-options"><label>{zh ? "解释深度" : "Explanation depth"}<select aria-label={zh ? "解释深度" : "Explanation depth"} value={depth} disabled={pending} onChange={event => setDepth(event.target.value as typeof depth)}><option value="concise">{zh ? "简短" : "Concise"}</option><option value="beginner">{zh ? "入门" : "Beginner"}</option><option value="deeper">{zh ? "深入" : "Deeper"}</option></select></label><label><input type="checkbox" checked={consent} disabled={pending} onChange={event => { setConsent(event.target.checked); if (!event.target.checked) context.current = null; }} />{zh ? "允许使用30分钟的展项与证据上下文进行追问" : "Use topic and evidence context for follow-ups for 30 minutes"}</label></div>}
+    {live && <div className="jinyao-live-options"><label>{zh ? "回复语言" : "Reply language"}<select aria-label={zh ? "回复语言" : "Reply language"} value={replyLanguage} disabled={pending} onChange={event => setReplyLanguage(event.target.value as ReplyLanguage)}><option value="auto">{zh ? "自动" : "Automatic"}</option><option value="en">English</option><option value="zh-CN">中文</option></select></label><label>{zh ? "解释深度" : "Explanation depth"}<select aria-label={zh ? "解释深度" : "Explanation depth"} value={depth} disabled={pending} onChange={event => setDepth(event.target.value as typeof depth)}><option value="concise">{zh ? "简短" : "Concise"}</option><option value="beginner">{zh ? "入门" : "Beginner"}</option><option value="deeper">{zh ? "深入" : "Deeper"}</option></select></label><label><input type="checkbox" checked={consent} disabled={pending} onChange={event => { setConsent(event.target.checked); if (!event.target.checked) context.current = null; }} />{zh ? "允许向模型发送最近最多6轮对话（8,000字以内），并使用30分钟的展项与证据上下文" : "Send up to 6 recent conversation turns (8,000 characters) to the model, and use topic and evidence context for 30 minutes"}</label></div>}
     <form className="jinyao-chat-composer" onSubmit={event => { event.preventDefault(); send(); }}><label className="sr-only" htmlFor="jinyao-question">{zh ? "给锦瑶的消息" : "Message Jinyao"}</label><textarea id="jinyao-question" rows={1} maxLength={2000} value={draft} onChange={event => setDraft(event.target.value)} onKeyDown={event => {
       if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing && event.keyCode !== 229) {
         event.preventDefault(); send();
@@ -145,5 +150,5 @@ export function JinyaoChat({ open, onClose, mode = "demo", initialExhibitId }: {
     }} placeholder={live ? (zh ? "向锦瑶提问…" : "Ask Jinyao…") : (zh ? "输入示例消息…" : "Write an example message…")} /><button className="gold-button" type="submit" disabled={!draft.trim() || pending} aria-label={live ? (zh ? "发送消息" : "Send message") : (zh ? "发送示例消息" : "Send example message")}><ArrowIcon direction="up" /></button></form>
     <footer className="jinyao-chat-footer"><span>{draft.length} / 2000</span>{pending ? <button onClick={stop}>{zh ? "停止回复" : "Stop reply"}</button> : <span>{zh ? "本页访问中的对话" : "Conversation for this page visit"}</span>}</footer>
     {historyTrimmed && <p className="jinyao-chat-limit" role="status">{zh ? "仅显示最近100轮对话，您可以继续聊天。" : "Showing the latest 100 turns. You can keep chatting."}</p>}
-  </dialog>{live && <GuideSourceInspector evidence={evidence} onClose={() => setEvidence(null)} />}</>;
+  </dialog>{live && <GuideSourceInspector evidence={evidence} onClose={() => setEvidence(null)} onInvalid={invalidateEvidence} />}</>;
 }

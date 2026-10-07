@@ -1,0 +1,719 @@
+{
+  "version": "liaoning-launch-material-v1",
+  "materials": [
+    {
+      "source_id": "explanation-shenyang-1",
+      "city_id": "liaoning-shenyang",
+      "subject": "sites",
+      "title": "沈阳市·沈阳故宫",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "沈阳故宫始建于1625年，建筑可按东、中、西路理解。",
+        "en": "The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections."
+      },
+      "example": {
+        "zh-CN": "东、中、西路是观察宫殿布局的具体线索。",
+        "en": "The three sections offer a concrete way to explore the palace layout."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5"
+    },
+    {
+      "source_id": "explanation-shenyang-2",
+      "city_id": "liaoning-shenyang",
+      "subject": "museums",
+      "title": "沈阳市·沈阳工业博物馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "沈阳工业博物馆利用原铸造厂车间展示工业历史。",
+        "en": "The Shenyang Industrial Museum uses former foundry workshops to present industrial history."
+      },
+      "example": {
+        "zh-CN": "车间本身也是理解工业生产空间的例子。",
+        "en": "The workshops themselves illustrate the spaces used for industrial production."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "c8e899182a49b4476a57a21d9cc2105f8b0836d80f8bead5e5ee9dd901c50493"
+    },
+    {
+      "source_id": "explanation-shenyang-3",
+      "city_id": "liaoning-shenyang",
+      "subject": "museums",
+      "title": "沈阳市·沈阳“九·一八“历史博物馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "九一八历史博物馆位于柳条湖事件相关地点附近。",
+        "en": "The September 18 History Museum stands near the site associated with the Liutiaohu incident."
+      },
+      "example": {
+        "zh-CN": "纪念馆把历史事件与具体地点联系起来。",
+        "en": "The museum connects a historical event to a specific place."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "1b9afab78925bfde698eff48562aa42c810a8b75dd87679c6e3e63f445485b01"
+    },
+    {
+      "source_id": "explanation-dalian-1",
+      "city_id": "liaoning-dalian",
+      "subject": "museums",
+      "title": "大连市·大连博物馆景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "大连博物馆的近代大连展览讲述1840年至1949年的城市历史。",
+        "en": "Dalian Museum's modern Dalian exhibition covers the city's history from 1840 to 1949."
+      },
+      "example": {
+        "zh-CN": "展览的时间范围有助于区分近代城市史与更早历史。",
+        "en": "The exhibition's date range distinguishes modern urban history from earlier periods."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "c1b00e34fa1291d81bca8ea9696f95e849b086de2b9cffc36c8fe94472c709c1"
+    },
+    {
+      "source_id": "explanation-dalian-2",
+      "city_id": "liaoning-dalian",
+      "subject": "museums",
+      "title": "大连市·旅顺日俄监狱旧址博物馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "旅顺日俄监狱旧址保留了监狱建筑与相关展示。",
+        "en": "The former Russian and Japanese prison in Lushun preserves prison buildings and related displays."
+      },
+      "example": {
+        "zh-CN": "原有劳役工场可用于认识监禁与强迫劳动的历史。",
+        "en": "The former labour workshops help explain the history of imprisonment and forced labour."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "64f035fb460b61a6786d9ed948e8129d2b3d3f641f06eda5c558eb57d68cd529"
+    },
+    {
+      "source_id": "explanation-dalian-3",
+      "city_id": "liaoning-dalian",
+      "subject": "sites",
+      "title": "大连市·东鸡冠山景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "东鸡冠山景区包含北堡垒等日俄战争相关遗址。",
+        "en": "Dongjiguanshan includes the North Fort and other sites associated with the Russo-Japanese War."
+      },
+      "example": {
+        "zh-CN": "北堡垒是把战争历史与防御设施联系起来的例子。",
+        "en": "The North Fort connects wartime history with defensive structures."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "a7aa15e00d333460df5a2cefdd971ec1c81e204a4eb7da6473755db2f83ece0d"
+    },
+    {
+      "source_id": "explanation-anshan-1",
+      "city_id": "liaoning-anshan",
+      "subject": "history_geography",
+      "title": "鞍山市·辽宁千山景区",
+      "classification": "folklore",
+      "context": {
+        "zh-CN": "千山的名称与峰峦众多的传统说法有关。",
+        "en": "Qianshan's name is associated with a traditional account of its numerous peaks."
+      },
+      "example": {
+        "zh-CN": "“九百九十九峰”应作为传统说法介绍，不应当作精确测量。",
+        "en": "The account of 999 peaks should be introduced as a traditional saying, rather than a precise survey."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "9c6cf3649fe9b897bbd9892895e947b6da706c28eb654d6559ee020ffbd64f5b"
+    },
+    {
+      "source_id": "explanation-anshan-2",
+      "city_id": "liaoning-anshan",
+      "subject": "artifacts",
+      "title": "鞍山市·玉佛苑",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "玉佛苑以玉石雕刻与佛教艺术为展示特色。",
+        "en": "Yufoyuan features jade carving and Buddhist art."
+      },
+      "example": {
+        "zh-CN": "同一玉石雕像的正面与背面分别呈现释迦牟尼与观音形象。",
+        "en": "The front and back of the same jade sculpture depict Shakyamuni and Guanyin respectively."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "bb6740a84da52f83679e0eb4133cc667c8d6fd2df23ea8479ee30bd30e915f8a"
+    },
+    {
+      "source_id": "explanation-anshan-3",
+      "city_id": "liaoning-anshan",
+      "subject": "museums",
+      "title": "鞍山市·鞍钢集团展览馆景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "鞍钢集团展览馆利用原烧结厂建筑展示企业与工业历史。",
+        "en": "The Ansteel exhibition hall uses a former sintering-plant building to present company and industrial history."
+      },
+      "example": {
+        "zh-CN": "照片和实物与原厂房共同构成工业记忆的展示。",
+        "en": "Photographs, objects and the former factory building together present industrial memory."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "036f6927c479480cea5a99b9f5611656fded42b6fc5829eacec4b5e36f769bb1"
+    },
+    {
+      "source_id": "explanation-fushun-1",
+      "city_id": "liaoning-fushun",
+      "subject": "museums",
+      "title": "抚顺市·雷锋纪念馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "雷锋纪念馆以雷锋的生平与相关精神主题组织展示。",
+        "en": "The Lei Feng Memorial Hall presents Lei Feng's life and associated themes of public service."
+      },
+      "example": {
+        "zh-CN": "生平陈列可以按人物经历理解纪念馆内容。",
+        "en": "Biographical displays offer a way to follow the memorial through a person's experiences."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "e1a60ec55e0da7437ffe8c034459136a392fd7d40daf5dc877a868c25d692377"
+    },
+    {
+      "source_id": "explanation-fushun-2",
+      "city_id": "liaoning-fushun",
+      "subject": "sites",
+      "title": "抚顺市·赫图阿拉城",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "赫图阿拉城位于新宾，官方介绍将其与1616年后金建立联系起来。",
+        "en": "Hetuala in Xinbin is associated in the official profile with the establishment of Later Jin in 1616."
+      },
+      "example": {
+        "zh-CN": "古城遗址可用于讨论早期满族历史与政治中心。",
+        "en": "The city site provides a concrete setting for discussing early Manchu history and political centres."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "e09c226b5bfab139d9f5d9835352f282abdc914ddb9e03de8426e0cd6964130b"
+    },
+    {
+      "source_id": "explanation-fushun-3",
+      "city_id": "liaoning-fushun",
+      "subject": "history_geography",
+      "title": "抚顺市·三块石国家森林公园",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "三块石景区同时介绍森林景观与抗联相关遗址。",
+        "en": "Sankuaishi's profile describes both forest landscapes and sites associated with the Northeast Anti-Japanese United Army."
+      },
+      "example": {
+        "zh-CN": "自然环境与历史遗址是理解同一地点的两种角度。",
+        "en": "The natural environment and historical sites provide two perspectives on the same place."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "42570b99f39627c9cd7e149ed4dde152186fd6feabf1bb3616f12102952c52ba"
+    },
+    {
+      "source_id": "explanation-benxi-1",
+      "city_id": "liaoning-benxi",
+      "subject": "sites",
+      "title": "本溪市·五女山景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "五女山的遗址与博物馆呈现高句丽相关历史。",
+        "en": "Wunushan's archaeological site and museum present history associated with Goguryeo."
+      },
+      "example": {
+        "zh-CN": "遗址与出土材料的展示可以相互补充。",
+        "en": "The archaeological site and displays of excavated material complement each other."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "53e0de3dfdb5342b4d7df8ccc925e23e2b00c99af41245289a45fd50758db510"
+    },
+    {
+      "source_id": "explanation-benxi-2",
+      "city_id": "liaoning-benxi",
+      "subject": "history_geography",
+      "title": "本溪市·本溪水洞风景名胜区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "本溪水洞是以地下河和喀斯特地貌为特色的景区。",
+        "en": "Benxi Water Cave features an underground river and karst landscapes."
+      },
+      "example": {
+        "zh-CN": "钟乳石与石笋是认识洞穴地貌的具体例子。",
+        "en": "Stalactites and stalagmites offer concrete examples of cave formations."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "ccb91a80d2a80464720cfee20709c3c2850c4d88399451b80bb6254d9b8e107e"
+    },
+    {
+      "source_id": "explanation-benxi-3",
+      "city_id": "liaoning-benxi",
+      "subject": "belief",
+      "title": "本溪市·铁刹山风景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "铁刹山的官方介绍将其与道教龙门派传统联系起来。",
+        "en": "Tieshashan's official profile associates it with the Longmen tradition of Daoism."
+      },
+      "example": {
+        "zh-CN": "八宝云光洞及石刻可作为观察宗教景观的线索。",
+        "en": "Babao Yunguang Cave and inscriptions offer ways to explore the religious landscape."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "66107888ed29a94553ad0c14741b8cafce8e5b5aaa98f2972c12f81dc33f59e6"
+    },
+    {
+      "source_id": "explanation-dandong-1",
+      "city_id": "liaoning-dandong",
+      "subject": "museums",
+      "title": "丹东市·抗美援朝纪念馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "抗美援朝纪念馆通过展馆、纪念塔及全景画介绍相关历史。",
+        "en": "The memorial to the War to Resist US Aggression and Aid Korea presents the subject through exhibition halls, a memorial tower and a panoramic painting."
+      },
+      "example": {
+        "zh-CN": "全景画是一种利用大幅场景讲述历史的展示方式。",
+        "en": "A panoramic painting presents history through a large surrounding scene."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "8a5152aecf3f37f6daf56a06d5695471ee4fafa916ed4231b95b7bab4c0c62fc"
+    },
+    {
+      "source_id": "explanation-dandong-2",
+      "city_id": "liaoning-dandong",
+      "subject": "history_geography",
+      "title": "丹东市·鸭绿江风景名胜区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "鸭绿江景区沿江展开，官方介绍包含断桥和虎山等地点。",
+        "en": "The Yalu River scenic area follows the river; its official profile includes the Broken Bridge and Hushan."
+      },
+      "example": {
+        "zh-CN": "沿江地点可以按河流空间关系理解。",
+        "en": "Riverside sites can be understood through their positions along the river."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "9dec003eed042a42fe0d41f0182f59c328e27650a2146437fe428bc85c9a57a6"
+    },
+    {
+      "source_id": "explanation-dandong-3",
+      "city_id": "liaoning-dandong",
+      "subject": "history_geography",
+      "title": "丹东市·东港市大鹿岛景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "大鹿岛位于东港市孤山镇相关海域，是沿海岛屿景观。",
+        "en": "Dalu Island, associated with Gushan in Donggang, is a coastal island landscape."
+      },
+      "example": {
+        "zh-CN": "岛屿与海岸的关系可作为理解当地地理的例子。",
+        "en": "The relationship between island and coast helps explain the local geography."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "48011fdcef4ae0ef76d9986b6a8ac6e74c61ca8e81a462a4e64763984bce56ee"
+    },
+    {
+      "source_id": "explanation-jinzhou-1",
+      "city_id": "liaoning-jinzhou",
+      "subject": "museums",
+      "title": "锦州市·锦州市博物馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "锦州市博物馆结合馆内陈列与大广济寺相关历史建筑介绍地方文化。",
+        "en": "Jinzhou Museum presents local culture through indoor exhibitions and historical buildings associated with Daguangji Temple."
+      },
+      "example": {
+        "zh-CN": "寺塔与博物馆陈列提供不同类型的文化材料。",
+        "en": "A temple pagoda and museum displays offer different kinds of cultural evidence."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "b8025f42c42b21ed658a60ae9ab457c2338fb2871163f5684e83c4f3d15f4046"
+    },
+    {
+      "source_id": "explanation-jinzhou-2",
+      "city_id": "liaoning-jinzhou",
+      "subject": "museums",
+      "title": "锦州市·辽沈战役纪念馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "辽沈战役纪念馆通过战史、支前与英烈主题展示相关历史。",
+        "en": "The Liaoshen Campaign Memorial presents campaign history, civilian support and commemoration."
+      },
+      "example": {
+        "zh-CN": "支前主题展示有助于认识战事之外的社会参与。",
+        "en": "Displays about civilian support help explain participation beyond battlefield action."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "4d6c76926b648621837fbda3a11ba445ad42bd7165738195d3a2b02c8a563969"
+    },
+    {
+      "source_id": "explanation-jinzhou-3",
+      "city_id": "liaoning-jinzhou",
+      "subject": "belief",
+      "title": "锦州市·义县奉国寺景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "奉国寺始建于辽代，官方介绍给出的创建年代为1020年。",
+        "en": "Fengguo Temple was founded in the Liao period; the official profile gives 1020 as its founding date."
+      },
+      "example": {
+        "zh-CN": "大雄殿的木构建筑与七尊佛像是观察寺院艺术的具体例子。",
+        "en": "The timber hall and seven Buddha statues provide concrete examples of temple art."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "38780154fcef87e7bd6f601ea592e0c6cc45ca5d98116d01b39686b71cf3de64"
+    },
+    {
+      "source_id": "explanation-yingkou-1",
+      "city_id": "liaoning-yingkou",
+      "subject": "folklore",
+      "title": "营口市·鲅鱼圈区望儿山景区",
+      "classification": "folklore",
+      "context": {
+        "zh-CN": "望儿山的名称与母亲盼望儿子归来的民间传说有关。",
+        "en": "Wangershan's name is linked to a folk story about a mother awaiting her son's return."
+      },
+      "example": {
+        "zh-CN": "这个故事适合作为民间传说讲述，不能当作已经证实的历史事件。",
+        "en": "The story should be presented as folklore rather than a verified historical event."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "e237d63f67d23a92a57b0dd54bb35e8c309b053d332ad7c0d402636a77202f60"
+    },
+    {
+      "source_id": "explanation-yingkou-2",
+      "city_id": "liaoning-yingkou",
+      "subject": "history_geography",
+      "title": "营口市·盖州市万福赤山旅游景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "赤山位于盖州万福镇，官方介绍同时涉及自然景观与祈福活动。",
+        "en": "Chishan in Wanfu, Gaizhou, is described through natural scenery and prayer-related activities."
+      },
+      "example": {
+        "zh-CN": "自然游览与祈福活动是该介绍中不同的体验主题。",
+        "en": "Nature exploration and prayer-related activities are distinct themes in the profile."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "7a595bd13dc64fc032d82369b6f332dc5bee2019ffb412075ce244fd3c9447dd"
+    },
+    {
+      "source_id": "explanation-yingkou-3",
+      "city_id": "liaoning-yingkou",
+      "subject": "history_geography",
+      "title": "营口市·辽宁团山国家级海洋公园景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "团山国家级海洋公园的介绍以北海沿岸景观为主题。",
+        "en": "The Tuanshan marine park profile focuses on the Beihai coastal landscape."
+      },
+      "example": {
+        "zh-CN": "海岸景观可以帮助理解营口的滨海地理。",
+        "en": "The coastal landscape helps explain Yingkou's maritime geography."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "a0707e70755f6f6456a05bbc4fa58787edd3468457b7c05728d23eeb6792c57d"
+    },
+    {
+      "source_id": "explanation-fuxin-1",
+      "city_id": "liaoning-fuxin",
+      "subject": "crafts",
+      "title": "阜新市·玛瑙特色小镇景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "阜新玛瑙小镇位于十家子镇，介绍涉及玛瑙雕刻及相关产业。",
+        "en": "Fuxin's agate town in Shijiazi presents agate carving and associated industries."
+      },
+      "example": {
+        "zh-CN": "玛瑙雕刻是将材料加工与地方工艺联系起来的例子。",
+        "en": "Agate carving connects material processing with local craftsmanship."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "d4d2d5ec538ee0f6bb1fbe79deb15288cae1cbc70db6fa7806f83c88b0231440"
+    },
+    {
+      "source_id": "explanation-fuxin-2",
+      "city_id": "liaoning-fuxin",
+      "subject": "artifacts",
+      "title": "阜新市·海棠山风景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "海棠山以摩崖造像及藏传佛教相关文化景观为特色。",
+        "en": "Haitangshan features rock-cut images and a cultural landscape associated with Tibetan Buddhism."
+      },
+      "example": {
+        "zh-CN": "摩崖造像指直接在岩石表面雕刻的形象。",
+        "en": "Rock-cut images are figures carved directly into rock surfaces."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "ed6c1f7f0c02726d3a462fcf5151c01bf805e08c14fda227510a7f47e2a59bb0"
+    },
+    {
+      "source_id": "explanation-fuxin-3",
+      "city_id": "liaoning-fuxin",
+      "subject": "belief",
+      "title": "阜新市·瑞应寺风景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "瑞应寺的官方介绍给出的创建年代为1669年。",
+        "en": "Ruiying Temple's official profile gives 1669 as its founding date."
+      },
+      "example": {
+        "zh-CN": "寺院可作为认识阜新藏传佛教文化的具体地点。",
+        "en": "The temple offers a specific place for exploring Tibetan Buddhist culture in Fuxin."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "1b216de663d6f3ce3233c80a6aaa202ebad7f722d1f7c4dfd14713c0be8f8f2e"
+    },
+    {
+      "source_id": "explanation-liaoyang-1",
+      "city_id": "liaoning-liaoyang",
+      "subject": "museums",
+      "title": "辽阳市·辽阳博物馆景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "辽阳博物馆展示汉、辽、金、明、清等时期的材料。",
+        "en": "Liaoyang Museum displays material from periods including Han, Liao, Jin, Ming and Qing."
+      },
+      "example": {
+        "zh-CN": "王尔烈寿屏是官方介绍提到的具体馆藏例子。",
+        "en": "Wang Erlie's birthday screen is a specific collection example mentioned in the official profile."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "e3b18327274eabc76278aa6f17132035c0b4df9923ffc070f6083f1482691f14"
+    },
+    {
+      "source_id": "explanation-liaoyang-2",
+      "city_id": "liaoning-liaoyang",
+      "subject": "belief",
+      "title": "辽阳市·广佑寺景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "广佑寺的介绍涉及佛教建筑与木雕佛像。",
+        "en": "Guangyou Temple's profile describes Buddhist buildings and a wooden Buddha sculpture."
+      },
+      "example": {
+        "zh-CN": "建筑与雕塑可以分别从空间和造型角度观察。",
+        "en": "Buildings and sculptures can be explored through spatial design and form respectively."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "b5d14354697b231c353176fdbccabba26c9a56c68a7cad2aff91b6ae5fb38962"
+    },
+    {
+      "source_id": "explanation-liaoyang-3",
+      "city_id": "liaoning-liaoyang",
+      "subject": "history_geography",
+      "title": "辽阳市·太子河历史文化风光带景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "太子河文化旅游带的介绍包含燕州城、东京城与东京陵等历史地点。",
+        "en": "The Taizi River cultural tourism belt's profile includes historical sites such as Yanzhou City, Dongjing City and Dongjing Tombs."
+      },
+      "example": {
+        "zh-CN": "沿河的历史地点提供了按地理位置组织文化游览的例子。",
+        "en": "Historical sites along the river illustrate how geography can organise a cultural itinerary."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "8161b809e147fa317ad8656b27456bb2d89797ffaa708378776abda9c3bfe2f7"
+    },
+    {
+      "source_id": "explanation-tieling-1",
+      "city_id": "liaoning-tieling",
+      "subject": "museums",
+      "title": "铁岭市·铁煤蒸汽机车博物馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "铁煤蒸汽机车博物馆位于调兵山，展示蒸汽机车相关材料。",
+        "en": "The Tiefa steam-locomotive museum in Diaobingshan displays material associated with steam locomotives."
+      },
+      "example": {
+        "zh-CN": "机车模型、照片和机车实物是不同类型的展示材料。",
+        "en": "Models, photographs and locomotives are different forms of display material."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "ce2e5101e386415e5de86a7f9b788ce9fb9af65479d0e33230fb14d2c497abbb"
+    },
+    {
+      "source_id": "explanation-tieling-2",
+      "city_id": "liaoning-tieling",
+      "subject": "sites",
+      "title": "铁岭市·西丰县城子山风景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "西丰城子山的官方介绍涉及古城墙及城内相关遗迹。",
+        "en": "The Chengzishan profile in Xifeng describes ancient city walls and associated remains."
+      },
+      "example": {
+        "zh-CN": "城墙与蓄水设施可以帮助认识古城的防御与生活空间。",
+        "en": "Walls and water-storage facilities help explain defence and everyday space in an ancient city."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "560c66b6652e5bf350e5fe8fb2a469ca69d02a5ec75b33c9eb9fd83a81866b78"
+    },
+    {
+      "source_id": "explanation-tieling-3",
+      "city_id": "liaoning-tieling",
+      "subject": "museums",
+      "title": "铁岭市·周恩来同志少年读书旧址纪念馆景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "周恩来读书旧址与银冈书院相联系。",
+        "en": "Zhou Enlai's former study site is associated with Yingan Academy."
+      },
+      "example": {
+        "zh-CN": "官方介绍记载周恩来于1910年在这里读书。",
+        "en": "The official profile records that Zhou Enlai studied here in 1910."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "573db7115dde462ad738a9c2913b55bf0e8d22e1f299145cfae19df19d0e55c6"
+    },
+    {
+      "source_id": "explanation-chaoyang-1",
+      "city_id": "liaoning-chaoyang",
+      "subject": "sites",
+      "title": "朝阳市·牛河梁国家考古遗址公园",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "牛河梁遗址位于凌源与建平之间，是红山文化相关考古地点。",
+        "en": "Niuheliang, between Lingyuan and Jianping, is an archaeological site associated with Hongshan culture."
+      },
+      "example": {
+        "zh-CN": "庙、祭坛与积石冢是官方介绍中的遗迹类型。",
+        "en": "Temples, altars and stone burial mounds are types of remains described in the profile."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "68645bb93eb86dd97f782cba0086294666036eb4595506353c00747279d70879"
+    },
+    {
+      "source_id": "explanation-chaoyang-2",
+      "city_id": "liaoning-chaoyang",
+      "subject": "sites",
+      "title": "朝阳市·凤凰山景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "朝阳凤凰山的介绍涉及寺院、塔及山地景观。",
+        "en": "Chaoyang's Fenghuangshan profile describes temples, pagodas and mountain scenery."
+      },
+      "example": {
+        "zh-CN": "凌霄塔与摩云塔是其中具体的建筑例子。",
+        "en": "Lingxiao Pagoda and Moyun Pagoda are specific architectural examples."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "dd53d14bfcd066b20322e7ddc1ecce20993947b4913b1ead4fed1f87e6155b6c"
+    },
+    {
+      "source_id": "explanation-chaoyang-3",
+      "city_id": "liaoning-chaoyang",
+      "subject": "museums",
+      "title": "朝阳市·辽宁朝阳鸟化石国家地质公园景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "朝阳鸟化石国家地质公园展示化石及相关地质材料。",
+        "en": "Chaoyang's bird-fossil geopark displays fossils and associated geological material."
+      },
+      "example": {
+        "zh-CN": "化石标本与发掘展示有助于区分展品和发现地点。",
+        "en": "Fossil specimens and excavation displays help distinguish objects from discovery sites."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "9370ea6f2b542fcdc4e6c55481f47f30339fd40e8d9a7e7573e73e694646ca34"
+    },
+    {
+      "source_id": "explanation-panjin-1",
+      "city_id": "liaoning-panjin",
+      "subject": "artifacts",
+      "title": "盘锦市·辽河碑林公园",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "辽河碑林的官方介绍将其创建年代列为1985年。",
+        "en": "The Liaohe Stele Forest's official profile gives 1985 as its establishment date."
+      },
+      "example": {
+        "zh-CN": "书法碑刻可以从文字内容与书写形式两个角度观察。",
+        "en": "Calligraphic steles can be explored through their text and their written forms."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "6ddf6a1fab17a83671147e2565e5cbba09dae18503e5cfb92d3a174d089347e0"
+    },
+    {
+      "source_id": "explanation-panjin-2",
+      "city_id": "liaoning-panjin",
+      "subject": "artifacts",
+      "title": "盘锦市·广厦艺术街",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "广厦艺术街的介绍包含画廊、艺术工作室与工艺品店。",
+        "en": "Guangsha Art Street's profile describes galleries, artists' studios and craft shops."
+      },
+      "example": {
+        "zh-CN": "工作室与画廊展示了艺术创作和展示的不同空间。",
+        "en": "Studios and galleries show different spaces for creating and displaying art."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "d8567292e9ca269c4e49e9a3d34eda60d01a0ccbd65db76a62f94d4a3219f74b"
+    },
+    {
+      "source_id": "explanation-panjin-3",
+      "city_id": "liaoning-panjin",
+      "subject": "museums",
+      "title": "盘锦市·盘锦特产博物园",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "辽河口特产博物园的介绍以大米、河蟹、烧烤与芦苇工艺等地方主题展开。",
+        "en": "The Liaohe estuary specialty museum park's profile covers local themes such as rice, river crabs, barbecue and reed crafts."
+      },
+      "example": {
+        "zh-CN": "芦苇工艺是将当地材料与手工制作联系起来的例子。",
+        "en": "Reed crafts connect a local material with handmade production."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "d78d6a946b742a16ccd64474fe11ac0d4cda0de31e60837db5f374d5af263d8e"
+    },
+    {
+      "source_id": "explanation-huludao-1",
+      "city_id": "liaoning-huludao",
+      "subject": "sites",
+      "title": "葫芦岛市·九门口长城景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "九门口长城的介绍强调跨河城墙与桥体相结合的结构。",
+        "en": "The Jiumenkou Great Wall profile describes a structure combining a river-crossing wall and bridge."
+      },
+      "example": {
+        "zh-CN": "跨河结构体现了防御设施对地形的适应。",
+        "en": "The river-crossing structure illustrates how defensive works adapt to terrain."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "18638986c56446df1c351e75596e98ac7340036e4854b0dc9ef42d8aee23bdfd"
+    },
+    {
+      "source_id": "explanation-huludao-2",
+      "city_id": "liaoning-huludao",
+      "subject": "sites",
+      "title": "葫芦岛市·兴城市古城景区",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "兴城古城的官方介绍给出的创建年代为明代1428年。",
+        "en": "Xingcheng's ancient city's official profile gives 1428 in the Ming period as its founding date."
+      },
+      "example": {
+        "zh-CN": "城墙、文庙、钟鼓楼和祖氏石坊提供不同的建筑观察对象。",
+        "en": "The walls, Confucian temple, bell-and-drum tower and Zu family archways offer different architectural examples."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "c8d30a778a4c73d00c5053e79bfcc423ac1fb2824ddaee7211798595043d8a78"
+    },
+    {
+      "source_id": "explanation-huludao-3",
+      "city_id": "liaoning-huludao",
+      "subject": "museums",
+      "title": "葫芦岛市·塔山阻击战纪念馆",
+      "classification": "source_statement",
+      "context": {
+        "zh-CN": "塔山纪念馆通过战役陈列及支前等主题介绍塔山战役。",
+        "en": "The Tashan Memorial Hall presents the campaign through battle-history displays and themes including civilian support."
+      },
+      "example": {
+        "zh-CN": "支前主题可以帮助理解战争与当地社会的联系。",
+        "en": "The civilian-support theme helps explain connections between war and local society."
+      },
+      "status": "assistant_draft_requires_human_review",
+      "source_raw_sha256": "41fb916a007375ab1c4f249f5507e1d80b2217c2bf5f995611f98fc5cc599a98"
+    }
+  ]
+}

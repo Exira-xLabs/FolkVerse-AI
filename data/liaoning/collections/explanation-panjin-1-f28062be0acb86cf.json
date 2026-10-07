@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "f28062be0acb86cfc2e28de618491e8fd061fc5c7e88f8db7a5b1a469f2dc1c9",
+  "source": {
+    "id": "explanation-panjin-1",
+    "title": "盘锦市·辽河碑林公园",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216333845478/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216333845478/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-10-22",
+    "edition": "2025-10-22",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "盘锦市",
+    "subject_hint": "artifacts"
+  },
+  "raw_sha256": "6ddf6a1fab17a83671147e2565e5cbba09dae18503e5cfb92d3a174d089347e0",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_e7bfeeddfcfb165c4cd299d8",
+      "ordinal": "article",
+      "name_original": "盘锦市·辽河碑林公园",
+      "category_original": "artifacts",
+      "locality_original": "盘锦市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_e0377968d206ac35c1bfa0fe",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "b75c8e7ff494db8ab7daa7cb99bafd005f5b79edea9d19667f832ee09abd3837",
+          "characters": 182
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

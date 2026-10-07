@@ -1,0 +1,240 @@
+{
+  "version": "liaoning-ocr-observations-v1",
+  "source_id": "protected-sites-batch-12-2025",
+  "source_collection_hash": "f5ac63472eb7da213223dbaca4d8719834f00b382ae3a50212519b46f631eee3",
+  "source_raw_sha256": "2057fe0387959e98e97bd0d785857781e9ff8bd53abc56706b1ded56d211b70a",
+  "runtime": {
+    "source_url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/chi_sim.traineddata",
+    "revision": "87416418657359cb625c412a48b6e1d6d41c29bd",
+    "sha256": "a5fcb6f0db1e1d6d8522f39db4e848f05984669172e584e8d76b6b3141e1f730",
+    "license": "Apache-2.0",
+    "engine": "tesseract 5",
+    "language": "chi_sim"
+  },
+  "engine_version": "tesseract 5.5.2",
+  "parameters": {
+    "page_segmentation_mode": 6,
+    "pdf_render_dpi": 140
+  },
+  "pages": [
+    {
+      "locator": "pdf-page:1",
+      "image_sha256": "638887262b6b1cfd0f66d165d0f58a68b3333167092e90b09d0e4c5db4cea8d9",
+      "low_confidence_tokens": 3,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "附件"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "辽宁 省 第 十 二 批 省 级 文物 保护 单位 名 单"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "四 ECTTZINIEECTY"
+        }
+      ]
+    },
+    {
+      "locator": "pdf-page:2",
+      "image_sha256": "2f7f40cd7acb0eefc8cdf5f0611f0d86cc45e612f30deae3de973afa8ab8658a",
+      "low_confidence_tokens": 0,
+      "lines": []
+    },
+    {
+      "locator": "pdf-page:3",
+      "image_sha256": "f582713c365360cb705f8a15580e7a59f4008118f12cfe89d51193ab5e06f09c",
+      "low_confidence_tokens": 0,
+      "lines": []
+    },
+    {
+      "locator": "pdf-page:4",
+      "image_sha256": "ed283b4a838519d3a4031f89c4ef440a5082ce545a59b0d79e3374a862867a3a",
+      "low_confidence_tokens": 4,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "两 号 到 址"
+        }
+      ]
+    },
+    {
+      "locator": "pdf-page:5",
+      "image_sha256": "1f192d2821a4f87b9d8847b5fd630fe37d067bbecce3698b654fd1a962003eb6",
+      "low_confidence_tokens": 118,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "一 靖宇 司令 31 一 本"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "39 | 重 仁 秀 里 村 杨 靖宇 司令 | 本 溪 市 枉 仁 满族 自治 县 八里 甸子 镇 秀 里 村 | 1931 一 “| 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "部 遗址 1945 年"
+        },
+        {
+          "locator": "ocr-line:1:1:1:4",
+          "text": "醒 仁 八里 甸 大 南 沟 抗 联 | 本 溪 市 本 全 满族 自治 县 八里 甸子 镇 大 南 沟 过 现代 重要 中 迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:5",
+          "text": "遗址 村 1945 年"
+        },
+        {
+          "locator": "ocr-line:1:1:1:6",
+          "text": "李 红 光 烈 二 殉国 地 本 溪 市 醒 仁 满族 自治 县 华 来 镇 锋 尖 子 村 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:7",
+          "text": "得 全 镇 攻 目 村 联 烈士 纪 | 本 混 市 三 仁 满族 自治 县 醒 人 镇 西关 村 近 现代 重 要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:8",
+          "text": "郭 莫 深 办 公 楼 旧址 月 东 市 元 宝 区 青龙 街 199 号 过 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:9",
+          "text": "安 东 三 育 中 学 校 旧址 | 月 东 市 元 宝 区 文化 路 325 号 辽东 学 院内 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:10",
+          "text": "航天 下 关 和 和 和 二 度 | 用 厅 市 元 宝 区 仁 忠 街 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:11",
+          "text": "、 妥 示 中 国人 民 志愿 军 折"
+        },
+        {
+          "locator": "ocr-line:1:1:1:12",
+          "text": "| | 4 | 和 折旧 直 《 满 铁 日 本 大 | 丹东 市 振兴 区 九 纺 路 85 号 1906 年 | 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:13",
+          "text": "和 小 学 校 旧 址 )"
+        }
+      ]
+    },
+    {
+      "locator": "pdf-page:6",
+      "image_sha256": "8584fb8e9ae70352bdb11179c0a9e876d6068540c734c724ad62c80d829cdce5",
+      "low_confidence_tokens": 7,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "四"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "55 | 及 办 公有 旧址 〈 英 国 楼 旧 | 丹东 市 振安 区 和 经 街 1 组 446 号 1920 年 | 近 现 代 重 要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "址 )"
+        }
+      ]
+    },
+    {
+      "locator": "pdf-page:7",
+      "image_sha256": "6d0c52c30c58b3e16ab002cc4d6d6c26e5448bff205fc1557319f7e4c0f86f9c",
+      "low_confidence_tokens": 97,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "岛 甲午 海战 列"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "本 度 虽 下 日 平年 海 蕊 烈 | 丹东 东 小 市 孤 山 镇 大 鹿 岛 村 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "四 邓 铁 梅 部 司令 部 旧址 下 访 大千 让 下 帮 生 和 玫 和 大 信人 入 从 近 现 代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:4",
+          "text": "院"
+        },
+        {
+          "locator": "ocr-line:1:1:1:5",
+          "text": "天 系 滋 机 场 中 国人 民 志"
+        },
+        {
+          "locator": "ocr-line:1:1:1:6",
+          "text": "61 | 愿 军 空军 飞行 员 驻 地 旧 | 丹东 东港 市 前 阳 镇 前 阳 北 路 1940 年 | 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:7",
+          "text": "址"
+        },
+        {
+          "locator": "ocr-line:1:1:1:8",
+          "text": "大 孤 山 野 成 机 场 旧址 | 入 东 东 泪 市 孤 山 镇 大 姜 村 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:9",
+          "text": "安 奉 铁路 鸡冠 山 站 旧址 | 月 东风 城市 鸡冠 山 镇 中 铁 社区 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:10",
+          "text": "束 生 全 清丽 生 阴 和 及 | 丹东 风 城市 刘 家 河 镇 秋 林 庄村 近 现 代 重 要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:11",
+          "text": "到 丰 你 放 鸡 宇和 机 咎 舍 | 及 东风 站 市 鸡冠 山 镇 中 铁 社区 近 现代 重要 史迹 及 代表 性 建筑"
+        },
+        {
+          "locator": "ocr-line:1:1:1:12",
+          "text": "本"
+        },
+        {
+          "locator": "ocr-line:1:1:1:13",
+          "text": "风 城 解放 纪念 塔 丹东 风 城市 凤凰 山 风 景 名 胜 区 近 现代 重要 史迹 及 代表 性 建筑"
+        }
+      ]
+    },
+    {
+      "locator": "pdf-page:8",
+      "image_sha256": "1822f123ef2d3aeeff290caab63c6327341ff48925aa14717fd8e3fd58c46f97",
+      "low_confidence_tokens": 1,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "EEC"
+        }
+      ]
+    },
+    {
+      "locator": "pdf-page:9",
+      "image_sha256": "f45dccfe8a4988bb342baefa54d789f5c6f5b3935b73c488ef37bbf9343d087d",
+      "low_confidence_tokens": 0,
+      "lines": []
+    },
+    {
+      "locator": "pdf-page:10",
+      "image_sha256": "f6e143cdb2e49fbf50f4c617418b0f9c887d5266a67e3b93f56221279d6d5331",
+      "low_confidence_tokens": 0,
+      "lines": []
+    },
+    {
+      "locator": "pdf-page:11",
+      "image_sha256": "20156d7332829450f04e015bba937609bfdfa4e2fcdacadec84896240494e358",
+      "low_confidence_tokens": 0,
+      "lines": []
+    },
+    {
+      "locator": "pdf-page:12",
+      "image_sha256": "7d7955df59da2f11ce3ab91a22a6aaf92bc43241339d1e55ad9237e55e0f2c30",
+      "low_confidence_tokens": 0,
+      "lines": []
+    }
+  ],
+  "status": "unresolved_requires_visual_row_reconciliation",
+  "counts_as_imported_rows": false,
+  "counts_as_reviewed_knowledge": false,
+  "observation_hash": "ed39a0af4760b06a7c54c47b326f2fb26a68c8ca6967fa46be8d7b09cc4472f6",
+  "created_at": "2026-10-06T15:14:44.070686+00:00"
+}

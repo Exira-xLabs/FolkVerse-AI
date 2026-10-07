@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "daa60dfe4b104a79a18448d138dd6480d0613fd9144db71c9e2f284493ef0ebb",
+  "source": {
+    "id": "explanation-yingkou-3",
+    "title": "营口市·辽宁团山国家级海洋公园景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415322259752/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415322259752/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-24",
+    "edition": "2025-11-24",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "营口市",
+    "subject_hint": "history_geography"
+  },
+  "raw_sha256": "a0707e70755f6f6456a05bbc4fa58787edd3468457b7c05728d23eeb6792c57d",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_1a94be7334bd005c5119bb67",
+      "ordinal": "article",
+      "name_original": "营口市·辽宁团山国家级海洋公园景区",
+      "category_original": "history_geography",
+      "locality_original": "营口市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_9e311e1ac6cd9c74ebd8815d",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "d14340dd072aab0f43841a2f9017ce496523c2bb965e28fc5b205b09414f2775",
+          "characters": 268
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

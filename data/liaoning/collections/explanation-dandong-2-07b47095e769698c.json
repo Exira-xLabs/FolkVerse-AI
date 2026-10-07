@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "07b47095e769698c786fe5c4d35aa660fff3bbe2ec66c741433e7ec5c90b21e7",
+  "source": {
+    "id": "explanation-dandong-2",
+    "title": "丹东市·鸭绿江风景名胜区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115505128051/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115505128051/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-01",
+    "edition": "2025-12-01",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "丹东市",
+    "subject_hint": "history_geography"
+  },
+  "raw_sha256": "9dec003eed042a42fe0d41f0182f59c328e27650a2146437fe428bc85c9a57a6",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_efa7005b2236d39cb01c17d5",
+      "ordinal": "article",
+      "name_original": "丹东市·鸭绿江风景名胜区",
+      "category_original": "history_geography",
+      "locality_original": "丹东市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_c986b11405905470c04c8801",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "c4650fb38b40ee8908849415c93e99d55a4964a6aa8d7b92b51434e719b40ddf",
+          "characters": 199
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "d6f94bfb241b8e0a3807b7b88c0ad0d1b01fb8b4512ba54b432152569ae0bfab",
+  "source": {
+    "id": "explanation-benxi-2",
+    "title": "本溪市·本溪水洞风景名胜区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516252322421/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516252322421/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-15",
+    "edition": "2025-12-15",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "本溪市",
+    "subject_hint": "history_geography"
+  },
+  "raw_sha256": "ccb91a80d2a80464720cfee20709c3c2850c4d88399451b80bb6254d9b8e107e",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_0b79f4089252778e02bc7d5e",
+      "ordinal": "article",
+      "name_original": "本溪市·本溪水洞风景名胜区",
+      "category_original": "history_geography",
+      "locality_original": "本溪市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_2b53b2ba5b19d924b2c763b2",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "61447e77bfbb6260ffe825454510f681bc23943d351ff4704df46385c1941663",
+          "characters": 209
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

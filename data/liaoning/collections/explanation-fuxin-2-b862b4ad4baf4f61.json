@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "b862b4ad4baf4f619186a929c244187cd43db5c8e005528f2f7499e30b7695df",
+  "source": {
+    "id": "explanation-fuxin-2",
+    "title": "阜新市·海棠山风景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116301135521/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116301135521/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-21",
+    "edition": "2025-11-21",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "阜新市",
+    "subject_hint": "artifacts"
+  },
+  "raw_sha256": "ed6c1f7f0c02726d3a462fcf5151c01bf805e08c14fda227510a7f47e2a59bb0",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_58d96e6b7f1035688c0aa722",
+      "ordinal": "article",
+      "name_original": "阜新市·海棠山风景区",
+      "category_original": "artifacts",
+      "locality_original": "阜新市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_4ee034370654106448247c67",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "d5bea44c0ede2b53f9b92f92c1eccdd61f4e82506f25189c315727cdbea99087",
+          "characters": 236
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

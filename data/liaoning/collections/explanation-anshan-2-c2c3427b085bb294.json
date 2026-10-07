@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "c2c3427b085bb294ad6f6b440bf1f4c08cadb14a50e390b68a74c6b591483e3c",
+  "source": {
+    "id": "explanation-anshan-2",
+    "title": "鞍山市·玉佛苑",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815264870826/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815264870826/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2026-01-28",
+    "edition": "2026-01-28",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "鞍山市",
+    "subject_hint": "artifacts"
+  },
+  "raw_sha256": "bb6740a84da52f83679e0eb4133cc667c8d6fd2df23ea8479ee30bd30e915f8a",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_74a1b550e9bd80961d98012b",
+      "ordinal": "article",
+      "name_original": "鞍山市·玉佛苑",
+      "category_original": "artifacts",
+      "locality_original": "鞍山市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_5ea8bffdf122b2ed908ea1c9",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "cc906279b65738e722c9c690cdbe4a557408830a074a0c2c106be6a3f867ef40",
+          "characters": 180
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

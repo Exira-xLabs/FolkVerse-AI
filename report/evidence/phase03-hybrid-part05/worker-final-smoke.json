@@ -1,0 +1,19 @@
+{
+  "timings": [
+    {
+      "wall_ms": 10969.601413999953,
+      "dimensions": 1024
+    },
+    {
+      "wall_ms": 218.42127800005073,
+      "dimensions": 1024
+    },
+    {
+      "wall_ms": 2.4644050000688367,
+      "dimensions": 1024
+    }
+  ],
+  "limits": "Max address space         17179869184          17179869184          bytes",
+  "resident_memory": "VmRSS:\t 1987264 kB",
+  "clean_shutdown": true
+}

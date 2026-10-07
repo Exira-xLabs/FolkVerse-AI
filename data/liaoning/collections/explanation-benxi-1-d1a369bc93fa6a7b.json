@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "d1a369bc93fa6a7ba34dc79351d72677111883d08ae7ef591684e7f51353a509",
+  "source": {
+    "id": "explanation-benxi-1",
+    "title": "本溪市·五女山景区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516270563816/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516270563816/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-15",
+    "edition": "2025-12-15",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "本溪市",
+    "subject_hint": "sites"
+  },
+  "raw_sha256": "53e0de3dfdb5342b4d7df8ccc925e23e2b00c99af41245289a45fd50758db510",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_eec29115ce039b2ce21449b9",
+      "ordinal": "article",
+      "name_original": "本溪市·五女山景区",
+      "category_original": "sites",
+      "locality_original": "本溪市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_bf6ccbb97d18d65bf51083c7",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "51fabf5ceb851651ddad0fc6d1004323ddd109b506b7afba5b76af0a4c958183",
+          "characters": 242
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

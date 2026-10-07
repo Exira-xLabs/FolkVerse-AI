@@ -1,0 +1,270 @@
+{
+  "started_at": "2026-10-06T14:43:53.141Z",
+  "mode": "Real local browser/BFF/API and configured model; no intercepted responses",
+  "checks": [
+    {
+      "name": "context off by default",
+      "passed": true
+    },
+    {
+      "name": "hi: request language",
+      "passed": true
+    },
+    {
+      "name": "hi: consented history count",
+      "passed": true
+    },
+    {
+      "name": "hi: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "hi: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "hi: real model composition",
+      "passed": true
+    },
+    {
+      "name": "hi: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "hello: request language",
+      "passed": true
+    },
+    {
+      "name": "hello: consented history count",
+      "passed": true
+    },
+    {
+      "name": "hello: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "hello: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "hello: real model composition",
+      "passed": true
+    },
+    {
+      "name": "hello: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "consented repeated greeting varies opening and invitation",
+      "passed": true
+    },
+    {
+      "name": "你好: request language",
+      "passed": true
+    },
+    {
+      "name": "你好: consented history count",
+      "passed": true
+    },
+    {
+      "name": "你好: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "你好: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "你好: real model composition",
+      "passed": true
+    },
+    {
+      "name": "你好: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "你好呀: request language",
+      "passed": true
+    },
+    {
+      "name": "你好呀: consented history count",
+      "passed": true
+    },
+    {
+      "name": "你好呀: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "你好呀: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "你好呀: real model composition",
+      "passed": true
+    },
+    {
+      "name": "你好呀: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "thank you: request language",
+      "passed": true
+    },
+    {
+      "name": "thank you: consented history count",
+      "passed": true
+    },
+    {
+      "name": "thank you: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "thank you: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "thank you: real model composition",
+      "passed": true
+    },
+    {
+      "name": "thank you: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "bye: request language",
+      "passed": true
+    },
+    {
+      "name": "bye: consented history count",
+      "passed": true
+    },
+    {
+      "name": "bye: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "bye: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "bye: real model composition",
+      "passed": true
+    },
+    {
+      "name": "bye: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "Nice to meet you, I’m new here: request language",
+      "passed": true
+    },
+    {
+      "name": "Nice to meet you, I’m new here: consented history count",
+      "passed": true
+    },
+    {
+      "name": "Nice to meet you, I’m new here: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "Nice to meet you, I’m new here: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "Nice to meet you, I’m new here: real model composition",
+      "passed": true
+    },
+    {
+      "name": "Nice to meet you, I’m new here: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "今天有点烦，想轻松聊聊: request language",
+      "passed": true
+    },
+    {
+      "name": "今天有点烦，想轻松聊聊: consented history count",
+      "passed": true
+    },
+    {
+      "name": "今天有点烦，想轻松聊聊: checked answer frame",
+      "passed": true
+    },
+    {
+      "name": "今天有点烦，想轻松聊聊: published ready reply",
+      "passed": true
+    },
+    {
+      "name": "今天有点烦，想轻松聊聊: real model composition",
+      "passed": true
+    },
+    {
+      "name": "今天有点烦，想轻松聊聊: no cultural evidence invented",
+      "passed": true
+    },
+    {
+      "name": "no browser exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "turns": [
+    {
+      "input": "hi",
+      "locale": "en",
+      "reply": "Hi! I’m Jinyao, your fictional cultural companion. What are you curious about today?",
+      "model_attempt": true,
+      "history_pairs": 0
+    },
+    {
+      "input": "hello",
+      "locale": "en",
+      "reply": "Hi again! Happy to continue chatting. Would you like to continue our previous topic, or try something new?",
+      "model_attempt": true,
+      "history_pairs": 1
+    },
+    {
+      "input": "你好",
+      "locale": "zh-CN",
+      "reply": "你好，我们可以按你的节奏慢慢聊。 有没有特别想了解的地方或话题？",
+      "model_attempt": true,
+      "history_pairs": 2
+    },
+    {
+      "input": "你好呀",
+      "locale": "en",
+      "reply": "Hello! Let’s find something you’re curious about. Would you like to start with a city, local food, or a cultural tradition?",
+      "model_attempt": true,
+      "history_pairs": 3
+    },
+    {
+      "input": "thank you",
+      "locale": "en",
+      "reply": "You’re welcome!",
+      "model_attempt": true,
+      "history_pairs": 0
+    },
+    {
+      "input": "bye",
+      "locale": "en",
+      "reply": "Goodbye! You’re welcome to come back whenever you feel curious.",
+      "model_attempt": true,
+      "history_pairs": 0
+    },
+    {
+      "input": "Nice to meet you, I’m new here",
+      "locale": "en",
+      "reply": "Hello! Nice to meet you. Would you like to start with a city, local food, or a cultural tradition?",
+      "model_attempt": true,
+      "history_pairs": 0
+    },
+    {
+      "input": "今天有点烦，想轻松聊聊",
+      "locale": "zh-CN",
+      "reply": "我们可以轻松一点，慢慢聊。 今天你对什么感到好奇？",
+      "model_attempt": true,
+      "history_pairs": 0
+    }
+  ],
+  "completed_at": "2026-10-06T14:44:02.999Z"
+}

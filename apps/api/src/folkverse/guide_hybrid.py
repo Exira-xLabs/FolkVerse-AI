@@ -1,6 +1,7 @@
 """Reviewed-current BM25 + BGE dense retrieval with deterministic rank fusion."""
 
 import asyncio
+import time
 from pathlib import Path
 
 from pydantic import ValidationError
@@ -12,10 +13,10 @@ from folkverse.guide_embeddings import (
     MODEL_VERSION,
     EmbeddingUnavailable,
     Encoder,
+    cached_index,
     checked_vectors,
-    read_index,
 )
-from folkverse.guide_harness import EvidenceSnapshot, SqlEvidenceRepository, Topic
+from folkverse.guide_harness import EvidenceSnapshot, SqlEvidenceRepository, Topic, evidence_version
 from folkverse.guide_retrieval import (
     EvidenceBundle,
     EvidencePassage,
@@ -24,6 +25,7 @@ from folkverse.guide_retrieval import (
     lexical_rank,
     select_bundle,
 )
+from folkverse.liaoning_publication import published_unit_evidence, published_unit_topics
 
 HYBRID_VERSION = "bm25-bge-dense-rrf60-v1"
 
@@ -55,7 +57,7 @@ async def hybrid_retrieve(
     if not enabled:
         return baseline
     try:
-        index = await asyncio.to_thread(read_index, index_path)
+        index = await asyncio.to_thread(cached_index, index_path)
     except FileNotFoundError:
         return baseline.model_copy(update={"embedding_status": "index_missing"})
     except (OSError, ValueError, ValidationError):
@@ -131,12 +133,46 @@ class HybridEvidenceRepository(SqlEvidenceRepository):
                 for e in published_exhibits(db)
                 if locale in e.title
             ]
+            unit_evidence = published_unit_evidence()
+            corpus.extend(unit_evidence)
+            topics.extend(
+                Topic(exhibit_id=identifier, title=names[locale])
+                for identifier, names in published_unit_topics().items()
+                if locale in names
+            )
             return corpus, topics
+
+    def current_versions(self, passage_ids: list[str]) -> dict[str, str]:
+        result = super().current_versions(passage_ids)
+        result.update(
+            {
+                p.passage_id: evidence_version(p)
+                for p in published_unit_evidence()
+                if p.passage_id in passage_ids
+            }
+        )
+        return result
+
+    def current(self, bundle: EvidenceBundle) -> bool:
+        sql = bundle.model_copy(
+            update={
+                "passages": [p for p in bundle.passages if p.evidence_origin == "reviewed_corpus"]
+            }
+        )
+        current_units = {p.passage_id: p for p in published_unit_evidence()}
+        return super().current(sql) and all(
+            current_units.get(p.passage_id) == p
+            for p in bundle.passages
+            if p.evidence_origin == "reviewed_unit"
+        )
 
     async def load_async(
         self, question: str, locale: Locale, exhibit_id: str | None
     ) -> EvidenceSnapshot:
+        started = time.perf_counter()
         corpus, topics = await asyncio.to_thread(self.current_snapshot, locale)
+        database_ms = (time.perf_counter() - started) * 1000
+        ranked = time.perf_counter()
         bundle = await hybrid_retrieve(
             corpus,
             question,
@@ -148,4 +184,6 @@ class HybridEvidenceRepository(SqlEvidenceRepository):
             timeout=self.timeout,
             minimum_cosine=self.minimum_cosine,
         )
+        bundle.database_ms = database_ms
+        bundle.ranking_ms = (time.perf_counter() - ranked) * 1000
         return EvidenceSnapshot(bundle=bundle, topics=topics)

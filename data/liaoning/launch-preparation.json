@@ -1,0 +1,168 @@
+{
+  "version": "liaoning-launch-preparation-v1",
+  "cities": [
+    {
+      "city_id": "liaoning-dalian",
+      "topics": 3,
+      "subjects": [
+        "museums",
+        "sites"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-shenyang",
+      "topics": 3,
+      "subjects": [
+        "museums",
+        "sites"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-anshan",
+      "topics": 3,
+      "subjects": [
+        "artifacts",
+        "history_geography",
+        "museums"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-fushun",
+      "topics": 3,
+      "subjects": [
+        "history_geography",
+        "museums",
+        "sites"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-benxi",
+      "topics": 3,
+      "subjects": [
+        "belief",
+        "history_geography",
+        "sites"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-dandong",
+      "topics": 3,
+      "subjects": [
+        "history_geography",
+        "museums"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-jinzhou",
+      "topics": 3,
+      "subjects": [
+        "belief",
+        "museums"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-yingkou",
+      "topics": 3,
+      "subjects": [
+        "folklore",
+        "history_geography"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-fuxin",
+      "topics": 3,
+      "subjects": [
+        "artifacts",
+        "belief",
+        "crafts"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-liaoyang",
+      "topics": 3,
+      "subjects": [
+        "belief",
+        "history_geography",
+        "museums"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-tieling",
+      "topics": 3,
+      "subjects": [
+        "museums",
+        "sites"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-chaoyang",
+      "topics": 3,
+      "subjects": [
+        "museums",
+        "sites"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-panjin",
+      "topics": 3,
+      "subjects": [
+        "artifacts",
+        "museums"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    },
+    {
+      "city_id": "liaoning-huludao",
+      "topics": 3,
+      "subjects": [
+        "museums",
+        "sites"
+      ],
+      "draft_floor_prepared": true,
+      "human_approved": false,
+      "published": false
+    }
+  ],
+  "draft_units": 448,
+  "prepared_cities": 14,
+  "approved_units": 0,
+  "automatically_published": false
+}

@@ -1,10 +1,10 @@
 # Jinyao hybrid output design v1
 
-Status: approved direction, design contract for coordinated migration; not the current runtime schema.
+Status: approved direction for the Part 4 sections migration; not the current output schema. The bounded request context and checked social composition are now implemented in [the Part 2 runtime contract](guide-personality-and-context.md).
 
 ## Request and lifecycle
 
-Keep the current owned `POST /api/v1/guide`, question length 1–2000, EN/ZH locale, concise/beginner/deeper depth, optional exhibit, topic/evidence context and consent. Add a bounded `conversation` array of completed pairs only when context consent is true. Maximum six pairs and 8,000 characters total; validate roles/content and ignore any supplied policy, evidence assertion or owner. Body cap 64 KiB in API/BFF. Do not activate that larger envelope before the request validator is installed.
+Keep the current owned `POST /api/v1/guide`, question length 1–2000, EN/ZH locale, concise/beginner/deeper depth, optional exhibit, topic/evidence context and consent. Add a bounded `conversation` array of completed pairs only when context consent is true. Maximum six pairs and 8,000 characters total; validate roles/content and ignore any supplied policy, evidence assertion or owner. Body cap 64 KiB in API/BFF. The Part 2 runtime installs both request validators and the 64 KiB boundaries together.
 
 The browser owns page-only transcript retention, with no permanent send-count cap. Signed references still expire and recheck ownership/evidence. Raw history is untrusted, not signed provenance. No durable content logs/history are introduced. Disclosure and consent must cover transmission of recent turns to the configured provider before context is enabled.
 
@@ -52,3 +52,7 @@ Keep `meta/status/answer/sources/done/error`; never forward raw provider tokens.
 ## Release and versioning
 
 No schema declaration here claims deployed capability. Require rejection tests for fabricated mapping/display/classification, unsourced precise claims, evidence-to-general laundering, mixed-message bypass and client-history injection. Test natural varied live greetings and meaningful explanations separately from fixtures. Human gold/content review is actual attributed work. Preserve existing 200-question pilot targets separately from minimum phase samples.
+
+## Implemented runtime — 7 October 2026
+
+The live API/browser now use `hybrid_sections_v1`. Independent support methods, separated general sections, registered official lookup and explicit human-reviewed-unit publication are implemented. See [runtime behavior](guide-hybrid-explanations.md), [Part 4 delivery](../report/PHASE_03_HYBRID_PART_04.md) and [Part 5 measurements](../report/PHASE_03_HYBRID_PART_05.md). Earlier design targets remain targets where expert review, current-details adapters or arbitrary factual synthesis have not been validated.

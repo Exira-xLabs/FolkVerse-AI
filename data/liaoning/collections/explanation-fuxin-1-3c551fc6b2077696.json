@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "3c551fc6b207769664652d8d84cedbc4b55616096adc5be2def84aba30169a3d",
+  "source": {
+    "id": "explanation-fuxin-1",
+    "title": "阜新市·玛瑙特色小镇景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116121250991/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116121250991/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-21",
+    "edition": "2025-11-21",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "阜新市",
+    "subject_hint": "crafts"
+  },
+  "raw_sha256": "d4d2d5ec538ee0f6bb1fbe79deb15288cae1cbc70db6fa7806f83c88b0231440",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_6e58686db0d936847e720a0d",
+      "ordinal": "article",
+      "name_original": "阜新市·玛瑙特色小镇景区",
+      "category_original": "crafts",
+      "locality_original": "阜新市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_ab45124f7b5f473365b8bd06",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "0edd804c04ab60bc39284d7242af671cfbc26b74ef6ec027367d6dad541ba69b",
+          "characters": 186
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

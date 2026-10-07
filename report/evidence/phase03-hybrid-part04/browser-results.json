@@ -1,0 +1,1986 @@
+{
+  "config": {
+    "argv": [
+      "/home/oualid/.hermes/node/bin/node",
+      "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config",
+      "playwright.guide.config.ts"
+    ],
+    "configFile": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/playwright.guide.config.ts",
+    "rootDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/guide",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "guide-live.spec.ts",
+          "guide-hybrid.spec.ts",
+          "jinyao.spec.ts",
+          "guide-proxy.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report/evidence/phase03-hybrid-part04/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "guide-hybrid.spec.ts",
+      "file": "guide-hybrid.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hybrid browser rejects display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.636Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-571b9c381ba74889daeb",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid browser rejects claim",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.675Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-fae4f8682dbe4317a527",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid browser rejects classification",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-9752ec079227ef656a7c",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid browser rejects support",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.700Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-a5edbda8d4878c502866",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid browser rejects general_date",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.712Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-b0f5dfb85d6abfbbcb74",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid browser rejects label",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.729Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-d630727639fd17db48fe",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid browser rejects missing_support",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.738Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-d4bc17f2a0cc2b3e78cf",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid browser rejects diagnostic",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.750Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-99135aa7f1ab5eb261dc",
+          "file": "guide-hybrid.spec.ts",
+          "line": 13,
+          "column": 144
+        },
+        {
+          "title": "hybrid English desktop labels and source withdrawal",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6542,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('log')\nExpected substring: \u001b[32m\"\u001b[7mFuzhou shadow puppetry is liste\u001b[27md as \u001b[7mtraditional theatre in Wafangdian.\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mJinyao: Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.You: Explain shadow puppetryJinyao: The reply did not arrive completely an\u001b[27md \u001b[7mw\u001b[27mas \u001b[7mnot displayed. Please retry.Retry question\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('log') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('log')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"log\" aria-busy=\"false\" aria-live=\"polite\" class=\"jinyao-chat-history\" aria-relevant=\"additions text\" aria-label=\"Conversation with Jinyao\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Jinyao: Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.You: Explain shadow puppetryJinyao: The reply did not arrive completely and was not displayed. Please retry.Retry question\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('log')\nExpected substring: \u001b[32m\"\u001b[7mFuzhou shadow puppetry is liste\u001b[27md as \u001b[7mtraditional theatre in Wafangdian.\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mJinyao: Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.You: Explain shadow puppetryJinyao: The reply did not arrive completely an\u001b[27md \u001b[7mw\u001b[27mas \u001b[7mnot displayed. Please retry.Retry question\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('log') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('log')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"log\" aria-busy=\"false\" aria-live=\"polite\" class=\"jinyao-chat-history\" aria-relevant=\"additions text\" aria-label=\"Conversation with Jinyao\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Jinyao: Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.You: Explain shadow puppetryJinyao: The reply did not arrive completely and was not displayed. Please retry.Retry question\"\u001b[22m\n\n    at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts:43:39",
+                    "location": {
+                      "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts",
+                      "column": 39,
+                      "line": 43
+                    },
+                    "snippet": "  41 |   await page.getByRole(\"textbox\").fill(zh ? \"解释皮影戏\" : \"Explain shadow puppetry\");\n  42 |   await page.getByRole(\"textbox\").press(\"Enter\");\n> 43 |   await expect(page.getByRole(\"log\")).toContainText(p.text);\n     |                                       ^\n  44 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"通用解释\" : \"General explanation\");\n  45 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"官方来源\" : \"Official source\");\n  46 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts",
+                        "column": 39,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('log')\nExpected substring: \u001b[32m\"\u001b[7mFuzhou shadow puppetry is liste\u001b[27md as \u001b[7mtraditional theatre in Wafangdian.\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mJinyao: Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.You: Explain shadow puppetryJinyao: The reply did not arrive completely an\u001b[27md \u001b[7mw\u001b[27mas \u001b[7mnot displayed. Please retry.Retry question\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('log') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('log')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"log\" aria-busy=\"false\" aria-live=\"polite\" class=\"jinyao-chat-history\" aria-relevant=\"additions text\" aria-label=\"Conversation with Jinyao\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Jinyao: Hi, I’m Jinyao. Choose a reviewed exhibit or ask a question, and we can inspect the evidence together.You: Explain shadow puppetryJinyao: The reply did not arrive completely and was not displayed. Please retry.Retry question\"\u001b[22m\n\n\n  41 |   await page.getByRole(\"textbox\").fill(zh ? \"解释皮影戏\" : \"Explain shadow puppetry\");\n  42 |   await page.getByRole(\"textbox\").press(\"Enter\");\n> 43 |   await expect(page.getByRole(\"log\")).toContainText(p.text);\n     |                                       ^\n  44 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"通用解释\" : \"General explanation\");\n  45 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"官方来源\" : \"Official source\");\n  46 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);\n    at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts:43:39"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:12.758Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/guide/guide-hybrid-hybrid-Englis-6663c-abels-and-source-withdrawal/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/guide/guide-hybrid-hybrid-Englis-6663c-abels-and-source-withdrawal/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts",
+                    "column": 39,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-bcc34d30f924215bb553",
+          "file": "guide-hybrid.spec.ts",
+          "line": 26,
+          "column": 37
+        },
+        {
+          "title": "hybrid Chinese phone labels and source withdrawal",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6694,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('log')\nExpected substring: \u001b[32m\"复州皮影戏列入传统戏剧，地区为瓦房店。\"\u001b[39m\nReceived string:    \u001b[31m\"Jinyao: 您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。您：解释皮影戏Jinyao: 回复未完整收到，尚未显示。请重试。重试问题\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('log') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('log')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"log\" aria-busy=\"false\" aria-live=\"polite\" aria-label=\"与锦瑶的对话\" class=\"jinyao-chat-history\" aria-relevant=\"additions text\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Jinyao: 您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。您：解释皮影戏Jinyao: 回复未完整收到，尚未显示。请重试。重试问题\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('log')\nExpected substring: \u001b[32m\"复州皮影戏列入传统戏剧，地区为瓦房店。\"\u001b[39m\nReceived string:    \u001b[31m\"Jinyao: 您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。您：解释皮影戏Jinyao: 回复未完整收到，尚未显示。请重试。重试问题\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('log') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('log')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"log\" aria-busy=\"false\" aria-live=\"polite\" aria-label=\"与锦瑶的对话\" class=\"jinyao-chat-history\" aria-relevant=\"additions text\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Jinyao: 您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。您：解释皮影戏Jinyao: 回复未完整收到，尚未显示。请重试。重试问题\"\u001b[22m\n\n    at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts:43:39",
+                    "location": {
+                      "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts",
+                      "column": 39,
+                      "line": 43
+                    },
+                    "snippet": "  41 |   await page.getByRole(\"textbox\").fill(zh ? \"解释皮影戏\" : \"Explain shadow puppetry\");\n  42 |   await page.getByRole(\"textbox\").press(\"Enter\");\n> 43 |   await expect(page.getByRole(\"log\")).toContainText(p.text);\n     |                                       ^\n  44 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"通用解释\" : \"General explanation\");\n  45 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"官方来源\" : \"Official source\");\n  46 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts",
+                        "column": 39,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('log')\nExpected substring: \u001b[32m\"复州皮影戏列入传统戏剧，地区为瓦房店。\"\u001b[39m\nReceived string:    \u001b[31m\"Jinyao: 您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。您：解释皮影戏Jinyao: 回复未完整收到，尚未显示。请重试。重试问题\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('log') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('log')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"log\" aria-busy=\"false\" aria-live=\"polite\" aria-label=\"与锦瑶的对话\" class=\"jinyao-chat-history\" aria-relevant=\"additions text\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Jinyao: 您好，我是锦瑶。请选择一件审核展项，或提出问题，我们一起查看资料。您：解释皮影戏Jinyao: 回复未完整收到，尚未显示。请重试。重试问题\"\u001b[22m\n\n\n  41 |   await page.getByRole(\"textbox\").fill(zh ? \"解释皮影戏\" : \"Explain shadow puppetry\");\n  42 |   await page.getByRole(\"textbox\").press(\"Enter\");\n> 43 |   await expect(page.getByRole(\"log\")).toContainText(p.text);\n     |                                       ^\n  44 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"通用解释\" : \"General explanation\");\n  45 |   await expect(page.getByRole(\"log\")).toContainText(zh ? \"官方来源\" : \"Official source\");\n  46 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);\n    at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts:43:39"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:20.246Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/guide/guide-hybrid-hybrid-Chines-bfa67-abels-and-source-withdrawal/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/guide/guide-hybrid-hybrid-Chines-bfa67-abels-and-source-withdrawal/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/guide-hybrid.spec.ts",
+                    "column": 39,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9eac4caf3b519ba7d29f-9ac51dc785f868c6e74c",
+          "file": "guide-hybrid.spec.ts",
+          "line": 26,
+          "column": 37
+        }
+      ]
+    },
+    {
+      "title": "guide-live.spec.ts",
+      "file": "guide-live.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "live English desktop answer, consent, sources and retained history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:27.859Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-24d42052d7072a80b626",
+          "file": "guide-live.spec.ts",
+          "line": 52,
+          "column": 7
+        },
+        {
+          "title": "live Chinese phone answer, consent, sources and retained history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1846,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:29.686Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-90f6f9825420797ce291",
+          "file": "guide-live.spec.ts",
+          "line": 52,
+          "column": 7
+        },
+        {
+          "title": "live provider_timeout is retryable without facts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1117,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:31.549Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-78cbe990a0b5e0a9d751",
+          "file": "guide-live.spec.ts",
+          "line": 85,
+          "column": 7
+        },
+        {
+          "title": "live budget_exhausted is retryable without facts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1024,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:32.683Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-53a422f980f26a15e438",
+          "file": "guide-live.spec.ts",
+          "line": 85,
+          "column": 7
+        },
+        {
+          "title": "live rate_limited is retryable without facts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1002,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:33.722Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-a7604b0b80bb814c0cf2",
+          "file": "guide-live.spec.ts",
+          "line": 85,
+          "column": 7
+        },
+        {
+          "title": "live invalid_context is retryable without facts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1057,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:34.741Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-ede335885b47c01f893b",
+          "file": "guide-live.spec.ts",
+          "line": 85,
+          "column": 7
+        },
+        {
+          "title": "truncated stream discards the whole answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1018,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:35.813Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-3ee501a3bc4108ad7e91",
+          "file": "guide-live.spec.ts",
+          "line": 93,
+          "column": 5
+        },
+        {
+          "title": "stop and retry cancel pending answer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3459,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:36.848Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-327decec7473d792889e",
+          "file": "guide-live.spec.ts",
+          "line": 99,
+          "column": 5
+        },
+        {
+          "title": "withdrawn source has no inspectable stale evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 759,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:40.322Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-d5c5bc144347c3bebe21",
+          "file": "guide-live.spec.ts",
+          "line": 108,
+          "column": 5
+        },
+        {
+          "title": "insufficiency EN displays no citations or factual latency",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:41.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-86e5515d0c452f9648c6",
+          "file": "guide-live.spec.ts",
+          "line": 116,
+          "column": 37
+        },
+        {
+          "title": "insufficiency ZH displays no citations or factual latency",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:42.025Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-d433960933b8c7480168",
+          "file": "guide-live.spec.ts",
+          "line": 116,
+          "column": 37
+        },
+        {
+          "title": "mismatched evidence stream never publishes factual text",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 797,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:43.286Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-0a3c6d9ce1a454acd179",
+          "file": "guide-live.spec.ts",
+          "line": 124,
+          "column": 5
+        },
+        {
+          "title": "hybrid answers identify semantic retrieval while retaining citations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 784,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:44.097Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-af0ad72ee2a2300f1812",
+          "file": "guide-live.spec.ts",
+          "line": 131,
+          "column": 5
+        },
+        {
+          "title": "invalid display publication is discarded before display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 767,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:44.893Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-a3444443aaf8f45d8c4e",
+          "file": "guide-live.spec.ts",
+          "line": 139,
+          "column": 7
+        },
+        {
+          "title": "invalid empty_support publication is discarded before display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 774,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:45.673Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-900d19ee41791332b21f",
+          "file": "guide-live.spec.ts",
+          "line": 139,
+          "column": 7
+        },
+        {
+          "title": "invalid claim_reference publication is discarded before display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 773,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:46.459Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-1eb02670001b48e1e607",
+          "file": "guide-live.spec.ts",
+          "line": 139,
+          "column": 7
+        },
+        {
+          "title": "invalid source_reference publication is discarded before display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 794,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:47.248Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-b026541e9b81daa0c62b",
+          "file": "guide-live.spec.ts",
+          "line": 139,
+          "column": 7
+        },
+        {
+          "title": "invalid source_language publication is discarded before display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 765,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:48.056Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-d6f5d195623415bbd1c2",
+          "file": "guide-live.spec.ts",
+          "line": 139,
+          "column": 7
+        },
+        {
+          "title": "invalid unused_source publication is discarded before display",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 777,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:48.836Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-92269c39dfbe0cf9a5ad",
+          "file": "guide-live.spec.ts",
+          "line": 139,
+          "column": 7
+        },
+        {
+          "title": "social policy preserves consented topic",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 972,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:49.625Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-286e1ab2c1f19cd36f6d",
+          "file": "guide-live.spec.ts",
+          "line": 150,
+          "column": 43
+        },
+        {
+          "title": "social policy rejects injected facts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:50.609Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-f7cab87b8e63054ebb5e",
+          "file": "guide-live.spec.ts",
+          "line": 150,
+          "column": 43
+        },
+        {
+          "title": "open answer inspector clears evidence after source withdrawal revalidation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 945,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:51.534Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-05947dd6cafba45b1ee6",
+          "file": "guide-live.spec.ts",
+          "line": 174,
+          "column": 5
+        },
+        {
+          "title": "a typed hi replies through the live UI and sending continues beyond 20 turns",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2730,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:52.492Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-1c21cc95c0accef89465",
+          "file": "guide-live.spec.ts",
+          "line": 189,
+          "column": 5
+        },
+        {
+          "title": "Shift+Enter keeps a newline while Enter submits a visible message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 991,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:55.237Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-e51b45c7db669ce49c15",
+          "file": "guide-live.spec.ts",
+          "line": 205,
+          "column": 5
+        },
+        {
+          "title": "IME confirmation does not submit the partially composed message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:56.240Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-04776c1f2be2bb2178da",
+          "file": "guide-live.spec.ts",
+          "line": 217,
+          "column": 5
+        },
+        {
+          "title": "visible history stays bounded without disabling future conversation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:02:56.965Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-c7683acf52f7b19974a8",
+          "file": "guide-live.spec.ts",
+          "line": 226,
+          "column": 5
+        },
+        {
+          "title": "stalled session setup reaches a visible timeout and releases the composer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 952,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:05.831Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-7339f5dfce84203dade4",
+          "file": "guide-live.spec.ts",
+          "line": 244,
+          "column": 5
+        },
+        {
+          "title": "failed session setup preserves the submitted message and never starts generation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 858,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:06.800Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-2b2e68376b5de0220ec8",
+          "file": "guide-live.spec.ts",
+          "line": 267,
+          "column": 5
+        },
+        {
+          "title": "rapid duplicate submission admits one request and keeps typed follow-up text",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:07.673Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-3c67743b68ea53339ead",
+          "file": "guide-live.spec.ts",
+          "line": 286,
+          "column": 5
+        },
+        {
+          "title": "close and reopen cancels an old pending reply without damaging a new request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 715,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:09.249Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-3f3c0b9f49b987b191e4",
+          "file": "guide-live.spec.ts",
+          "line": 303,
+          "column": 5
+        },
+        {
+          "title": "an open upstream stream without a terminal event times out and is cancelled",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 896,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:09.973Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-1de3f5dc2973471a7b1f",
+          "file": "guide-live.spec.ts",
+          "line": 330,
+          "column": 5
+        },
+        {
+          "title": "composed greeting displays checked question",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 854,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:10.884Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-e8f272897ba82a1ce2d2",
+          "file": "guide-live.spec.ts",
+          "line": 355,
+          "column": 42
+        },
+        {
+          "title": "composed greeting rejects unchecked additions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 719,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:11.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-3ae576e3735a0f746980",
+          "file": "guide-live.spec.ts",
+          "line": 355,
+          "column": 42
+        },
+        {
+          "title": "conversation history needs consent, is bounded and stops immediately after opt-out",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1395,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:12.483Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-9609afdaa20dba85997c",
+          "file": "guide-live.spec.ts",
+          "line": 369,
+          "column": 5
+        },
+        {
+          "title": "automatic and selected language with an explicit language follow-up",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1233,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:13.891Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-7becae554ec99a8d4b10",
+          "file": "guide-live.spec.ts",
+          "line": 391,
+          "column": 5
+        },
+        {
+          "title": "language ambiguity and complete bounded context preserve message boundaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:15.138Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38e2bf41ca11b9e9e349-cff5fabb800d4c117f2b",
+          "file": "guide-live.spec.ts",
+          "line": 411,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "guide-proxy.spec.ts",
+      "file": "guide-proxy.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "BFF forwards owned cookie and typed body, preserves status, and refuses demo/origin/oversize",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 90,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:15.166Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11e5ceb6a1d8f8836a35-09a0462aaae40fe211c4",
+          "file": "guide-proxy.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "BFF stream cancellation closes the upstream fixture connection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 676,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:15.271Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11e5ceb6a1d8f8836a35-4ba858a7abd1a6e34d86",
+          "file": "guide-proxy.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "evidence BFF forwards only the owned cookie and never caches",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 43,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:15.968Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "11e5ceb6a1d8f8836a35-2e5282a09d2a2fded4d5",
+          "file": "guide-proxy.spec.ts",
+          "line": 28,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "jinyao.spec.ts",
+      "file": "jinyao.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Jinyao cinematic hero responds to scrolling and replaces the previous scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 977,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:16.028Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-a627435fd0c6517ca4b4",
+          "file": "jinyao.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Messenger preview keeps messages local, cancels replies and restores keyboard focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2665,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:17.020Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-aa2d36cc91df918d3197",
+          "file": "jinyao.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "mobile Chinese chat fits the viewport and reduced motion unpins the hero",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1725,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:19.699Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-a735454dd44415bcf697",
+          "file": "jinyao.spec.ts",
+          "line": 58,
+          "column": 5
+        },
+        {
+          "title": "low data loads no Jinyao images",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 496,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T02:03:21.431Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "db848baf5417f024017b-fea63d4d65b6e36ae49c",
+          "file": "jinyao.spec.ts",
+          "line": 76,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-07T02:02:10.005Z",
+    "duration": 72015.75300000001,
+    "expected": 51,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

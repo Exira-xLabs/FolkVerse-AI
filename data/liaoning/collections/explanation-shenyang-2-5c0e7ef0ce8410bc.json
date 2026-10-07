@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "5c0e7ef0ce8410bc605b4c5cdcf3aca6960f1b39a7d7ebc9e0809d1010a84820",
+  "source": {
+    "id": "explanation-shenyang-2",
+    "title": "沈阳市·沈阳工业博物馆",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2026-03-17",
+    "edition": "2026-03-17",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "沈阳市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "c8e899182a49b4476a57a21d9cc2105f8b0836d80f8bead5e5ee9dd901c50493",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_f9bbadf607bfe14ea585983a",
+      "ordinal": "article",
+      "name_original": "沈阳市·沈阳工业博物馆",
+      "category_original": "museums",
+      "locality_original": "沈阳市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_c399c47f43fdf4afba04d1e6",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "a8df61c229d0f8aea1f03925fcf18df81eee0991ebbaf71b6185367cbe238d76",
+          "characters": 194
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

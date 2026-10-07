@@ -1,0 +1,12 @@
+{
+  "scope": "Content-free ledger observations for final eight-turn live walkthrough",
+  "models": [
+    "deepseek-flash"
+  ],
+  "attempts": 8,
+  "completed": 8,
+  "prompt_tokens": 4936,
+  "completion_tokens": 227,
+  "charged_usd_at_configured_conservative_rates": 0.0017532,
+  "provider_invoice_verified": false
+}

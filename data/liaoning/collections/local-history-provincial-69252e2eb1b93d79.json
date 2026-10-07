@@ -1,0 +1,29 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "69252e2eb1b93d799806b0012ffac3c65f311b4f4841e6a83fb05d2540694e77",
+  "source": {
+    "id": "local-history-provincial",
+    "title": "Provincial historical overview source",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://www.ln.gov.cn/web/sqgk/lsyg/index.shtml",
+    "resource_url": "https://www.ln.gov.cn/web/sqgk/lsyg/index.shtml",
+    "adapter": "descriptor",
+    "kind": "history",
+    "reference_date": "edition-not-stated",
+    "edition": "local-history-provincial",
+    "expected_count": null,
+    "counting_unit": "inventory project rows",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Source discovery only, not a complete collection of gazetteers or reviewed historical explanations."
+  },
+  "raw_sha256": "902af1dfe96a929305799b173e262db9e488de8415902edd44012556a4caff11",
+  "fetched_at": "2026-10-06T14:57:07.183623+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v2",
+  "status": "extraction_pending",
+  "rows": [],
+  "errors": [
+    "Descriptor/checkpoint only; no enumeration imported"
+  ]
+}

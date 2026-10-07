@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "ca752e5d83bc56ce472846c9e202261427bc2af502b052cb8693976475120092",
+  "source": {
+    "id": "explanation-liaoyang-1",
+    "title": "辽阳市·辽阳博物馆景区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814532846903/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814532846903/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-18",
+    "edition": "2025-11-18",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "辽阳市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "e3b18327274eabc76278aa6f17132035c0b4df9923ffc070f6083f1482691f14",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_376722bb8bb257279201c65e",
+      "ordinal": "article",
+      "name_original": "辽阳市·辽阳博物馆景区",
+      "category_original": "museums",
+      "locality_original": "辽阳市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_e08d35f87d6c9fee31b4a46f",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "06a0d5dd825d044ec52efab98fa85dd92c578805dba522bc3e471806ce8e5a28",
+          "characters": 111
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

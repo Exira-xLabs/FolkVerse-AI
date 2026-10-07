@@ -1,0 +1,44 @@
+{
+  "api_tests_passed": 417,
+  "browser_tests_passed": 54,
+  "lint": "passed",
+  "types": "passed",
+  "production_build": "passed",
+  "deterministic_contracts_assets_secrets": "passed",
+  "no_vision_calls": true,
+  "push_deployment": "not performed",
+  "final_live_turns": 11,
+  "final_live_answered": 9,
+  "final_live_insufficient": 2,
+  "final_ui_ready": true,
+  "meaningful_browser_content_ms": {
+    "sample": 9,
+    "p50": 2076.9068829999997,
+    "p95_nearest_rank": 2711.481992,
+    "max": 2711.481992,
+    "includes_session_bootstrap": true,
+    "pilot_claim": false
+  },
+  "usage_including_failed_probes": {
+    "window_start": 1791338607.317,
+    "window_end": 1791338898.8,
+    "ledger_attempts": 24,
+    "statuses": {
+      "completed": 24
+    },
+    "prompt_tokens": 14874,
+    "completion_tokens": 4175,
+    "configured_rate_charge_usd": 0.0094722,
+    "charge_is_provider_invoice": false
+  },
+  "remaining": [
+    "independent bilingual/source assessment",
+    "expanded approved relevance gold",
+    "province-wide reviewed content",
+    "200-question pilot",
+    "production hardware/network/concurrency acceptance",
+    "Parts 6-8"
+  ],
+  "browser_tests_failed": 0,
+  "browser_tests_skipped": 0
+}

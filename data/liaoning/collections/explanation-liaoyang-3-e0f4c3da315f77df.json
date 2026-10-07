@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "e0f4c3da315f77dfdda9ceace95b29c615375e74baf617de37f9429c43e3dc49",
+  "source": {
+    "id": "explanation-liaoyang-3",
+    "title": "辽阳市·太子河历史文化风光带景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814543749109/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814543749109/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-18",
+    "edition": "2025-11-18",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "辽阳市",
+    "subject_hint": "history_geography"
+  },
+  "raw_sha256": "8161b809e147fa317ad8656b27456bb2d89797ffaa708378776abda9c3bfe2f7",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_efe7653c151acc0e1bce296d",
+      "ordinal": "article",
+      "name_original": "辽阳市·太子河历史文化风光带景区",
+      "category_original": "history_geography",
+      "locality_original": "辽阳市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_cba94e4ef08b9123f12d315a",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "690033e2ca6f945346b558da36c5478e4a23d42fd48f60e8648ba8377f905fc3",
+          "characters": 182
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

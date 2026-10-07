@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "a5ecff02a683ea56d5487d2ac890272a437fd8fee3dce40737343d0dbea38557",
+  "source": {
+    "id": "explanation-fushun-1",
+    "title": "抚顺市·雷锋纪念馆",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215360785153/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215360785153/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-22",
+    "edition": "2025-12-22",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "抚顺市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "e1a60ec55e0da7437ffe8c034459136a392fd7d40daf5dc877a868c25d692377",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_03829233d0bf9b8d5b4f720b",
+      "ordinal": "article",
+      "name_original": "抚顺市·雷锋纪念馆",
+      "category_original": "museums",
+      "locality_original": "抚顺市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_2ba66b031900827b2853bae5",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "7113f79f39dc26acb5b161c68deb3b8a9d1e155e12d42e8f33b382c120f2cc2f",
+          "characters": 230
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,434 @@
+{
+  "started_at": "2026-10-07T02:08:00.375Z",
+  "mode": "real local browser/BFF/API/configured provider",
+  "turns": [
+    {
+      "question": "Explain Fuzhou shadow puppetry",
+      "status": 200,
+      "elapsed_ms": 2711.481992,
+      "answer": {
+        "answer_id": "ans_083f86e61a5147b2a376e8482b064815",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.\n\nShadow puppetry is a traditional form of storytelling where flat, often jointed figures are held behind a lit screen, so the audience sees their shadows. Think of it like an early kind of animation: the puppeteer moves the figures and speaks or sings the characters' parts, while music and sometimes narration accompany the show. The puppets are usually made from leather or similar materials, cut and colored to create detailed silhouettes. Because the performance combines visual art, music, and oral storytelling, it is often described as a form of traditional theatre. A useful question to ask is: how does the shadow itself become part of the story?",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-en"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-en"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyFjMtqxDAMRf9F6wlYHkey8yulFNmSp4bBGZL0xTD_Xm9KF110dy-cc-6wfnTbYIHklJOaJEJNXGyOOBO5lAKhO2uoc0JF4ShVq1ggDmSMRDkRxRzhBPb52nI7XpqO3rXJ2lu_TCpj9snhIG6y73KxQeywPP3c6S87WYfnX_7dtr2tfUj3f6QFvC9MhaWiuWyFvNZ8Dk5LcLXEItkxcwiWzATZosTouFQSQvLeZnic4K0X2w5p_fgaxZtsR5MrPL4BeF9fgA.asWpgw.NKzt6D4b5bBHNUPr-GEZwLLZJIk",
+        "provider_attempt_id": "call_c2f7ffa0c90a43b0ab178c51d57071db",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "sources_checked"
+          },
+          {
+            "section_id": "section_background",
+            "kind": "general",
+            "text": "Shadow puppetry is a traditional form of storytelling where flat, often jointed figures are held behind a lit screen, so the audience sees their shadows. Think of it like an early kind of animation: the puppeteer moves the figures and speaks or sings the characters' parts, while music and sometimes narration accompany the show. The puppets are usually made from leather or similar materials, cut and colored to create detailed silhouettes. Because the performance combines visual art, music, and oral storytelling, it is often described as a form of traditional theatre. A useful question to ask is: how does the shadow itself become part of the story?",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 27.963270999975975,
+        "database_ms": 25.63577500006886,
+        "ranking_ms": 1.1290449999705743,
+        "generation_ms": 2484.609250999938,
+        "validation_ms": 32.14422200005629,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-en",
+          "source_id": "ln-first",
+          "text": "Fuzhou shadow puppetry is listed as traditional theatre from Wafangdian, Liaoning.",
+          "language": "en",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.071728Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_2cf6327b8675454b8b3ba56a78e736f5",
+          "content_hash": "a510492658a90b3128e4e65cdd5ddd5bc63f9484d6932627e5074729d12ddeaa",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ],
+          "evidence_origin": "reviewed_corpus",
+          "classification": "source_statement",
+          "statement_variants": [],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "请用中文再解释一次",
+      "status": 200,
+      "elapsed_ms": 2202.44815,
+      "answer": {
+        "answer_id": "ans_097899c6a8094b79a83105a347755024",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\n\n皮影戏是一种用影子讲故事的表演：艺人躲在亮起的幕布后面，操纵用皮革等材料刻成的平面人偶，观众看到的是它们的影子。可以把它想成一种早期的“动画”——人偶动起来，艺人同时为角色配音或唱词，还有音乐伴奏。因为把美术、音乐和说唱故事合在一起，所以常被看作传统戏剧的一种。想一想：影子本身是怎样参与讲故事的？",
+        "claims": [
+          {
+            "claim_id": "claim_01",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "passage_ids": [
+              "passage-liaoning-dalian-01-zh-CN"
+            ],
+            "source_ids": [
+              "ln-first"
+            ],
+            "kind": "source_statement",
+            "support_method": "complete_reviewed_passage",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_01"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "passage-liaoning-dalian-01-zh-CN"
+        ],
+        "related_exhibit_ids": [
+          "liaoning-dalian-01"
+        ],
+        "coverage_limit": "来源支持已经检查；一般背景说明未经独立事实核验。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyFj8FqwzAQRP9lzzFItrSr9bX3_kAJZaWVEkGQg-02bUP-vbqUHnrobQbeG5g7LLeWV5iBjRJrFkarTCn7YD2iYXZozaSueLZqhYIULZIdksNMFjEyYogBDpA_zjXW_bVq37tUWVptp0GlxzYY24mrbJuccic2mF9-6vCXHb7Ow9MzHH-V97xudWndu__vzUBpTGgz69TPxCJBfSIfPacQivrgowtmNILIgdRZQuJJS6HihTWN8DjAW0t53aW2_bMvXmXdq1zg8Q1wkGCT.asWphw.Lv_qzizfz8yqmsRTDi4-SAR_wac",
+        "provider_attempt_id": "call_115dd4c486f14cbf8ad8ee20713ef9ee",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+            "claim_ids": [
+              "claim_01"
+            ],
+            "support_label": "sources_checked"
+          },
+          {
+            "section_id": "section_general",
+            "kind": "general",
+            "text": "皮影戏是一种用影子讲故事的表演：艺人躲在亮起的幕布后面，操纵用皮革等材料刻成的平面人偶，观众看到的是它们的影子。可以把它想成一种早期的“动画”——人偶动起来，艺人同时为角色配音或唱词，还有音乐伴奏。因为把美术、音乐和说唱故事合在一起，所以常被看作传统戏剧的一种。想一想：影子本身是怎样参与讲故事的？",
+            "claim_ids": [],
+            "support_label": "general_unverified"
+          }
+        ],
+        "lookup_status": "not_requested",
+        "retrieval_ms": 108.0864109999311,
+        "database_ms": 44.706822999955875,
+        "ranking_ms": 0.19518900001003203,
+        "generation_ms": 1754.9566569999797,
+        "validation_ms": 48.283022000077835,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "passage-liaoning-dalian-01-zh-CN",
+          "source_id": "ln-first",
+          "text": "复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。",
+          "language": "zh-CN",
+          "locator": "Entry 29; Wafangdian belongs to Dalian in the provincial administrative table.",
+          "rights_basis": "Original short attributed summary; no source images or full text reused",
+          "institution": "Liaoning Provincial Government",
+          "source_title": "First provincial intangible cultural heritage list (2006)",
+          "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+          "fetched_at": "2026-10-05T01:26:30.047882Z",
+          "reviewed_at": "2026-10-05T01:31:27.073642Z",
+          "reviewer": "Project owner (user)",
+          "review_id": "rev_4d5a581925ef4ecca0001e47a132ba29",
+          "content_hash": "25ef7166bdd2deff040d7435031609094773534929310c014ec0a05bc45b0a19",
+          "exhibit_ids": [
+            "liaoning-dalian-01"
+          ],
+          "region_ids": [
+            "liaoning",
+            "liaoning-dalian"
+          ],
+          "evidence_origin": "reviewed_corpus",
+          "classification": "source_statement",
+          "statement_variants": [],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "When was Shenyang Imperial Palace founded?",
+      "status": 200,
+      "elapsed_ms": 2469.8689760000016,
+      "answer": {
+        "answer_id": "ans_f75da0325f10451297356689e8576643",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "passage_ids": [
+              "lookup_935f345a1440d4bcaedee181e83535b2"
+            ],
+            "source_ids": [
+              "explanation-shenyang-1"
+            ],
+            "kind": "source_statement",
+            "support_method": "official_metadata_projection_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_935f345a1440d4bcaedee181e83535b2"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyNzMtuwjAQQNF_8RokP8aPya9UCM3YY7CKnCgJLQjx7_WiUrfd33Nfav7usqpJCSBmoAKGNToOtrqU0GHxBROXqmu2TAy1Rk-IgTRWJ9GGShyRizooeVwbt_3cyvjd5vnzvkzyWG7UaW9zP25X6U_ql6MZ8ULbRhcZ8aamj9_8jM5XB54MgC7AmaSImGQkOe88W3X6k1-ybmM7-OvffFLaeu8hSyieQEdTQokZDZpIgVIGwFjRG8yYbQgCUAUsaNY5lshg1fug7j3LulPr-3McF1r3Rjf1_gG-L2bE.asWpjA.YXC90IOVsFSw23orblsMcfd9TfI",
+        "provider_attempt_id": "call_e16c3961f8e844f7ad324ec97d86aa7c",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 485.0402710000026,
+        "database_ms": 98.44494200001463,
+        "ranking_ms": 0.4288389999373976,
+        "generation_ms": 1022.5403010000491,
+        "validation_ms": 56.17093199998635,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "lookup_935f345a1440d4bcaedee181e83535b2",
+          "source_id": "explanation-shenyang-1",
+          "text": "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.\nAccording to the official profile, Shenyang Imperial Palace was founded in 1625.",
+          "language": "en",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Ephemeral attributed metadata/short-statement lookup; no media/full-page republication or editorial approval.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳故宫",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+          "fetched_at": "2026-10-07T02:08:11.113009Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "not_editorially_reviewed",
+          "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.",
+            "According to the official profile, Shenyang Imperial Palace was founded in 1625."
+          ],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    },
+    {
+      "question": "Explain that simply",
+      "status": 200,
+      "elapsed_ms": 2493.3711000000003,
+      "answer": {
+        "answer_id": "ans_1bbb5d89e9a0413b990c8119123118f8",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "passage_ids": [
+              "lookup_935f345a1440d4bcaedee181e83535b2"
+            ],
+            "source_ids": [
+              "explanation-shenyang-1"
+            ],
+            "kind": "source_statement",
+            "support_method": "official_metadata_projection_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_935f345a1440d4bcaedee181e83535b2"
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "context_token": ".eJyNj8tqwzAQAP9F5wT0WknrXykl7EqrRDTIxnbahJB_rwqFXnufGZinmr-6rGpS4hGzp-INa3QcbHUpocMCBROXqmu2TOxrjUCIgTRWJ9GGShyRizoouV8at_3Uyuhd5_njtkxyX67UaW9zP24X6Q_q56MZ8ELbRmcZ8Kamt1_8hA6q80DGe108Z5IiYpKR5MABW_X-Z37Kuo3s0J__1icVg7ZsTElBO5fBlwSeIgctYAVLJqjImkKqRkPMwuO-asDxaX_m1eugbj3LulPr-2MUF1r3Rlf1-gbagmd-.asWpkA.E_1PWUSvkvMBYrVVud_zc1pkQC4",
+        "provider_attempt_id": "call_f4a0c586f21d45b38b41ed4eeaccdcb4",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "According to the official profile, Shenyang Imperial Palace was founded in 1625.",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 718.3134330000485,
+        "database_ms": 106.40039499992326,
+        "ranking_ms": 0.38966400006756885,
+        "generation_ms": 1198.509835999971,
+        "validation_ms": 45.163677999994434,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "sources": [
+        {
+          "passage_id": "lookup_935f345a1440d4bcaedee181e83535b2",
+          "source_id": "explanation-shenyang-1",
+          "text": "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.\nAccording to the official profile, Shenyang Imperial Palace was founded in 1625.",
+          "language": "en",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Ephemeral attributed metadata/short-statement lookup; no media/full-page republication or editorial approval.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳故宫",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+          "fetched_at": "2026-10-07T02:08:15.448565Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "not_editorially_reviewed",
+          "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "The Liaoning Department of Culture and Tourism has an official profile of Shenyang Imperial Palace.",
+            "According to the official profile, Shenyang Imperial Palace was founded in 1625."
+          ],
+          "required_support_ids": []
+        }
+      ],
+      "ui_status": "ready"
+    }
+  ],
+  "errors": [],
+  "completed_at": "2026-10-07T02:08:18.800Z"
+}

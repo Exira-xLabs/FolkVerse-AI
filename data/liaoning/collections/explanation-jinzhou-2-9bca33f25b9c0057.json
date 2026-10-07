@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "9bca33f25b9c0057285a003955c85e1bfb84237e4502153013774f9ee5d89759",
+  "source": {
+    "id": "explanation-jinzhou-2",
+    "title": "锦州市·辽沈战役纪念馆",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415515877032/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415515877032/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-24",
+    "edition": "2025-11-24",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "锦州市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "4d6c76926b648621837fbda3a11ba445ad42bd7165738195d3a2b02c8a563969",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_27ec4dc8bdecc9e7e8065cd3",
+      "ordinal": "article",
+      "name_original": "锦州市·辽沈战役纪念馆",
+      "category_original": "museums",
+      "locality_original": "锦州市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_4a913824d60f8f8d7263c8bf",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "aff1dd2b04ef8ada8287ddca5c8d6b1279a8553b05d7a96f740b2a5821bd196e",
+          "characters": 220
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

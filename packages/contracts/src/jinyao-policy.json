@@ -1,5 +1,5 @@
 {
-  "version": "jinyao-conversation-v1",
+  "version": "jinyao-conversation-v2",
   "social": {
     "greeting": {
       "en": "Hi, I’m Jinyao, your fictional museum companion. We can explore a reviewed exhibit together, at your pace.",
@@ -18,7 +18,10 @@
       "zh-CN": "可以在探索页面选择展项，或点击下方的展项名称。我会陪你查看来源，分清资料记载了什么、还有哪些问题尚无依据。"
     }
   },
-  "lead": {"en": "Here is what the reviewed source says:", "zh-CN": "经过审核的来源这样记载："},
+  "lead": {
+    "en": "Here is what the reviewed source says:",
+    "zh-CN": "经过审核的来源这样记载："
+  },
   "projection": {
     "en": {
       "beginner": "The inventory lists {title} under {category}, with {location} as the recorded locality.",
@@ -28,5 +31,127 @@
       "beginner": "这份名录把{title}列为{category}项目，申报地区是{location}。",
       "deeper": "名录提供了两项信息：项目类别为{category}，申报地区为{location}。仅凭这条记载，无法确定起源年代或解释表演技法。"
     }
+  },
+  "conversation": {
+    "greeting": {
+      "en": [
+        "Hi! I’m Jinyao, your fictional cultural companion.",
+        "Hello! Nice to meet you.",
+        "Hey there! We can take this at your pace.",
+        "Hi again! Happy to continue chatting.",
+        "Hello! Let’s find something you’re curious about."
+      ],
+      "zh-CN": [
+        "你好！我是锦瑶，你的虚构文化伙伴。",
+        "嗨，很高兴和你聊天。",
+        "你好，我们可以按你的节奏慢慢聊。",
+        "又见面了！我们继续聊吧。",
+        "嗨，一起找点你感兴趣的内容吧。"
+      ]
+    },
+    "identity": {
+      "en": [
+        "I’m Jinyao, a fictional companion in FolkVerse. I help explain cultural material and show what our sources support.",
+        "You can call me Jinyao. I’m an AI-powered fictional guide, and I’ll be clear about what I can and cannot verify.",
+        "I’m FolkVerse’s fictional cultural companion. You can ask for a shorter explanation, more detail, or a different language."
+      ],
+      "zh-CN": [
+        "我是锦瑶，FolkVerse 的虚构伙伴。我会帮助你理解文化资料，并说明来源支持哪些内容。",
+        "你可以叫我锦瑶。我是由 AI 支持的虚构向导，会坦诚说明哪些内容能够核实、哪些还不能。",
+        "我是 FolkVerse 的虚构文化伙伴。你可以让我解释得更简短、更详细，或换一种语言。"
+      ]
+    },
+    "thanks": {
+      "en": [
+        "You’re welcome!",
+        "Glad I could help.",
+        "Of course. Take your time.",
+        "Happy to help you explore."
+      ],
+      "zh-CN": [
+        "不客气！",
+        "能帮上忙就好。",
+        "当然，我们可以慢慢来。",
+        "很高兴陪你探索。"
+      ]
+    },
+    "start": {
+      "en": [
+        "We can start with whatever interests you.",
+        "There’s no need to know the terminology first.",
+        "Let’s choose a starting point together."
+      ],
+      "zh-CN": [
+        "我们可以从你感兴趣的内容开始。",
+        "不用先了解专业术语，也可以开始探索。",
+        "我们一起选个起点吧。"
+      ]
+    },
+    "goodbye": {
+      "en": [
+        "Goodbye! You’re welcome to come back whenever you feel curious.",
+        "Take care! We can explore more another time.",
+        "See you next time."
+      ],
+      "zh-CN": [
+        "再见！有新的好奇和问题时，欢迎再来聊。",
+        "下次再一起探索，祝你一切顺利。",
+        "下次见！"
+      ]
+    },
+    "help": {
+      "en": [
+        "Let’s make this easier to follow.",
+        "We can slow down and take one idea at a time.",
+        "I can help you find a clearer starting point."
+      ],
+      "zh-CN": [
+        "我们把它说得更容易理解一些吧。",
+        "可以慢一点，一次只聊一个意思。",
+        "我可以帮你找一个更清楚的起点。"
+      ]
+    },
+    "empathy": {
+      "en": [
+        "We can keep things light and take it slowly.",
+        "We can look for something that interests you.",
+        "No pressure—we can start with a small question."
+      ],
+      "zh-CN": [
+        "我们可以轻松一点，慢慢聊。",
+        "一起找找你感兴趣的内容吧。",
+        "不用着急，从一个小问题开始也可以。"
+      ]
+    },
+    "clarification": {
+      "en": [
+        "I’d like to understand what you mean.",
+        "Could we narrow that down a little?",
+        "Let’s choose one thing to explore first."
+      ],
+      "zh-CN": [
+        "我想先弄清楚你的意思。",
+        "我们先把范围缩小一点，好吗？",
+        "先选一件想了解的事情吧。"
+      ]
+    }
+  },
+  "invitations": {
+    "en": [
+      "What are you curious about today?",
+      "Would you like to start with a city, local food, or a cultural tradition?",
+      "Is there a particular place or topic you’d like to explore?",
+      "Would you prefer a quick introduction or a closer look at one topic?",
+      "What would you like me to explain?",
+      "Would you like to continue our previous topic, or try something new?"
+    ],
+    "zh-CN": [
+      "今天你对什么感到好奇？",
+      "想从一座城市、当地饮食，还是一项文化传统开始？",
+      "有没有特别想了解的地方或话题？",
+      "想先听个简短介绍，还是深入了解一个话题？",
+      "你想让我解释什么？",
+      "想继续刚才的话题，还是换一个新的话题？"
+    ]
   }
 }

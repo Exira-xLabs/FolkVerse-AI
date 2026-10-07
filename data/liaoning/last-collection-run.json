@@ -1,0 +1,66 @@
+{
+  "version": "liaoning-inventory-v1",
+  "checked_at": "2026-10-06T14:57:07.184634+00:00",
+  "attempts": [
+    {
+      "source_id": "admin-2026-h1",
+      "result": "collected",
+      "collection_hash": "7f497b5356323aad51178813fbb297cbb649c8228a559b5511142f368bbbe88a"
+    },
+    {
+      "source_id": "national-heritage-2021",
+      "result": "collected",
+      "collection_hash": "08b5e4343cab811a6b7fb8006422e30fc3eb2d49965ff6aef2a1e8f156e540a4"
+    },
+    {
+      "source_id": "provincial-heritage-2021",
+      "result": "collected",
+      "collection_hash": "60b8bc21f9338841b4c2cfe2f0f4ce6baddfd89f7d278c24276839142c70e2a2"
+    },
+    {
+      "source_id": "heritage-batch-1-2006",
+      "result": "collected",
+      "collection_hash": "9da1d79ba15358432b54119a2a53f299c396db6faff07463604cb4ddc6520a46"
+    },
+    {
+      "source_id": "heritage-batch-6-2020",
+      "result": "collected",
+      "collection_hash": "c9624840c327470882597fe2f666571a4261a77b7a36d2a67c6acd049c0e55d1"
+    },
+    {
+      "source_id": "heritage-batch-7-2026",
+      "result": "collected",
+      "collection_hash": "7c53eba97ef365eceff971036bdea5542772b2e9749a426256d58104512b32e9"
+    },
+    {
+      "source_id": "museums-2024",
+      "result": "collected",
+      "collection_hash": "9be3dad0162a2eb6d4e8adac953fa132702a9326fc06e8e99ea9a00b6979a360"
+    },
+    {
+      "source_id": "protected-sites-batch-12-2025",
+      "result": "collected",
+      "collection_hash": "7546790fd0c7ffa492e0404099dab4ad8aa8fe3760d6afec4ad26c67922104f9"
+    },
+    {
+      "source_id": "heritage-checkpoint-2026",
+      "result": "collected",
+      "collection_hash": "4de9cf33b6b73162c315c60dfb7543875c3430534359e946b57535aa47849389"
+    },
+    {
+      "source_id": "museums-checkpoint-2025",
+      "result": "collected",
+      "collection_hash": "db75b6857c08ae70ad6f8fc4365eaa25c56bf85db5df596bd164c685b89cb7b0"
+    },
+    {
+      "source_id": "sites-checkpoint-2019",
+      "result": "collected",
+      "collection_hash": "5c4b5169487d2fd876c332c62c3136053825c9273e3870bc03afef7fa58856c6"
+    },
+    {
+      "source_id": "local-history-provincial",
+      "result": "collected",
+      "collection_hash": "e3000ff7600407a2baabe9c1dd9eec43eaf8ea26bb31ba780b8e9d457eee59de"
+    }
+  ]
+}

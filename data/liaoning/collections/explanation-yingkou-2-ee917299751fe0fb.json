@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "ee917299751fe0fb23397aa0b934cabd0070b32a1f776ae3e826e576dcb59ebd",
+  "source": {
+    "id": "explanation-yingkou-2",
+    "title": "营口市·盖州市万福赤山旅游景区",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415290813331/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415290813331/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-24",
+    "edition": "2025-11-24",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "营口市",
+    "subject_hint": "history_geography"
+  },
+  "raw_sha256": "7a595bd13dc64fc032d82369b6f332dc5bee2019ffb412075ce244fd3c9447dd",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_5ed9270c57da8ea4845b7419",
+      "ordinal": "article",
+      "name_original": "营口市·盖州市万福赤山旅游景区",
+      "category_original": "history_geography",
+      "locality_original": "营口市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_95d9d9306897107d19d6a48b",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "33b80f7a0da0068e18dc05247bfd7cba1bbad90df00355d9aaf704d92429997f",
+          "characters": 103
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

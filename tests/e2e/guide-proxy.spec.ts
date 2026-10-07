@@ -10,7 +10,7 @@ test("BFF forwards owned cookie and typed body, preserves status, and refuses de
   expect((await response.json()).received).toEqual({ cookie: "folkverse_session=fixture_cookie", origin: live, authorization: null, path: "/api/v1/guide", payload: body });
   expect((await request.post(`${live}/api/v1/guide`, { headers, data: { question: "limit_fixture" } })).status()).toBe(429);
   expect((await request.post(`${live}/api/v1/guide`, { headers: { Origin: "https://attacker.example" }, data: body })).status()).toBe(403);
-  expect((await request.post(`${live}/api/v1/guide`, { headers, data: { question: "x".repeat(20000) } })).status()).toBe(413);
+  expect((await request.post(`${live}/api/v1/guide`, { headers, data: { question: "x".repeat(65536) } })).status()).toBe(413);
   expect((await request.post("http://127.0.0.1:3100/api/v1/guide", { headers: { Origin: "http://127.0.0.1:3100" }, data: body })).status()).toBe(503);
 });
 test("BFF stream cancellation closes the upstream fixture connection", async ({ page, request }) => {
@@ -23,4 +23,12 @@ test("BFF stream cancellation closes the upstream fixture connection", async ({ 
     await reader.read(); controller.abort(); await reader.cancel().catch(() => undefined);
   });
   await expect.poll(async () => (await (await request.get("http://127.0.0.1:3210")).json()).cancelled).toBe(before + 1);
+});
+
+test("evidence BFF forwards only the owned cookie and never caches", async ({ request }) => {
+  const response = await request.get(`${live}/api/v1/guide/evidence/lookup_fixture`, { headers: { Cookie: "other=private; folkverse_session=fixture_cookie", Authorization: "Bearer not_forwarded" } });
+  expect(response.status()).toBe(200);
+  expect(response.headers()["cache-control"]).toBe("no-store");
+  expect((await response.json()).received).toEqual({ cookie: "folkverse_session=fixture_cookie", authorization: null, path: "/api/v1/guide/evidence/lookup_fixture" });
+  expect((await request.get("http://127.0.0.1:3100/api/v1/guide/evidence/lookup_fixture")).status()).toBe(404);
 });

@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "aa29fcc68dccecb9a9b6bff7ce2b740f0fd3d9909a80c12b9ae0466f2f9626ff",
+  "source": {
+    "id": "explanation-dalian-3",
+    "title": "大连市·东鸡冠山景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215492936959/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215492936959/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2026-03-02",
+    "edition": "2026-03-02",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "大连市",
+    "subject_hint": "sites"
+  },
+  "raw_sha256": "a7aa15e00d333460df5a2cefdd971ec1c81e204a4eb7da6473755db2f83ece0d",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_07c5822073141035127e683d",
+      "ordinal": "article",
+      "name_original": "大连市·东鸡冠山景区",
+      "category_original": "sites",
+      "locality_original": "大连市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_424dfd8defc43712d4c870a6",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "60b4e139952e75eec9cfe1e35636d8928d7c9a388cd42d28bd5e2538a5118fe2",
+          "characters": 140
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,702 @@
+{
+  "version": "liaoning-ocr-observations-v1",
+  "source_id": "heritage-batch-7-2026",
+  "source_collection_hash": "995094a3f4cae8f4d7df84c8b89f1d879327ff0bca839f5039de70865aec5495",
+  "source_raw_sha256": "552d4aec828739b4afd6faf6e087bf759fd7e9ba8a97c75c7061109cf52680d7",
+  "runtime": {
+    "source_url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/chi_sim.traineddata",
+    "revision": "87416418657359cb625c412a48b6e1d6d41c29bd",
+    "sha256": "a5fcb6f0db1e1d6d8522f39db4e848f05984669172e584e8d76b6b3141e1f730",
+    "license": "Apache-2.0",
+    "engine": "tesseract 5",
+    "language": "chi_sim"
+  },
+  "engine_version": "tesseract 5.5.2",
+  "parameters": {
+    "page_segmentation_mode": 6,
+    "pdf_render_dpi": 140
+  },
+  "pages": [
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343517795.png",
+      "image_sha256": "9eb6182c8d93fd3af111bc9b5b703fbc171af2e82d5d2edee054c9bce088d2b3",
+      "low_confidence_tokens": 63,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "> 、 多"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "辽宁 省 第 七 批 省 级 非 物质 文化 遗产"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "代表 性 项 目 名 录"
+        },
+        {
+          "locator": "ocr-line:1:1:1:4",
+          "text": "序号 编号 项 目 名 称 申报 地 区 或 单位"
+        },
+        {
+          "locator": "ocr-line:1:1:1:5",
+          "text": "一 、 传 统 音 乐 (4 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:1:6",
+          "text": "1 工 一 31 辽 中 鼓乐 沈阳 市 辽 中 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:7",
+          "text": "2 工 一 32 古琴 艺术 〈 抚 顺 ) 抚顺 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:8",
+          "text": "3 工 一 33 榆 州 鼓 乐 朝阳 凌 源 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:9",
+          "text": "4 开 一 34 兴 城 刘 派 喷 呐 葫芦 岛 兴 城市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:10",
+          "text": "二 、 传 统 舞 蹈 (5 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:1:11",
+          "text": "5 亚 一 28 凌 水 闹 海 秧歌 大 连 市 高 新 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:12",
+          "text": "6 下 一 29 大 连 长 穗花 鼓舞 大 连 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:13",
+          "text": "7 四 一 30 朝鲜 族 农 乐舞 〈 钢 盆 舞 ) 抚顺 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:14",
+          "text": "8 亚 一 31 西 丰满 族 高 跷 铁岭 市 西 丰县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:15",
+          "text": "9 于 一 32 建 平 马场 独 杆 轿 朝阳 市 建 平 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:16",
+          "text": "三 、 传 统 戏剧 (4 项)"
+        },
+        {
+          "locator": "ocr-line:1:1:1:17",
+          "text": "10 一 25 辽 剧 〈 瓦 房 店 ) 大 连 瓦 房 店 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:18",
+          "text": "11 一 26 辽 剧 〈 盖 州 ) 营口 盖 州 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:19",
+          "text": "12 一 27 阜新 蒙古 剧 时 新 市 旦 新 蒙古 族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:20",
+          "text": "13 一 28 本 溪 评 剧 本 溪 市"
+        }
+      ]
+    },
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343595314.png",
+      "image_sha256": "3471d81d92051eebf06d1aa8024fed5c9dd587ae6059847f3bf6fa494ca30838",
+      "low_confidence_tokens": 80,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "四 、 曲 艺 (1 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "14 TV 一 19 评书 〈 辽 阳 石 派 ) 辽阳 市 白 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "五 、 传 统 体育 、 游 艺 与 杂技 (4 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:1:4",
+          "text": "15 可 一 22 少林 长 拳 〈 沈 阳 卢 氏 ) 沈阳 市 铁 西区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:5",
+          "text": "16 可 一 23 太极 拳 〈 大 连 杨 氏 ) 大 连 市 沙河 口 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:6",
+          "text": "17 人 风 一 24 新 宾 满 族 冰 嬉 抚顺 市 新 宾 满 族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:7",
+          "text": "18 如 一 25 太极 拳 〈 锦 州 陈 氏 ) 锦州 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:8",
+          "text": "六 、 传 统 美术 (26 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:2:1",
+          "text": "19 下 一 59 李 氏 民间 抬 宰 纸 沈阳 市 浑 南 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:2",
+          "text": "20 开 一 60 宋 氏 章 牌 浮雕 技艺 沈阳 市 沈 北新 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:3",
+          "text": "21 则 一 61 民间 刺绣 〈 沈 阳 何 氏 ) 沈阳 市 苏 家 屯 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:4",
+          "text": "22 中 一 62 剪纸 〈 沈 阳 冯 氏 ) 沈阳 市 皇 姑 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:5",
+          "text": "23 下 一 63 核 雕 《〈 沈 阳 李 氏 ) 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:6",
+          "text": "24 由 一 64 面 人 (沈阳 于 氏 ) 沈阳 市 皇 姑 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:7",
+          "text": "25 出 一 65 泥塑 (沈阳 王 氏 泥人 ) 沈阳 市 旺 姑 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:8",
+          "text": "26 串 一 66 金 州 鸟 虫 篆刻 大 连 金 普 新 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:9",
+          "text": "27 下 一 67 和 辽 南 刘 氏 面 塑 大 连 金 普 新 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:10",
+          "text": "28 则 一 68 旅顺 皮 雕 大 连 市 旅顺 口 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:11",
+          "text": "29 则 一 69 山 岩 核 雕 壕 山 市 册 岩 满族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:2:12",
+          "text": "30 则 一 70 抚顺 面 塑 抚顺 市"
+        },
+        {
+          "locator": "ocr-line:1:1:3:1",
+          "text": "31 虽 一 71 丹东 羽毛 画 丹东 市"
+        }
+      ]
+    },
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343529441.png",
+      "image_sha256": "2dc217ba7c7a1d49fb08618af9642d32350f7cea70f91dc7a0c5c3d9962f60d0",
+      "low_confidence_tokens": 78,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "32 区 一 72 丹东 糖 画 丹东 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "33 则 一 73 锦州 微 书 锦州 市"
+        },
+        {
+          "locator": "ocr-line:1:1:2:1",
+          "text": "34 如 一 74 义 县 据 纸 锦州 市 义 县"
+        },
+        {
+          "locator": "ocr-line:1:1:2:2",
+          "text": "35 则 一 75 锦州 泥塑 锦州 市 凌 河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:3",
+          "text": "36 则 一 76 营口 满族 民间 刺绣 营口 市"
+        },
+        {
+          "locator": "ocr-line:1:1:2:4",
+          "text": "37 区 一 77 盖 州 民间 剪纸 营口 盖 州 市"
+        },
+        {
+          "locator": "ocr-line:1:1:2:5",
+          "text": "38 骨 一 78 玉雕 《阜新 ) 和 皇 新 市"
+        },
+        {
+          "locator": "ocr-line:1:1:2:6",
+          "text": "39 出 一 79 重新 满族 刺绣 乍 新 市 海 州 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:7",
+          "text": "40 由 一 80 辽阳 全 形 拓 辽阳 市 白 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:2:8",
+          "text": "41 如 一 81 铁岭 葫芦 烙 画 雕 刻 铁岭 市"
+        },
+        {
+          "locator": "ocr-line:1:1:3:1",
+          "text": "42 虽 一 82 朝阳 皮 膨 朝阳 市 双 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:3:2",
+          "text": "43 由 一 83 盘 扣 《〈 盘 锦 武 氏 ) 盘锦 市 兴隆 台 区"
+        },
+        {
+          "locator": "ocr-line:1:1:3:3",
+          "text": "44 骨 一 84 盘锦 苇 画 盘锦 市 大 洼 区"
+        },
+        {
+          "locator": "ocr-line:1:1:4:1",
+          "text": "七 、 传 统 技艺 (53 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:5:1",
+          "text": "45 划一 61 强 结 〈 沈 阳 金 氏 ) 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:5:2",
+          "text": "46 人 一 62 沈阳 满族 服饰 制作 技艺 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:5:3",
+          "text": "47 如 一 63 沈阳 张 氏 戏 服 制作 技艺 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:5:4",
+          "text": "48 如 一 64 沈阳 铜 器 制作 技艺 沈阳 市 铁 西区"
+        },
+        {
+          "locator": "ocr-line:1:1:5:5",
+          "text": "49 兽 一 65 沈阳 萃 华 花 丝 镶嵌 制作 技艺 沈阳 市 大 东区"
+        },
+        {
+          "locator": "ocr-line:1:1:5:6",
+          "text": "50 如 一 66 沈阳 万 顺 黄金 细 工 制作 技艺 沈阳 市 和 平 区"
+        },
+        {
+          "locator": "ocr-line:1:1:5:7",
+          "text": "51 如 一 67 冷 面 制作 技艺 〈 沈 阳 西 塔 沈阳 市 和 平 区"
+        },
+        {
+          "locator": "ocr-line:1:1:5:8",
+          "text": "52 如 一 68 锡伯 族 弓 箭 制作 技艺 沈阳 市 沈 北 新 区"
+        }
+      ]
+    },
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343529753.png",
+      "image_sha256": "eee1edf92adff4760e61d42f89ac44deef9a2aebd09579155e83442e96c6465d",
+      "low_confidence_tokens": 99,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "53 如 一 69 个) 沈阳 市 法 库 县"
+        },
+        {
+          "locator": "ocr-line:1:1:2:1",
+          "text": "54 人 骨 一 70 长 生 岛 贡 参 加 工 技艺 大 连 市"
+        },
+        {
+          "locator": "ocr-line:1:1:3:1",
+          "text": "55 骨 一 71 满族 传统 轧 染 技艺 大 连 市 甘井 子 区"
+        },
+        {
+          "locator": "ocr-line:1:1:3:2",
+          "text": "56 如 一 72 炳 器 制作 技艺 大 连 金 普 新 区"
+        },
+        {
+          "locator": "ocr-line:1:1:4:1",
+          "text": "57 如 一 73 鞍山 信 利生 腊 食 品 制作 技艺 鞍山 市"
+        },
+        {
+          "locator": "ocr-line:1:1:5:1",
+          "text": "58 如 一 74 鞍山 古 次 制作 技艺 鞍山 市"
+        },
+        {
+          "locator": "ocr-line:1:1:6:1",
+          "text": "59 冲 一 75 作 全 天 于 放 作 二 人 壕 山 海 城市"
+        },
+        {
+          "locator": "ocr-line:1:1:7:1",
+          "text": "60 如 一 76 银 器 烽 制 技艺 〈 鞍 山 杨 氏 ) 壕 山 市 立山 区"
+        },
+        {
+          "locator": "ocr-line:1:1:8:1",
+          "text": "61 骨 一 77 全 生 二 作 技 和 蒋 山 市 台 安 县"
+        },
+        {
+          "locator": "ocr-line:1:1:9:1",
+          "text": "63 如 一 79 新 宾 满 族 八 碟 八 碗 制作 技艺 抚顺 市 新 宾 满 族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:9:2",
+          "text": "64 人 骨 一 80 牛 羊肉 衰 制 技艺 〈 本 溪 县 羊 汤 ) 本 溪 市 本 溪 满 族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:9:3",
+          "text": "65 骨 -s1 全 刘 披 本 溪 市 桓 仁 满族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:9:4",
+          "text": "66 人 一 82 丹东 朝鲜 族 小 吃 制作 技艺 丹东 市"
+        },
+        {
+          "locator": "ocr-line:1:1:10:1",
+          "text": "67 佣 一 83 标 桨 技艺 〈 丹 东 田 氏 ) 丹东 市"
+        },
+        {
+          "locator": "ocr-line:1:1:11:1",
+          "text": "68 如 一 84 传统 面食 制作 技艺 〈 丹 东 值 子 ) 丹东 市"
+        },
+        {
+          "locator": "ocr-line:1:1:12:1",
+          "text": "69 划 一 85 辽西 饮 资 锦州 市"
+        },
+        {
+          "locator": "ocr-line:1:1:13:1",
+          "text": "70 前 一 86 锦州 烧烤 制作 技艺 锦州 市"
+        },
+        {
+          "locator": "ocr-line:1:1:14:1",
+          "text": "71 划一 87 笔架 山 虾 油 虾 桨 制作 技艺 锦州 市 滨海 新 区"
+        },
+        {
+          "locator": "ocr-line:1:1:14:2",
+          "text": "72 吕 一 88 牛 羊肉 衰 制 技艺 〈 义 县 羊 汤 ) 锦州 市 义 县"
+        }
+      ]
+    },
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343592988.png",
+      "image_sha256": "63637209cc09d53603c999c4883b5bc4c34433677956e681b55edb8bc643d525",
+      "low_confidence_tokens": 103,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "73 如 一 89 传统 花灯 制作 技艺 〈 营 口 李 氏 ) 营口 盖 州 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "圈 传统 饮食 制作 技艺 的"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "74 贡 一 90 (营口 刘 鲜 族 状 料 ) 营口 市 站 前 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:4",
+          "text": "75 人 骨 一 91 酿 效 技艺 〈 营 口 郑 氏 ) 营口 市 西 市 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:5",
+          "text": "本 发 酵 酒 传统 酿造 技艺 的"
+        },
+        {
+          "locator": "ocr-line:1:1:1:6",
+          "text": "7 《 彰 儿 山 果 酒 传统 酿造 技艺 交口 市 转角 半 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:7",
+          "text": "站 鞘 馏 酒 传统 酿造 技艺 村"
+        },
+        {
+          "locator": "ocr-line:1:1:1:8",
+          "text": "7 ( 章 口 八大 散 传统 酿造 技艺 ) 营口 大 夏 桥 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:9",
+          "text": "78 如 一 94 彰 武 沙 泉 鱼 宴 制 作 技艺 重新 市 彰 武 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:10",
+          "text": "圈 四 传统 面食 制作 技艺 、"
+        },
+        {
+          "locator": "ocr-line:1:1:1:11",
+          "text": "79 划一 95 (辽阳 老 世 泰 糕点 ) 辽阳 市 白 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:12",
+          "text": "80 如 一 96 吉平 宴 制 作 技艺 辽阳 市 白 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:13",
+          "text": "81 如 一 97 辽阳 满族 八 中 硫 制 作 技艺 辽阳 市 白 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:14",
+          "text": "82 如 一 98 木雕 技艺 〈 辽 阳 田 氏 ) 辽阳 市 辽阳 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:15",
+          "text": "蒸馏 酒 传统 酿造 技艺"
+        },
+        {
+          "locator": "ocr-line:1:1:1:16",
+          "text": "83 咱 一 99 (下 达 河 龙头 湾 固 态 混 料 辽阳 市 辽阳 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:17",
+          "text": "发 酵 获 曲 酿酒 技艺 )"
+        },
+        {
+          "locator": "ocr-line:1:1:1:18",
+          "text": "84 但 一 100 铁岭 朝鲜 族 泡 菜 制 作 技艺 铁岭 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:19",
+          "text": "国人 传统 面食 制作 技艺 ^"
+        },
+        {
+          "locator": "ocr-line:1:1:1:20",
+          "text": "5 0 (铁岭 和 生 记 火 勺 ) 铁岭 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:21",
+          "text": "86 人 骨 一 102 传统 饮食 制作 技艺 〈 南 园 猪 脸 ) 朝阳 市 双 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:22",
+          "text": "87 如 一 103 古 法 研 雄 技艺 朝阳 市 双 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:23",
+          "text": "88 骨 一 104 朝阳 锅 资 朝阳 市 双 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:24",
+          "text": "89 出 一 105 朝阳 县 制 香 技艺 朝阳 市 朝阳 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:25",
+          "text": "90 但 一 106 传统 面食 制作 技艺 〈 北 票 拨 面 ) 朝阳 北 票 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:26",
+          "text": "91 如 一 107 建 平 制 糖 技艺 朝阳 市 建 平 县"
+        }
+      ]
+    },
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343553825.png",
+      "image_sha256": "fabe9f0089244b8e13d73417d34b4c20963f7f0649a0bff3d6584de4bb943b75",
+      "low_confidence_tokens": 84,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "92 骨 一 108 喀 左 紫砂 陶 制 作 技艺 和"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "93 骨 一 109 盘锦 三 合 居 隅 痪 技艺 盘锦 市 大 洼 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "94 骨 一 110 宛 三 爷 回 族 堂 席 制 作 技艺 盘锦 市 大 洼 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:4",
+          "text": "96 人 骨 一 112 高 桥 陈 醋 酿 造 技艺 葫芦 岛 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:5",
+          "text": "97 如 一 113 辽 葬 传统 训 饪 技艺 〈 大 连 海鲜 菜 ) 辽宁 省 餐饮 豪 饪 行业 协会"
+        },
+        {
+          "locator": "ocr-line:1:1:1:6",
+          "text": "八 、 传 统 医药 (31 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:1:7",
+          "text": "98 区 一 8 中 医 诊疗 法 〈 沈 阳 王 氏 消 石 7 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:8",
+          "text": "99 区 一 9 针灸 〈 沈 阳 安 氏 小 针 ) 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:9",
+          "text": "100 区 一 10 中 医 诊疗 法 〈 沈 阳 刘 氏 “ 脉 、 针 、 襄 ”) 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:10",
+          "text": "101 一 < 了 明 运 本 看 入 站 闻 法 沈阳 市 沈河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:11",
+          "text": "102 区 一 12 中 医 诊疗 法 〈 乐 善 中 医 ) 沈阳 市 皇 姑 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:12",
+          "text": "103 区 一 13 中 医 传 统制 剂 方法 〈 刘 氏 回 阳 膏 ) 沈阳 市 皇 姑 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:13",
+          "text": "104 区 一 14 针灸 〈 沈 阳 李 氏 针 灸 疗法 ) 沈阳 市 皇 姑 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:14",
+          "text": "105 区 一 15 中 医 正 骨 疗 法 〈 沈 阳 李 氏 正 骨 ) 沈阳 市 大 东区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:15",
+          "text": "106 区 一 16 中 医 诊疗 法 〈 沈 阳 周 氏 脾 胃 ) 沈阳 市 苏 家 屯 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:16",
+          "text": "107 区 一 17 中 医 诊 疗法 〈 沈 阳 火 酒 法 ) 沈阳 市 浑 南 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:17",
+          "text": "108 区 一 18 中 医 诊疗 法 〈 大 连 跷 踩 术 ) 大 连 市 中 山区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:18",
+          "text": "109 区 一 19 ”中医 传 统制 剂 方法 〈 夏 氏 风 湿 兽 痛 散 ) 大 连 市 沙河 口 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:19",
+          "text": "110 区 一 20 中 医 诊疗 法 〈 大 连 宫 氏 摸 骨 顺 经 ) 大 连 市 甘井 子 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:20",
+          "text": "111 区 一 21 中 医 传 统制 剂 方法 〈 金 州 大 癌 药 ) 大 连 金 普 新 区"
+        }
+      ]
+    },
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343595360.png",
+      "image_sha256": "a3406d8f5e58a34cfb3eb8172d5e0d2fe57a9f61f5c0df72ffcf79ece3714be1",
+      "low_confidence_tokens": 92,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "112 区 一 22 中 医 诊疗 法 〈 贰 山 张 氏 辨析 诊疗 法 ) 鞍山 市"
+        },
+        {
+          "locator": "ocr-line:1:1:2:1",
+          "text": "113 区 一 23 针灸 〈 王 氏 通 经 针 刺 疗法 ) 抚顺 市"
+        },
+        {
+          "locator": "ocr-line:1:1:3:1",
+          "text": "114 区 一 24 中 医 诊疗 法 〈 抚 顺 迟 氏 骨 折 外 固定 术 ) 抚顺 市"
+        },
+        {
+          "locator": "ocr-line:1:1:4:1",
+          "text": "115 区 一 25 中 医 诊疗 法 〈 新 宾 满 族 传统 正 筋 术 ) 抚顺 市 新 宾 满 族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:5:1",
+          "text": "加 中 医 传统 制剂 方法 1"
+        },
+        {
+          "locator": "ocr-line:1:1:6:1",
+          "text": "6 闪 一 2 《 宽 甸 周 家 骨 伤 衣 药 ) 月 东 市"
+        },
+        {
+          "locator": "ocr-line:1:1:7:1",
+          "text": "117 区 一 27 针灸 〈 丹 东 赵 氏 耳 针 ) 丹东 市"
+        },
+        {
+          "locator": "ocr-line:1:1:8:1",
+          "text": "118 区 一 28 针灸 〈 锦 州 张 氏 针灸 疗法 ) 锦州 市 古 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:9:1",
+          "text": "119 区 一 29 中 医 诊疗 法 〈 锦 州 朱 氏 骨 伤 疗法 ) 锦州 市 凌 河 区"
+        },
+        {
+          "locator": "ocr-line:1:1:10:1",
+          "text": "120 区 一 30 中 医 正 骨 疗 法 〈 营 口 杨 氏 正骨 ) 昔 口 市 钱 鱼 团 区"
+        },
+        {
+          "locator": "ocr-line:1:1:11:1",
+          "text": "121 区 一 31 针灸 〈 营 口 王 氏 针灸 疗法 ) 营口 市 钱 鱼 圈 区"
+        },
+        {
+          "locator": "ocr-line:1:1:12:1",
+          "text": "122 区 一 32 ”中医 正骨 疗法 〈 掉 新 宋 氏 骨骼 复位 ) 旱 新 市"
+        },
+        {
+          "locator": "ocr-line:1:1:13:1",
+          "text": "1 中 医 传统 制剂 方法 、 四"
+        },
+        {
+          "locator": "ocr-line:1:1:14:1",
+          "text": "1 《 消 栓 健 脑 中 药 制剂 这 用 市 白 卉 区"
+        },
+        {
+          "locator": "ocr-line:1:1:15:1",
+          "text": "124 区 一 34 中 医 诊疗 法 〈 辽 阳 刘 氏 骨 伤 疗法 ) 辽阳 市 白 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:16:1",
+          "text": "125 区 一 35 中 医 正骨 疗法 〈 朝 阳 王 氏 舒 筋 正 骨 ) 朝阳 市 双 塔 区"
+        },
+        {
+          "locator": "ocr-line:1:1:17:1",
+          "text": "126 区 一 36 ”中 医 诊疗 法 〈 田 庄 台 马 氏 中 医 诊疗 法 ) 盘锦 市 大 洼 区"
+        },
+        {
+          "locator": "ocr-line:1:1:18:1",
+          "text": "127 区 一 37 中 医生 命 与 疾病 认 知 方法 辽宁 中 医药 大 学 附属 医院"
+        },
+        {
+          "locator": "ocr-line:1:1:18:2",
+          "text": "辽宁 中 医 雪"
+        },
+        {
+          "locator": "ocr-line:1:1:19:1",
+          "text": "128 区 一 38 中 医 诊疗 法 〈 王 氏 正 兰 ) 这"
+        },
+        {
+          "locator": "ocr-line:1:1:20:1",
+          "text": "九 、 民 俗 (6 项 )"
+        },
+        {
+          "locator": "ocr-line:1:1:20:2",
+          "text": "129 工 一 28 朝鲜 族 伞 寿 礼 大 连 市"
+        },
+        {
+          "locator": "ocr-line:1:1:20:3",
+          "text": "130 共 一 29 长 海 放 海 灯 大 连 市 长 海 县"
+        }
+      ]
+    },
+    {
+      "locator": "https://www.ln.gov.cn/web/imageDir/2026/01/img_pc_site/2026021311343545708.png",
+      "image_sha256": "b7fed160b54a4963677eb0e95bf8c90d57a07ea546796037c32c7adaa3faf1c7",
+      "low_confidence_tokens": 11,
+      "lines": [
+        {
+          "locator": "ocr-line:1:1:1:1",
+          "text": "131 工 一 30 太 山 庙会 大 连 金 普 新 区"
+        },
+        {
+          "locator": "ocr-line:1:1:1:2",
+          "text": "132 X 一 31 庄 河面 塑 灯 习 俗 大 连 庄 河 市"
+        },
+        {
+          "locator": "ocr-line:1:1:1:3",
+          "text": "133 工 一 32 查 干 哈达 睦邻 节 阜新 市 阜新 蒙古 族 自治 县"
+        },
+        {
+          "locator": "ocr-line:1:1:1:4",
+          "text": "134 共 一 33 明 性 寺庙 会 葫芦 岛 市"
+        }
+      ]
+    }
+  ],
+  "status": "unresolved_requires_visual_row_reconciliation",
+  "counts_as_imported_rows": false,
+  "counts_as_reviewed_knowledge": false,
+  "observation_hash": "7aed354b2fedeedc54d4cd45bbe6bb582c2390da0714f995b3f2a653487a1c4a",
+  "created_at": "2026-10-06T15:14:39.356421+00:00"
+}

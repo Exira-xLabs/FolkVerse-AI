@@ -4,7 +4,7 @@ let cancelled = 0;
 createServer(async (request, response) => {
   if (request.method === 'GET') {
     response.writeHead(200, { 'Content-Type': 'application/json' });
-    response.end(JSON.stringify({ fixture: true, cancelled, items: [], total: 0, next_cursor: null })); return;
+    response.end(JSON.stringify({ fixture: true, cancelled, items: [], total: 0, next_cursor: null, received: { cookie: request.headers.cookie, authorization: request.headers.authorization ?? null, path: request.url } })); return;
   }
   let body = ''; for await (const chunk of request) body += chunk;
   const payload = JSON.parse(body);

@@ -1,0 +1,57 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "6b6bb1b42c9f473b62cba42845d5fef9ceab1fe1abc7f3aa275bb7a5f6ae0710",
+  "source": {
+    "id": "explanation-shenyang-1",
+    "title": "沈阳市·沈阳故宫",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2026-03-16",
+    "edition": "2026-03-16",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "沈阳市",
+    "subject_hint": "sites"
+  },
+  "raw_sha256": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_d0a64d581ab312fd8b869bc2",
+      "ordinal": "article",
+      "name_original": "沈阳市·沈阳故宫",
+      "category_original": "sites",
+      "locality_original": "沈阳市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_e603ae3dac30bf6edc5954d7",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "8f2d81077e044275d10a77c2201ea4c28759a7773c3d1a4e774c1eca17b7b910",
+          "characters": 186
+        },
+        {
+          "locator": "article:p:3",
+          "text_sha256": "202b9766f1d5d32a5a1b83f24a0e084d2135ed9e098b9bf95e74f053607eb0ef",
+          "characters": 81
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,385 @@
+{
+  "version": "liaoning-launch-v1",
+  "cities": [
+    {
+      "id": "liaoning-dalian",
+      "names": {
+        "en": "Dalian",
+        "zh-CN": "大连"
+      },
+      "catalog_rows_associated": 82,
+      "candidate_topic_ids": [
+        "entity_2da84862b1f1222368406610",
+        "entity_57dbdf203f46bd2a4311ee92",
+        "entity_69fc95fcffd4bd47e3c5cc5f"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "history_geography",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [
+        "liaoning-dalian-01"
+      ],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-shenyang",
+      "names": {
+        "en": "Shenyang",
+        "zh-CN": "沈阳"
+      },
+      "catalog_rows_associated": 126,
+      "candidate_topic_ids": [
+        "entity_e42482e925689e57d9a5a079",
+        "entity_dc74fb6904be3bf8c1923f20",
+        "entity_d5466e61f22f1a0b3e2ef9f2"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "folklore",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-anshan",
+      "names": {
+        "en": "Anshan",
+        "zh-CN": "鞍山"
+      },
+      "catalog_rows_associated": 44,
+      "candidate_topic_ids": [
+        "entity_2289641faebf6fdb14e0a5c0",
+        "entity_ae824f890306d80f3eade96d",
+        "entity_e719df53c78ab429e17ed908"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "history_geography",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-fushun",
+      "names": {
+        "en": "Fushun",
+        "zh-CN": "抚顺"
+      },
+      "catalog_rows_associated": 40,
+      "candidate_topic_ids": [
+        "entity_869d395517dac58e19793ad6",
+        "entity_2676c3b1142dee09461138a1",
+        "entity_4cfa13ee84763fe5aec7b9dc"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "history_geography",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-benxi",
+      "names": {
+        "en": "Benxi",
+        "zh-CN": "本溪"
+      },
+      "catalog_rows_associated": 56,
+      "candidate_topic_ids": [
+        "entity_d8cc117ea399f92391f6c105",
+        "entity_3d56cb04aed5f455909a3f02",
+        "entity_a6c8d43433932521d35387c8"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "festivals",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-dandong",
+      "names": {
+        "en": "Dandong",
+        "zh-CN": "丹东"
+      },
+      "catalog_rows_associated": 69,
+      "candidate_topic_ids": [
+        "entity_53c7ea35053f65c90b4bedd4",
+        "entity_907078a6dcde302bb7f779b8",
+        "entity_70d593ef2284e129092dd11b"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "history_geography",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-jinzhou",
+      "names": {
+        "en": "Jinzhou",
+        "zh-CN": "锦州"
+      },
+      "catalog_rows_associated": 54,
+      "candidate_topic_ids": [
+        "entity_671b6d6d669aa69b22b15685",
+        "entity_e54892c2c4294e461d98adf8",
+        "entity_08c320df6f3cad93e4e4ef67"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "folklore",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-yingkou",
+      "names": {
+        "en": "Yingkou",
+        "zh-CN": "营口"
+      },
+      "catalog_rows_associated": 37,
+      "candidate_topic_ids": [
+        "entity_9d974b10fc6be63f054bf728",
+        "entity_0eb048c2a6b9423a7ee2edef",
+        "entity_830726c05db1b22e5553daea"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "history_geography",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-fuxin",
+      "names": {
+        "en": "Fuxin",
+        "zh-CN": "阜新"
+      },
+      "catalog_rows_associated": 41,
+      "candidate_topic_ids": [
+        "entity_b37de829ba0081eeb530cd67",
+        "entity_4bcaaf4f2dbfc844799494db",
+        "entity_62e05a72a0218d5cfb5d6ced"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "history_geography",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-liaoyang",
+      "names": {
+        "en": "Liaoyang",
+        "zh-CN": "辽阳"
+      },
+      "catalog_rows_associated": 28,
+      "candidate_topic_ids": [
+        "entity_d88925269ad93f2ca393145c",
+        "entity_0c277048032841b2c5748bf5",
+        "entity_68bc0a1dd1f8e5900c0f6d48"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "history_geography",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-tieling",
+      "names": {
+        "en": "Tieling",
+        "zh-CN": "铁岭"
+      },
+      "catalog_rows_associated": 29,
+      "candidate_topic_ids": [
+        "entity_9c9fe9a7f48c751a448ad5f9",
+        "entity_9f345319d17800e57f286b5d",
+        "entity_476e570a588375dedab7ef7e"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "festivals",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-chaoyang",
+      "names": {
+        "en": "Chaoyang",
+        "zh-CN": "朝阳"
+      },
+      "catalog_rows_associated": 72,
+      "candidate_topic_ids": [
+        "entity_87294aa75b86650315b6339f",
+        "entity_367ffdfd8ca49de797e37840",
+        "entity_d6e59d3018c0d846243b1c9b"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "folklore",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-panjin",
+      "names": {
+        "en": "Panjin",
+        "zh-CN": "盘锦"
+      },
+      "catalog_rows_associated": 18,
+      "candidate_topic_ids": [
+        "entity_d722fe4cbec978968b463d88",
+        "entity_5f2eff4e0edb0a2545b833a1",
+        "entity_33a45b471b06bce12b81148a"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "festivals",
+        "history_geography"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    },
+    {
+      "id": "liaoning-huludao",
+      "names": {
+        "en": "Huludao",
+        "zh-CN": "葫芦岛"
+      },
+      "catalog_rows_associated": 17,
+      "candidate_topic_ids": [
+        "entity_6658de06b7c262910e9a3315",
+        "entity_19e410c9ea23d45ad23a0902",
+        "entity_d12afdaa8e61eb67583410f2"
+      ],
+      "candidate_subjects": [
+        "crafts",
+        "festivals",
+        "performance"
+      ],
+      "reviewed_city_introduction_en_zh": false,
+      "reviewed_substantive_topics": [],
+      "reviewed_subjects": [],
+      "published_exhibit_ids": [],
+      "publication_status": "verified",
+      "ready": false,
+      "remaining": [
+        "Reviewed EN/ZH introduction; three topics across two subjects required"
+      ]
+    }
+  ]
+}

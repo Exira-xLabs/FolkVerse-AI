@@ -238,8 +238,25 @@ class FakeGateway:
         if self.failure:
             raise self.failure
         data = json.loads(messages[1].content)
-        bundle = self.repository.bundles[data["locale"]]
-        payload = proposal(bundle, data["depth"])
+        if data.get("task") == "conversation_route":
+            payload = {
+                "locale": data["locale"],
+                "intent": "cultural",
+                "opening_id": None,
+                "invitation_id": None,
+            }
+        elif data.get("task") == "conversation":
+            payload = {
+                "locale": data["locale"],
+                "intent": data["intent"],
+                "opening_id": int(next(iter(data["openings"]))),
+                "invitation_id": int(next(iter(data["invitations"])))
+                if data["intent"] in {"greeting", "start", "help", "empathy", "clarification"}
+                else None,
+            }
+        else:
+            bundle = self.repository.bundles[data["locale"]]
+            payload = proposal(bundle, data["depth"])
         if self.mutate:
             self.mutate(payload)
         if self.withdraw:

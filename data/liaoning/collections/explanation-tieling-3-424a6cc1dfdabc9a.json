@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "424a6cc1dfdabc9a736b693d82b3bd7ea53e9bcb94a5cba4e5c2b2c8d21469e5",
+  "source": {
+    "id": "explanation-tieling-3",
+    "title": "铁岭市·周恩来同志少年读书旧址纪念馆景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114460837555/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114460837555/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-11",
+    "edition": "2025-11-11",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "铁岭市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "573db7115dde462ad738a9c2913b55bf0e8d22e1f299145cfae19df19d0e55c6",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_3c2e78e4615279033e88041c",
+      "ordinal": "article",
+      "name_original": "铁岭市·周恩来同志少年读书旧址纪念馆景区",
+      "category_original": "museums",
+      "locality_original": "铁岭市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_b6b8218cc468117e4f461a73",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "c2034610637d0bf83a2b81a651a1fea98737b8392eab45392fb9383cd608f59f",
+          "characters": 178
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

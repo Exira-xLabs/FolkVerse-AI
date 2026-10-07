@@ -17,7 +17,7 @@ from folkverse.content import fingerprint, passage_eligible, published_exhibits
 from folkverse.content_models import Claim, ClaimEvidence, ExhibitRegion, Passage, Review, Source
 
 Locale = Literal["en", "zh-CN"]
-RETRIEVAL_VERSION = "lexical-bm25-cjk-v1"
+RETRIEVAL_VERSION = "lexical-bm25-cjk-v2"
 MAX_BUNDLE_CHARACTERS = 12000
 
 
@@ -32,12 +32,20 @@ class EvidencePassage(BaseModel):
     source_title: str
     canonical_url: str
     fetched_at: datetime
-    reviewed_at: datetime
+    reviewed_at: datetime | None
     reviewer: str
     review_id: str
     content_hash: str
     exhibit_ids: list[str]
     region_ids: list[str]
+    evidence_origin: Literal[
+        "reviewed_corpus", "reviewed_unit", "official_lookup", "diagnostic_candidate"
+    ] = "reviewed_corpus"
+    classification: Literal[
+        "source_statement", "history", "interpretation", "folklore", "creative_adaptation"
+    ] = "source_statement"
+    statement_variants: list[str] = Field(default_factory=list)
+    required_support_ids: list[str] = Field(default_factory=list)
 
 
 class EvidenceBundle(BaseModel):
@@ -62,6 +70,8 @@ class EvidenceBundle(BaseModel):
     embedding_model_version: str | None = None
     embedding_encoder_version: str | None = None
     query_embedding_ms: float | None = None
+    database_ms: float | None = None
+    ranking_ms: float | None = None
 
 
 class CoverageIndex(BaseModel):
@@ -187,14 +197,52 @@ def lexical_rank(
     question: str,
     candidates: list[EvidencePassage],
 ) -> list[tuple[float, EvidencePassage]]:
-    query = set(tokenize(question))
+    clean_question = re.sub(
+        r"介绍一下|解释一下|请问|是什么|告诉我|用简单的话|详细介绍", "", question
+    )
+    stop = {
+        "a",
+        "an",
+        "the",
+        "is",
+        "are",
+        "was",
+        "were",
+        "of",
+        "and",
+        "or",
+        "to",
+        "in",
+        "for",
+        "what",
+        "which",
+        "how",
+        "does",
+        "do",
+        "can",
+        "you",
+        "me",
+        "please",
+        "tell",
+        "about",
+        "explain",
+        "it",
+        "this",
+        "that",
+        "i",
+        "my",
+        "we",
+        "with",
+    }
+    query = set(tokenize(clean_question)) - stop
     documents = [Counter(tokenize(p.text)) for p in candidates]
     average = sum(sum(d.values()) for d in documents) / max(1, len(documents))
+    frequencies = Counter(term for d in documents for term in query & d.keys())
     ranked: list[tuple[float, EvidencePassage]] = []
     for passage, document in zip(candidates, documents, strict=True):
         score = 0.0
         for term in query & document.keys():
-            frequency = sum(term in d for d in documents)
+            frequency = frequencies[term]
             inverse = math.log(1 + (len(documents) - frequency + 0.5) / (frequency + 0.5))
             tf = document[term]
             score += (

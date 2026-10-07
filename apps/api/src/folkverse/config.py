@@ -30,6 +30,7 @@ class Settings(BaseSettings):
     # Cloud subscription/account quotas use request admission, not invented token prices.
     ollama_daily_request_limit: int = Field(default=0, ge=0, le=10000)
     glm_enabled: bool = False
+    trusted_lookup_enabled: bool = True
     embedding_enabled: bool = False
     embedding_model_dir: Path = ROOT / ".local/models/bge-m3"
     embedding_index_path: Path = ROOT / ".local/retrieval/bge-m3.json"

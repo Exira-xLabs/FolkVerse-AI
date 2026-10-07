@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { recentConversation, replyPreferences } from "../../apps/web/src/lib/guide-conversation";
 import policy from "../../packages/contracts/src/jinyao-policy.json";
 // Synthetic reviewed text and responses exercise presentation, not provider quality.
 const evidence = (zh = false) => ({ passage_id: "passage_fixture", source_id: "source_fixture", text: zh ? "复州皮影戏在瓦房店名录中列为传统戏剧。" : "Fuzhou shadow puppetry is listed as traditional theatre in Wafangdian.", language: zh ? "zh-CN" : "en", locator: "Fixture row 1", rights_basis: "Synthetic test evidence", institution: "Fixture institution", source_title: "Fixture inventory", canonical_url: "https://example.org/inventory", fetched_at: "2026-10-06T00:00:00Z", reviewed_at: "2026-10-06T00:00:00Z", reviewer: "Fixture reviewer", review_id: "review_fixture", content_hash: "fixture_hash", exhibit_ids: ["exhibit_fixture"], region_ids: [] });
@@ -114,7 +115,7 @@ test("withdrawn source has no inspectable stale evidence", async ({ page }) => {
 });
 for (const zh of [false, true]) test(`insufficiency ${zh ? "ZH" : "EN"} displays no citations or factual latency`, async ({ page }) => {
   await fixtures(page, { zh, insufficient: true }); await open(page, zh);
-  await page.getByRole("textbox").fill("Unsupported dynasty question"); await page.getByRole("button", { name: zh ? "发送消息" : "Send message", exact: true }).click();
+  await page.getByRole("textbox").fill(zh ? "没有审核资料的朝代问题" : "Unsupported dynasty question"); await page.getByRole("button", { name: zh ? "发送消息" : "Send message", exact: true }).click();
   await expect(page.getByRole("log")).toContainText(zh ? "审核资料不足" : "Reviewed evidence is insufficient");
   await expect(page.getByRole("button", { name: zh ? "查看回答来源" : "Inspect answer sources" })).toHaveCount(0);
   await expect(page.getByRole("log")).not.toContainText("received in");
@@ -340,4 +341,84 @@ test("an open upstream stream without a terminal event times out and is cancelle
   await expect(page.getByRole("log")).toContainText("The guide timed out");
   await expect(page.getByRole("button", { name: "Inspect answer sources" })).toHaveCount(0);
   await expect.poll(async () => (await (await request.get("http://127.0.0.1:3210")).json()).cancelled).toBe(before + 1);
+});
+
+function composedReply(locale: "en" | "zh-CN", invalid = false) {
+  const answer = { answer_id: "composed_fixture", locale, depth: "concise", status: "conversational",
+    uncertainty: "insufficient", reason: "social_turn", answer_text: policy.conversation.greeting[locale][0] + " " + policy.invitations[locale][0] + (invalid ? " Invented fact." : ""),
+    coverage_limit: "", social_intent: "greeting", personality_version: policy.version,
+    presentation_version: "conversation_composition_v1", conversation_choice: { locale, intent: "greeting", opening_id: 0, invitation_id: 0 }, provider_attempt_id: "call_fixture",
+    claims: [], answer_claim_ids: [], context_claim_ids: [], evidence_ids: [], related_exhibit_ids: [], mode: "live", corpus_version: "not_applicable" };
+  return event("answer", answer) + event("sources", { answer_id: answer.answer_id, items: [] }) + event("done", { answer_id: answer.answer_id });
+}
+
+for (const invalid of [false, true]) test(`composed greeting ${invalid ? "rejects unchecked additions" : "displays checked question"}`, async ({ page }) => {
+  await fixtures(page);
+  await page.route("**/api/v1/guide", route => route.fulfill({ contentType: "text/event-stream", body: composedReply("en", invalid) }));
+  await open(page);
+  await page.getByRole("textbox").fill("hi"); await page.getByRole("textbox").press("Enter");
+  if (invalid) {
+    await expect(page.getByRole("button", { name: "Retry question" })).toBeVisible();
+    await expect(page.getByRole("log")).not.toContainText("Invented fact");
+  } else {
+    await expect(page.getByRole("log")).toContainText(policy.invitations.en[0]);
+    await expect(page.getByRole("button", { name: "Inspect answer sources" })).toHaveCount(0);
+  }
+});
+
+test("conversation history needs consent, is bounded and stops immediately after opt-out", async ({ page }) => {
+  await fixtures(page); await open(page);
+  const send = async (message: string) => {
+    const sent = page.waitForRequest(r => r.url().endsWith("/api/v1/guide"));
+    await page.getByRole("textbox").fill(message); await page.getByRole("textbox").press("Enter");
+    const body = (await sent).postDataJSON();
+    await expect(page.locator('.jinyao-chat-turn').last()).toHaveAttribute('data-status', 'ready');
+    return body;
+  };
+  expect((await send("First question")).conversation).toEqual([]);
+  expect((await send("Second question")).conversation).toEqual([]);
+  await page.getByRole("checkbox").check();
+  const consented = await send("Third question");
+  expect(consented.conversation).toHaveLength(2);
+  expect(consented.conversation[0].user).toBe("First question");
+  for (let i = 0; i < 6; i++) await send(`Question ${i}`);
+  expect((await send("Latest question")).conversation).toHaveLength(6);
+  await page.getByRole("checkbox").uncheck();
+  const optedOut = await send("Private question");
+  expect(optedOut).toMatchObject({ context_consent: false, context_token: null, conversation: [] });
+});
+
+test("automatic and selected language with an explicit language follow-up", async ({ page }) => {
+  await fixtures(page);
+  await page.route("**/api/v1/guide", route => route.fulfill({ contentType: "text/event-stream", body: composedReply(route.request().postDataJSON().locale) }));
+  await open(page);
+  const send = async (message: string, locale: string) => {
+    const sent = page.waitForRequest(r => r.url().endsWith("/api/v1/guide"));
+    await page.getByRole("textbox").fill(message); await page.getByRole("textbox").press("Enter");
+    expect((await sent).postDataJSON().locale).toBe(locale);
+    await expect(page.locator('.jinyao-chat-turn').last()).toHaveAttribute('data-status', 'ready');
+  };
+  await send("你好", "zh-CN");
+  await send("Hello", "en");
+  await page.getByRole("combobox", { name: "Reply language" }).selectOption("zh-CN");
+  await send("Hello", "zh-CN");
+  await send("Please answer in English", "en");
+  await page.getByRole("combobox", { name: "Reply language" }).selectOption("auto");
+  await send('What is "复州皮影戏"?', "en");
+});
+
+
+test("language ambiguity and complete bounded context preserve message boundaries", () => {
+  expect(replyPreferences("👋", "zh-CN", "concise", "auto").locale).toBe("zh-CN");
+  expect(replyPreferences('What is “复州皮影戏”?', "zh-CN", "concise", "auto").locale).toBe("en");
+  expect(replyPreferences("请详细解释", "en", "concise", "auto").depth).toBe("deeper");
+  expect(replyPreferences("Could you explain more simply?", "en", "concise", "auto").depth).toBe("beginner");
+  const turns = Array.from({ length: 10 }, (_, i) => ({ question: `q${i}`, status: "ready", answer: { answer_text: "a" } }));
+  const retained = recentConversation([...turns, { question: "pending", status: "pending" }]);
+  expect(retained).toHaveLength(6); expect(retained[0].user).toBe("q4");
+  const large = Array.from({ length: 4 }, () => ({ question: "a".repeat(1000), status: "ready", answer: { answer_text: "b".repeat(2000) } }));
+  expect(recentConversation(large)).toHaveLength(2);
+  expect(recentConversation([{ question: "q", status: "ready", answer: { answer_text: "a".repeat(4001) } }])).toEqual([]);
+  const unicode = Array.from({ length: 4 }, () => ({ question: "你".repeat(1000), status: "ready", answer: { answer_text: "好".repeat(1000) } }));
+  expect(recentConversation(unicode)).toHaveLength(2);
 });

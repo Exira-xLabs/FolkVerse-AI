@@ -1,0 +1,32 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "119f1933c3b24d10137f7c6a48395b06116f2c86efc34069fddf53391a5593f6",
+  "source": {
+    "id": "heritage-checkpoint-2026",
+    "title": "January 2026 heritage count checkpoint",
+    "institution": "Ministry of Culture and Tourism",
+    "url": "https://www.mct.gov.cn/whzx/qgwhxxlb/ln/202601/t20260126_964395.htm",
+    "resource_url": "https://www.mct.gov.cn/whzx/qgwhxxlb/ln/202601/t20260126_964395.htm",
+    "adapter": "descriptor",
+    "kind": "checkpoint",
+    "reference_date": "2026-01-26",
+    "edition": "heritage-checkpoint-2026",
+    "expected_count": 428,
+    "counting_unit": "inventory project rows",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Count checkpoint only; includes 76 nationally selected projects. A 428 row roster is not present on this announcement. Reconcile counting units before any union-total claim.",
+    "locality": "",
+    "subject_hint": null
+  },
+  "raw_sha256": "8864c5249217be48af4c139bf1a4dbed4a146d473fb8b086dc1d6dabe1d3fd4f",
+  "original_filename": "t20260126_964395.htm",
+  "fetched_at": "2026-10-06T14:57:06.653514+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "extraction_pending",
+  "rows": [],
+  "errors": [
+    "Descriptor/checkpoint only; no enumeration imported"
+  ]
+}

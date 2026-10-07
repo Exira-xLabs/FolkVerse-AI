@@ -108,7 +108,7 @@ def test_insufficiency_has_no_meaningful_answer_latency(service):
         assert events[-3][1]["status"] == "insufficient"
         assert events[-2][1]["items"] == []
         assert events[-1][1]["first_meaningful_content_ms"] is None
-        assert service[2].calls == 0
+        assert service[2].calls == 1  # Intent routing is metered; no factual answer was generated.
 
 
 def test_origin_input_and_limits(service):
@@ -181,3 +181,37 @@ def test_stream_unexpected_exception_sanitized(service):
         )
         assert "secret-provider-diagnostic" not in result.text
         assert frames(result)[-1][1]["error"]["code"] == "guide_unavailable"
+
+
+def test_guide_body_limit_before_parsing_and_no_reflection(service):
+    with setup_client(service) as client:
+        for body in [b'"' + b"x" * 65536 + b'"', (b"x" * 32768 for _ in range(3))]:
+            result = client.post(
+                "/api/v1/guide",
+                content=body,
+                headers={**ORIGIN, "Content-Type": "application/json"},
+            )
+            assert result.status_code == 413
+            assert result.json()["error"]["code"] == "context_too_large"
+            assert "xxxx" not in result.text
+    assert service[2].calls == 0
+
+
+def test_unicode_context_larger_than_old_proxy_bound_is_valid(service):
+    with setup_client(service) as client:
+        body = request(
+            question="hi",
+            context_consent=True,
+            conversation=[{"user": "你好" * 500, "assistant": "您好" * 1000}],
+        ).model_dump()
+        encoded = json.dumps(body, ensure_ascii=False).encode()
+        # Six-byte escapes would exceed the old limit too; neither form is truncated.
+        escaped = json.dumps(body).encode()
+        assert 16384 < len(escaped) < 65536
+        for data in [encoded, escaped]:
+            result = client.post(
+                "/api/v1/guide",
+                content=data,
+                headers={**ORIGIN, "Content-Type": "application/json"},
+            )
+            assert result.status_code == 200 and result.json()["status"] == "conversational"

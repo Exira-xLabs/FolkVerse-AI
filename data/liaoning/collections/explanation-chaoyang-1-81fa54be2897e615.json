@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "81fa54be2897e61569f0c4e4cb614518730366ce224a310ef6f685bed2732f00",
+  "source": {
+    "id": "explanation-chaoyang-1",
+    "title": "朝阳市·牛河梁国家考古遗址公园",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114190360298/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114190360298/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-11",
+    "edition": "2025-11-11",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "朝阳市",
+    "subject_hint": "sites"
+  },
+  "raw_sha256": "68645bb93eb86dd97f782cba0086294666036eb4595506353c00747279d70879",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_b8b2448953541bac2be23ee7",
+      "ordinal": "article",
+      "name_original": "朝阳市·牛河梁国家考古遗址公园",
+      "category_original": "sites",
+      "locality_original": "朝阳市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_254ee2d248638ab26034afd6",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "059874895bb57d9ff161b08b34141531170697dc5f2c8ec38ee37d20ae8c3a5e",
+          "characters": 206
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

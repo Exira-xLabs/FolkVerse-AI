@@ -1,0 +1,174 @@
+{
+  "version": "liaoning-profile-aliases-v1",
+  "note": "Directory search aliases, not reviewed translations or factual approval",
+  "aliases": {
+    "explanation-shenyang-1": {
+      "en": "Shenyang Imperial Palace",
+      "zh-CN": "沈阳故宫"
+    },
+    "explanation-shenyang-2": {
+      "en": "Shenyang Industrial Museum",
+      "zh-CN": "沈阳工业博物馆"
+    },
+    "explanation-shenyang-3": {
+      "en": "September 18 History Museum",
+      "zh-CN": "一八“历史博物馆"
+    },
+    "explanation-dalian-1": {
+      "en": "Dalian Museum",
+      "zh-CN": "大连博物馆景区"
+    },
+    "explanation-dalian-2": {
+      "en": "Lushun prison",
+      "zh-CN": "旅顺日俄监狱旧址博物馆"
+    },
+    "explanation-dalian-3": {
+      "en": "Dongjiguanshan",
+      "zh-CN": "东鸡冠山景区"
+    },
+    "explanation-anshan-1": {
+      "en": "Qianshan",
+      "zh-CN": "辽宁千山景区"
+    },
+    "explanation-anshan-2": {
+      "en": "Yufoyuan",
+      "zh-CN": "玉佛苑"
+    },
+    "explanation-anshan-3": {
+      "en": "Ansteel exhibition hall",
+      "zh-CN": "鞍钢集团展览馆景区"
+    },
+    "explanation-fushun-1": {
+      "en": "Lei Feng Memorial Hall",
+      "zh-CN": "雷锋纪念馆"
+    },
+    "explanation-fushun-2": {
+      "en": "Hetuala",
+      "zh-CN": "赫图阿拉城"
+    },
+    "explanation-fushun-3": {
+      "en": "Sankuaishi",
+      "zh-CN": "三块石国家森林公园"
+    },
+    "explanation-benxi-1": {
+      "en": "Wunushan",
+      "zh-CN": "五女山景区"
+    },
+    "explanation-benxi-2": {
+      "en": "Benxi Water Cave",
+      "zh-CN": "本溪水洞风景名胜区"
+    },
+    "explanation-benxi-3": {
+      "en": "Tieshashan",
+      "zh-CN": "铁刹山风景区"
+    },
+    "explanation-dandong-1": {
+      "en": "Korean War Memorial Dandong",
+      "zh-CN": "抗美援朝纪念馆"
+    },
+    "explanation-dandong-2": {
+      "en": "Yalu River scenic area",
+      "zh-CN": "鸭绿江风景名胜区"
+    },
+    "explanation-dandong-3": {
+      "en": "Dalu Island",
+      "zh-CN": "东港市大鹿岛景区"
+    },
+    "explanation-jinzhou-1": {
+      "en": "Jinzhou Museum",
+      "zh-CN": "锦州市博物馆"
+    },
+    "explanation-jinzhou-2": {
+      "en": "Liaoshen Campaign Memorial",
+      "zh-CN": "辽沈战役纪念馆"
+    },
+    "explanation-jinzhou-3": {
+      "en": "Fengguo Temple",
+      "zh-CN": "义县奉国寺景区"
+    },
+    "explanation-yingkou-1": {
+      "en": "Wangershan",
+      "zh-CN": "鲅鱼圈区望儿山景区"
+    },
+    "explanation-yingkou-2": {
+      "en": "Chishan",
+      "zh-CN": "盖州市万福赤山旅游景区"
+    },
+    "explanation-yingkou-3": {
+      "en": "Tuanshan marine park",
+      "zh-CN": "辽宁团山国家级海洋公园景区"
+    },
+    "explanation-fuxin-1": {
+      "en": "Fuxin agate town",
+      "zh-CN": "玛瑙特色小镇景区"
+    },
+    "explanation-fuxin-2": {
+      "en": "Haitangshan",
+      "zh-CN": "海棠山风景区"
+    },
+    "explanation-fuxin-3": {
+      "en": "Ruiying Temple",
+      "zh-CN": "瑞应寺风景区"
+    },
+    "explanation-liaoyang-1": {
+      "en": "Liaoyang Museum",
+      "zh-CN": "辽阳博物馆景区"
+    },
+    "explanation-liaoyang-2": {
+      "en": "Guangyou Temple",
+      "zh-CN": "广佑寺景区"
+    },
+    "explanation-liaoyang-3": {
+      "en": "Taizi River cultural tourism belt",
+      "zh-CN": "太子河历史文化风光带景区"
+    },
+    "explanation-tieling-1": {
+      "en": "Tiefa steam locomotive museum",
+      "zh-CN": "铁煤蒸汽机车博物馆"
+    },
+    "explanation-tieling-2": {
+      "en": "Chengzishan",
+      "zh-CN": "西丰县城子山风景区"
+    },
+    "explanation-tieling-3": {
+      "en": "Zhou Enlai study site",
+      "zh-CN": "周恩来同志少年读书旧址纪念馆景区"
+    },
+    "explanation-chaoyang-1": {
+      "en": "Niuheliang",
+      "zh-CN": "牛河梁国家考古遗址公园"
+    },
+    "explanation-chaoyang-2": {
+      "en": "Chaoyang Fenghuangshan",
+      "zh-CN": "凤凰山景区"
+    },
+    "explanation-chaoyang-3": {
+      "en": "Chaoyang bird fossil geopark",
+      "zh-CN": "辽宁朝阳鸟化石国家地质公园景区"
+    },
+    "explanation-panjin-1": {
+      "en": "Liaohe Stele Forest",
+      "zh-CN": "辽河碑林公园"
+    },
+    "explanation-panjin-2": {
+      "en": "Guangsha Art Street",
+      "zh-CN": "广厦艺术街"
+    },
+    "explanation-panjin-3": {
+      "en": "Liaohe estuary specialty museum park",
+      "zh-CN": "盘锦特产博物园"
+    },
+    "explanation-huludao-1": {
+      "en": "Jiumenkou Great Wall",
+      "zh-CN": "九门口长城景区"
+    },
+    "explanation-huludao-2": {
+      "en": "Xingcheng ancient city",
+      "zh-CN": "兴城市古城景区"
+    },
+    "explanation-huludao-3": {
+      "en": "Tashan Memorial Hall",
+      "zh-CN": "塔山阻击战纪念馆"
+    }
+  }
+}

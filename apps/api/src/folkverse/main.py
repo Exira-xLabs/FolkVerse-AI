@@ -28,11 +28,12 @@ from folkverse.contracts import (
 from folkverse.database import AnonymousSession, make_engine
 from folkverse.errors import ApiError
 from folkverse.gateway_limits import UsageLedger
-from folkverse.guide_api import GuideRequestLimits
+from folkverse.guide_api import GuideBodyLimitMiddleware, GuideRequestLimits
 from folkverse.guide_api import router as guide_router
-from folkverse.guide_embeddings import LocalBGEEncoder
+from folkverse.guide_embeddings import EmbeddingUnavailable, PersistentBGEEncoder
 from folkverse.guide_harness import GuideHarness
 from folkverse.guide_hybrid import HybridEvidenceRepository
+from folkverse.guide_lookup import OfficialLookup
 from folkverse.provider_gateway import GuideGateway
 from folkverse.sessions import COOKIE_NAME, SessionService
 
@@ -76,6 +77,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 except (SQLAlchemyError, ApiError):
                     app.state.guide_maintenance = "unavailable"
 
+        app.state.embedding_startup = "disabled"
+        if settings.embedding_enabled and settings.embedding_index_path.is_file():
+            try:
+                await app.state.guide_encoder.encode(["museum cultural heritage"], 30)
+                app.state.embedding_startup = "ready"
+            except EmbeddingUnavailable as exc:
+                app.state.embedding_startup = exc.status
         maintenance = asyncio.create_task(maintain())
         try:
             yield
@@ -85,6 +93,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 await maintenance
             except asyncio.CancelledError:
                 pass
+            await app.state.guide_encoder.close()
             engine.dispose()
 
     app = FastAPI(title="FolkVerse API", version="0.1.0", lifespan=lifespan)
@@ -99,10 +108,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         settings.model_rate_limit_per_minute,
         settings.model_global_rate_limit_per_minute,
     )
+    app.state.guide_encoder = PersistentBGEEncoder(settings.embedding_model_dir)
+    app.state.guide_lookup = OfficialLookup(enabled=settings.trusted_lookup_enabled)
     app.state.guide_harness = GuideHarness(
         HybridEvidenceRepository(
             engine,
-            LocalBGEEncoder(settings.embedding_model_dir),
+            app.state.guide_encoder,
             settings.embedding_index_path,
             settings.embedding_enabled,
             settings.embedding_query_timeout_seconds,
@@ -112,6 +123,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         settings.session_secret.get_secret_value(),
         timeout_seconds=settings.model_timeout_seconds + 10,
         max_output_tokens=settings.model_max_output_tokens,
+        hybrid_explanations=True,
+        lookup=app.state.guide_lookup,
     )
     app.add_middleware(
         CORSMiddleware,
@@ -120,6 +133,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         allow_methods=["GET", "POST", "DELETE", "PATCH"],
         allow_headers=["Content-Type"],
     )
+
+    app.add_middleware(GuideBodyLimitMiddleware)
 
     @app.middleware("http")
     async def boundary(request: Request, call_next: RequestResponseEndpoint) -> Response:

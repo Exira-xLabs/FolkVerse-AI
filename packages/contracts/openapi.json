@@ -1,6 +1,56 @@
 {
   "components": {
     "schemas": {
+      "AnswerSection": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 6,
+            "title": "Claim Ids",
+            "type": "array"
+          },
+          "kind": {
+            "enum": [
+              "conversation",
+              "evidence",
+              "general"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "section_id": {
+            "title": "Section Id",
+            "type": "string"
+          },
+          "support_label": {
+            "enum": [
+              "sources_checked",
+              "official_lookup",
+              "general_unverified",
+              "conversation"
+            ],
+            "title": "Support Label",
+            "type": "string"
+          },
+          "text": {
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "section_id",
+          "kind",
+          "text",
+          "support_label"
+        ],
+        "title": "AnswerSection",
+        "type": "object"
+      },
       "ArtifactCard": {
         "properties": {
           "catalog_date": {
@@ -97,6 +147,80 @@
         "title": "ClaimCard",
         "type": "object"
       },
+      "ConversationChoice": {
+        "additionalProperties": false,
+        "properties": {
+          "intent": {
+            "enum": [
+              "greeting",
+              "identity",
+              "thanks",
+              "start",
+              "goodbye",
+              "help",
+              "empathy",
+              "clarification"
+            ],
+            "title": "Intent",
+            "type": "string"
+          },
+          "invitation_id": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Invitation Id"
+          },
+          "locale": {
+            "enum": [
+              "en",
+              "zh-CN"
+            ],
+            "title": "Locale",
+            "type": "string"
+          },
+          "opening_id": {
+            "minimum": 0.0,
+            "title": "Opening Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "locale",
+          "intent",
+          "opening_id"
+        ],
+        "title": "ConversationChoice",
+        "type": "object"
+      },
+      "ConversationPair": {
+        "additionalProperties": false,
+        "properties": {
+          "assistant": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Assistant",
+            "type": "string"
+          },
+          "user": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "User",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user",
+          "assistant"
+        ],
+        "title": "ConversationPair",
+        "type": "object"
+      },
       "ErrorDetail": {
         "properties": {
           "code": {
@@ -143,8 +267,31 @@
             "title": "Canonical Url",
             "type": "string"
           },
+          "classification": {
+            "default": "source_statement",
+            "enum": [
+              "source_statement",
+              "history",
+              "interpretation",
+              "folklore",
+              "creative_adaptation"
+            ],
+            "title": "Classification",
+            "type": "string"
+          },
           "content_hash": {
             "title": "Content Hash",
+            "type": "string"
+          },
+          "evidence_origin": {
+            "default": "reviewed_corpus",
+            "enum": [
+              "reviewed_corpus",
+              "reviewed_unit",
+              "official_lookup",
+              "diagnostic_candidate"
+            ],
+            "title": "Evidence Origin",
             "type": "string"
           },
           "exhibit_ids": {
@@ -186,14 +333,28 @@
             "title": "Region Ids",
             "type": "array"
           },
+          "required_support_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Required Support Ids",
+            "type": "array"
+          },
           "review_id": {
             "title": "Review Id",
             "type": "string"
           },
           "reviewed_at": {
-            "format": "date-time",
-            "title": "Reviewed At",
-            "type": "string"
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reviewed At"
           },
           "reviewer": {
             "title": "Reviewer",
@@ -210,6 +371,13 @@
           "source_title": {
             "title": "Source Title",
             "type": "string"
+          },
+          "statement_variants": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Statement Variants",
+            "type": "array"
           },
           "text": {
             "title": "Text",
@@ -438,6 +606,28 @@
             ],
             "title": "Context Token"
           },
+          "contract_version": {
+            "anyOf": [
+              {
+                "const": "hybrid_sections_v1",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Contract Version"
+          },
+          "conversation_choice": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ConversationChoice"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "corpus_version": {
             "title": "Corpus Version",
             "type": "string"
@@ -445,6 +635,17 @@
           "coverage_limit": {
             "title": "Coverage Limit",
             "type": "string"
+          },
+          "database_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Database Ms"
           },
           "depth": {
             "enum": [
@@ -489,8 +690,19 @@
             "title": "Evidence Ids",
             "type": "array"
           },
+          "generation_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Generation Ms"
+          },
           "harness_version": {
-            "default": "guide-supported-conversation-v4",
+            "default": "guide-hybrid-sections-v6",
             "title": "Harness Version",
             "type": "string"
           },
@@ -502,6 +714,11 @@
             "title": "Locale",
             "type": "string"
           },
+          "lookup_status": {
+            "default": "not_requested",
+            "title": "Lookup Status",
+            "type": "string"
+          },
           "mode": {
             "const": "live",
             "default": "live",
@@ -509,7 +726,7 @@
             "type": "string"
           },
           "personality_version": {
-            "default": "jinyao-conversation-v1",
+            "default": "jinyao-conversation-v2",
             "title": "Personality Version",
             "type": "string"
           },
@@ -517,13 +734,15 @@
             "default": "attributed_excerpt_v1",
             "enum": [
               "attributed_excerpt_v1",
-              "inventory_projection_v1"
+              "inventory_projection_v1",
+              "conversation_composition_v1",
+              "hybrid_sections_v1"
             ],
             "title": "Presentation Version",
             "type": "string"
           },
           "prompt_version": {
-            "default": "jinyao-evidence-selector-v4",
+            "default": "jinyao-hybrid-explanations-v6",
             "title": "Prompt Version",
             "type": "string"
           },
@@ -549,6 +768,17 @@
             ],
             "title": "Query Embedding Ms"
           },
+          "ranking_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ranking Ms"
+          },
           "reason": {
             "enum": [
               "reviewed_excerpt",
@@ -557,7 +787,9 @@
               "unsupported_claim",
               "evidence_changed",
               "unsafe_source",
-              "social_turn"
+              "social_turn",
+              "supported_explanation",
+              "general_explanation"
             ],
             "title": "Reason",
             "type": "string"
@@ -578,10 +810,29 @@
             "title": "Retrieval Mode",
             "type": "string"
           },
+          "retrieval_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retrieval Ms"
+          },
           "retrieval_version": {
             "default": "lexical-bm25-cjk-v1",
             "title": "Retrieval Version",
             "type": "string"
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/AnswerSection"
+            },
+            "maxItems": 4,
+            "title": "Sections",
+            "type": "array"
           },
           "social_intent": {
             "anyOf": [
@@ -590,7 +841,11 @@
                   "greeting",
                   "identity",
                   "thanks",
-                  "start"
+                  "start",
+                  "goodbye",
+                  "help",
+                  "empathy",
+                  "clarification"
                 ],
                 "type": "string"
               },
@@ -624,6 +879,17 @@
             ],
             "title": "Uncertainty",
             "type": "string"
+          },
+          "validation_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Validation Ms"
           }
         },
         "required": [
@@ -638,6 +904,29 @@
           "corpus_version"
         ],
         "title": "GuideAnswer",
+        "type": "object"
+      },
+      "GuideEvidenceState": {
+        "properties": {
+          "current": {
+            "title": "Current",
+            "type": "boolean"
+          },
+          "passage": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EvidencePassage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "current"
+        ],
+        "title": "GuideEvidenceState",
         "type": "object"
       },
       "GuideRequest": {
@@ -659,6 +948,14 @@
               }
             ],
             "title": "Context Token"
+          },
+          "conversation": {
+            "items": {
+              "$ref": "#/components/schemas/ConversationPair"
+            },
+            "maxItems": 6,
+            "title": "Conversation",
+            "type": "array"
           },
           "depth": {
             "default": "concise",
@@ -1022,8 +1319,14 @@
             "type": "string"
           },
           "kind": {
-            "const": "source_statement",
             "default": "source_statement",
+            "enum": [
+              "source_statement",
+              "history",
+              "interpretation",
+              "folklore",
+              "creative_adaptation"
+            ],
             "title": "Kind",
             "type": "string"
           },
@@ -1042,9 +1345,20 @@
             "type": "array"
           },
           "support_method": {
-            "const": "complete_reviewed_passage",
             "default": "complete_reviewed_passage",
+            "enum": [
+              "complete_reviewed_passage",
+              "reviewed_variant_v1",
+              "complete_sentence_v1",
+              "inventory_projection_v1",
+              "official_metadata_projection_v1"
+            ],
             "title": "Support Method",
+            "type": "string"
+          },
+          "support_version": {
+            "default": "deterministic-support-v1",
+            "title": "Support Version",
             "type": "string"
           },
           "text": {
@@ -1342,6 +1656,45 @@
           }
         },
         "summary": "Guide"
+      }
+    },
+    "/api/v1/guide/evidence/{identifier}": {
+      "get": {
+        "operationId": "inspect_guide_evidence_api_v1_guide_evidence__identifier__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "identifier",
+            "required": true,
+            "schema": {
+              "title": "Identifier",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GuideEvidenceState"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Inspect Guide Evidence"
       }
     },
     "/api/v1/health": {

@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "75bf9a153c26a9f61f86e7df767554bde1d95d969f55cf31ab3deb8d37c4ade4",
+  "source": {
+    "id": "explanation-huludao-3",
+    "title": "葫芦岛市·塔山阻击战纪念馆",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714243445981/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714243445981/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-10-17",
+    "edition": "2025-10-17",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "葫芦岛市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "41fb916a007375ab1c4f249f5507e1d80b2217c2bf5f995611f98fc5cc599a98",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_a21375f47c3fe18b5e3d7338",
+      "ordinal": "article",
+      "name_original": "葫芦岛市·塔山阻击战纪念馆",
+      "category_original": "museums",
+      "locality_original": "葫芦岛市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_aa2f2117c05a0302918c1a29",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "6419c4bda76f936afba9f0da84e7ab753891ccc21d0228e244bbf0f590345d9d",
+          "characters": 275
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

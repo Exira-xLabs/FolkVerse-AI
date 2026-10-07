@@ -39,7 +39,11 @@ from folkverse.guide_harness import (
 )
 from folkverse.guide_hybrid import HybridEvidenceRepository
 from folkverse.guide_index import SnapshotDateTime
-from folkverse.guide_personality import POLICY, inventory_projection
+from folkverse.guide_personality import (
+    inventory_projection,
+    policy_options,
+    render_conversation,
+)
 from folkverse.guide_retrieval import (
     RETRIEVAL_VERSION,
     EvidencePassage,
@@ -240,23 +244,40 @@ class FixtureGateway:
         if self.scenario in {"provider_timeout", "budget_exhausted"}:
             raise ApiError(503, self.scenario, "Evaluation fixture failure", True)
         data = json.loads(messages[1].content)
-        passage = data["untrusted_evidence"][0]
-        proposed: dict[str, Any] = {
-            "locale": data["locale"],
-            "depth": data["depth"],
-            "status": "evidence",
-            "claims": [
-                {
-                    "claim_id": "claim_eval",
-                    "text": passage["text"],
-                    "passage_ids": [passage["passage_id"]],
-                    "kind": "source_statement",
-                }
-            ],
-            "answer_claim_ids": ["claim_eval"],
-            "context_claim_ids": [],
-            "related_exhibit_ids": passage["exhibit_ids"],
-        }
+        if data.get("task") == "conversation_route":
+            proposed: dict[str, Any] = {
+                "locale": data["locale"],
+                "intent": "cultural",
+                "opening_id": None,
+                "invitation_id": None,
+            }
+        elif data.get("task") == "conversation":
+            proposed = {
+                "locale": data["locale"],
+                "intent": data["intent"],
+                "opening_id": int(next(iter(data["openings"]))),
+                "invitation_id": int(next(iter(data["invitations"])))
+                if data["intent"] in {"greeting", "start", "help", "empathy", "clarification"}
+                else None,
+            }
+        else:
+            passage = data["untrusted_evidence"][0]
+            proposed = {
+                "locale": data["locale"],
+                "depth": data["depth"],
+                "status": "evidence",
+                "claims": [
+                    {
+                        "claim_id": "claim_eval",
+                        "text": passage["text"],
+                        "passage_ids": [passage["passage_id"]],
+                        "kind": "source_statement",
+                    }
+                ],
+                "answer_claim_ids": ["claim_eval"],
+                "context_claim_ids": [],
+                "related_exhibit_ids": passage["exhibit_ids"],
+            }
         if self.scenario == "invented_citation":
             proposed["claims"][0]["passage_ids"] = ["invented_eval_passage"]
         elif self.scenario == "invented_fact":
@@ -410,9 +431,19 @@ def score_case(
     )
     if answer and answer.status == "conversational":
         uncertainty = None  # Social policy is not a factual uncertainty observation.
-        outcome = outcome and bool(answer.social_intent) and (
-            answer.answer_text == POLICY["social"][answer.social_intent][answer.locale]
-            and not answer.related_exhibit_ids and not answer.provider_attempt_id
+        outcome = (
+            outcome
+            and bool(answer.social_intent)
+            and (
+                answer.conversation_choice is not None
+                and answer.answer_text
+                == render_conversation(
+                    answer.conversation_choice,
+                    policy_options(answer.social_intent or "greeting", answer.locale),
+                )
+                and not answer.related_exhibit_ids
+                and bool(answer.provider_attempt_id)
+            )
         )
     support = citations = None
     if answer and answer.status == "answered":

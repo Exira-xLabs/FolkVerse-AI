@@ -1,4 +1,5 @@
 import type { GuideAnswer, GuideEvidence, GuideRequest } from "@folkverse/contracts";
+import { checkedHybrid } from "./guide-hybrid-checks";
 import policy from "@folkverse/contracts/jinyao-policy.json";
 
 export class GuideError extends Error {
@@ -16,28 +17,45 @@ function answerShape(v: unknown): v is GuideAnswer {
     ["en", "zh-CN"].includes(String(v.locale)) && ["concise", "beginner", "deeper"].includes(String(v.depth)) &&
     v.mode === "live" && ["partial", "insufficient"].includes(String(v.uncertainty)) &&
     typeof v.coverage_limit === "string" && strings(v.evidence_ids) && strings(v.related_exhibit_ids) &&
-    strings(v.answer_claim_ids) && strings(v.context_claim_ids) && Array.isArray(v.claims) && v.claims.length <= 3 &&
+    strings(v.answer_claim_ids) && strings(v.context_claim_ids) && Array.isArray(v.claims) && v.claims.length <= (v.contract_version === "hybrid_sections_v1" ? 6 : 3) &&
     v.claims.every(c => object(c) && typeof c.claim_id === "string" && typeof c.text === "string" &&
-      c.kind === "source_statement" && c.support_method === "complete_reviewed_passage" &&
+      ["source_statement", "history", "interpretation", "folklore", "creative_adaptation"].includes(String(c.kind)) &&
+      ["complete_reviewed_passage", "reviewed_variant_v1", "complete_sentence_v1", "inventory_projection_v1", "official_metadata_projection_v1"].includes(String(c.support_method)) &&
       strings(c.passage_ids) && strings(c.source_ids));
 }
 
 function sourcesShape(v: unknown): v is GuideEvidence[] {
   return Array.isArray(v) && v.length <= 8 && v.every(p => object(p) &&
-    ["passage_id", "source_id", "text", "locator", "canonical_url", "source_title", "institution", "rights_basis", "reviewed_at", "reviewer", "fetched_at"].every(k => typeof p[k] === "string") &&
-    ["en", "zh-CN"].includes(String(p.language)) && strings(p.exhibit_ids));
+    ["passage_id", "source_id", "text", "locator", "canonical_url", "source_title", "institution", "rights_basis", "reviewer", "fetched_at"].every(k => typeof p[k] === "string") &&
+    ["en", "zh-CN"].includes(String(p.language)) && strings(p.exhibit_ids) &&
+    (typeof p.reviewed_at === "string" || (p.evidence_origin === "official_lookup" && p.reviewed_at === null)));
 }
 
 function checkedPublication(answer: GuideAnswer, sources: GuideEvidence[]): boolean {
+  if (answer.contract_version === "hybrid_sections_v1") return checkedHybrid(answer, sources);
+  if (answer.contract_version != null || (answer.sections ?? []).length) return false;
   const claims = answer.claims ?? [];
   const evidence = answer.evidence_ids ?? [];
   const refs = [...(answer.answer_claim_ids ?? []), ...(answer.context_claim_ids ?? [])];
   if (answer.status === "conversational") {
     const intent = answer.social_intent;
-    return !!intent && Object.hasOwn(policy.social, intent) && answer.personality_version === policy.version &&
-      answer.answer_text === policy.social[intent][answer.locale] && !answer.coverage_limit &&
-      !claims.length && !sources.length && !evidence.length && !refs.length &&
-      !(answer.related_exhibit_ids ?? []).length && !answer.provider_attempt_id;
+    if (!intent || !Object.hasOwn(policy.conversation, intent) || answer.reason !== "social_turn" || answer.uncertainty !== "insufficient" || answer.personality_version !== policy.version || answer.coverage_limit ||
+      claims.length || sources.length || evidence.length || refs.length || (answer.related_exhibit_ids ?? []).length) return false;
+    if (answer.presentation_version === "conversation_composition_v1") {
+      const choice = answer.conversation_choice;
+      if (!choice || choice.locale !== answer.locale || choice.intent !== intent ||
+        !Number.isInteger(choice.opening_id) || choice.opening_id < 0 ||
+        typeof answer.provider_attempt_id !== "string" || !answer.provider_attempt_id) return false;
+      const opening = policy.conversation[intent][answer.locale][choice.opening_id];
+      const required = ["greeting", "start", "help", "empathy", "clarification"].includes(intent);
+      const invitation = choice.invitation_id == null ? undefined :
+        Number.isInteger(choice.invitation_id) && choice.invitation_id >= 0 ? policy.invitations[answer.locale][choice.invitation_id] : undefined;
+      if (!opening || (required ? !invitation : choice.invitation_id != null)) return false;
+      return answer.answer_text === opening + (invitation ? ` ${invitation}` : "");
+    }
+    // Compatibility for previously recorded v2 policy fixtures; live service now composes.
+    const legacy = policy.social as Partial<Record<typeof intent, { en: string; "zh-CN": string }>>;
+    return answer.answer_text === legacy[intent]?.[answer.locale] && !answer.provider_attempt_id;
   }
   if (answer.status !== "answered") return !claims.length && !sources.length && !evidence.length && !refs.length;
   const sameIds = (a: string[], b: string[]) => new Set(a).size === a.length &&

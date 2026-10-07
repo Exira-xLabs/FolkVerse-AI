@@ -72,6 +72,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/guide/evidence/{identifier}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Inspect Guide Evidence */
+        get: operations["inspect_guide_evidence_api_v1_guide_evidence__identifier__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/health": {
         parameters: {
             query?: never;
@@ -180,6 +197,25 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** AnswerSection */
+        AnswerSection: {
+            /** Claim Ids */
+            claim_ids?: string[];
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "conversation" | "evidence" | "general";
+            /** Section Id */
+            section_id: string;
+            /**
+             * Support Label
+             * @enum {string}
+             */
+            support_label: "sources_checked" | "official_lookup" | "general_unverified" | "conversation";
+            /** Text */
+            text: string;
+        };
         /** ArtifactCard */
         ArtifactCard: {
             /** Catalog Date */
@@ -215,6 +251,30 @@ export interface components {
             /** Text */
             text: string;
         };
+        /** ConversationChoice */
+        ConversationChoice: {
+            /**
+             * Intent
+             * @enum {string}
+             */
+            intent: "greeting" | "identity" | "thanks" | "start" | "goodbye" | "help" | "empathy" | "clarification";
+            /** Invitation Id */
+            invitation_id?: number | null;
+            /**
+             * Locale
+             * @enum {string}
+             */
+            locale: "en" | "zh-CN";
+            /** Opening Id */
+            opening_id: number;
+        };
+        /** ConversationPair */
+        ConversationPair: {
+            /** Assistant */
+            assistant: string;
+            /** User */
+            user: string;
+        };
         /** ErrorDetail */
         ErrorDetail: {
             /** Code */
@@ -234,8 +294,20 @@ export interface components {
         EvidencePassage: {
             /** Canonical Url */
             canonical_url: string;
+            /**
+             * Classification
+             * @default source_statement
+             * @enum {string}
+             */
+            classification: "source_statement" | "history" | "interpretation" | "folklore" | "creative_adaptation";
             /** Content Hash */
             content_hash: string;
+            /**
+             * Evidence Origin
+             * @default reviewed_corpus
+             * @enum {string}
+             */
+            evidence_origin: "reviewed_corpus" | "reviewed_unit" | "official_lookup" | "diagnostic_candidate";
             /** Exhibit Ids */
             exhibit_ids: string[];
             /**
@@ -256,13 +328,12 @@ export interface components {
             passage_id: string;
             /** Region Ids */
             region_ids: string[];
+            /** Required Support Ids */
+            required_support_ids?: string[];
             /** Review Id */
             review_id: string;
-            /**
-             * Reviewed At
-             * Format: date-time
-             */
-            reviewed_at: string;
+            /** Reviewed At */
+            reviewed_at: string | null;
             /** Reviewer */
             reviewer: string;
             /** Rights Basis */
@@ -271,6 +342,8 @@ export interface components {
             source_id: string;
             /** Source Title */
             source_title: string;
+            /** Statement Variants */
+            statement_variants?: string[];
             /** Text */
             text: string;
         };
@@ -342,10 +415,15 @@ export interface components {
             context_claim_ids?: string[];
             /** Context Token */
             context_token?: string | null;
+            /** Contract Version */
+            contract_version?: "hybrid_sections_v1" | null;
+            conversation_choice?: components["schemas"]["ConversationChoice"] | null;
             /** Corpus Version */
             corpus_version: string;
             /** Coverage Limit */
             coverage_limit: string;
+            /** Database Ms */
+            database_ms?: number | null;
             /**
              * Depth
              * @enum {string}
@@ -362,9 +440,11 @@ export interface components {
             embedding_status: string;
             /** Evidence Ids */
             evidence_ids?: string[];
+            /** Generation Ms */
+            generation_ms?: number | null;
             /**
              * Harness Version
-             * @default guide-supported-conversation-v4
+             * @default guide-hybrid-sections-v6
              */
             harness_version: string;
             /**
@@ -373,6 +453,11 @@ export interface components {
              */
             locale: "en" | "zh-CN";
             /**
+             * Lookup Status
+             * @default not_requested
+             */
+            lookup_status: string;
+            /**
              * Mode
              * @default live
              * @constant
@@ -380,7 +465,7 @@ export interface components {
             mode: "live";
             /**
              * Personality Version
-             * @default jinyao-conversation-v1
+             * @default jinyao-conversation-v2
              */
             personality_version: string;
             /**
@@ -388,21 +473,23 @@ export interface components {
              * @default attributed_excerpt_v1
              * @enum {string}
              */
-            presentation_version: "attributed_excerpt_v1" | "inventory_projection_v1";
+            presentation_version: "attributed_excerpt_v1" | "inventory_projection_v1" | "conversation_composition_v1" | "hybrid_sections_v1";
             /**
              * Prompt Version
-             * @default jinyao-evidence-selector-v4
+             * @default jinyao-hybrid-explanations-v6
              */
             prompt_version: string;
             /** Provider Attempt Id */
             provider_attempt_id?: string | null;
             /** Query Embedding Ms */
             query_embedding_ms?: number | null;
+            /** Ranking Ms */
+            ranking_ms?: number | null;
             /**
              * Reason
              * @enum {string}
              */
-            reason: "reviewed_excerpt" | "coverage_gap" | "ambiguous_topic" | "unsupported_claim" | "evidence_changed" | "unsafe_source" | "social_turn";
+            reason: "reviewed_excerpt" | "coverage_gap" | "ambiguous_topic" | "unsupported_claim" | "evidence_changed" | "unsafe_source" | "social_turn" | "supported_explanation" | "general_explanation";
             /** Related Exhibit Ids */
             related_exhibit_ids?: string[];
             /**
@@ -411,13 +498,17 @@ export interface components {
              * @enum {string}
              */
             retrieval_mode: "lexical_only" | "hybrid";
+            /** Retrieval Ms */
+            retrieval_ms?: number | null;
             /**
              * Retrieval Version
              * @default lexical-bm25-cjk-v1
              */
             retrieval_version: string;
+            /** Sections */
+            sections?: components["schemas"]["AnswerSection"][];
             /** Social Intent */
-            social_intent?: ("greeting" | "identity" | "thanks" | "start") | null;
+            social_intent?: ("greeting" | "identity" | "thanks" | "start" | "goodbye" | "help" | "empathy" | "clarification") | null;
             /** Sources */
             sources?: components["schemas"]["EvidencePassage"][];
             /**
@@ -430,6 +521,14 @@ export interface components {
              * @enum {string}
              */
             uncertainty: "partial" | "insufficient";
+            /** Validation Ms */
+            validation_ms?: number | null;
+        };
+        /** GuideEvidenceState */
+        GuideEvidenceState: {
+            /** Current */
+            current: boolean;
+            passage?: components["schemas"]["EvidencePassage"] | null;
         };
         /** GuideRequest */
         GuideRequest: {
@@ -440,6 +539,8 @@ export interface components {
             context_consent: boolean;
             /** Context Token */
             context_token?: string | null;
+            /** Conversation */
+            conversation?: components["schemas"]["ConversationPair"][];
             /**
              * Depth
              * @default concise
@@ -600,9 +701,9 @@ export interface components {
             /**
              * Kind
              * @default source_statement
-             * @constant
+             * @enum {string}
              */
-            kind: "source_statement";
+            kind: "source_statement" | "history" | "interpretation" | "folklore" | "creative_adaptation";
             /** Passage Ids */
             passage_ids: string[];
             /** Source Ids */
@@ -610,9 +711,14 @@ export interface components {
             /**
              * Support Method
              * @default complete_reviewed_passage
-             * @constant
+             * @enum {string}
              */
-            support_method: "complete_reviewed_passage";
+            support_method: "complete_reviewed_passage" | "reviewed_variant_v1" | "complete_sentence_v1" | "inventory_projection_v1" | "official_metadata_projection_v1";
+            /**
+             * Support Version
+             * @default deterministic-support-v1
+             */
+            support_version: string;
             /** Text */
             text: string;
         };
@@ -779,6 +885,37 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+        };
+    };
+    inspect_guide_evidence_api_v1_guide_evidence__identifier__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                identifier: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GuideEvidenceState"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
             };
         };
     };

@@ -40,6 +40,7 @@ from folkverse.guide_retrieval import (
     lexical_rank,
     select_bundle,
 )
+from folkverse.liaoning_publication import published_unit_evidence
 
 MODEL_FILES = [
     "config.json",
@@ -93,7 +94,7 @@ async def build(settings: Settings) -> dict[str, Any]:
     engine = make_engine(settings)
     try:
         with Session(engine) as db:
-            corpus = eligible_evidence(db)
+            corpus = eligible_evidence(db) + published_unit_evidence()
         index = await make_index(corpus, LocalBGEEncoder(settings.embedding_model_dir))
         # Building can be slow: refuse publication if ANY eligible metadata changed meanwhile.
         with Session(engine) as db:
@@ -219,12 +220,12 @@ def main() -> None:
                 with Session(engine) as db:
                     restore(db, args.manifest)
                     db.commit()
-                    corpus = eligible_evidence(db)
+                    corpus = eligible_evidence(db) + published_unit_evidence()
                 provenance = "offline_export_not_live_database"
             else:
                 engine = make_engine(settings)
                 with Session(engine) as db:
-                    corpus = eligible_evidence(db)
+                    corpus = eligible_evidence(db) + published_unit_evidence()
                 provenance = "current_database"
             # Snapshot indexes are temporary and never written to the configured runtime path.
             import tempfile

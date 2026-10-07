@@ -3,7 +3,7 @@
 Date: 6 October 2026, Asia/Shanghai. Base commit: `6d6096a`.
 Scope: Part 0 design/requirement alignment and Part 1 message delivery. Full hybrid Phase 03 remains in progress.
 
-**Final Part 1 update:** the initial batch was pushed as `6094a94`. The subsequent delivery-completion changes below are verified locally; Part 1 message-delivery acceptance is complete within the stated browser/runtime scope. Generated personality and hybrid generation remain Part 2 onward.
+**Final Part 1 update:** the initial batch was pushed as `6094a94`. The subsequent delivery-completion changes below were pushed as `d7d4d1b`; Part 1 message-delivery acceptance is complete within the stated browser/runtime scope. Generated personality and hybrid generation remain Part 2 onward.
 
 ## Delivered
 
@@ -37,7 +37,7 @@ Part 2 must implement generated, varied social conversation and bounded consente
 
 Province-wide source acquisition, reviewed explanatory material, representative retrieval, independent bilingual/personality assessment and full release verification remain planned in the [execution parts](../docs/phase-03-hybrid-execution-parts.md). Live factual generation and new human quality results are not established by this delivery.
 
-Private configuration and persistent database contents are preserved. Build-generated instruction/type imports are not treated as authored source changes. The initial batch is pushed at `6094a94`; subsequent completion changes remain local. No deployment was made.
+Private configuration and persistent database contents are preserved. Build-generated instruction/type imports are not treated as authored source changes. The initial batch is pushed at `6094a94`; completion changes were pushed at `d7d4d1b`. No deployment was made.
 
 ## Final Part 1 checks and fixes
 

@@ -1,0 +1,336 @@
+{
+  "version": "liaoning-retrieval-diagnostics-v1",
+  "review_status": "source-derived engineering expectations; not expert-reviewed gold",
+  "use": "frozen diagnostics; reserved cases excluded from parameter selection",
+  "cases": [
+    {
+      "id": "relevance-001",
+      "split": "development",
+      "locale": "en",
+      "question": "factory workshop heritage",
+      "expected_source_id": "explanation-shenyang-2"
+    },
+    {
+      "id": "relevance-002",
+      "split": "development",
+      "locale": "en",
+      "question": "city museum of modern Dalian",
+      "expected_source_id": "explanation-dalian-1"
+    },
+    {
+      "id": "relevance-003",
+      "split": "development",
+      "locale": "en",
+      "question": "jade carving Buddhist sculpture",
+      "expected_source_id": "explanation-anshan-2"
+    },
+    {
+      "id": "relevance-004",
+      "split": "development",
+      "locale": "en",
+      "question": "Later Jin political centre in Xinbin",
+      "expected_source_id": "explanation-fushun-2"
+    },
+    {
+      "id": "relevance-005",
+      "split": "development",
+      "locale": "en",
+      "question": "karst cave with a river",
+      "expected_source_id": "explanation-benxi-2"
+    },
+    {
+      "id": "relevance-006",
+      "split": "development",
+      "locale": "en",
+      "question": "Yalu riverside broken bridge",
+      "expected_source_id": "explanation-dandong-2"
+    },
+    {
+      "id": "relevance-007",
+      "split": "development",
+      "locale": "en",
+      "question": "Liao temple timber hall seven statues",
+      "expected_source_id": "explanation-jinzhou-3"
+    },
+    {
+      "id": "relevance-008",
+      "split": "development",
+      "locale": "en",
+      "question": "mother awaiting her son folk story",
+      "expected_source_id": "explanation-yingkou-1"
+    },
+    {
+      "id": "relevance-009",
+      "split": "development",
+      "locale": "en",
+      "question": "agate carving town Shijiazi",
+      "expected_source_id": "explanation-fuxin-1"
+    },
+    {
+      "id": "relevance-010",
+      "split": "development",
+      "locale": "en",
+      "question": "Han Liao Jin Ming Qing museum",
+      "expected_source_id": "explanation-liaoyang-1"
+    },
+    {
+      "id": "relevance-011",
+      "split": "development",
+      "locale": "en",
+      "question": "steam locomotive museum in Diaobingshan",
+      "expected_source_id": "explanation-tieling-1"
+    },
+    {
+      "id": "relevance-012",
+      "split": "development",
+      "locale": "en",
+      "question": "Hongshan altars stone burial mounds",
+      "expected_source_id": "explanation-chaoyang-1"
+    },
+    {
+      "id": "relevance-013",
+      "split": "development",
+      "locale": "en",
+      "question": "reed crafts rice crab museum park",
+      "expected_source_id": "explanation-panjin-3"
+    },
+    {
+      "id": "relevance-014",
+      "split": "development",
+      "locale": "en",
+      "question": "wall combined with a river bridge",
+      "expected_source_id": "explanation-huludao-1"
+    },
+    {
+      "id": "relevance-015",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "工厂车间的工业历史展示",
+      "expected_source_id": "explanation-shenyang-2"
+    },
+    {
+      "id": "relevance-016",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "玛瑙小镇的手工雕刻",
+      "expected_source_id": "explanation-fuxin-1"
+    },
+    {
+      "id": "relevance-017",
+      "split": "development",
+      "locale": "en",
+      "question": "quantum computing semiconductor transistor",
+      "expected_source_id": null
+    },
+    {
+      "id": "relevance-018",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "欧冠足球比赛实时比分",
+      "expected_source_id": null
+    },
+    {
+      "id": "relevance-019",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "historic prison forced labour workshops",
+      "expected_source_id": "explanation-dalian-2"
+    },
+    {
+      "id": "relevance-020",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "museum in a former sintering plant",
+      "expected_source_id": "explanation-anshan-3"
+    },
+    {
+      "id": "relevance-021",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "forest scenery and anti-Japanese army sites",
+      "expected_source_id": "explanation-fushun-3"
+    },
+    {
+      "id": "relevance-022",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "underground river with stalactites and stalagmites",
+      "expected_source_id": "explanation-benxi-2"
+    },
+    {
+      "id": "relevance-023",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Donggang coastal island landscape",
+      "expected_source_id": "explanation-dandong-3"
+    },
+    {
+      "id": "relevance-024",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "battle memorial featuring civilian support",
+      "expected_source_id": "explanation-jinzhou-2"
+    },
+    {
+      "id": "relevance-025",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Yingkou coastal marine park",
+      "expected_source_id": "explanation-yingkou-3"
+    },
+    {
+      "id": "relevance-026",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "religious figures cut into cliff rock",
+      "expected_source_id": "explanation-fuxin-2"
+    },
+    {
+      "id": "relevance-027",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Liaoyang birthday screen museum collection",
+      "expected_source_id": "explanation-liaoyang-1"
+    },
+    {
+      "id": "relevance-028",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Zhou Enlai school academy study site",
+      "expected_source_id": "explanation-tieling-3"
+    },
+    {
+      "id": "relevance-029",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "archaeological temples altars burial mounds",
+      "expected_source_id": "explanation-chaoyang-1"
+    },
+    {
+      "id": "relevance-030",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "calligraphy inscriptions on steles",
+      "expected_source_id": "explanation-panjin-1"
+    },
+    {
+      "id": "relevance-031",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "Ming ancient city walls Confucian temple archways",
+      "expected_source_id": "explanation-huludao-2"
+    },
+    {
+      "id": "relevance-032",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "清代宫殿的东中西路建筑布局",
+      "expected_source_id": "explanation-shenyang-1"
+    },
+    {
+      "id": "relevance-033",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "监狱旧址保留的劳役工场",
+      "expected_source_id": "explanation-dalian-2"
+    },
+    {
+      "id": "relevance-034",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "一块玉石正反两面不同佛像",
+      "expected_source_id": "explanation-anshan-2"
+    },
+    {
+      "id": "relevance-035",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "介绍后金政治中心的古城遗址",
+      "expected_source_id": "explanation-fushun-2"
+    },
+    {
+      "id": "relevance-036",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "地下河流和钟乳石景观",
+      "expected_source_id": "explanation-benxi-2"
+    },
+    {
+      "id": "relevance-037",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "海岛与海岸关系的地理景观",
+      "expected_source_id": "explanation-dandong-3"
+    },
+    {
+      "id": "relevance-038",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "木构大殿与七尊佛像",
+      "expected_source_id": "explanation-jinzhou-3"
+    },
+    {
+      "id": "relevance-039",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "母亲等待孩子回来的民间故事",
+      "expected_source_id": "explanation-yingkou-1"
+    },
+    {
+      "id": "relevance-040",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "清代摩崖造像的宗教景观",
+      "expected_source_id": "explanation-fuxin-2"
+    },
+    {
+      "id": "relevance-041",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "辽阳馆藏的王尔烈寿屏",
+      "expected_source_id": "explanation-liaoyang-1"
+    },
+    {
+      "id": "relevance-042",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "银冈书院的读书旧址",
+      "expected_source_id": "explanation-tieling-3"
+    },
+    {
+      "id": "relevance-043",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "史前祭坛和积石墓遗址",
+      "expected_source_id": "explanation-chaoyang-1"
+    },
+    {
+      "id": "relevance-044",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "画廊与艺术家工作室",
+      "expected_source_id": "explanation-panjin-2"
+    },
+    {
+      "id": "relevance-045",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "长城跨河与桥体的结合",
+      "expected_source_id": "explanation-huludao-1"
+    },
+    {
+      "id": "relevance-046",
+      "split": "reserved_diagnostic",
+      "locale": "en",
+      "question": "software compiler garbage collection",
+      "expected_source_id": null
+    },
+    {
+      "id": "relevance-047",
+      "split": "reserved_diagnostic",
+      "locale": "zh-CN",
+      "question": "飞行员考试报名实时成绩",
+      "expected_source_id": null
+    }
+  ]
+}

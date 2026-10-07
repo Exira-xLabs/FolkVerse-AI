@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "b979253af28fbd4c8d289c37f12804faf61899b40f12fc2c8e105ddafe608258",
+  "source": {
+    "id": "explanation-fushun-2",
+    "title": "抚顺市·赫图阿拉城",
+    "institution": "Liaoning Department of Culture and Tourism",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215232757710/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215232757710/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-12-22",
+    "edition": "2025-12-22",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "抚顺市",
+    "subject_hint": "sites"
+  },
+  "raw_sha256": "e09c226b5bfab139d9f5d9835352f282abdc914ddb9e03de8426e0cd6964130b",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_a66aca2f55236e3d38740a13",
+      "ordinal": "article",
+      "name_original": "抚顺市·赫图阿拉城",
+      "category_original": "sites",
+      "locality_original": "抚顺市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_97a2249ca6bded53aea5f89a",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "380eee17e9df14f0fa147ca8b8046da9d43c3bfe985a614438df541d69a3a01b",
+          "characters": 210
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

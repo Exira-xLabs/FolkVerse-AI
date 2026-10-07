@@ -1,0 +1,29 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "7546790fd0c7ffa492e0404099dab4ad8aa8fe3760d6afec4ad26c67922104f9",
+  "source": {
+    "id": "protected-sites-batch-12-2025",
+    "title": "Twelfth provincial protected-sites batch",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://www.ln.gov.cn/web/attachDir/2025/06/2025062510201355040.pdf",
+    "resource_url": "https://www.ln.gov.cn/web/attachDir/2025/06/2025062510201355040.pdf",
+    "adapter": "pdf_table",
+    "kind": "sites",
+    "reference_date": "2025",
+    "edition": "protected-sites-batch-12-2025",
+    "expected_count": 110,
+    "counting_unit": "new protected-site entries",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Scanned PDF requires OCR/column reconciliation; earlier eleven batches remain a separate missing inventory denominator."
+  },
+  "raw_sha256": "2057fe0387959e98e97bd0d785857781e9ff8bd53abc56706b1ded56d211b70a",
+  "fetched_at": "2026-10-06T14:57:06.135963+00:00",
+  "extractor_version": "liaoning-inventory-v1",
+  "status": "extraction_pending",
+  "rows": [],
+  "errors": [
+    "Image-only PDF; OCR and table reconciliation required"
+  ]
+}

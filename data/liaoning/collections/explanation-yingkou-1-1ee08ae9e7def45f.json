@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "1ee08ae9e7def45fd35dad60ddfff30e6dc9bab7278533bbfd4a84e0ce5c2508",
+  "source": {
+    "id": "explanation-yingkou-1",
+    "title": "营口市·鲅鱼圈区望儿山景区",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415253497628/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415253497628/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-11-24",
+    "edition": "2025-11-24",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "营口市",
+    "subject_hint": "folklore"
+  },
+  "raw_sha256": "e237d63f67d23a92a57b0dd54bb35e8c309b053d332ad7c0d402636a77202f60",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_28de81daea21ad50e2cbdedf",
+      "ordinal": "article",
+      "name_original": "营口市·鲅鱼圈区望儿山景区",
+      "category_original": "folklore",
+      "locality_original": "营口市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_d245aebb6f1b0e12a1d8abe5",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "7e834151b190497852cf45e9219c9ca3d285e4d635d30788b46f89e374cab837",
+          "characters": 214
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

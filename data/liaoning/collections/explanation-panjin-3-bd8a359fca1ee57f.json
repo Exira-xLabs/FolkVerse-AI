@@ -1,0 +1,52 @@
+{
+  "version": "liaoning-inventory-v1",
+  "collection_hash": "bd8a359fca1ee57f64456210030fc795bc4d6ff9c75d7542806e6b8ede176f47",
+  "source": {
+    "id": "explanation-panjin-3",
+    "title": "盘锦市·盘锦特产博物园",
+    "institution": "Liaoning Provincial Government",
+    "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216303459994/index.shtml",
+    "resource_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216303459994/index.shtml",
+    "adapter": "html_article",
+    "kind": "explanation",
+    "reference_date": "2025-10-22",
+    "edition": "2025-10-22",
+    "expected_count": null,
+    "counting_unit": "article source records; not inventory topics",
+    "sheet": null,
+    "rights": "Collect factual inventory metadata and retain private source captures only. Full-text/media publication permission remains pending; no blanket license inferred.",
+    "check_interval_days": 180,
+    "notes": "Paragraph hashes/locators only; full source prose remains private. Original factual paraphrases require actual human review.",
+    "locality": "盘锦市",
+    "subject_hint": "museums"
+  },
+  "raw_sha256": "d78d6a946b742a16ccd64474fe11ac0d4cda0de31e60837db5f374d5af263d8e",
+  "original_filename": "index.shtml",
+  "fetched_at": "2026-10-06T15:41:22.394395+00:00",
+  "extractor_version": "liaoning-metadata-extractor-v4",
+  "status": "imported",
+  "rows": [
+    {
+      "id": "row_1733ab0a8e678d2f0ac51137",
+      "ordinal": "article",
+      "name_original": "盘锦市·盘锦特产博物园",
+      "category_original": "museums",
+      "locality_original": "盘锦市",
+      "native_code": "",
+      "locator": "article:pages_content",
+      "entity_id": "entity_c11ee299f4059f894b2a8dca",
+      "disposition": "represented",
+      "errors": [],
+      "paragraphs": [
+        {
+          "locator": "article:p:2",
+          "text_sha256": "c834e7e67c64112caca85b69e0a7c1403e503a13fa44e0cb6e3d8638fc195415",
+          "characters": 109
+        }
+      ],
+      "source_text_storage": "private_original_capture_only",
+      "content_approval": "pending_human_review"
+    }
+  ],
+  "errors": []
+}

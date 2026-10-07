@@ -29,7 +29,7 @@ export async function POST(request: Request) {
       const { value, done } = await reader.read();
       if (done) break;
       bytes += value.length;
-      if (bytes > 16384) { await reader.cancel(); return unavailable(413, "context_too_large"); }
+      if (bytes > 65536) { await reader.cancel(); return unavailable(413, "context_too_large"); }
       chunks.push(value);
     }
     const body = new Uint8Array(bytes);
