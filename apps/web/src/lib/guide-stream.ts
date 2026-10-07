@@ -20,7 +20,7 @@ function answerShape(v: unknown): v is GuideAnswer {
     strings(v.answer_claim_ids) && strings(v.context_claim_ids) && Array.isArray(v.claims) && v.claims.length <= (v.contract_version === "hybrid_sections_v1" ? 6 : 3) &&
     v.claims.every(c => object(c) && typeof c.claim_id === "string" && typeof c.text === "string" &&
       ["source_statement", "history", "interpretation", "folklore", "creative_adaptation"].includes(String(c.kind)) &&
-      ["complete_reviewed_passage", "reviewed_variant_v1", "complete_sentence_v1", "inventory_projection_v1", "official_metadata_projection_v1"].includes(String(c.support_method)) &&
+      ["complete_reviewed_passage", "reviewed_variant_v1", "complete_sentence_v1", "inventory_projection_v1", "official_metadata_projection_v1", "machine_source_summary_v1"].includes(String(c.support_method)) &&
       strings(c.passage_ids) && strings(c.source_ids));
 }
 

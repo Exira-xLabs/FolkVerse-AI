@@ -1,3 +1,5 @@
+> 7 October owner amendment: human review is not required from the owner. Codex performs explicitly labelled machine source assessment for original-page-checked lookup; protected human corpus publication is unchanged. See [acceptance amendment](phase-03-machine-review-acceptance.md).
+
 # Phase 03 — hybrid Jinyao conversation plan
 
 Status: agreed product direction; implementation design and launch scope pending final review. No application changes made.

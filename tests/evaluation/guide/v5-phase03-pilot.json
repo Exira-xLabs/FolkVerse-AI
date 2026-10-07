@@ -1,0 +1,3822 @@
+{
+  "version": "jinyao-evaluation-v5-phase03-pilot",
+  "frozen_at": "2026-10-07T03:15:13.522532+00:00",
+  "authorship": "Codex-authored machine source-assessed targets; owner waived human review. No independent expert gold.",
+  "reservation": "100 bilingual families share splits (50 development / 150 reserved cases). Revision 5 follows inspection of the incomplete v4 topic subset and source-name correction; shared questions are exposed diagnostics. Post-implementation machine targets, not blind expert gold. Frozen before the first revision-5 run.",
+  "corpus_sha256": "ff4b80dfe635fed856c4f8544542f3e93fe4965c8172145733bbce61c852947c",
+  "machine_source_audit_sha256": "fb399be5471e4bba4c9306a0a2803046eb60aed739535eb191988d22c6e62275",
+  "cases": [
+    {
+      "id": "pilot-v5-explanation-shenyang-1-en",
+      "family": "explanation-shenyang-1",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Shenyang Imperial Palace and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-1"
+    },
+    {
+      "id": "pilot-v5-explanation-shenyang-1-zh-CN",
+      "family": "explanation-shenyang-1",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍沈阳故宫并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-1"
+    },
+    {
+      "id": "pilot-v5-explanation-shenyang-2-en",
+      "family": "explanation-shenyang-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Shenyang Industrial Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-2"
+    },
+    {
+      "id": "pilot-v5-explanation-shenyang-2-zh-CN",
+      "family": "explanation-shenyang-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍沈阳工业博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-2"
+    },
+    {
+      "id": "pilot-v5-explanation-shenyang-3-en",
+      "family": "explanation-shenyang-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain September 18 History Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-3"
+    },
+    {
+      "id": "pilot-v5-explanation-shenyang-3-zh-CN",
+      "family": "explanation-shenyang-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍沈阳“九·一八“历史博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-3"
+    },
+    {
+      "id": "pilot-v5-explanation-dalian-1-en",
+      "family": "explanation-dalian-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Dalian Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-1"
+    },
+    {
+      "id": "pilot-v5-explanation-dalian-1-zh-CN",
+      "family": "explanation-dalian-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍大连博物馆景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-1"
+    },
+    {
+      "id": "pilot-v5-explanation-dalian-2-en",
+      "family": "explanation-dalian-2",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Lushun prison and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-2"
+    },
+    {
+      "id": "pilot-v5-explanation-dalian-2-zh-CN",
+      "family": "explanation-dalian-2",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍旅顺日俄监狱旧址博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-2"
+    },
+    {
+      "id": "pilot-v5-explanation-dalian-3-en",
+      "family": "explanation-dalian-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Dongjiguanshan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-3"
+    },
+    {
+      "id": "pilot-v5-explanation-dalian-3-zh-CN",
+      "family": "explanation-dalian-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍东鸡冠山景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-3"
+    },
+    {
+      "id": "pilot-v5-explanation-anshan-1-en",
+      "family": "explanation-anshan-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Qianshan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-1"
+    },
+    {
+      "id": "pilot-v5-explanation-anshan-1-zh-CN",
+      "family": "explanation-anshan-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍辽宁千山景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-1"
+    },
+    {
+      "id": "pilot-v5-explanation-anshan-2-en",
+      "family": "explanation-anshan-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Yufoyuan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-2"
+    },
+    {
+      "id": "pilot-v5-explanation-anshan-2-zh-CN",
+      "family": "explanation-anshan-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍玉佛苑并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-2"
+    },
+    {
+      "id": "pilot-v5-explanation-anshan-3-en",
+      "family": "explanation-anshan-3",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Ansteel exhibition hall and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-3"
+    },
+    {
+      "id": "pilot-v5-explanation-anshan-3-zh-CN",
+      "family": "explanation-anshan-3",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍鞍钢集团展览馆景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-3"
+    },
+    {
+      "id": "pilot-v5-explanation-fushun-1-en",
+      "family": "explanation-fushun-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Lei Feng Memorial Hall and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-1"
+    },
+    {
+      "id": "pilot-v5-explanation-fushun-1-zh-CN",
+      "family": "explanation-fushun-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍雷锋纪念馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-1"
+    },
+    {
+      "id": "pilot-v5-explanation-fushun-2-en",
+      "family": "explanation-fushun-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Hetuala and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-2"
+    },
+    {
+      "id": "pilot-v5-explanation-fushun-2-zh-CN",
+      "family": "explanation-fushun-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍赫图阿拉城并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-2"
+    },
+    {
+      "id": "pilot-v5-explanation-fushun-3-en",
+      "family": "explanation-fushun-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Sankuaishi and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-3"
+    },
+    {
+      "id": "pilot-v5-explanation-fushun-3-zh-CN",
+      "family": "explanation-fushun-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍三块石国家森林公园并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-3"
+    },
+    {
+      "id": "pilot-v5-explanation-benxi-1-en",
+      "family": "explanation-benxi-1",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Wunushan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-benxi-1"
+    },
+    {
+      "id": "pilot-v5-explanation-benxi-1-zh-CN",
+      "family": "explanation-benxi-1",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍五女山景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-benxi-1"
+    },
+    {
+      "id": "pilot-v5-explanation-benxi-2-en",
+      "family": "explanation-benxi-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Benxi Water Cave and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-benxi-2"
+    },
+    {
+      "id": "pilot-v5-explanation-benxi-2-zh-CN",
+      "family": "explanation-benxi-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍本溪水洞风景名胜区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-benxi-2"
+    },
+    {
+      "id": "pilot-v5-explanation-benxi-3-en",
+      "family": "explanation-benxi-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Tieshashan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-benxi-3"
+    },
+    {
+      "id": "pilot-v5-explanation-benxi-3-zh-CN",
+      "family": "explanation-benxi-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍铁刹山风景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-benxi-3"
+    },
+    {
+      "id": "pilot-v5-explanation-dandong-1-en",
+      "family": "explanation-dandong-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Korean War Memorial Dandong and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dandong-1"
+    },
+    {
+      "id": "pilot-v5-explanation-dandong-1-zh-CN",
+      "family": "explanation-dandong-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍抗美援朝纪念馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dandong-1"
+    },
+    {
+      "id": "pilot-v5-explanation-dandong-2-en",
+      "family": "explanation-dandong-2",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Yalu River scenic area and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dandong-2"
+    },
+    {
+      "id": "pilot-v5-explanation-dandong-2-zh-CN",
+      "family": "explanation-dandong-2",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍鸭绿江风景名胜区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dandong-2"
+    },
+    {
+      "id": "pilot-v5-explanation-dandong-3-en",
+      "family": "explanation-dandong-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Dalu Island and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dandong-3"
+    },
+    {
+      "id": "pilot-v5-explanation-dandong-3-zh-CN",
+      "family": "explanation-dandong-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍东港市大鹿岛景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dandong-3"
+    },
+    {
+      "id": "pilot-v5-explanation-jinzhou-1-en",
+      "family": "explanation-jinzhou-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Jinzhou Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-jinzhou-1"
+    },
+    {
+      "id": "pilot-v5-explanation-jinzhou-1-zh-CN",
+      "family": "explanation-jinzhou-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍锦州市博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-jinzhou-1"
+    },
+    {
+      "id": "pilot-v5-explanation-jinzhou-2-en",
+      "family": "explanation-jinzhou-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Liaoshen Campaign Memorial and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-jinzhou-2"
+    },
+    {
+      "id": "pilot-v5-explanation-jinzhou-2-zh-CN",
+      "family": "explanation-jinzhou-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍辽沈战役纪念馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-jinzhou-2"
+    },
+    {
+      "id": "pilot-v5-explanation-jinzhou-3-en",
+      "family": "explanation-jinzhou-3",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Fengguo Temple and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-jinzhou-3"
+    },
+    {
+      "id": "pilot-v5-explanation-jinzhou-3-zh-CN",
+      "family": "explanation-jinzhou-3",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍义县奉国寺景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-jinzhou-3"
+    },
+    {
+      "id": "pilot-v5-explanation-yingkou-1-en",
+      "family": "explanation-yingkou-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Wangershan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-yingkou-1"
+    },
+    {
+      "id": "pilot-v5-explanation-yingkou-1-zh-CN",
+      "family": "explanation-yingkou-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍鲅鱼圈区望儿山景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-yingkou-1"
+    },
+    {
+      "id": "pilot-v5-explanation-yingkou-2-en",
+      "family": "explanation-yingkou-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Chishan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-yingkou-2"
+    },
+    {
+      "id": "pilot-v5-explanation-yingkou-2-zh-CN",
+      "family": "explanation-yingkou-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍盖州市万福赤山旅游景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-yingkou-2"
+    },
+    {
+      "id": "pilot-v5-explanation-yingkou-3-en",
+      "family": "explanation-yingkou-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Tuanshan marine park and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-yingkou-3"
+    },
+    {
+      "id": "pilot-v5-explanation-yingkou-3-zh-CN",
+      "family": "explanation-yingkou-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍辽宁团山国家级海洋公园景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-yingkou-3"
+    },
+    {
+      "id": "pilot-v5-explanation-fuxin-1-en",
+      "family": "explanation-fuxin-1",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Fuxin agate town and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fuxin-1"
+    },
+    {
+      "id": "pilot-v5-explanation-fuxin-1-zh-CN",
+      "family": "explanation-fuxin-1",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍玛瑙特色小镇景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fuxin-1"
+    },
+    {
+      "id": "pilot-v5-explanation-fuxin-2-en",
+      "family": "explanation-fuxin-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Haitangshan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fuxin-2"
+    },
+    {
+      "id": "pilot-v5-explanation-fuxin-2-zh-CN",
+      "family": "explanation-fuxin-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍海棠山风景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fuxin-2"
+    },
+    {
+      "id": "pilot-v5-explanation-fuxin-3-en",
+      "family": "explanation-fuxin-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Ruiying Temple and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fuxin-3"
+    },
+    {
+      "id": "pilot-v5-explanation-fuxin-3-zh-CN",
+      "family": "explanation-fuxin-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍瑞应寺风景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fuxin-3"
+    },
+    {
+      "id": "pilot-v5-explanation-liaoyang-1-en",
+      "family": "explanation-liaoyang-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Liaoyang Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-liaoyang-1"
+    },
+    {
+      "id": "pilot-v5-explanation-liaoyang-1-zh-CN",
+      "family": "explanation-liaoyang-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍辽阳博物馆景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-liaoyang-1"
+    },
+    {
+      "id": "pilot-v5-explanation-liaoyang-2-en",
+      "family": "explanation-liaoyang-2",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Guangyou Temple and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-liaoyang-2"
+    },
+    {
+      "id": "pilot-v5-explanation-liaoyang-2-zh-CN",
+      "family": "explanation-liaoyang-2",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍广佑寺景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-liaoyang-2"
+    },
+    {
+      "id": "pilot-v5-explanation-liaoyang-3-en",
+      "family": "explanation-liaoyang-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Taizi River cultural tourism belt and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-liaoyang-3"
+    },
+    {
+      "id": "pilot-v5-explanation-liaoyang-3-zh-CN",
+      "family": "explanation-liaoyang-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍太子河历史文化风光带景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-liaoyang-3"
+    },
+    {
+      "id": "pilot-v5-explanation-tieling-1-en",
+      "family": "explanation-tieling-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Tiefa steam locomotive museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-tieling-1"
+    },
+    {
+      "id": "pilot-v5-explanation-tieling-1-zh-CN",
+      "family": "explanation-tieling-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍铁煤蒸汽机车博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-tieling-1"
+    },
+    {
+      "id": "pilot-v5-explanation-tieling-2-en",
+      "family": "explanation-tieling-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Chengzishan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-tieling-2"
+    },
+    {
+      "id": "pilot-v5-explanation-tieling-2-zh-CN",
+      "family": "explanation-tieling-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍西丰县城子山风景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-tieling-2"
+    },
+    {
+      "id": "pilot-v5-explanation-tieling-3-en",
+      "family": "explanation-tieling-3",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Zhou Enlai study site and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-tieling-3"
+    },
+    {
+      "id": "pilot-v5-explanation-tieling-3-zh-CN",
+      "family": "explanation-tieling-3",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍周恩来同志少年读书旧址纪念馆景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-tieling-3"
+    },
+    {
+      "id": "pilot-v5-explanation-chaoyang-1-en",
+      "family": "explanation-chaoyang-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Niuheliang and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-chaoyang-1"
+    },
+    {
+      "id": "pilot-v5-explanation-chaoyang-1-zh-CN",
+      "family": "explanation-chaoyang-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍牛河梁国家考古遗址公园并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-chaoyang-1"
+    },
+    {
+      "id": "pilot-v5-explanation-chaoyang-2-en",
+      "family": "explanation-chaoyang-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Chaoyang Fenghuangshan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-chaoyang-2"
+    },
+    {
+      "id": "pilot-v5-explanation-chaoyang-2-zh-CN",
+      "family": "explanation-chaoyang-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍凤凰山景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-chaoyang-2"
+    },
+    {
+      "id": "pilot-v5-explanation-chaoyang-3-en",
+      "family": "explanation-chaoyang-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Chaoyang bird fossil geopark and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-chaoyang-3"
+    },
+    {
+      "id": "pilot-v5-explanation-chaoyang-3-zh-CN",
+      "family": "explanation-chaoyang-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍辽宁朝阳鸟化石国家地质公园景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-chaoyang-3"
+    },
+    {
+      "id": "pilot-v5-explanation-panjin-1-en",
+      "family": "explanation-panjin-1",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Liaohe Stele Forest and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-panjin-1"
+    },
+    {
+      "id": "pilot-v5-explanation-panjin-1-zh-CN",
+      "family": "explanation-panjin-1",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍辽河碑林公园并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-panjin-1"
+    },
+    {
+      "id": "pilot-v5-explanation-panjin-2-en",
+      "family": "explanation-panjin-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Guangsha Art Street and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-panjin-2"
+    },
+    {
+      "id": "pilot-v5-explanation-panjin-2-zh-CN",
+      "family": "explanation-panjin-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍广厦艺术街并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-panjin-2"
+    },
+    {
+      "id": "pilot-v5-explanation-panjin-3-en",
+      "family": "explanation-panjin-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Panjin Specialty Museum Park and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-panjin-3"
+    },
+    {
+      "id": "pilot-v5-explanation-panjin-3-zh-CN",
+      "family": "explanation-panjin-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍盘锦特产博物园并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-panjin-3"
+    },
+    {
+      "id": "pilot-v5-explanation-huludao-1-en",
+      "family": "explanation-huludao-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Jiumenkou Great Wall and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-huludao-1"
+    },
+    {
+      "id": "pilot-v5-explanation-huludao-1-zh-CN",
+      "family": "explanation-huludao-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍九门口长城景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-huludao-1"
+    },
+    {
+      "id": "pilot-v5-explanation-huludao-2-en",
+      "family": "explanation-huludao-2",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Xingcheng ancient city and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-huludao-2"
+    },
+    {
+      "id": "pilot-v5-explanation-huludao-2-zh-CN",
+      "family": "explanation-huludao-2",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍兴城市古城景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-huludao-2"
+    },
+    {
+      "id": "pilot-v5-explanation-huludao-3-en",
+      "family": "explanation-huludao-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Tashan Memorial Hall and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-huludao-3"
+    },
+    {
+      "id": "pilot-v5-explanation-huludao-3-zh-CN",
+      "family": "explanation-huludao-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍塔山阻击战纪念馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-huludao-3"
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-shenyang-en",
+      "family": "hours-liaoning-shenyang",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Shenyang Imperial Palace open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-shenyang-zh-CN",
+      "family": "hours-liaoning-shenyang",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "沈阳故宫今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-dalian-en",
+      "family": "hours-liaoning-dalian",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Dalian Museum open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-dalian-zh-CN",
+      "family": "hours-liaoning-dalian",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "大连博物馆景区今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-anshan-en",
+      "family": "hours-liaoning-anshan",
+      "split": "development",
+      "locale": "en",
+      "question": "What time does Qianshan open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-anshan-zh-CN",
+      "family": "hours-liaoning-anshan",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "辽宁千山景区今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-fushun-en",
+      "family": "hours-liaoning-fushun",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Lei Feng Memorial Hall open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-fushun-zh-CN",
+      "family": "hours-liaoning-fushun",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "雷锋纪念馆今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-benxi-en",
+      "family": "hours-liaoning-benxi",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Wunushan open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-benxi-zh-CN",
+      "family": "hours-liaoning-benxi",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "五女山景区今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-dandong-en",
+      "family": "hours-liaoning-dandong",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Korean War Memorial Dandong open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-dandong-zh-CN",
+      "family": "hours-liaoning-dandong",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "抗美援朝纪念馆今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-jinzhou-en",
+      "family": "hours-liaoning-jinzhou",
+      "split": "development",
+      "locale": "en",
+      "question": "What time does Jinzhou Museum open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-jinzhou-zh-CN",
+      "family": "hours-liaoning-jinzhou",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "锦州市博物馆今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-yingkou-en",
+      "family": "hours-liaoning-yingkou",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Wangershan open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-yingkou-zh-CN",
+      "family": "hours-liaoning-yingkou",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "鲅鱼圈区望儿山景区今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-fuxin-en",
+      "family": "hours-liaoning-fuxin",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Fuxin agate town open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-fuxin-zh-CN",
+      "family": "hours-liaoning-fuxin",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "玛瑙特色小镇景区今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-liaoyang-en",
+      "family": "hours-liaoning-liaoyang",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Liaoyang Museum open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-liaoyang-zh-CN",
+      "family": "hours-liaoning-liaoyang",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "辽阳博物馆景区今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-tieling-en",
+      "family": "hours-liaoning-tieling",
+      "split": "development",
+      "locale": "en",
+      "question": "What time does Tiefa steam locomotive museum open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-tieling-zh-CN",
+      "family": "hours-liaoning-tieling",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "铁煤蒸汽机车博物馆今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-chaoyang-en",
+      "family": "hours-liaoning-chaoyang",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Niuheliang open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-chaoyang-zh-CN",
+      "family": "hours-liaoning-chaoyang",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "牛河梁国家考古遗址公园今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-panjin-en",
+      "family": "hours-liaoning-panjin",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Liaohe Stele Forest open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-panjin-zh-CN",
+      "family": "hours-liaoning-panjin",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "辽河碑林公园今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-huludao-en",
+      "family": "hours-liaoning-huludao",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What time does Jiumenkou Great Wall open today?",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-hours-liaoning-huludao-zh-CN",
+      "family": "hours-liaoning-huludao",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "九门口长城景区今天几点开放？",
+      "depth": "concise",
+      "seed": null,
+      "expected_status": "insufficient",
+      "expected_support": "empty",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-shadow-en",
+      "family": "shadow",
+      "split": "development",
+      "locale": "en",
+      "question": "What is shadow puppetry in plain language?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-shadow-zh-CN",
+      "family": "shadow",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "用简单的话解释什么是皮影戏",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-silhouette-en",
+      "family": "silhouette",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain what a silhouette is to a beginner",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-silhouette-zh-CN",
+      "family": "silhouette",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "给初学者解释剪影是什么",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-museum-en",
+      "family": "museum",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is a museum for?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-museum-zh-CN",
+      "family": "museum",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "博物馆有什么作用？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-artifact-en",
+      "family": "artifact",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is an artifact?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-artifact-zh-CN",
+      "family": "artifact",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "文物是什么意思？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-curator-en",
+      "family": "curator",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain what a museum curator does",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-curator-zh-CN",
+      "family": "curator",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释博物馆策展人的工作",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-conservation-en",
+      "family": "conservation",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is museum conservation?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-conservation-zh-CN",
+      "family": "conservation",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "博物馆里的文物保护是什么意思？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-restoration-en",
+      "family": "restoration",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain the difference between conservation and restoration",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-restoration-zh-CN",
+      "family": "restoration",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释文物保护与修复的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-archaeology-en",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is archaeology?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-archaeology-zh-CN",
+      "family": "archaeology",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是考古学？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-excavation-en",
+      "family": "excavation",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain an archaeological excavation",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-excavation-zh-CN",
+      "family": "excavation",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释考古发掘是什么",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-context-en",
+      "family": "context",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Why does archaeological context matter?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-context-zh-CN",
+      "family": "context",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "为什么考古背景很重要？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-replica-en",
+      "family": "replica",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is the difference between an original object and a replica?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-replica-zh-CN",
+      "family": "replica",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "原件和复制品有什么区别？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-provenance-en",
+      "family": "provenance",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain what provenance means in a museum",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-provenance-zh-CN",
+      "family": "provenance",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释博物馆里的来源信息是什么意思",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-oral-en",
+      "family": "oral",
+      "split": "development",
+      "locale": "en",
+      "question": "What is oral history?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-oral-zh-CN",
+      "family": "oral",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "什么是口述历史？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-folklore-en",
+      "family": "folklore",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain folklore simply",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-folklore-zh-CN",
+      "family": "folklore",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "简单解释民间传说",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-legend-en",
+      "family": "legend",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is the difference between legend and historical evidence?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-legend-zh-CN",
+      "family": "legend",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "传说和历史证据有什么区别？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-primary-en",
+      "family": "primary",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is a primary source in history?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-primary-zh-CN",
+      "family": "primary",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "历史研究中的一手资料是什么？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-secondary-en",
+      "family": "secondary",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain primary and secondary sources",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-secondary-zh-CN",
+      "family": "secondary",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释一手资料和二手资料的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-uncertainty-en",
+      "family": "uncertainty",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Why should a historical explanation mention uncertainty?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-uncertainty-zh-CN",
+      "family": "uncertainty",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "为什么历史解释要说明不确定性？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-interpretation-en",
+      "family": "interpretation",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain how interpretation differs from evidence",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-interpretation-zh-CN",
+      "family": "interpretation",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释观点和证据有什么区别？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-exhibition-en",
+      "family": "exhibition",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What does exhibition mean?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-exhibition-zh-CN",
+      "family": "exhibition",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "展览是什么意思？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-caption-en",
+      "family": "caption",
+      "split": "development",
+      "locale": "en",
+      "question": "Why do museum objects have explanatory labels?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-caption-zh-CN",
+      "family": "caption",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "为什么博物馆的展品要有说明文字？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-chronology-en",
+      "family": "chronology",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is a chronology?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-chronology-zh-CN",
+      "family": "chronology",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "年代顺序是什么意思？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-craft-en",
+      "family": "craft",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain what craftsmanship means",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-craft-zh-CN",
+      "family": "craft",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释工艺技艺是什么意思",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-calligraphy-en",
+      "family": "calligraphy",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is calligraphy?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-calligraphy-zh-CN",
+      "family": "calligraphy",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是书法？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-ceramic-en",
+      "family": "ceramic",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain pottery and porcelain simply",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-ceramic-zh-CN",
+      "family": "ceramic",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "简单解释陶器和瓷器的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-jade-en",
+      "family": "jade",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is jade carving?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-jade-zh-CN",
+      "family": "jade",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是玉雕？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-pagoda-en",
+      "family": "pagoda",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain what a pagoda is",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-pagoda-zh-CN",
+      "family": "pagoda",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释佛塔是什么",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-temple-en",
+      "family": "temple",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is the difference between a temple and a museum?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-temple-zh-CN",
+      "family": "temple",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "寺庙和博物馆有什么区别？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-industrial-en",
+      "family": "industrial",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain industrial heritage",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-industrial-zh-CN",
+      "family": "industrial",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释工业遗产是什么",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-fossil-en",
+      "family": "fossil",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is a fossil?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-fossil-zh-CN",
+      "family": "fossil",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "什么是化石？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-karst-en",
+      "family": "karst",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain a karst cave simply",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-karst-zh-CN",
+      "family": "karst",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "简单解释喀斯特洞穴",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-stalactite-en",
+      "family": "stalactite",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is the difference between a stalactite and a stalagmite?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-stalactite-zh-CN",
+      "family": "stalactite",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "钟乳石和石笋有什么区别？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-wetland-en",
+      "family": "wetland",
+      "split": "development",
+      "locale": "en",
+      "question": "What is a wetland?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-wetland-zh-CN",
+      "family": "wetland",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "什么是湿地？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-tangible-en",
+      "family": "tangible",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain tangible and intangible cultural heritage",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-tangible-zh-CN",
+      "family": "tangible",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "解释物质文化遗产和非物质文化遗产的区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-translation-en",
+      "family": "translation",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Why can cultural translation need an explanation?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-translation-zh-CN",
+      "family": "translation",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "为什么文化翻译有时需要解释？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-sources-en",
+      "family": "sources",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Why should a guide show its sources?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-sources-zh-CN",
+      "family": "sources",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "为什么讲解员要展示资料来源？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-belief-en",
+      "family": "belief",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain the difference between belief and a verified historical claim",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-belief-zh-CN",
+      "family": "belief",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "解释信仰和核实过的历史说法有什么区别",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-adaptation-en",
+      "family": "adaptation",
+      "split": "reserved",
+      "locale": "en",
+      "question": "What is a creative adaptation of history?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-adaptation-zh-CN",
+      "family": "adaptation",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "历史的创作改编是什么意思？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-comparison-en",
+      "family": "comparison",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Why compare different historical sources?",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-comparison-zh-CN",
+      "family": "comparison",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "为什么要比较不同的历史资料？",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "general",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-simpler-en",
+      "family": "simpler",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Could you explain that in simpler words?",
+      "depth": "beginner",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-simpler-zh-CN",
+      "family": "simpler",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "能把刚才的内容说得更简单吗？",
+      "depth": "beginner",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-depth-en",
+      "family": "depth",
+      "split": "development",
+      "locale": "en",
+      "question": "Please give me more context about that",
+      "depth": "beginner",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-depth-zh-CN",
+      "family": "depth",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "请详细解释刚才的内容",
+      "depth": "beginner",
+      "seed": "reviewed",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-switch-en",
+      "family": "switch",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Could you explain that in English?",
+      "depth": "beginner",
+      "seed": "other_language",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-en"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-switch-zh-CN",
+      "family": "switch",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "请用中文再解释一次",
+      "depth": "beginner",
+      "seed": "other_language",
+      "expected_status": "answered",
+      "expected_support": "reviewed",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [
+        "passage-liaoning-dalian-01-zh-CN"
+      ],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-greeting-en",
+      "family": "greeting",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Hello, Jinyao",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-greeting-zh-CN",
+      "family": "greeting",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "您好，锦瑶",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-thanks-en",
+      "family": "thanks",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Thanks Jinyao!",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    },
+    {
+      "id": "pilot-v5-thanks-zh-CN",
+      "family": "thanks",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "谢谢锦瑶！",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "conversational",
+      "expected_support": "conversation",
+      "required_uncertainty": "insufficient",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": null
+    }
+  ]
+}

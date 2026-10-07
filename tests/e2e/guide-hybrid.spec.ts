@@ -20,6 +20,14 @@ test("Chinese single sentence keeps complete-passage support", () => {
   const { p, answer } = fixture(true);
   expect(checkedHybrid(answer, [p])).toBe(true);
 });
+test("machine-assessed official summaries preserve their support identity", () => {
+  const { p, answer } = fixture(false, true);
+  p.review_id = "machine_source_assessed_v1";
+  answer.claims[0].support_method = "machine_source_summary_v1";
+  expect(checkedHybrid(answer, [p])).toBe(true);
+  answer.claims[0].support_method = "official_metadata_projection_v1";
+  expect(checkedHybrid(answer, [p])).toBe(false);
+});
 for (const attack of ["display", "claim", "classification", "support", "general_date", "label", "missing_support", "diagnostic"] as const) test(`hybrid browser rejects ${attack}`, () => {
   const { p, answer } = fixture();
   expect(checkedHybrid(answer, [p])).toBe(true);
@@ -35,6 +43,8 @@ for (const attack of ["display", "claim", "classification", "support", "general_
 });
 for (const zh of [false, true]) test(`hybrid ${zh ? "Chinese phone" : "English desktop"} labels and source withdrawal`, async ({ page }, testInfo) => {
   const { p, answer } = fixture(zh, true);
+  p.review_id = "machine_source_assessed_v1";
+  answer.claims[0].support_method = "machine_source_summary_v1";
   let withdrawn = false;
   if (zh) await page.setViewportSize({ width: 390, height: 844 });
   await page.route("**/api/v1/session", route => route.fulfill({ json: { session_id: "fixture_visit" } }));
@@ -61,6 +71,7 @@ for (const zh of [false, true]) test(`hybrid ${zh ? "Chinese phone" : "English d
   await capture(page, testInfo, `chat-${zh ? "zh-phone" : "en-desktop"}.png`);
   await page.getByRole("button", { name: zh ? "查看回答来源" : "Inspect answer sources" }).click();
   await expect(page.getByRole("dialog", { name: zh ? "回答所依据的资料" : "Evidence behind this answer" })).toContainText(p.text);
+  await expect(page.getByRole("dialog", { name: zh ? "回答所依据的资料" : "Evidence behind this answer" })).toContainText(zh ? "未经人工审核" : "no human review");
   const sourceAudit = await new AxeBuilder({ page }).include(".source-drawer").withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze();
   await testInfo.attach("sources-accessibility.json", { body: JSON.stringify(sourceAudit, null, 2), contentType: "application/json" });
   expect(sourceAudit.violations).toEqual([]);

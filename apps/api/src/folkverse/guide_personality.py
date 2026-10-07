@@ -86,7 +86,8 @@ def social_intent(question: str) -> SocialIntent | None:
     patterns: dict[SocialIntent, str] = {
         "greeting": (
             r"(?:h+i+|h+e+y+|he+l+o+|hello there|hi there|good (?:morning|afternoon|evening)|"
-            r"你好(?:呀|啊|锦瑶)?|您好|嗨|哈喽|👋)(?:[ ,，]+jinyao|[ ,，]*锦瑶)?(?:[ !！]*👋)?"
+            r"你好(?:呀|啊|锦瑶)?|您好|嗨|哈喽|👋)(?:[ ,，]+jinyao|[ ,，]*锦瑶)?"
+            r"(?: again)?(?:[ !！]*👋)?"
         ),
         "goodbye": r"(?:bye(?: bye)?|goodbye|see you(?: later)?|再见|拜拜|下次见)",
         "help": r"(?:i (?:do not|don't|dont) understand|i'?m confused|我不明白|没看懂|不懂)",

@@ -219,3 +219,38 @@ def test_deeper_chinese_general_section_cannot_invent_local_style(db):
         }
     )
     assert checked(db, "zh-CN", payload).reason == "unsupported_claim"
+
+
+@pytest.mark.parametrize("locale", ["en", "zh-CN"])
+def test_statement_reference_preserves_server_text_and_attribution(db, locale):
+    bundle = retrieve(db, "shadow" if locale == "en" else "皮影", locale)
+    payload = proposal(bundle.passages[0])
+    payload["claims"][0].update(text="", statement_id="statement_0")
+    answer = checked(db, locale, payload)
+    assert answer.status == "answered"
+    assert answer.claims[0].text == bundle.passages[0].text
+
+
+@pytest.mark.parametrize("attack", ["unknown", "wrong_text", "wrong_passage", "wrong_kind"])
+def test_statement_reference_cannot_bypass_support(db, attack):
+    bundle = retrieve(db, "shadow", "en")
+    payload = proposal(bundle.passages[0])
+    payload["claims"][0].update(text="", statement_id="statement_0")
+    if attack == "unknown":
+        payload["claims"][0]["statement_id"] = "statement_999"
+    elif attack == "wrong_text":
+        payload["claims"][0]["text"] = "Invented local history."
+    elif attack == "wrong_passage":
+        payload["claims"][0]["passage_ids"] = ["another_passage"]
+    else:
+        payload["claims"][0]["kind"] = "folklore"
+    assert checked(db, payload=payload).reason == "unsupported_claim"
+
+
+def test_original_objects_are_a_general_concept_not_an_origin_date_request():
+    assert general_request(
+        GuideRequest(question="What is the difference between an original object and a replica?"),
+        [],
+        False,
+    )
+    assert not general_request(GuideRequest(question="Where did this object originate?"), [], False)

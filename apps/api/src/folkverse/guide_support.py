@@ -12,12 +12,18 @@ SupportMethod = Literal[
     "complete_sentence_v1",
     "inventory_projection_v1",
     "official_metadata_projection_v1",
+    "machine_source_summary_v1",
 ]
 
 
 def variants(passage: EvidencePassage) -> dict[str, SupportMethod]:
     if passage.evidence_origin == "official_lookup":
-        return {text: "official_metadata_projection_v1" for text in passage.statement_variants}
+        method: SupportMethod = (
+            "machine_source_summary_v1"
+            if passage.review_id == "machine_source_assessed_v1"
+            else "official_metadata_projection_v1"
+        )
+        return {text: method for text in passage.statement_variants}
     result: dict[str, SupportMethod] = {passage.text: "complete_reviewed_passage"}
     result.update({text: "reviewed_variant_v1" for text in passage.statement_variants})
     # Whole sentences preserve dates, negation, qualifying clauses and attribution.

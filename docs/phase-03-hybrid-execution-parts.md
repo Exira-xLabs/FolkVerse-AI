@@ -1,6 +1,6 @@
 # Phase 03 — ordered implementation parts and acceptance
 
-Planning date: 6 October 2026, Asia/Shanghai. Execution update: Parts 0–1 requirements/design and delivery behavior are implemented; [dated report and limits](../report/PHASE_03_HYBRID_PART_01.md). Part 2 is implemented locally ([dated verification](../report/PHASE_03_HYBRID_PART_02.md)). Part 3 collection/curation and all-city draft preparation are implemented, with actual human content/rights review still open ([report](../report/PHASE_03_HYBRID_PART_03.md)). Parts 4–8 engineering/evaluation/audit are now delivered; human content/quality and final release acceptance remain open ([closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md)). This document is the execution contract, not standalone completion evidence.
+Planning date: 6 October 2026, Asia/Shanghai. Execution update: Parts 0–1 requirements/design and delivery behavior are implemented; [dated report and limits](../report/PHASE_03_HYBRID_PART_01.md). Part 2 is implemented locally ([dated verification](../report/PHASE_03_HYBRID_PART_02.md)). Part 3 collection/curation and all-city draft preparation are implemented, with actual human content/rights review still open ([report](../report/PHASE_03_HYBRID_PART_03.md)). Parts 4–8 engineering/evaluation/audit are delivered. The owner declined human review on 7 October; machine source assessment now supplies a separate official-lookup launch tier. Final live-pilot acceptance is tracked ([closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md)). This document is the execution contract, not standalone completion evidence.
 
 Read with [the conversation and Liaoning collection design](phase-03-hybrid-conversation-plan.md). The owner will work with Codex directly. This document replaces vague next steps with dependencies, concrete defaults, review checkpoints and evidence. It makes no promise of zero defects: claims of completion require checks and recorded limitations.
 
@@ -17,7 +17,7 @@ First release: EN/ZH text, varied model-generated conversation, source-supported
 | 4 | Supported natural explanations and general-knowledge boundaries | 2; reviewed material from 3 |
 | 5 | Retrieval relevance and runtime improvements | 3–4 and a meaningful corpus |
 | 6 | Final chat UX, source presentation and accessibility | 1–5 |
-| 7 | Fresh functional/live evaluation and real human review | 2–6; implementation freeze for reserved evaluation |
+| 7 | Fresh functional/live evaluation and attributed machine source assessment | 2–6; implementation freeze for reserved evaluation |
 | 8 | Reproducible handoff and Phase 03 closure | All required preceding gates |
 
 Parallel workstreams mean task scheduling, not permission to spawn additional agents. No phase can pass by relying on another part's planned work. Follow the existing project instructions before changing source; preserve unrelated edits and dated evidence.
@@ -81,7 +81,7 @@ Prepare a concrete launch manifest. Proposed province-wide content gate: each of
 
 Acquire and account for every in-scope row in the named baseline inventories. Report actual imports versus blocked/unresolved rows separately. Expand toward the earlier 10–15-topic-per-city ambition and beyond without blocking independent chatbot engineering. If launch material cannot meet the proposed all-city gate, show the exact gaps to the owner; do not unilaterally accept a smaller geographic scope.
 
-**Gate:** reproducible idempotent imports, provenance/rights/review/version tracking, no accidental publication, inventory accounting and separate catalog/explanation/published denominators. The launch manifest records all city readiness statuses. Human review can block publication but must not stop other independent engineering.
+**Gate:** reproducible idempotent imports, provenance/rights/review/version tracking, no accidental publication, inventory accounting and separate catalog/explanation/published denominators. The human publication manifest and separate machine lookup launch manifest record all city readiness statuses. Human review still gates the protected corpus publication route. Separately labelled, hash-bound machine summaries can be served through original-page-checked official lookup under the owner-authorized assessment amendment.
 
 ## Part 4 — hybrid explanation generation without evidence laundering
 
@@ -128,13 +128,13 @@ Verify phone/desktop composition, readable EN/ZH, keyboard/IME composition, Ente
 
 **Gate:** meaningful desktop/mobile live workflow and accessible errors/sources; preserved artwork/controls; every required visual/environment check recorded as passed, failed or unavailable.
 
-## Part 7 — quality evaluation and independent review
+## Part 7 — quality evaluation and source assessment
 
 Use a new dataset version reflecting the hybrid contract; old exact-string fixtures do not prove new conversation quality. Retain v1/v2 evidence and do not tune against their reserved cases. Prepare at least 40 dated bilingual cases, with whole EN/ZH scenario families sharing a split, reviewed gold and explicit exclusions. This minimum is phase evidence; the existing 200-question bilingual factual-support pilot remains a separate target and is not fulfilled by a 40-case run.
 
 Include greetings, repeated greetings, fragments, emoji, typos, mixed messages, corrections, vague references, topic changes, off-topic requests, understandable definitions/context, simplification, depth, language switches, source disagreements/folklore, unsupported precision, malicious source/context, revoked evidence and service faults. Reserve a sufficient stratified portion before tuning; record authorship, review and exposure. Use sampled live greeting conversations to assess variation and invitations, not a test requiring a different exact string every time.
 
-Use actual recorded live answers for explanation and personality review. The owner can assess usability/editorial quality; record independent bilingual/source assessment separately without claiming specialist credentials. Do not have Codex fill human ratings. Extend the review schema for personality and bind all judgments to run/version hashes.
+Use actual recorded live answers for explanation and personality assessment. Per the owner’s 7 October instruction, Codex performs machine source/bilingual/editorial assessment; owner human ratings are not required. Attribute that assessment honestly, without claiming independent specialist credentials or filling human ratings. Preserve the hash-bound human worksheet as an optional later review tool. See [the acceptance amendment](phase-03-machine-review-acceptance.md).
 
 Report historical correctness, support, citation integrity, clarity, bilingual faithfulness, uncertainty and follow-up consistency separately. General answers are not automatically correct because they carry a label: review them against external factual evidence as well. Report scored answers, coverage/abstentions, false refusals and eligible denominators so a system cannot achieve apparent accuracy by refusing everything. Personality scoring covers warmth, directness, repetition, useful questions and honesty.
 
@@ -164,7 +164,7 @@ Final walkthrough: greet → answer invitation → supported cultural question �
 - [ ] Evidence-required claims cannot escape through social/general classification or fallback.
 - [ ] Complete source inventories are tracked separately from acquired, explained and reviewed content.
 - [ ] All 14 cities are in the launch readiness manifest; blocked/unknown denominators stay visible.
-- [ ] Human reviews and reserved evaluation exposure are real and attributable.
+- [x] Assessment authorship and reserved evaluation exposure are explicit; no human ratings are fabricated.
 - [ ] Application changes, secrets, migrations, production activation and deployment are not implied by this planning document.
 
 Track implementation of each part in `docs/build-status.md` with exact pass/fail/blocker evidence. These empty checklist boxes are future execution gates, not missing planning prose or invented completed work.
@@ -172,3 +172,5 @@ Track implementation of each part in `docs/build-status.md` with exact pass/fail
 ## Parts 4–5 implementation evidence — 7 October 2026
 
 Hybrid explanation/support engineering and retrieval measurement/optimization are delivered locally: [Part 4](../report/PHASE_03_HYBRID_PART_04.md), [Part 5](../report/PHASE_03_HYBRID_PART_05.md). Official lookup covers the registered directory and conservative projections; current operational details remain unavailable. Expanded approved relevance gold and independent human assessments are still open acceptance evidence. Diagnostic drafts are never runtime evidence. Parts 6–8 and province-wide content readiness are not closed by these deliveries.
+
+**7 October amendment:** The owner declined human review. Machine source comparison and bilingual editorial assessment now cover 42 official profiles, with a separate all-city lookup launch manifest and explicit no-human-review labels. Historical references above to open human publication or independent human assessment do not require the owner to complete a worksheet. The protected corpus remains separately gated. The final 200-question live pilot is pending the existing spending cap; [current autonomous report](../report/PHASE_03_AUTONOMOUS_SOURCE_REVIEW.md).

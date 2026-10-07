@@ -117,6 +117,7 @@ class ValidatedClaim(StrictModel):
         "complete_sentence_v1",
         "inventory_projection_v1",
         "official_metadata_projection_v1",
+        "machine_source_summary_v1",
     ] = "complete_reviewed_passage"
     support_version: str = "deterministic-support-v1"
 

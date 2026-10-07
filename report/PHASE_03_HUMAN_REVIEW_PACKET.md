@@ -1,3 +1,5 @@
+> Superseded as an owner task on 7 October: the owner declined human review. This remains an optional, unscored human-review artifact. Codex assessment is separately labelled in [the current report](PHASE_03_AUTONOMOUS_SOURCE_REVIEW.md); no ratings here have been fabricated.
+
 # Jinyao — actual bilingual human review packet
 
 Run SHA-256: `98b39f9e2e3d39a564843edce6d01bd40255ae56ca1a1654de2a1d6927d49dae`

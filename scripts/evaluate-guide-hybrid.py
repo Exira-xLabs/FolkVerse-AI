@@ -97,6 +97,16 @@ def evaluate(suite_path, output, run_label):
         != suite["corpus_sha256"]
     ):
         raise ValueError("Frozen corpus changed; create a new suite version.")
+    if (
+        suite.get("machine_source_audit_sha256")
+        and hashlib.sha256(
+            (ROOT / "data/liaoning/machine-source-audit.json").read_bytes()
+        ).hexdigest()
+        != suite["machine_source_audit_sha256"]
+    ):
+        raise ValueError(
+            "Frozen machine source audit changed; create a new suite version."
+        )
     settings = Settings()
     if settings.app_mode != "live":
         raise ValueError(
@@ -156,6 +166,7 @@ def evaluate(suite_path, output, run_label):
             result["attempt_ids"].append(body["provider_attempt_id"])
         return body, elapsed
 
+    stopped_for_admission = False
     for case in suite["cases"]:
         with httpx.Client(
             base_url="http://127.0.0.1:8000", timeout=65, trust_env=False
@@ -261,6 +272,10 @@ def evaluate(suite_path, output, run_label):
                     if support == "general"
                     else not sources
                 )
+                if case.get("expected_source_id"):
+                    support_state &= {p["source_id"] for p in sources} == {
+                        case["expected_source_id"]
+                    }
                 scores["scenario"] = (
                     status == case["expected_status"]
                     and support_state
@@ -313,7 +328,16 @@ def evaluate(suite_path, output, run_label):
                     "/api/v1/session", headers={"Origin": "http://127.0.0.1:3000"}
                 )
             output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
-    result["run_status"] = "completed"
+            if error in {
+                "budget_exhausted",
+                "provider_not_configured",
+                "provider_quota_exhausted",
+            }:
+                stopped_for_admission = True
+                break
+    result["run_status"] = (
+        "stopped_for_admission" if stopped_for_admission else "completed"
+    )
     result["completed_at"] = datetime.now(UTC).isoformat()
     result["metrics"] = {
         name: fraction([c["scores"][name] for c in result["cases"]])
@@ -357,7 +381,9 @@ def evaluate(suite_path, output, run_label):
         ]
     }
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
-    return all(c["scores"]["scenario"] for c in result["cases"])
+    return not stopped_for_admission and all(
+        c["scores"]["scenario"] for c in result["cases"]
+    )
 
 
 if __name__ == "__main__":

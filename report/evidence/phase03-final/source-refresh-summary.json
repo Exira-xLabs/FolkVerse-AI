@@ -1,0 +1,13 @@
+{
+  "version": "liaoning-machine-source-refresh-summary-v1",
+  "basis": [
+    "source-refresh-delivery.json",
+    "source-refresh-retry.json"
+  ],
+  "machine_audit_sha256": "fb399be5471e4bba4c9306a0a2803046eb60aed739535eb191988d22c6e62275",
+  "human_review_performed": false,
+  "passed": 42,
+  "total": 42,
+  "single_simultaneous_snapshot": false,
+  "temporary_timeouts_preserved": true
+}

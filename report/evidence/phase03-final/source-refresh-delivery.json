@@ -1,0 +1,347 @@
+{
+  "version": "liaoning-machine-source-refresh-v1",
+  "checked_at": "2026-10-07T03:15:24.947280+00:00",
+  "machine_audit_sha256": "fb399be5471e4bba4c9306a0a2803046eb60aed739535eb191988d22c6e62275",
+  "human_review_performed": false,
+  "profiles": [
+    {
+      "source_id": "explanation-shenyang-1",
+      "city_id": "liaoning-shenyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-shenyang-2",
+      "city_id": "liaoning-shenyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+      "original_hash_current": false,
+      "bilingual_binding_current": false,
+      "error": "TimeoutError"
+    },
+    {
+      "source_id": "explanation-shenyang-3",
+      "city_id": "liaoning-shenyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026032314000396035/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-dalian-1",
+      "city_id": "liaoning-dalian",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030216072229736/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-dalian-2",
+      "city_id": "liaoning-dalian",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815521914267/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-dalian-3",
+      "city_id": "liaoning-dalian",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026030215492936959/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-anshan-1",
+      "city_id": "liaoning-anshan",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815300948615/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-anshan-2",
+      "city_id": "liaoning-anshan",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026012815264870826/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-anshan-3",
+      "city_id": "liaoning-anshan",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026010815314636506/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-fushun-1",
+      "city_id": "liaoning-fushun",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215360785153/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-fushun-2",
+      "city_id": "liaoning-fushun",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215232757710/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-fushun-3",
+      "city_id": "liaoning-fushun",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025122215341060360/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-benxi-1",
+      "city_id": "liaoning-benxi",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516270563816/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-benxi-2",
+      "city_id": "liaoning-benxi",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121516252322421/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-benxi-3",
+      "city_id": "liaoning-benxi",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025121514113343131/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-dandong-1",
+      "city_id": "liaoning-dandong",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115523216542/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-dandong-2",
+      "city_id": "liaoning-dandong",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115505128051/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-dandong-3",
+      "city_id": "liaoning-dandong",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025120115345033432/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-jinzhou-1",
+      "city_id": "liaoning-jinzhou",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415582121511/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-jinzhou-2",
+      "city_id": "liaoning-jinzhou",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415515877032/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-jinzhou-3",
+      "city_id": "liaoning-jinzhou",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415381968121/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-yingkou-1",
+      "city_id": "liaoning-yingkou",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415253497628/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-yingkou-2",
+      "city_id": "liaoning-yingkou",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415290813331/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-yingkou-3",
+      "city_id": "liaoning-yingkou",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112415322259752/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-fuxin-1",
+      "city_id": "liaoning-fuxin",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116121250991/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-fuxin-2",
+      "city_id": "liaoning-fuxin",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116301135521/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-fuxin-3",
+      "city_id": "liaoning-fuxin",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025112116255955709/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-liaoyang-1",
+      "city_id": "liaoning-liaoyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814532846903/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-liaoyang-2",
+      "city_id": "liaoning-liaoyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814590371766/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-liaoyang-3",
+      "city_id": "liaoning-liaoyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111814543749109/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-tieling-1",
+      "city_id": "liaoning-tieling",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415201655580/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-tieling-2",
+      "city_id": "liaoning-tieling",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111415182414713/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-tieling-3",
+      "city_id": "liaoning-tieling",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114460837555/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-chaoyang-1",
+      "city_id": "liaoning-chaoyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025111114190360298/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-chaoyang-2",
+      "city_id": "liaoning-chaoyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102716004434532/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-chaoyang-3",
+      "city_id": "liaoning-chaoyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102715574271950/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-panjin-1",
+      "city_id": "liaoning-panjin",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216333845478/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-panjin-2",
+      "city_id": "liaoning-panjin",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216325764499/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-panjin-3",
+      "city_id": "liaoning-panjin",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216303459994/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-huludao-1",
+      "city_id": "liaoning-huludao",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102216222773432/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-huludao-2",
+      "city_id": "liaoning-huludao",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025102015153218498/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    },
+    {
+      "source_id": "explanation-huludao-3",
+      "city_id": "liaoning-huludao",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2025101714243445981/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    }
+  ],
+  "passed": 41,
+  "total": 42,
+  "cities": 14
+}

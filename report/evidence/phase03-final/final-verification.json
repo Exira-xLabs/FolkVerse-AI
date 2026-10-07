@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-07T03:13:27.578030+00:00",
+  "phase_status": "final_live_pilot_pending_existing_budget_cap",
+  "owner_human_review_required": false,
+  "human_reviews_fabricated": false,
+  "api_tests_passed": 433,
+  "guide_browser_tests_passed": 60,
+  "isolated_bilingual_faults_passed": 16,
+  "source_profiles_current": 42,
+  "cities": 14,
+  "machine_topics": 42,
+  "reproduction_steps": 18,
+  "runtime_hashes_match_reproduction": true,
+  "current_provider_usage": {
+    "attempts": 68,
+    "statuses": {
+      "completed": 68
+    },
+    "prompt_tokens": 98992,
+    "completion_tokens": 12079,
+    "configured_charge_and_unreconciled_reserves_usd": 0.0441924,
+    "provider_invoice": false,
+    "scope": "All gateway attempts since first current pilot, including two observed diagnostic probes and interrupted requests; local regression tests use isolated ledgers."
+  },
+  "200_question_live_pilot_completed": false,
+  "existing_daily_budget_usd": "0.10",
+  "cap_increased": false,
+  "additional_test_allowance_requested_usd": "0.15",
+  "approval_received": false,
+  "local_url": "http://127.0.0.1:3000/guide",
+  "remote_ci_workflow_exists": false,
+  "public_deployment_performed": false,
+  "reproduction_evidence": "reproduction-release.json",
+  "source_refresh_evidence": "source-refresh-summary.json",
+  "frozen_pilot": "tests/evaluation/guide/v5-phase03-pilot.json"
+}

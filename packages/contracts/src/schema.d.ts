@@ -713,7 +713,7 @@ export interface components {
              * @default complete_reviewed_passage
              * @enum {string}
              */
-            support_method: "complete_reviewed_passage" | "reviewed_variant_v1" | "complete_sentence_v1" | "inventory_projection_v1" | "official_metadata_projection_v1";
+            support_method: "complete_reviewed_passage" | "reviewed_variant_v1" | "complete_sentence_v1" | "inventory_projection_v1" | "official_metadata_projection_v1" | "machine_source_summary_v1";
             /**
              * Support Version
              * @default deterministic-support-v1

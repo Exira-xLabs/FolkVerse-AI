@@ -6,7 +6,7 @@
 
 **Approved direction:** Hybrid conversation: natural EN/ZH social replies, source-supported cultural explanations and clearly labelled general educational context. Precise local facts, quotations, disputed claims and current information require evidence. A failed supported claim cannot be downgraded to general knowledge. See [execution parts](../docs/phase-03-hybrid-execution-parts.md) and [the output contract](../docs/guide-hybrid-output-contract.md). This direction is authorized; the runtime remains the restricted implementation until its coordinated changes pass verification.
 
-**Current boundary — 7 October 2026:** Real EN/ZH DeepSeek chat, conservative independently supported hybrid sections, registered official lookup, consented follow-ups, source inspection, bounded reusable BGE and fresh bilingual functional evaluation are implemented locally. The final diagnostic reaches 48/48 functional cases, with 18/18 actual sourced answers passing support/citation checks; 16 isolated bilingual faults and fresh reproduction are verified. Human historical/clarity/personality/bilingual judgments, the 200-question pilot and broader approved whole-Liaoning coverage remain pending. Phase 03 is partial; see the [current closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md). Scripted demo mode remains visibly distinct from live mode.
+**Current boundary — 7 October 2026:** Engineering and autonomous source assessment are delivered. The owner declined human review; Codex assessed 42 bilingual official profiles spanning all 14 cities, with fresh hash-bound original-page lookup and an explicit machine-review label. The current verification is 433 API tests, 60 guide/browser checks, 16 isolated bilingual faults and clean reproduction. The 200-question final live pilot remains open because the existing spending cap stopped generation; no human worksheet is required. See the [current closure audit](../report/PHASE_03_HYBRID_CLOSURE_AUDIT.md) and [review amendment](../docs/phase-03-machine-review-acceptance.md).
 
 ## Paste into Codex
 ```text
@@ -29,14 +29,14 @@ Update docs/build-status.md with actual results, blockers and the next phase. Re
 
 ## Acceptance gates
 
-- [ ] A real credentialed call is tested if authorized credentials exist; otherwise explicitly unverified.
-- [ ] Supported and unsupported questions behave differently in both languages.
-- [ ] Invented citation IDs are rejected; source-injected instructions do not change policy.
-- [ ] Revoked passages stop being retrieved; model timeout/cap exhaustion show honest errors.
-- [ ] Keys never reach browser/logs; source drawer shows actual evidence.
+- [x] A real credentialed call is tested if authorized credentials exist; otherwise explicitly unverified.
+- [x] Supported and unsupported questions behave differently in both languages.
+- [x] Invented citation IDs are rejected; source-injected instructions do not change policy.
+- [x] Revoked passages stop being retrieved; model timeout/cap exhaustion show honest errors.
+- [x] Keys never reach browser/logs; source drawer shows actual evidence.
 - [ ] Jinyao's hybrid conversation and explanation harness is implemented and evaluated on a dated bilingual set, with measured factual, clarity, personality and conversational results; general knowledge and reviewed coverage are distinguished.
-- [ ] Explanations separate historical evidence, attributed interpretations, folklore/belief and creative adaptation; chronology and source support are checked.
-- [ ] Follow-ups, glossary and depth changes preserve factual support and uncertainty in evidence sections; general explanations remain explicitly unverified. Natural greetings, clarification and consented context work without silent failures or a permanent turn-count block.
+- [x] Explanations separate historical evidence, attributed interpretations, folklore/belief and creative adaptation; chronology and source support are checked.
+- [x] Follow-ups, glossary and depth changes preserve factual support and uncertainty in evidence sections; general explanations remain explicitly unverified. Natural greetings, clarification and consented context work without silent failures or a permanent turn-count block.
 
 ## Jinyao expert museum-guide harness
 

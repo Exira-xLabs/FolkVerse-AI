@@ -1,0 +1,19 @@
+{
+  "version": "liaoning-machine-source-refresh-v1",
+  "checked_at": "2026-10-07T03:16:58.174256+00:00",
+  "machine_audit_sha256": "fb399be5471e4bba4c9306a0a2803046eb60aed739535eb191988d22c6e62275",
+  "human_review_performed": false,
+  "profiles": [
+    {
+      "source_id": "explanation-shenyang-2",
+      "city_id": "liaoning-shenyang",
+      "url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+      "original_hash_current": true,
+      "bilingual_binding_current": true,
+      "error": null
+    }
+  ],
+  "passed": 1,
+  "total": 1,
+  "cities": 1
+}

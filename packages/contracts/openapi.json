@@ -1351,7 +1351,8 @@
               "reviewed_variant_v1",
               "complete_sentence_v1",
               "inventory_projection_v1",
-              "official_metadata_projection_v1"
+              "official_metadata_projection_v1",
+              "machine_source_summary_v1"
             ],
             "title": "Support Method",
             "type": "string"

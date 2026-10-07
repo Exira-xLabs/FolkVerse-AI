@@ -1,0 +1,391 @@
+{
+  "started_at": "2026-10-07T03:11:08.568357+00:00",
+  "scope": "Git-visible candidate tree; fresh dependency installs, setup, isolated PostgreSQL/pgvector, migrations, corpus restore, API and production web startup",
+  "production_database_modified": false,
+  "provider_key_copied": false,
+  "provider_calls": 0,
+  "steps": [
+    {
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 900.2848469999662,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "sync",
+        "--project",
+        "apps/api",
+        "--frozen"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 297.49333299969294,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "setup:local"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 388.13125700016826,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "setup:local"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 353.10554899933777,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "-d",
+        "--rm",
+        "--name",
+        "folkverse-phase3-reproduce-4138d4175c8e",
+        "--env-file",
+        "/tmp/folkverse-phase3-reproduction-thd5qd86/database.env",
+        "-p",
+        "127.0.0.1::5432",
+        "pgvector/pgvector:pg17@sha256:d2ef61f42ef767baa5a1475393303cc235bcd92febd9d7014eddb48b41f3bad0"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 125.36278599964135,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "port",
+        "folkverse-phase3-reproduce-4138d4175c8e",
+        "5432/tcp"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 11.253735000536835,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "db:migrate"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 1764.4537839996701,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "db:migrate"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 846.6400529996463,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "restore-manifest"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 514.0532180002992,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "counts"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 483.37004000040906,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "ledger"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 443.6155419998613,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "restore-manifest"
+      ],
+      "exit_code": 2,
+      "elapsed_ms": 430.97436599964567,
+      "expected_codes": [
+        2
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "counts"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 465.36175700020976,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--project",
+        "apps/api",
+        "python",
+        "-m",
+        "folkverse.curation",
+        "ledger"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 432.82066699975985,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "assets:sync"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 415.1497789998757,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 8517.336060999696,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 13913.411587000155,
+      "expected_codes": [
+        0
+      ]
+    },
+    {
+      "command": [
+        "pnpm",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 14827.941542999724,
+      "expected_codes": [
+        0
+      ]
+    }
+  ],
+  "runtime_file_hashes": {
+    "apps/api/src/folkverse/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/api/src/folkverse/config.py": "e5a08e1b2e54a3b28876b367c9905402e0c0c86fa03a27d4907488e5376015b2",
+    "apps/api/src/folkverse/content.py": "848ed4678c2999105bb1cd628a56b80cbd680749165c8d4205156a5ad1b5dc2d",
+    "apps/api/src/folkverse/content_api.py": "0270698b36914de2ac14ffffa484352bd5d0b8a9df859182cf0852866d105eb4",
+    "apps/api/src/folkverse/content_models.py": "9c681ead21382cded815fac9d70b9aeb26eef394e6411c93a04c28a4b72a7415",
+    "apps/api/src/folkverse/content_snapshot.py": "6e67685bdac3d727a9ce036ab76797272e73645b375d4eeb7dc4a25b63a17a50",
+    "apps/api/src/folkverse/contracts.py": "43f88d01f5fe70d796893384f53b79399311e45694c29118394d555e21a5cd41",
+    "apps/api/src/folkverse/curation.py": "2ecbde433b3c82396e731629bcdd19353b6fde6dac13c45d4de82ee3d0c35ce4",
+    "apps/api/src/folkverse/database.py": "1c9a91e5107e0c0cf076df7a08b3c59ee6c4798821f045ac532bc6350edfe0c9",
+    "apps/api/src/folkverse/embedding_worker.py": "556dbd621e029b6f73c78cdeb19866d7365fcc4c72a56edab3bc693d4cf4cbfc",
+    "apps/api/src/folkverse/errors.py": "152abd70f3e566b63da5aef4a29c30758979c250ccece12b59f39695988a5cfd",
+    "apps/api/src/folkverse/gateway_limits.py": "5c6c39e594039141894ffb5d9122ca3aa6cf0ef609a00f6c90803de3d1a41b3b",
+    "apps/api/src/folkverse/gateway_models.py": "5861451155c79ff8161106bee6ce0564eb96a5ad1baab08ecce9d26c6ee3c032",
+    "apps/api/src/folkverse/guide_api.py": "0e8d734718f9d12ba533fd57151f27bcdeda6a87de9de975291d381d1d5aa50e",
+    "apps/api/src/folkverse/guide_benchmark.py": "b0ff6a4ff3704cc5fd4bea3894001e2bb7816dbec0927f5f7b52bc96af213c7c",
+    "apps/api/src/folkverse/guide_doctor.py": "21d5b0a463263786485e321ac5efd5d10291c85a396c8df2afe8effb74d70a9d",
+    "apps/api/src/folkverse/guide_embeddings.py": "97e23f8daee082eaf7eae1d74555255335408e0dfa3912c39966fc2b71b32066",
+    "apps/api/src/folkverse/guide_evaluation.py": "56615116f2d1269295c8b50b5dae4630ecebe449cc23938172792f2df8f9d844",
+    "apps/api/src/folkverse/guide_explanations.py": "cd0902480ca0937bab079d0755a600cbd48eedf36f31202f84e0be6e62e48c6e",
+    "apps/api/src/folkverse/guide_harness.py": "5794662ae765fdc8f920e01fe9184411e48cf954a810d524fa11f5b43ed2eec3",
+    "apps/api/src/folkverse/guide_hybrid.py": "fcf917d124678b864aa18a35c2716cee7733e2e226a6ac342018b678d2e22f97",
+    "apps/api/src/folkverse/guide_index.py": "953b11f0c3a07e32fe4df91e261b9ae85af47156f92daead0f292b87013f1dfd",
+    "apps/api/src/folkverse/guide_lookup.py": "e5c0a1672f84ca2e2d4e14e7e02ec84a2e2eaf7cde195692273910b9a4e6ce67",
+    "apps/api/src/folkverse/guide_personality.py": "7b35586969209da68ffc55c00ae88f2ce3d09da5a074408529e205ebb660667f",
+    "apps/api/src/folkverse/guide_retrieval.py": "e66b0ead4b0468dd37e7ac965d851b58309a02fb71832caa4d63e000e82c269d",
+    "apps/api/src/folkverse/guide_review.py": "d1cce78ac90142b1e7cf4b61bbd4646bbf1ca29576cd8f14aa7189a4848c9630",
+    "apps/api/src/folkverse/guide_support.py": "db27e38084a592e6b656e46f401cce8c3974c5d2fc304c69b8354c074b4947b4",
+    "apps/api/src/folkverse/liaoning_inventory.py": "684c73478e336d186a7d7caa601f62b1c5d0b6c15944a87c3291d9d06a225a01",
+    "apps/api/src/folkverse/liaoning_launch.py": "c5bf5cd44ad946b8043e863011f775e2d6c8f6881eec8a489bc43765c3366651",
+    "apps/api/src/folkverse/liaoning_ocr.py": "3826c1ed5867d565ee96fb28b026c86b49d9dd3dfefbc1dd0a87880112d1576c",
+    "apps/api/src/folkverse/liaoning_publication.py": "4b86b09ded97a28b20e77ccecaa6fd5bb60966a1759b9032a02852f6758f34fb",
+    "apps/api/src/folkverse/liaoning_queue.py": "b39c796d5e710ae16f7a5c048c8a834f821192e064ca46263ff62c42273e08ae",
+    "apps/api/src/folkverse/liaoning_review.py": "9eb8cf3184bbebd57be9cfdae5edc918c94ee3257ba1b913ba80ad5de580de9b",
+    "apps/api/src/folkverse/main.py": "24cde126d821b71d8e59467463d8b99363a5b064e25dd7f5a31f6253c95a8a20",
+    "apps/api/src/folkverse/met_import.py": "d4ec37abd9d650f491858a0fc7bb5da607dfd8c6db1bc9bf5a87cd4c2c3fea32",
+    "apps/api/src/folkverse/provider_gateway.py": "95537e109f29991eaa1f37c38e5cf6cabd5546f562259caa10ea74e41c0c488a",
+    "apps/api/src/folkverse/seed_content.py": "39ccd2ca3c9e5e93a2eafc29789ec678bff8e5b892ea7f35c89b0cc6343ccb8a",
+    "apps/api/src/folkverse/sessions.py": "ef4baf80a9b0663e2236c6c7dbb18fc72ec5edbeefbf62cb7a953f1c4d51bf95",
+    "apps/api/uv.lock": "bbdcc70ccfde63b400083fc4f88142af7c5aeeb34fedca7e31ebd86fee1c232e",
+    "apps/web/src/app/[...slug]/page.tsx": "859d55ba78333eab69423e4ad20e5fd18d94b84a07a4a28cb27fbd31a2b341a2",
+    "apps/web/src/app/api/v1/[...content]/route.ts": "4d57d856728904d45ea205797e2bd7c69212efd8a337cd87a0d22dceb23ca0d5",
+    "apps/web/src/app/api/v1/guide/evidence/[identifier]/route.ts": "ffa5ef9fba7c33f09cec50706162de8132395e43e5733ad4cdcad156fa6c1432",
+    "apps/web/src/app/api/v1/guide/route.ts": "f412520cd65dd56f6c904931ca08e493555569a81d6b452b5265b582a4ea8672",
+    "apps/web/src/app/api/v1/health/route.ts": "801bb496a3172d3e7d3f372e97aba33b779e1883c9d5196a80b48b9524468d1e",
+    "apps/web/src/app/api/v1/session/route.ts": "8cc141e5f710f2db2ff5f845b8c032c7aca906d33e930e6fc1b071f9c164978f",
+    "apps/web/src/app/favicon.ico": "cc8f9d770570766f6a6bc2264cbdee9cda18e3c82fce6f54280cb21a38a3044f",
+    "apps/web/src/app/fonts/DejaVuSans.ttf": "6038a160b491e121c1f12c7bccb4a9c8730296e3adc1086a059404ed84b7451c",
+    "apps/web/src/app/fonts/DejaVuSerif.ttf": "ae665174c5b7fdb9b457d112db098cbe651dff847bfcf8bcb711172856d0c6b1",
+    "apps/web/src/app/fonts/LICENSE-DejaVu.txt": "f88d5294af5a772f9114eb385009e3478d62b21f3e5bbc34d159d328047c8867",
+    "apps/web/src/app/globals.css": "a23ee3d2e5c0dc011f687351a2fef37bf88bfab30992af76e8218946396dd663",
+    "apps/web/src/app/icon.png": "a5853bf9481a561cc856006f4ba260c951cc4ef04c8e5cd9c2c1d30e219b9b68",
+    "apps/web/src/app/jinyao.css": "c41cfdf0088e99a3f4f8893aef3806233461f36751115d8259206f543b5ea007",
+    "apps/web/src/app/layout.tsx": "f1f7fb74be256318a3cf41fc1c138dc5f12ef191633472c46671dd3f1ea4e52f",
+    "apps/web/src/app/mobile-navigation.css": "103c1617ed1084b84a5b4475c5a39fe65e2814cb1335c143cd9f001a0a5f900c",
+    "apps/web/src/app/not-found.tsx": "d84093ebabcafee47271f08b22b6e858cb0a8746c575582df233c2c2e4f335eb",
+    "apps/web/src/app/page.tsx": "c921478f920e4509d7c17980f9c94515769ee10438a33aae6d48ab9f6d347bf0",
+    "apps/web/src/components/arrow-icon.tsx": "396c35425a379f18417970c307ba0830e531d0b2524692211f26572f2e5d0454",
+    "apps/web/src/components/catalog-explorer.tsx": "3a987c3701afc07f5cada40c9d1320b6ebe4a1a8d26b68de4679135cf0a39336",
+    "apps/web/src/components/exhibit-context.tsx": "ef576fc8b7956ca8bb54621594268cb22669d2d7edbbc247dd0f0158048b64d1",
+    "apps/web/src/components/featured-exhibit.tsx": "0395c318f82fece158f6423344b3ff8e691ee968931713c1fb4ecadf878fba83",
+    "apps/web/src/components/graphics-provider.tsx": "f4a8fe4bb1f43480d05820da0999616c760bf6737fa04c1cc30752b7083944ce",
+    "apps/web/src/components/guide-source-inspector.tsx": "896a6c1db247a9a589c829550844b8bb86b6f5ae8418031e3c0e2e81978467d2",
+    "apps/web/src/components/interest-chart.tsx": "4cdf18a116ffa073a5c952047a18fa1663214cdb84f55aea078d58da3785411b",
+    "apps/web/src/components/jinyao-avatar.tsx": "c750c60c8072102457de3fdb16ab52c0089688b9984ad17436def2f30a1e8b44",
+    "apps/web/src/components/jinyao-chat.tsx": "760e6b1daf09acfbf1d544e9f0e9c28daf176d079661e643f34d467bad011e6b",
+    "apps/web/src/components/jinyao-experience.tsx": "9419511bedc239253d7117d28e2bf9dae11ae415c08cd55df7460006eab538a4",
+    "apps/web/src/components/liaoning-atlas.tsx": "6a3cfd6cc6d33ac77b2bae3558ae2510c3fcbd77ab1375036bd45a47c30f82cd",
+    "apps/web/src/components/locale-provider.tsx": "2331bad566bbc2d97457eebd374a4ff71216b9cc996923c127636cce6b97851e",
+    "apps/web/src/components/mobile-navigation.tsx": "01c73ec8d429928bcdd0fc8c09f94c30b96f38bc4c4cc0fca97ed9cb5208fda8",
+    "apps/web/src/components/museum-experiences.tsx": "005e758ab51aed3e85e7a254c2486d8a6531295b6771733eebd30ca639efa08c",
+    "apps/web/src/components/museum-select.tsx": "d915deccec5f8bb4780799f71fcd65923cadb46eb481948da41a74ae67134a4f",
+    "apps/web/src/components/museum-shell.tsx": "d343115dd0c623600b627681c1d1689d563b33ec05417147e181f0366d0542ef",
+    "apps/web/src/components/museum-ui.tsx": "d723ff50801a5d6cf243e9dbe7b3f12db838b26a2c0f0d11db34935d5616ea93",
+    "apps/web/src/components/reading-tools.tsx": "ec2c5e4faa780481ea14dd086bac192cd5e64ed94fab13605f0439feb9694bb9",
+    "apps/web/src/components/reviewed-discovery.tsx": "72e5a0e7d2975f665810ed3dc1e9d42d6d2f755f0092ffab4ddca9eca3d1d51b",
+    "apps/web/src/components/service-status.tsx": "03e8ee52eb90ecf526e6016c5328ce0f431d1e19e1dd6d48d06898dbaa20e7f6",
+    "apps/web/src/components/story-scene.tsx": "c3e266f8d61a5652e4caf70436f7841093f16e3a2b869f8e71b537fcaf46c0a1",
+    "apps/web/src/components/visit-provider.tsx": "4890a5ff5099b9a97533185a4f3f72ad23742a0aa8ba6d249a90ed534ca1d88b",
+    "apps/web/src/lib/api-proxy.ts": "94c1dcbb9ba8d211153fe37430e6cba38de73b3d40dc9ab4bc18a0ff891eb67b",
+    "apps/web/src/lib/app-mode.ts": "f9eecfd6f0c353317dd8ee4f2a775f6f555a976da72672c8cdb301e668da829c",
+    "apps/web/src/lib/dialog.ts": "664a91f1a611fa812f04d0740113df8186929633331ba60998881105b4e8a8c8",
+    "apps/web/src/lib/guide-conversation.ts": "c750bd1e5764b6a236f60c4b94153568ca064886f31b9066a38313d5dcd1ea3c",
+    "apps/web/src/lib/guide-hybrid-checks.ts": "caf02b30774da5554dba5b7c48d27d826c16696b63e5020b803dcae10a7c5bad",
+    "apps/web/src/lib/guide-stream.ts": "79d2682d588041dd0f329729aeb2407b7b72db0c37d92a8bea8ff1123cd4fc96",
+    "apps/web/src/lib/i18n.ts": "356933d71cd89780a925e0bba2b59277f7cb83da8a57e79ad580597541a7f71b",
+    "apps/web/src/lib/maps/liaoning-city-boundaries.json": "adb97406894fa251602bf692bf2857f07fdfec833d258798eafabe38d3212592",
+    "apps/web/src/lib/maps/liaoning-contours.json": "ca324ee86f7d45d8109897606539e928f22234db0299e5d2a2e11f8ed7680ea9",
+    "apps/web/src/lib/maps/liaoning-geography.json": "46bd6f30842ba88746978c560ae3dbfbcb25f415fd316ce0a4546d278d3e4a93",
+    "apps/web/src/lib/museum-art.ts": "d2adf0b47dbde7e65f91347f000226ca3eb258df8b97bba842900074ad5db5f1",
+    "apps/web/src/lib/page-metadata.ts": "b2761d5faa3e0390bcd615d06aaf6b776262b06ad8032e2305d3de668193041d",
+    "apps/web/src/lib/routes.ts": "c846531ebf40a3b9dd12ae67bc4831621a82662e99ae87f3b5577693f9b187d5",
+    "apps/web/src/lib/use-guide-keyboard.ts": "ac44f1361f37f3850fd057720161bc8eac13eb1d2caf568f3397f88091a00c6e",
+    "data/liaoning/machine-launch-manifest.json": "d5f3f9cc0f8e3c0ee4f683b0f05b64e39f44a0e8fe0fe46aa4824f9fec52e165",
+    "data/liaoning/machine-source-audit.json": "0ac6ceff3d063921d729f080eba7262daeaf6a7206f9c6139ccb9e79af80bbfe",
+    "data/liaoning/search-aliases.json": "a50fe16ec94026d6c5f1c44039a3f0793d329dd2d85363ae167ded63b97b3216",
+    "package.json": "bd8fba5d9ac743d16fe13d1289fd4fbc5320a7d457d5cb290cdb4db404210e27",
+    "packages/contracts/openapi.json": "4dffa92aad694d31893b34712c9b9c91b4cd7f14b81cd104d55849a31d9ee634",
+    "packages/contracts/src/jinyao-policy.json": "f4a633ce20b9e859e5d1c7e3ebca23ff4cf86ea3edd03717b2fbc75350eb283c",
+    "packages/contracts/src/schema.d.ts": "55cc52c9071bdc9c2ec107dd2d186c6dd060051fe79d9de15057af641c7fc65d",
+    "pnpm-lock.yaml": "dacf86711ea0c97bb45ec6a79e22432e0a07759a9b4d96dd9bc22178b58c6cff"
+  },
+  "git_base_commit": "e76aa5fd08deb8e2f66996ff18ff80b668753ac4",
+  "candidate_tree_sha256": "50219ed4adb9228c7b93c2dff5a697786e4dea27622bd5ebcc9d9d3b526316c4",
+  "files_copied": 988,
+  "setup_preserves_existing_secrets": true,
+  "restore_refuses_existing_content": false,
+  "fresh_api_health": {
+    "status": "ok",
+    "mode": "live",
+    "database": "available",
+    "pgvector": "available",
+    "schema_status": "current",
+    "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+    "pgvector_version": "0.8.5"
+  },
+  "fresh_published_exhibits": 1,
+  "fresh_owned_session": true,
+  "missing_key_fails_closed": true,
+  "fresh_web_to_api_health": {
+    "status": "ok",
+    "mode": "live",
+    "database": "available",
+    "pgvector": "available",
+    "schema_status": "current",
+    "postgres_version": "17.10 (Debian 17.10-1.pgdg12+1)",
+    "pgvector_version": "0.8.5"
+  },
+  "fresh_guide_http_status": 200,
+  "passed": true,
+  "temporary_container_removed": true,
+  "completed_at": "2026-10-07T03:11:57.446544+00:00"
+}

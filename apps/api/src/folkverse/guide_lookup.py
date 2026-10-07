@@ -98,11 +98,53 @@ class OfficialLookup:
     def __init__(self, folder: Path = ROOT / "data/liaoning", enabled: bool = True):
         self.folder, self.enabled = folder, enabled
         self.cache: OrderedDict[str, tuple[float, EvidencePassage]] = OrderedDict()
+        self.audit_bindings: dict[str, str] = {}
         self.semaphore = asyncio.Semaphore(2)
         self.aliases: dict[str, dict[str, str]] = {}
         path = folder / "search-aliases.json"
         if path.exists():
             self.aliases = json.loads(path.read_text())["aliases"]
+
+    def audit_signature(self) -> str:
+        path = self.folder / "machine-source-audit.json"
+        return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else ""
+
+    def audited_summary(self, source_id: str, raw: bytes, locale: Locale) -> dict[str, Any] | None:
+        """Machine-assessed summaries are distinct from human-approved corpus publication."""
+        path = self.folder / "machine-source-audit.json"
+        if not path.exists():
+            return None
+        try:
+            payload = json.loads(path.read_text())
+            if (
+                payload.get("version") != "liaoning-machine-source-audit-v1"
+                or payload.get("human_review_performed") is not False
+            ):
+                return None
+            records = [r for r in payload["records"] if r["source_id"] == source_id]
+            if len(records) != 1:
+                return None
+            record = records[0]
+            if hashlib.sha256(raw).hexdigest() != record["source_raw_sha256"]:
+                return None
+            article = Article()
+            article.feed(raw.decode("utf-8"))
+            if (
+                hashlib.sha256("\n".join(article.paragraphs).encode()).hexdigest()
+                != record["source_paragraph_sha256"]
+            ):
+                return None
+            facts = record["facts"][locale]
+            if (
+                record["classification"] not in {"source_statement", "folklore"}
+                or len(facts) != 2
+                or any(not isinstance(t, str) or not 15 <= len(t) <= 600 for t in facts)
+                or not record["rights_basis"]
+            ):
+                return None
+            return dict(record)
+        except (KeyError, TypeError, ValueError):
+            return None
 
     def directory(self) -> list[dict[str, Any]]:
         path = self.folder / "registry.json"
@@ -142,7 +184,7 @@ class OfficialLookup:
         }
         matches = []
         for source in self.directory():
-            title = source["title"].split("·")[-1]
+            title = source["title"].split("·", 1)[-1]
             alias = self.aliases.get(source["id"], {}).get(locale, title)
             terms = set(tokenize(alias)) - {"the", "a", "in", "of"}
             overlap = len(query & terms) / max(1, len(terms))
@@ -152,11 +194,27 @@ class OfficialLookup:
         # An ambiguous directory match requires clarification instead of choosing silently.
         return [source for _, source in matches[:3]]
 
+    def city_sources(self, question: str) -> list[dict[str, Any]]:
+        path = self.folder / "launch-plan.json"
+        audit = self.folder / "machine-source-audit.json"
+        if not path.exists() or not audit.exists():
+            return []
+        cities = [
+            c
+            for c in json.loads(path.read_text())["cities"]
+            if any(name.casefold() in question.casefold() for name in c["names"].values())
+        ]
+        if len(cities) != 1:
+            return []
+        records = json.loads(audit.read_text()).get("records", [])
+        identifiers = {r["source_id"] for r in records if r["city_id"] == cities[0]["id"]}
+        return [s for s in self.directory() if s["id"] in identifiers][:3]
+
     def render(self, source: dict[str, Any], raw: bytes, locale: Locale) -> EvidencePassage:
         article = Article()
         article.feed(raw.decode("utf-8"))
         body = "\n".join(article.paragraphs)
-        native = source["title"].split("·")[-1]
+        native = source["title"].split("·", 1)[-1]
         if not body or native not in raw.decode("utf-8"):
             raise ValueError("Fetched page does not match registered profile")
         title = self.aliases.get(source["id"], {}).get(locale, native)
@@ -190,6 +248,9 @@ class OfficialLookup:
                 ):
                     facts.append(sentence)
                     break
+        summary = self.audited_summary(source["id"], raw, locale)
+        if summary:
+            facts = summary["facts"][locale]
         sha = hashlib.sha256(raw).hexdigest()
         identifier = (
             "lookup_" + hashlib.sha256((source["url"] + sha + locale).encode()).hexdigest()[:32]
@@ -199,18 +260,27 @@ class OfficialLookup:
             source_id=source["id"],
             text="\n".join(facts),
             language=locale,
-            locator="article:pages_content;closed-relation-and-short-statement",
+            locator=(
+                "article:pages_content;machine-assessed-bilingual-summary"
+                if summary
+                else "article:pages_content;closed-relation-and-short-statement"
+            ),
             rights_basis=(
-                "Ephemeral attributed metadata/short-statement lookup; "
-                "no media/full-page republication or editorial approval."
+                summary["rights_basis"]
+                if summary
+                else (
+                    "Ephemeral attributed metadata/short-statement lookup; "
+                    "no media/full-page republication or editorial approval."
+                )
             ),
             institution=source["institution"],
             source_title=source["title"],
             canonical_url=checked_url(source["url"]),
             fetched_at=datetime.now(UTC),
+            classification=summary["classification"] if summary else "source_statement",
             reviewed_at=None,
             reviewer="",
-            review_id="not_editorially_reviewed",
+            review_id="machine_source_assessed_v1" if summary else "not_editorially_reviewed",
             content_hash=sha,
             exhibit_ids=[],
             region_ids=[city] if city else [],
@@ -222,26 +292,41 @@ class OfficialLookup:
         if not self.enabled:
             return [], "disabled"
         candidates = self.search(question, locale)
+        city_overview = False
+        if not candidates:
+            candidates = self.city_sources(question)
+            city_overview = bool(candidates)
         if not candidates:
             return [], "no_directory_match"
-        if len(candidates) != 1:
+        if len(candidates) != 1 and not city_overview:
             return [], "ambiguous_directory_match"
-        source = candidates[0]
-        async with self.semaphore:
-            try:
-                raw = await fetch_official(source["url"])
-                passage = self.render(source, raw, locale)
-            except (TimeoutError, OSError, ValueError, httpx.HTTPError):
-                return [], "official_source_unavailable"
-        self.cache[passage.passage_id] = (time.monotonic(), passage)
-        self.cache.move_to_end(passage.passage_id)
+
+        async def retrieve(source: dict[str, Any]) -> EvidencePassage | None:
+            async with self.semaphore:
+                try:
+                    raw = await fetch_official(source["url"])
+                    return self.render(source, raw, locale)
+                except (TimeoutError, OSError, ValueError, httpx.HTTPError):
+                    return None
+
+        fetched = await asyncio.gather(*(retrieve(source) for source in candidates))
+        passages = [p for p in fetched if p is not None]
+        if not passages:
+            return [], "official_source_unavailable"
+        for passage in passages:
+            self.audit_bindings[passage.passage_id] = self.audit_signature()
+            self.cache[passage.passage_id] = (time.monotonic(), passage)
+            self.cache.move_to_end(passage.passage_id)
         while len(self.cache) > 64:
-            self.cache.popitem(last=False)
-        return [passage], "original_page_checked"
+            removed, _ = self.cache.popitem(last=False)
+            self.audit_bindings.pop(removed, None)
+        return passages, "original_page_checked"
 
     async def current(self, passage: EvidencePassage, refresh: bool = False) -> bool:
         cached = self.cache.get(passage.passage_id)
         if not cached or cached[1] != passage or time.monotonic() - cached[0] > 300:
+            return False
+        if self.audit_bindings.get(passage.passage_id) != self.audit_signature():
             return False
         if not refresh:
             return True

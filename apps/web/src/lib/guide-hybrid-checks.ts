@@ -4,7 +4,7 @@ const same = (a: string[], b: string[]) => new Set(a).size === a.length &&
   new Set(b).size === b.length && a.length === b.length && a.every(id => b.includes(id));
 
 function variants(p: GuideEvidence): Map<string, string> {
-  if (p.evidence_origin === "official_lookup") return new Map((p.statement_variants ?? []).map(t => [t, "official_metadata_projection_v1"]));
+  if (p.evidence_origin === "official_lookup") return new Map((p.statement_variants ?? []).map(t => [t, p.review_id === "machine_source_assessed_v1" ? "machine_source_summary_v1" : "official_metadata_projection_v1"]));
   const result = new Map<string, string>([[p.text, "complete_reviewed_passage"]]);
   for (const text of p.statement_variants ?? []) result.set(text, "reviewed_variant_v1");
   const sentences = p.text.split(/(?<=[。！？])|(?<=[.!?])\s+(?=[A-Z])/);

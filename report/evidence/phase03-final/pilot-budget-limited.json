@@ -1,0 +1,1228 @@
+{
+  "version": "guide-hybrid-functional-evaluation-v3",
+  "run_status": "stopped_at_existing_budget_cap",
+  "mode": "live",
+  "started_at": "2026-10-07T03:04:25.681942+00:00",
+  "suite_sha256": "7a8153c9fcd5a44a24dec3bebea472321cc8e00c62292bde4390c2f6b9fb8a11",
+  "run_label": "Complete 200-question machine pilot; earlier topic subset exposed; statement-reference generation",
+  "authorship": "Codex-authored machine source-assessed targets; owner waived human review. No independent expert gold.",
+  "reservation": "100 bilingual families share splits (50 development / 150 reserved cases); frozen before first pilot. Post-implementation authored. Reruns after inspection are exposed diagnostics.",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "gateway_admission_changed": false,
+  "cases": [
+    {
+      "id": "pilot-v4-explanation-shenyang-1-en",
+      "family": "explanation-shenyang-1",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Shenyang Imperial Palace and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-1",
+      "actual_status": "answered",
+      "actual_reason": "supported_explanation",
+      "elapsed_ms": 1696.994603999883,
+      "scores": {
+        "claim_support": true,
+        "citation_validity": true,
+        "display_integrity": true,
+        "scenario": true,
+        "locale_delivery": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": {
+        "answer_id": "ans_64671524f0f04d458210191fc656bd99",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "The official profile describes: The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections.",
+        "claims": [
+          {
+            "claim_id": "claim_0",
+            "text": "The official profile describes: The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections.",
+            "passage_ids": [
+              "lookup_935f345a1440d4bcaedee181e83535b2"
+            ],
+            "source_ids": [
+              "explanation-shenyang-1"
+            ],
+            "kind": "source_statement",
+            "support_method": "machine_source_summary_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_0"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_935f345a1440d4bcaedee181e83535b2"
+        ],
+        "sources": [
+          {
+            "passage_id": "lookup_935f345a1440d4bcaedee181e83535b2",
+            "source_id": "explanation-shenyang-1",
+            "text": "The official profile describes: The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections.\nThe three sections offer a concrete way to explore the palace layout.",
+            "language": "en",
+            "locator": "article:pages_content;closed-relation-and-short-statement",
+            "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+            "institution": "Liaoning Department of Culture and Tourism",
+            "source_title": "沈阳市·沈阳故宫",
+            "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+            "fetched_at": "2026-10-07T03:04:26.140936Z",
+            "reviewed_at": null,
+            "reviewer": "",
+            "review_id": "machine_source_assessed_v1",
+            "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+            "exhibit_ids": [],
+            "region_ids": [
+              "沈阳市"
+            ],
+            "evidence_origin": "official_lookup",
+            "classification": "source_statement",
+            "statement_variants": [
+              "The official profile describes: The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections.",
+              "The three sections offer a concrete way to explore the palace layout."
+            ],
+            "required_support_ids": []
+          }
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "provider_attempt_id": "call_8fbd78591ec74b9c9db48c0dce78c4b1",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "The official profile describes: The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections.",
+            "claim_ids": [
+              "claim_0"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 390.31172700015304,
+        "database_ms": 26.353795999966678,
+        "ranking_ms": 0.9967450005206047,
+        "generation_ms": 971.8095919997722,
+        "validation_ms": 9.944159000042418,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "error": null,
+      "sources": [
+        {
+          "passage_id": "lookup_935f345a1440d4bcaedee181e83535b2",
+          "source_id": "explanation-shenyang-1",
+          "text": "The official profile describes: The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections.\nThe three sections offer a concrete way to explore the palace layout.",
+          "language": "en",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳故宫",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+          "fetched_at": "2026-10-07T03:04:26.140936Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "machine_source_assessed_v1",
+          "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "The official profile describes: The Shenyang Imperial Palace was founded in 1625; its buildings can be understood through its eastern, central and western sections.",
+            "The three sections offer a concrete way to explore the palace layout."
+          ],
+          "required_support_ids": []
+        }
+      ]
+    },
+    {
+      "id": "pilot-v4-explanation-shenyang-1-zh-CN",
+      "family": "explanation-shenyang-1",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍沈阳故宫并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-1",
+      "actual_status": "answered",
+      "actual_reason": "supported_explanation",
+      "elapsed_ms": 1733.635432000483,
+      "scores": {
+        "claim_support": true,
+        "citation_validity": true,
+        "display_integrity": true,
+        "scenario": true,
+        "locale_delivery": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": {
+        "answer_id": "ans_ebe6a209be5d4e218eaac7ed7a8c0385",
+        "locale": "zh-CN",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "官方介绍说明：沈阳故宫始建于1625年，建筑可按东、中、西路理解。",
+        "claims": [
+          {
+            "claim_id": "claim_1",
+            "text": "官方介绍说明：沈阳故宫始建于1625年，建筑可按东、中、西路理解。",
+            "passage_ids": [
+              "lookup_46e075dd4582704a7a23d5d88389b122"
+            ],
+            "source_ids": [
+              "explanation-shenyang-1"
+            ],
+            "kind": "source_statement",
+            "support_method": "machine_source_summary_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_1"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_46e075dd4582704a7a23d5d88389b122"
+        ],
+        "sources": [
+          {
+            "passage_id": "lookup_46e075dd4582704a7a23d5d88389b122",
+            "source_id": "explanation-shenyang-1",
+            "text": "官方介绍说明：沈阳故宫始建于1625年，建筑可按东、中、西路理解。\n东、中、西路是观察宫殿布局的具体线索。",
+            "language": "zh-CN",
+            "locator": "article:pages_content;closed-relation-and-short-statement",
+            "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+            "institution": "Liaoning Department of Culture and Tourism",
+            "source_title": "沈阳市·沈阳故宫",
+            "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+            "fetched_at": "2026-10-07T03:04:28.194988Z",
+            "reviewed_at": null,
+            "reviewer": "",
+            "review_id": "machine_source_assessed_v1",
+            "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+            "exhibit_ids": [],
+            "region_ids": [
+              "沈阳市"
+            ],
+            "evidence_origin": "official_lookup",
+            "classification": "source_statement",
+            "statement_variants": [
+              "官方介绍说明：沈阳故宫始建于1625年，建筑可按东、中、西路理解。",
+              "东、中、西路是观察宫殿布局的具体线索。"
+            ],
+            "required_support_ids": []
+          }
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "来源支持已经检查；一般背景说明未经独立事实核验。",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "provider_attempt_id": "call_8f0ed8e1ad4440c59711e34a4e707d57",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "官方介绍说明：沈阳故宫始建于1625年，建筑可按东、中、西路理解。",
+            "claim_ids": [
+              "claim_1"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 288.8149690006685,
+        "database_ms": 15.857463999964239,
+        "ranking_ms": 0.188591999176424,
+        "generation_ms": 1067.1419280006376,
+        "validation_ms": 11.828177999632317,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "error": null,
+      "sources": [
+        {
+          "passage_id": "lookup_46e075dd4582704a7a23d5d88389b122",
+          "source_id": "explanation-shenyang-1",
+          "text": "官方介绍说明：沈阳故宫始建于1625年，建筑可按东、中、西路理解。\n东、中、西路是观察宫殿布局的具体线索。",
+          "language": "zh-CN",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳故宫",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031617080553830/index.shtml",
+          "fetched_at": "2026-10-07T03:04:28.194988Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "machine_source_assessed_v1",
+          "content_hash": "6ca7d1456d2cba1b57c687fac8115048ef425f618ae68a3a3165b5c781ecd0b5",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "官方介绍说明：沈阳故宫始建于1625年，建筑可按东、中、西路理解。",
+            "东、中、西路是观察宫殿布局的具体线索。"
+          ],
+          "required_support_ids": []
+        }
+      ]
+    },
+    {
+      "id": "pilot-v4-explanation-shenyang-2-en",
+      "family": "explanation-shenyang-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Shenyang Industrial Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-2",
+      "actual_status": "answered",
+      "actual_reason": "supported_explanation",
+      "elapsed_ms": 1384.1137589997743,
+      "scores": {
+        "claim_support": true,
+        "citation_validity": true,
+        "display_integrity": true,
+        "scenario": true,
+        "locale_delivery": true,
+        "uncertainty": true,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": {
+        "answer_id": "ans_a164a370d39f4d528a179269f4f2dcff",
+        "locale": "en",
+        "depth": "beginner",
+        "status": "answered",
+        "uncertainty": "partial",
+        "reason": "supported_explanation",
+        "answer_text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+        "claims": [
+          {
+            "claim_id": "claim_0",
+            "text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+            "passage_ids": [
+              "lookup_69e146534b7cad877ae55e90569b8d86"
+            ],
+            "source_ids": [
+              "explanation-shenyang-2"
+            ],
+            "kind": "source_statement",
+            "support_method": "machine_source_summary_v1",
+            "support_version": "deterministic-support-v1"
+          }
+        ],
+        "answer_claim_ids": [
+          "claim_0"
+        ],
+        "context_claim_ids": [],
+        "evidence_ids": [
+          "lookup_69e146534b7cad877ae55e90569b8d86"
+        ],
+        "sources": [
+          {
+            "passage_id": "lookup_69e146534b7cad877ae55e90569b8d86",
+            "source_id": "explanation-shenyang-2",
+            "text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.\nThe workshops themselves illustrate the spaces used for industrial production.",
+            "language": "en",
+            "locator": "article:pages_content;closed-relation-and-short-statement",
+            "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+            "institution": "Liaoning Department of Culture and Tourism",
+            "source_title": "沈阳市·沈阳工业博物馆",
+            "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+            "fetched_at": "2026-10-07T03:04:30.346835Z",
+            "reviewed_at": null,
+            "reviewer": "",
+            "review_id": "machine_source_assessed_v1",
+            "content_hash": "c8e899182a49b4476a57a21d9cc2105f8b0836d80f8bead5e5ee9dd901c50493",
+            "exhibit_ids": [],
+            "region_ids": [
+              "沈阳市"
+            ],
+            "evidence_origin": "official_lookup",
+            "classification": "source_statement",
+            "statement_variants": [
+              "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+              "The workshops themselves illustrate the spaces used for industrial production."
+            ],
+            "required_support_ids": []
+          }
+        ],
+        "related_exhibit_ids": [],
+        "coverage_limit": "Source support is checked; general context is not independently fact-verified.",
+        "mode": "live",
+        "retrieval_mode": "lexical_only",
+        "retrieval_version": "lexical-bm25-cjk-v2",
+        "embedding_status": "disabled",
+        "embedding_model_version": null,
+        "embedding_encoder_version": null,
+        "query_embedding_ms": null,
+        "corpus_version": "corpus_85c01a19f2652a9e10ba9f2550983bde48b11554c9dacc3e042e9fa1a803bccf",
+        "harness_version": "guide-hybrid-sections-v6",
+        "prompt_version": "jinyao-hybrid-explanations-v6",
+        "provider_attempt_id": "call_050a2a60413b4400ae32e5def4b31cb3",
+        "personality_version": "jinyao-conversation-v2",
+        "social_intent": null,
+        "conversation_choice": null,
+        "contract_version": "hybrid_sections_v1",
+        "sections": [
+          {
+            "section_id": "section_evidence",
+            "kind": "evidence",
+            "text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+            "claim_ids": [
+              "claim_0"
+            ],
+            "support_label": "official_lookup"
+          }
+        ],
+        "lookup_status": "original_page_checked",
+        "retrieval_ms": 390.1513419996263,
+        "database_ms": 20.05213200027356,
+        "ranking_ms": 0.13029100045969244,
+        "generation_ms": 707.8515880002669,
+        "validation_ms": 12.246313000105147,
+        "presentation_version": "hybrid_sections_v1"
+      },
+      "error": null,
+      "sources": [
+        {
+          "passage_id": "lookup_69e146534b7cad877ae55e90569b8d86",
+          "source_id": "explanation-shenyang-2",
+          "text": "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.\nThe workshops themselves illustrate the spaces used for industrial production.",
+          "language": "en",
+          "locator": "article:pages_content;closed-relation-and-short-statement",
+          "rights_basis": "Original short attributed factual summaries and educational explanations; no source images or full article republication. This is a machine assessment, not legal or human editorial clearance.",
+          "institution": "Liaoning Department of Culture and Tourism",
+          "source_title": "沈阳市·沈阳工业博物馆",
+          "canonical_url": "https://whly.ln.gov.cn/whly/wlzt/sjly/ajjq/2026031714081688094/index.shtml",
+          "fetched_at": "2026-10-07T03:04:30.346835Z",
+          "reviewed_at": null,
+          "reviewer": "",
+          "review_id": "machine_source_assessed_v1",
+          "content_hash": "c8e899182a49b4476a57a21d9cc2105f8b0836d80f8bead5e5ee9dd901c50493",
+          "exhibit_ids": [],
+          "region_ids": [
+            "沈阳市"
+          ],
+          "evidence_origin": "official_lookup",
+          "classification": "source_statement",
+          "statement_variants": [
+            "The official profile describes: The Shenyang Industrial Museum uses former foundry workshops to present industrial history.",
+            "The workshops themselves illustrate the spaces used for industrial production."
+          ],
+          "required_support_ids": []
+        }
+      ]
+    },
+    {
+      "id": "pilot-v4-explanation-shenyang-2-zh-CN",
+      "family": "explanation-shenyang-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍沈阳工业博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-2",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 418.4304259997589,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-shenyang-3-en",
+      "family": "explanation-shenyang-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain September 18 History Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 385.1511610000671,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-shenyang-3-zh-CN",
+      "family": "explanation-shenyang-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍沈阳“九·一八“历史博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-shenyang-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 385.41000800069014,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-dalian-1-en",
+      "family": "explanation-dalian-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Dalian Museum and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-1",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 526.3705790002859,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-dalian-1-zh-CN",
+      "family": "explanation-dalian-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍大连博物馆景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-1",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 311.01259400020353,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-dalian-2-en",
+      "family": "explanation-dalian-2",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Lushun prison and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-2",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 413.8109229998008,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-dalian-2-zh-CN",
+      "family": "explanation-dalian-2",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍旅顺日俄监狱旧址博物馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-2",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 466.086192000148,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-dalian-3-en",
+      "family": "explanation-dalian-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Dongjiguanshan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 414.2603059999601,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-dalian-3-zh-CN",
+      "family": "explanation-dalian-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍东鸡冠山景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-dalian-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 360.1126000003205,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-anshan-1-en",
+      "family": "explanation-anshan-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Qianshan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-1",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 513.1906270007676,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-anshan-1-zh-CN",
+      "family": "explanation-anshan-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍辽宁千山景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-1",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 414.7828989998743,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-anshan-2-en",
+      "family": "explanation-anshan-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Yufoyuan and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-2",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 466.6171300004862,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-anshan-2-zh-CN",
+      "family": "explanation-anshan-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍玉佛苑并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-2",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 418.85121400082426,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-anshan-3-en",
+      "family": "explanation-anshan-3",
+      "split": "development",
+      "locale": "en",
+      "question": "Explain Ansteel exhibition hall and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 362.47873899992555,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-anshan-3-zh-CN",
+      "family": "explanation-anshan-3",
+      "split": "development",
+      "locale": "zh-CN",
+      "question": "介绍鞍钢集团展览馆景区并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-anshan-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 462.5957770003879,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-fushun-1-en",
+      "family": "explanation-fushun-1",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Lei Feng Memorial Hall and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-1",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 367.6498869999705,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-fushun-1-zh-CN",
+      "family": "explanation-fushun-1",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍雷锋纪念馆并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-1",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 362.0032880007784,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-fushun-2-en",
+      "family": "explanation-fushun-2",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Hetuala and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-2",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 475.9898920001433,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-fushun-2-zh-CN",
+      "family": "explanation-fushun-2",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍赫图阿拉城并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-2",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 366.3415820001319,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-fushun-3-en",
+      "family": "explanation-fushun-3",
+      "split": "reserved",
+      "locale": "en",
+      "question": "Explain Sankuaishi and give one example",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 416.6808529998889,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    },
+    {
+      "id": "pilot-v4-explanation-fushun-3-zh-CN",
+      "family": "explanation-fushun-3",
+      "split": "reserved",
+      "locale": "zh-CN",
+      "question": "介绍三块石国家森林公园并举一个例子",
+      "depth": "beginner",
+      "seed": null,
+      "expected_status": "answered",
+      "expected_support": "official",
+      "required_uncertainty": "partial",
+      "allowed_reviewed_evidence_ids": [],
+      "unacceptable": [
+        "unsupported factual assertions",
+        "unlabelled general explanation",
+        "invented citations"
+      ],
+      "expected_source_id": "explanation-fushun-3",
+      "actual_status": "error",
+      "actual_reason": "budget_exhausted",
+      "elapsed_ms": 426.79636600041704,
+      "scores": {
+        "claim_support": null,
+        "citation_validity": null,
+        "display_integrity": null,
+        "scenario": false,
+        "locale_delivery": null,
+        "uncertainty": null,
+        "followup_consistency": null,
+        "personality_structure": null
+      },
+      "answer": null,
+      "error": "budget_exhausted",
+      "sources": []
+    }
+  ],
+  "seed_answers": [],
+  "attempt_ids": [
+    "call_8fbd78591ec74b9c9db48c0dce78c4b1",
+    "call_8f0ed8e1ad4440c59711e34a4e707d57",
+    "call_050a2a60413b4400ae32e5def4b31cb3"
+  ],
+  "stop_reason": "Existing configured model budget exhausted. No cap increase or automatic billed retry performed."
+}
