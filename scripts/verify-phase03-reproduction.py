@@ -66,11 +66,11 @@ def main(output):
             ROOT / "packages/contracts/src/jinyao-policy.json",
         }
     )
-    result["runtime_file_hashes"] = {
-        str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
+    result["runtime_file_hashes"] = [
+        {"path": str(p.relative_to(ROOT)), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
         for p in runtime_paths
         if p.is_file()
-    }
+    ]
     result["git_base_commit"] = (
         subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT).decode().strip()
     )

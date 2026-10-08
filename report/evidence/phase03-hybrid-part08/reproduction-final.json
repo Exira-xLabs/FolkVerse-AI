@@ -256,105 +256,396 @@
       ]
     }
   ],
-  "runtime_file_hashes": {
-    "apps/api/src/folkverse/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "apps/api/src/folkverse/config.py": "e5a08e1b2e54a3b28876b367c9905402e0c0c86fa03a27d4907488e5376015b2",
-    "apps/api/src/folkverse/content.py": "848ed4678c2999105bb1cd628a56b80cbd680749165c8d4205156a5ad1b5dc2d",
-    "apps/api/src/folkverse/content_api.py": "0270698b36914de2ac14ffffa484352bd5d0b8a9df859182cf0852866d105eb4",
-    "apps/api/src/folkverse/content_models.py": "9c681ead21382cded815fac9d70b9aeb26eef394e6411c93a04c28a4b72a7415",
-    "apps/api/src/folkverse/content_snapshot.py": "6e67685bdac3d727a9ce036ab76797272e73645b375d4eeb7dc4a25b63a17a50",
-    "apps/api/src/folkverse/contracts.py": "43f88d01f5fe70d796893384f53b79399311e45694c29118394d555e21a5cd41",
-    "apps/api/src/folkverse/curation.py": "2ecbde433b3c82396e731629bcdd19353b6fde6dac13c45d4de82ee3d0c35ce4",
-    "apps/api/src/folkverse/database.py": "1c9a91e5107e0c0cf076df7a08b3c59ee6c4798821f045ac532bc6350edfe0c9",
-    "apps/api/src/folkverse/embedding_worker.py": "556dbd621e029b6f73c78cdeb19866d7365fcc4c72a56edab3bc693d4cf4cbfc",
-    "apps/api/src/folkverse/errors.py": "152abd70f3e566b63da5aef4a29c30758979c250ccece12b59f39695988a5cfd",
-    "apps/api/src/folkverse/gateway_limits.py": "5c6c39e594039141894ffb5d9122ca3aa6cf0ef609a00f6c90803de3d1a41b3b",
-    "apps/api/src/folkverse/gateway_models.py": "5861451155c79ff8161106bee6ce0564eb96a5ad1baab08ecce9d26c6ee3c032",
-    "apps/api/src/folkverse/guide_api.py": "0e8d734718f9d12ba533fd57151f27bcdeda6a87de9de975291d381d1d5aa50e",
-    "apps/api/src/folkverse/guide_benchmark.py": "b0ff6a4ff3704cc5fd4bea3894001e2bb7816dbec0927f5f7b52bc96af213c7c",
-    "apps/api/src/folkverse/guide_doctor.py": "21d5b0a463263786485e321ac5efd5d10291c85a396c8df2afe8effb74d70a9d",
-    "apps/api/src/folkverse/guide_embeddings.py": "97e23f8daee082eaf7eae1d74555255335408e0dfa3912c39966fc2b71b32066",
-    "apps/api/src/folkverse/guide_evaluation.py": "56615116f2d1269295c8b50b5dae4630ecebe449cc23938172792f2df8f9d844",
-    "apps/api/src/folkverse/guide_explanations.py": "43c0a31344ba69880904e4ca788003e2a7256f8faf99143364cb6948c71f9f02",
-    "apps/api/src/folkverse/guide_harness.py": "bea752abed71196f055b884ad2491d031bccda57c45c8eb1d00b1e4f56ee998a",
-    "apps/api/src/folkverse/guide_hybrid.py": "fcf917d124678b864aa18a35c2716cee7733e2e226a6ac342018b678d2e22f97",
-    "apps/api/src/folkverse/guide_index.py": "953b11f0c3a07e32fe4df91e261b9ae85af47156f92daead0f292b87013f1dfd",
-    "apps/api/src/folkverse/guide_lookup.py": "fb071150a3ff63cc54c763564ab69de0d74766fafb889c93f7b5fe5f4ccdb69f",
-    "apps/api/src/folkverse/guide_personality.py": "cfade8e27f48288f24ab599f407cf1ad3dec51f877755d98e7ba9105b4f16153",
-    "apps/api/src/folkverse/guide_retrieval.py": "e66b0ead4b0468dd37e7ac965d851b58309a02fb71832caa4d63e000e82c269d",
-    "apps/api/src/folkverse/guide_review.py": "d1cce78ac90142b1e7cf4b61bbd4646bbf1ca29576cd8f14aa7189a4848c9630",
-    "apps/api/src/folkverse/guide_support.py": "05f28e934161950765889f540ae410e2f296ff7ac36a8e1d2efac9e60bfea051",
-    "apps/api/src/folkverse/liaoning_inventory.py": "684c73478e336d186a7d7caa601f62b1c5d0b6c15944a87c3291d9d06a225a01",
-    "apps/api/src/folkverse/liaoning_launch.py": "c5bf5cd44ad946b8043e863011f775e2d6c8f6881eec8a489bc43765c3366651",
-    "apps/api/src/folkverse/liaoning_ocr.py": "3826c1ed5867d565ee96fb28b026c86b49d9dd3dfefbc1dd0a87880112d1576c",
-    "apps/api/src/folkverse/liaoning_publication.py": "4b86b09ded97a28b20e77ccecaa6fd5bb60966a1759b9032a02852f6758f34fb",
-    "apps/api/src/folkverse/liaoning_queue.py": "b39c796d5e710ae16f7a5c048c8a834f821192e064ca46263ff62c42273e08ae",
-    "apps/api/src/folkverse/liaoning_review.py": "9eb8cf3184bbebd57be9cfdae5edc918c94ee3257ba1b913ba80ad5de580de9b",
-    "apps/api/src/folkverse/main.py": "24cde126d821b71d8e59467463d8b99363a5b064e25dd7f5a31f6253c95a8a20",
-    "apps/api/src/folkverse/met_import.py": "d4ec37abd9d650f491858a0fc7bb5da607dfd8c6db1bc9bf5a87cd4c2c3fea32",
-    "apps/api/src/folkverse/provider_gateway.py": "95537e109f29991eaa1f37c38e5cf6cabd5546f562259caa10ea74e41c0c488a",
-    "apps/api/src/folkverse/seed_content.py": "39ccd2ca3c9e5e93a2eafc29789ec678bff8e5b892ea7f35c89b0cc6343ccb8a",
-    "apps/api/src/folkverse/sessions.py": "ef4baf80a9b0663e2236c6c7dbb18fc72ec5edbeefbf62cb7a953f1c4d51bf95",
-    "apps/api/uv.lock": "bbdcc70ccfde63b400083fc4f88142af7c5aeeb34fedca7e31ebd86fee1c232e",
-    "apps/web/src/app/[...slug]/page.tsx": "859d55ba78333eab69423e4ad20e5fd18d94b84a07a4a28cb27fbd31a2b341a2",
-    "apps/web/src/app/api/v1/[...content]/route.ts": "4d57d856728904d45ea205797e2bd7c69212efd8a337cd87a0d22dceb23ca0d5",
-    "apps/web/src/app/api/v1/guide/evidence/[identifier]/route.ts": "ffa5ef9fba7c33f09cec50706162de8132395e43e5733ad4cdcad156fa6c1432",
-    "apps/web/src/app/api/v1/guide/route.ts": "f412520cd65dd56f6c904931ca08e493555569a81d6b452b5265b582a4ea8672",
-    "apps/web/src/app/api/v1/health/route.ts": "801bb496a3172d3e7d3f372e97aba33b779e1883c9d5196a80b48b9524468d1e",
-    "apps/web/src/app/api/v1/session/route.ts": "8cc141e5f710f2db2ff5f845b8c032c7aca906d33e930e6fc1b071f9c164978f",
-    "apps/web/src/app/favicon.ico": "cc8f9d770570766f6a6bc2264cbdee9cda18e3c82fce6f54280cb21a38a3044f",
-    "apps/web/src/app/fonts/DejaVuSans.ttf": "6038a160b491e121c1f12c7bccb4a9c8730296e3adc1086a059404ed84b7451c",
-    "apps/web/src/app/fonts/DejaVuSerif.ttf": "ae665174c5b7fdb9b457d112db098cbe651dff847bfcf8bcb711172856d0c6b1",
-    "apps/web/src/app/fonts/LICENSE-DejaVu.txt": "f88d5294af5a772f9114eb385009e3478d62b21f3e5bbc34d159d328047c8867",
-    "apps/web/src/app/globals.css": "a23ee3d2e5c0dc011f687351a2fef37bf88bfab30992af76e8218946396dd663",
-    "apps/web/src/app/icon.png": "a5853bf9481a561cc856006f4ba260c951cc4ef04c8e5cd9c2c1d30e219b9b68",
-    "apps/web/src/app/jinyao.css": "c41cfdf0088e99a3f4f8893aef3806233461f36751115d8259206f543b5ea007",
-    "apps/web/src/app/layout.tsx": "f1f7fb74be256318a3cf41fc1c138dc5f12ef191633472c46671dd3f1ea4e52f",
-    "apps/web/src/app/mobile-navigation.css": "103c1617ed1084b84a5b4475c5a39fe65e2814cb1335c143cd9f001a0a5f900c",
-    "apps/web/src/app/not-found.tsx": "d84093ebabcafee47271f08b22b6e858cb0a8746c575582df233c2c2e4f335eb",
-    "apps/web/src/app/page.tsx": "c921478f920e4509d7c17980f9c94515769ee10438a33aae6d48ab9f6d347bf0",
-    "apps/web/src/components/arrow-icon.tsx": "396c35425a379f18417970c307ba0830e531d0b2524692211f26572f2e5d0454",
-    "apps/web/src/components/catalog-explorer.tsx": "3a987c3701afc07f5cada40c9d1320b6ebe4a1a8d26b68de4679135cf0a39336",
-    "apps/web/src/components/exhibit-context.tsx": "ef576fc8b7956ca8bb54621594268cb22669d2d7edbbc247dd0f0158048b64d1",
-    "apps/web/src/components/featured-exhibit.tsx": "0395c318f82fece158f6423344b3ff8e691ee968931713c1fb4ecadf878fba83",
-    "apps/web/src/components/graphics-provider.tsx": "f4a8fe4bb1f43480d05820da0999616c760bf6737fa04c1cc30752b7083944ce",
-    "apps/web/src/components/guide-source-inspector.tsx": "56e99e6793d431b67d18443177d307d9623e2048f4cfcf97b9eed7ba5eb162d0",
-    "apps/web/src/components/interest-chart.tsx": "4cdf18a116ffa073a5c952047a18fa1663214cdb84f55aea078d58da3785411b",
-    "apps/web/src/components/jinyao-avatar.tsx": "c750c60c8072102457de3fdb16ab52c0089688b9984ad17436def2f30a1e8b44",
-    "apps/web/src/components/jinyao-chat.tsx": "760e6b1daf09acfbf1d544e9f0e9c28daf176d079661e643f34d467bad011e6b",
-    "apps/web/src/components/jinyao-experience.tsx": "9419511bedc239253d7117d28e2bf9dae11ae415c08cd55df7460006eab538a4",
-    "apps/web/src/components/liaoning-atlas.tsx": "6a3cfd6cc6d33ac77b2bae3558ae2510c3fcbd77ab1375036bd45a47c30f82cd",
-    "apps/web/src/components/locale-provider.tsx": "2331bad566bbc2d97457eebd374a4ff71216b9cc996923c127636cce6b97851e",
-    "apps/web/src/components/mobile-navigation.tsx": "01c73ec8d429928bcdd0fc8c09f94c30b96f38bc4c4cc0fca97ed9cb5208fda8",
-    "apps/web/src/components/museum-experiences.tsx": "005e758ab51aed3e85e7a254c2486d8a6531295b6771733eebd30ca639efa08c",
-    "apps/web/src/components/museum-select.tsx": "d915deccec5f8bb4780799f71fcd65923cadb46eb481948da41a74ae67134a4f",
-    "apps/web/src/components/museum-shell.tsx": "d343115dd0c623600b627681c1d1689d563b33ec05417147e181f0366d0542ef",
-    "apps/web/src/components/museum-ui.tsx": "d723ff50801a5d6cf243e9dbe7b3f12db838b26a2c0f0d11db34935d5616ea93",
-    "apps/web/src/components/reading-tools.tsx": "ec2c5e4faa780481ea14dd086bac192cd5e64ed94fab13605f0439feb9694bb9",
-    "apps/web/src/components/reviewed-discovery.tsx": "72e5a0e7d2975f665810ed3dc1e9d42d6d2f755f0092ffab4ddca9eca3d1d51b",
-    "apps/web/src/components/service-status.tsx": "03e8ee52eb90ecf526e6016c5328ce0f431d1e19e1dd6d48d06898dbaa20e7f6",
-    "apps/web/src/components/story-scene.tsx": "c3e266f8d61a5652e4caf70436f7841093f16e3a2b869f8e71b537fcaf46c0a1",
-    "apps/web/src/components/visit-provider.tsx": "4890a5ff5099b9a97533185a4f3f72ad23742a0aa8ba6d249a90ed534ca1d88b",
-    "apps/web/src/lib/api-proxy.ts": "94c1dcbb9ba8d211153fe37430e6cba38de73b3d40dc9ab4bc18a0ff891eb67b",
-    "apps/web/src/lib/app-mode.ts": "f9eecfd6f0c353317dd8ee4f2a775f6f555a976da72672c8cdb301e668da829c",
-    "apps/web/src/lib/dialog.ts": "664a91f1a611fa812f04d0740113df8186929633331ba60998881105b4e8a8c8",
-    "apps/web/src/lib/guide-conversation.ts": "c750bd1e5764b6a236f60c4b94153568ca064886f31b9066a38313d5dcd1ea3c",
-    "apps/web/src/lib/guide-hybrid-checks.ts": "e72421aa3b28354b1966b2d236174893eae5f802dc37bb28530c2f987e33cd87",
-    "apps/web/src/lib/guide-stream.ts": "e6d28aa027eee5a6a261752a856661cce0bd25e11dcb663c6073023a46b8903d",
-    "apps/web/src/lib/i18n.ts": "356933d71cd89780a925e0bba2b59277f7cb83da8a57e79ad580597541a7f71b",
-    "apps/web/src/lib/maps/liaoning-city-boundaries.json": "adb97406894fa251602bf692bf2857f07fdfec833d258798eafabe38d3212592",
-    "apps/web/src/lib/maps/liaoning-contours.json": "ca324ee86f7d45d8109897606539e928f22234db0299e5d2a2e11f8ed7680ea9",
-    "apps/web/src/lib/maps/liaoning-geography.json": "46bd6f30842ba88746978c560ae3dbfbcb25f415fd316ce0a4546d278d3e4a93",
-    "apps/web/src/lib/museum-art.ts": "d2adf0b47dbde7e65f91347f000226ca3eb258df8b97bba842900074ad5db5f1",
-    "apps/web/src/lib/page-metadata.ts": "b2761d5faa3e0390bcd615d06aaf6b776262b06ad8032e2305d3de668193041d",
-    "apps/web/src/lib/routes.ts": "c846531ebf40a3b9dd12ae67bc4831621a82662e99ae87f3b5577693f9b187d5",
-    "apps/web/src/lib/use-guide-keyboard.ts": "ac44f1361f37f3850fd057720161bc8eac13eb1d2caf568f3397f88091a00c6e",
-    "package.json": "bd8fba5d9ac743d16fe13d1289fd4fbc5320a7d457d5cb290cdb4db404210e27",
-    "packages/contracts/openapi.json": "742018c025760ce9811c46c47a5e94ee30248fbfb7150fd5828b28d58e684b90",
-    "packages/contracts/src/jinyao-policy.json": "f4a633ce20b9e859e5d1c7e3ebca23ff4cf86ea3edd03717b2fbc75350eb283c",
-    "packages/contracts/src/schema.d.ts": "d5e0de1519dbed63a0999e0d4ab76df739777d1b01463fb303fd73bbe1a35c0f",
-    "pnpm-lock.yaml": "dacf86711ea0c97bb45ec6a79e22432e0a07759a9b4d96dd9bc22178b58c6cff"
-  },
+  "runtime_file_hashes": [
+    {
+      "path": "apps/api/src/folkverse/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/api/src/folkverse/config.py",
+      "sha256": "e5a08e1b2e54a3b28876b367c9905402e0c0c86fa03a27d4907488e5376015b2"
+    },
+    {
+      "path": "apps/api/src/folkverse/content.py",
+      "sha256": "848ed4678c2999105bb1cd628a56b80cbd680749165c8d4205156a5ad1b5dc2d"
+    },
+    {
+      "path": "apps/api/src/folkverse/content_api.py",
+      "sha256": "0270698b36914de2ac14ffffa484352bd5d0b8a9df859182cf0852866d105eb4"
+    },
+    {
+      "path": "apps/api/src/folkverse/content_models.py",
+      "sha256": "9c681ead21382cded815fac9d70b9aeb26eef394e6411c93a04c28a4b72a7415"
+    },
+    {
+      "path": "apps/api/src/folkverse/content_snapshot.py",
+      "sha256": "6e67685bdac3d727a9ce036ab76797272e73645b375d4eeb7dc4a25b63a17a50"
+    },
+    {
+      "path": "apps/api/src/folkverse/contracts.py",
+      "sha256": "43f88d01f5fe70d796893384f53b79399311e45694c29118394d555e21a5cd41"
+    },
+    {
+      "path": "apps/api/src/folkverse/curation.py",
+      "sha256": "2ecbde433b3c82396e731629bcdd19353b6fde6dac13c45d4de82ee3d0c35ce4"
+    },
+    {
+      "path": "apps/api/src/folkverse/database.py",
+      "sha256": "1c9a91e5107e0c0cf076df7a08b3c59ee6c4798821f045ac532bc6350edfe0c9"
+    },
+    {
+      "path": "apps/api/src/folkverse/embedding_worker.py",
+      "sha256": "556dbd621e029b6f73c78cdeb19866d7365fcc4c72a56edab3bc693d4cf4cbfc"
+    },
+    {
+      "path": "apps/api/src/folkverse/errors.py",
+      "sha256": "152abd70f3e566b63da5aef4a29c30758979c250ccece12b59f39695988a5cfd"
+    },
+    {
+      "path": "apps/api/src/folkverse/gateway_limits.py",
+      "sha256": "5c6c39e594039141894ffb5d9122ca3aa6cf0ef609a00f6c90803de3d1a41b3b"
+    },
+    {
+      "path": "apps/api/src/folkverse/gateway_models.py",
+      "sha256": "5861451155c79ff8161106bee6ce0564eb96a5ad1baab08ecce9d26c6ee3c032"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_api.py",
+      "sha256": "0e8d734718f9d12ba533fd57151f27bcdeda6a87de9de975291d381d1d5aa50e"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_benchmark.py",
+      "sha256": "b0ff6a4ff3704cc5fd4bea3894001e2bb7816dbec0927f5f7b52bc96af213c7c"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_doctor.py",
+      "sha256": "21d5b0a463263786485e321ac5efd5d10291c85a396c8df2afe8effb74d70a9d"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_embeddings.py",
+      "sha256": "97e23f8daee082eaf7eae1d74555255335408e0dfa3912c39966fc2b71b32066"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_evaluation.py",
+      "sha256": "56615116f2d1269295c8b50b5dae4630ecebe449cc23938172792f2df8f9d844"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_explanations.py",
+      "sha256": "43c0a31344ba69880904e4ca788003e2a7256f8faf99143364cb6948c71f9f02"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_harness.py",
+      "sha256": "bea752abed71196f055b884ad2491d031bccda57c45c8eb1d00b1e4f56ee998a"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_hybrid.py",
+      "sha256": "fcf917d124678b864aa18a35c2716cee7733e2e226a6ac342018b678d2e22f97"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_index.py",
+      "sha256": "953b11f0c3a07e32fe4df91e261b9ae85af47156f92daead0f292b87013f1dfd"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_lookup.py",
+      "sha256": "fb071150a3ff63cc54c763564ab69de0d74766fafb889c93f7b5fe5f4ccdb69f"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_personality.py",
+      "sha256": "cfade8e27f48288f24ab599f407cf1ad3dec51f877755d98e7ba9105b4f16153"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_retrieval.py",
+      "sha256": "e66b0ead4b0468dd37e7ac965d851b58309a02fb71832caa4d63e000e82c269d"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_review.py",
+      "sha256": "d1cce78ac90142b1e7cf4b61bbd4646bbf1ca29576cd8f14aa7189a4848c9630"
+    },
+    {
+      "path": "apps/api/src/folkverse/guide_support.py",
+      "sha256": "05f28e934161950765889f540ae410e2f296ff7ac36a8e1d2efac9e60bfea051"
+    },
+    {
+      "path": "apps/api/src/folkverse/liaoning_inventory.py",
+      "sha256": "684c73478e336d186a7d7caa601f62b1c5d0b6c15944a87c3291d9d06a225a01"
+    },
+    {
+      "path": "apps/api/src/folkverse/liaoning_launch.py",
+      "sha256": "c5bf5cd44ad946b8043e863011f775e2d6c8f6881eec8a489bc43765c3366651"
+    },
+    {
+      "path": "apps/api/src/folkverse/liaoning_ocr.py",
+      "sha256": "3826c1ed5867d565ee96fb28b026c86b49d9dd3dfefbc1dd0a87880112d1576c"
+    },
+    {
+      "path": "apps/api/src/folkverse/liaoning_publication.py",
+      "sha256": "4b86b09ded97a28b20e77ccecaa6fd5bb60966a1759b9032a02852f6758f34fb"
+    },
+    {
+      "path": "apps/api/src/folkverse/liaoning_queue.py",
+      "sha256": "b39c796d5e710ae16f7a5c048c8a834f821192e064ca46263ff62c42273e08ae"
+    },
+    {
+      "path": "apps/api/src/folkverse/liaoning_review.py",
+      "sha256": "9eb8cf3184bbebd57be9cfdae5edc918c94ee3257ba1b913ba80ad5de580de9b"
+    },
+    {
+      "path": "apps/api/src/folkverse/main.py",
+      "sha256": "24cde126d821b71d8e59467463d8b99363a5b064e25dd7f5a31f6253c95a8a20"
+    },
+    {
+      "path": "apps/api/src/folkverse/met_import.py",
+      "sha256": "d4ec37abd9d650f491858a0fc7bb5da607dfd8c6db1bc9bf5a87cd4c2c3fea32"
+    },
+    {
+      "path": "apps/api/src/folkverse/provider_gateway.py",
+      "sha256": "95537e109f29991eaa1f37c38e5cf6cabd5546f562259caa10ea74e41c0c488a"
+    },
+    {
+      "path": "apps/api/src/folkverse/seed_content.py",
+      "sha256": "39ccd2ca3c9e5e93a2eafc29789ec678bff8e5b892ea7f35c89b0cc6343ccb8a"
+    },
+    {
+      "path": "apps/api/src/folkverse/sessions.py",
+      "sha256": "ef4baf80a9b0663e2236c6c7dbb18fc72ec5edbeefbf62cb7a953f1c4d51bf95"
+    },
+    {
+      "path": "apps/api/uv.lock",
+      "sha256": "bbdcc70ccfde63b400083fc4f88142af7c5aeeb34fedca7e31ebd86fee1c232e"
+    },
+    {
+      "path": "apps/web/src/app/[...slug]/page.tsx",
+      "sha256": "859d55ba78333eab69423e4ad20e5fd18d94b84a07a4a28cb27fbd31a2b341a2"
+    },
+    {
+      "path": "apps/web/src/app/api/v1/[...content]/route.ts",
+      "sha256": "4d57d856728904d45ea205797e2bd7c69212efd8a337cd87a0d22dceb23ca0d5"
+    },
+    {
+      "path": "apps/web/src/app/api/v1/guide/evidence/[identifier]/route.ts",
+      "sha256": "ffa5ef9fba7c33f09cec50706162de8132395e43e5733ad4cdcad156fa6c1432"
+    },
+    {
+      "path": "apps/web/src/app/api/v1/guide/route.ts",
+      "sha256": "f412520cd65dd56f6c904931ca08e493555569a81d6b452b5265b582a4ea8672"
+    },
+    {
+      "path": "apps/web/src/app/api/v1/health/route.ts",
+      "sha256": "801bb496a3172d3e7d3f372e97aba33b779e1883c9d5196a80b48b9524468d1e"
+    },
+    {
+      "path": "apps/web/src/app/api/v1/session/route.ts",
+      "sha256": "8cc141e5f710f2db2ff5f845b8c032c7aca906d33e930e6fc1b071f9c164978f"
+    },
+    {
+      "path": "apps/web/src/app/favicon.ico",
+      "sha256": "cc8f9d770570766f6a6bc2264cbdee9cda18e3c82fce6f54280cb21a38a3044f"
+    },
+    {
+      "path": "apps/web/src/app/fonts/DejaVuSans.ttf",
+      "sha256": "6038a160b491e121c1f12c7bccb4a9c8730296e3adc1086a059404ed84b7451c"
+    },
+    {
+      "path": "apps/web/src/app/fonts/DejaVuSerif.ttf",
+      "sha256": "ae665174c5b7fdb9b457d112db098cbe651dff847bfcf8bcb711172856d0c6b1"
+    },
+    {
+      "path": "apps/web/src/app/fonts/LICENSE-DejaVu.txt",
+      "sha256": "f88d5294af5a772f9114eb385009e3478d62b21f3e5bbc34d159d328047c8867"
+    },
+    {
+      "path": "apps/web/src/app/globals.css",
+      "sha256": "a23ee3d2e5c0dc011f687351a2fef37bf88bfab30992af76e8218946396dd663"
+    },
+    {
+      "path": "apps/web/src/app/icon.png",
+      "sha256": "a5853bf9481a561cc856006f4ba260c951cc4ef04c8e5cd9c2c1d30e219b9b68"
+    },
+    {
+      "path": "apps/web/src/app/jinyao.css",
+      "sha256": "c41cfdf0088e99a3f4f8893aef3806233461f36751115d8259206f543b5ea007"
+    },
+    {
+      "path": "apps/web/src/app/layout.tsx",
+      "sha256": "f1f7fb74be256318a3cf41fc1c138dc5f12ef191633472c46671dd3f1ea4e52f"
+    },
+    {
+      "path": "apps/web/src/app/mobile-navigation.css",
+      "sha256": "103c1617ed1084b84a5b4475c5a39fe65e2814cb1335c143cd9f001a0a5f900c"
+    },
+    {
+      "path": "apps/web/src/app/not-found.tsx",
+      "sha256": "d84093ebabcafee47271f08b22b6e858cb0a8746c575582df233c2c2e4f335eb"
+    },
+    {
+      "path": "apps/web/src/app/page.tsx",
+      "sha256": "c921478f920e4509d7c17980f9c94515769ee10438a33aae6d48ab9f6d347bf0"
+    },
+    {
+      "path": "apps/web/src/components/arrow-icon.tsx",
+      "sha256": "396c35425a379f18417970c307ba0830e531d0b2524692211f26572f2e5d0454"
+    },
+    {
+      "path": "apps/web/src/components/catalog-explorer.tsx",
+      "sha256": "3a987c3701afc07f5cada40c9d1320b6ebe4a1a8d26b68de4679135cf0a39336"
+    },
+    {
+      "path": "apps/web/src/components/exhibit-context.tsx",
+      "sha256": "ef576fc8b7956ca8bb54621594268cb22669d2d7edbbc247dd0f0158048b64d1"
+    },
+    {
+      "path": "apps/web/src/components/featured-exhibit.tsx",
+      "sha256": "0395c318f82fece158f6423344b3ff8e691ee968931713c1fb4ecadf878fba83"
+    },
+    {
+      "path": "apps/web/src/components/graphics-provider.tsx",
+      "sha256": "f4a8fe4bb1f43480d05820da0999616c760bf6737fa04c1cc30752b7083944ce"
+    },
+    {
+      "path": "apps/web/src/components/guide-source-inspector.tsx",
+      "sha256": "56e99e6793d431b67d18443177d307d9623e2048f4cfcf97b9eed7ba5eb162d0"
+    },
+    {
+      "path": "apps/web/src/components/interest-chart.tsx",
+      "sha256": "4cdf18a116ffa073a5c952047a18fa1663214cdb84f55aea078d58da3785411b"
+    },
+    {
+      "path": "apps/web/src/components/jinyao-avatar.tsx",
+      "sha256": "c750c60c8072102457de3fdb16ab52c0089688b9984ad17436def2f30a1e8b44"
+    },
+    {
+      "path": "apps/web/src/components/jinyao-chat.tsx",
+      "sha256": "760e6b1daf09acfbf1d544e9f0e9c28daf176d079661e643f34d467bad011e6b"
+    },
+    {
+      "path": "apps/web/src/components/jinyao-experience.tsx",
+      "sha256": "9419511bedc239253d7117d28e2bf9dae11ae415c08cd55df7460006eab538a4"
+    },
+    {
+      "path": "apps/web/src/components/liaoning-atlas.tsx",
+      "sha256": "6a3cfd6cc6d33ac77b2bae3558ae2510c3fcbd77ab1375036bd45a47c30f82cd"
+    },
+    {
+      "path": "apps/web/src/components/locale-provider.tsx",
+      "sha256": "2331bad566bbc2d97457eebd374a4ff71216b9cc996923c127636cce6b97851e"
+    },
+    {
+      "path": "apps/web/src/components/mobile-navigation.tsx",
+      "sha256": "01c73ec8d429928bcdd0fc8c09f94c30b96f38bc4c4cc0fca97ed9cb5208fda8"
+    },
+    {
+      "path": "apps/web/src/components/museum-experiences.tsx",
+      "sha256": "005e758ab51aed3e85e7a254c2486d8a6531295b6771733eebd30ca639efa08c"
+    },
+    {
+      "path": "apps/web/src/components/museum-select.tsx",
+      "sha256": "d915deccec5f8bb4780799f71fcd65923cadb46eb481948da41a74ae67134a4f"
+    },
+    {
+      "path": "apps/web/src/components/museum-shell.tsx",
+      "sha256": "d343115dd0c623600b627681c1d1689d563b33ec05417147e181f0366d0542ef"
+    },
+    {
+      "path": "apps/web/src/components/museum-ui.tsx",
+      "sha256": "d723ff50801a5d6cf243e9dbe7b3f12db838b26a2c0f0d11db34935d5616ea93"
+    },
+    {
+      "path": "apps/web/src/components/reading-tools.tsx",
+      "sha256": "ec2c5e4faa780481ea14dd086bac192cd5e64ed94fab13605f0439feb9694bb9"
+    },
+    {
+      "path": "apps/web/src/components/reviewed-discovery.tsx",
+      "sha256": "72e5a0e7d2975f665810ed3dc1e9d42d6d2f755f0092ffab4ddca9eca3d1d51b"
+    },
+    {
+      "path": "apps/web/src/components/service-status.tsx",
+      "sha256": "03e8ee52eb90ecf526e6016c5328ce0f431d1e19e1dd6d48d06898dbaa20e7f6"
+    },
+    {
+      "path": "apps/web/src/components/story-scene.tsx",
+      "sha256": "c3e266f8d61a5652e4caf70436f7841093f16e3a2b869f8e71b537fcaf46c0a1"
+    },
+    {
+      "path": "apps/web/src/components/visit-provider.tsx",
+      "sha256": "4890a5ff5099b9a97533185a4f3f72ad23742a0aa8ba6d249a90ed534ca1d88b"
+    },
+    {
+      "path": "apps/web/src/lib/api-proxy.ts",
+      "sha256": "94c1dcbb9ba8d211153fe37430e6cba38de73b3d40dc9ab4bc18a0ff891eb67b"
+    },
+    {
+      "path": "apps/web/src/lib/app-mode.ts",
+      "sha256": "f9eecfd6f0c353317dd8ee4f2a775f6f555a976da72672c8cdb301e668da829c"
+    },
+    {
+      "path": "apps/web/src/lib/dialog.ts",
+      "sha256": "664a91f1a611fa812f04d0740113df8186929633331ba60998881105b4e8a8c8"
+    },
+    {
+      "path": "apps/web/src/lib/guide-conversation.ts",
+      "sha256": "c750bd1e5764b6a236f60c4b94153568ca064886f31b9066a38313d5dcd1ea3c"
+    },
+    {
+      "path": "apps/web/src/lib/guide-hybrid-checks.ts",
+      "sha256": "e72421aa3b28354b1966b2d236174893eae5f802dc37bb28530c2f987e33cd87"
+    },
+    {
+      "path": "apps/web/src/lib/guide-stream.ts",
+      "sha256": "e6d28aa027eee5a6a261752a856661cce0bd25e11dcb663c6073023a46b8903d"
+    },
+    {
+      "path": "apps/web/src/lib/i18n.ts",
+      "sha256": "356933d71cd89780a925e0bba2b59277f7cb83da8a57e79ad580597541a7f71b"
+    },
+    {
+      "path": "apps/web/src/lib/maps/liaoning-city-boundaries.json",
+      "sha256": "adb97406894fa251602bf692bf2857f07fdfec833d258798eafabe38d3212592"
+    },
+    {
+      "path": "apps/web/src/lib/maps/liaoning-contours.json",
+      "sha256": "ca324ee86f7d45d8109897606539e928f22234db0299e5d2a2e11f8ed7680ea9"
+    },
+    {
+      "path": "apps/web/src/lib/maps/liaoning-geography.json",
+      "sha256": "46bd6f30842ba88746978c560ae3dbfbcb25f415fd316ce0a4546d278d3e4a93"
+    },
+    {
+      "path": "apps/web/src/lib/museum-art.ts",
+      "sha256": "d2adf0b47dbde7e65f91347f000226ca3eb258df8b97bba842900074ad5db5f1"
+    },
+    {
+      "path": "apps/web/src/lib/page-metadata.ts",
+      "sha256": "b2761d5faa3e0390bcd615d06aaf6b776262b06ad8032e2305d3de668193041d"
+    },
+    {
+      "path": "apps/web/src/lib/routes.ts",
+      "sha256": "c846531ebf40a3b9dd12ae67bc4831621a82662e99ae87f3b5577693f9b187d5"
+    },
+    {
+      "path": "apps/web/src/lib/use-guide-keyboard.ts",
+      "sha256": "ac44f1361f37f3850fd057720161bc8eac13eb1d2caf568f3397f88091a00c6e"
+    },
+    {
+      "path": "package.json",
+      "sha256": "bd8fba5d9ac743d16fe13d1289fd4fbc5320a7d457d5cb290cdb4db404210e27"
+    },
+    {
+      "path": "packages/contracts/openapi.json",
+      "sha256": "742018c025760ce9811c46c47a5e94ee30248fbfb7150fd5828b28d58e684b90"
+    },
+    {
+      "path": "packages/contracts/src/jinyao-policy.json",
+      "sha256": "f4a633ce20b9e859e5d1c7e3ebca23ff4cf86ea3edd03717b2fbc75350eb283c"
+    },
+    {
+      "path": "packages/contracts/src/schema.d.ts",
+      "sha256": "d5e0de1519dbed63a0999e0d4ab76df739777d1b01463fb303fd73bbe1a35c0f"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "dacf86711ea0c97bb45ec6a79e22432e0a07759a9b4d96dd9bc22178b58c6cff"
+    }
+  ],
   "git_base_commit": "7fa2e7e52e04137485c011130eeb9731c34b14ad",
   "candidate_tree_sha256": "a5159636710037d3d42e57d18f1bf148b3a77c4b454008113ed4ea599505023b",
   "files_copied": 967,
