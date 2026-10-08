@@ -6,8 +6,11 @@ Restores the existing reviewed snapshot; no new approval, provider call or servi
 
 import argparse
 import os
+import signal
 import subprocess
 import sys
+from collections.abc import Iterator
+from contextlib import contextmanager
 from uuid import uuid4
 
 import uvicorn
@@ -19,6 +22,21 @@ from pydantic import SecretStr
 from sqlalchemy import text
 from sqlalchemy.engine import make_url
 from sqlalchemy.orm import Session
+
+
+class AcceptanceServer(uvicorn.Server):
+    @contextmanager
+    def capture_signals(self) -> Iterator[None]:
+        # Uvicorn normally re-raises SIGTERM after graceful shutdown, which would
+        # terminate Python before the surrounding database-cleanup finally runs.
+        handlers = {
+            sig: signal.signal(sig, self.handle_exit) for sig in (signal.SIGINT, signal.SIGTERM)
+        }
+        try:
+            yield
+        finally:
+            for sig, handler in handlers.items():
+                signal.signal(sig, handler)
 
 
 def main() -> None:
@@ -81,7 +99,7 @@ def main() -> None:
             "Disposable reviewed-snapshot API ready; provider generation disabled",
             flush=True,
         )
-        uvicorn.run(app, host="127.0.0.1", port=args.port)
+        AcceptanceServer(uvicorn.Config(app, host="127.0.0.1", port=args.port)).run()
     finally:
         if engine is not None:
             engine.dispose()
