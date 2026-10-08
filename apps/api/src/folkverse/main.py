@@ -34,10 +34,12 @@ from folkverse.guide_embeddings import EmbeddingUnavailable, PersistentBGEEncode
 from folkverse.guide_harness import GuideHarness
 from folkverse.guide_hybrid import HybridEvidenceRepository
 from folkverse.guide_lookup import OfficialLookup
+from folkverse.journey_api import JourneyBodyLimitMiddleware, build_journey_explainer
+from folkverse.journey_api import router as journey_router
 from folkverse.provider_gateway import GuideGateway
 from folkverse.sessions import COOKIE_NAME, SessionService
 
-REVISION = "0003_gateway"
+REVISION = "0004_journeys"
 
 
 def error_response(
@@ -99,10 +101,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app = FastAPI(title="FolkVerse API", version="0.1.0", lifespan=lifespan)
     app.include_router(content_router)
     app.include_router(guide_router)
+    app.include_router(journey_router)
     app.state.engine = engine
     app.state.settings = settings
+    app.state.sessions = sessions
     app.state.guide_ledger = UsageLedger(engine, settings)
     app.state.guide_gateway = GuideGateway(settings, app.state.guide_ledger)
+    # Journeys are deterministic by default; the explanation upgrade is built lazily on the
+    # first route request and only when the configured provider could actually answer.
+    app.state.journey_explainer = None
+    app.state.journey_explainer_factory = build_journey_explainer
     app.state.guide_request_limits = GuideRequestLimits(
         settings.session_secret.get_secret_value(),
         settings.model_rate_limit_per_minute,
@@ -135,6 +143,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
 
     app.add_middleware(GuideBodyLimitMiddleware)
+    app.add_middleware(JourneyBodyLimitMiddleware)
 
     @app.middleware("http")
     async def boundary(request: Request, call_next: RequestResponseEndpoint) -> Response:

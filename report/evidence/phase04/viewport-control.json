@@ -1,0 +1,2002 @@
+{
+  "version": 1,
+  "saved_at": 1791359902549.0,
+  "run": {
+    "id": "de2aaab47353e",
+    "session_id": "mpef",
+    "tab_id": 1702485935,
+    "name": "Phase04 viewport isolation and controlled UI",
+    "url": "http://127.0.0.1:3014/journey?viewport-control=1",
+    "started_at": 1791359515838.0,
+    "stopped_at": 1791359885720.0,
+    "state": "stopped",
+    "stop_reason": "requested",
+    "requests": 20,
+    "operations": 1,
+    "errors": 1,
+    "dropped_requests": 0,
+    "dropped_operations": 0,
+    "dropped_console": 0,
+    "coverage": [
+      "from_start",
+      "task_tab",
+      "text_bodies_bounded",
+      "time_window_not_causality",
+      "page_main_frame",
+      "worker_targets_not_captured",
+      "manual_main_frame_only",
+      "initial_load_not_recorded"
+    ],
+    "next_since": 169,
+    "active_rules": 0,
+    "saved_at": 1791359885728.0,
+    "storage": {
+      "bytes": 53532,
+      "dropped": 0,
+      "pins": 0,
+      "requests": 20
+    },
+    "environment": {
+      "extension_version": "0.3.2",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+    }
+  },
+  "requests": [
+    {
+      "id": "de2aaab47353e:n1",
+      "run_id": "de2aaab47353e",
+      "sequence": 149,
+      "started_at": 1791359523012.0,
+      "finished_at": 1791359523020.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 9.29,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:03 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_9045cc174d464a98b8bd14ecadb5c052"
+      },
+      "timing": {
+        "connectEnd": 0.795,
+        "connectStart": 0.633,
+        "dnsEnd": 0.633,
+        "dnsStart": 0.564,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 7.406,
+        "receiveHeadersStart": 7.322,
+        "requestTime": 17177.775556,
+        "sendEnd": 0.988,
+        "sendStart": 0.885,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n2",
+      "run_id": "de2aaab47353e",
+      "sequence": 150,
+      "started_at": 1791359523021.0,
+      "finished_at": 1791359523038.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 17.29,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:03 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_40eeeaf63dcd4a799a968f02a7cf160d"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 15.959,
+        "receiveHeadersStart": 15.907,
+        "requestTime": 17177.785256,
+        "sendEnd": 0.189,
+        "sendStart": 0.131,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n3",
+      "run_id": "de2aaab47353e",
+      "sequence": 151,
+      "started_at": 1791359538011.0,
+      "finished_at": 1791359538020.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 9.7,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:18 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_f750c811c60740efb2365f3f9ccbf982"
+      },
+      "timing": {
+        "connectEnd": 0.954,
+        "connectStart": 0.807,
+        "dnsEnd": 0.807,
+        "dnsStart": 0.66,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 7.369,
+        "receiveHeadersStart": 7.299,
+        "requestTime": 17192.775604,
+        "sendEnd": 1.138,
+        "sendStart": 1.032,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n4",
+      "run_id": "de2aaab47353e",
+      "sequence": 152,
+      "started_at": 1791359538021.0,
+      "finished_at": 1791359538040.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 18.3,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:18 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_11f1599febe94599839d09902f762052"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 16.638,
+        "receiveHeadersStart": 16.595,
+        "requestTime": 17192.785803,
+        "sendEnd": 0.255,
+        "sendStart": 0.185,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n5",
+      "run_id": "de2aaab47353e",
+      "sequence": 153,
+      "started_at": 1791359553011.0,
+      "finished_at": 1791359553021.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 10.42,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:33 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_7c7a024629dc4a699ed9bc222f92dbcb"
+      },
+      "timing": {
+        "connectEnd": 0.863,
+        "connectStart": 0.678,
+        "dnsEnd": 0.678,
+        "dnsStart": 0.561,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.053,
+        "receiveHeadersStart": 7.976,
+        "requestTime": 17207.77569,
+        "sendEnd": 1.163,
+        "sendStart": 1.013,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n6",
+      "run_id": "de2aaab47353e",
+      "sequence": 154,
+      "started_at": 1791359553022.0,
+      "finished_at": 1791359553041.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 18.28,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:33 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_7385accce6024759b513895bb23599d6"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 16.728,
+        "receiveHeadersStart": 16.688,
+        "requestTime": 17207.786604,
+        "sendEnd": 0.251,
+        "sendStart": 0.182,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n7",
+      "run_id": "de2aaab47353e",
+      "sequence": 155,
+      "started_at": 1791359568011.0,
+      "finished_at": 1791359568021.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 10.24,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:48 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_8fc4fd9fd44c4744ae54ded41b10c9bb"
+      },
+      "timing": {
+        "connectEnd": 0.888,
+        "connectStart": 0.713,
+        "dnsEnd": 0.713,
+        "dnsStart": 0.577,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 7.7,
+        "receiveHeadersStart": 7.62,
+        "requestTime": 17222.775972,
+        "sendEnd": 1.189,
+        "sendStart": 0.978,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n8",
+      "run_id": "de2aaab47353e",
+      "sequence": 156,
+      "started_at": 1791359568021.0,
+      "finished_at": 1791359568040.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 17.59,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:52:48 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_73d3604ffd0d4a758f1980197d1437c7"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 16.083,
+        "receiveHeadersStart": 16.042,
+        "requestTime": 17222.786444,
+        "sendEnd": 0.227,
+        "sendStart": 0.169,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n9",
+      "run_id": "de2aaab47353e",
+      "sequence": 157,
+      "started_at": 1791359583012.0,
+      "finished_at": 1791359583022.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 10.55,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:03 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_1851773fc9084fbca866768b1872f566"
+      },
+      "timing": {
+        "connectEnd": 0.858,
+        "connectStart": 0.736,
+        "dnsEnd": 0.736,
+        "dnsStart": 0.662,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 7.958,
+        "receiveHeadersStart": 7.891,
+        "requestTime": 17237.776194,
+        "sendEnd": 1.004,
+        "sendStart": 0.928,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n10",
+      "run_id": "de2aaab47353e",
+      "sequence": 158,
+      "started_at": 1791359583022.0,
+      "finished_at": 1791359583040.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 17.41,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:03 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_7226a27b3a8f4e269a9b84e4b556cf68"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 15.9,
+        "receiveHeadersStart": 15.862,
+        "requestTime": 17237.787009,
+        "sendEnd": 0.229,
+        "sendStart": 0.177,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n11",
+      "run_id": "de2aaab47353e",
+      "sequence": 159,
+      "started_at": 1791359598011.0,
+      "finished_at": 1791359598021.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 10.36,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:18 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_119ad47e15284e5fa0a3665ea3e8accd"
+      },
+      "timing": {
+        "connectEnd": 0.804,
+        "connectStart": 0.622,
+        "dnsEnd": 0.622,
+        "dnsStart": 0.514,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.291,
+        "receiveHeadersStart": 8.218,
+        "requestTime": 17252.775336,
+        "sendEnd": 1.042,
+        "sendStart": 0.93,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n12",
+      "run_id": "de2aaab47353e",
+      "sequence": 160,
+      "started_at": 1791359598021.0,
+      "finished_at": 1791359598040.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 17.94,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:18 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_712a8c7ae2554c43afd74bad4cd8a8e4"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 16.311,
+        "receiveHeadersStart": 16.269,
+        "requestTime": 17252.786347,
+        "sendEnd": 0.302,
+        "sendStart": 0.227,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n13",
+      "run_id": "de2aaab47353e",
+      "sequence": 161,
+      "started_at": 1791359613011.0,
+      "finished_at": 1791359613021.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 10.33,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:33 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_71bd1ed121c04b76b4059d566b51619b"
+      },
+      "timing": {
+        "connectEnd": 0.808,
+        "connectStart": 0.636,
+        "dnsEnd": 0.636,
+        "dnsStart": 0.517,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.288,
+        "receiveHeadersStart": 8.225,
+        "requestTime": 17267.775425,
+        "sendEnd": 1.038,
+        "sendStart": 0.927,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n14",
+      "run_id": "de2aaab47353e",
+      "sequence": 162,
+      "started_at": 1791359613021.0,
+      "finished_at": 1791359613040.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 17.51,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:33 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_c2f33c5a64014895bd2c93b8dfdb8cc7"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 16.06,
+        "receiveHeadersStart": 16.024,
+        "requestTime": 17267.786457,
+        "sendEnd": 0.241,
+        "sendStart": 0.18,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n15",
+      "run_id": "de2aaab47353e",
+      "sequence": 163,
+      "started_at": 1791359628010.0,
+      "finished_at": 1791359628021.0,
+      "method": "POST",
+      "url": "http://127.0.0.1:3014/api/v1/session",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 10.4,
+      "transfer_bytes": 778.0,
+      "decoded_bytes": 122.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "origin": "http://127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:48 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "set-cookie": "[redacted]",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_c00e5687f1bc4eeebdbf32e23b2b0b44"
+      },
+      "timing": {
+        "connectEnd": 0.872,
+        "connectStart": 0.702,
+        "dnsEnd": 0.702,
+        "dnsStart": 0.587,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 8.514,
+        "receiveHeadersStart": 8.444,
+        "requestTime": 17282.775231,
+        "sendEnd": 1.089,
+        "sendStart": 0.991,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"session_id\":\"[redacted]\",\"expires_at\":\"2026-10-08T06:58:13.951835Z\",\"behavioral_opt_in\":false}",
+        "chars": 96,
+        "redacted": true,
+        "replay_safe": false
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n16",
+      "run_id": "de2aaab47353e",
+      "sequence": 164,
+      "started_at": 1791359628021.0,
+      "finished_at": 1791359628039.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/api/v1/journeys/jrn_0a7c1885d33b4713b8ab82eadbbfbc34?locale=zh-CN",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "42D523FC060E8F417F77DCAA2C9CEED0",
+      "status": 200,
+      "mime_type": "application/json",
+      "duration_ms": 17.05,
+      "transfer_bytes": 1452.0,
+      "decoded_bytes": 960.0,
+      "from_service_worker": false,
+      "initiator": "d http://127.0.0.1:3014/_next/static/chunks/0q-2whnoc-18y.js:1",
+      "request_headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "pragma": "no-cache",
+        "referer": "http://127.0.0.1:3014/journey",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Wed, 07 Oct 2026 07:53:48 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "req_0c2ce7cb155d4cccba4ac9bc0c8a9f11"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 15.696,
+        "receiveHeadersStart": 15.652,
+        "requestTime": 17282.786328,
+        "sendEnd": 0.223,
+        "sendStart": 0.171,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "{\"id\":\"jrn_0a7c1885d33b4713b8ab82eadbbfbc34\",\"locale\":\"zh-CN\",\"interests\":[],\"duration_minutes\":5,\"region_id\":\"liaoning-dalian\",\"novelty_exhibit_ids\":[],\"total_minutes\":3,\"version\":1,\"stops\":[{\"exhibit_id\":\"liaoning-dalian-01\",\"title\":\"复州皮影戏\",\"summary\":\"复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\",\"estimated_minutes\":3,\"region_ids\":[\"liaoning\",\"liaoning-dalian\"],\"themes\":[\"performance\"],\"reason\":\"这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\",\"sources\":[{\"id\":\"ln-first\",\"title\":\"First provincial intangible cultural heritage list (2006)\",\"institution\":\"Liaoning Provincial Government\",\"canonical_url\":\"https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml\"}]}],\"notice\":\"已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\",\"explanation_status\":\"deterministic\",\"updated_at\":\"2026-10-07T07:14:46.363293Z\"}",
+        "chars": 794,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n17",
+      "run_id": "de2aaab47353e",
+      "sequence": 165,
+      "started_at": 1791359637975.0,
+      "finished_at": 1791359638009.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/journey?viewport-control=1",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Document",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "C22EF45378FBD7000A0E6F9DF8B49E40",
+      "status": 200,
+      "mime_type": "text/html",
+      "duration_ms": 4.87,
+      "transfer_bytes": 494.0,
+      "decoded_bytes": 439.0,
+      "from_service_worker": false,
+      "initiator": "other",
+      "request_headers": {
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "content-type": "text/html; charset=utf-8"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 3.772,
+        "receiveHeadersStart": -1.0,
+        "requestTime": 17292.740273,
+        "sendEnd": -1.0,
+        "sendStart": -1.0,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "available",
+        "text": "<!doctype html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><title>Synthetic viewport diagnostic</title><style>body{margin:0;font:16px sans-serif}main{width:100%;padding:18px;box-sizing:border-box}button{min-height:44px}</style></head><body><main><h1>Synthetic viewport diagnostic</h1><p>No application components or data. Browser extension remains active.</p><button>Control</button></main></body></html>",
+        "chars": 439,
+        "redacted": false,
+        "replay_safe": true
+      },
+      "truncated": false,
+      "intervention": {
+        "rule_id": "de2aaab47353e:r1",
+        "type": "mock",
+        "state": "applied"
+      }
+    },
+    {
+      "id": "de2aaab47353e:n18",
+      "run_id": "de2aaab47353e",
+      "sequence": 166,
+      "started_at": 1791359638019.0,
+      "finished_at": 1791359638020.0,
+      "method": "GET",
+      "url": "chrome-extension://invalid/",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete"
+      },
+      "state": "failed",
+      "resource_type": "Fetch",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "C22EF45378FBD7000A0E6F9DF8B49E40",
+      "error": "net::ERR_FAILED",
+      "duration_ms": 6.95,
+      "initiator": "D chrome-extension://hhcmgoofomhgciiibhipgmgkgnoenaoi/content-scripts/content.js:2",
+      "request_headers": {
+        "referer": "http://127.0.0.1:3014/",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "unavailable",
+        "reason": "request_failed"
+      },
+      "truncated": false
+    },
+    {
+      "id": "de2aaab47353e:n19",
+      "run_id": "de2aaab47353e",
+      "sequence": 167,
+      "started_at": 1791359638033.0,
+      "finished_at": 1791359638034.0,
+      "method": "GET",
+      "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAABXpUlEQVR42q39eZBlV37fB35+59z7ltyzMrMqqwr71miggeba4tDWNFtsik2K2igCkmhzZiK02NKIksa0JJLhGRC2JXtmFFSEI+yIkUYa2WHZIbRESnKYkknK3Vya3Q00gMbaAHrDVmtWZuXy9nvP+c0f5y7n3veyUGgKHdVV+fIt991zzm/9fr8/4ffxnz71lOHRp0WexIVHLPvvf/FOff3ffL+Mrv5BM7v5PeTje7LZ4E6ygeDC00QVAQwCaPEHBEGrfxefUT5HBCmfKqDFe0RPrK9LwsMqhNeU71E9R2DutVr/XH8MihQPa+Mzqg9AwzVK+UxtXI5UD0l4Ty3eWRQ0POZFQRQviqogkmjaWxFJV2466b6l6drL6eadX5Q7Hv/S2kf/zNfws/AZT2B55ikVedp/p2so39HCqwqffdLIk591AHt7X7tgXvzHPy6Hb/8pxgc/0HfDjR4TfD4jzzIylyMi9UeWKydS3bTqhpf/qB6p/z++tfV91WrFpNow8dcTRBUVjV/V3GxSvkW5uxbdmmhjSvFclfqd6jWtP13rzVjvH62uq9omouF7lz+HH7AipGmCTZZw0mWk3bHrn3nJr9/1L8x9P/TM5sN//NvlRvilR57Sp5/+8BvhQ28AfeYJWy789df+2YPJt3/jP+HgW396U/c3mZ4wmeXkalTEeBUjxe0VQVEtbrG2LsKU31uKZTbFbdL5u7pgUbRxoKW8f4u/ZLwop62zhDWQ6Mg3T7fUKxybHUBEm5tQOeUD4q+lxb8l+pzqFKioqqoTgzNLnQR6qxzpmaGu3/O/5Be//5d3PvEfPddem3/nGyCcejHyJO6bqusb/+Zn/4a58dZf3civrI4Gx+QqOZIIiJHiTMn8t4dFFjkylRIfycg6N06hanRq6zdVqQ5P9MUK86xaWQhdcG0SXYRqw8agmMoGVRu0OtYa2arI9LfsVv1dtP7+UtshLa3VwuWprlhBVdR5IyRLy8sc2R3n1u75H/MHfuK/OPfYT35TwaCqIqL/zjaAPvWUkcK87H3+v/qj3Stf+eXV2TsPjI4P8JjcI1Ykcsl6yoqf8mNsFGltgPI46imbKXLFjYW4re9VnNjK5Muia299msRRQetD565BWhtNIzMfNsB3eiY9ooL3grcry0sMeheP8nPf8/Tmp//u30MznnnmCfvkbViDD/y08o3eUu2e+V9/9u+t3Hj9L9nhZSYuz1VMWHjVufho8S6+9WJURlDqXaKRT/wgS/KdBDT6nfrD1qbTufMahzz1b7R8jXoQE72+dBzmlvdK5+6qAC5PcEl/fZfDlY/+q8njf+0vnH/gu67rM89YefJJ9x1vgNKnfPvVz+2uvf73/6czwzc/NTi86TRJRcCUNlv19m7e7Z5QiV2A6od+g3CotRHytV9XZwinvO2pD0aZgbSeqotvsRRBY2X9JcowCusmt/XF2m65sREUn7nV5ZXkePmhbxzf++M/decP/LmX9HNPJfKpp/MPvQHKxX/nlV+5f+WVf/xrZwZvPHQyyjJsmtbRrX6oBW7/XpEQNGm5GMWNCCFjcwEr/18H6pXr0DJaqt9fVKs7pJj5mzdnnm99sVL4+xBrfCe25tZu8HZe88H7X8BrvtQxyWj1oYPjiz/6xy9+6q/87q02gTnN7MuTn3XXXvmV+9de/R8+v3b8+kPH4yzHpmnpL6Xy2vUfiY9X488pJ6P4VkaJzD7gFfzpy7PI5McxhDSScMOioFzwdTlApB2FlMlL9JCe7tTkNkyfnuZ75JTnmyrNbD5TbrlZxEgyzJzrHr15Zv39f/1rl37zl/+gfOrpXJ95wt6WBdCnnjI8/bQeHb67mf/az31h8/jlhwfTPBdjk2Dx5TZ3bBmSa73NdFGEoJyWM83XbQrLsMB063zpqLIWcTwR5+VN/zx/zjQu5Ki2vkJkuOcCgfZ9KL+AXxSFLq5k0SooRO9Xu5w5MxW7B9ez3k7XHj",
+      "integrity": {
+        "url": "truncated",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Image",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "C22EF45378FBD7000A0E6F9DF8B49E40",
+      "status": 200,
+      "mime_type": "image/png",
+      "duration_ms": 0.15,
+      "transfer_bytes": 0.0,
+      "decoded_bytes": 22494.0,
+      "from_cache": true,
+      "from_service_worker": false,
+      "initiator": "other",
+      "request_headers": {
+        "referer": "http://127.0.0.1:3014/",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "content-type": "image/png"
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "omitted",
+        "reason": "non_text"
+      },
+      "truncated": true
+    },
+    {
+      "id": "de2aaab47353e:n20",
+      "run_id": "de2aaab47353e",
+      "sequence": 168,
+      "started_at": 1791359638035.0,
+      "finished_at": 1791359638053.0,
+      "method": "GET",
+      "url": "http://127.0.0.1:3014/favicon.ico",
+      "integrity": {
+        "url": "complete",
+        "metadata": "complete",
+        "response_headers": "complete"
+      },
+      "state": "complete",
+      "resource_type": "Other",
+      "frame_id": "3A7D82EDBD8279DE0776176253FF528B",
+      "loader_id": "C22EF45378FBD7000A0E6F9DF8B49E40",
+      "status": 200,
+      "mime_type": "image/x-icon",
+      "duration_ms": 14.62,
+      "transfer_bytes": 4899.0,
+      "decoded_bytes": 4415.0,
+      "from_service_worker": false,
+      "initiator": "other",
+      "request_headers": {
+        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9",
+        "connection": "keep-alive",
+        "cookie": "[redacted]",
+        "host": "127.0.0.1:3014",
+        "referer": "http://127.0.0.1:3014/journey?viewport-control=1",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\"",
+        "sec-fetch-dest": "image",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-type": "image/x-icon",
+        "date": "Wed, 07 Oct 2026 07:53:58 GMT",
+        "keep-alive": "timeout=5",
+        "permissions-policy": "camera=(self), microphone=(self), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "transfer-encoding": "chunked",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "x-content-type-options": "nosniff",
+        "x-nextjs-cache": "HIT"
+      },
+      "timing": {
+        "connectEnd": -1.0,
+        "connectStart": -1.0,
+        "dnsEnd": -1.0,
+        "dnsStart": -1.0,
+        "proxyEnd": -1.0,
+        "proxyStart": -1.0,
+        "pushEnd": 0.0,
+        "pushStart": 0.0,
+        "receiveHeadersEnd": 11.456,
+        "receiveHeadersStart": 11.24,
+        "requestTime": 17292.799485,
+        "sendEnd": 0.368,
+        "sendStart": 0.281,
+        "sslEnd": -1.0,
+        "sslStart": -1.0,
+        "workerFetchStart": -1.0,
+        "workerReady": -1.0,
+        "workerRespondWithSettled": -1.0,
+        "workerStart": -1.0
+      },
+      "request_body": {
+        "state": "empty",
+        "replay_safe": true
+      },
+      "response_body": {
+        "state": "omitted",
+        "reason": "non_text"
+      },
+      "truncated": false
+    }
+  ],
+  "operations": [
+    {
+      "id": "de2aaab47353e:a1",
+      "run_id": "de2aaab47353e",
+      "sequence": 147,
+      "method": "tool.navigate",
+      "source": "agent",
+      "started_at": 1791359637969.0,
+      "finished_at": 1791359638021.0,
+      "window_end": 1791359639521.0,
+      "state": "completed",
+      "before": {
+        "at": 1791359637956.0,
+        "state": "available",
+        "url": "http://127.0.0.1:3014/journey",
+        "title": "旅程 | FolkVerse China",
+        "text": "跳转到内容\nFolkVerse\n02 / 旅程\n您的文化探索之旅\n了解学习路线如何结合您的兴趣。\n学习兴趣\n工艺\n民俗\n音乐\n表演\n学习\n不选择兴趣即可探索所有符合条件的主题。\n学习时长\n5 分钟\n学习地区\n大连\n优先选择不同于当前路线的展览\n应用 — 重新生成并保存\n↗︎\n您保存的文化发现\n1 站 · 3 / 5 分钟\n这是数字学习路线，并非实际旅行导航。仅使用已发布展览编号及存储的学习时长。装饰性地区示例不会扩大馆藏范围。\n刷新后会恢复最新路线，仅在签名访客会话有效期间可读取。删除会话将删除其路线。仅使用您主动选择的偏好，不进行被动追踪。\n已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\n确定性选择理由，未声称生成 AI 说明。\n01\n复州皮影戏\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\n3\n分钟\n·\n这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\n阅读展览\n↗︎\n询问锦瑶\n↗︎\nLiaoning Provincial Government\n·\nFirst provincial intangible cultural heritage list (2006)\n↗︎\n↑\n↓\n移除\n已保存到本访客会话。刷新及页面打开期间会重新检查发布状态。\n探索辽宁\n来源\n已发布馆藏 · 向导依据审核资料回答\n减少流量\n简化图形\n资料来源\n服务状态",
+        "truncated": false,
+        "fields": [],
+        "fields_partial": true,
+        "navigation": "navigate"
+      },
+      "after": {
+        "at": 1791359638721.0,
+        "state": "available",
+        "url": "http://127.0.0.1:3014/journey?viewport-control=1",
+        "title": "Synthetic viewport diagnostic",
+        "text": "Synthetic viewport diagnostic\nNo application components or data. Browser extension remains active.\nControl",
+        "truncated": false,
+        "fields": [],
+        "fields_partial": false,
+        "navigation": "navigate"
+      },
+      "observations": [
+        {
+          "at": 1791359638721.0,
+          "state": "available",
+          "url": "http://127.0.0.1:3014/journey?viewport-control=1",
+          "title": "Synthetic viewport diagnostic",
+          "text": "Synthetic viewport diagnostic\nNo application components or data. Browser extension remains active.\nControl",
+          "truncated": false,
+          "fields": [],
+          "fields_partial": false,
+          "navigation": "navigate"
+        }
+      ],
+      "observation_end": 1791359653021.0,
+      "request_ids": [
+        "de2aaab47353e:n17",
+        "de2aaab47353e:n18",
+        "de2aaab47353e:n19",
+        "de2aaab47353e:n20"
+      ],
+      "console_ids": [
+        "de2aaab47353e:c1"
+      ],
+      "truncated": false
+    }
+  ],
+  "console": [
+    {
+      "id": "de2aaab47353e:c1",
+      "at": 1791359638020.0,
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "count": 1,
+      "last_at": 1791359638020.0,
+      "source": "extension",
+      "source_url": "chrome-extension://invalid/"
+    }
+  ],
+  "pages": [
+    {
+      "at": 1791359515869.0,
+      "state": "available",
+      "url": "http://127.0.0.1:3014/journey",
+      "title": "旅程 | FolkVerse China",
+      "text": "跳转到内容\nFolkVerse\n02 / 旅程\n您的文化探索之旅\n了解学习路线如何结合您的兴趣。\n学习兴趣\n工艺\n民俗\n音乐\n表演\n学习\n不选择兴趣即可探索所有符合条件的主题。\n学习时长\n5 分钟\n学习地区\n大连\n优先选择不同于当前路线的展览\n应用 — 重新生成并保存\n↗︎\n您保存的文化发现\n1 站 · 3 / 5 分钟\n这是数字学习路线，并非实际旅行导航。仅使用已发布展览编号及存储的学习时长。装饰性地区示例不会扩大馆藏范围。\n刷新后会恢复最新路线，仅在签名访客会话有效期间可读取。删除会话将删除其路线。仅使用您主动选择的偏好，不进行被动追踪。\n已发布展品的总时长为你要求的 5 分钟中的 3 分钟。\n确定性选择理由，未声称生成 AI 说明。\n01\n复州皮影戏\n复州皮影戏在辽宁省非遗名录中列为瓦房店市申报的传统戏剧项目。\n3\n分钟\n·\n这一站符合您为路线设定的时间。 通过已发布藏品检索发现。\n阅读展览\n↗︎\n询问锦瑶\n↗︎\nLiaoning Provincial Government\n·\nFirst provincial intangible cultural heritage list (2006)\n↗︎\n↑\n↓\n移除\n已保存到本访客会话。刷新及页面打开期间会重新检查发布状态。\n探索辽宁\n来源\n已发布馆藏 · 向导依据审核资料回答\n减少流量\n简化图形\n资料来源\n服务状态",
+      "truncated": false,
+      "fields": [],
+      "fields_partial": true
+    },
+    {
+      "at": 1791359638010.0,
+      "state": "available",
+      "url": "http://127.0.0.1:3014/journey?viewport-control=1",
+      "title": "Synthetic viewport diagnostic",
+      "text": "Synthetic viewport diagnostic\nNo application components or data. Browser extension remains active.\nControl",
+      "truncated": false,
+      "fields": [],
+      "fields_partial": false,
+      "navigation": "navigate"
+    }
+  ],
+  "rules": [
+    {
+      "match": {
+        "url": "http://127.0.0.1:3014/journey?viewport-control=1",
+        "method": "GET",
+        "resource_type": "Document"
+      },
+      "effect": {
+        "type": "mock",
+        "status": 200,
+        "body": "<!doctype html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><title>Synthetic viewport diagnostic</title><style>body{margin:0;font:16px sans-serif}main{width:100%;padding:18px;box-sizing:border-box}button{min-height:44px}</style></head><body><main><h1>Synthetic viewport diagnostic</h1><p>No application components or data. Browser extension remains active.</p><button>Control</button></main></body></html>",
+        "headers": {
+          "content-type": "text/html; charset=utf-8"
+        }
+      },
+      "times": 1,
+      "id": "de2aaab47353e:r1",
+      "state": "exhausted",
+      "hits": 1,
+      "failures": 0,
+      "created_at": 1791359524273.0
+    }
+  ],
+  "replays": [],
+  "performance": [
+    {
+      "id": "de2aaab47353e:p1",
+      "document_key": "1791358982553.5:0",
+      "sequence": 2,
+      "time_origin": 1791358982553.5,
+      "started_at": 1791359515867.8,
+      "observed_at": 1791359515868.0,
+      "url": "http://127.0.0.1:3014/journey",
+      "navigation": "navigate",
+      "state": "interrupted",
+      "early": false,
+      "scope": "main_frame",
+      "visibility": [
+        {
+          "at": 1791359515867.8,
+          "state": "visible"
+        }
+      ],
+      "visibility_truncated": false,
+      "metrics": {
+        "cls": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "dom_content_loaded_ms": {
+          "value": 37.79999999888241,
+          "state": "available",
+          "reasons": []
+        },
+        "fcp_ms": {
+          "value": 356.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "lcp_ms": {
+          "value": 356.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "load_ms": {
+          "value": 355.7999999988824,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_count": {
+          "value": 2.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_max_ms": {
+          "value": 64.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "long_task_total_ms": {
+          "value": 118.0,
+          "state": "partial",
+          "reasons": [
+            "started_late"
+          ]
+        },
+        "ttfb_ms": {
+          "value": 11.099999999627473,
+          "state": "available",
+          "reasons": []
+        }
+      },
+      "long_tasks": [
+        {
+          "at": 1791358982936.3,
+          "duration_ms": 64.0
+        },
+        {
+          "at": 1791358982611.0,
+          "duration_ms": 54.0
+        }
+      ],
+      "long_tasks_truncated": false,
+      "coverage": [
+        "main_frame_only",
+        "started_late",
+        "visibility_before_capture_unknown",
+        "navigation_checkpoint_missing"
+      ]
+    },
+    {
+      "id": "de2aaab47353e:p2",
+      "document_key": "1791359637974.2:0",
+      "sequence": 146,
+      "time_origin": 1791359637974.2,
+      "started_at": 1791359637974.2,
+      "observed_at": 1791359885719.0,
+      "url": "http://127.0.0.1:3014/journey?viewport-control=1",
+      "navigation": "navigate",
+      "state": "completed",
+      "early": true,
+      "scope": "main_frame",
+      "visibility": [
+        {
+          "at": 1791359637974.2,
+          "state": "visible"
+        }
+      ],
+      "visibility_truncated": false,
+      "metrics": {
+        "cls": {
+          "value": 0.0,
+          "state": "partial",
+          "reasons": [
+            "capture_stopped_before_final"
+          ]
+        },
+        "dom_content_loaded_ms": {
+          "value": 24.099999997764822,
+          "state": "available",
+          "reasons": []
+        },
+        "fcp_ms": {
+          "value": 48.0,
+          "state": "available",
+          "reasons": []
+        },
+        "lcp_ms": {
+          "value": 48.0,
+          "state": "partial",
+          "reasons": [
+            "capture_stopped_before_final"
+          ]
+        },
+        "load_ms": {
+          "value": 32.899999998509884,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_count": {
+          "value": 0.0,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_max_ms": {
+          "value": 0.0,
+          "state": "available",
+          "reasons": []
+        },
+        "long_task_total_ms": {
+          "value": 0.0,
+          "state": "available",
+          "reasons": []
+        },
+        "ttfb_ms": {
+          "value": 5.5,
+          "state": "available",
+          "reasons": []
+        }
+      },
+      "long_tasks": [],
+      "long_tasks_truncated": false,
+      "coverage": [
+        "main_frame_only"
+      ]
+    }
+  ]
+}

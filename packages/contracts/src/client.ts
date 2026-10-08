@@ -13,3 +13,5 @@ export type SourceList = components["schemas"]["SourceList"];
 export type GuideAnswer = components["schemas"]["GuideAnswer"];
 export type GuideRequest = components["schemas"]["GuideRequest"];
 export type GuideEvidence = components["schemas"]["EvidencePassage"];
+export type JourneyResponse = components["schemas"]["JourneyResponse"];
+export type JourneyList = components["schemas"]["JourneyList"];

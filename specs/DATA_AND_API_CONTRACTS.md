@@ -30,8 +30,10 @@ Unique artifact key `(institution, external_object_id)`. Media rights are separa
 | GET `/exhibits` | region_id?, themes?, q?, cursor?, limit | published cards + next_cursor |
 | GET `/exhibits/{id}` | locale | exhibit and source/action references |
 | GET `/sources/{id}` | none | public source metadata and permitted excerpts |
-| POST `/journeys` | interests[], locale, duration_minutes 5–60, region_id? | validated ordered stops + reasons + total |
-| PATCH `/journeys/{id}` | ordered_exhibit_ids[] | ownership and time revalidation |
+| POST `/journeys` | interests[] (≤8), locale, duration_minutes 5–60, region_id?, novelty_exhibit_ids[]?, start_exhibit_id? | owned deterministic ordered stops + reasons + stored-estimate total, version, notice and explanation_status |
+| GET `/journeys` | locale?, limit 1–20 | newest owned routes; every stop revalidated on read |
+| GET `/journeys/{id}` | locale? | owned route for reload; unavailable/over-budget stops omitted with an explicit notice |
+| PATCH `/journeys/{id}` | required ordered_exhibit_ids[] (0–24), expected_version?; locale? query | ownership, publication and time revalidation; row-locked version conflict returns 409; empty route is valid |
 | POST `/guide` | question 1–2000 chars, locale, exhibit_id?, conversation_id? | validated JSON or SSE via fetch |
 | POST `/media` | multipart file + purpose | private owned media_id after sanitization |
 | POST `/scans` | media_id, label_media_id?, locale | 202 with scan_id and queued status; idempotency key |

@@ -106,6 +106,42 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/journeys": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Journeys */
+        get: operations["journeys"];
+        put?: never;
+        /** Create Journey */
+        post: operations["create_journey"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/journeys/{identifier}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Journey */
+        get: operations["journey"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        /** Update Journey */
+        patch: operations["update_journey"];
+        trace?: never;
+    };
     "/api/v1/regions": {
         parameters: {
             query?: never;
@@ -595,6 +631,108 @@ export interface components {
              */
             status: "ok" | "degraded";
         };
+        /**
+         * JourneyCreate
+         * @description Explicit preferences only; unknown fields such as an owner ID are rejected.
+         */
+        JourneyCreate: {
+            /** Duration Minutes */
+            duration_minutes: number;
+            /** Interests */
+            interests?: string[];
+            /**
+             * Locale
+             * @enum {string}
+             */
+            locale: "en" | "zh-CN";
+            /** Novelty Exhibit Ids */
+            novelty_exhibit_ids?: string[];
+            /** Region Id */
+            region_id?: string | null;
+            /** Start Exhibit Id */
+            start_exhibit_id?: string | null;
+        };
+        /** JourneyList */
+        JourneyList: {
+            /** Items */
+            items: components["schemas"]["JourneyResponse"][];
+        };
+        /**
+         * JourneyPatch
+         * @description An explicit ordered list is required: an empty list clears the route, ``{}`` is refused.
+         */
+        JourneyPatch: {
+            /** Expected Version */
+            expected_version?: number | null;
+            /** Ordered Exhibit Ids */
+            ordered_exhibit_ids: string[];
+        };
+        /** JourneyResponse */
+        JourneyResponse: {
+            /** Duration Minutes */
+            duration_minutes: number;
+            /**
+             * Explanation Status
+             * @enum {string}
+             */
+            explanation_status: "deterministic" | "generated" | "unavailable";
+            /** Id */
+            id: string;
+            /** Interests */
+            interests: string[];
+            /**
+             * Locale
+             * @enum {string}
+             */
+            locale: "en" | "zh-CN";
+            /** Notice */
+            notice: string | null;
+            /** Novelty Exhibit Ids */
+            novelty_exhibit_ids: string[];
+            /** Region Id */
+            region_id: string | null;
+            /** Stops */
+            stops: components["schemas"]["JourneyStopCard"][];
+            /** Total Minutes */
+            total_minutes: number;
+            /**
+             * Updated At
+             * Format: date-time
+             */
+            updated_at: string;
+            /** Version */
+            version: number;
+        };
+        /** JourneySource */
+        JourneySource: {
+            /** Canonical Url */
+            canonical_url: string;
+            /** Id */
+            id: string;
+            /** Institution */
+            institution: string;
+            /** Title */
+            title: string;
+        };
+        /** JourneyStopCard */
+        JourneyStopCard: {
+            /** Estimated Minutes */
+            estimated_minutes: number;
+            /** Exhibit Id */
+            exhibit_id: string;
+            /** Reason */
+            reason: string;
+            /** Region Ids */
+            region_ids: string[];
+            /** Sources */
+            sources: components["schemas"]["JourneySource"][];
+            /** Summary */
+            summary: string;
+            /** Themes */
+            themes: string[];
+            /** Title */
+            title: string;
+        };
         /** PassageCard */
         PassageCard: {
             /** Id */
@@ -944,6 +1082,141 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HealthResponse"] | components["schemas"]["ErrorEnvelope"];
+                };
+            };
+        };
+    };
+    journeys: {
+        parameters: {
+            query?: {
+                locale?: ("en" | "zh-CN") | null;
+                limit?: number;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["JourneyList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    create_journey: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["JourneyCreate"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["JourneyResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    journey: {
+        parameters: {
+            query?: {
+                locale?: ("en" | "zh-CN") | null;
+            };
+            header?: never;
+            path: {
+                identifier: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["JourneyResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    update_journey: {
+        parameters: {
+            query?: {
+                locale?: ("en" | "zh-CN") | null;
+            };
+            header?: never;
+            path: {
+                identifier: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["JourneyPatch"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["JourneyResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

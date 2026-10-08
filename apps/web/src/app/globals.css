@@ -720,3 +720,29 @@ button:disabled { cursor: default; }
 }
 
 @media (prefers-reduced-motion: reduce) { .constellation-theme, .constellation-theme .interest-bar span { transition: none; } }
+
+/* Real saved learning journeys keep the original wide gold route visual. */
+.saved-journey { display: grid; gap: 24px; padding: 10px 0 26px; min-width: 0; }
+@media (min-width: 701px) { .saved-journey-controls { align-items: end; } }
+.saved-interests { border: 0; padding: 0; margin: 0; flex: 1 1 100%; min-width: 0; }
+.saved-interests legend { padding: 0 0 10px; color: var(--accent-gold); }
+.saved-interests .theme-grid { display: flex; flex-wrap: wrap; }
+.saved-novelty { display: flex; gap: 10px; align-items: center; min-height: 44px; font-size: 13px; }
+.saved-novelty input { width: 20px; height: 20px; accent-color: var(--accent-gold); flex: none; }
+.saved-journey-route { padding: 25px 30px; min-height: 268px; }
+.saved-journey-stops { padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); list-style: none; gap: 24px; margin: 22px 0 0; }
+.saved-journey-stops li { position: relative; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.saved-journey-stops li:not(:last-child)::after { content: ""; position: absolute; height: 1px; top: 18px; left: 54px; right: -10px; background: linear-gradient(90deg, #f6d697, #f6d69733); }
+.saved-journey-stops h3 { font-size: 24px; overflow-wrap: anywhere; }
+.saved-journey-stops p { color: var(--text-secondary); font-size: 14px; }
+.saved-journey-stops .text-button { min-height: 44px; padding: 4px 8px; }
+.saved-journey-stops .source-pill { white-space: normal; overflow-wrap: anywhere; }
+.saved-journey-draft, .saved-journey-notice { border-left: 2px solid var(--accent-gold); padding-left: 12px; }
+@media (max-width: 700px) {
+  .saved-journey-route { padding: 22px; }
+  .saved-journey-route .panel-heading { align-items: start; flex-direction: column; }
+  .saved-journey-stops { grid-template-columns: 1fr; }
+  .saved-journey-stops li:not(:last-child)::after { display: none; }
+  .saved-journey-stops li { border-bottom: 1px solid #f6d69744; padding-bottom: 15px; }
+  .saved-journey-controls > * { width: 100%; }
+}
