@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-08T07:50:32.047Z",
+  "origin": "https://764419599afe22.lhr.life",
+  "scope": "actual HTTPS production browser/BFF/API/database and configured model; no response interception",
+  "create_http_status": 200,
+  "explanation_status": "generated",
+  "stops": 1,
+  "total_minutes": 3,
+  "https_cookie_reload_persistence": true,
+  "real_guide_context": true,
+  "passed": true,
+  "owned_test_session_delete_status": 200
+}

@@ -1,4 +1,4 @@
-> Current status, 7 October 2026: Phase 3 complete. The [completion report](PHASE_03_FINAL_COMPLETION.md) supersedes historical pending-review/budget status below and records measured pilot/corrections, attributed machine assessment and limitations. Phase 4 is next.
+> Current status, 8 October 2026: **Phase 4 complete**. The [final completion report](PHASE_04_FINAL_COMPLETION.md) records all four acceptance gates, real database/browser/model evidence and the one-exhibit published-corpus limit. Phase 5 — camera scan and artifact retrieval — is next; it has not been implemented or accepted. Historical reports below retain their original dates and findings.
 
 # Phases 00–02 review before Phase 03
 

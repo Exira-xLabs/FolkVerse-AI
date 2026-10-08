@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-10-08T07:31:01.143871+00:00",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "response_interception": false,
+  "turns": [
+    {
+      "locale": "en",
+      "http_status": 200,
+      "explanation_status": "generated",
+      "new_provider_attempts": 1,
+      "unchanged_regeneration_new_attempts": 0,
+      "total_minutes": 3,
+      "duration_minutes": 20,
+      "stops": [
+        {
+          "title": "Fuzhou shadow puppetry",
+          "reason": "This stop fits the amount of time you set for the route. Found by searching the published collection.",
+          "estimated_minutes": 3,
+          "sources": [
+            {
+              "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+              "institution": "Liaoning Provincial Government"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "locale": "zh-CN",
+      "http_status": 200,
+      "explanation_status": "generated",
+      "new_provider_attempts": 1,
+      "unchanged_regeneration_new_attempts": 0,
+      "total_minutes": 3,
+      "duration_minutes": 20,
+      "stops": [
+        {
+          "title": "复州皮影戏",
+          "reason": "这一站符合您为路线设定的时间。 通过已发布藏品检索发现。",
+          "estimated_minutes": 3,
+          "sources": [
+            {
+              "canonical_url": "https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/2023010509411077517/index.shtml",
+              "institution": "Liaoning Provincial Government"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "session_deleted": true
+}

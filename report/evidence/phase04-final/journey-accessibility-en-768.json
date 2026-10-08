@@ -1,0 +1,40 @@
+{
+  "viewport": {
+    "width": 768,
+    "height": 1024
+  },
+  "locale": "en",
+  "layout": {
+    "viewport": 768,
+    "width": 768,
+    "overflowing": []
+  },
+  "violations": [],
+  "passed_rules": [
+    "aria-allowed-attr",
+    "aria-allowed-role",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "avoid-inline-spacing",
+    "button-name",
+    "color-contrast",
+    "duplicate-id-aria",
+    "empty-heading",
+    "form-field-multiple-labels",
+    "heading-order",
+    "label-title-only",
+    "label",
+    "landmark-unique",
+    "link-name",
+    "list",
+    "listitem",
+    "nested-interactive",
+    "tabindex"
+  ]
+}

@@ -1,0 +1,8 @@
+$ node scripts/check-foundation.mjs
+$ uv run --project apps/api python scripts/export-openapi.py && pnpm --filter @folkverse/contracts generate
+Exported packages/contracts/openapi.json
+$ openapi-typescript openapi.json -o src/schema.d.ts
+✨ openapi-typescript 7.13.0
+🚀 openapi.json → src/schema.d.ts [136.4ms]
+Verified 9 original assets, PNG dimensions/color modes, and all reference copies.
+Contracts regenerated identically; local env files ignored; 1478 Git candidate/browser-output files checked for configured secrets.

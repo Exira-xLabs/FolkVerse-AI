@@ -1,0 +1,297 @@
+{
+  "config": {
+    "argv": [
+      "/home/oualid/.hermes/node/bin/node",
+      "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config",
+      "playwright.phase04.config.ts",
+      "journeys.spec.ts"
+    ],
+    "configFile": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/playwright.phase04.config.ts",
+    "rootDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/phase04",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e",
+        "testIgnore": [
+          "**/guide-live.spec.ts",
+          "**/guide-hybrid.spec.ts",
+          "**/guide-proxy.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report/evidence/phase04-final/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "journeys.spec.ts",
+      "file": "journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "published Dalian map to saved journey to source and guide context, then reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T07:22:38.400Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa09586c1d16412a1f00-36d543102b84d4055087",
+          "file": "journeys.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "last stop removal is keyboard operable, recalculated, persisted and recoverable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T07:22:43.761Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa09586c1d16412a1f00-0b2a6aeba0faac62b8ac",
+          "file": "journeys.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "draft criteria do not relabel saved totals, empty theme is honest, session loss clears old route",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1612,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T07:22:45.815Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa09586c1d16412a1f00-bc5320910a86fc87af1a",
+          "file": "journeys.spec.ts",
+          "line": 77,
+          "column": 5
+        },
+        {
+          "title": "saved route re-renders EN/ZH at desktop, phone and tablet without overflow",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2485,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/journeys.spec.ts:107:100",
+                    "location": {
+                      "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/journeys.spec.ts",
+                      "column": 100,
+                      "line": 107
+                    },
+                    "snippet": "  105 |       await expect(currentPanel.locator(\".saved-journey-stops > li\")).toHaveCount(1);\n  106 |       await expect(currentPanel.locator(\".saved-journey-stops h3\")).toHaveText(locale === \"en\" ? \"Fuzhou shadow puppetry\" : \"复州皮影戏\");\n> 107 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);\n      |                                                                                                    ^\n  108 |       await page.screenshot({ path: `${evidenceDir}/saved-journey-${locale}-${size.width}.png`, fullPage: true, animations: \"disabled\" });\n  109 |     }\n  110 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/journeys.spec.ts",
+                        "column": 100,
+                        "line": 107
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  105 |       await expect(currentPanel.locator(\".saved-journey-stops > li\")).toHaveCount(1);\n  106 |       await expect(currentPanel.locator(\".saved-journey-stops h3\")).toHaveText(locale === \"en\" ? \"Fuzhou shadow puppetry\" : \"复州皮影戏\");\n> 107 |       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);\n      |                                                                                                    ^\n  108 |       await page.screenshot({ path: `${evidenceDir}/saved-journey-${locale}-${size.width}.png`, fullPage: true, animations: \"disabled\" });\n  109 |     }\n  110 |   }\n    at /home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/journeys.spec.ts:107:100"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T07:22:47.441Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/phase04/journeys-saved-route-re-re-29fa7-and-tablet-without-overflow/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/test-results/phase04/journeys-saved-route-re-re-29fa7-and-tablet-without-overflow/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/oualid/Exira-X/FolkVerse_Codex_Build_Kit/tests/e2e/journeys.spec.ts",
+                    "column": 100,
+                    "line": 107
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "aa09586c1d16412a1f00-cfed09e83fd2c5997e72",
+          "file": "journeys.spec.ts",
+          "line": 97,
+          "column": 5
+        },
+        {
+          "title": "controlled two-stop fixture reorders and removes with adjacent keyboard focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1311,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-08T07:22:50.584Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa09586c1d16412a1f00-2b20780e006992a07090",
+          "file": "journeys.spec.ts",
+          "line": 115,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-08T07:22:31.697Z",
+    "duration": 20422.957000000002,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

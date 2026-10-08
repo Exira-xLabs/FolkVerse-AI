@@ -1,6 +1,6 @@
 # Saved personal journeys — Phase 04 implementation contract
 
-Status: implemented and non-browser verified; responsive/browser acceptance remains pending. See the [implementation review](../report/PHASE_04_IMPLEMENTATION_REVIEW.md).
+Status: **complete within Phase 04 scope, 8 October 2026**. All four acceptance gates pass. See the [final completion report](../report/PHASE_04_FINAL_COMPLETION.md); the earlier implementation review is historical.
 
 ## Selection and ownership
 
@@ -21,7 +21,7 @@ Every read recomputes total from current stored estimates and excludes withdrawn
 
 ## Explanations and provider boundary
 
-The existing server-only gateway reads `GUIDE_PROVIDER=ollama` / `OLLAMA_API_KEY` / `OLLAMA_BASE_URL=https://ollama.com/v1` / `OLLAMA_MODEL=deepseek-v4.1-flash` when configured. Credentials are not copied into the browser, source, response, evidence or prompt. An Ollama key is never sent to DeepSeek. Positive account request quota must be explicitly configured; this implementation does not increase the existing zero cap or buy resources.
+The existing server-only gateway supports DeepSeek and OpenAI-compatible Ollama. Configure `GUIDE_PROVIDER` and only that provider’s ignored credentials/base URL/model. An Ollama key is never sent to DeepSeek; credentials never enter the browser, response, evidence or prompt. Ollama requires an explicitly positive request quota. DeepSeek requires a positive monetary cap or explicit `DAILY_AI_BUDGET_UNLIMITED=true`, plus its key. The journey factory now honors the same unlimited setting as the guide gateway. Shared defaults remain fail-closed. The owner’s existing unlimited DeepSeek configuration was preserved: real EN/ZH generated reasons and unchanged-regeneration cache reuse were verified separately from the provider-disabled browser suite.
 
 The model can only choose from per-stop application-verified reason codes (time fit, matched interest, actual first starting stop, explicit novelty and collection discovery). Exact IDs, allowed codes, duplicates, required coverage and extra fields are validated; the server renders bilingual wording. Free prose, dates, IDs, URLs, transport routes and model durations are rejected. Fallback selection reasons remain useful and explicitly deterministic or unavailable.
 
@@ -29,8 +29,8 @@ Successful reason selections use a bounded process-local LRU/TTL cache keyed by 
 
 ## Web behavior and deployment
 
-The saved-journey panel works with actual APIs in both app modes. Demo offers a separately labelled optional memory-only example; live never substitutes it. Multi-theme choices, 5–60-minute duration, region and explicit novelty feed POST. Remove/reorder immediately recalculate the visible total, indicate pending save and persist through PATCH; failed writes do not claim success. A module-level shared session bootstrap plus Web Locks (where available) prevents concurrent creation from discarding a just-saved owner cookie. Old-language mutation results are suppressed and refreshed. Focus returns to a neighbouring/moved stop after save; these keyboard behaviors still need actual browser execution.
+The saved-journey panel works with actual APIs in both app modes. Demo offers a separately labelled optional memory-only example; live never substitutes it. Multi-theme choices, 5–60-minute duration, region and explicit novelty feed POST. Remove/reorder immediately recalculate the visible total, indicate pending save and persist through PATCH; failed writes do not claim success. A module-level shared session bootstrap plus Web Locks (where available) prevents concurrent creation from discarding a just-saved owner cookie. Old-language mutation results are suppressed and refreshed. Focus returns to a neighbouring/moved stop after save; these keyboard behaviors pass actual Chromium browser execution, including a clearly labelled controlled two-stop fixture and real single-stop PostgreSQL saves.
 
 Stop links open the actual exhibit detail/source drawer or `/guide?exhibit=<id>`. Map-selected city preferences and explicit exhibit entry context carry into the planner, not into automatic tracking. Publication is refreshed on focus and every 15 seconds; failures clear authoritative display.
 
-For HTTPS proxy deployment both `PUBLIC_APP_ORIGIN` on the web process and matching API `ALLOWED_ORIGINS` are required; keep signed cookies secure on public HTTPS. The journey BFF validates same-origin mutations, forwards only the session cookie, bounds bodies and preserves no-store responses. Local production HTTP checks are not a public deployment or visual/browser certification.
+For HTTPS proxy deployment both `PUBLIC_APP_ORIGIN` on the web process and matching API `ALLOWED_ORIGINS` are required; keep signed cookies secure on public HTTPS. The journey BFF validates same-origin mutations, forwards only the session cookie, bounds bodies and preserves no-store responses. Final acceptance includes production Chromium runs at desktop, tablet and phone sizes, EN/ZH touch input, scoped axe checks, CSS 200% zoom and reduced motion. Physical-device/Safari testing and permanent production hosting remain separate release work.

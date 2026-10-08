@@ -1,0 +1,254 @@
+{
+  "checked_at": "2026-10-08T07:48:34.016386+00:00",
+  "phase": "04",
+  "status": "complete",
+  "scope": "saved personal learning journeys; no human ratings or whole-province published-corpus claim",
+  "tested_source_commit": "c77057aebaa123a9cf53619ed3193ece7505192d",
+  "reproduction": {
+    "independent_pnpm_install": "pnpm install --offline --frozen-lockfile",
+    "independent_python_install": "uv sync --project apps/api --frozen",
+    "private_environment": "provider-free; keys omitted; ignored file; mode 0600",
+    "production_build": "passed before browser suite",
+    "api_tests": 550,
+    "api_warning": "existing Starlette/httpx deprecation",
+    "browser_command": "FOLKVERSE_EVIDENCE_DIR=report/evidence/phase04-reproduction/final pnpm exec playwright test --config playwright.phase04.config.ts",
+    "browser_stats": {
+      "startTime": "2026-10-08T07:44:21.484Z",
+      "duration": 213421.444,
+      "expected": 76,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "remaining_owned_acceptance_databases": 0,
+    "database_cleanup": "SIGTERM and graceful lifespan completed; zero owned databases remain"
+  },
+  "guide_browser_stats": {
+    "startTime": "2026-10-08T07:25:57.754Z",
+    "duration": 91379.614,
+    "expected": 61,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "journey_axe_audits": [
+    {
+      "file": "reproduction/journey-accessibility-en-1600.json",
+      "locale": "en",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "violations": 0,
+      "document_width": 1600
+    },
+    {
+      "file": "reproduction/journey-accessibility-en-390.json",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "document_width": 390
+    },
+    {
+      "file": "reproduction/journey-accessibility-en-768.json",
+      "locale": "en",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "violations": 0,
+      "document_width": 768
+    },
+    {
+      "file": "reproduction/journey-accessibility-zh-CN-1600.json",
+      "locale": "zh-CN",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "violations": 0,
+      "document_width": 1600
+    },
+    {
+      "file": "reproduction/journey-accessibility-zh-CN-390.json",
+      "locale": "zh-CN",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "document_width": 390
+    },
+    {
+      "file": "reproduction/journey-accessibility-zh-CN-768.json",
+      "locale": "zh-CN",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "violations": 0,
+      "document_width": 768
+    }
+  ],
+  "http_checks": 27,
+  "actual_model_checks": "real-model.json: EN/ZH generated, one new attempt each, zero extra attempts on unchanged regeneration",
+  "published_journey_corpus": {
+    "exhibits": 1,
+    "stored_minutes": 3,
+    "city": "Dalian",
+    "title": "Fuzhou shadow puppetry"
+  },
+  "controlled_browser_cases": [
+    "two-stop reorder/removal and adjacent focus",
+    "stale PATCH conflict/error focus recovery"
+  ],
+  "checks": {
+    "lint": "pass",
+    "web_and_api_types": "pass",
+    "production_build": "pass",
+    "runner_ruff": "pass",
+    "contracts_original_artwork_configured_secret_scan": "pass",
+    "git_diff_check": "pass"
+  },
+  "screenshots": "captured locally; images ignored by existing repository policy",
+  "historical_failure_artifacts": [
+    "browser-initial.json",
+    "browser-overflow-diagnostic.json",
+    "browser-legacy-selector-failure.json"
+  ],
+  "git_hygiene": "git-hygiene.json: 52 historical screenshots kept locally and removed from index; generated media/traces/coverage ignored; history not rewritten",
+  "evidence_sha256": [
+    {
+      "sha256": "710711de05d4e234ce065f8953047d970e73d9c1552595d60d64fd3421312bba",
+      "file": "browser-initial.json"
+    },
+    {
+      "sha256": "bc80abefbe8992608a9a35a329887ad08754d9d1b935316c6662c3f3c9dcb606",
+      "file": "browser-legacy-selector-failure.json"
+    },
+    {
+      "sha256": "878715fc3fa6a957c57b20c4440c348e8f6d9366ca55825c4d4f76ac686d94d2",
+      "file": "browser-overflow-diagnostic.json"
+    },
+    {
+      "sha256": "1b944b7a6c6f81ae3553fccffeebbebc20b941379f19f6381b496a46a401750f",
+      "file": "browser-results.json"
+    },
+    {
+      "sha256": "75b349adb863e0d76883b3ac6ab64b5517c06f9953599004b712600146e527a5",
+      "file": "git-hygiene.json"
+    },
+    {
+      "sha256": "27eb439a476f06ce2714a8bb10432f8555190b4714f808b9ff75ac85096453e6",
+      "file": "guide/browser-results.json"
+    },
+    {
+      "sha256": "1facc65268dea06bbd790916a5d20a59df44dd0e9a51a0e14f058b651341fa8d",
+      "file": "http-smoke.json"
+    },
+    {
+      "sha256": "a7035eca04d571266ff79f0ca7963cd0a51451245b2782613ea966ac4d8e8dbf",
+      "file": "journey-accessibility-en-1600.json"
+    },
+    {
+      "sha256": "dcbd50c9b8a854c26dee062a79654e3903f71c7cd19422188acf4d3a9c167e55",
+      "file": "journey-accessibility-en-390.json"
+    },
+    {
+      "sha256": "862527f2023aee10d355f48bb89e4a8adfefa5533fc19dfa09833b26732811ea",
+      "file": "journey-accessibility-en-768.json"
+    },
+    {
+      "sha256": "aaa007735059c5053dbbcdc3ce1ce3b924ab90c1379f2e8365c51e8ffcf6482b",
+      "file": "journey-accessibility-zh-CN-1600.json"
+    },
+    {
+      "sha256": "91a90f1c3c107213e0526cbae54183cf8d02a7421b528d2e89cdc9533ca3e9c8",
+      "file": "journey-accessibility-zh-CN-390.json"
+    },
+    {
+      "sha256": "70bd198ff8c1f3e4b230a99c2a64e7a13c9e0d09b7f09ca952f0443bdc6513e9",
+      "file": "journey-accessibility-zh-CN-768.json"
+    },
+    {
+      "sha256": "80059ce77475251cc5e70297ff2fda9509db0366bf014f4e65350da69bcc2d6d",
+      "file": "journey-targeted-before-a11y.json"
+    },
+    {
+      "sha256": "f6ca173393aac4e8af9719fa2eaad27a3fde992572e4b41a2fb65de50188ee21",
+      "file": "legacy-correction/browser-results.json"
+    },
+    {
+      "sha256": "b30f2034c1e5839d2c48a8bf58ae285b6cdd2fb5434f251d959cdfda0c08da46",
+      "file": "logs/api.txt"
+    },
+    {
+      "sha256": "ecbb0d7db0e7bb055b84075469eb8163a81601a6ea29792f88fe11ef530ed7df",
+      "file": "logs/foundation.txt"
+    },
+    {
+      "sha256": "17eb4832dc94994c9d74faf19bd4446d699f5e221e11d620a82c15955591562a",
+      "file": "logs/guide-browser.txt"
+    },
+    {
+      "sha256": "7215f0b1aa8565d5f07ba825fba04c565bb5660c5d32943cdc3963938479d78d",
+      "file": "logs/lint.txt"
+    },
+    {
+      "sha256": "e71a1db6ecf3fbdfe2471a1241f68dc27b5b2d492b346e7011c2d00081734e64",
+      "file": "logs/reproduction-api.txt"
+    },
+    {
+      "sha256": "bde3082e6711cf9281f8cfb9e098a79b1f452448670e65c1aced8e22ef90622a",
+      "file": "logs/reproduction-browser.txt"
+    },
+    {
+      "sha256": "587257edc8770617e7aae5fdf186e921a21a338b3ae62054fb40380790362c40",
+      "file": "logs/types.txt"
+    },
+    {
+      "sha256": "0fcc72f44816e4c7c34d24a4633e5854558b0c0e3249efe0646be735660fd631",
+      "file": "public-preview.json"
+    },
+    {
+      "sha256": "1b8e17c1a70c91adaaab5a60bff4c1839617f2af13f03665944d783eb0055175",
+      "file": "real-model.json"
+    },
+    {
+      "sha256": "1b944b7a6c6f81ae3553fccffeebbebc20b941379f19f6381b496a46a401750f",
+      "file": "reproduction/browser-results.json"
+    },
+    {
+      "sha256": "a7035eca04d571266ff79f0ca7963cd0a51451245b2782613ea966ac4d8e8dbf",
+      "file": "reproduction/journey-accessibility-en-1600.json"
+    },
+    {
+      "sha256": "dcbd50c9b8a854c26dee062a79654e3903f71c7cd19422188acf4d3a9c167e55",
+      "file": "reproduction/journey-accessibility-en-390.json"
+    },
+    {
+      "sha256": "862527f2023aee10d355f48bb89e4a8adfefa5533fc19dfa09833b26732811ea",
+      "file": "reproduction/journey-accessibility-en-768.json"
+    },
+    {
+      "sha256": "aaa007735059c5053dbbcdc3ce1ce3b924ab90c1379f2e8365c51e8ffcf6482b",
+      "file": "reproduction/journey-accessibility-zh-CN-1600.json"
+    },
+    {
+      "sha256": "91a90f1c3c107213e0526cbae54183cf8d02a7421b528d2e89cdc9533ca3e9c8",
+      "file": "reproduction/journey-accessibility-zh-CN-390.json"
+    },
+    {
+      "sha256": "70bd198ff8c1f3e4b230a99c2a64e7a13c9e0d09b7f09ca952f0443bdc6513e9",
+      "file": "reproduction/journey-accessibility-zh-CN-768.json"
+    },
+    {
+      "sha256": "54d11f018c79d97b52884ebdfc713e47ed511a5c20744eefd3e31f6af8864353",
+      "file": "touch/browser-results.json"
+    }
+  ],
+  "actual_https_preview": "public-preview.json: real generated explanation, secure-cookie reload and guide context; fresh owned session deleted; TLS verification enabled in final check"
+}

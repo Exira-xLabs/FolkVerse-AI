@@ -1,3 +1,5 @@
+> Superseded for current status on 8 October 2026 by [Phase 04 final completion](PHASE_04_FINAL_COMPLETION.md). All four gates now pass. The 738-pixel phone overflow was an actual mobile flex-layout defect and has been fixed; final browser, controlled reorder and real-provider evidence are recorded in the completion report. Provider descriptions and pending checks below describe the earlier checkout, not current settings.
+
 # Phase 04 — implemented; browser acceptance pending
 
 7 October 2026, Asia/Shanghai. Implementation was approved after a read-only plan review. DeepSeek v4.1 Flash performed the delegated backend/explanation work and a read-only frontend review; the parent integrated and verified the result. **This is not a Phase 04 completion claim.**

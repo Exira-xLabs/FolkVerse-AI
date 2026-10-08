@@ -4,6 +4,8 @@
 
 **Outcome:** Editable routes constrained to real exhibits and available learning time.
 
+**Status: complete — 8 October 2026.** All four gates are supported by the [final completion report](../report/PHASE_04_FINAL_COMPLETION.md), including clean-checkout browser acceptance, actual PostgreSQL ownership/persistence and real bilingual DeepSeek explanation checks.
+
 ## Paste into Codex
 ```text
 Read docs/build-kit/00_MASTER_CODEX_PROMPT.md and docs/build-kit/phases/04_PERSONAL_JOURNEYS.md. Inspect the repository and docs/build-status.md. Implement the following phase, preserving approved UI and unrelated work.
@@ -21,10 +23,10 @@ Update docs/build-status.md with actual results, blockers and the next phase. Re
 
 ## Acceptance gates
 
-- [ ] Every stop resolves to a published exhibit; all totals obey requested time.
-- [ ] Empty/too-small corpus, duplicates and removed/unpublished exhibits handled.
-- [ ] Reorder/remove persists per session and never edits another session’s route.
-- [ ] UI remains visually faithful while controls work at desktop/mobile sizes.
+- [x] Every stop resolves to a published exhibit; all totals obey requested time.
+- [x] Empty/too-small corpus, duplicates and removed/unpublished exhibits handled.
+- [x] Reorder/remove persists per session and never edits another session’s route.
+- [x] UI remains visually faithful while controls work at desktop/mobile sizes.
 
 
 ## Handoff

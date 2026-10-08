@@ -121,3 +121,24 @@ The chat banner is the reliable distinction: **“Scripted preview · no live AI
 For live chat, set `APP_MODE=live` in the ignored root `.env`, configure the existing provider credentials and bounded admission there, and start both API and web. Remove any conflicting `APP_MODE=demo` web/process override, or explicitly start the web with `APP_MODE=live`. Restart both processes after changing mode. Provider keys stay server-side in the ignored root file. A suggested question is optional; users can type their own cultural questions and follow-ups.
 
 For an HTTPS reverse proxy forwarding HTTP to Next, set server-only `PUBLIC_APP_ORIGIN=https://your-exact-hostname` in the web process or ignored `apps/web/.env.local`. Add that exact origin to the API's `ALLOWED_ORIGINS` and enable `COOKIE_SECURE=true`. The BFF still requires the request Origin and Host to match exactly; arbitrary forwarded headers do not configure a public hostname. Expose only the web service, keeping the API and database on loopback. Temporary hostname changes require updating these exact-origin settings. Never disable origin checks to make a preview work.
+
+## Phase 04 isolated browser acceptance — 8 October 2026
+
+Use Node 22 and the committed lockfiles. Keep the PostgreSQL administrator URL and session secret in the ignored root `.env`; the configured PostgreSQL role must be able to create a disposable database. The runner creates a uniquely owned `folkverse_phase04_acceptance_*` database, migrates it, restores the existing approved snapshot and drops it on graceful shutdown. It never restores over the serving corpus or copies provider keys into evidence. Provider generation is disabled for this suite; real-model checks are separate.
+
+```sh
+pnpm install --frozen-lockfile
+uv sync --project apps/api --frozen
+pnpm db:up
+pnpm exec playwright install chromium
+pnpm lint
+pnpm typecheck
+pnpm build
+# Stop serving processes first: ports 3000, 3002 and 8000 must be free.
+FOLKVERSE_EVIDENCE_DIR=report/evidence/phase04-local pnpm exec playwright test --config playwright.phase04.config.ts
+pnpm check:foundation
+```
+
+The isolated API runner is `scripts/phase04-acceptance-api.py`; its Playwright configuration explicitly requests SIGTERM with a cleanup timeout. SIGKILL, power loss or database unavailability can prevent cleanup: inspect only the runner-owned database names before retrying, and never delete a populated project database. The full API suite must likewise use a dedicated test database, as described above.
+
+The clean-checkout acceptance used independently installed frozen dependencies, a fresh API virtual environment, a private provider-free `.env`, fresh migrated test data and a new production build. Browser JSON/axe evidence is committed; screenshots stay local under the existing image-ignore policy. See the [Phase 04 report](../report/PHASE_04_FINAL_COMPLETION.md) for the actual results and explicitly controlled browser fixtures.

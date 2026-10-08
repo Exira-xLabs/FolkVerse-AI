@@ -1,5 +1,13 @@
 # FolkVerse build status
 
+## October 8, 2026 — Phase 04 complete
+
+**Current: Phase 04 COMPLETE; Phase 05 camera scan and artifact retrieval is next, not started.** [Final completion and evidence](../report/PHASE_04_FINAL_COMPLETION.md) supersedes historical pending entries below. All four published-exhibit/time, empty/withdrawn corpus, owned persistence and desktop/mobile gates pass.
+
+Fixed actual phone flex overflow, aligned journey explanations with the owner's explicit unlimited provider setting, corrected a stale demo-only regression selector, and added disposable PostgreSQL acceptance with graceful cleanup. Clean reproduction: frozen independent installs, fresh production build, **550 API tests**, **76 production browser tests** including eight journey cases, and zero remaining owned acceptance databases. Also **61 guide browser regressions**, **27 real HTTP checks**, six EN/ZH scoped axe audits with zero violations, touch/keyboard/zoom/reduced-motion checks, and two actual bilingual DeepSeek explanation calls with zero extra attempts on unchanged regeneration. Lint/types/contracts/artwork/secrets pass.
+
+The actual published journey corpus is still **one 3-minute Dalian exhibit**; 42 guide profiles remain separate. Multi-stop UI fixtures are labelled and complemented by real API/database persistence tests. No content approvals or human ratings were fabricated; no physical-device, exhaustive province coverage or permanent-production claim is made. Historical zero-provider/pending browser descriptions below describe earlier checkouts.
+
 ## October 7, 2026 — Parts 6–8 engineering, evaluation and closure audit
 
 Prior Parts 2–5 were pushed as `7fa2e7e`. [Chat/source/accessibility polish](../report/PHASE_03_HYBRID_PART_06.md) preserves reading position, separates progress announcements, labels source classifications and restores focus after withdrawal. 59 dedicated browser tests pass; scoped EN/ZH chat/source axe checks have zero violations/incomplete checks. Fresh real browser replies and source inspection pass.
