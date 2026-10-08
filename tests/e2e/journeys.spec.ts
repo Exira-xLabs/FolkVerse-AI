@@ -1,7 +1,9 @@
-// Phase 04 browser acceptance handoff. Authored/type-checked, NOT executed without a
-// connected Browser Skill session. Real integration cases use the reviewed one-exhibit
-// snapshot and quota-disabled API; controlled fixtures are labelled separately below.
+// Phase 04 browser acceptance against the production web/BFF/API and reviewed snapshot.
+// Run with playwright.phase04.config.ts for a disposable PostgreSQL API with no generation.
+// Controlled multi-stop and failure fixtures are explicitly labelled below.
 import { expect, test, type Page } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+import { writeFileSync } from "node:fs";
 import { setLocale } from "../support/locale";
 
 const panel = (page: Page) => page.getByRole("region", { name: "Saved learning journey", exact: true });
@@ -95,6 +97,7 @@ test("draft criteria do not relabel saved totals, empty theme is honest, session
 });
 
 test("saved route re-renders EN/ZH at desktop, phone and tablet without overflow", async ({ page }) => {
+  test.setTimeout(60000);
   await page.goto("/journey");
   await createSavedRoute(page);
   for (const size of [{ width: 1600, height: 900 }, { width: 390, height: 844 }, { width: 768, height: 1024 }]) {
@@ -104,10 +107,58 @@ test("saved route re-renders EN/ZH at desktop, phone and tablet without overflow
       const currentPanel = page.getByRole("region", { name: locale === "en" ? "Saved learning journey" : "已保存学习路线", exact: true });
       await expect(currentPanel.locator(".saved-journey-stops > li")).toHaveCount(1);
       await expect(currentPanel.locator(".saved-journey-stops h3")).toHaveText(locale === "en" ? "Fuzhou shadow puppetry" : "复州皮影戏");
-      expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+      const layout = await page.evaluate(() => ({
+        viewport: window.innerWidth, width: document.documentElement.scrollWidth,
+        overflowing: [...document.querySelectorAll("main *")].map(element => {
+          const box = element.getBoundingClientRect();
+          return { className: element.className, left: box.left, right: box.right };
+        }).filter(box => box.right > window.innerWidth + 1 || box.left < -1).slice(0, 12),
+      }));
+      expect(layout.width <= layout.viewport, JSON.stringify({ locale, size, layout })).toBe(true);
+      const accessibility = await new AxeBuilder({ page }).include(".saved-journey").analyze();
+      writeFileSync(`${evidenceDir}/journey-accessibility-${locale}-${size.width}.json`, JSON.stringify({
+        viewport: size, locale, layout, violations: accessibility.violations,
+        passed_rules: accessibility.passes.map(rule => rule.id),
+      }, null, 2) + "\n");
+      expect(accessibility.violations).toEqual([]);
       await page.screenshot({ path: `${evidenceDir}/saved-journey-${locale}-${size.width}.png`, fullPage: true, animations: "disabled" });
     }
   }
+});
+
+test("controlled stale edit shows failure, restores keyboard focus and reloads the real route", async ({ page }) => {
+  await page.goto("/journey");
+  await createSavedRoute(page);
+  let failed = false;
+  await page.route("**/api/v1/journeys/*", async route => {
+    if (route.request().method() === "PATCH" && !failed) {
+      failed = true;
+      await route.fulfill({ status: 409, json: { error: { code: "stale_state", message: "Controlled stale edit", retryable: false }, request_id: "fixture_stale_edit" } });
+    } else await route.continue();
+  });
+  const remove = panel(page).getByRole("button", { name: /Remove saved stop/ });
+  await remove.focus(); await page.keyboard.press("Enter");
+  await expect(panel(page).getByRole("alert")).toContainText("Reload before editing again");
+  const recovery = panel(page).getByRole("button", { name: "Reload saved journey", exact: true });
+  await expect(recovery).toBeFocused();
+  await expect(panel(page).locator(".saved-journey-stops > li")).toHaveCount(0);
+  await page.keyboard.press("Enter");
+  await expect(panel(page).getByRole("alert")).toHaveCount(0);
+  await expect(panel(page).locator(".saved-journey-stops > li")).toHaveCount(1);
+  await expect(panel(page).locator(".panel-heading")).toContainText("3 / 20");
+});
+
+test("saved journey remains usable with enlarged text and reduced motion", async ({ page }) => {
+  await page.setViewportSize({ width: 640, height: 900 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/journey"); await createSavedRoute(page);
+  await page.evaluate(() => { document.documentElement.style.zoom = "2"; });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  const remove = panel(page).getByRole("button", { name: /Remove saved stop/ });
+  await remove.focus(); await page.keyboard.press("Enter");
+  await expect(panel(page).locator(".panel-heading")).toContainText("0 / 20");
+  await expect(panel(page).getByRole("heading", { name: "Your saved discoveries" })).toBeFocused();
+  await page.screenshot({ path: `${evidenceDir}/saved-journey-en-200-percent.png`, fullPage: true, animations: "disabled" });
 });
 
 // A two-stop route is a controlled UI fixture, NOT newly published cultural content.

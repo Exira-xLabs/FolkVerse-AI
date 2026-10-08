@@ -334,7 +334,7 @@ def build_journey_explainer(app: FastAPI) -> JourneyExplainer | None:
         if settings.ollama_daily_request_limit <= 0:
             return None
     elif (
-        settings.daily_ai_budget_usd <= 0
+        (not settings.daily_ai_budget_unlimited and settings.daily_ai_budget_usd <= 0)
         or settings.deepseek_price_model != settings.deepseek_model
         or settings.deepseek_price_base_url != settings.deepseek_base_url
         or settings.deepseek_input_usd_per_million is None

@@ -891,6 +891,21 @@ def test_factory_requires_a_ready_provider() -> None:
         guide_provider="ollama", ollama_api_key="SYNTHETIC", ollama_daily_request_limit=3
     )
     assert build_journey_explainer(ollama) is not None
+    deepseek = dict(
+        deepseek_api_key="SYNTHETIC",
+        daily_ai_budget_usd="0",
+        daily_ai_budget_unlimited=True,
+        deepseek_price_model="deepseek-flash",
+        deepseek_price_base_url="https://api.deepseek.com",
+        deepseek_input_usd_per_million="0.3",
+        deepseek_output_usd_per_million="1.2",
+    )
+    assert build_journey_explainer(app_with(**deepseek)) is not None
+    assert (
+        build_journey_explainer(app_with(**{**deepseek, "daily_ai_budget_unlimited": False}))
+        is None
+    )
+    assert build_journey_explainer(app_with(**{**deepseek, "deepseek_api_key": None})) is None
 
 
 def test_journey_rows_are_bounded_and_json_safe(

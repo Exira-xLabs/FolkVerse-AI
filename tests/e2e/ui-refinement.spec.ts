@@ -23,12 +23,18 @@ test("Explore defaults to map and collection view preserves map filters", async 
 test("prototype controls are opt-in and keyboard can open every preview", async ({ page }) => {
   for (const [route, control] of [["/journey", ".journey-controls"], ["/lens", ".lens-panel"]]) {
     await page.goto(route);
-    await expect(page.locator(control)).not.toBeVisible();
-    await expect(page.getByRole("link", { name: "Explore the collection" })).toBeVisible();
+    const preview = page.locator(".optional-preview");
+    await expect(preview.locator(control)).not.toBeVisible();
+    if (route === "/journey") {
+      await expect(page.getByRole("region", { name: "Saved learning journey", exact: true })).toBeVisible();
+      await expect(page.getByRole("button", { name: /Create & save my journey/ })).toBeVisible();
+    } else await expect(page.getByRole("link", { name: "Explore the collection" })).toBeVisible();
     await page.locator(".optional-preview summary").focus();
     await page.keyboard.press("Enter");
-    await expect(page.locator(control)).toBeVisible();
-    await expect(page.getByText("This preview uses scripted examples. It does not connect to live AI services.")).toBeVisible();
+    await expect(preview.locator(control)).toBeVisible();
+    if (route === "/journey") {
+      await expect(preview).toContainText("Separate scripted examples of Shaanxi, Fujian and Guangdong");
+    } else await expect(page.getByText("This preview uses scripted examples. It does not connect to live AI services.")).toBeVisible();
   }
   await page.goto("/guide");
   await page.getByRole("button", { name: "Open Jinyao chat", exact: true }).click();
