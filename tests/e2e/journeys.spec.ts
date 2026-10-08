@@ -195,3 +195,43 @@ test("controlled two-stop fixture reorders and removes with adjacent keyboard fo
   await expect(panel(page).getByRole("button", { name: "Remove saved stop Synthetic B", exact: true })).toBeFocused();
   await page.reload(); await expect(panel(page).locator(".saved-journey-stops > li")).toHaveCount(1);
 });
+
+test.describe("real phone touch controls", () => {
+  test.use({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+  test("EN/ZH time, city, interests, explicit novelty and removal save through the real API", async ({ page }) => {
+    for (const locale of ["en", "zh-CN"] as const) {
+      await page.goto("/journey"); await setLocale(page, locale);
+      const zh = locale !== "en";
+      const saved = page.getByRole("region", { name: zh ? "已保存学习路线" : "Saved learning journey", exact: true });
+      const choose = async (label: string, value: string) => {
+        const control = saved.getByRole("combobox", { name: label, exact: true });
+        await control.evaluate(element => element.scrollIntoView({ block: "center" }));
+        await control.tap(); await page.getByRole("option", { name: value, exact: true }).tap();
+      };
+      await choose(zh ? "学习时长" : "Learning time", zh ? "5 分钟" : "5 minutes");
+      await choose(zh ? "学习地区" : "Learning region", zh ? "大连" : "Dalian");
+      const performance = saved.getByRole("button", { name: zh ? "表演" : "Performance", exact: true });
+      if (await performance.getAttribute("aria-pressed") !== "true") await performance.tap();
+      const create = page.waitForResponse(response => response.url().endsWith("/api/v1/journeys") && response.request().method() === "POST");
+      await saved.locator(".gold-button").tap();
+      const response = await create; expect(response.status()).toBe(200);
+      const route = await response.json();
+      expect(route.duration_minutes).toBe(5); expect(route.region_id).toBe("liaoning-dalian");
+      expect(route.interests).toEqual(["performance"]); expect(route.total_minutes).toBe(3);
+      await expect(saved.locator(".saved-journey-stops > li")).toHaveCount(1);
+      const novelty = saved.getByRole("checkbox");
+      await novelty.evaluate(element => element.scrollIntoView({ block: "center" }));
+      await novelty.tap();
+      const regenerate = page.waitForResponse(r => r.url().endsWith("/api/v1/journeys") && r.request().method() === "POST");
+      await saved.locator(".gold-button").tap();
+      const regenerated = await regenerate; expect(regenerated.status()).toBe(200);
+      expect(regenerated.request().postDataJSON().novelty_exhibit_ids).toEqual([route.stops[0].exhibit_id]);
+      const remove = saved.getByRole("button", { name: zh ? /移除保存站点/ : /Remove saved stop/ });
+      await remove.evaluate(element => element.scrollIntoView({ block: "center" }));
+      await remove.tap();
+      await expect(saved.locator(".saved-journey-stops > li")).toHaveCount(0);
+      await page.reload();
+      await expect(saved.locator(".panel-heading")).toContainText("0 / 5");
+    }
+  });
+});
