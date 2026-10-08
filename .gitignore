@@ -24,8 +24,22 @@ test-results/
 .dsh-progress/
 media/private/
 
-# Owner request: keep new visual evidence local; existing tracked evidence is preserved.
+# Owner request: keep generated visual evidence local (including previously tracked screenshots).
 /report/evidence/**/*.png
 /report/evidence/**/*.jpg
 /report/evidence/**/*.jpeg
 /report/evidence/**/*.webp
+/report/evidence/**/*.gif
+/report/evidence/**/*.mp4
+/report/evidence/**/*.webm
+/report/evidence/**/trace.zip
+/report/evidence/**/traces/
+/report/evidence/**/playwright-report/
+/report/evidence/**/test-results/
+
+# Local browser recordings, coverage and disposable build exports.
+/coverage/
+/apps/web/coverage/
+/apps/api/htmlcov/
+.coverage
+.coverage.*
